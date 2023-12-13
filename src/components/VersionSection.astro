@@ -1,0 +1,17 @@
+---
+import VersionHeader from "./VersionHeader.astro";
+const { version, title, date } = Astro.props;
+---
+
+<VersionHeader {version} {title} {date} />
+<div class="version-section">
+    <slot />
+</div>
+
+<style lang="scss">
+    .version-section {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+    }
+</style>

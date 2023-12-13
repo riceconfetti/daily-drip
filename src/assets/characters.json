@@ -1,0 +1,380 @@
+{
+    "Chevreuse": {
+        "rarity": 4,
+        "vision": "pyro"
+    },
+    "Navia": {
+        "rarity":5,
+        "vision":"geo",
+        "banner": "In the Name of Rosula",
+        "splash": "/gacha-splash/navia.png"
+    },
+    "Charlotte": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "Furina": {
+        "rarity":5,
+        "vision":"hydro",
+        "banner": "Chanson of Many Waters",
+        "splash": "/gacha-splash/furina.png"
+    },
+    "Wriothesley": {
+        "rarity":5,
+        "vision":"cryo",
+        "banner": "",
+        "splash": "/gacha-splash/wriothesley.png"
+    },
+    "Neuvillette": {
+        "rarity":5,
+        "vision":"hydro",
+        "banner": "",
+        "splash": "/gacha-splash/neuvillette.png"
+    },
+    "Freminet": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "Lynette": {
+        "rarity": 4,
+        "vision": "anemo"
+    },
+    "Lyney": {
+        "rarity":5,
+        "vision":"pyro",
+        "banner": "",
+        "splash": "/gacha-splash/lyney.png"
+    },
+    "Kirara": {
+        "rarity": 4,
+        "vision": "dendro"
+    },
+    "Kaveh": {
+        "rarity": 4,
+        "vision": "dendro"
+    },
+    "Baizhu": {
+        "rarity":5,
+        "vision":"dendro",
+        "banner": "Immaculate Pulse",
+        "splash": "/gacha-splash/baizhu.png"
+    },
+    "Mika": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "Dehya": {
+        "rarity":5,
+        "vision":"pyro",
+        "banner": "",
+        "splash": "/gacha-splash/dehya.png"
+    },
+    "Yaoyao": {
+        "rarity": 4,
+        "vision": "dendro"
+    },
+    "Alhaitham": {
+        "rarity":5,
+        "vision":"dendro",
+        "banner": "",
+        "splash": "/gacha-splash/alhaitham.png"
+    },
+    "Wanderer": {
+        "rarity":5,
+        "vision":"anemo",
+        "banner": "",
+        "splash": "/gacha-splash/wanderer.png"
+    },
+    "Faruzan": {
+        "rarity": 4,
+        "vision": "anemo"
+    },
+    "Layla": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "Nahida": {
+        "rarity":5,
+        "vision":"dendro",
+        "banner": "",
+        "splash": "/gacha-splash/nahida.png"
+    },
+    "Nilou": {
+        "rarity":5,
+        "vision":"hydro",
+        "banner": "",
+        "splash": "/gacha-splash/nilou.png"
+    },
+    "Cyno": {
+        "rarity":5,
+        "vision":"electro",
+        "banner": "Twilight Arbiter",
+        "splash": "/gacha-splash/cyno.png"
+    },
+    "Candace": {
+        "rarity": 4,
+        "vision": "hydro"
+    },
+    "Dori": {
+        "rarity": 4,
+        "vision": "electro"
+    },
+    "Collei": {
+        "rarity": 4,
+        "vision": "dendro"
+    },
+    "Tighnari": {
+        "rarity":5,
+        "vision":"dendro",
+        "banner": "",
+        "splash": "/gacha-splash/tighnari.png"
+    },
+    "ShikanoinHeizou": {
+        "rarity": 4,
+        "vision": "anemo"
+    },
+    "KukiShinobu": {
+        "rarity": 4,
+        "vision": "electro"
+    },
+    "Yelan": {
+        "rarity":5,
+        "vision":"hydro",
+        "banner": "",
+        "splash": "/gacha-splash/yelan.png"
+    },
+    "KamisatoAyato": {
+        "rarity":5,
+        "vision":"hydro",
+        "banner": "Azure Excursion",
+        "splash": "/gacha-splash/ayato.png"
+    },
+    "YaeMiko": {
+        "rarity":5,
+        "vision":"electro",
+        "banner": "",
+        "splash": "/gacha-splash/yaemiko.png"
+    },
+    "Shenhe": {
+        "rarity":5,
+        "vision":"cryo",
+        "banner": "",
+        "splash": "/gacha-splash/shenhe.png"
+    },
+    "YunJin": {
+        "rarity": 4,
+        "vision": "geo"
+    },
+    "Gorou": {
+        "rarity": 4,
+        "vision": "geo"
+    },
+    "AratakiItto": {
+        "rarity":5,
+        "vision":"geo",
+        "banner": "",
+        "splash": "/gacha-splash/itto.png"
+    },
+    "Thoma": {
+        "rarity": 4,
+        "vision": "pyro"
+    },
+    "SangonomiyaKokomi": {
+        "rarity":5,
+        "vision":"hydro",
+        "banner": "",
+        "splash": "/gacha-splash/kokomi.png"
+    },
+    "RaidenShogun": {
+        "rarity":5,
+        "vision":"electro",
+        "banner": "Reign of Serenity",
+        "splash": "/gacha-splash/raidenshogun.png"
+    },
+    "KujouSara": {
+        "rarity": 4,
+        "vision": "electro"
+    },
+    "Aloy": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "Yoimiya": {
+        "rarity":5,
+        "vision":"pyro",
+        "banner": "Tapestry of Golden Flame",
+        "splash": "/gacha-splash/yoimiya.png"
+    },
+    "Sayu": {
+        "rarity": 4,
+        "vision": "anemo"
+    },
+    "KamisatoAyaka": {
+        "rarity":5,
+        "vision":"cryo",
+        "banner": "The Heron's Court",
+        "splash": "/gacha-splash/ayaka.png"
+    },
+    "KaedeharaKazuha": {
+        "rarity":5,
+        "vision":"anemo",
+        "banner": "",
+        "splash": "/gacha-splash/kaedeharakazuha.png"
+    },
+    "Eula": {
+        "rarity":5,
+        "vision":"cryo",
+        "banner": "",
+        "splash": "/gacha-splash/eula.png"
+    },
+    "Yanfei": {
+        "rarity": 4,
+        "vision": "pyro"
+    },
+    "Rosaria": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "HuTao": {
+        "rarity":5,
+        "vision":"pyro",
+        "banner": "",
+        "splash": "/gacha-splash/hutao.png"
+    },
+    "Xiao": {
+        "rarity":5,
+        "vision":"anemo",
+        "banner": "",
+        "splash": "/gacha-splash/xiao.png"
+    },
+    "Ganyu": {
+        "rarity":5,
+        "vision":"cryo",
+        "banner": "",
+        "splash": "/gacha-splash/ganyu.png"
+    },
+    "Albedo": {
+        "rarity":5,
+        "vision":"geo",
+        "banner": "",
+        "splash": "/gacha-splash/albedo.png"
+    },
+    "Zhongli": {
+        "rarity":5,
+        "vision":"geo",
+        "banner": "",
+        "splash": "/gacha-splash/zhongli.png"
+    },
+    "Xinyan": {
+        "rarity": 4,
+        "vision": "pyro"
+    },
+    "Tartaglia": {
+        "rarity":5,
+        "vision":"hydro",
+        "banner": "",
+        "splash": "/gacha-splash/tartaglia.png"
+    },
+    "Diona": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "Jean": {
+        "rarity":5,
+        "vision":"anemo",
+        "banner": "",
+        "splash": "/gacha-splash/jean.png"
+    },
+    "Lisa": {
+        "rarity": 4,
+        "vision": "electro"
+    },
+    "Barbara": {
+        "rarity": 4,
+        "vision": "hydro"
+    },
+    "Kaeya": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "Diluc": {
+        "rarity":5,
+        "vision":"pyro",
+        "banner": "",
+        "splash": "/gacha-splash/diluc.png"
+    },
+    "Razor": {
+        "rarity": 4,
+        "vision": "electro"
+    },
+    "Amber": {
+        "rarity": 4,
+        "vision": "pyro"
+    },
+    "Venti": {
+        "rarity":5,
+        "vision":"anemo",
+        "banner": "",
+        "splash": "/gacha-splash/venti.png"
+    },
+    "Xiangling": {
+        "rarity": 4,
+        "vision": "pyro"
+    },
+    "Beidou": {
+        "rarity": 4,
+        "vision": "electro"
+    },
+    "Xingqiu": {
+        "rarity": 4,
+        "vision": "hydro"
+    },
+    "Ningguang": {
+        "rarity": 4,
+        "vision": "geo"
+    },
+    "Klee": {
+        "rarity":5,
+        "vision":"pyro",
+        "banner": "",
+        "splash": "/gacha-splash/klee.png"
+    },
+    "Fischl": {
+        "rarity": 4,
+        "vision": "electro"
+    },
+    "Bennett": {
+        "rarity": 4,
+        "vision": "pyro"
+    },
+    "Noelle": {
+        "rarity": 4,
+        "vision": "geo"
+    },
+    "Qiqi": {
+        "rarity":5,
+        "vision":"cryo",
+        "banner": "",
+        "splash": "/gacha-splash/qiqi.png"
+    },
+    "Chongyun": {
+        "rarity": 4,
+        "vision": "cryo"
+    },
+    "Mona": {
+        "rarity":5,
+        "vision":"hydro",
+        "banner": "",
+        "splash": "/gacha-splash/mona.png"
+    },
+    "Keqing": {
+        "rarity":5,
+        "vision":"electro",
+        "banner": "",
+        "splash": "/gacha-splash/keqing.png"
+    },
+    "Sucrose": {
+        "rarity": 4,
+        "vision": "anemo"
+    }
+}
