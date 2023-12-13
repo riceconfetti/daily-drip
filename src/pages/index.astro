@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import VersionSection from "../components/VersionSection.astro";
+import FiveStarCard from "../components/FiveStarCard.astro";
+import PhaseRateUps from "../components/PhaseRateUps.astro";
+import PhaseCard from "../components/PhaseCard.astro";
+import c from "../assets/characters.json";
+
+class Character {
+	name: string;
+	rarity: number;
+	vision: string;
+	banner: string;
+	splash: string;
+
+	constructor(name, data) {
+		this.name = name;
+		this.rarity = data.rarity;
+		this.vision = data.vision;
+		this.banner = data.banner;
+		this.splash = data.splash;
+	}
+}
+---
+
+<Layout title="The Daily Drip">
+	<VersionSection
+		version="Version 4.3"
+		title="Roses and Muskets"
+		date={new Date("Decemeber 20, 2023 11:00")}
+	>
+		<PhaseCard number={1} date={new Date()}>
+			<FiveStarCard character={new Character("Navia", c.Navia)} />
+			<FiveStarCard character={new Character("Ayaka", c.KamisatoAyaka)} />
+			<PhaseRateUps
+				characters={[
+					new Character("Kirara", c.Kirara),
+					new Character("Xiangling", c.Xiangling),
+					new Character("Beidou", c.Beidou),
+				]}
+				weapons={["sac", "dragonspie"]}
+			/>
+		</PhaseCard>
+		<PhaseCard number={1} date={new Date()}>
+			<FiveStarCard character={new Character("Navia", c.Navia)} />
+			<FiveStarCard character={new Character("Ayaka", c.KamisatoAyaka)} />
+			<PhaseRateUps
+				characters={[
+					new Character("????", {rarity:4}),
+					new Character("????", {rarity:4}),
+					new Character("????", {rarity:4}),
+				]}
+				weapons={["sac", "dragonspie"]}
+			/>
+		</PhaseCard>
+	</VersionSection>
+</Layout>
+
+<style lang="scss"></style>
