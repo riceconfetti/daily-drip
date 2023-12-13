@@ -1,0 +1,71 @@
+---
+interface Props {
+    number: number;
+    date: Date;
+}
+
+const { number, date } = Astro.props;
+---
+
+<div class="phase">
+    <div class="phase-header">
+        <h2>Phase {number}</h2>
+        <p>
+            {
+                date.toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                })
+            }
+        </p>
+    </div>
+
+    <div class="banners">
+        <slot />
+    </div>
+</div>
+
+<style lang="scss">
+.phase {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    gap:12px;
+    .phase-header {
+        display: flex;
+        height: 45px;
+        padding: 12px;
+        border: 1px solid #000;
+        background: #c2c2c2;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        h2 {
+            color: #000;
+            font-family: "Playfair Display";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        p {
+            color: #000;
+            text-align: center;
+            font-family: "Times New Roman";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+
+    .banners {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+</style>

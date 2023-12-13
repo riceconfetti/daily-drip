@@ -1,0 +1,82 @@
+---
+interface Props {
+    characters: Array<Character>;
+    weapons: Array<String>;
+}
+
+class Character {
+    name: string;
+    rarity: number;
+    vision: string;
+}
+
+const { characters, weapons } = Astro.props;
+---
+
+<div class="phase-rate-ups">
+    <div class="divider"></div>
+    <h3>Featured 4 Stars</h3>
+    {
+        characters.map((character) => (
+            <div class={`character ${character.vision}`}>{character.name}</div>
+        ))
+    }
+    <div class="divider"></div>
+    <h3>Rate Up Weapons</h3>
+    <p>
+        {weapons.map((weapon) => weapon + " ⦁ ")}
+    </p>
+    <div class="divider"></div>
+</div>
+
+<style>
+    .phase-rate-ups {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+        width: 100%;
+        .divider {
+            height: 1px;
+            align-self: stretch;
+            background: black;
+        }
+        .character {
+            display: flex;
+            padding: 4px;
+            align-items: flex-start;
+            gap: 10px;
+            align-self: stretch;
+            background: #c2c2c2;
+
+            &.electro {
+                background: #AA95B4;;
+            }
+
+            &.pyro {
+                background: #B99898;
+            }
+
+            &.dendro {
+                background: #AEC498;
+            }
+
+            &.cryo {
+                background: #bfdddd
+            }
+
+            &.geo {
+                background: #beb574
+            }
+
+            &.hydro {
+                background: #b0bfe7
+            }
+
+            &.anemo {
+                background: #a3e9c5
+            }
+        }
+    }
+</style>
