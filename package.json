@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "astro": "^4.0.4",
-    "enkanetwork.js": "^2.6.0"
+    "enkanetwork.js": "^2.6.0",
+    "nanostores": "^0.9.5"
   },
   "devDependencies": {
     "sass": "^1.69.5"
