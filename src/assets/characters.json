@@ -1,4 +1,28 @@
 {
+    "CloudRetainer" : {
+        "rarity":5,
+        "vision": "anemo",
+        "banner": "?????"
+    },
+    "Jiaming": {
+        "rarity":4,
+        "vision":"default"
+    },
+    "Chiori": {
+        "rarity":5,
+        "vision":"default",
+        "banner":"?????"
+    },
+    "Sigewinne":{
+        "rarity":5,
+        "vision":"hydro",
+        "banner":"?????"
+    },
+    "Arlecchino":{
+        "rarity":5,
+        "vision":"pyro",
+        "banner":"?????"
+    },
     "Chevreuse": {
         "rarity": 4,
         "vision": "pyro"
@@ -22,13 +46,13 @@
     "Wriothesley": {
         "rarity":5,
         "vision":"cryo",
-        "banner": "",
+        "banner": "Tempestuous Destiny",
         "splash": "/gacha-splash/wriothesley.png"
     },
     "Neuvillette": {
         "rarity":5,
         "vision":"hydro",
-        "banner": "",
+        "banner": "Decree of the Deeps",
         "splash": "/gacha-splash/neuvillette.png"
     },
     "Freminet": {
@@ -42,7 +66,7 @@
     "Lyney": {
         "rarity":5,
         "vision":"pyro",
-        "banner": "",
+        "banner": "Conjuring Chiaroscuro",
         "splash": "/gacha-splash/lyney.png"
     },
     "Kirara": {
@@ -66,7 +90,7 @@
     "Dehya": {
         "rarity":5,
         "vision":"pyro",
-        "banner": "",
+        "banner": "Auric Blaze",
         "splash": "/gacha-splash/dehya.png"
     },
     "Yaoyao": {
@@ -76,13 +100,13 @@
     "Alhaitham": {
         "rarity":5,
         "vision":"dendro",
-        "banner": "",
+        "banner": "Caution in Confidence",
         "splash": "/gacha-splash/alhaitham.png"
     },
     "Wanderer": {
         "rarity":5,
         "vision":"anemo",
-        "banner": "",
+        "banner": "From Ashes Reborn",
         "splash": "/gacha-splash/wanderer.png"
     },
     "Faruzan": {
@@ -96,13 +120,13 @@
     "Nahida": {
         "rarity":5,
         "vision":"dendro",
-        "banner": "",
+        "banner": "The Moongrass' Enlightenment",
         "splash": "/gacha-splash/nahida.png"
     },
     "Nilou": {
         "rarity":5,
         "vision":"hydro",
-        "banner": "",
+        "banner": "Twirling Lotus",
         "splash": "/gacha-splash/nilou.png"
     },
     "Cyno": {
@@ -126,7 +150,7 @@
     "Tighnari": {
         "rarity":5,
         "vision":"dendro",
-        "banner": "",
+        "banner": "Viridescent Vigil",
         "splash": "/gacha-splash/tighnari.png"
     },
     "ShikanoinHeizou": {
@@ -140,7 +164,7 @@
     "Yelan": {
         "rarity":5,
         "vision":"hydro",
-        "banner": "",
+        "banner": "Discerner of Enigmas",
         "splash": "/gacha-splash/yelan.png"
     },
     "KamisatoAyato": {
@@ -152,13 +176,13 @@
     "YaeMiko": {
         "rarity":5,
         "vision":"electro",
-        "banner": "",
+        "banner": "Everbloom Violet",
         "splash": "/gacha-splash/yaemiko.png"
     },
     "Shenhe": {
         "rarity":5,
         "vision":"cryo",
-        "banner": "",
+        "banner": "The Transcendent One Returns",
         "splash": "/gacha-splash/shenhe.png"
     },
     "YunJin": {
@@ -172,7 +196,7 @@
     "AratakiItto": {
         "rarity":5,
         "vision":"geo",
-        "banner": "",
+        "banner": "Oni's Royale",
         "splash": "/gacha-splash/itto.png"
     },
     "Thoma": {
@@ -182,7 +206,7 @@
     "SangonomiyaKokomi": {
         "rarity":5,
         "vision":"hydro",
-        "banner": "",
+        "banner": "Drifting Luminescence",
         "splash": "/gacha-splash/kokomi.png"
     },
     "RaidenShogun": {
@@ -218,13 +242,13 @@
     "KaedeharaKazuha": {
         "rarity":5,
         "vision":"anemo",
-        "banner": "",
+        "banner": "Leaves in the Wind",
         "splash": "/gacha-splash/kaedeharakazuha.png"
     },
     "Eula": {
         "rarity":5,
         "vision":"cryo",
-        "banner": "",
+        "banner": "Born of Ocean Swell",
         "splash": "/gacha-splash/eula.png"
     },
     "Yanfei": {
@@ -238,31 +262,31 @@
     "HuTao": {
         "rarity":5,
         "vision":"pyro",
-        "banner": "",
+        "banner": "Moment of Bloom",
         "splash": "/gacha-splash/hutao.png"
     },
     "Xiao": {
         "rarity":5,
         "vision":"anemo",
-        "banner": "",
+        "banner": "Invitation to Mundane Life",
         "splash": "/gacha-splash/xiao.png"
     },
     "Ganyu": {
         "rarity":5,
         "vision":"cryo",
-        "banner": "",
+        "banner": "Adrift in the Harbor",
         "splash": "/gacha-splash/ganyu.png"
     },
     "Albedo": {
         "rarity":5,
         "vision":"geo",
-        "banner": "",
+        "banner": "Secretum Secretorum",
         "splash": "/gacha-splash/albedo.png"
     },
     "Zhongli": {
         "rarity":5,
         "vision":"geo",
-        "banner": "",
+        "banner": "Gentry of Hermitage",
         "splash": "/gacha-splash/zhongli.png"
     },
     "Xinyan": {
@@ -272,7 +296,7 @@
     "Tartaglia": {
         "rarity":5,
         "vision":"hydro",
-        "banner": "",
+        "banner": "Farewell of Snezhnaya",
         "splash": "/gacha-splash/tartaglia.png"
     },
     "Diona": {
@@ -314,7 +338,7 @@
     "Venti": {
         "rarity":5,
         "vision":"anemo",
-        "banner": "",
+        "banner": "Ballad in Goblets",
         "splash": "/gacha-splash/venti.png"
     },
     "Xiangling": {
@@ -336,7 +360,7 @@
     "Klee": {
         "rarity":5,
         "vision":"pyro",
-        "banner": "",
+        "banner": "Sparkling Steps",
         "splash": "/gacha-splash/klee.png"
     },
     "Fischl": {
@@ -370,7 +394,7 @@
     "Keqing": {
         "rarity":5,
         "vision":"electro",
-        "banner": "",
+        "banner": "Dance of Lanterns",
         "splash": "/gacha-splash/keqing.png"
     },
     "Sucrose": {

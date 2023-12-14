@@ -15,8 +15,8 @@ const { version, title, date } = Astro.props;
             {
                 date.toLocaleDateString("en-US", {
                     year: "numeric",
-                    month: "long",
-                    day: "numeric",
+                    month: "short",
+                    day: "numeric"
                 })
             }
         </p>
@@ -40,7 +40,15 @@ const { version, title, date } = Astro.props;
             border-block: 0.5px solid #000;
             text-transform: uppercase;
             line-height: 100%;
+            p{
+                font-size:16px;
+            }
 
+            @media only screen and (max-width:675px) {
+                p {
+                    font-size: 10px;
+                }
+            }
             #version-title {
                 position: absolute;
                 width: 100%;

@@ -1,82 +1,97 @@
 ---
 interface Props {
-    characters: Array<Character>;
-    weapons: Array<String>;
+  characters: Array<Character>;
+  weapons: Array<String>;
 }
 
 class Character {
-    name: string;
-    rarity: number;
-    vision: string;
+  name: string;
+  rarity: number;
+  vision: string;
 }
 
 const { characters, weapons } = Astro.props;
 ---
 
 <div class="phase-rate-ups">
-    <div class="divider"></div>
-    <h3>Featured 4 Stars</h3>
-    {
-        characters.map((character) => (
-            <div class={`character ${character.vision}`}>{character.name}</div>
-        ))
-    }
-    <div class="divider"></div>
-    <h3>Rate Up Weapons</h3>
-    <p>
-        {weapons.map((weapon) => weapon + " ⦁ ")}
-    </p>
-    <div class="divider"></div>
+  <div class="divider"></div>
+  <h3>Featured 4 Stars</h3>
+  {
+    characters.map((character) => (
+      <div class={`character ${character.vision}`}>{character.name}</div>
+    ))
+  }
+  <div class="divider"></div>
+  <h3>Rate Up Weapons</h3>
+  <p>
+    {weapons.map((weapon) => weapon + " ⦁ ")}
+  </p>
+  <div class="divider"></div>
 </div>
 
 <style>
-    .phase-rate-ups {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        align-self: stretch;
-        width: 100%;
-        .divider {
-            height: 1px;
-            align-self: stretch;
-            background: black;
-        }
-        .character {
-            display: flex;
-            padding: 4px;
-            align-items: flex-start;
-            gap: 10px;
-            align-self: stretch;
-            background: #c2c2c2;
+  .phase-rate-ups {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
 
-            &.electro {
-                background: #AA95B4;;
-            }
-
-            &.pyro {
-                background: #B99898;
-            }
-
-            &.dendro {
-                background: #AEC498;
-            }
-
-            &.cryo {
-                background: #bfdddd
-            }
-
-            &.geo {
-                background: #beb574
-            }
-
-            &.hydro {
-                background: #b0bfe7
-            }
-
-            &.anemo {
-                background: #a3e9c5
-            }
-        }
+    h3 {
+      font-size: clamp(0.8rem, 2.4vw, 1.2rem);
     }
+
+    p {
+      font-size: 1rem;
+      @media only screen and (max-width: 675px) {
+        font-size: 0.75rem;
+      }
+    }
+    .divider {
+      height: 1px;
+      align-self: stretch;
+      background: black;
+    }
+    .character {
+      display: flex;
+      padding: 4px;
+      font-size: 1rem;
+      align-items: flex-start;
+      gap: 10px;
+      align-self: stretch;
+      background: #c2c2c2;
+      @media only screen and (max-width: 675px) {
+        font-size: 0.75rem;
+      }
+
+      &.electro {
+        background: #aa95b4;
+      }
+
+      &.pyro {
+        background: #b99898;
+      }
+
+      &.dendro {
+        background: #aec498;
+      }
+
+      &.cryo {
+        background: #bfdddd;
+      }
+
+      &.geo {
+        background: #beb574;
+      }
+
+      &.hydro {
+        background: #b0bfe7;
+      }
+
+      &.anemo {
+        background: #a3e9c5;
+      }
+    }
+  }
 </style>
