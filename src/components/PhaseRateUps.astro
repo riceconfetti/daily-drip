@@ -7,7 +7,7 @@ interface Props {
 class Character {
   name: string;
   rarity: number;
-  vision: string;
+  element: string;
 }
 
 const { characters, weapons } = Astro.props;
@@ -18,7 +18,7 @@ const { characters, weapons } = Astro.props;
   <h3>Featured 4 Stars</h3>
   {
     characters.map((character) => (
-      <div class={`character ${character.vision}`}>{character.name}</div>
+      <div class={`character ${character.element}`}>{character.name}</div>
     ))
   }
   <div class="divider"></div>

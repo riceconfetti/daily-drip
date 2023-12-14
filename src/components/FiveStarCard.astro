@@ -6,19 +6,19 @@ interface Props {
 class Character {
     name: string;
     rarity: number;
-    vision: string;
+    element: string;
     banner: string;
     splash: string;
 }
 
 const { character } = Astro.props;
 
-const splash = character.splash ? character.splash : `/gacha-splash/${character.vision}.png`
+const splash = character.splash ? character.splash : `/gacha-splash/${character.element}.png`
 const sizing = character.splash ? "" : "contain"
 ---
 
 <div class="five-star-card">
-    <img class={`${character.vision} ${sizing}`} src={splash} alt={`${character.name} Gacha Image`} />
+    <img class={`${character.element} ${sizing}`} src={splash} alt={`${character.name} Gacha Image`} />
     <div class="title-card">
         <div class="card-box">
             <h2>{character.name}</h2>
