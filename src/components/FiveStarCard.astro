@@ -12,10 +12,13 @@ class Character {
 }
 
 const { character } = Astro.props;
+
+const splash = character.splash ? character.splash : `/gacha-splash/${character.vision}.png`
+const sizing = character.splash ? "" : "contain"
 ---
 
 <div class="five-star-card">
-    <img src={character.splash} alt={`${character.name} Gacha Image`} />
+    <img class={`${character.vision} ${sizing}`} src={splash} alt={`${character.name} Gacha Image`} />
     <div class="title-card">
         <div class="card-box">
             <h2>{character.name}</h2>
@@ -37,11 +40,44 @@ const { character } = Astro.props;
             object-fit: cover;
             aspect-ratio: 4/7;
             width:100%;
+
+            &.contain {
+                object-fit: contain;
+            }
+
+            &.electro {
+                background: #AA95B4;;
+            }
+
+            &.pyro {
+                background: #B99898;
+            }
+
+            &.dendro {
+                background: #AEC498;
+            }
+
+            &.cryo {
+                background: #bfdddd
+            }
+
+            &.geo {
+                background: #beb574
+            }
+
+            &.hydro {
+                background: #b0bfe7
+            }
+
+            &.anemo {
+                background: #a3e9c5
+            }
         }
 
         .title-card {
             display: flex;
             padding: 2px;
+            height: 100%;
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
@@ -49,6 +85,7 @@ const { character } = Astro.props;
             border: 0.2px solid #000;
             .card-box {
                 display: flex;
+                height: 100%;
                 padding: 3px 0px;
                 flex-direction: column;
                 align-items: flex-start;
@@ -71,8 +108,11 @@ const { character } = Astro.props;
                     font-style: italic;
                     font-weight: 400;
                     align-self: stretch;
+                    height: 100%;
                 }
             }
         }
     }
+
+
 </style>
