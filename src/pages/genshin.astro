@@ -1,0 +1,196 @@
+---
+import Layout from "../layouts/Layout.astro";
+import VersionSection from "../components/VersionSection.astro";
+import FiveStarCard from "../components/FiveStarCard.astro";
+import PhaseRateUps from "../components/PhaseRateUps.astro";
+import PhaseCard from "../components/PhaseCard.astro";
+import c from "../assets/characters.json";
+
+class Character {
+  name: string;
+  rarity: number;
+  element: string;
+  banner: string;
+  splash: string;
+
+  constructor(name, data) {
+    this.name = name;
+    this.rarity = data.rarity;
+    this.element = data.element;
+    this.banner = data.banner;
+    this.splash = data.splash;
+  }
+}
+---
+
+<Layout title="The Daily Drip | Genshin Banners">
+  {/*************VERSION 4.3***************/}
+  <VersionSection
+    version="Version 4.3"
+    title="Roses and Muskets"
+    date={new Date("2023-12-20T11:00:00+08:00")}
+  >
+    <PhaseCard number={1} date={new Date("2023-12-20T11:00:00+08:00")}>
+      <FiveStarCard character={new Character("Navia", c.Navia)} />
+      <FiveStarCard character={new Character("Ayaka", c.KamisatoAyaka)} />
+      <PhaseRateUps
+        characters={[
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+    <PhaseCard number={2} date={new Date("2024-01-09T18:00:00-05:00")}>
+      <FiveStarCard
+        character={new Character("Raiden Shogun", c.RaidenShogun)}
+      />
+      <FiveStarCard character={new Character("Yoimiya", c.Yoimiya)} />
+      <PhaseRateUps
+        characters={[
+          new Character("Chevruse", c.Chevreuse),
+          new Character("Kujou Sara", c.KujouSara),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+  </VersionSection>
+
+  {/*************VERSION 4.4***************/}
+  <VersionSection
+    version="Version 4.4"
+    title="??????"
+    date={new Date("2024-01-31T11:00:00+08:00")}
+  >
+    <PhaseCard number={1} date={new Date("2024-01-31T11:00:00+08:00")}>
+      <FiveStarCard character={new Character("Shenhe", c.Shenhe)} />
+      <FiveStarCard character={new Character("Ganyu", c.Ganyu)} />
+      <PhaseRateUps
+        characters={[
+          new Character("Xingqiu", c.Xingqiu),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+    <PhaseCard number={2} date={new Date("2024-02-20T18:00:00-05:00")}>
+      <FiveStarCard
+        character={new Character("Cloud Retainer", c.CloudRetainer)}
+      />
+      <FiveStarCard character={new Character("Xiao", c.Xiao)} />
+      <PhaseRateUps
+        characters={[
+          new Character("Jiaming", c.Jiaming),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+  </VersionSection>
+
+  {/*************VERSION 4.5***************/}
+  <VersionSection
+    version="Version 4.5"
+    title="??????"
+    date={new Date("2024-03-13T11:00:00+08:00")}
+  >
+    <PhaseCard number={1} date={new Date("2024-03-13T11:00:00+08:00")}>
+      <FiveStarCard character={new Character("Chiori", c.Chiori)} />
+      <FiveStarCard character={new Character("Lyney", c.Lyney)} />
+      <PhaseRateUps
+        characters={[
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+    <PhaseCard number={2} date={new Date("2024-04-02T18:00:00-05:00")}>
+      <FiveStarCard character={new Character("Sigewinne", c.Sigewinne)} />
+      <FiveStarCard character={new Character("Nahida", c.Nahida)} />
+      <PhaseRateUps
+        characters={[
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+  </VersionSection>
+
+  {/*************VERSION 4.6***************/}
+  <VersionSection
+    version="Version 4.6"
+    title="??????"
+    date={new Date("2024-04-24T11:00:00+08:00")}
+  >
+    <PhaseCard number={1} date={new Date("2024-04-24T11:00:00+08:00")}>
+      <FiveStarCard character={new Character("Arlecchino", c.Arlecchino)} />
+      <FiveStarCard character={new Character("Furina", c.Furina)} />
+      <PhaseRateUps
+        characters={[
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+    <PhaseCard number={2} date={new Date("2024-05-14T18:00:00-05:00")}>
+      <FiveStarCard character={new Character("Neuvillette", c.Neuvillette)} />
+      <FiveStarCard
+        character={new Character("????", { rarity: 5, element: "genshin" })}
+      />
+      <PhaseRateUps
+        characters={[
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+  </VersionSection>
+
+  {/*************VERSION 4.7***************/}
+  <VersionSection
+    version="Version 4.7"
+    title="??????"
+    date={new Date("2024-06-05T11:00:00+08:00")}
+  >
+    <PhaseCard number={1} date={new Date("2024-06-05T11:00:00+08:00")}>
+      <FiveStarCard character={new Character("Emilie", {rarity:5, element:"genshin"})} />
+      <FiveStarCard character={new Character("Navia or Cloud Retainer", { rarity: 5, element: "genshin" })} />
+      <PhaseRateUps
+        characters={[
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+    <PhaseCard number={2} date={new Date("2024-06-25T18:00:00-05:00")}>
+      <FiveStarCard character={new Character("????", { rarity: 5, element: "genshin" })} />
+      <FiveStarCard
+        character={new Character("????", { rarity: 5, element: "genshin" })}
+      />
+      <PhaseRateUps
+        characters={[
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+          new Character("????", { rarity: 4 }),
+        ]}
+        weapons={["???", "???", "???", "???", "???"]}
+      />
+    </PhaseCard>
+  </VersionSection>
+</Layout>
+
+<style lang="scss"></style>
