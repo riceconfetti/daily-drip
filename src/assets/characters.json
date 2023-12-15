@@ -6,13 +6,13 @@
     "RuanMei":{
         "rarity":5,
         "element":"ice",
-        "banner": "",
+        "banner": "Floral Triptych",
         "splash": "/gacha-splash/ruanmei.png"
     },
     "Dr.Ratio":{
         "rarity":5,
         "element":"imaginary",
-        "banner": "",
+        "banner": "Panta Rei",
         "splash": "/gacha-splash/drratio.png"
     },
     "Hanya":{
