@@ -1,14 +1,7 @@
 ---
+import { Character } from '../classes/character';
 interface Props {
     character: Character;
-}
-
-class Character {
-    name: string;
-    rarity: number;
-    element: string;
-    banner: string;
-    splash: string;
 }
 
 const { character } = Astro.props;

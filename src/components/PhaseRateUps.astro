@@ -1,13 +1,8 @@
 ---
+import { Character } from '../classes/character';
 interface Props {
   characters: Array<Character>;
   weapons: Array<String>;
-}
-
-class Character {
-  name: string;
-  rarity: number;
-  element: string;
 }
 
 const { characters, weapons } = Astro.props;
