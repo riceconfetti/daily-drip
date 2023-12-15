@@ -5,22 +5,7 @@ import FiveStarCard from "../components/FiveStarCard.astro";
 import PhaseRateUps from "../components/PhaseRateUps.astro";
 import PhaseCard from "../components/PhaseCard.astro";
 import c from "../assets/characters.json";
-
-class Character {
-  name: string;
-  rarity: number;
-  element: string;
-  banner: string;
-  splash: string;
-
-  constructor(name, data) {
-    this.name = name;
-    this.rarity = data.rarity;
-    this.element = data.element;
-    this.banner = data.banner;
-    this.splash = data.splash;
-  }
-}
+import { Character } from "../classes/character";
 ---
 
 <Layout title="The Daily Drip | Star Rail Banners">
