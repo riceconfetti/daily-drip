@@ -203,14 +203,14 @@
         "banner": "",
         "splash": "/gacha-splash/bailu.png"
     },
-    "CloudRetainer" : {
+    "Xianyun" : {
         "rarity":5,
         "element": "anemo",
         "banner": "?????"
     },
-    "Jiaming": {
+    "Gaming": {
         "rarity":4,
-        "element":"default"
+        "element":"pyro"
     },
     "Chiori": {
         "rarity":5,
