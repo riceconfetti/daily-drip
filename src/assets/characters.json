@@ -1,4 +1,8 @@
 {
+    "Misha": {
+        "rarity": 4,
+        "element": "ice"
+    },
     "Xueyi":{
         "rarity":4,
         "element":"quantum"
