@@ -2,32 +2,101 @@
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
-const banners = (await getCollection("banners")).sort(
-    (a, b) => Date.parse(a.data.time) - Date.parse(b.data.time),
-);
+const banners = (await getCollection("banners"))
+  .sort((a, b) => Date.parse(a.data.time) - Date.parse(b.data.time))
+  .filter((banner) => {
+    return (
+      Date.parse(banner.data.time) >= new Date().getTime() &&
+      Date.parse(banner.data.time) <= new Date().getTime() + 2592000000
+    );
+  });
 ---
 
 <Layout title="The Daily Drip">
+  <div class="upcoming">
+    <h2>Upcoming Banners</h2>
     {
-        banners.map((banner) => (
-            <div>
-                <h2>
-                    {new Date(banner.data.time).toLocaleDateString("en-US", {
-                        hour: "numeric",
-                        month: "long",
-                        day: "numeric",
-                        timeZone: "America/New_York",
-                    })}
-                </h2>
-                <div>
-                    {banner.data.characters.five.map((character) => (
-                        <li>{character}</li>
-                    ))}
-                    {banner.data.characters.four.map((character) => (
-                        <li>{character}</li>
-                    ))}
-                </div>
-            </div>
-        ))
+      banners.map((banner) => (
+        <div class="banner">
+          <h3 class="date">
+            {new Date(banner.data.time).toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              timeZone: "America/New_York",
+            })}:
+          </h3>
+          <div class="characters">
+            {banner.data.characters.five.map((character) => (
+              <li class="five">{character}</li>
+            ))}
+            {banner.data.characters.four.map((character) => (
+              <li class="four">{character}</li>
+            ))}
+          </div>
+        </div>
+      ))
     }
+  </div>
 </Layout>
+
+<style lang="scss">
+  .upcoming {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+    h2 {
+      display: flex;
+      border-bottom: 1px solid #000;
+      background: #c2c2c2;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 12px;
+      gap: 12px;
+      align-self: stretch;
+      color: #000;
+      font-family: "Playfair Display";
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .banner {
+      display: flex;
+      padding: 1rem;
+      padding-block: 2rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;
+      border-bottom: 1px solid #000;
+
+      .characters {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        color: #000;
+        margin-left: 1rem;
+        font-family: Playfair Display;
+        font-size: 18px;
+        line-height: normal;
+        .five {
+          list-style-type: none;
+          font-weight: 700;
+        }
+
+        .four {
+          font-style: italic;
+          margin-left: 2rem;
+          list-style-type: square;
+          font-size: 16px;
+        }
+      }
+    }
+
+    h3.date {
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+</style>
