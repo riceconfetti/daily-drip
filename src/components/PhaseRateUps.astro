@@ -1,5 +1,5 @@
 ---
-import { Character } from '../classes/character';
+import { Character } from "../classes/character";
 interface Props {
   characters: Array<Character>;
   weapons: Array<String>;
@@ -12,14 +12,34 @@ const { characters, weapons } = Astro.props;
   <div class="divider"></div>
   <h3>Featured 4 Stars</h3>
   {
-    characters.map((character) => (
-      <div class={`character ${character.element}`}>{character.name}</div>
-    ))
+    Array.from({ length: 3 }, (_, i) => {
+      if (characters[i]) {
+        return (
+          <div class={`character ${characters[i].element}`}>
+            {characters[i].name}
+          </div>
+        );
+      } else {
+        return <div class="character genshin">????</div>;
+      }
+    })
   }
   <div class="divider"></div>
   <h3>Rate Up Weapons</h3>
   <p>
-    {weapons.map((weapon) => weapon + " ⦁ ")}
+    {
+      Array.from({ length: 5 }, (_, i) => {
+        let dot = "";
+        if (i < 4) {
+          dot = " ⦁ ";
+        }
+        if (weapons[i]) {
+          return weapons[i] + dot;
+        } else {
+          return "?????" + dot;
+        }
+      })
+    }
   </p>
   <div class="divider"></div>
 </div>
@@ -66,19 +86,19 @@ const { characters, weapons } = Astro.props;
       }
 
       &.ice {
-        background: #afd1dc
+        background: #afd1dc;
       }
 
       &.wind {
-        background: #90f57e
+        background: #90f57e;
       }
 
       &.imaginary {
-        background: #dcd770
+        background: #dcd770;
       }
 
       &.physical {
-        background: #b3b3b3
+        background: #b3b3b3;
       }
 
       &.quantum {
@@ -87,7 +107,7 @@ const { characters, weapons } = Astro.props;
       }
 
       &.fire {
-        background: #dc7070
+        background: #dc7070;
       }
 
       &.electro {
