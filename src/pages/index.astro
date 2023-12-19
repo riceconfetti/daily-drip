@@ -7,7 +7,7 @@ const banners = (await getCollection("banners"))
   .filter((banner) => {
     return (
       Date.parse(banner.data.time) >= new Date().getTime() &&
-      Date.parse(banner.data.time) <= new Date().getTime() + 2592000000
+      Date.parse(banner.data.time) <= new Date().getTime() + 1814400000
     );
   });
 ---
