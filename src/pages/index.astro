@@ -1,7 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const banners = (await getCollection("banners")).sort(
+    (a, b) => Date.parse(a.data.time) - Date.parse(b.data.time),
+);
 ---
 
 <Layout title="The Daily Drip">
-
+    {
+        banners.map((banner) => (
+            <div>
+                <h2>
+                    {new Date(banner.data.time).toLocaleDateString("en-US", {
+                        hour: "numeric",
+                        month: "long",
+                        day: "numeric",
+                        timeZone: "America/New_York",
+                    })}
+                </h2>
+                <div>
+                    {banner.data.characters.five.map((character) => (
+                        <li>{character}</li>
+                    ))}
+                    {banner.data.characters.four.map((character) => (
+                        <li>{character}</li>
+                    ))}
+                </div>
+            </div>
+        ))
+    }
 </Layout>

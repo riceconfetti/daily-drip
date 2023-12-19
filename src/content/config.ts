@@ -1,32 +1,34 @@
-import { z, defineCollection } from 'astro:content';
+import { z, defineCollection, reference } from 'astro:content';
 
-const genshinCollection = defineCollection({
+const bannerCollection = defineCollection({
     type: "data",
     schema: z.object({
-        version: z.number(),
-        time: z.date(),
+        time: z.string(),
         characters: z.object({
             five: z.array(z.string()),
             four: z.array(z.string())
         }),
-        weapon: z.array(z.string())
-    })
+        weapons: z.array(z.string())
+    }).partial()
 });
 
-const starrailCollection = defineCollection({
+const versionsCollection = defineCollection({
     type: "data",
     schema: z.object({
         version: z.number(),
-        time: z.date(),
-        characters: z.object({
-            five: z.array(z.string()),
-            four: z.array(z.string())
-        }),
-        weapon: z.array(z.string())
+        name: z.string()
+    }).partial()
+})
+
+const issuesCollection = defineCollection({
+    type:"content",
+    schema: z.object({
+        title: z.string(),
+        publishedDate: z.date()
     })
-});
+})
 
 export const collections = {
-  'genshin': genshinCollection,
-  'starrail': starrailCollection
+  'banners': bannerCollection,
+  'versions': versionsCollection
 };

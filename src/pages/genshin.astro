@@ -6,176 +6,68 @@ import PhaseRateUps from "../components/PhaseRateUps.astro";
 import PhaseCard from "../components/PhaseCard.astro";
 import c from "../assets/characters.json";
 import { Character } from "../classes/character";
+import { getCollection, getEntry } from "astro:content";
+
+const versions = await getCollection("versions", ({ id }) => {
+  return id.startsWith("genshin");
+});
+const banners = (
+  await getCollection("banners", ({ id }) => {
+    return id.startsWith("genshin");
+  })
+).sort((a, b) => Date.parse(a.data.time) - Date.parse(b.data.time));
+
+function getDate(v) {
+  const phaseOne = banners.filter((banner) => {
+    return banner.id.startsWith(`${v.id}`);
+  })[0];
+  if (phaseOne === undefined) {
+    return "";
+  } else {
+    return phaseOne.data.time;
+  }
+}
+
+function getCharacter(char, rarity?) {
+  if (c[char] === undefined) {
+    return { rarity: 5 };
+  } else {
+    return c[char];
+  }
+}
 ---
 
 <Layout title="The Daily Drip | Genshin Banners">
-  {/*************VERSION 4.3***************/}
-  <VersionSection
-    version="Version 4.3"
-    title="Roses and Muskets"
-    date={new Date("2023-12-20T11:00:00+08:00")}
-  >
-    <PhaseCard number={1} date={new Date("2023-12-20T11:00:00+08:00")}>
-      <FiveStarCard character={new Character("Navia", c.Navia)} />
-      <FiveStarCard character={new Character("Ayaka", c.KamisatoAyaka)} />
-      <PhaseRateUps
-        characters={[
-          new Character("Sucrose", c.Sucrose),
-          new Character("Rosaria", c.Rosaria),
-          new Character("Candace", c.Candace),
-        ]}
-        weapons={["Mouun's Moon", "The Flute", "Dragon's Bane", "Favonius Codex", "Akuoumaru"]}
-      />
-    </PhaseCard>
-    <PhaseCard number={2} date={new Date("2024-01-09T18:00:00-05:00")}>
-      <FiveStarCard
-        character={new Character("Raiden Shogun", c.RaidenShogun)}
-      />
-      <FiveStarCard character={new Character("Yoimiya", c.Yoimiya)} />
-      <PhaseRateUps
-        characters={[
-          new Character("Chevruse", c.Chevreuse),
-          new Character("Kujou Sara", c.KujouSara),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["Rust", "Favonius Sword", "Wavebreaker's Fin", "Eye of Perception", "Rainslasher"]}
-      />
-    </PhaseCard>
-  </VersionSection>
-
-  {/*************VERSION 4.4***************/}
-  <VersionSection
-    version="Version 4.4"
-    title="??????"
-    date={new Date("2024-01-31T11:00:00+08:00")}
-  >
-    <PhaseCard number={1} date={new Date("2024-01-31T11:00:00+08:00")}>
-      <FiveStarCard character={new Character("Shenhe", c.Shenhe)} />
-      <FiveStarCard character={new Character("Ganyu", c.Ganyu)} />
-      <PhaseRateUps
-        characters={[
-          new Character("Xingqiu", c.Xingqiu),
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["???", "???", "???", "???", "???"]}
-      />
-    </PhaseCard>
-    <PhaseCard number={2} date={new Date("2024-02-20T18:00:00-05:00")}>
-      <FiveStarCard
-        character={new Character("Xianyun", c.Xianyun)}
-      />
-      <FiveStarCard character={new Character("Xiao", c.Xiao)} />
-      <PhaseRateUps
-        characters={[
-          new Character("Gaming", c.Gaming),
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["???", "???", "???", "???", "???"]}
-      />
-    </PhaseCard>
-  </VersionSection>
-
-  {/*************VERSION 4.5***************/}
-  <VersionSection
-    version="Version 4.5"
-    title="??????"
-    date={new Date("2024-03-13T11:00:00+08:00")}
-  >
-    <PhaseCard number={1} date={new Date("2024-03-13T11:00:00+08:00")}>
-      <FiveStarCard character={new Character("Chiori", c.Chiori)} />
-      <FiveStarCard character={new Character("Lyney", c.Lyney)} />
-      <PhaseRateUps
-        characters={[
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["???", "???", "???", "???", "???"]}
-      />
-    </PhaseCard>
-    <PhaseCard number={2} date={new Date("2024-04-02T18:00:00-05:00")}>
-      <FiveStarCard character={new Character("Sigewinne", c.Sigewinne)} />
-      <FiveStarCard character={new Character("Nahida", c.Nahida)} />
-      <PhaseRateUps
-        characters={[
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["???", "???", "???", "???", "???"]}
-      />
-    </PhaseCard>
-  </VersionSection>
-
-  {/*************VERSION 4.6***************/}
-  <VersionSection
-    version="Version 4.6"
-    title="??????"
-    date={new Date("2024-04-24T11:00:00+08:00")}
-  >
-    <PhaseCard number={1} date={new Date("2024-04-24T11:00:00+08:00")}>
-      <FiveStarCard character={new Character("Arlecchino", c.Arlecchino)} />
-      <FiveStarCard character={new Character("Furina", c.Furina)} />
-      <PhaseRateUps
-        characters={[
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["???", "???", "???", "???", "???"]}
-      />
-    </PhaseCard>
-    <PhaseCard number={2} date={new Date("2024-05-14T18:00:00-05:00")}>
-      <FiveStarCard character={new Character("Neuvillette", c.Neuvillette)} />
-      <FiveStarCard
-        character={new Character("????", { rarity: 5, element: "genshin" })}
-      />
-      <PhaseRateUps
-        characters={[
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["???", "???", "???", "???", "???"]}
-      />
-    </PhaseCard>
-  </VersionSection>
-
-  {/*************VERSION 4.7***************/}
-  <VersionSection
-    version="Version 4.7"
-    title="??????"
-    date={new Date("2024-06-05T11:00:00+08:00")}
-  >
-    <PhaseCard number={1} date={new Date("2024-06-05T11:00:00+08:00")}>
-      <FiveStarCard character={new Character("Emilie", {rarity:5, element:"genshin"})} />
-      <FiveStarCard character={new Character("Navia or Cloud Retainer", { rarity: 5, element: "genshin" })} />
-      <PhaseRateUps
-        characters={[
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["???", "???", "???", "???", "???"]}
-      />
-    </PhaseCard>
-    <PhaseCard number={2} date={new Date("2024-06-25T18:00:00-05:00")}>
-      <FiveStarCard character={new Character("????", { rarity: 5, element: "genshin" })} />
-      <FiveStarCard
-        character={new Character("????", { rarity: 5, element: "genshin" })}
-      />
-      <PhaseRateUps
-        characters={[
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-          new Character("????", { rarity: 4 }),
-        ]}
-        weapons={["???", "???", "???", "???", "???"]}
-      />
-    </PhaseCard>
-  </VersionSection>
+  {
+    versions.map((v) => (
+      <VersionSection
+        version={v.data.version}
+        title={v.data.name}
+        date={new Date(getDate(v))}
+      >
+        {banners
+          .filter((banner) => {
+            return banner.id.startsWith(`${v.id}`);
+          })
+          .map((b, i) => (
+            <PhaseCard number={i + 1} date={new Date(b.data.time)}>
+              {b.data.characters.five.map((char) => (
+                <FiveStarCard
+                  character={
+                    new Character(char, getCharacter(char.replace(/\s/g, ""), 5))
+                  }
+                />
+              ))}
+              <PhaseRateUps characters={
+                b.data.characters.four.map((char)=> (
+                  new Character(char, getCharacter(char.replace(/\s/g, ""), 4))
+                ))
+              } weapons={b.data.weapons}/>
+            </PhaseCard>
+          ))}
+      </VersionSection>
+    ))
+  }
 </Layout>
 
 <style lang="scss"></style>
