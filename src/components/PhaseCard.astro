@@ -6,9 +6,10 @@ interface Props {
 
 const { number, date } = Astro.props;
 const theme = number % 2 == 0 ? "dark" : "light";
+const disable = date < new Date() ? "disabled" : "";
 ---
 
-<div class="phase">
+<div class=`phase ${disable}` >
   <div class=`phase-header ${theme}`>
     <h2>Phase {number}</h2>
     <p>
@@ -35,6 +36,10 @@ const theme = number % 2 == 0 ? "dark" : "light";
     width: 100%;
     align-self: stretch;
     gap: 12px;
+
+    &.disabled {
+      filter: saturate(0);
+    }
     .phase-header {
       display: flex;
       height: max-content;

@@ -210,7 +210,8 @@
     "Xianyun" : {
         "rarity":5,
         "element": "anemo",
-        "banner": "?????"
+        "banner": "?????",
+        "splash":"/gacha-splash/xianyun.png"
     },
     "Gaming": {
         "rarity":4,
