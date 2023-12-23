@@ -30,6 +30,7 @@ const sizing = character.splash ? "" : "contain"
         img {
             border: 1px solid #7e7e7e;
             box-sizing: border-box;
+            background: center / contain no-repeat;
             object-fit: cover;
             aspect-ratio: 4/7;
             width:100%;
@@ -39,31 +40,35 @@ const sizing = character.splash ? "" : "contain"
             }
 
             &.electro {
-                background: #AA95B4;
+                background-image: url("./backgrounds/electro.png");
             }
 
             &.pyro {
-                background: #B99898;
+                background-image: url("./backgrounds/pyro.png");
             }
 
             &.dendro {
-                background: #AEC498;
+                background-image: url("./backgrounds/dendro.png");;
             }
 
             &.cryo {
-                background: #bfdddd
+                background-image: url("./backgrounds/cryo.png");
             }
 
             &.geo {
-                background: #beb574
+                background-image: url("./backgrounds/geo.png");
             }
 
             &.hydro {
-                background: #b0bfe7
+                background-image: url("./backgrounds/hydro.png");
             }
 
             &.anemo {
-                background: #a3e9c5
+                background-image: url("./backgrounds/anemo.png");
+            }
+
+            &.genshin {
+                background-image: url("./backgrounds/genshin.png");
             }
         }
 
