@@ -1,7 +1,23 @@
 {
+    "Sparkle": {
+        "rarity":5,
+        "element": "quantum",
+        "path": "harmony"
+    },
+    "Sam": {
+        "rarity":5,
+        "element": "fire",
+        "path": "destruction"
+    },
+    "BlackSwan": {
+        "rarity":5,
+        "element": "wind",
+        "path": "nihility"
+    },
     "Aventurine":{
         "rarity": 5,
-        "element": "imaginary"
+        "element": "imaginary",
+        "path": "preservation"
     },
     "Misha": {
         "rarity": 4,
@@ -14,12 +30,14 @@
     "RuanMei":{
         "rarity":5,
         "element":"ice",
+        "path": "harmony",
         "banner": "Floral Triptych",
         "splash": "/gacha-splash/ruanmei.png"
     },
     "Dr.Ratio":{
         "rarity":5,
         "element":"imaginary",
+        "path": "hunt",
         "banner": "Panta Rei",
         "splash": "/gacha-splash/drratio.png"
     },
@@ -30,18 +48,21 @@
     "Argenti":{
         "rarity":5,
         "element":"physical",
+        "path": "erudition",
         "banner": "Thorns of Scented Crown",
         "splash": "/gacha-splash/argenti.png"
     },
     "Huohuo":{
         "rarity":5,
         "element":"wind",
+        "path": "abundance",
         "banner": "Bloom in Gloom",
         "splash": "/gacha-splash/huohuo.png"
     },
     "Topaz":{
         "rarity":5,
         "element":"fire",
+        "path":"hunt",
         "banner": "Sunset Clause",
         "splash": "/gacha-splash/topaz.png"
     },
@@ -52,6 +73,7 @@
     "Jingliu":{
         "rarity":5,
         "element":"ice",
+        "path":"destruction",
         "banner": "Gentle Eclipse of the Moon",
         "splash": "/gacha-splash/jingliu.png"
     },
@@ -62,18 +84,21 @@
     "FuXuan":{
         "rarity":5,
         "element":"quantum",
+        "path":"preservation",
         "banner": "Forseen, Foreknown, Foretold",
         "splash": "/gacha-splash/fuxuan.png"
     },
     "YinYueJun":{
         "rarity":5,
         "element":"imaginary",
+        "path":"destruction",
         "banner": "Epochal Spectrum",
         "splash": "/gacha-splash/yinyuejun.png"
     },
     "Kafka":{
         "rarity":5,
         "element":"lightning",
+        "path":"nihility",
         "banner": "Nessun Dorma",
         "splash": "/gacha-splash/kafka.png"
     },
@@ -84,12 +109,14 @@
     "Blade":{
         "rarity":5,
         "element":"wind",
+        "path":"destruction",
         "banner": "A Lost Soul",
         "splash": "/gacha-splash/blade.png"
     },
     "Luocha":{
         "rarity":5,
         "element":"imaginary",
+        "path":"abundance",
         "banner": "Laic Pursuit",
         "splash": "/gacha-splash/luocha.png"
     },
@@ -100,12 +127,14 @@
     "SilverWolf":{
         "rarity":5,
         "element":"quantum",
+        "path":"nihility",
         "banner": "Contract Zero",
         "splash": "/gacha-splash/silverwolf.png"
     },
     "JingYuan":{
         "rarity":5,
         "element":"lightning",
+        "path":"erudition",
         "banner": "Swirl of Heavenly Spear",
         "splash": "/gacha-splash/jingyuan.png"
     },
@@ -120,12 +149,14 @@
     "Himeko":{
         "rarity":5,
         "element":"fire",
+        "path":"erudition",
         "banner": "",
         "splash": "/gacha-splash/himeko.png"
     },
     "Welt":{
         "rarity":5,
         "element":"imaginary",
+        "path":"nihility",
         "banner": "",
         "splash": "/gacha-splash/welt.png"
     },
@@ -144,12 +175,14 @@
     "Bronya":{
         "rarity":5,
         "element":"wind",
+        "path":"harmony",
         "banner": "",
         "splash": "/gacha-splash/bronya.png"
     },
     "Seele":{
         "rarity":5,
         "element":"quantum",
+        "path":"hunt",
         "banner": "Butterfly on Swordtip",
         "splash": "/gacha-splash/seele.png"
     },
@@ -162,6 +195,7 @@
     "Gepard":{
         "rarity":5,
         "element":"ice",
+        "path":"preservation",
         "banner": "",
         "splash": "/gacha-splash/gepard.png"
     },
@@ -176,6 +210,7 @@
     "Clara":{
         "rarity":5,
         "element":"physical",
+        "path":"destruction",
         "banner": "",
         "splash": "/gacha-splash/clara.png"
     },
@@ -202,12 +237,14 @@
     "Yanqing":{
         "rarity":5,
         "element":"ice",
+        "path":"hunt",
         "banner": "",
         "splash": "/gacha-splash/yanqing.png"
     },
     "Bailu":{
         "rarity":5,
         "element":"lightning",
+        "path":"abundance",
         "banner": "",
         "splash": "/gacha-splash/bailu.png"
     },

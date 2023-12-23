@@ -3,15 +3,14 @@ import { Character } from '../classes/character';
 interface Props {
     character: Character;
 }
-
 const { character } = Astro.props;
 
-const splash = character.splash ? character.splash : `/gacha-splash/${character.element}.png`
-const sizing = character.splash ? "" : "contain"
+const splash = character.splash ? character.splash : character.path ? `/paths/${character.path}.webp` : `/elements/${character.element}.png`
+const sizing = character.splash ? "" : "scale";
 ---
 
 <div class="five-star-card">
-    <img class={`${character.element} ${sizing}`} src={splash} alt={`${character.name} Splash Art`} />
+    <img class={`${character.element} ${character.path} ${sizing}`} src={splash} alt={`${character.name} Splash Art`} />
     <div class="title-card">
         <div class="card-box">
             <h2>{character.name}</h2>
@@ -30,45 +29,78 @@ const sizing = character.splash ? "" : "contain"
         img {
             border: 1px solid #7e7e7e;
             box-sizing: border-box;
-            background: center / contain no-repeat;
+            background: center / auto 100% no-repeat;
             object-fit: cover;
             aspect-ratio: 4/7;
             width:100%;
 
-            &.contain {
+            &.scale {
                 object-fit: contain;
+                padding: 1.2rem;
+            }
+
+            &.fire {
+                background-image: url("/backgrounds/fire.png");
+            }
+
+            &.lightning {
+                background-image: url("/backgrounds/lightning.png");
+            }
+
+            &.wind {
+                background-image: url("/backgrounds/wind.png");
+            }
+
+            &.imaginary {
+                background-image: url("/backgrounds/imaginary.png");
+            }
+
+            &.ice {
+                background-image: url("/backgrounds/ice.png");
+            }
+
+            &.quantum {
+                background-image: url("/backgrounds/quantum.png");
+            }
+
+            &.physical {
+                background-image: url("/backgrounds/physical.png");
             }
 
             &.electro {
-                background-image: url("./backgrounds/electro.png");
+                background-image: url("/backgrounds/electro.png");
             }
 
             &.pyro {
-                background-image: url("./backgrounds/pyro.png");
+                background-image: url("/backgrounds/pyro.png");
             }
 
             &.dendro {
-                background-image: url("./backgrounds/dendro.png");;
+                background-image: url("/backgrounds/dendro.png");;
             }
 
             &.cryo {
-                background-image: url("./backgrounds/cryo.png");
+                background-image: url("/backgrounds/cryo.png");
             }
 
             &.geo {
-                background-image: url("./backgrounds/geo.png");
+                background-image: url("/backgrounds/geo.png");
             }
 
             &.hydro {
-                background-image: url("./backgrounds/hydro.png");
+                background-image: url("/backgrounds/hydro.png");
             }
 
             &.anemo {
-                background-image: url("./backgrounds/anemo.png");
+                background-image: url("/backgrounds/anemo.png");
             }
 
             &.genshin {
-                background-image: url("./backgrounds/genshin.png");
+                background-image: url("/backgrounds/genshin.png");
+            }
+
+            &.starrail {
+                background-image: url("/backgrounds/starrail.png");
             }
         }
 
