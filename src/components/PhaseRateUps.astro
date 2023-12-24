@@ -15,12 +15,15 @@ const { characters, weapons } = Astro.props;
     Array.from({ length: 3 }, (_, i) => {
       if (characters[i]) {
         return (
-          <div class={`character ${characters[i].element}`}>
+          <div
+            class={`character`}
+            style={`background: var(--${characters[i].element ? characters[i].element : "default"});`}
+          >
             {characters[i].name}
           </div>
         );
       } else {
-        return <div class="character genshin">????</div>;
+        return <div class="character" style={`background: var(--default);`}>????</div>;
       }
     })
   }
@@ -44,7 +47,24 @@ const { characters, weapons } = Astro.props;
   <div class="divider"></div>
 </div>
 
-<style>
+<style lang="scss">
+  :root {
+    --wind: #396C69;
+    --quantum: #413776;
+    --physical: #484A52;
+    --ice: #496D81;
+    --lightning: #692E70;
+    --fire: #74322A;
+    --imaginary: #87773B;
+    --hydro: #21458D;
+    --cryo: #2B6C88;
+    --anemo: #26817E;
+    --dendro: #48913F;
+    --geo: #6B5526;
+    --pyro: #813326;
+    --electro: #8749B3;
+    --default: #474747;
+}
   .phase-rate-ups {
     display: flex;
     flex-direction: column;
@@ -75,67 +95,9 @@ const { characters, weapons } = Astro.props;
       align-items: flex-start;
       gap: 10px;
       align-self: stretch;
-      background: #c2c2c2;
+      color: #fff;
       @media only screen and (max-width: 675px) {
         font-size: 0.75rem;
-      }
-
-      &.lightning {
-        background: #b930e2;
-        color: white;
-      }
-
-      &.ice {
-        background: #afd1dc;
-      }
-
-      &.wind {
-        background: #90f57e;
-      }
-
-      &.imaginary {
-        background: #dcd770;
-      }
-
-      &.physical {
-        background: #b3b3b3;
-      }
-
-      &.quantum {
-        background: #6a6690;
-        color: white;
-      }
-
-      &.fire {
-        background: #dc7070;
-      }
-
-      &.electro {
-        background: #aa95b4;
-      }
-
-      &.pyro {
-        background: #b99898;
-      }
-
-      &.dendro {
-        background: #aec498;
-      }
-
-      &.cryo {
-        background: #bfdddd;
-      }
-
-      &.geo {
-        background: #beb574;
-      }
-
-      &.hydro {
-        background: #b0bfe7;
-      }
-
-      &.anemo {
-        background: #a3e9c5;
       }
     }
   }

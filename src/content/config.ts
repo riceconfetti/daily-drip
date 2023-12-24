@@ -24,11 +24,13 @@ const issuesCollection = defineCollection({
     type:"content",
     schema: z.object({
         title: z.string(),
-        publishedDate: z.date()
+        image: z.string(),
+        publishedDate: z.string()
     })
 })
 
 export const collections = {
   'banners': bannerCollection,
-  'versions': versionsCollection
+  'versions': versionsCollection,
+  'issues': issuesCollection
 };
