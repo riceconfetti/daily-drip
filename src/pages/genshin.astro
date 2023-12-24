@@ -57,9 +57,9 @@ function getCharacter(char, r?) {
                     let char = b.data.characters.five[i];
                     return (<FiveStarCard character={new Character(char, c[char.replace(/\s/g, '')])}/>)
                   } else if (b.data.characters.five[i] && !c[b.data.characters.five[i].replace(/\s/g, '')]){
-                    return (<FiveStarCard character={new Character(b.data.characters.five[i], {rarity: 5, element: "genshin"})}/>)
+                    return (<FiveStarCard character={new Character(b.data.characters.five[i], {rarity: 5, element: "genshin", banner: "???????"})}/>)
                   } else {
-                    return (<FiveStarCard character={new Character("????", {rarity: 5, element: "genshin"})}/>)
+                    return (<FiveStarCard character={new Character("????", {rarity: 5, element: "genshin", banner: "???????"})}/>)
                   }
                   
                 })
