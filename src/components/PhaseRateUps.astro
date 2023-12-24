@@ -13,17 +13,28 @@ const { characters, weapons } = Astro.props;
   <h3>Featured 4 Stars</h3>
   {
     Array.from({ length: 3 }, (_, i) => {
+      let spec;
       if (characters[i]) {
+        if (characters[i].name.includes("?")) {
+          characters[i].name = characters[i].name.slice(0, -1);
+          spec = true;
+        }
         return (
           <div
             class={`character`}
-            style={`background: var(--${characters[i].element ? characters[i].element : "default"});`}
+            style={`background: var(--${
+              characters[i].element ? characters[i].element : "default"
+            });`}
           >
-            {characters[i].name}
+          {spec ? "✧ " : ""}{characters[i].name}
           </div>
         );
       } else {
-        return <div class="character" style={`background: var(--default);`}>????</div>;
+        return (
+          <div class="character" style={`background: var(--default);`}>
+            ????
+          </div>
+        );
       }
     })
   }
@@ -48,23 +59,6 @@ const { characters, weapons } = Astro.props;
 </div>
 
 <style lang="scss">
-  :root {
-    --wind: #396C69;
-    --quantum: #413776;
-    --physical: #484A52;
-    --ice: #496D81;
-    --lightning: #692E70;
-    --fire: #74322A;
-    --imaginary: #87773B;
-    --hydro: #21458D;
-    --cryo: #2B6C88;
-    --anemo: #26817E;
-    --dendro: #48913F;
-    --geo: #6B5526;
-    --pyro: #813326;
-    --electro: #8749B3;
-    --default: #474747;
-}
   .phase-rate-ups {
     display: flex;
     flex-direction: column;

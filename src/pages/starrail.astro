@@ -50,25 +50,67 @@ function getCharacter(char, rarity?) {
             return banner.id.startsWith(`${v.id}`);
           })
           .map((b, i) => (
-            <PhaseCard number={i + 1} date={new Date(b.data.time)}>
-              {
-                Array.from({length:2}, (_, i) => {
-                  if (b.data.characters.five[i] && c[b.data.characters.five[i].replace(/\s/g, '')]) {
-                    let char = b.data.characters.five[i];
-                    return (<FiveStarCard character={new Character(char, c[char.replace(/\s/g, '')])}/>)
-                  } else if (b.data.characters.five[i] && !c[b.data.characters.five[i].replace(/\s/g, '')]){
-                    return (<FiveStarCard character={new Character(b.data.characters.five[i], {rarity: 5, element: "starrail", path: "starrail"})}/>)
-                  } else {
-                    return (<FiveStarCard character={new Character("????", {rarity: 5, element: "starrail", path: "starrail"})}/>)
-                  }
-                  
-                })
-              }
-              <PhaseRateUps characters={
-                b.data.characters.four.map((char)=> (
-                  new Character(char, getCharacter(char.replace(/\s/g, ""), 4))
-                ))
-              } weapons={b.data.weapons}/>
+          <PhaseCard number={i + 1} date={new Date(b.data.time)}>
+              {Array.from({ length: 2 }, (_, i) => {
+                let char = b.data.characters.five[i];
+                let spec = false;
+
+                if (char && char.includes("?")) {
+                  char = char.slice(0,-1);
+                  spec = true;
+                }
+
+                if (b.data.characters.five[i] && c[char.replace(/\s/g, "")]) {
+                  return (
+                    <FiveStarCard
+                      spec={spec}
+                      character={
+                        new Character(char, c[char.replace(/\s/g, "")])
+                      }
+                    />
+                  );
+                } else if (
+                  b.data.characters.five[i] &&
+                  !c[char.replace(/\s/g, "")]
+                ) {
+                  return (
+                    <FiveStarCard
+                      spec={spec}
+                      character={
+                        new Character(char, {
+                          rarity: 5,
+                          element: "starrail",
+                          path: "starrail",
+                          banner: "????",
+                        })
+                      }
+                    />
+                  );
+                } else {
+                  return (
+                    <FiveStarCard
+                      spec={spec}
+                      character={
+                        new Character("????", {
+                          rarity: 5,
+                          element: "starrail",
+                          path:"starrail",
+                          banner: "????",
+                        })
+                      }
+                    />
+                  );
+                }
+              })}
+              <PhaseRateUps
+                characters={b.data.characters.four.map((char) => {
+                  return new Character(
+                    char,
+                    getCharacter(char.replace(/\s/g, ""), 4)
+                  );
+                })}
+                weapons={b.data.weapons}
+              />
             </PhaseCard>
           ))}
       </VersionSection>
