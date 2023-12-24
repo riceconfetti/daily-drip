@@ -1,4 +1,9 @@
 {
+    "Clorinde": {
+        "rarity":5,
+        "element":"electro",
+        "banner": "?????"
+    },
     "Sparkle": {
         "rarity":5,
         "element": "quantum",

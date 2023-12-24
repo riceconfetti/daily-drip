@@ -6,10 +6,11 @@
             "Xiao"
         ],
         "four": [
-            "Xingqiu",
-            "Ningguang",
-            "Gaming"
+            "Gaming",
+            "Xingqiu?",
+            "Ningguang?"
+            
         ]
     },
-    "weapons":["???", "???", "???", "???","???"]
+    "weapons":[]
 }

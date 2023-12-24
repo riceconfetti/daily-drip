@@ -2,15 +2,16 @@
 import { Character } from '../classes/character';
 interface Props {
     character: Character;
+    spec: boolean
 }
-const { character } = Astro.props;
+const { character, spec } = Astro.props;
 
 const splash = character.splash ? character.splash : character.path ? `/paths/${character.path}.webp` : `/elements/${character.element}.png`
 const sizing = character.splash ? "" : "scale";
 ---
 
 <div class="five-star-card">
-    <img class={`${character.element} ${character.path} ${sizing}`} src={splash} alt={`${character.name} Splash Art`} />
+    <img class={`${character.element} ${character.path} ${sizing} ${spec ? "spec": ""}`} src={splash} alt={`${character.name} Splash Art`} />
     <div class="title-card">
         <div class="card-box">
             <h2>{character.name}</h2>
@@ -33,6 +34,10 @@ const sizing = character.splash ? "" : "scale";
             object-fit: cover;
             aspect-ratio: 4/7;
             width:100%;
+
+            &.spec {
+                border: 2px solid gold;
+            }
 
             &.scale {
                 object-fit: contain;
