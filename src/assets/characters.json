@@ -1,4 +1,28 @@
 {
+    "Acheron": {
+        "rarity": 5,
+        "element": "lightning",
+        "path": "hunt",
+        "banner": "?????"
+    }, 
+    "TestPhysical": {
+        "rarity": 5,
+        "element": "physical",
+        "path": "hunt",
+        "banner": "?????"
+    },
+    "TestIce": {
+        "rarity": 5,
+        "element": "ice",
+        "path": "hunt",
+        "banner": "?????"
+    },
+    "Screwllum": {
+        "rarity": 5,
+        "element": "imaginary",
+        "path": "erudition",
+        "banner": "?????"
+    },
     "Clorinde": {
         "rarity":5,
         "element":"electro",
@@ -7,22 +31,26 @@
     "Sparkle": {
         "rarity":5,
         "element": "quantum",
-        "path": "harmony"
+        "path": "harmony",
+        "banner": "?????"
     },
     "Sam": {
         "rarity":5,
         "element": "fire",
-        "path": "destruction"
+        "path": "destruction",
+        "banner": "?????"
     },
     "BlackSwan": {
         "rarity":5,
         "element": "wind",
-        "path": "nihility"
+        "path": "nihility",
+        "banner": "?????"
     },
     "Aventurine":{
         "rarity": 5,
         "element": "imaginary",
-        "path": "preservation"
+        "path": "preservation",
+        "banner": "?????"
     },
     "Misha": {
         "rarity": 4,

@@ -31,7 +31,7 @@ function getDate(v) {
 function getCharacter(character, r?) {
   let char;
   if (character.includes("?")) {
-    char = character.slice(0,-1);
+    char = character.slice(0, -1);
   } else {
     char = character;
   }
@@ -64,7 +64,7 @@ function getCharacter(character, r?) {
                 let spec = false;
 
                 if (char && char.includes("?")) {
-                  char = char.slice(0,-1);
+                  char = char.slice(0, -1);
                   spec = true;
                 }
 
@@ -109,6 +109,7 @@ function getCharacter(character, r?) {
                 }
               })}
               <PhaseRateUps
+                game="genshin"
                 characters={b.data.characters.four.map((char) => {
                   return new Character(
                     char,

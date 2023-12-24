@@ -3,9 +3,11 @@ import { Character } from "../classes/character";
 interface Props {
   characters: Array<Character>;
   weapons: Array<String>;
+  game: string;
 }
 
-const { characters, weapons } = Astro.props;
+const { characters, weapons, game } = Astro.props;
+const rateUpWeapons = game == "starrail" ? 3 : 5;
 ---
 
 <div class="phase-rate-ups">
@@ -42,9 +44,9 @@ const { characters, weapons } = Astro.props;
   <h3>Rate Up Weapons</h3>
   <p>
     {
-      Array.from({ length: 5 }, (_, i) => {
+      Array.from({ length: rateUpWeapons }, (_, i) => {
         let dot = "";
-        if (i < 4) {
+        if (i < rateUpWeapons-1) {
           dot = " ⦁ ";
         }
         if (weapons[i]) {

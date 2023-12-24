@@ -28,11 +28,19 @@ function getDate(v) {
   }
 }
 
-function getCharacter(char, rarity?) {
-  if (c[char] === undefined) {
-    return { rarity: 5 };
+function getCharacter(character, r?) {
+  let char;
+  if (character.includes("?")) {
+    char = character.slice(0, -1);
   } else {
+    char = character;
+  }
+  char = char.replace(/\s/g, "");
+
+  if (c[char]) {
     return c[char];
+  } else {
+    return { rarity: r };
   }
 }
 ---
@@ -50,13 +58,13 @@ function getCharacter(char, rarity?) {
             return banner.id.startsWith(`${v.id}`);
           })
           .map((b, i) => (
-          <PhaseCard number={i + 1} date={new Date(b.data.time)}>
+            <PhaseCard number={i + 1} date={new Date(b.data.time)}>
               {Array.from({ length: 2 }, (_, i) => {
                 let char = b.data.characters.five[i];
                 let spec = false;
 
                 if (char && char.includes("?")) {
-                  char = char.slice(0,-1);
+                  char = char.slice(0, -1);
                   spec = true;
                 }
 
@@ -94,7 +102,7 @@ function getCharacter(char, rarity?) {
                         new Character("????", {
                           rarity: 5,
                           element: "starrail",
-                          path:"starrail",
+                          path: "starrail",
                           banner: "????",
                         })
                       }
@@ -103,6 +111,7 @@ function getCharacter(char, rarity?) {
                 }
               })}
               <PhaseRateUps
+                game="starrail"
                 characters={b.data.characters.four.map((char) => {
                   return new Character(
                     char,

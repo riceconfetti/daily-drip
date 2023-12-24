@@ -6,7 +6,7 @@ interface Props {
 }
 const { character, spec } = Astro.props;
 
-const splash = character.splash ? character.splash : character.path ? `/paths/${character.path}.webp` : `/elements/${character.element}.png`
+const splash = character.splash ? character.splash : character.path ? `/paths/${character.path}.png` : `/elements/${character.element}.png`
 const sizing = character.splash ? "" : "scale";
 ---
 
@@ -36,7 +36,8 @@ const sizing = character.splash ? "" : "scale";
             width:100%;
 
             &.spec {
-                border: 2px solid gold;
+                border: 3px solid silver;
+                border-image: url("/textures/holo-4.jpg") 10 round
             }
 
             &.scale {
