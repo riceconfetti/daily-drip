@@ -1,0 +1,17 @@
+---
+import { getCollection, getEntryBySlug } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+export async function getStaticPaths() {
+  const issuesEntries = await getCollection('issues');
+  return issuesEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<Layout title={`${entry.data.title} | The Daily Drip`}>
+  <h1>{entry.data.title}</h1>
+  <Content />
+</Layout>
