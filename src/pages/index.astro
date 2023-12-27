@@ -51,7 +51,7 @@ const { Content } = await recent.render();
       <img src={recent.data.image} />
       <h2 class="issue-title">{recent.data.title}</h2>
       <Content />
-      <!--a href={recent.slug}>Read More</a-->
+      <a href={`/issues/${recent.slug}`}>Read More</a>
     </div>
   </div>
 </Layout>
@@ -67,6 +67,10 @@ const { Content } = await recent.render();
       width: 100%;
       height: min-content;
       overflow: hidden;
+      a {
+        text-align: right;
+        color: black;
+      }
 
       p,
       h1,
@@ -130,6 +134,7 @@ const { Content } = await recent.render();
         flex-direction: column;
         gap: 0.7rem;
         width: 18vw;
+        max-width: 16rem;
         color: #000;
         font-family: Playfair Display;
         font-size: 18px;
