@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntryBySlug } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 export async function getStaticPaths() {
   const issuesEntries = await getCollection('issues');
@@ -12,6 +12,12 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 <Layout title={`${entry.data.title} | The Daily Drip`}>
-  <h1>{entry.data.title}</h1>
+  <h1 class="post-title">{entry.data.title}</h1>
   <Content />
 </Layout>
+
+<style lang="scss">
+.post-title {
+  font-size: 2.5rem;
+}
+</style>
