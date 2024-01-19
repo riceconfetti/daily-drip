@@ -25,7 +25,8 @@ const issuesCollection = defineCollection({
     schema: z.object({
         title: z.string(),
         image: z.string(),
-        publishedDate: z.string()
+        publishedDate: z.string(),
+        tags: z.array(z.string())
     })
 })
 
