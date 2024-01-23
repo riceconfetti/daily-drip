@@ -2,21 +2,9 @@
     "Acheron": {
         "rarity": 5,
         "element": "lightning",
-        "path": "hunt",
+        "path": "nihility",
         "banner": "?????"
     }, 
-    "TestPhysical": {
-        "rarity": 5,
-        "element": "physical",
-        "path": "hunt",
-        "banner": "?????"
-    },
-    "TestIce": {
-        "rarity": 5,
-        "element": "ice",
-        "path": "hunt",
-        "banner": "?????"
-    },
     "Screwllum": {
         "rarity": 5,
         "element": "imaginary",
