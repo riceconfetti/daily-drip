@@ -1,4 +1,9 @@
 {
+    "Gallagher": {
+        "rarity": 4,
+        "element": "fire",
+        "path":"abundance"
+    },
     "Acheron": {
         "rarity": 5,
         "element": "lightning",
