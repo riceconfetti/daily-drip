@@ -7,10 +7,10 @@
         ],
         "four": [
             "Gaming",
-            "Xingqiu?",
-            "Ningguang?"
+            "Faruzan",
+            "Noelle"
             
         ]
     },
-    "weapons":[]
+    "weapons":["Sacrificial Bow", "Sacrificial Sword", "Sacrificial Fragments", "Sacrificial Greatsword", "Lithic Spear"]
 }
