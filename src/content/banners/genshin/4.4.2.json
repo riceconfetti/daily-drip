@@ -6,10 +6,10 @@
             "Yae Miko"
         ],
         "four": [
-            "Xingqiu?",
-            "Yun Jin?",
-            "Yaoyao?"
+            "Ningguang",
+            "Xinyan",
+            "Yaoyao"
         ]
     },
-    "weapons":[]
+    "weapons":["Stringless","Lion's Roar", "The Widsith", "Lithic Blade", "Favonius Lance"]
 }
