@@ -25,7 +25,7 @@
         "rarity":5,
         "element": "quantum",
         "path": "harmony",
-        "banner": "?????",
+        "banner": "Sparkling Splendor",
         "splash":"/gacha-splash/sparkle.png"
     },
     "Sam": {
@@ -38,7 +38,7 @@
         "rarity":5,
         "element": "wind",
         "path": "nihility",
-        "banner": "?????",
+        "banner": "Ripples in Reflection",
         "splash": "/gacha-splash/blackswan.png"
     },
     "Aventurine":{
