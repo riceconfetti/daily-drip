@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a91fb9f675b8181a",
+        "id": "ac8f416fd7862485",
         "type": "tabs",
         "children": [
           {
-            "id": "8c51755a83be993a",
+            "id": "99dcf577c9e75e6d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "issue_02.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "4f308e996bd5bfcf",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "issue_02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "issue_02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "issue_02.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,7 +138,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8c51755a83be993a",
+  "active": "99dcf577c9e75e6d",
   "lastOpenFiles": [
     "issue_02.md",
     "issue_02.md",
