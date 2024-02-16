@@ -1,4 +1,13 @@
 {
+    "Sunday": {
+        "rarity":5
+    },
+    "Boothill":{
+        "rarity":5,
+        "element": "physical",
+        "path": "hunt",
+        "banner": "????"
+    },
     "Gallagher": {
         "rarity": 4,
         "element": "fire",
