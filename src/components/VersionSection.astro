@@ -1,21 +1,32 @@
 ---
 import VersionHeader from "./VersionHeader.astro";
-const { version, title, date } = Astro.props;
+import Chronicle from "./Chronicle.astro";
+const { version, title, date, chronicle } = Astro.props;
 ---
 
-<VersionHeader {version} {title} {date} />
+<VersionHeader {version} {title} {date}/>
 <div class="version-section">
+    {chronicle && <Chronicle characters={chronicle.characters} weapons={chronicle.weapons}/>}
+  <div class="phases">
     <slot />
+  </div>
 </div>
 
 <style lang="scss">
-    .version-section {
-        display: flex;
-        gap: 2rem;
-        width: 100%;
-        height: 100%;
-        @media only screen and (max-width: 700px) {
-            flex-direction: column;
-        }
+  .version-section {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    .phases {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+      height: 100%;
+      @media only screen and (max-width: 700px) {
+        flex-direction: column;
+      }
     }
+  }
 </style>
