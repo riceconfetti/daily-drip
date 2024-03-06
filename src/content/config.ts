@@ -16,7 +16,11 @@ const versionsCollection = defineCollection({
     type: "data",
     schema: z.object({
         version: z.number(),
-        name: z.string()
+        name: z.string(),
+        chronicle: z.object({
+            characters: z.array(z.string()),
+            weapons: z.array(z.string())
+        })
     }).partial()
 })
 

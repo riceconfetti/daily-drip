@@ -1,0 +1,71 @@
+---
+import FiveStarCard from "./FiveStarCard.astro";
+import { Character } from "../classes/character";
+import c from "../assets/characters.json";
+const { characters, weapons } = Astro.props;
+---
+
+<div class="chronicle">
+  <div class="characters">
+    {
+      characters.map((character) => {
+        let char = character;
+        let spec = false;
+
+        if (char && char.includes("?")) {
+          char = char.slice(0, -1);
+          spec = true;
+        }
+
+        if (c[char.replace(/\s/g, "")]) {
+          return (
+            <FiveStarCard
+              spec={spec}
+              character={new Character(char, c[char.replace(/\s/g, "")])}
+              chronicle={true}
+            />
+          );
+        } else {
+          return (
+            <FiveStarCard
+              spec={spec}
+              chronicle={true}
+              character={
+                new Character(char, {
+                  rarity: 5,
+                  element: "genshin",
+                  banner: "????",
+                })
+              }
+            />
+          );
+        }
+      })
+    }
+  </div>
+  <div class="weapons">
+    {
+        Array.from({ length: weapons.length }, (_, i) => {
+          let dot = "";
+          if (i < weapons.length-1) {
+            dot = " ⦁ ";
+          }
+          if (weapons[i]) {
+            return weapons[i] + dot;
+          } else {
+            return "?????" + dot;
+          }
+        })
+      }
+  </div>
+</div>
+
+<style lang="scss">
+    .chronicle {
+        border: 1px solid;
+        .characters {
+            display:flex;
+            width: 100%;
+        }
+    }
+</style>
