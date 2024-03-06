@@ -1,19 +1,18 @@
 {
   "version": 4.5,
+  "name": "Blade Weaving Betwixt Brocade",
   "chronicle": {
-    "characters": ["Eula", "Mona", "Albedo", "Klee", "Diluc", "Jean"],
+    "characters": [
+      "Eula",
+      "Mona",
+      "Albedo",
+      "Klee",
+      "Diluc",
+      "Jean"
+    ],
     "weapons": [
       "Beacon of the Reed Sea",
-      "Song of Broken Pines",
-      "Wolf's Gravestone",
-      "Skyward Pride",
-      "Lost Prayer to the Sacred Winds",
-      "Skyward Atlas",
-      "Skyward Blade",
-      "Aquila Favonia",
-      "Skyward Spine",
-      "Hunter's Path",
-      "Skyward Harp"
+      "Hunter's Path"
     ]
   }
 }

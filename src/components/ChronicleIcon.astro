@@ -1,0 +1,33 @@
+---
+import { Character } from "../classes/character";
+import c from "../assets/characters.json"
+interface Props {
+  character: Character;
+  img: string;
+  spec: boolean;
+}
+const { character, img, spec } = Astro.props;
+
+const splash = character.splash
+  ? character.splash
+  : character.path
+    ? `/paths/${character.path}.png`
+    : `/elements/${character.element}.png`;
+---
+
+<div class="chronicle-icon">
+  <img
+    class={`${spec ? "spec" : ""}`}
+    src={img}
+    alt={`${name} Chronicle Icon`}
+  />
+</div>
+
+<style lang="scss">
+  .chronicle-icon {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+</style>

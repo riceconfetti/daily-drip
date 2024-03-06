@@ -83,8 +83,7 @@ function getCharacter(character, r?) {
                           spec={spec}
                           character={
                             new Character(char, c[char.replace(/\s/g, "")])
-                          }
-                          chronicle={false}
+                          }                  
                         />
                       );
                     } else if (
@@ -93,8 +92,7 @@ function getCharacter(character, r?) {
                     ) {
                       return (
                         <FiveStarCard
-                          spec={spec}
-                          chronicle={false}
+                          spec={spec}                         
                           character={
                             new Character(char, {
                               rarity: 5,

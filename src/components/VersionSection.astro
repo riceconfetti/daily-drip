@@ -6,16 +6,17 @@ const { version, title, date, chronicle } = Astro.props;
 
 <VersionHeader {version} {title} {date}/>
 <div class="version-section">
-    {chronicle && <Chronicle characters={chronicle.characters} weapons={chronicle.weapons}/>}
+    
   <div class="phases">
     <slot />
   </div>
+  {chronicle && <Chronicle characters={chronicle.characters} weapons={chronicle.weapons}/>}
 </div>
 
 <style lang="scss">
   .version-section {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     height: 100%;
     flex-direction: column;
