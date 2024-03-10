@@ -14,7 +14,7 @@ const splash = data.splash ? data.splash : data.path ? `/paths/${data.path}.png`
 
 <div class="chronicle-icon">
   <img
-    class={`${data.element} ${data.path} ${spec ? "spec" : ""}`}
+    class={`${data.element} ${data.path? data.path : ""} ${spec ? "spec" : ""}`}
     src={splash}
     alt={`${data.name} Chronicle Icon`}
   />
@@ -22,14 +22,16 @@ const splash = data.splash ? data.splash : data.path ? `/paths/${data.path}.png`
 
 <style lang="scss">
   .chronicle-icon {
-    width: 12rem;
+    width: 15vw;
+    max-width: 12rem;
+
     img {
       width: 100%;
       border: 1px solid #7e7e7e;
       box-sizing: border-box;
-      background: center / auto 100% no-repeat;
+      background: center / 100% no-repeat;
       object-fit: cover;
-      aspect-ratio: 4/7;
+      aspect-ratio:1;
 
       &.spec {
         border: 3px solid silver;
