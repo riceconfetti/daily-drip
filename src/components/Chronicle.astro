@@ -2,6 +2,7 @@
 import ChronicleIcon from "./ChronicleIcon.astro";
 import c from "../assets/characters.json";
 import { Character } from "../classes/character";
+import { Weapon } from "../classes/weapon";
 const { characters, weapons } = Astro.props;
 ---
 
@@ -21,7 +22,13 @@ const { characters, weapons } = Astro.props;
             spec = true;
           }
 
-          return <ChronicleIcon character={new Character(char, c[char.replace(/\s/g, "")])} spec={spec} img={c[char].splash} />;
+          return (
+            <ChronicleIcon
+              type="character"
+              data={new Character(char, c[char.replace(/\s/g, "")])}
+              spec={spec}
+            />
+          );
         })
       }
     </div>
@@ -36,7 +43,19 @@ const { characters, weapons } = Astro.props;
             weap = weap.slice(0, -1);
             spec = true;
           }
-          return ;
+          return (
+            <ChronicleIcon
+              type="weapon"
+              data={
+                new Weapon(weap, {
+                  rarity: 5,
+                  element: "genshin",
+                  splash: weaponIMG,
+                })
+              }
+              spec={spec}
+            />
+          );
         })
       }
     </ul>
@@ -75,24 +94,15 @@ const { characters, weapons } = Astro.props;
 
     .banners {
       display: flex;
-      padding: 0.75rem;
-      gap: 3rem;
+      width: 100%;
+      padding: 1rem;
+      gap: 1rem;
       @media only screen and (max-width: 700px) {
         flex-direction: column;
       }
-      .characters {
+      .characters, .weapons {
         display: flex;
-        width: 50%;
-        gap: 0.5rem;
-      }
-      .weapons {
-        display: flex;
-        gap: 0.5rem;
-        width: 50%;
-        img {
-          width: 100%;
-          background-image: url("/backgrounds/genshin.png");
-        }
+        flex-wrap: wrap;
       }
     }
   }

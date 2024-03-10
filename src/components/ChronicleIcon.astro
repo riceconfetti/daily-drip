@@ -1,33 +1,109 @@
 ---
-import { Character } from "../classes/character";
-import c from "../assets/characters.json"
+import type { Character } from '../classes/character';
+import type { Weapon } from '../classes/weapon';
+
 interface Props {
-  character: Character;
-  img: string;
+  type: string;
+  data: Character | Weapon;
   spec: boolean;
 }
-const { character, img, spec } = Astro.props;
+const { type, data, spec } = Astro.props;
 
-const splash = character.splash
-  ? character.splash
-  : character.path
-    ? `/paths/${character.path}.png`
-    : `/elements/${character.element}.png`;
+const splash = data.splash ? data.splash : data.path ? `/paths/${data.path}.png` : `/elements/${data.element}.png`;
 ---
 
 <div class="chronicle-icon">
   <img
-    class={`${spec ? "spec" : ""}`}
-    src={img}
-    alt={`${name} Chronicle Icon`}
+    class={`${data.element} ${data.path} ${spec ? "spec" : ""}`}
+    src={splash}
+    alt={`${data.name} Chronicle Icon`}
   />
 </div>
 
 <style lang="scss">
   .chronicle-icon {
-    width: 100%;
+    width: 12rem;
     img {
       width: 100%;
+      border: 1px solid #7e7e7e;
+      box-sizing: border-box;
+      background: center / auto 100% no-repeat;
+      object-fit: cover;
+      aspect-ratio: 4/7;
+
+      &.spec {
+        border: 3px solid silver;
+        border-image: url("/textures/holo-4.jpg") 10 round;
+      }
+
+      &.scale {
+        object-fit: contain;
+        padding: 1.2rem;
+      }
+
+      &.fire {
+        background-image: url("/backgrounds/fire.png");
+      }
+
+      &.lightning {
+        background-image: url("/backgrounds/lightning.png");
+      }
+
+      &.wind {
+        background-image: url("/backgrounds/wind.png");
+      }
+
+      &.imaginary {
+        background-image: url("/backgrounds/imaginary.png");
+      }
+
+      &.ice {
+        background-image: url("/backgrounds/ice.png");
+      }
+
+      &.quantum {
+        background-image: url("/backgrounds/quantum.png");
+      }
+
+      &.physical {
+        background-image: url("/backgrounds/physical.png");
+      }
+
+      &.electro {
+        background-image: url("/backgrounds/electro.png");
+      }
+
+      &.pyro {
+        background-image: url("/backgrounds/pyro.png");
+      }
+
+      &.dendro {
+        background-image: url("/backgrounds/dendro.png");
+      }
+
+      &.cryo {
+        background-image: url("/backgrounds/cryo.png");
+      }
+
+      &.geo {
+        background-image: url("/backgrounds/geo.png");
+      }
+
+      &.hydro {
+        background-image: url("/backgrounds/hydro.png");
+      }
+
+      &.anemo {
+        background-image: url("/backgrounds/anemo.png");
+      }
+
+      &.genshin {
+        background-image: url("/backgrounds/genshin.png");
+      }
+
+      &.starrail {
+        background-image: url("/backgrounds/starrail.png");
+      }
     }
   }
 </style>
