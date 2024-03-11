@@ -5,8 +5,7 @@
             "Chiori",
             "Arataki Itto"
         ],
-        "four": [
-        ]
+        "four": ["Gorou", "Yunjin", "Dori"]
     },
-    "weapons":[]
+    "weapons":["The Alley Flash", "The Alley Hunter", "The Bell", "Dragon's Bane", "Favonius Codex"]
 }
