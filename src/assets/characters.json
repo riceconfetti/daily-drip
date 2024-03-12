@@ -1,6 +1,15 @@
 {
     "Sunday": {
-        "rarity":5
+        "rarity":5,
+        "element": "ice",
+        "path": "starrail",
+        "banner": "?????"
+    },
+    "Robin": {
+        "rarity":5,
+        "element": "physical",
+        "path": "harmony",
+        "banner": "?????"
     },
     "Boothill":{
         "rarity":5,
@@ -17,7 +26,9 @@
         "rarity": 5,
         "element": "lightning",
         "path": "nihility",
-        "banner": "?????"
+        "banner": "?????",
+        "splash":"/gacha-splash/acheron.png"
+
     }, 
     "Screwllum": {
         "rarity": 5,
@@ -54,7 +65,8 @@
         "rarity": 5,
         "element": "imaginary",
         "path": "preservation",
-        "banner": "?????"
+        "banner": "?????",
+        "splash":"/gacha-splash/aventurine.png"
     },
     "Misha": {
         "rarity": 4,
