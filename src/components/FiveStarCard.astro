@@ -3,8 +3,9 @@ import { Character } from "../classes/character";
 interface Props {
   character: Character;
   spec: boolean;
+  release: boolean;
 }
-const { character, spec } = Astro.props;
+const { character, spec, release } = Astro.props;
 
 const splash = character.splash
   ? character.splash
@@ -14,7 +15,7 @@ const splash = character.splash
 const sizing = character.splash ? "" : "scale";
 ---
 
-<div class={`five-star-card`}>
+<div class={`five-star-card ${release ? "release" : ""}`}>
   <img
     class={`${character.element} ${character.path} ${sizing} ${spec ? "spec" : ""}`}
     src={splash}
@@ -31,10 +32,25 @@ const sizing = character.splash ? "" : "scale";
 <style lang="scss">
   .five-star-card {
     display: flex;
+    position: relative;
     flex-direction: column;
     box-sizing: border-box;
     gap: 5px;
     width: 100%;
+
+    &.release::after {
+      content: "NEW";
+      position: absolute;
+      background-color: #ffe300;
+      padding: 0.3rem;
+      font-size: 11px;
+      font-family: calibri;
+      font-weight: bolder;
+      margin: 0.2rem;
+      right: 0;
+      display: flex;
+    }
+
     img {
       border: 1px solid #7e7e7e;
       box-sizing: border-box;
@@ -116,8 +132,6 @@ const sizing = character.splash ? "" : "scale";
       &.anemo {
         background-image: url("/backgrounds/anemo.png");
       }
-
-      
     }
 
     .title-card {
