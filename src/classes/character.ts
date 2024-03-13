@@ -4,14 +4,14 @@ export class Character {
   element: string;
   path?: string;
   banner: string;
-  splash: string;
+  splash?: string;
 
-  constructor(name, data:{path?: string, rarity, element, banner, splash}) {
+  constructor(name, data:{path?: string, rarity, element, banner, splash?:string}) {
     this.name = name;
     if(data.path) this.path = data.path;
     this.rarity = data.rarity;
     this.element = data.element;
     this.banner = data.banner;
-    this.splash = data.splash;
+    if(data.splash) this.splash = data.splash;
   }
 }

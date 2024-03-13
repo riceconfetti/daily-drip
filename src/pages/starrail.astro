@@ -30,11 +30,15 @@ function getDate(v) {
 
 function getCharacter(character, r?) {
   let char;
-  if (character.includes("?")) {
+  if (character.includes("?") || character.includes("!")) {
     char = character.slice(0, -1);
+    if (char.includes("!")) {
+      char = char.slice(0, -1);
+    }
   } else {
     char = character;
   }
+
   char = char.replace(/\s/g, "");
 
   if (c[char]) {
@@ -67,10 +71,16 @@ function getCharacter(character, r?) {
                   {Array.from({ length: 2 }, (_, i) => {
                     let char = b.data.characters.five[i];
                     let spec = false;
+                    let release = false;
 
                     if (char && char.includes("?")) {
                       char = char.slice(0, -1);
                       spec = true;
+                    }
+
+                    if (char && char.includes("!")) {
+                      char = char.slice(0, -1);
+                      release = true;
                     }
 
                     if (
@@ -80,6 +90,7 @@ function getCharacter(character, r?) {
                       return (
                         <FiveStarCard
                           spec={spec}
+                          release={release}
                           character={
                             new Character(char, c[char.replace(/\s/g, "")])
                           }
@@ -92,6 +103,7 @@ function getCharacter(character, r?) {
                       return (
                         <FiveStarCard
                           spec={spec}
+                          release={release}
                           character={
                             new Character(char, {
                               rarity: 5,
@@ -106,6 +118,7 @@ function getCharacter(character, r?) {
                       return (
                         <FiveStarCard
                           spec={spec}
+                          release={release}
                           character={
                             new Character("????", {
                               rarity: 5,
