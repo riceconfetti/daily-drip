@@ -1,4 +1,9 @@
 {
+    "Sethos": {
+        "rarity": 5,
+        "element": "genshin",
+        "banner": "?????"
+    },
     "Jade": {
         "rarity": 5,
         "element": "quantum",
@@ -334,7 +339,8 @@
     "Arlecchino": {
         "rarity": 5,
         "element": "pyro",
-        "banner": "?????"
+        "banner": "?????",
+        "splash": "/gacha-splash/arlecchino.webp"
     },
     "Chevreuse": {
         "rarity": 4,
