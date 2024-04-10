@@ -1,6 +1,6 @@
 {
     "Sethos": {
-        "rarity": 5,
+        "rarity": 4,
         "element": "genshin",
         "banner": "?????"
     },
@@ -26,14 +26,14 @@
         "rarity": 5,
         "element": "physical",
         "path": "harmony",
-        "banner": "?????",
+        "banner": "Just Intonation",
         "splash": "/gacha-splash/robin.png"
     },
     "Boothill": {
         "rarity": 5,
         "element": "physical",
         "path": "hunt",
-        "banner": "????",
+        "banner": "Dusty Trail's Lone Star",
         "splash": "/gacha-splash/boothill.png"
     },
     "Gallagher": {
