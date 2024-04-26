@@ -1,13 +1,14 @@
 {
     "Sethos": {
         "rarity": 4,
-        "element": "genshin",
+        "element": "electro",
         "banner": "?????"
     },
     "Jade": {
         "rarity": 5,
         "element": "quantum",
         "path": "erudition",
+        "splash": "/gacha-splash/jade.png",
         "banner": "?????"
     },
     "Jiaoqiu": {
@@ -57,6 +58,7 @@
     "Clorinde": {
         "rarity": 5,
         "element": "electro",
+        "splash": "/gacha-splash/clorinde.webp",
         "banner": "?????"
     },
     "Sparkle": {
@@ -66,10 +68,11 @@
         "banner": "Sparkling Splendor",
         "splash": "/gacha-splash/sparkle.png"
     },
-    "Sam": {
+    "Firefly": {
         "rarity": 5,
         "element": "fire",
         "path": "destruction",
+        "splash": "/gacha-splash/firefly.png",
         "banner": "?????"
     },
     "BlackSwan": {
@@ -334,12 +337,13 @@
     "Sigewinne": {
         "rarity": 5,
         "element": "hydro",
+        "splash": "/gacha-splash/sigewinne.webp",
         "banner": "?????"
     },
     "Arlecchino": {
         "rarity": 5,
         "element": "pyro",
-        "banner": "?????",
+        "banner": "The Hearth's Ashen Shadow",
         "splash": "/gacha-splash/arlecchino.webp"
     },
     "Chevreuse": {
