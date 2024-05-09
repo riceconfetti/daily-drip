@@ -5,8 +5,8 @@
             "Wanderer",
             "Baizhu"
         ],
-        "four": [
+        "four": ["Beidou", "Faruzan", "Layla"
         ]
     },
-    "weapons":[]
+    "weapons":["Favonius Sword", "Sacrificial Fragments", "Rainslasher", "Prospector's Drill", "Range Gauge"]
 }
