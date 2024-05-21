@@ -1,27 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Calendar from "../components/Calendar.astro";
 import { getCollection, getEntry } from "astro:content";
 
-const banners = (await getCollection("banners"))
-  .sort((a, b) => Date.parse(a.data.time) - Date.parse(b.data.time))
-  .filter((banner) => {
-    return (
-      Date.parse(banner.data.time) >= new Date().getTime() &&
-      Date.parse(banner.data.time) <= new Date().getTime() + 1900800000
-    );
-  });
-
-const issues = (await getCollection("issues")).sort(
-  (a, b) =>
-    new Date(b.data.publishedDate).getTime() -
-    new Date(a.data.publishedDate).getTime(),
-);
-const recent = await getEntry("issues", issues[0].id.slice(0, -3));
-const { Content } = await recent.render();
+// const banners = await getCollection("events");
 ---
 
 <Layout title="The Daily Drip">
-  <div class="home-box">
+  <!-- <div class="home-box">
     <div class="upcoming">
       <h2>Upcoming Banners</h2>
       {
@@ -55,7 +41,8 @@ const { Content } = await recent.render();
       <Content />
       <a href={`/issues/${recent.slug}`}>Read More</a>
     </div>
-  </div>
+  </div> -->
+  <Calendar />
 </Layout>
 
 <style lang="scss" is:global>

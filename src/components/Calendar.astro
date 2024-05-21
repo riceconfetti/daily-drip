@@ -1,0 +1,30 @@
+---
+import dayjs from "dayjs";
+
+import weekday from "dayjs/plugin/weekday";
+import weekOfYear from "dayjs/plugin/weekOfYear";
+
+dayjs.extend(weekday);
+dayjs.extend(weekOfYear);
+
+const WEEKDAY = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const TODAY = dayjs().format("YYYY-MM-DD");
+
+const INITIAL_YEAR = dayjs().format("YYYY");
+const INITIAL_MONTH = dayjs().format("M"); 
+---
+
+<section class="w-full flex flex-col gap-2">
+  <h2 class="text-2xl font-bold"></h2>
+  <div class="grid grid-cols-7 grid-rows-5 w-full">
+    {
+      WEEKDAY.map((v) => (
+        <div class="border border-neutral-500 flex items-center justify-center p-2 font-bold ">
+          {v}
+        </div>
+      ))
+    }
+
+    {}
+  </div>
+</section>
