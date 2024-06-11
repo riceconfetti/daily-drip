@@ -5,19 +5,29 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "host": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/svelte": "^5.5.0",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.0.4",
+    "astro": "^4.10.1",
+    "bits-ui": "^0.21.10",
     "dayjs": "^1.11.11",
     "enkanetwork.js": "^2.6.0",
     "nanostores": "^0.9.5",
-    "tailwindcss": "^3.4.3"
+    "remixicon": "^4.2.0",
+    "svelte": "^4.2.17",
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "sass": "^1.69.5"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.4.4",
+    "vite-aliases": "^0.11.7"
   }
 }

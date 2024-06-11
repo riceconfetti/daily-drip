@@ -1,151 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Calendar from "../components/Calendar.astro";
+import Calendar from "$components/CalendarWidget.svelte";
 import { getCollection, getEntry } from "astro:content";
 
 // const banners = await getCollection("events");
 ---
 
 <Layout title="The Daily Drip">
-  <!-- <div class="home-box">
-    <div class="upcoming">
-      <h2>Upcoming Banners</h2>
-      {
-        banners.map((banner) => (
-          <div class="banner">
-            <h3 class="date">
-              {new Date(banner.data.time).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                timeZone: "America/New_York",
-              })}
-              :
-            </h3>
-            <div class="characters">
-              {banner.data.characters.five.map((character) => (
-                <li class="five">{character}</li>
-              ))}
-              {banner.data.characters.four.map((character) => {
-                if (!character.includes("?")) {
-                  return <li class="four">{character}</li>;
-                }
-              })}
-            </div>
-          </div>
-        ))
-      }
-    </div>
-    <div class="recent">
-      <img src={recent.data.image} />
-      <h2 class="issue-title">{recent.data.title}</h2>
-      <Content />
-      <a href={`/issues/${recent.slug}`}>Read More</a>
-    </div>
-  </div> -->
-  <Calendar />
+  <div class="p-4 bg-dark bg-opacity-20 rounded-md">
+    <p class="playfair-display-regular text-sm">
+      Welcome to <span class="font-bold">The Daily Drip</span>, your place for
+      gacha game leaks and speculations
+    </p>
+  </div>
+  <Calendar client:load />
 </Layout>
-
-<style lang="scss" is:global>
-  .home-box {
-    display: flex;
-    gap: 2rem;
-    .recent {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-      height: min-content;
-      overflow: hidden;
-      a {
-        text-align: right;
-        color: black;
-      }
-
-      p,
-      h1,
-      h2,
-      h3,
-      ul,
-      ol {
-        display: none;
-      }
-
-      p:first-of-type {
-        display: inline-block;
-      }
-
-      .issue-title {
-        display: inline-block;
-        text-align: right;
-        width: 100%;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-  .upcoming {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-
-    h2 {
-      display: flex;
-      border-bottom: 1px solid #000;
-      background: #c2c2c2;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 12px;
-      gap: 12px;
-      align-self: stretch;
-      color: #000;
-      font-family: "Playfair Display";
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    .banner {
-      display: flex;
-      height: 100%;
-      padding: 2rem 1rem;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 24px;
-      align-self: stretch;
-      border-bottom: 1px solid #000;
-      &:last-of-type {
-        border-color: transparent;
-      }
-
-      .characters {
-        display: flex;
-        flex-direction: column;
-        gap: 0.7rem;
-        width: 18vw;
-        max-width: 16rem;
-        color: #000;
-        font-family: Playfair Display;
-        font-size: 18px;
-        line-height: normal;
-        .five {
-          list-style-type: none;
-          font-weight: 700;
-        }
-
-        .four {
-          font-style: italic;
-          margin-left: 1.5rem;
-          list-style-type: square;
-          font-size: 16px;
-        }
-      }
-    }
-
-    h3.date {
-      font-size: 16px;
-      font-style: italic;
-      font-weight: 400;
-    }
-  }
-</style>
