@@ -17,16 +17,20 @@ const characterCollection = defineCollection({
     element: z.string(),
     weaponType: z.string().optional(),
     bannerName: z.string().optional(),
-    colors: z.object({
-      primary: z.string(),
-      secondary: z.string(),
-      textAccent: z.string(),
-    }),
-    images: z.object({
-      gachaSplash: z.string().optional(),
-      gachaCard: z.string().optional(),
-      bannerCard: z.string().optional(),
-    }),
+    colors: z
+      .object({
+        primary: z.string(),
+        secondary: z.string(),
+        textAccent: z.string(),
+      })
+      .optional(),
+    images: z
+      .object({
+        gachaSplash: z.string().optional(),
+        gachaCard: z.string().optional(),
+        bannerCard: z.string().optional(),
+      })
+      .optional(),
   }),
 });
 
