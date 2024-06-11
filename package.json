@@ -15,6 +15,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.10.1",
     "bits-ui": "^0.21.10",
+    "colorthief": "^2.2.0",
     "dayjs": "^1.11.11",
     "enkanetwork.js": "^2.6.0",
     "nanostores": "^0.9.5",

@@ -3,6 +3,15 @@
   "rarity": 5,
   "element": "electro",
   "weaponType": "sword",
-  "bannerName": "?????",
-  "splashArt": "/gacha-splash/clorinde.webp"
+  "bannerName": "Illuminating Lightning",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#192234] to-[#9D85CF]",
+    "secondary": "bg-gradient-to-t from-[#1A2045] to-[#404FAB00]",
+    "textAccent": "text-[#9D85CF]"
+  },
+  "images": {
+    "gachaSplash": "/src/assets/images/characters/clorinde/gachaSpash.webp",
+    "gachaCard": "/src/assets/images/characters/clorinde/gachaCard.webp",
+    "bannerCard": "/src/assets/images/characters/clorinde/bannerCard.png"
+  }
 }
