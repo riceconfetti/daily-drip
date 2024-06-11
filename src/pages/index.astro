@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Calendar from "$components/CalendarWidget.svelte";
+import CalendarWidget from "$components/CalendarWidget.svelte";
+import EventsWidget from "$components/EventsWidget.astro";
 import { getCollection, getEntry } from "astro:content";
 
 // const banners = await getCollection("events");
@@ -13,5 +14,6 @@ import { getCollection, getEntry } from "astro:content";
       gacha game leaks and speculations
     </p>
   </div>
-  <Calendar client:load />
+  <CalendarWidget client:load />
+  <EventsWidget />
 </Layout>

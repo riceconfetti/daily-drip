@@ -1,0 +1,51 @@
+---
+import Event from "./Event.astro";
+import dayjs from "dayjs";
+import { getCollection } from "astro:content";
+
+const currentEvents = await getCollection("events", ({ data }) => {
+  return dayjs(data.startDate) < dayjs() && dayjs(data.endDate) > dayjs();
+});
+
+const upcomingEvents = await getCollection("events", ({ data }) => {
+  return dayjs(data.startDate) > dayjs();
+});
+
+const character = {
+  name: "Clorinde",
+  rarity: 5,
+  element: "electro",
+  weaponType: "sword",
+  bannerName: "Illuminating Lightning",
+  colors: {
+    primary: "bg-gradient-to-r from-[#192234] to-[#9D85CF]",
+    secondary: "bg-gradient-to-t from-[#1A2045] to-[#404FAB00]",
+    textAccent: "text-[#9D85CF]",
+  },
+  images: {
+    gachaSplash: "/src/assets/images/characters/clorinde/gachaSpash.webp",
+    gachaCard: "/src/assets/images/characters/clorinde/gachaCard.webp",
+    bannerCard: "/src/assets/images/characters/clorinde/bannerCard.png",
+  },
+};
+
+const event = {
+  title: "Illuminating Lightning",
+  type: "banner",
+  game: "genshin",
+  startDate: "2024-06-04",
+  endDate: "2024-06-25",
+};
+---
+
+<section class="flex flex-col gap-2 w-full">
+  <h2 class="playfair-display-semibold text-dark">Current Events</h2>
+  {
+    currentEvents.map((event) => (
+      <Event {character} {event} imagePath={character.images.bannerCard} />
+    ))
+  }
+  <Event {character} {event} imagePath={character.images.bannerCard} />
+  <Event {character} {event} imagePath={character.images.bannerCard} />
+  <h2 class="playfair-display-semibold text-dark">Upcoming Events</h2>
+</section>
