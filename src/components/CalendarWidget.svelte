@@ -9,6 +9,7 @@
 <Calendar.Root
   let:months
   class="w-full flex flex-col text-center"
+  fixedWeeks={true}
   {isDateUnavailable}
 >
   <Calendar.Header
