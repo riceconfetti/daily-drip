@@ -8,7 +8,6 @@ dayjs.extend(relativeTime);
 
 import { getEntry } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import { getEntryBySlug } from "astro:content";
 interface Props {
   event: CollectionEntry<"events">;
 }
@@ -16,10 +15,11 @@ interface Props {
 const { event } = Astro.props;
 
 let eventDetails = event.data;
+let character;
 eventDetails.game = await getEntry(event.data.game);
 
 if (event.data.type == "banner") {
-  const character = await getEntry(event.data.character);
+  character = await getEntry(event.data.character);
   eventDetails.title = character.data.bannerName;
   eventDetails.image = character.data.images.bannerCard;
   eventDetails.colors = character.data.colors;

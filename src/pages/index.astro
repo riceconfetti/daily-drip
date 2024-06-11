@@ -4,7 +4,11 @@ import CalendarWidget from "$components/CalendarWidget.svelte";
 import EventsWidget from "$components/EventsWidget.astro";
 import { getCollection, getEntry } from "astro:content";
 
-// const banners = await getCollection("events");
+const eventsCollection = await getCollection("events");
+
+const events = eventsCollection.map((e) => {
+  return e.data;
+});
 ---
 
 <Layout title="The Daily Drip">
@@ -14,6 +18,6 @@ import { getCollection, getEntry } from "astro:content";
       gacha game leaks and speculations
     </p>
   </div>
-  <CalendarWidget client:load />
+  <CalendarWidget events={events} client:load />
   <EventsWidget />
 </Layout>
