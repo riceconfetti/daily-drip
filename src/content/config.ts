@@ -17,7 +17,16 @@ const characterCollection = defineCollection({
     element: z.string(),
     weaponType: z.string().optional(),
     bannerName: z.string().optional(),
-    splashArt: z.string().optional(),
+    colors: z.object({
+      primary: z.string(),
+      secondary: z.string(),
+      textAccent: z.string(),
+    }),
+    images: z.object({
+      gachaSplash: z.string().optional(),
+      gachaCard: z.string().optional(),
+      bannerCard: z.string().optional(),
+    }),
   }),
 });
 
@@ -34,11 +43,21 @@ const weaponsCollection = defineCollection({
 const eventCollection = defineCollection({
   type: "data",
   schema: z.object({
-    title: z.string(),
-    type: z.string(),
+    status: z.string(),
+    type: z.string(), //banner, webEvent?, limitedEvent?, gameMode?
     game: reference("games"),
     startDate: z.string().date(),
     endDate: z.string().date(),
+    title: z.string().optional(),
+    character: reference("characters").optional(),
+    image: z.string().optional(),
+    colors: z
+      .object({
+        primary: z.string(),
+        secondary: z.string(),
+        textAccent: z.string(),
+      })
+      .optional(),
   }),
 });
 
