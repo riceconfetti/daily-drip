@@ -5,9 +5,7 @@ const gameCollection = defineCollection({
   schema: z.object({
     name: z.string(),
     icon: z.string(),
-    maintenance: z.string().time(),
-    update: z.string().time(),
-    reset: z.string().time(),
+    times: z.object({}),
   }),
 });
 
@@ -40,6 +38,7 @@ const eventCollection = defineCollection({
     type: z.string(),
     game: reference("games"),
     startDate: z.string().date(),
+    endDate: z.string().date(),
   }),
 });
 
