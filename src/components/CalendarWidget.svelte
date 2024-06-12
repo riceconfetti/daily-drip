@@ -55,7 +55,7 @@
                   {date}
                   month={month.value}
                   data-game={isDate(date)}
-                  class="crimson-text-regular p-2 group relative inline-flex size-10 items-center justify-center whitespace-nowrap rounded-9px border border-transparent bg-transparent text-sm font-normal text-foreground hover:border-foreground rounded-md data-[game='genshin']:bg-genshin-anemo-bg"
+                  class="crimson-text-regular p-2 group relative inline-flex size-10 items-center justify-center whitespace-nowrap rounded-9px border border-transparent bg-transparent text-sm font-normal text-foreground hover:border-foreground rounded-md data-[game='genshin']:bg-genshin-event data-[game='genshin']:text-white data-[game='starrail']:bg-starrail-event data-[game='starrail']:text-white data-[game='reverse']:bg-reverse-event data-[game='reverse']:text-white data-[game='wuwa']:bg-wuwa-event data-[game='wuwa']:text-white"
                 >
                   <div
                     class="absolute top-[5px] hidden size-1 rounded-full bg-foreground group-data-[today]:block group-data-[selected]:bg-background"

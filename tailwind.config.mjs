@@ -15,6 +15,7 @@ export default {
           light: "#8A6329",
         },
         genshin: {
+          event: "#223267",
           anemo: { bg: "#5EBEA1", text: "#000000B3" },
           electro: { bg: "#8350A1", text: "#000000B3" },
           geo: { bg: "#C8A839", text: "#000000B3" },
@@ -23,9 +24,15 @@ export default {
           hydro: { bg: "#5F91DD", text: "#000000B3" },
           pyro: { bg: "#F25252", text: "#000000B3" },
         },
-        starrail: {},
-        reverse: {},
-        wuwa: {},
+        starrail: {
+          event: "#6D2628",
+        },
+        reverse: {
+          event: "#D48917",
+        },
+        wuwa: {
+          event: "#464953",
+        },
       },
     },
   },

@@ -8,7 +8,7 @@
 
 <main class="relative block overflow-x-hidden h-dvh w-dvw">
   <div
-    class="sticky z-10 top-0 flex w-full bg-dark playfair-display-sc-bold text-light p-4 justify-between"
+    class="sticky z-30 top-0 flex w-full bg-dark playfair-display-sc-bold text-light p-4 justify-between"
   >
     <a href="./" class="flex gap-4">
       <i class="ri-newspaper-fill text-accent-dark text-lg"></i>
@@ -20,7 +20,7 @@
   </div>
 
   <div
-    class="absolute top-0 flex w-full bg-dark h-0 min-h-full data-[sidebar='true']:translate-x-full transition-all flex-col p-16 py-24 list-none text-light gap-4 text-lg items-center playfair-display-sc-bold"
+    class="z-20 absolute top-0 flex w-full bg-dark h-0 min-h-full data-[sidebar='true']:translate-x-full transition-all flex-col p-16 py-24 list-none text-light gap-4 text-lg items-center playfair-display-sc-bold"
     data-sidebar={sidebar}
   >
     <a class="p-3" href="./genshin">Genshin Impact</a>
