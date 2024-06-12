@@ -3,7 +3,9 @@ import EventWidget from "./event-widget.svelte";
 import { getCollection } from "astro:content";
 import { Event } from "../../classes/event.ts";
 
-const eventCollection = await getCollection("events");
+const eventCollection = await getCollection("events", ({ data }) => {
+  return data.type == "banner" && data.status == "confirmed";
+});
 const characterCollection = await getCollection("characters");
 
 let events: Event[] = new Array();

@@ -4,7 +4,6 @@
   export let events;
 
   $: currentEvents = events.filter((e) => {
-    console.log(e.startDate);
     return dayjs(e.startDate) < dayjs() && dayjs(e.endDate) > dayjs();
   });
 

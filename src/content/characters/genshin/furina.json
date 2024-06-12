@@ -11,7 +11,7 @@
   },
   "images": {
     "gachaSplash": "./images/characters/furina/gachaSpash.png",
-    "gachaCard": "./images/character/furina/gachaCard.webp",
+    "gachaCard": "./images/characters/furina/gachaCard.png",
     "bannerCard": "./images/characters/furina/bannerCard.png"
   }
 }

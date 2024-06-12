@@ -11,7 +11,7 @@
   },
   "images": {
     "gachaSplash": "./images/characters/clorinde/gachaSpash.webp",
-    "gachaCard": "./images/characters/clorinde/gachaCard.webp",
+    "gachaCard": "./images/characters/clorinde/gachaCard.png",
     "bannerCard": "./images/characters/clorinde/bannerCard.png"
   }
 }
