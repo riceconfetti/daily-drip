@@ -4,5 +4,14 @@
   "element": "hydro",
   "weaponType": "bow",
   "bannerName": "?????",
-  "splashArt": "/gacha-splashArt/sigewinne.webp"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#669ECB] to-[#EFA0B4]",
+    "secondary": "bg-gradient-to-t from-[#669ECB] to-[#EFA0B400]",
+    "textAccent": "text-[#034A88]"
+  },
+  "images": {
+    "gachaSplash": "/src/assets/images/characters/sigewinne/gachaSpash.png",
+    "gachaCard": "/src/assets/images/character/sigewinne/gachaCard.webp",
+    "bannerCard": "/src/assets/images/characters/sigewinne/bannerCard.png"
+  }
 }
