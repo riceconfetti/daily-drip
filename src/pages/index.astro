@@ -4,11 +4,33 @@ import CalendarWidget from "$components/CalendarWidget.svelte";
 import EventsWidget from "$components/EventsWidget.astro";
 import { getCollection, getEntry } from "astro:content";
 
-const eventsCollection = await getCollection("events");
+const genshin = (
+  await getCollection("events", async ({ data }) => {
+    let game = await getEntry(data.game);
+    return game.id == "genshin";
+  })
+).map((e) => e.data.startDate);
 
-const events = eventsCollection.map((e) => {
-  return e.data;
-});
+const starrail = (
+  await getCollection("events", async ({ data }) => {
+    let game = await getEntry(data.game);
+    return game.id == "starrail";
+  })
+).map((e) => e.data.startDate);
+
+const reverse = (
+  await getCollection("events", async ({ data }) => {
+    let game = await getEntry(data.game);
+    return game.id == "reverse";
+  })
+).map((e) => e.data.startDate);
+
+const wuwa = (
+  await getCollection("events", async ({ data }) => {
+    let game = await getEntry(data.game);
+    return game.id == "wuwa";
+  })
+).map((e) => e.data.startDate);
 ---
 
 <Layout title="The Daily Drip">
@@ -18,6 +40,6 @@ const events = eventsCollection.map((e) => {
       gacha game leaks and speculations
     </p>
   </div>
-  <CalendarWidget events={events} client:load />
+  <CalendarWidget {genshin} {wuwa} {reverse} {starrail} client:load />
   <EventsWidget />
 </Layout>
