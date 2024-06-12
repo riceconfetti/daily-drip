@@ -15,11 +15,11 @@ interface Props {
 const { event } = Astro.props;
 
 let eventDetails = event.data;
-let character;
+//let character;
 eventDetails.game = await getEntry(event.data.game);
 
 if (event.data.type == "banner") {
-  character = await getEntry(event.data.character);
+  let character = await getEntry(event.data.character);
   eventDetails.title = character.data.bannerName;
   eventDetails.image = character.data.images.bannerCard;
   eventDetails.colors = character.data.colors;
