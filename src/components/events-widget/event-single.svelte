@@ -32,7 +32,7 @@
     src={eventDetails.image}
     height={1200}
     width={4600}
-    class="absolute right-0 top-0 h-full w-auto gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%]"
+    class="absolute right-0 top-0 h-full gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%]"
     alt={`${eventDetails.title} Banner Card`}
   />
 </div>

@@ -11,7 +11,7 @@
   },
   "images": {
     "gachaSplash": "./images/characters/alhaitham/gachaSpash.png",
-    "gachaCard": "./images/character/alhaitham/gachaCard.webp",
+    "gachaCard": "./images/characters/alhaitham/gachaCard.png",
     "bannerCard": "./images/characters/alhaitham/bannerCard.png"
   }
 }
