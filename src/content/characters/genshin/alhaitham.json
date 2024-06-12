@@ -10,8 +10,8 @@
     "textAccent": "text-[#91B97D]"
   },
   "images": {
-    "gachaSplash": "/src/assets/images/characters/alhaitham/gachaSpash.png",
-    "gachaCard": "/src/assets/images/character/alhaitham/gachaCard.webp",
-    "bannerCard": "/src/assets/images/characters/alhaitham/bannerCard.png"
+    "gachaSplash": "./images/characters/alhaitham/gachaSpash.png",
+    "gachaCard": "./images/character/alhaitham/gachaCard.webp",
+    "bannerCard": "./images/characters/alhaitham/bannerCard.png"
   }
 }

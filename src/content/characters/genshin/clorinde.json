@@ -10,8 +10,8 @@
     "textAccent": "text-[#9D85CF]"
   },
   "images": {
-    "gachaSplash": "/src/assets/images/characters/clorinde/gachaSpash.webp",
-    "gachaCard": "/src/assets/images/characters/clorinde/gachaCard.webp",
-    "bannerCard": "/src/assets/images/characters/clorinde/bannerCard.png"
+    "gachaSplash": "./images/characters/clorinde/gachaSpash.webp",
+    "gachaCard": "./images/characters/clorinde/gachaCard.webp",
+    "bannerCard": "./images/characters/clorinde/bannerCard.png"
   }
 }
