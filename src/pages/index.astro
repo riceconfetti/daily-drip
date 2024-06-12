@@ -1,34 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CalendarWidget from "$components/CalendarWidget.svelte";
-import EventsWidget from "$components/events-widget/EventsWidget.astro";
-import { getCollection, getEntry } from "astro:content";
+import EventsWidget from "$components/events-widget/event-data.astro";
+import { getCollection } from "astro:content";
 
 const genshin = (
   await getCollection("events", async ({ data }) => {
-    let game = await getEntry(data.game);
-    return game.id == "genshin";
+    return data.game.id == "genshin" && data.status == "confirmed";
   })
 ).map((e) => e.data.startDate);
 
 const starrail = (
   await getCollection("events", async ({ data }) => {
-    let game = await getEntry(data.game);
-    return game.id == "starrail";
+    return data.game.id == "starrail" && data.status == "confirmed";
   })
 ).map((e) => e.data.startDate);
 
 const reverse = (
   await getCollection("events", async ({ data }) => {
-    let game = await getEntry(data.game);
-    return game.id == "reverse";
+    return data.game.id == "reverse" && data.status == "confirmed";
   })
 ).map((e) => e.data.startDate);
 
 const wuwa = (
   await getCollection("events", async ({ data }) => {
-    let game = await getEntry(data.game);
-    return game.id == "wuwa";
+    return data.game.id == "wuwa" && data.status == "confirmed";
   })
 ).map((e) => e.data.startDate);
 ---
