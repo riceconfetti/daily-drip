@@ -20,7 +20,7 @@
   </div>
 
   <div
-    class="z-20 absolute top-0 flex w-full bg-dark h-0 min-h-full data-[sidebar='true']:translate-x-full transition-all flex-col p-16 py-24 list-none text-light gap-4 text-lg items-center playfair-display-sc-bold"
+    class="z-20 fixed top-0 flex w-full bg-dark h-0 min-h-full data-[sidebar='true']:translate-x-full transition-all flex-col p-16 py-24 list-none text-light gap-4 text-lg items-center playfair-display-sc-bold"
     data-sidebar={sidebar}
   >
     <a class="p-3" href="./genshin">Genshin Impact</a>
