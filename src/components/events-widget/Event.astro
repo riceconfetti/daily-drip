@@ -1,4 +1,5 @@
 ---
+import EventBase from "./EventBase.svelte";
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
@@ -33,33 +34,12 @@ if (!images[eventDetails.image])
   throw new Error(
     `"${eventDetails.image}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
   );
-
-const eventType =
-  dayjs(eventDetails.startDate) > dayjs() ? "Starting" : "Ending";
-const timeUntil =
-  dayjs(eventDetails.startDate) > dayjs()
-    ? dayjs().to(dayjs(eventDetails.startDate))
-    : dayjs().to(dayjs(eventDetails.endDate));
-
-const fonts = {
-  genshin: "hy-impact-regular",
-  starrail: "bai-jamjuree-bold",
-  reverse: "playfair-display-sc-bold",
-  wuwa: "philosopher-bold",
-};
 ---
 
-<div
-  class={`w-full relative p-4 flex flex-col gap-2 rounded-md overflow-hidden ${eventDetails.colors.primary} ${fonts[eventDetails.game.id]}`}
->
-  <h2 class="text-white text-sm">{eventDetails.title}</h2>
-  <h3 class={`${eventDetails.colors.textAccent} text-xs`}>
-    {eventType}
-    {timeUntil}
-  </h3>
+<EventBase {eventDetails} client:load>
   <Image
     src={images[eventDetails.image]()}
     class="absolute -right-20 top-0 h-full w-auto"
     alt={`${eventDetails.title} Banner Card`}
   />
-</div>
+</EventBase>
