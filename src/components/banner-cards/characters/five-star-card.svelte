@@ -9,8 +9,12 @@
   <div
     class={`absolute bottom-0 z-10 text-center flex gap-1 md:p-4 flex-col w-full h-2/3 justify-end items-center p-3 ${character.colors ? character.colors.secondary : ""}`}
   >
-    <h2 class="text-white text-[.35rem] md:text-2xs">{character.bannerName}</h2>
-    <h1 class="text-white text-[.6rem] md:text-base">{character.name}</h1>
+    <h2 class="text-white text-[.35rem] md:text-[.5rem] lg:text-2xs">
+      {character.bannerName}
+    </h2>
+    <h1 class="text-white text-[.6rem] md:text-sm lg:text-base">
+      {character.name}
+    </h1>
   </div>
   <div class="relative w-full h-full">
     <Image
@@ -21,7 +25,7 @@
       src={`./images/backgrounds/${character.element}.png`}
     />
     <Image
-      class={`relative w-full h-full ${character.spec ? "border-4 [border-image:url(/images/textures/holo-4.jpg)_10_round]" : ""}`}
+      class={`relative w-full h-full ${character.spec ? "border-2 lg:border-4 [border-image:url(/images/textures/holo-4.jpg)_10_round]" : ""}`}
       src={character.images.gachaCard}
       alt={`${character.name} Art`}
       height={2100}
