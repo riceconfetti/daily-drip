@@ -2,35 +2,6 @@
   import FiveStarCard from "./five-star-card.svelte";
   import FourStarCard from "./four-star-card.svelte";
   export let characters;
-
-  let fiveStars = characters.fiveStars;
-  let fourStars = characters.fourStars;
-
-  while (fiveStars.length < 2) {
-    fiveStars.push({
-      name: "????",
-      rarity: 5,
-      element: "genshin",
-      images: {
-        gachaSplash: "./images/characters/default/gachaSpash.webp",
-        gachaCard: "./images/characters/default/gachaCard.png",
-        bannerCard: "./images/characters/default/bannerCard.png",
-      },
-    });
-  }
-
-  while (fourStars.length < 3) {
-    fourStars.push({
-      name: "????",
-      rarity: 5,
-      element: "genshin",
-      images: {
-        gachaSplash: "./images/characters/default/gachaSpash.webp",
-        gachaCard: "./images/characters/default/gachaCard.png",
-        bannerCard: "./images/characters/default/bannerCard.png",
-      },
-    });
-  }
 </script>
 
 <!-- Characters -->
