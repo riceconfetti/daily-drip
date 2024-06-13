@@ -1,8 +1,11 @@
 <script lang="ts">
+  import dayjs from "dayjs";
   export let phase;
 </script>
 
-<div>
+<div
+  class={`border border-black border-opacity-10 w-full flex justify-between playfair-display-bold text-2xs p-2 md:text-sm ${phase.number == 1 ? "bg-[#BFBFBF] text-dark" : "bg-[#232323] text-accent-dark"}`}
+>
   <h1>Phase {phase.number}</h1>
-  <p>{phase.date}</p>
+  <p>{dayjs(phase.date).format("MMM D")}</p>
 </div>

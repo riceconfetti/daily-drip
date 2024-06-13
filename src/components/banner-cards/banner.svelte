@@ -1,16 +1,18 @@
 <script lang="ts">
   import PhaseHeader from "./phase-header.svelte";
   import VersionHeader from "./version-header.svelte";
+  import { Version } from "../../classes/version.ts";
   import CharacterCard from "./characters/character-card.svelte";
   import WeaponCard from "./weapons/weapon-card.svelte";
-  export let version, events;
-  let phases;
+  export let version: Version, game;
 </script>
 
-<section class="flex gap-2 bg-white bg-opacity-30 shadow-md p-4">
+<section
+  class={`flex flex-col gap-3 bg-white bg-opacity-30 shadow-md p-4 ${game} md:grid md:grid-cols-2 md:gap-5`}
+>
   <VersionHeader {version} />
-  {#each phases as phase}
-    <div>
+  {#each version.phases as phase}
+    <div class="flex flex-col gap-2">
       <PhaseHeader {phase} />
       <CharacterCard characters={phase.characters} />
       <WeaponCard weapons={phase.weapons} />

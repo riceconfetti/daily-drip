@@ -1,1 +1,11 @@
-{ "name": "Bennett", "rarity": 4, "element": "pyro", "weaponType": "sword" }
+{
+  "name": "Bennett",
+  "rarity": 4,
+  "element": "pyro",
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "./images/characters/bennett/gachaSpash.webp",
+    "gachaCard": "./images/characters/bennett/gachaCard.png",
+    "bannerCard": "./images/characters/bennett/bannerCard.png"
+  }
+}

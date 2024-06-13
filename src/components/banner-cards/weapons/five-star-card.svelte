@@ -3,7 +3,13 @@
   export let weapon;
 </script>
 
-<div>
-  <Image src={weapon.icon} height={0} width={0}></Image>
-  <h1>{weapon.name}</h1>
+<div
+  class="flex relative h-full justify-between w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 pl-2 rounded-sm items-center"
+>
+  <h1 class="text-[.25rem] text-balance">{weapon.name}</h1>
+  <img
+    class="h-0 aspect-square min-h-full"
+    src={weapon.icon}
+    alt={`${weapon.name} Icon`}
+  />
 </div>

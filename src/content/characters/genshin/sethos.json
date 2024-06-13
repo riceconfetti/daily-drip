@@ -2,5 +2,10 @@
   "name": "Sethos",
   "rarity": 4,
   "element": "electro",
-  "weaponType": "bow"
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "./images/characters/sethos/gachaSpash.webp",
+    "gachaCard": "./images/characters/sethos/gachaCard.png",
+    "bannerCard": "./images/characters/sethos/bannerCard.png"
+  }
 }

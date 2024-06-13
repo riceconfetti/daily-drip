@@ -1,34 +1,104 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import FiveStarCard from "$components/banner-cards/characters/five-star-card.svelte";
-import FourStarCard from "$components/banner-cards/characters/four-star-card.svelte";
-import Clorinde from "../content/characters/genshin/clorinde.json";
-import Alhaitham from "../content/characters/genshin/alhaitham.json";
-import Furina from "../content/characters/genshin/furina.json";
+import { Version, type Phase } from "../classes/version.ts";
+import Banner from "$components/banner-cards/banner.svelte";
+import { getCollection } from "astro:content";
+import dayjs from "dayjs";
 
-// import Banner from "../components/banner-cards/banner.svelte";
-// import { getCollection } from "astro:content";
+const versionCollection = await getCollection("versions", ({ id }) => {
+  return id.startsWith("genshin");
+});
 
-// const versions = await getCollection("versions", ({ id }) => {
-//   return id.startsWith("genshin");
-// });
-// const events = await getCollection("events", ({ id }) => {
-//   return id.startsWith("genshin");
-// });
+const characterCollection = await getCollection("characters", ({ id }) => {
+  return id.startsWith("genshin");
+});
+
+const eventCollection = await getCollection("events", ({ id, data }) => {
+  return (
+    id.startsWith("genshin") &&
+    (data.type === "banner" || data.type === "rate-up")
+  );
+});
+
+const weaponCollection = await getCollection("weapons", ({ id }) => {
+  return id.startsWith("genshin");
+});
+
+let versions: Version[] = [];
+
+versionCollection.forEach(({ data }) => {
+  let v = new Version(data);
+  let phaseOne: Phase = {
+    number: 1,
+    date: data.startDate,
+    characters: {
+      fiveStars: [],
+      fourStars: [],
+    },
+  };
+
+  let phaseTwo: Phase = {
+    number: 2,
+    date: dayjs(data.startDate).add(3, "w").format("YYYY-MM-DD"),
+    characters: {
+      fiveStars: [],
+      fourStars: [],
+    },
+  };
+
+  data.events.forEach((x) => {
+    const event = eventCollection.find((e) => e.id == x.id);
+    if (event.data.startDate === data.startDate) {
+      // Phase One
+      console.log(event.data);
+      let character = characterCollection.find(
+        (c) => c.id === event.data.character.id
+      );
+      if (character.data.rarity === 5) {
+        // 5 Star
+        phaseOne.characters.fiveStars.push(character.data);
+      } else {
+        phaseOne.characters.fourStars.push(character.data);
+      }
+    } else if (event.data.endDate === data.endDate) {
+      // Phase Two
+      let character = characterCollection.find(
+        (c) => c.id == event.data.character.id
+      );
+      if (character.data.rarity === 5) {
+        // 5 Star
+        phaseTwo.characters.fiveStars.push(character.data);
+      } else {
+        phaseTwo.characters.fourStars.push(character.data);
+      }
+    }
+
+    v.phases = [phaseOne, phaseTwo];
+
+    data.weapons.forEach((w, i) => {
+      let weaponsData = {
+        fiveStars: [],
+        fourStars: [],
+      };
+
+      w.fiveStars.forEach((f) => {
+        let weapon = weaponCollection.find((w) => w.id === f.id);
+        weaponsData.fiveStars.push(weapon.data);
+      });
+
+      w.fourStars.forEach((f) => {
+        let weapon = weaponCollection.find((w) => w.id === f.id);
+        weaponsData.fourStars.push(weapon.data);
+      });
+
+      v.phases[i].weapons = weaponsData;
+    });
+  });
+  versions.push(v);
+});
 ---
 
 <Layout title="The Daily Drip">
-  <!-- {versions.map((version) => <Banner {version} {events} />)} -->
-  <div
-    class="grid grid-cols-[auto_auto_40%] gap-2 bg-white bg-opacity-30 shadow-md p-4"
-  >
-    <FiveStarCard character={Clorinde} game="genshin" />
-    <FiveStarCard character={Alhaitham} game="genshin" />
-    <div class="flex-grow w-full flex flex-col gap-1">
-      <h2>Featured Four Stars</h2>
-      <FourStarCard character={Furina} game="genshin" />
-      <FourStarCard character={Furina} game="genshin" />
-      <FourStarCard character={Furina} game="genshin" />
-    </div>
-  </div>
+  {versions.map((version) => <Banner {version} game="genshin" />)}
+  <!-- <Banner {version} game="genshin" /> -->
 </Layout>
