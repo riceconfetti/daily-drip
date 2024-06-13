@@ -10,8 +10,8 @@
     "textAccent": "text-[#034A88]"
   },
   "images": {
-    "gachaSplash": "./images/characters/sigewinne/gachaSpash.png",
-    "gachaCard": "./images/character/sigewinne/gachaCard.webp",
+    "gachaSplash": "./images/characters/sigewinne/gachaSpash.webp",
+    "gachaCard": "./images/characters/sigewinne/gachaCard.png",
     "bannerCard": "./images/characters/sigewinne/bannerCard.png"
   }
 }

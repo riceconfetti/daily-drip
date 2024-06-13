@@ -9,6 +9,22 @@
   font-weight: 400;
 }
 
+.genshin {
+  @apply font-genshin;
+}
+
+.starrail {
+  @apply font-starrail font-semibold;
+}
+
+.reverse {
+  @apply font-reverse font-bold;
+}
+
+.wuwa {
+  @apply font-wuwa font-bold;
+}
+
 .hy-impact-regular {
   font-family: "HYImpact";
   font-weight: 400;

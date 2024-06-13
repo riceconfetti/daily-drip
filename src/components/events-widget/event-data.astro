@@ -25,6 +25,25 @@ eventCollection.forEach(({ data }) => {
   //console.log(event);
   events.push(event);
 });
+
+// {
+//       number: 2,
+//       date: "2024-06-04",
+//       characters: {
+//         fiveStars: [Clorinde, Alhaitham],
+//         fourStars: [Furina, Clorinde, Alhaitham],
+//       },
+//       weapons: {
+//         fiveStars: [Absolution, LightofFoliarIncision],
+//         fourStars: [
+//           SacrificialSword,
+//           SacrificialSword,
+//           SacrificialSword,
+//           SacrificialSword,
+//           SacrificialSword,
+//         ],
+//       },
+//     },
 ---
 
 <EventWidget {events} client:load />

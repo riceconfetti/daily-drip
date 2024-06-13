@@ -40,7 +40,7 @@ const weaponsCollection = defineCollection({
     name: z.string(),
     rarity: z.number(),
     weaponType: z.string(),
-    splashImage: z.string(),
+    icon: z.string(),
   }),
 });
 
@@ -85,7 +85,13 @@ const versionsCollection = defineCollection({
       name: z.string(),
       startDate: z.string().date(),
       endDate: z.string().date(),
-      events: reference("events"),
+      events: z.array(reference("events")),
+      weapons: z.array(
+        z.object({
+          fiveStars: z.array(reference("weapons")),
+          fourStars: z.array(reference("weapons")),
+        })
+      ),
       chronicle: z.object({
         characters: z.array(z.string()),
         weapons: z.array(z.string()),
