@@ -5,9 +5,9 @@
   "weaponType": "polearm",
   "bannerName": "Renowned Perfumer",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#174E3D] to-[#DBB6B7]",
-    "secondary": "bg-gradient-to-t from-[#174E3D] to-[#70B99300]",
-    "textAccent": "text-[#CEB0C1]"
+    "primary": "bg-gradient-to-r from-[#094533] to-[#DBB6B7]",
+    "secondary": "bg-gradient-to-t from-[#094533] to-[#70B99300]",
+    "textAccent": "text-[#EFACCA]"
   },
   "images": {
     "gachaSplash": "./images/characters/emelie/gachaSpash.png",
