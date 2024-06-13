@@ -7,7 +7,7 @@
   class={`border border-black shadow-xl border-opacity-20 relative flex flex-col h-full justify-end`}
 >
   <div
-    class={`absolute bottom-0 z-10 text-center flex gap-1 flex-col w-full h-1/2 justify-end items-center p-3 ${character.colors.secondary}`}
+    class={`absolute bottom-0 z-10 text-center flex gap-1 flex-col w-full h-1/2 justify-end items-center p-3 ${character.colors ? character.colors.secondary : ""}`}
   >
     <h2 class="text-white text-[.35rem]">{character.bannerName}</h2>
     <h1 class="text-white text-[.6rem]">{character.name}</h1>

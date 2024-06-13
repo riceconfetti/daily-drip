@@ -22,16 +22,6 @@
         "genshin/LithicSpear",
         "genshin/SacrificialGreatsword"
       ]
-    },
-    {
-      "fiveStars": ["genshin/Absolution", "genshin/LightofFoliarIncision"],
-      "fourStars": [
-        "genshin/TheStringless",
-        "genshin/SacrificialSword",
-        "genshin/TheWidsith",
-        "genshin/LithicSpear",
-        "genshin/SacrificialGreatsword"
-      ]
     }
   ]
 }
