@@ -4,34 +4,50 @@ import CalendarWidget from "../components/CalendarWidget.svelte";
 import EventsWidget from "../components/events-widget/event-data.astro";
 import { getCollection } from "astro:content";
 
-const genshin = (
-  await getCollection("events", async ({ data }) => {
-    return data.game.id == "genshin" && data.status == "confirmed";
-  })
-).map((e) => e.data.startDate);
+const genshin = [
+  ...new Set(
+    (
+      await getCollection("events", ({ id, data }) => {
+        return id.startsWith("genshin/") && data.status == "confirmed";
+      })
+    ).map((e) => e.data.startDate)
+  ),
+];
 
-const starrail = (
-  await getCollection("events", async ({ data }) => {
-    return data.game.id == "starrail" && data.status == "confirmed";
-  })
-).map((e) => e.data.startDate);
+const starrail = [
+  ...new Set(
+    (
+      await getCollection("events", ({ id, data }) => {
+        return id.startsWith("starrail/") && data.status == "confirmed";
+      })
+    ).map((e) => e.data.startDate)
+  ),
+];
 
-const reverse = (
-  await getCollection("events", async ({ data }) => {
-    return data.game.id == "reverse" && data.status == "confirmed";
-  })
-).map((e) => e.data.startDate);
+const reverse = [
+  ...new Set(
+    (
+      await getCollection("events", ({ id, data }) => {
+        return id.startsWith("reverse") && data.status == "confirmed";
+      })
+    ).map((e) => e.data.startDate)
+  ),
+];
 
-const wuwa = (
-  await getCollection("events", async ({ data }) => {
-    return data.game.id == "wuwa" && data.status == "confirmed";
-  })
-).map((e) => e.data.startDate);
+const wuwa = [
+  ...new Set(
+    (
+      await getCollection("events", ({ data }) => {
+        return data.game.id === "wuwa" && data.status == "confirmed";
+      })
+    ).map((e) => e.data.startDate)
+  ),
+];
 ---
 
 <Layout title="The Daily Drip">
   <section
-    class="p-4 flex flex-col gap-4 md:max-w-[1400px] md:grid md:grid-cols-[60%_auto] md:grow md:grid-rows-[fit-content(theme(spacing.32))] md:gap-8"
+    class="p-4 flex flex-col gap-4 lg:max-w-[1400px] lg:grid lg:grid-cols-[60%_auto] lg:grow lg:grid-rows-[fit-content(theme(spacing.32))] lg:gap-8"
   >
     <div class="p-4 bg-dark bg-opacity-20 rounded-md md:col-span-2 h-min">
       <p class="playfair-display-regular text-sm">
