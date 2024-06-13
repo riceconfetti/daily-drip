@@ -11,6 +11,6 @@
     <p>{dayjs(version.startDate).format("MMMM DD YYYY")}</p>
   </div>
   <h1 class="playfair-display-sc-bold text-dark text-center md:text-4xl">
-    {version.name ? version.name : `Version ${version.number}: ???????`}
+    {version.name ? version.name : `Version ${version.version} - XXXXX`}
   </h1>
 </div>

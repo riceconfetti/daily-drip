@@ -1,1 +1,16 @@
-{"name":"Wriothesley","rarity":5,"element":"cryo","bannerName":"Tempestuous Destiny","splashArt":"/gacha-splashArt/wriothesley.png"}
+{
+  "name": "Wriothesley",
+  "rarity": 5,
+  "element": "cryo",
+  "bannerName": "Tempestuous Destiny",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#1A305A] to-[#571D27]",
+    "secondary": "bg-gradient-to-t from-[#1A305A] to-[#571D2700]",
+    "textAccent": "text-[#94C6EC]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/wriothesley/gachaSpash.png",
+    "gachaCard": "./images/characters/wriothesley/gachaCard.png",
+    "bannerCard": "./images/characters/wriothesley/bannerCard.png"
+  }
+}

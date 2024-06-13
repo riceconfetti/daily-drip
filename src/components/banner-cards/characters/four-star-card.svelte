@@ -24,7 +24,7 @@
   class={`flex relative w-full shadow-lg border-0 border-black border-opacity-20 items-center ${colors[character.element]}`}
 >
   <Image
-    class="gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%] right-0 h-full"
+    class={`gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%] right-0 h-full ${character.spec ? "border-4 [border-image:url(./images/textures/holo-4.jpg)_10_round]" : ""}`}
     src={character.images.bannerCard}
     alt={`${character.name} Art`}
     layout="constrained"

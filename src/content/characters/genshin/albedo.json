@@ -4,5 +4,14 @@
   "element": "geo",
   "weaponType": "sword",
   "bannerName": "Secretum Secretorum",
-  "splashArt": "/gacha-splashArt/albedo.png"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#392916] to-[#D88F45]",
+    "secondary": "bg-gradient-to-t from-[#392916] to-[#8F541700]",
+    "textAccent": "text-[#D88F45]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/albedo/gachaSpash.png",
+    "gachaCard": "./images/characters/albedo/gachaCard.png",
+    "bannerCard": "./images/characters/albedo/bannerCard.png"
+  }
 }

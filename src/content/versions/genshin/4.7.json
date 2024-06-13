@@ -3,15 +3,6 @@
   "name": "An Everlasting Dream Intertwined",
   "startDate": "2024-06-04",
   "endDate": "2024-07-16",
-  "events": [
-    "genshin/4.7/alhaitham",
-    "genshin/4.7/clorinde",
-    "genshin/4.7/furina",
-    "genshin/4.7/sigewinne",
-    "genshin/4.7/sethos",
-    "genshin/4.7/thoma",
-    "genshin/4.7/bennett"
-  ],
   "weapons": [
     {
       "fiveStars": ["genshin/Absolution", "genshin/LightofFoliarIncision"],

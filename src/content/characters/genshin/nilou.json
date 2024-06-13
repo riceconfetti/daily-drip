@@ -4,5 +4,14 @@
   "element": "hydro",
   "weaponType": "sword",
   "bannerName": "Twirling Lotus",
-  "splashArt": "/gacha-splashArt/nilou.png"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#002E54] to-[#EA8E71]",
+    "secondary": "bg-gradient-to-t from-[#972218] to-[#9DCADD00]",
+    "textAccent": "text-[#F25D43]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/nilou/gachaSpash.png",
+    "gachaCard": "./images/characters/nilou/gachaCard.png",
+    "bannerCard": "./images/characters/nilou/bannerCard.png"
+  }
 }

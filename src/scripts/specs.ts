@@ -1,4 +1,5 @@
 import type { Phase } from "../classes/version.ts";
+import dayjs from "dayjs";
 
 export function getPhase(
   game,
@@ -10,15 +11,21 @@ export function getPhase(
 ) {
   let phase: Phase = {
     number: number,
-    date: data.startDate,
+    date:
+      number === 0
+        ? data.startDate
+        : dayjs(data.startDate).add(3, "week").format("YYYY-MM-DD"),
     characters: {
       fiveStars: [],
       fourStars: [],
     },
   };
 
-  data.events.forEach((x) => {
-    const event = eventCollection.find((e) => e.id == x.id);
+  let events = eventCollection.filter(({ id }) => {
+    return id.startsWith(`${game}/${data.version}`);
+  });
+
+  events.forEach((event) => {
     const inPhase =
       number === 0
         ? event.data.startDate === data.startDate
@@ -30,11 +37,15 @@ export function getPhase(
       let character = characterCollection.find(
         (c) => c.id === event.data.character.id
       );
+      let characterData = character.data;
+      if (event.data.status === "spec") {
+        characterData.spec = true;
+      }
       if (character.data.rarity === 5) {
         // 5 Star
-        phase.characters.fiveStars.push(character.data);
+        phase.characters.fiveStars.push(characterData);
       } else {
-        phase.characters.fourStars.push(character.data);
+        phase.characters.fourStars.push(characterData);
       }
     }
   });
@@ -45,7 +56,7 @@ export function getPhase(
       rarity: 5,
       element: game,
       images: {
-        gachaSplash: `./images/characters/${game}/gachaSpash.webp`,
+        gachaSplash: `./images/characters/${game}/gachaSpash.png`,
         gachaCard: `./images/characters/${game}/gachaCard.png`,
         bannerCard: `./images/characters/${game}/bannerCard.png`,
       },
@@ -58,14 +69,14 @@ export function getPhase(
       rarity: 4,
       element: game,
       images: {
-        gachaSplash: `./images/characters/${game}/gachaSpash.webp`,
+        gachaSplash: `./images/characters/${game}/gachaSpash.png`,
         gachaCard: `./images/characters/${game}/gachaCard.png`,
         bannerCard: `./images/characters/${game}/bannerCard.png`,
       },
     });
   }
 
-  let w = data.weapons[number]
+  let w = data.weapons
     ? data.weapons[number]
     : {
         fiveStars: [],
@@ -91,14 +102,16 @@ export function getPhase(
       name: "????",
       rarity: 5,
       weaponType: "default",
-      icon: "./images/weapons/default/fiveStars/genshin_default.png",
+      icon: `./images/weapons/default/fiveStars/${game}_default.png`,
     });
   }
 
   if (phase.weapons.fourStars.length < 5) {
-    const weaponTypes = ["bow", "sword", "catalyst", "polearm", "claymore"];
+    const weaponTypes = {
+      genshin: ["bow", "sword", "catalyst", "polearm", "claymore"],
+    };
 
-    weaponTypes.forEach((weapon) => {
+    weaponTypes[game].forEach((weapon) => {
       const weaponTypeExists =
         phase.weapons.fourStars.find((w) => {
           w.weaponType == weapon;
@@ -108,13 +121,14 @@ export function getPhase(
           name: "????",
           rarity: 5,
           weaponType: weapon,
-          icon: `./images/weapons/default/fourStars/genshin_${weapon}.png`,
+          icon: `./images/weapons/default/fourStars/${game}_${weapon}.png`,
         });
       }
     });
     phase.weapons.fourStars.sort((a, b) => {
       return (
-        weaponTypes.indexOf(a.weaponType) - weaponTypes.indexOf(b.weaponType)
+        weaponTypes[game].indexOf(a.weaponType) -
+        weaponTypes[game].indexOf(b.weaponType)
       );
     });
   }

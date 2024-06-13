@@ -18,7 +18,7 @@
       <i class="ri-menu-line text-lg"></i>
     </button>
     <div
-      class="hidden md:flex list-none text-light gap-6 text-sm items-center playfair-display-sc-bold"
+      class="hidden lg:flex list-none text-light gap-6 text-sm items-center playfair-display-sc-bold"
       data-sidebar={sidebar}
     >
       <a href="./genshin">Genshin Impact</a>
@@ -41,6 +41,7 @@
     <!-- <a class="p-3" href="./calendar">Calendar</a> -->
     <!-- <li>Archive</li> -->
   </div>
-
-  <slot></slot>
+  <div class="p-4 w-full h-full flex justify-center">
+    <slot></slot>
+  </div>
 </main>

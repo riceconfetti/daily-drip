@@ -1,1 +1,16 @@
-{"name":"Navia","rarity":5,"element":"geo","bannerName":"In the Name of Rosula","splashArt":"/gacha-splashArt/navia.png"}
+{
+  "name": "Navia",
+  "rarity": 5,
+  "element": "geo",
+  "bannerName": "In the Name of Rosula",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#34281F] to-[#EDA822]",
+    "secondary": "bg-gradient-to-t from-[#34281F] to-[#EDA82200]",
+    "textAccent": "text-[#EBBC64]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/navia/gachaSpash.png",
+    "gachaCard": "./images/characters/navia/gachaCard.png",
+    "bannerCard": "./images/characters/navia/bannerCard.png"
+  }
+}
