@@ -1,1 +1,11 @@
-{ "name": "Amber", "rarity": 4, "element": "pyro", "weaponType": "bow" }
+{
+  "name": "Amber",
+  "rarity": 4,
+  "element": "pyro",
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "./images/characters/amber/gachaSpash.webp",
+    "gachaCard": "./images/characters/amber/gachaCard.png",
+    "bannerCard": "./images/characters/amber/bannerCard.png"
+  }
+}

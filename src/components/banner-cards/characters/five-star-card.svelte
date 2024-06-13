@@ -21,7 +21,7 @@
       src={`./images/backgrounds/${character.element}.png`}
     />
     <Image
-      class="relative w-full h-full"
+      class={`relative w-full h-full ${character.spec ? "border-4 [border-image:url(./images/textures/holo-4.jpg)_10_round]" : ""}`}
       src={character.images.gachaCard}
       alt={`${character.name} Art`}
       height={2100}

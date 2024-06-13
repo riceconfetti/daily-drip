@@ -9,7 +9,7 @@
 
   $: upcomingEvents = events.filter((e) => {
     return (
-      dayjs(e.startDate) > dayjs() && dayjs(e.startDate) < dayjs().add(4, "w")
+      dayjs(e.startDate) > dayjs() && dayjs(e.startDate) < dayjs().add(6, "w")
     );
   });
 </script>

@@ -1,0 +1,17 @@
+{
+  "name": "Emelie",
+  "rarity": 5,
+  "element": "dendro",
+  "weaponType": "polearm",
+  "bannerName": "Renowned Perfumer",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#174E3D] to-[#DBB6B7]",
+    "secondary": "bg-gradient-to-t from-[#174E3D] to-[#70B99300]",
+    "textAccent": "text-[#CEB0C1]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/emelie/gachaSpash.png",
+    "gachaCard": "./images/characters/emelie/gachaCard.png",
+    "bannerCard": "./images/characters/emelie/bannerCard.png"
+  }
+}
