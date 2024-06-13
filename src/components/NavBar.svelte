@@ -41,7 +41,7 @@
     <!-- <a class="p-3" href="./calendar">Calendar</a> -->
     <!-- <li>Archive</li> -->
   </div>
-  <div class="p-4 w-full h-full flex justify-center">
+  <div class="p-4 w-full h-auto flex justify-center">
     <slot></slot>
   </div>
 </main>
