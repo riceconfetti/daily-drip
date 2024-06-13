@@ -1,8 +1,17 @@
- {
-    "name": "Firefly",
-    "rarity": 5,
-    "element": "fire",
-    "weaponType": "destruction",
-    "splashArt": "/gacha-splashArt/firefly.png",
-    "bannerName": "?????"
+{
+  "name": "Firefly",
+  "rarity": 5,
+  "element": "fire",
+  "weaponType": "destruction",
+  "bannerName": "?????",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#094533] to-[#DBB6B7]",
+    "secondary": "bg-gradient-to-t from-[#094533] to-[#70B99300]",
+    "textAccent": "text-[#EFACCA]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/emelie/gachaSpash.png",
+    "gachaCard": "./images/characters/emelie/gachaCard.png",
+    "bannerCard": "./images/characters/emelie/bannerCard.png"
+  }
 }
