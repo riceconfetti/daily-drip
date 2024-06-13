@@ -6,7 +6,7 @@
 <div
   class="flex relative h-full justify-between w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 pl-2 rounded-sm items-center"
 >
-  <h1 class="text-[.25rem] text-balance">{weapon.name}</h1>
+  <h1 class="text-[.25rem] text-balance md:text-2xs">{weapon.name}</h1>
   <img
     class="h-0 aspect-square min-h-full"
     src={weapon.icon}

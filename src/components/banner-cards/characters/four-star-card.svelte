@@ -32,6 +32,6 @@
     width={4600}
   ></Image>
   <div class="absolute flex items-center w-full h-full p-2">
-    <h1 class={`text-white text-[.6rem]`}>{character.name}</h1>
+    <h1 class={`text-white text-[.6rem] md:text-xs`}>{character.name}</h1>
   </div>
 </div>

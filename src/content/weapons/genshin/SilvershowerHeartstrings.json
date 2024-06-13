@@ -1,6 +1,6 @@
 {
-  "name": "SilvershowerHeartStrings",
+  "name": "Silvershower Heartstrings",
   "rarity": 5,
   "weaponType": "bow",
-  "icon": "./images/weapons/default/genshin_bow.webp"
+  "icon": "./images/weapons/default/fiveStars/genshin_bow.png"
 }
