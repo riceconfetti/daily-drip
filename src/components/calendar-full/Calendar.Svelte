@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Calendar } from "bits-ui";
   import { parseDate, CalendarDate } from "@internationalized/date";
-  import { Event } from "../classes/event";
+  import { Event } from "../../classes/event";
   export let genshin, starrail, reverse, wuwa;
 
   function findGame(game, date) {

@@ -14,7 +14,7 @@
   });
 </script>
 
-<section class="flex flex-col gap-2 w-full">
+<section class="flex flex-col gap-2 w-full h-full">
   <h2 class="playfair-display-semibold text-dark">Current Events</h2>
   {#each currentEvents as eventDetails}
     <EventSingle {eventDetails} />
