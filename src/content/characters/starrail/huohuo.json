@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/huohuo/gachaSpash.png",
-    "gachaCard": "./images/characters/huohuo/gachaCard.png",
-    "bannerCard": "./images/characters/huohuo/bannerCard.png"
+    "gachaSplash": "./images/characters/starrail/huohuo/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/huohuo/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/huohuo/bannerCard.png"
   }
 }

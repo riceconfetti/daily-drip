@@ -9,8 +9,8 @@
     "textAccent": "text-[#EBBC64]"
   },
   "images": {
-    "gachaSplash": "./images/characters/navia/gachaSpash.png",
-    "gachaCard": "./images/characters/navia/gachaCard.png",
-    "bannerCard": "./images/characters/navia/bannerCard.png"
+    "gachaSplash": "./images/characters/genshin/navia/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/navia/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/navia/bannerCard.png"
   }
 }

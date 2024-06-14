@@ -1,1 +1,7 @@
-{"name":"Arlecchino","rarity":5,"element":"pyro","bannerName":"The Hearth's Ashen Shadow","splashArt":"/gacha-splashArt/arlecchino.webp"}
+{
+  "name": "Arlecchino",
+  "rarity": 5,
+  "element": "pyro",
+  "bannerName": "The Hearth's Ashen Shadow",
+  "splashArt": "/gacha-splashArt/arlecchino.webp"
+}

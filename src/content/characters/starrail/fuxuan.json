@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/fuxuan/gachaSpash.png",
-    "gachaCard": "./images/characters/fuxuan/gachaCard.png",
-    "bannerCard": "./images/characters/fuxuan/bannerCard.png"
+    "gachaSplash": "./images/characters/starrail/fuxuan/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/fuxuan/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/fuxuan/bannerCard.png"
   }
 }

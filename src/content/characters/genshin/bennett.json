@@ -4,8 +4,8 @@
   "element": "pyro",
   "weaponType": "sword",
   "images": {
-    "gachaSplash": "./images/characters/bennett/gachaSpash.webp",
-    "gachaCard": "./images/characters/bennett/gachaCard.png",
-    "bannerCard": "./images/characters/bennett/bannerCard.png"
+    "gachaSplash": "./images/characters/genshin/bennett/gachaSpash.webp",
+    "gachaCard": "./images/characters/genshin/bennett/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/bennett/bannerCard.png"
   }
 }

@@ -4,10 +4,11 @@ import { Version } from "../classes/version.ts";
 import Banner from "../components/banner-cards/banner.svelte";
 import { getCollection } from "astro:content";
 import { getPhase } from "../scripts/specs.ts";
+import dayjs from "dayjs";
 
 let game = "genshin";
 
-const versionCollection = await getCollection("versions", ({ id }) => {
+const versionCollection = await getCollection("versions", ({ id, data }) => {
   return id.startsWith(game);
 });
 
@@ -29,30 +30,35 @@ let versions: Version[] = [];
 
 versionCollection.forEach(({ data }) => {
   let v = new Version(data);
-  v.phases = [
-    getPhase(
-      game,
-      data,
-      0,
-      eventCollection,
-      characterCollection,
-      weaponCollection
-    ),
-    getPhase(
-      game,
-      data,
-      1,
-      eventCollection,
-      characterCollection,
-      weaponCollection
-    ),
-  ];
-  versions.push(v);
+
+  if (dayjs(v.startDate) > dayjs()) {
+    v.phases = [
+      getPhase(
+        game,
+        data,
+        0,
+        eventCollection,
+        characterCollection,
+        weaponCollection
+      ),
+      getPhase(
+        game,
+        data,
+        1,
+        eventCollection,
+        characterCollection,
+        weaponCollection
+      ),
+    ];
+    versions.push(v);
+  }
 });
 ---
 
 <Layout title="The Daily Drip">
-  <section class="p-4 flex flex-col items-center gap-4 md:max-w-[1400px]">
+  <section
+    class="p-2 lg:p-4 flex flex-col items-center gap-4 md:max-w-[1400px]"
+  >
     {versions.map((version) => <Banner {version} {game} />)}
   </section>
 

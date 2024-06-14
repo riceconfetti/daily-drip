@@ -6,7 +6,9 @@
   }
 </script>
 
-<main class="relative flex flex-col overflow-x-hidden h-dvh w-dvw items-center">
+<main
+  class="relative flex flex-col overflow-x-hidden size-full items-center lg:overflow-hidden"
+>
   <div
     class="sticky z-30 top-0 flex w-full bg-dark playfair-display-sc-bold text-light p-4 justify-between"
   >
@@ -29,7 +31,6 @@
       <!-- <li>Archive</li> -->
     </div>
   </div>
-
   <div
     class="z-20 fixed top-0 flex w-full bg-dark h-0 min-h-full data-[sidebar='true']:translate-x-full transition-all flex-col p-16 py-24 list-none text-light gap-4 text-lg items-center playfair-display-sc-bold"
     data-sidebar={sidebar}
@@ -41,7 +42,5 @@
     <!-- <a class="p-3" href="./calendar">Calendar</a> -->
     <!-- <li>Archive</li> -->
   </div>
-  <div class="p-4 w-full h-auto flex justify-center">
-    <slot></slot>
-  </div>
+  <slot />
 </main>

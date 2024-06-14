@@ -9,8 +9,8 @@
     "textAccent": "text-[#94C6EC]"
   },
   "images": {
-    "gachaSplash": "./images/characters/wriothesley/gachaSpash.png",
-    "gachaCard": "./images/characters/wriothesley/gachaCard.png",
-    "bannerCard": "./images/characters/wriothesley/bannerCard.png"
+    "gachaSplash": "./images/characters/genshin/wriothesley/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/wriothesley/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/wriothesley/bannerCard.png"
   }
 }
