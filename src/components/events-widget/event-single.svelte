@@ -21,18 +21,23 @@
 </script>
 
 <div
-  class={`w-full relative p-4 flex flex-col gap-2 rounded-md overflow-hidden ${eventDetails.colors.primary} ${fonts[eventDetails.game]}`}
+  class={`w-full relative flex flex-col gap-2 rounded-md overflow-hidden ${eventDetails.colors.primary} ${fonts[eventDetails.game]}`}
 >
-  <h2 class="text-white text-sm z-10">{eventDetails.title}</h2>
-  <h3 class={`${eventDetails.colors.textAccent} text-xs z-10`}>
-    {eventType}
-    {timeUntil}
-  </h3>
+  <div
+    class="absolute inset-0 z-10 flex flex-col h-full w-full justify-center p-4"
+  >
+    <h2 class=" text-white text-sm z-10">{eventDetails.title}</h2>
+    <h3 class={`${eventDetails.colors.textAccent} text-xs z-10`}>
+      {eventType}
+      {timeUntil}
+    </h3>
+  </div>
+
   <Image
     src={eventDetails.image}
     height={1200}
     width={4600}
-    class="absolute right-0 top-0 h-full gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%]"
+    class="h-full gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%]"
     alt={`${eventDetails.title} Banner Card`}
   />
 </div>
