@@ -30,7 +30,7 @@ let versions: Version[] = [];
 
 versionCollection.forEach(({ data }) => {
   let v = new Version(data);
-  if (dayjs(v.startDate) > dayjs()) {
+  if (dayjs(v.startDate) > dayjs().subtract(3, "week")) {
     v.phases = [
       getPhase(
         game,
