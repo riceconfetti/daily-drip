@@ -7,7 +7,7 @@
 <!-- Weapons -->
 
 <section class="flex flex-col w-full">
-  <h2 class="text-dark text-2xs md:text-sm">Rate Up Weapons</h2>
+  <h2 class="text-dark text-2xs sm:text-sm">Rate Up Weapons</h2>
   <div class="grid grid-cols-[1fr_1fr_45%] gap-2">
     {#each weapons.fiveStars as weapon}
       <FiveStarCard {weapon} />

@@ -10,7 +10,7 @@
     <FiveStarCard {character} />
   {/each}
   <div class="flex flex-col justify-between gap-2">
-    <h2 class="text-2xs text-right mt-1 text-dark md:text-sm">
+    <h2 class="text-2xs text-right mt-1 text-dark sm:text-sm">
       Featured Four Stars
     </h2>
     {#each characters.fourStars as character}
