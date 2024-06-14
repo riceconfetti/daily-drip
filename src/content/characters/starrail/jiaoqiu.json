@@ -3,5 +3,15 @@
   "rarity": 5,
   "element": "starrail",
   "weaponType": "nihility",
-  "bannerName": "?????"
+  "bannerName": "?????",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/jiaoqiu/gachaSpash.png",
+    "gachaCard": "./images/characters/jiaoqiu/gachaCard.png",
+    "bannerCard": "./images/characters/jiaoqiu/bannerCard.png"
+  }
 }

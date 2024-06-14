@@ -4,5 +4,14 @@
   "element": "ice",
   "weaponType": "preservation",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/gepard.png"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/gepard/gachaSpash.png",
+    "gachaCard": "./images/characters/gepard/gachaCard.png",
+    "bannerCard": "./images/characters/gepard/bannerCard.png"
+  }
 }

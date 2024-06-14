@@ -1,1 +1,17 @@
-{"name":"Clara","rarity":5,"element":"physical","weaponType":"destruction","bannerName":"","splashArt":"/gacha-splashArt/clara.png"}
+{
+  "name": "Clara",
+  "rarity": 5,
+  "element": "physical",
+  "weaponType": "destruction",
+  "bannerName": "",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/clara/gachaSpash.png",
+    "gachaCard": "./images/characters/clara/gachaCard.png",
+    "bannerCard": "./images/characters/clara/bannerCard.png"
+  }
+}

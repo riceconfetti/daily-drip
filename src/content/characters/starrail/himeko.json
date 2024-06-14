@@ -4,5 +4,14 @@
   "element": "fire",
   "weaponType": "erudition",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/himeko.png"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/himeko/gachaSpash.png",
+    "gachaCard": "./images/characters/himeko/gachaCard.png",
+    "bannerCard": "./images/characters/himeko/bannerCard.png"
+  }
 }

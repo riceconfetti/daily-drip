@@ -4,5 +4,14 @@
   "element": "wind",
   "weaponType": "destruction",
   "bannerName": "A Lost Soul",
-  "splashArt": "/gacha-splashArt/blade.png"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/blade/gachaSpash.png",
+    "gachaCard": "./images/characters/blade/gachaCard.png",
+    "bannerCard": "./images/characters/blade/bannerCard.png"
+  }
 }
