@@ -3,14 +3,16 @@
   export let version;
 </script>
 
-<div class="flex flex-col gap-2 md:col-span-2">
+<div class="flex flex-col gap-2 sm:col-span-2">
   <div
-    class="flex justify-between text-2xs playfair-display-sc-bold text-accent-light py-1 border-y border-accent-dark md:text-sm"
+    class="flex justify-between text-2xs playfair-display-sc-bold text-accent-light py-1 border-y border-accent-dark sm:text-sm"
   >
     <p>Version {version.version}</p>
     <p>{dayjs(version.startDate).format("MMMM DD YYYY")}</p>
   </div>
-  <h1 class="playfair-display-sc-bold text-dark text-center md:text-4xl">
+  <h1
+    class="playfair-display-sc-bold text-dark text-center sm:text-2xl md: 4xl"
+  >
     {version.name ? version.name : `Version ${version.version} - XXXXX`}
   </h1>
 </div>

@@ -8,7 +8,7 @@
 </script>
 
 <section
-  class={`flex flex-col gap-3 bg-white bg-opacity-30 shadow-md p-4 ${game} md:grid md:grid-cols-2 md:gap-5`}
+  class={`flex flex-col gap-3 bg-white bg-opacity-30 shadow-md p-4 ${game} lg:grid lg:grid-cols-2 lg:gap-5`}
 >
   <VersionHeader {version} />
   {#each version.phases as phase}

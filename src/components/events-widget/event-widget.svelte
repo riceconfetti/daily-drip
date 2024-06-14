@@ -14,13 +14,17 @@
   });
 </script>
 
-<section class="flex flex-col gap-2 w-full h-full">
-  <h2 class="playfair-display-semibold text-dark">Current Events</h2>
-  {#each currentEvents as eventDetails}
-    <EventSingle {eventDetails} />
-  {/each}
-  <h2 class="playfair-display-semibold text-dark">Upcoming Events</h2>
-  {#each upcomingEvents as eventDetails}
-    <EventSingle {eventDetails} />
-  {/each}
+<section class="flex flex-col gap-2 w-full h-full md:flex-row lg:flex-col">
+  <div class="flex flex-col gap-2 w-full">
+    <h2 class="playfair-display-semibold text-dark">Current Events</h2>
+    {#each currentEvents as eventDetails}
+      <EventSingle {eventDetails} />
+    {/each}
+  </div>
+  <div class="flex flex-col gap-2 w-full">
+    <h2 class="playfair-display-semibold text-dark">Upcoming Events</h2>
+    {#each upcomingEvents as eventDetails}
+      <EventSingle {eventDetails} />
+    {/each}
+  </div>
 </section>
