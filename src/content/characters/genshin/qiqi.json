@@ -4,5 +4,15 @@
   "element": "cryo",
   "weaponType": "sword",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/qiqi.png"
+  "splashArt": "/gacha-splashArt/qiqi.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/qiqi/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/qiqi/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/qiqi/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

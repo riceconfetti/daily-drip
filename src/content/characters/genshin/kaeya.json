@@ -1,1 +1,11 @@
-{ "name": "Kaeya", "rarity": 4, "element": "cryo", "weaponType": "sword" }
+{
+  "name": "Kaeya",
+  "rarity": 4,
+  "element": "cryo",
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "./images/characters/kaeya/gachaSpash.webp",
+    "gachaCard": "./images/characters/kaeya/gachaCard.png",
+    "bannerCard": "./images/characters/kaeya/bannerCard.png"
+  }
+}

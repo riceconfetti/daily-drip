@@ -1,1 +1,6 @@
-{"name":"Oliver Fog","rarity":4,"element":"Star","weaponType":"Reality"}
+{
+  "name": "Oliver Fog",
+  "rarity": 4,
+  "element": "Star",
+  "weaponType": "Reality"
+}

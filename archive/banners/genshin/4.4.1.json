@@ -1,16 +1,14 @@
 {
-    "time": "2024-01-31T11:00:00+08:00",
-    "characters": {
-        "five": [
-            "Xianyun",
-            "Nahida"
-        ],
-        "four": [
-            "Gaming",
-            "Faruzan",
-            "Noelle"
-            
-        ]
-    },
-    "weapons":["Sacrificial Bow", "Sacrificial Sword", "Sacrificial Fragments", "Sacrificial Greatsword", "Lithic Spear"]
+  "time": "2024-01-31T11:00:00+08:00",
+  "characters": {
+    "five": ["Xianyun", "Nahida"],
+    "four": ["Gaming", "Faruzan", "Noelle"]
+  },
+  "weapons": [
+    "Sacrificial Bow",
+    "Sacrificial Sword",
+    "Sacrificial Fragments",
+    "Sacrificial Greatsword",
+    "Lithic Spear"
+  ]
 }

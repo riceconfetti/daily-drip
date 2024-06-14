@@ -3,5 +3,15 @@
   "rarity": 5,
   "element": "pyro",
   "bannerName": "The Hearth's Ashen Shadow",
-  "splashArt": "/gacha-splashArt/arlecchino.webp"
+  "splashArt": "/gacha-splashArt/arlecchino.webp",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/arlecchino/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/arlecchino/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/arlecchino/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

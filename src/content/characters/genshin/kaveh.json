@@ -1,1 +1,10 @@
-{"name":"Kaveh","rarity":4,"element":"dendro"}
+{
+  "name": "Kaveh",
+  "rarity": 4,
+  "element": "dendro",
+  "images": {
+    "gachaSplash": "./images/characters/kaveh/gachaSpash.webp",
+    "gachaCard": "./images/characters/kaveh/gachaCard.png",
+    "bannerCard": "./images/characters/kaveh/bannerCard.png"
+  }
+}

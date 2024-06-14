@@ -1,1 +1,17 @@
-{"name":"Kaedehara Kazuha","rarity":5,"element":"anemo","bannerName":"Leaves in the Wind","splashArt":"/gacha-splashArt/kaedeharakazuha.png"}
+{
+  "name": "Kaedehara Kazuha",
+  "rarity": 5,
+  "element": "anemo",
+  "bannerName": "Leaves in the Wind",
+  "splashArt": "/gacha-splashArt/kaedeharakazuha.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/kaedehara kazuha/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/kaedehara kazuha/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/kaedehara kazuha/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
+}

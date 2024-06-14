@@ -1,1 +1,6 @@
-{"name":"Mondlicht","rarity":4,"element":"Mineral","weaponType":"Reality"}
+{
+  "name": "Mondlicht",
+  "rarity": 4,
+  "element": "Mineral",
+  "weaponType": "Reality"
+}

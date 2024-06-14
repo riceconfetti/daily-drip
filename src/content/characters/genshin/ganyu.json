@@ -4,5 +4,15 @@
   "element": "cryo",
   "weaponType": "bow",
   "bannerName": "Adrift in the Harbor",
-  "splashArt": "/gacha-splashArt/ganyu.png"
+  "splashArt": "/gacha-splashArt/ganyu.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/ganyu/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/ganyu/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/ganyu/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

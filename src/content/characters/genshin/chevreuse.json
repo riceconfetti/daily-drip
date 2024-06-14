@@ -1,1 +1,10 @@
-{"name":"Chevreuse","rarity":4,"element":"pyro"}
+{
+  "name": "Chevreuse",
+  "rarity": 4,
+  "element": "pyro",
+  "images": {
+    "gachaSplash": "./images/characters/chevreuse/gachaSpash.webp",
+    "gachaCard": "./images/characters/chevreuse/gachaCard.png",
+    "bannerCard": "./images/characters/chevreuse/bannerCard.png"
+  }
+}

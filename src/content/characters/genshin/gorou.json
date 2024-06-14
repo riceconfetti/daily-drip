@@ -1,1 +1,11 @@
-{ "name": "Gorou", "rarity": 4, "element": "geo", "weaponType": "bow" }
+{
+  "name": "Gorou",
+  "rarity": 4,
+  "element": "geo",
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "./images/characters/gorou/gachaSpash.webp",
+    "gachaCard": "./images/characters/gorou/gachaCard.png",
+    "bannerCard": "./images/characters/gorou/bannerCard.png"
+  }
+}

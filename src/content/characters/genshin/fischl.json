@@ -1,1 +1,11 @@
-{ "name": "Fischl", "rarity": 4, "element": "electro", "weaponType": "bow" }
+{
+  "name": "Fischl",
+  "rarity": 4,
+  "element": "electro",
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "./images/characters/fischl/gachaSpash.webp",
+    "gachaCard": "./images/characters/fischl/gachaCard.png",
+    "bannerCard": "./images/characters/fischl/bannerCard.png"
+  }
+}

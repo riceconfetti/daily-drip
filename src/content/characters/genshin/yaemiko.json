@@ -1,1 +1,17 @@
-{"name":"YaeMiko","rarity":5,"element":"electro","bannerName":"Everbloom Violet","splashArt":"/gacha-splashArt/yaemiko.png"}
+{
+  "name": "YaeMiko",
+  "rarity": 5,
+  "element": "electro",
+  "bannerName": "Everbloom Violet",
+  "splashArt": "/gacha-splashArt/yaemiko.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/yaemiko/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/yaemiko/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/yaemiko/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
+}

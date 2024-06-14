@@ -1,1 +1,10 @@
-{"name":"Noelle","rarity":4,"element":"geo"}
+{
+  "name": "Noelle",
+  "rarity": 4,
+  "element": "geo",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/noelle/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/noelle/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/noelle/bannerCard.png"
+  }
+}

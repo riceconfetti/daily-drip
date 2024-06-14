@@ -1,1 +1,10 @@
-{"name":"Ningguang","rarity":4,"element":"geo"}
+{
+  "name": "Ningguang",
+  "rarity": 4,
+  "element": "geo",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/ningguang/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/ningguang/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/ningguang/bannerCard.png"
+  }
+}

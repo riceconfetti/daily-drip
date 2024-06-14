@@ -1,1 +1,6 @@
-{"name":"Horropedia","rarity":5,"element":"Mineral","weaponType":"Mental"}
+{
+  "name": "Horropedia",
+  "rarity": 5,
+  "element": "Mineral",
+  "weaponType": "Mental"
+}

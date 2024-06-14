@@ -1,1 +1,10 @@
-{"name":"Yanfei","rarity":4,"element":"pyro"}
+{
+  "name": "Yanfei",
+  "rarity": 4,
+  "element": "pyro",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/yanfei/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/yanfei/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/yanfei/bannerCard.png"
+  }
+}

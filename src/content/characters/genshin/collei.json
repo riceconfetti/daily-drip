@@ -1,1 +1,11 @@
-{ "name": "Collei", "rarity": 4, "element": "dendro", "weaponType": "bow" }
+{
+  "name": "Collei",
+  "rarity": 4,
+  "element": "dendro",
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "./images/characters/collei/gachaSpash.webp",
+    "gachaCard": "./images/characters/collei/gachaCard.png",
+    "bannerCard": "./images/characters/collei/bannerCard.png"
+  }
+}

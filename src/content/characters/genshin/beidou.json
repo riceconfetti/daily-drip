@@ -1,1 +1,11 @@
-{"name":"Beidou","rarity":4,"element":"electro"}
+{
+  "name": "Beidou",
+  "rarity": 4,
+  "element": "electro",
+  "weaponType": "claymore",
+  "images": {
+    "gachaSplash": "./images/characters/beidou/gachaSpash.webp",
+    "gachaCard": "./images/characters/beidou/gachaCard.png",
+    "bannerCard": "./images/characters/beidou/bannerCard.png"
+  }
+}

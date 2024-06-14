@@ -1,1 +1,6 @@
-{"name":"Mesmer Jr.","rarity":4,"element":"Intellect","weaponType":"Mental"}
+{
+  "name": "Mesmer Jr.",
+  "rarity": 4,
+  "element": "Intellect",
+  "weaponType": "Mental"
+}

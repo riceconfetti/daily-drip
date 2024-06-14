@@ -1,1 +1,10 @@
-{"name":"Gaming","rarity":4,"element":"pyro"}
+{
+  "name": "Gaming",
+  "rarity": 4,
+  "element": "pyro",
+  "images": {
+    "gachaSplash": "./images/characters/gaming/gachaSpash.webp",
+    "gachaCard": "./images/characters/gaming/gachaCard.png",
+    "bannerCard": "./images/characters/gaming/bannerCard.png"
+  }
+}
