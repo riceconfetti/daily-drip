@@ -3,15 +3,23 @@
   import EventSingle from "./event-single.svelte";
   export let events;
 
-  $: currentEvents = events.filter((e) => {
-    return dayjs(e.startDate) < dayjs() && dayjs(e.endDate) > dayjs();
-  });
+  $: currentEvents = events
+    .filter((e) => {
+      return dayjs(e.startDate) < dayjs() && dayjs(e.endDate) > dayjs();
+    })
+    .sort((a, b) => {
+      return dayjs(a.startDate) < dayjs(b.startDate) ? -1 : 1;
+    });
 
-  $: upcomingEvents = events.filter((e) => {
-    return (
-      dayjs(e.startDate) > dayjs() && dayjs(e.startDate) < dayjs().add(6, "w")
-    );
-  });
+  $: upcomingEvents = events
+    .filter((e) => {
+      return (
+        dayjs(e.startDate) > dayjs() && dayjs(e.startDate) < dayjs().add(4, "w")
+      );
+    })
+    .sort((a, b) => {
+      return dayjs(a.startDate) < dayjs(b.startDate) ? -1 : 1;
+    });
 </script>
 
 <section
