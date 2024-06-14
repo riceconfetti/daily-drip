@@ -5,8 +5,8 @@
   "weaponType": "polearm",
   "bannerName": "Renowned Perfumer",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#094533] to-[#DBB6B7]",
-    "secondary": "bg-gradient-to-t from-[#094533] to-[#70B99300]",
+    "primary": "bg-gradient-to-r from-[#094533] to-[#FFCECF]",
+    "secondary": "bg-gradient-to-t from-[#094533] to-[#EFACCA00]",
     "textAccent": "text-[#EFACCA]"
   },
   "images": {
