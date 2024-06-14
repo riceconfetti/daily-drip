@@ -5,6 +5,7 @@ import Banner from "../components/banner-cards/banner.svelte";
 import { getCollection } from "astro:content";
 import { getPhase } from "../scripts/specs.ts";
 import dayjs from "dayjs";
+import type { lazy } from "astro/zod";
 
 let game = "genshin";
 
@@ -59,7 +60,7 @@ versionCollection.forEach(({ data }) => {
   <section
     class="p-2 lg:p-4 flex flex-col items-center gap-4 md:max-w-[1400px]"
   >
-    {versions.map((version) => <Banner {version} {game} />)}
+    {versions.map((version) => <Banner {version} {game} client:visible />)}
   </section>
 
   <!-- <Banner {version} game="genshin" /> -->

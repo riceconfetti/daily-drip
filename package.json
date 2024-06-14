@@ -11,10 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/preact": "^3.4.0",
     "@astrojs/svelte": "^5.5.0",
     "@astrojs/tailwind": "^5.1.0",
     "@unpic/svelte": "^0.0.53",
-    "astro": "^4.10.1",
+    "astro": "^4.10.2",
     "bits-ui": "^0.21.10",
     "colorthief": "^2.2.0",
     "dayjs": "^1.11.11",
