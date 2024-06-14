@@ -10,8 +10,8 @@
     "textAccent": "text-[#EFACCA]"
   },
   "images": {
-    "gachaSplash": "./images/characters/emelie/gachaSpash.png",
-    "gachaCard": "./images/characters/emelie/gachaCard.png",
-    "bannerCard": "./images/characters/emelie/bannerCard.png"
+    "gachaSplash": "./images/characters/genshin/emelie/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/emelie/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/emelie/bannerCard.png"
   }
 }

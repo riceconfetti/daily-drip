@@ -17,6 +17,14 @@
 
     genshin:
       "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
+
+    starrail:
+      "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
+
+    wuwa: "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
+
+    reverse:
+      "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
   };
 </script>
 

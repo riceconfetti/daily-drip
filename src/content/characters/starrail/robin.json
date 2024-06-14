@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/robin/gachaSpash.png",
-    "gachaCard": "./images/characters/robin/gachaCard.png",
-    "bannerCard": "./images/characters/robin/bannerCard.png"
+    "gachaSplash": "./images/characters/starrail/robin/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/robin/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/robin/bannerCard.png"
   }
 }

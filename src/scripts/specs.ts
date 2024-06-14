@@ -54,10 +54,11 @@ export function getPhase(
     phase.characters.fiveStars.push({
       name: "????",
       rarity: 5,
+      bannerName: "????",
       element: game,
       images: {
         gachaSplash: `./images/characters/${game}/gachaSpash.png`,
-        gachaCard: `./images/characters/${game}/gachaCard.png`,
+        gachaCard: `./images/paths/${game}.png`,
         bannerCard: `./images/characters/${game}/bannerCard.png`,
       },
     });
@@ -101,6 +102,7 @@ export function getPhase(
     phase.weapons.fiveStars.push({
       name: "????",
       rarity: 5,
+      game: game,
       weaponType: "default",
       icon: `./images/weapons/default/fiveStars/${game}_default.png`,
     });
@@ -122,6 +124,7 @@ export function getPhase(
           rarity: 5,
           weaponType: weapon,
           icon: `./images/weapons/default/fourStars/${game}_${weapon}.png`,
+          game: game,
         });
       }
     });
@@ -131,6 +134,16 @@ export function getPhase(
         weaponTypes[game].indexOf(b.weaponType)
       );
     });
+  } else if (game == "starrail") {
+    while (phase.weapons.fourStars.length < 3) {
+      phase.weapons.fourStars.push({
+        name: "????",
+        rarity: 4,
+        game: game,
+        weaponType: "default",
+        icon: "./images/weapons/default/fourStars/starrail_default.png",
+      });
+    }
   }
 
   return phase;

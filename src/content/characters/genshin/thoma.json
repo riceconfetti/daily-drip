@@ -4,8 +4,8 @@
   "element": "pyro",
   "weaponType": "polearm",
   "images": {
-    "gachaSplash": "./images/characters/thoma/gachaSpash.webp",
-    "gachaCard": "./images/characters/thoma/gachaCard.png",
-    "bannerCard": "./images/characters/thoma/bannerCard.png"
+    "gachaSplash": "./images/characters/genshin/thoma/gachaSpash.webp",
+    "gachaCard": "./images/characters/genshin/thoma/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/thoma/bannerCard.png"
   }
 }

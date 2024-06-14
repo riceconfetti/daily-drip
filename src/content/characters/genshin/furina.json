@@ -10,8 +10,8 @@
     "textAccent": "text-[#7CAAF7]"
   },
   "images": {
-    "gachaSplash": "./images/characters/furina/gachaSpash.png",
-    "gachaCard": "./images/characters/furina/gachaCard.png",
-    "bannerCard": "./images/characters/furina/bannerCard.png"
+    "gachaSplash": "./images/characters/genshin/furina/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/furina/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/furina/bannerCard.png"
   }
 }
