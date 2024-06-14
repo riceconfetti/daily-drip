@@ -9,6 +9,10 @@
   font-weight: 400;
 }
 
+body {
+  --swup-overlay-theme-color: #232323;
+}
+
 .genshin {
   @apply font-genshin;
 }

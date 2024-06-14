@@ -23,7 +23,7 @@
 </script>
 
 <section
-  class="lg:min-h-0 flex flex-col gap-2 w-full h-full md:flex-row lg:flex-col lg:overflow-auto lg:p-4"
+  class="transition overlay lg:min-h-0 flex flex-col gap-2 w-full h-full md:flex-row lg:flex-col lg:overflow-auto lg:p-4"
 >
   <div class="flex flex-col gap-2 w-full">
     <h2 class="playfair-display-semibold text-dark">Current Events</h2>

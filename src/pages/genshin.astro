@@ -60,7 +60,7 @@ versionCollection.forEach(({ data }) => {
   <section
     class="p-2 lg:p-4 flex flex-col items-center gap-4 md:max-w-[1400px]"
   >
-    {versions.map((version) => <Banner {version} {game} client:visible />)}
+    {versions.map((version) => <Banner {version} {game} client:load />)}
   </section>
 
   <!-- <Banner {version} game="genshin" /> -->
