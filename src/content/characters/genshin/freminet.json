@@ -1,1 +1,10 @@
-{"name":"Freminet","rarity":4,"element":"cryo"}
+{
+  "name": "Freminet",
+  "rarity": 4,
+  "element": "cryo",
+  "images": {
+    "gachaSplash": "./images/characters/freminet/gachaSpash.webp",
+    "gachaCard": "./images/characters/freminet/gachaCard.png",
+    "bannerCard": "./images/characters/freminet/bannerCard.png"
+  }
+}

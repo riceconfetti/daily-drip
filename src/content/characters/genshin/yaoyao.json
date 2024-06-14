@@ -1,1 +1,11 @@
-{ "name": "Yaoyao", "rarity": 4, "element": "dendro", "weaponType": "polearm" }
+{
+  "name": "Yaoyao",
+  "rarity": 4,
+  "element": "dendro",
+  "weaponType": "polearm",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/yaoyao/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/yaoyao/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/yaoyao/bannerCard.png"
+  }
+}

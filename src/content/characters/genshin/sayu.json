@@ -1,1 +1,10 @@
-{"name":"Sayu","rarity":4,"element":"anemo"}
+{
+  "name": "Sayu",
+  "rarity": 4,
+  "element": "anemo",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/sayu/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/sayu/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/sayu/bannerCard.png"
+  }
+}

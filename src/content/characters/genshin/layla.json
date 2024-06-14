@@ -1,1 +1,11 @@
-{ "name": "Layla", "rarity": 4, "element": "cryo", "weaponType": "sword" }
+{
+  "name": "Layla",
+  "rarity": 4,
+  "element": "cryo",
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/layla/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/layla/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/layla/bannerCard.png"
+  }
+}

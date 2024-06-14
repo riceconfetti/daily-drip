@@ -1,1 +1,17 @@
-{"name":"Klee","rarity":5,"element":"pyro","bannerName":"Sparkling Steps","splashArt":"/gacha-splashArt/klee.png"}
+{
+  "name": "Klee",
+  "rarity": 5,
+  "element": "pyro",
+  "bannerName": "Sparkling Steps",
+  "splashArt": "/gacha-splashArt/klee.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/klee/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/klee/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/klee/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
+}

@@ -1,1 +1,11 @@
-{ "name": "Faruzan", "rarity": 4, "element": "anemo", "weaponType": "bow" }
+{
+  "name": "Faruzan",
+  "rarity": 4,
+  "element": "anemo",
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "./images/characters/faruzan/gachaSpash.webp",
+    "gachaCard": "./images/characters/faruzan/gachaCard.png",
+    "bannerCard": "./images/characters/faruzan/bannerCard.png"
+  }
+}

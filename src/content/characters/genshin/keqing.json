@@ -4,5 +4,15 @@
   "element": "electro",
   "weaponType": "sword",
   "bannerName": "Dance of Lanterns",
-  "splashArt": "/gacha-splashArt/keqing.png"
+  "splashArt": "/gacha-splashArt/keqing.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/keqing/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/keqing/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/keqing/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

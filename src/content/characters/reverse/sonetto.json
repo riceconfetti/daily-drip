@@ -1,1 +1,6 @@
-{"name":"Sonetto","rarity":5,"element":"Mineral","weaponType":"Reality"}
+{
+  "name": "Sonetto",
+  "rarity": 5,
+  "element": "Mineral",
+  "weaponType": "Reality"
+}

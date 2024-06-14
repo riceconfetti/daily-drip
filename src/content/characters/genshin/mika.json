@@ -1,1 +1,11 @@
-{ "name": "Mika", "rarity": 4, "element": "cryo", "weaponType": "polearm" }
+{
+  "name": "Mika",
+  "rarity": 4,
+  "element": "cryo",
+  "weaponType": "polearm",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/mika/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/mika/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/mika/bannerCard.png"
+  }
+}

@@ -1,1 +1,17 @@
-{"name":"Dehya","rarity":5,"element":"pyro","bannerName":"Auric Blaze","splashArt":"/gacha-splashArt/dehya.png"}
+{
+  "name": "Dehya",
+  "rarity": 5,
+  "element": "pyro",
+  "bannerName": "Auric Blaze",
+  "splashArt": "/gacha-splashArt/dehya.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/dehya/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/dehya/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/dehya/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
+}

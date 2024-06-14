@@ -1,1 +1,10 @@
-{"name":"Xinyan","rarity":4,"element":"pyro"}
+{
+  "name": "Xinyan",
+  "rarity": 4,
+  "element": "pyro",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/xinyan/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/xinyan/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/xinyan/bannerCard.png"
+  }
+}

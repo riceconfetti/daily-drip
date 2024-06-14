@@ -2,5 +2,10 @@
   "name": "KukiShinobu",
   "rarity": 4,
   "element": "electro",
-  "weaponType": "sword"
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/kukishinobu/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/kukishinobu/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/kukishinobu/bannerCard.png"
+  }
 }

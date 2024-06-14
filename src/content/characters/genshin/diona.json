@@ -1,1 +1,11 @@
-{ "name": "Diona", "rarity": 4, "element": "cryo", "weaponType": "bow" }
+{
+  "name": "Diona",
+  "rarity": 4,
+  "element": "cryo",
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "./images/characters/diona/gachaSpash.webp",
+    "gachaCard": "./images/characters/diona/gachaCard.png",
+    "bannerCard": "./images/characters/diona/bannerCard.png"
+  }
+}

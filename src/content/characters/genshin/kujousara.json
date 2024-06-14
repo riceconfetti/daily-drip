@@ -1,1 +1,11 @@
-{ "name": "Kujou Sara", "rarity": 4, "element": "electro", "weaponType": "bow" }
+{
+  "name": "Kujou Sara",
+  "rarity": 4,
+  "element": "electro",
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/kujou sara/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/kujou sara/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/kujou sara/bannerCard.png"
+  }
+}

@@ -1,1 +1,17 @@
-{"name":"Sangonomiya Kokomi","rarity":5,"element":"hydro","bannerName":"Drifting Luminescence","splashArt":"/gacha-splashArt/kokomi.png"}
+{
+  "name": "Sangonomiya Kokomi",
+  "rarity": 5,
+  "element": "hydro",
+  "bannerName": "Drifting Luminescence",
+  "splashArt": "/gacha-splashArt/kokomi.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/sangonomiya kokomi/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/sangonomiya kokomi/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/sangonomiya kokomi/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
+}

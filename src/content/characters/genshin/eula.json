@@ -1,1 +1,17 @@
-{"name":"Eula","rarity":5,"element":"cryo","bannerName":"Born of Ocean Swell","splashArt":"/gacha-splashArt/eula.png"}
+{
+  "name": "Eula",
+  "rarity": 5,
+  "element": "cryo",
+  "bannerName": "Born of Ocean Swell",
+  "splashArt": "/gacha-splashArt/eula.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/eula/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/eula/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/eula/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
+}

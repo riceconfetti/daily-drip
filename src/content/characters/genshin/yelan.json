@@ -4,5 +4,15 @@
   "element": "hydro",
   "weaponType": "bow",
   "bannerName": "Discerner of Enigmas",
-  "splashArt": "/gacha-splashArt/yelan.png"
+  "splashArt": "/gacha-splashArt/yelan.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/yelan/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/yelan/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/yelan/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

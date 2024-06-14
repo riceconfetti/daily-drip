@@ -4,5 +4,15 @@
   "element": "cryo",
   "weaponType": "polearm",
   "bannerName": "The Transcendent One Returns",
-  "splashArt": "/gacha-splashArt/shenhe.png"
+  "splashArt": "/gacha-splashArt/shenhe.png",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/shenhe/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/shenhe/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/shenhe/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

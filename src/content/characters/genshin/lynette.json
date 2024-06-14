@@ -1,1 +1,11 @@
-{ "name": "Lynette", "rarity": 4, "element": "anemo", "weaponType": "sword" }
+{
+  "name": "Lynette",
+  "rarity": 4,
+  "element": "anemo",
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "./images/characters/genshin/lynette/gachaSpash.png",
+    "gachaCard": "./images/characters/genshin/lynette/gachaCard.png",
+    "bannerCard": "./images/characters/genshin/lynette/bannerCard.png"
+  }
+}
