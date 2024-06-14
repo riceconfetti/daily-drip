@@ -4,5 +4,14 @@
   "element": "imaginary",
   "weaponType": "hunt",
   "bannerName": "Panta Rei",
-  "splashArt": "/gacha-splashArt/drratio.png"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/drratio/gachaSpash.png",
+    "gachaCard": "./images/characters/drratio/gachaCard.png",
+    "bannerCard": "./images/characters/drratio/bannerCard.png"
+  }
 }

@@ -4,5 +4,14 @@
   "element": "wind",
   "weaponType": "harmony",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/bronya.png"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/bronya/gachaSpash.png",
+    "gachaCard": "./images/characters/bronya/gachaCard.png",
+    "bannerCard": "./images/characters/bronya/bannerCard.png"
+  }
 }

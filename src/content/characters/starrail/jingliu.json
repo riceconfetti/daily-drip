@@ -4,5 +4,14 @@
   "element": "ice",
   "weaponType": "destruction",
   "bannerName": "Gentle Eclipse of the Moon",
-  "splashArt": "/gacha-splashArt/jingliu.png"
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "./images/characters/jingliu/gachaSpash.png",
+    "gachaCard": "./images/characters/jingliu/gachaCard.png",
+    "bannerCard": "./images/characters/jingliu/bannerCard.png"
+  }
 }

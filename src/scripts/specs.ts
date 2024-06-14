@@ -106,7 +106,7 @@ export function getPhase(
     });
   }
 
-  if (phase.weapons.fourStars.length < 5) {
+  if (phase.weapons.fourStars.length < 5 && game != "starrail") {
     const weaponTypes = {
       genshin: ["bow", "sword", "catalyst", "polearm", "claymore"],
     };

@@ -22,11 +22,11 @@
     return game;
   }
 
-  console.log("Genshin");
-  console.log(genshin);
+  // console.log("Genshin");
+  // console.log(genshin);
 
-  console.log("Starrail");
-  console.log(starrail);
+  // console.log("Starrail");
+  // console.log(starrail);
 </script>
 
 <Calendar.Root
