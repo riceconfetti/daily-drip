@@ -1,11 +1,1 @@
-{
-  "name": "Sethos",
-  "rarity": 4,
-  "element": "electro",
-  "weaponType": "bow",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/sethos/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/sethos/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/sethos/bannerCard.png"
-  }
-}
+{"name":"Sethos","rarity":4,"element":"electro","weaponType":"bow","images":{"gachaSplash":"sethos/gachaSpash","gachaCard":"sethos/gachaCard","bannerCard":"sethos/bannerCard"}}

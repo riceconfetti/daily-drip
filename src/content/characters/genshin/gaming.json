@@ -1,10 +1,1 @@
-{
-  "name": "Gaming",
-  "rarity": 4,
-  "element": "pyro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/gaming/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/gaming/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/gaming/bannerCard.png"
-  }
-}
+{"name":"Gaming","rarity":4,"element":"pyro","images":{"gachaSplash":"gaming/gachaSpash","gachaCard":"gaming/gachaCard","bannerCard":"gaming/bannerCard"}}

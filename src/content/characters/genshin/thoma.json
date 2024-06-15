@@ -1,11 +1,1 @@
-{
-  "name": "Thoma",
-  "rarity": 4,
-  "element": "pyro",
-  "weaponType": "polearm",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/thoma/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/thoma/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/thoma/bannerCard.png"
-  }
-}
+{"name":"Thoma","rarity":4,"element":"pyro","weaponType":"polearm","images":{"gachaSplash":"thoma/gachaSpash","gachaCard":"thoma/gachaCard","bannerCard":"thoma/bannerCard"}}

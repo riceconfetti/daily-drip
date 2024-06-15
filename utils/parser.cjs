@@ -22,11 +22,11 @@ const fs = require("fs");
 //   });
 // });
 
-let characters = fs.readdirSync("./src/content/characters/starrail");
+let characters = fs.readdirSync("./src/content/characters/genshin");
 
 characters.forEach((c) => {
   fs.readFile(
-    `./src/content/characters/starrail/${c}`,
+    `./src/content/characters/genshin/${c}`,
     "utf8",
     function (err, data) {
       if (err) {
@@ -39,31 +39,23 @@ characters.forEach((c) => {
         delete character.splashArt;
       }
 
-      if (
-        character.images == undefined ||
-        character.images.gachaSplash.endsWith(".png")
-      ) {
-        character.images = {
-          gachaSplash: `/assets/characters/starrail/${character.name
-            .toLowerCase()
-            .replace(
-              /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-              ""
-            )}/gachaSpash`,
-          gachaCard: `/assets/characters/starrail/${character.name
-            .toLowerCase()
-            .replace(
-              /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-              ""
-            )}/gachaCard`,
-          bannerCard: `/assets/characters/starrail/${character.name
-            .toLowerCase()
-            .replace(
-              /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-              ""
-            )}/bannerCard`,
-        };
-      }
+      character.images = {
+        gachaSplash: `${character.name
+          .toLowerCase()
+          .replace(
+            /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+            ""
+          )}/gachaSpash`,
+        gachaCard: `${character.name
+          .toLowerCase()
+          .replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "")}/gachaCard`,
+        bannerCard: `${character.name
+          .toLowerCase()
+          .replace(
+            /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+            ""
+          )}/bannerCard`,
+      };
 
       if (character.rarity == 5 && character.colors == undefined) {
         character.colors = {
@@ -74,7 +66,7 @@ characters.forEach((c) => {
       }
 
       fs.writeFile(
-        `./src/content/characters/starrail/${c}`,
+        `./src/content/characters/genshin/${c}`,
         JSON.stringify(character),
         (err) => {
           if (err) {
@@ -126,7 +118,7 @@ characters.forEach((c) => {
 //   };
 
 //   fs.writeFile(
-//     `./src/content/weapons/starrail/${w.replace(
+//     `./src/content/weapons/genshin/${w.replace(
 //       /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
 //       "",
 //     )}.json`,

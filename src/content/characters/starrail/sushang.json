@@ -1,10 +1,1 @@
-{
-  "name": "Sushang",
-  "rarity": 4,
-  "element": "physical",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/sushang/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/sushang/gachaCard",
-    "bannerCard": "/assets/characters/starrail/sushang/bannerCard"
-  }
-}
+{"name":"Sushang","rarity":4,"element":"physical","images":{"gachaSplash":"sushang/gachaSpash","gachaCard":"sushang/gachaCard","bannerCard":"sushang/bannerCard"}}

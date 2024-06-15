@@ -1,17 +1,1 @@
-{
-  "name": "Silver Wolf",
-  "rarity": 5,
-  "element": "quantum",
-  "weaponType": "nihility",
-  "bannerName": "Contract Zero",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/silverwolf/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/silverwolf/gachaCard",
-    "bannerCard": "/assets/characters/starrail/silverwolf/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Silver Wolf","rarity":5,"element":"quantum","weaponType":"nihility","bannerName":"Contract Zero","images":{"gachaSplash":"silverwolf/gachaSpash","gachaCard":"silverwolf/gachaCard","bannerCard":"silverwolf/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

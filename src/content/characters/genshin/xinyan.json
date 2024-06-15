@@ -1,10 +1,1 @@
-{
-  "name": "Xinyan",
-  "rarity": 4,
-  "element": "pyro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/xinyan/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/xinyan/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/xinyan/bannerCard.png"
-  }
-}
+{"name":"Xinyan","rarity":4,"element":"pyro","images":{"gachaSplash":"xinyan/gachaSpash","gachaCard":"xinyan/gachaCard","bannerCard":"xinyan/bannerCard"}}

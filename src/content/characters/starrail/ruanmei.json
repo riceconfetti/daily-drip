@@ -1,17 +1,1 @@
-{
-  "name": "Ruan Mei",
-  "rarity": 5,
-  "element": "ice",
-  "weaponType": "harmony",
-  "bannerName": "Floral Triptych",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  },
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/ruanmei/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/ruanmei/gachaCard",
-    "bannerCard": "/assets/characters/starrail/ruanmei/bannerCard"
-  }
-}
+{"name":"Ruan Mei","rarity":5,"element":"ice","weaponType":"harmony","bannerName":"Floral Triptych","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"ruanmei/gachaSpash","gachaCard":"ruanmei/gachaCard","bannerCard":"ruanmei/bannerCard"}}

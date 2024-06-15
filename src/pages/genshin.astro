@@ -5,11 +5,29 @@ import Banner from "../components/banner-cards/banner.svelte";
 import { getCollection } from "astro:content";
 import { getPhase } from "../scripts/specs.ts";
 import dayjs from "dayjs";
-import type { lazy } from "astro/zod";
 
 let game = "genshin";
 
-const versionCollection = await getCollection("versions", ({ id, data }) => {
+const images = {
+
+  backgrounds: import.meta.glob("../assets/backgrounds/*.png", {eager: true}),
+  gachaCards: import.meta.glob(
+    "../assets/characters/genshin/*/gachaCard.png",
+    { eager: true }
+  ),
+  bannerCards: import.meta.glob(
+    "../assets/characters/genshin/*/bannerCard.png",
+    { eager: true }
+  ),
+  weapons: import.meta.glob("../assets/weapons/*{.webp,.png}" , {eager: true}),
+  
+  placeHolders: import.meta.glob(
+    "../assets/placeholders/genshin/*.png",
+    { eager: true }
+  )
+}
+
+const versionCollection = await getCollection("versions", ({ id}) => {
   return id.startsWith(game);
 });
 
@@ -28,12 +46,6 @@ const weaponCollection = await getCollection("weapons", ({ id }) => {
 });
 
 let versions: Version[] = [];
-
-const images = import.meta.glob(
-    "../assets/characters/genshin/*/gachaCard.png",
-    { eager: true }
-  );
-
 
 versionCollection.forEach(({ data }) => {
   let v = new Version(data);

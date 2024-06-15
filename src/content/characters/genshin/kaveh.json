@@ -1,10 +1,1 @@
-{
-  "name": "Kaveh",
-  "rarity": 4,
-  "element": "dendro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/kaveh/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/kaveh/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/kaveh/bannerCard.png"
-  }
-}
+{"name":"Kaveh","rarity":4,"element":"dendro","images":{"gachaSplash":"kaveh/gachaSpash","gachaCard":"kaveh/gachaCard","bannerCard":"kaveh/bannerCard"}}

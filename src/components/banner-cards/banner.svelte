@@ -17,8 +17,8 @@
       class={`flex flex-col gap-2 ${dayjs(phase.date) < dayjs() ? "grayscale" : ""}`}
     >
       <PhaseHeader {phase} />
-      <CharacterCard characters={phase.characters} {images}/>
-      <!-- <WeaponCard weapons={phase.weapons} /> -->
+      <CharacterCard characters={phase.characters} {images} {game} />
+      <WeaponCard weapons={phase.weapons} {images} {game} />
     </div>
   {/each}
 </section>

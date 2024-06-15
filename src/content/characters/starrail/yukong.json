@@ -1,10 +1,1 @@
-{
-  "name": "Yukong",
-  "rarity": 4,
-  "element": "imaginary",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/yukong/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/yukong/gachaCard",
-    "bannerCard": "/assets/characters/starrail/yukong/bannerCard"
-  }
-}
+{"name":"Yukong","rarity":4,"element":"imaginary","images":{"gachaSplash":"yukong/gachaSpash","gachaCard":"yukong/gachaCard","bannerCard":"yukong/bannerCard"}}

@@ -1,17 +1,1 @@
-{
-  "name": "Gepard",
-  "rarity": 5,
-  "element": "ice",
-  "weaponType": "preservation",
-  "bannerName": "",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  },
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/gepard/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/gepard/gachaCard",
-    "bannerCard": "/assets/characters/starrail/gepard/bannerCard"
-  }
-}
+{"name":"Gepard","rarity":5,"element":"ice","weaponType":"preservation","bannerName":"","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"gepard/gachaSpash","gachaCard":"gepard/gachaCard","bannerCard":"gepard/bannerCard"}}

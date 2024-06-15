@@ -1,11 +1,1 @@
-{
-  "name": "Moze",
-  "rarity": 4,
-  "element": "lightning",
-  "weaponType": "hunt",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/moze/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/moze/gachaCard",
-    "bannerCard": "/assets/characters/starrail/moze/bannerCard"
-  }
-}
+{"name":"Moze","rarity":4,"element":"lightning","weaponType":"hunt","images":{"gachaSplash":"moze/gachaSpash","gachaCard":"moze/gachaCard","bannerCard":"moze/bannerCard"}}

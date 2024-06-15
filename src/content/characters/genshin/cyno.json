@@ -1,16 +1,1 @@
-{
-  "name": "Cyno",
-  "rarity": 5,
-  "element": "electro",
-  "bannerName": "Twilight Arbiter",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/cyno/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/cyno/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/cyno/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Cyno","rarity":5,"element":"electro","bannerName":"Twilight Arbiter","images":{"gachaSplash":"cyno/gachaSpash","gachaCard":"cyno/gachaCard","bannerCard":"cyno/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

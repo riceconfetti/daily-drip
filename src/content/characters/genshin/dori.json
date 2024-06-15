@@ -1,10 +1,1 @@
-{
-  "name": "Dori",
-  "rarity": 4,
-  "element": "electro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/dori/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/dori/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/dori/bannerCard.png"
-  }
-}
+{"name":"Dori","rarity":4,"element":"electro","images":{"gachaSplash":"dori/gachaSpash","gachaCard":"dori/gachaCard","bannerCard":"dori/bannerCard"}}

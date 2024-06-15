@@ -1,17 +1,1 @@
-{
-  "name": "Robin",
-  "rarity": 5,
-  "element": "physical",
-  "weaponType": "harmony",
-  "bannerName": "Just Intonation",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  },
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/robin/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/robin/gachaCard",
-    "bannerCard": "/assets/characters/starrail/robin/bannerCard"
-  }
-}
+{"name":"Robin","rarity":5,"element":"physical","weaponType":"harmony","bannerName":"Just Intonation","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"robin/gachaSpash","gachaCard":"robin/gachaCard","bannerCard":"robin/bannerCard"}}

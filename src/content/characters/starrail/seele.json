@@ -1,17 +1,1 @@
-{
-  "name": "Seele",
-  "rarity": 5,
-  "element": "quantum",
-  "weaponType": "hunt",
-  "bannerName": "Butterfly on Swordtip",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/seele/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/seele/gachaCard",
-    "bannerCard": "/assets/characters/starrail/seele/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Seele","rarity":5,"element":"quantum","weaponType":"hunt","bannerName":"Butterfly on Swordtip","images":{"gachaSplash":"seele/gachaSpash","gachaCard":"seele/gachaCard","bannerCard":"seele/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

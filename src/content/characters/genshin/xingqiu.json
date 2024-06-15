@@ -1,11 +1,1 @@
-{
-  "name": "Xingqiu",
-  "rarity": 4,
-  "element": "hydro",
-  "weaponType": "sword",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/xingqiu/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/xingqiu/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/xingqiu/bannerCard.png"
-  }
-}
+{"name":"Xingqiu","rarity":4,"element":"hydro","weaponType":"sword","images":{"gachaSplash":"xingqiu/gachaSpash","gachaCard":"xingqiu/gachaCard","bannerCard":"xingqiu/bannerCard"}}

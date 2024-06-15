@@ -1,17 +1,1 @@
-{
-  "name": "Lingsha",
-  "rarity": 5,
-  "element": "fire",
-  "weaponType": "abundance",
-  "bannerName": "???",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#392916] to-[#D88F45]",
-    "secondary": "bg-gradient-to-t from-[#392916] to-[#8F541700]",
-    "textAccent": "text-[#D88F45]"
-  },
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/lingsha/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/lingsha/gachaCard",
-    "bannerCard": "/assets/characters/starrail/lingsha/bannerCard"
-  }
-}
+{"name":"Lingsha","rarity":5,"element":"fire","weaponType":"abundance","bannerName":"???","colors":{"primary":"bg-gradient-to-r from-[#392916] to-[#D88F45]","secondary":"bg-gradient-to-t from-[#392916] to-[#8F541700]","textAccent":"text-[#D88F45]"},"images":{"gachaSplash":"lingsha/gachaSpash","gachaCard":"lingsha/gachaCard","bannerCard":"lingsha/bannerCard"}}

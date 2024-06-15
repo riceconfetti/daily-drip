@@ -1,11 +1,1 @@
-{
-  "name": "Gallagher",
-  "rarity": 4,
-  "element": "fire",
-  "weaponType": "abundance",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/gallagher/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/gallagher/gachaCard",
-    "bannerCard": "/assets/characters/starrail/gallagher/bannerCard"
-  }
-}
+{"name":"Gallagher","rarity":4,"element":"fire","weaponType":"abundance","images":{"gachaSplash":"gallagher/gachaSpash","gachaCard":"gallagher/gachaCard","bannerCard":"gallagher/bannerCard"}}

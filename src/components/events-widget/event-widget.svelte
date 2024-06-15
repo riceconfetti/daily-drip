@@ -1,7 +1,7 @@
 <script lang="ts">
   import dayjs from "dayjs";
   import EventSingle from "./event-single.svelte";
-  export let events;
+  export let events, images;
 
   $: currentEvents = events
     .filter((e) => {
@@ -28,13 +28,13 @@
   <div class="flex flex-col gap-2 w-full">
     <h2 class="playfair-display-semibold text-dark">Current Events</h2>
     {#each currentEvents as eventDetails}
-      <EventSingle {eventDetails} />
+      <EventSingle {eventDetails} {images} />
     {/each}
   </div>
   <div class="flex flex-col gap-2 w-full">
     <h2 class="playfair-display-semibold text-dark">Upcoming Events</h2>
     {#each upcomingEvents as eventDetails}
-      <EventSingle {eventDetails} />
+      <EventSingle {eventDetails} {images} />
     {/each}
   </div>
 </section>

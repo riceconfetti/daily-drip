@@ -8,6 +8,25 @@ import dayjs from "dayjs";
 
 let game = "starrail";
 
+const images = {
+  backgrounds: import.meta.glob("../assets/backgrounds/*.png", {eager: true}),
+  gachaCards: import.meta.glob(
+    "../assets/characters/starrail/*/gachaCard.png",
+    { eager: true }
+  ),
+  bannerCards: import.meta.glob(
+    "../assets/characters/starrail/*/bannerCard.png",
+    { eager: true }
+  ),
+  weapons: import.meta.glob("../assets/weapons/*{.webp,.png}" , {eager: true}),
+  
+  placeHolders: import.meta.glob(
+    "../assets/placeholders/starrail/*.png",
+    { eager: true }
+  )
+}
+
+
 const versionCollection = await getCollection("versions", ({ id }) => {
   return id.startsWith(game);
 });
@@ -28,12 +47,7 @@ const weaponCollection = await getCollection("weapons", ({ id }) => {
 
 let versions: Version[] = [];
 
-const images = import.meta.glob(
-    "../assets/characters/starrail/*/gachaCard.png",
-    { eager: true }
-  );
 
-console.log(images)
 versionCollection.forEach(({ data }) => {
   let v = new Version(data);
   if (dayjs(v.startDate) > dayjs().subtract(3, "week")) {

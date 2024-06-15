@@ -1,16 +1,1 @@
-{
-  "name": "Baizhu",
-  "rarity": 5,
-  "element": "dendro",
-  "bannerName": "Immaculate Pulse",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  },
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/baizhu/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/baizhu/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/baizhu/bannerCard.png"
-  }
-}
+{"name":"Baizhu","rarity":5,"element":"dendro","bannerName":"Immaculate Pulse","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"baizhu/gachaSpash","gachaCard":"baizhu/gachaCard","bannerCard":"baizhu/bannerCard"}}

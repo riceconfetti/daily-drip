@@ -1,10 +1,1 @@
-{
-  "name": "Freminet",
-  "rarity": 4,
-  "element": "cryo",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/freminet/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/freminet/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/freminet/bannerCard.png"
-  }
-}
+{"name":"Freminet","rarity":4,"element":"cryo","images":{"gachaSplash":"freminet/gachaSpash","gachaCard":"freminet/gachaCard","bannerCard":"freminet/bannerCard"}}

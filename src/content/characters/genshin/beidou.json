@@ -1,11 +1,1 @@
-{
-  "name": "Beidou",
-  "rarity": 4,
-  "element": "electro",
-  "weaponType": "claymore",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/beidou/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/beidou/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/beidou/bannerCard.png"
-  }
-}
+{"name":"Beidou","rarity":4,"element":"electro","weaponType":"claymore","images":{"gachaSplash":"beidou/gachaSpash","gachaCard":"beidou/gachaCard","bannerCard":"beidou/bannerCard"}}

@@ -1,11 +1,1 @@
-{
-  "name": "Faruzan",
-  "rarity": 4,
-  "element": "anemo",
-  "weaponType": "bow",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/faruzan/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/faruzan/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/faruzan/bannerCard.png"
-  }
-}
+{"name":"Faruzan","rarity":4,"element":"anemo","weaponType":"bow","images":{"gachaSplash":"faruzan/gachaSpash","gachaCard":"faruzan/gachaCard","bannerCard":"faruzan/bannerCard"}}

@@ -1,10 +1,1 @@
-{
-  "name": "Charlotte",
-  "rarity": 4,
-  "element": "cryo",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/charlotte/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/charlotte/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/charlotte/bannerCard.png"
-  }
-}
+{"name":"Charlotte","rarity":4,"element":"cryo","images":{"gachaSplash":"charlotte/gachaSpash","gachaCard":"charlotte/gachaCard","bannerCard":"charlotte/bannerCard"}}

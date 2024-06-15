@@ -1,11 +1,1 @@
-{
-  "name": "Gorou",
-  "rarity": 4,
-  "element": "geo",
-  "weaponType": "bow",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/gorou/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/gorou/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/gorou/bannerCard.png"
-  }
-}
+{"name":"Gorou","rarity":4,"element":"geo","weaponType":"bow","images":{"gachaSplash":"gorou/gachaSpash","gachaCard":"gorou/gachaCard","bannerCard":"gorou/bannerCard"}}

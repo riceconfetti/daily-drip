@@ -1,17 +1,1 @@
-{
-  "name": "Venti",
-  "rarity": 5,
-  "element": "anemo",
-  "weaponType": "bow",
-  "bannerName": "Ballad in Goblets",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/venti/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/venti/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/venti/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Venti","rarity":5,"element":"anemo","weaponType":"bow","bannerName":"Ballad in Goblets","images":{"gachaSplash":"venti/gachaSpash","gachaCard":"venti/gachaCard","bannerCard":"venti/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

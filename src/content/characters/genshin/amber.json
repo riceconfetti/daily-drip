@@ -1,11 +1,1 @@
-{
-  "name": "Amber",
-  "rarity": 4,
-  "element": "pyro",
-  "weaponType": "bow",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/amber/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/amber/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/amber/bannerCard.png"
-  }
-}
+{"name":"Amber","rarity":4,"element":"pyro","weaponType":"bow","images":{"gachaSplash":"amber/gachaSpash","gachaCard":"amber/gachaCard","bannerCard":"amber/bannerCard"}}

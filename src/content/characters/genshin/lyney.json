@@ -1,17 +1,1 @@
-{
-  "name": "Lyney",
-  "rarity": 5,
-  "element": "pyro",
-  "weaponType": "bow",
-  "bannerName": "Conjuring Chiaroscuro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/lyney/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/lyney/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/lyney/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Lyney","rarity":5,"element":"pyro","weaponType":"bow","bannerName":"Conjuring Chiaroscuro","images":{"gachaSplash":"lyney/gachaSpash","gachaCard":"lyney/gachaCard","bannerCard":"lyney/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

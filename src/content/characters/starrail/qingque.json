@@ -1,10 +1,1 @@
-{
-  "name": "Qingque",
-  "rarity": 4,
-  "element": "quantum",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/qingque/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/qingque/gachaCard",
-    "bannerCard": "/assets/characters/starrail/qingque/bannerCard"
-  }
-}
+{"name":"Qingque","rarity":4,"element":"quantum","images":{"gachaSplash":"qingque/gachaSpash","gachaCard":"qingque/gachaCard","bannerCard":"qingque/bannerCard"}}

@@ -1,17 +1,1 @@
-{
-  "name": "Kamisato Ayato",
-  "rarity": 5,
-  "element": "hydro",
-  "weaponType": "sword",
-  "bannerName": "Azure Excursion",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/kamisatoayato/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/kamisatoayato/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/kamisatoayato/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Kamisato Ayato","rarity":5,"element":"hydro","weaponType":"sword","bannerName":"Azure Excursion","images":{"gachaSplash":"kamisatoayato/gachaSpash","gachaCard":"kamisatoayato/gachaCard","bannerCard":"kamisatoayato/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

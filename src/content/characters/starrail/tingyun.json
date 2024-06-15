@@ -1,10 +1,1 @@
-{
-  "name": "Tingyun",
-  "rarity": 4,
-  "element": "lightning",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/tingyun/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/tingyun/gachaCard",
-    "bannerCard": "/assets/characters/starrail/tingyun/bannerCard"
-  }
-}
+{"name":"Tingyun","rarity":4,"element":"lightning","images":{"gachaSplash":"tingyun/gachaSpash","gachaCard":"tingyun/gachaCard","bannerCard":"tingyun/bannerCard"}}

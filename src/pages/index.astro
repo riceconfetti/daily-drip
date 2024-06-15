@@ -4,6 +4,26 @@ import CalendarWidget from "../components/CalendarWidget.svelte";
 import EventsWidget from "../components/events-widget/event-data.astro";
 import { getCollection } from "astro:content";
 
+const images = {
+  genshin: {
+    bannerCards: import.meta.glob(
+  "../assets/characters/genshin/*/bannerCard.png",
+  { eager: true }),
+    placeHolders: import.meta.glob(
+  "../assets/placeholders/genshin/*.png",
+  { eager: true })
+  },
+  starrail: {
+    bannerCards: import.meta.glob(
+  "../assets/characters/starrail/*/bannerCard.png",
+  { eager: true }),
+    placeHolders: import.meta.glob(
+  "../assets/placeholders/starrail/*.png",
+  { eager: true })
+  }
+  
+}
+
 const genshin = [
   ...new Set(
     (
@@ -58,6 +78,6 @@ const wuwa = [
       </p>
     </div>
     <CalendarWidget {genshin} {wuwa} {reverse} {starrail} client:load />
-    <EventsWidget />
+    <EventsWidget {images}/>
   </section>
 </Layout>

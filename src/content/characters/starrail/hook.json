@@ -1,10 +1,1 @@
-{
-  "name": "Hook",
-  "rarity": 4,
-  "element": "fire",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/hook/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/hook/gachaCard",
-    "bannerCard": "/assets/characters/starrail/hook/bannerCard"
-  }
-}
+{"name":"Hook","rarity":4,"element":"fire","images":{"gachaSplash":"hook/gachaSpash","gachaCard":"hook/gachaCard","bannerCard":"hook/bannerCard"}}

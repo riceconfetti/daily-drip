@@ -1,16 +1,1 @@
-{
-  "name": "Sunday",
-  "rarity": 5,
-  "element": "ice",
-  "bannerName": "?????",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/sunday/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/sunday/gachaCard",
-    "bannerCard": "/assets/characters/starrail/sunday/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Sunday","rarity":5,"element":"ice","bannerName":"?????","images":{"gachaSplash":"sunday/gachaSpash","gachaCard":"sunday/gachaCard","bannerCard":"sunday/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

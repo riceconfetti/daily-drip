@@ -1,16 +1,1 @@
-{
-  "name": "Mona",
-  "rarity": 5,
-  "element": "hydro",
-  "bannerName": "",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/mona/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/mona/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/mona/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Mona","rarity":5,"element":"hydro","bannerName":"","images":{"gachaSplash":"mona/gachaSpash","gachaCard":"mona/gachaCard","bannerCard":"mona/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

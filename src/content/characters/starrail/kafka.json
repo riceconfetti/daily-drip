@@ -1,17 +1,1 @@
-{
-  "name": "Kafka",
-  "rarity": 5,
-  "element": "lightning",
-  "weaponType": "nihility",
-  "bannerName": "Nessun Dorma",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  },
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/kafka/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/kafka/gachaCard",
-    "bannerCard": "/assets/characters/starrail/kafka/bannerCard"
-  }
-}
+{"name":"Kafka","rarity":5,"element":"lightning","weaponType":"nihility","bannerName":"Nessun Dorma","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"kafka/gachaSpash","gachaCard":"kafka/gachaCard","bannerCard":"kafka/bannerCard"}}

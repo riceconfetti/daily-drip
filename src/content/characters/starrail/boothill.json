@@ -1,17 +1,1 @@
-{
-  "name": "Boothill",
-  "rarity": 5,
-  "element": "physical",
-  "weaponType": "hunt",
-  "bannerName": "Dusty Trail's Lone Star",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  },
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/boothill/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/boothill/gachaCard",
-    "bannerCard": "/assets/characters/starrail/boothill/bannerCard"
-  }
-}
+{"name":"Boothill","rarity":5,"element":"physical","weaponType":"hunt","bannerName":"Dusty Trail's Lone Star","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"boothill/gachaSpash","gachaCard":"boothill/gachaCard","bannerCard":"boothill/bannerCard"}}
