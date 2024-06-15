@@ -30,7 +30,7 @@ const weaponCollection = await getCollection("weapons", ({ id }) => {
 let versions: Version[] = [];
 
 const images = import.meta.glob(
-    "../assets/characters/genshin/*.png",
+    "../assets/characters/genshin/*/gachaCard.png",
     { eager: true }
   );
 
