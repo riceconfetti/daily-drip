@@ -5,9 +5,9 @@
   "weaponType": "gauntlet",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./images/characters/wuwa/jianxin/gachaSpash.png",
-    "gachaCard": "./images/characters/wuwa/jianxin/gachaCard.png",
-    "bannerCard": "./images/characters/wuwa/jianxin/bannerCard.png"
+    "gachaSplash": "./assets/characters/wuwa/jianxin/gachaSpash.png",
+    "gachaCard": "./assets/characters/wuwa/jianxin/gachaCard.png",
+    "bannerCard": "./assets/characters/wuwa/jianxin/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

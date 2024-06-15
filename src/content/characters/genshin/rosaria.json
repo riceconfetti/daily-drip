@@ -4,8 +4,8 @@
   "element": "cryo",
   "weaponType": "polearm",
   "images": {
-    "gachaSplash": "./images/characters/genshin/rosaria/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/rosaria/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/rosaria/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/rosaria/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/rosaria/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/rosaria/bannerCard.png"
   }
 }

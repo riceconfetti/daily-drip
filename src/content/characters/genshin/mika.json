@@ -4,8 +4,8 @@
   "element": "cryo",
   "weaponType": "polearm",
   "images": {
-    "gachaSplash": "./images/characters/genshin/mika/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/mika/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/mika/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/mika/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/mika/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/mika/bannerCard.png"
   }
 }

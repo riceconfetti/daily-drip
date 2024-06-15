@@ -5,9 +5,9 @@
   "weaponType": "bow",
   "bannerName": "Discerner of Enigmas",
   "images": {
-    "gachaSplash": "./images/characters/genshin/yelan/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/yelan/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/yelan/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/yelan/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/yelan/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/yelan/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

@@ -33,7 +33,7 @@
     </h3>
   </div>
 
-  <Image
+  <enhanced:img
     src={eventDetails.image}
     height={1200}
     width={4600}

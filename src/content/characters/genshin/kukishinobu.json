@@ -4,8 +4,8 @@
   "element": "electro",
   "weaponType": "sword",
   "images": {
-    "gachaSplash": "./images/characters/genshin/kukishinobu/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/kukishinobu/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/kukishinobu/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/kukishinobu/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/kukishinobu/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/kukishinobu/bannerCard.png"
   }
 }

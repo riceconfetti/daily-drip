@@ -4,9 +4,9 @@
   "element": "hydro",
   "bannerName": "Decree of the Deeps",
   "images": {
-    "gachaSplash": "./images/characters/genshin/neuvillette/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/neuvillette/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/neuvillette/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/neuvillette/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/neuvillette/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/neuvillette/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

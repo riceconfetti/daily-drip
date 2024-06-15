@@ -5,9 +5,9 @@
   "weaponType": "bow",
   "bannerName": "Adrift in the Harbor",
   "images": {
-    "gachaSplash": "./images/characters/genshin/ganyu/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/ganyu/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/ganyu/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/ganyu/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/ganyu/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/ganyu/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

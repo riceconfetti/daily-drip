@@ -4,8 +4,8 @@
   "element": "fire",
   "weaponType": "abundance",
   "images": {
-    "gachaSplash": "./images/characters/starrail/gallagher/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/gallagher/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/gallagher/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/gallagher/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/gallagher/gachaCard",
+    "bannerCard": "/assets/characters/starrail/gallagher/bannerCard"
   }
 }

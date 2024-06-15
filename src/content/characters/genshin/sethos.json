@@ -4,8 +4,8 @@
   "element": "electro",
   "weaponType": "bow",
   "images": {
-    "gachaSplash": "./images/characters/genshin/sethos/gachaSpash.webp",
-    "gachaCard": "./images/characters/genshin/sethos/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/sethos/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/sethos/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/sethos/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/sethos/bannerCard.png"
   }
 }

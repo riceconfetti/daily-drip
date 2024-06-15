@@ -4,8 +4,8 @@
   "element": "anemo",
   "weaponType": "sword",
   "images": {
-    "gachaSplash": "./images/characters/genshin/lynette/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/lynette/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/lynette/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/lynette/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/lynette/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/lynette/bannerCard.png"
   }
 }

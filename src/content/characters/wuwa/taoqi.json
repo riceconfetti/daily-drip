@@ -4,8 +4,8 @@
   "element": "havoc",
   "weaponType": "broadblade",
   "images": {
-    "gachaSplash": "./images/characters/wuwa/taoqi/gachaSpash.png",
-    "gachaCard": "./images/characters/wuwa/taoqi/gachaCard.png",
-    "bannerCard": "./images/characters/wuwa/taoqi/bannerCard.png"
+    "gachaSplash": "./assets/characters/wuwa/taoqi/gachaSpash.png",
+    "gachaCard": "./assets/characters/wuwa/taoqi/gachaCard.png",
+    "bannerCard": "./assets/characters/wuwa/taoqi/bannerCard.png"
   }
 }

@@ -4,9 +4,9 @@
   "element": "pyro",
   "bannerName": "Auric Blaze",
   "images": {
-    "gachaSplash": "./images/characters/genshin/dehya/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/dehya/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/dehya/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/dehya/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/dehya/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/dehya/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

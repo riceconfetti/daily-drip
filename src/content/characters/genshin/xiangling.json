@@ -4,8 +4,8 @@
   "element": "pyro",
   "weaponType": "polearm",
   "images": {
-    "gachaSplash": "./images/characters/genshin/xiangling/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/xiangling/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/xiangling/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/xiangling/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/xiangling/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/xiangling/bannerCard.png"
   }
 }

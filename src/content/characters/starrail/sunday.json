@@ -4,9 +4,9 @@
   "element": "ice",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./images/characters/starrail/sunday/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/sunday/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/sunday/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/sunday/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/sunday/gachaCard",
+    "bannerCard": "/assets/characters/starrail/sunday/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

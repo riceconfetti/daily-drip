@@ -10,8 +10,8 @@
     "textAccent": "text-[#F25D43]"
   },
   "images": {
-    "gachaSplash": "./images/characters/genshin/nilou/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/nilou/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/nilou/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/nilou/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/nilou/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/nilou/bannerCard.png"
   }
 }

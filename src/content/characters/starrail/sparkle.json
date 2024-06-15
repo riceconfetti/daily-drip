@@ -5,9 +5,9 @@
   "weaponType": "harmony",
   "bannerName": "Sparkling Splendor",
   "images": {
-    "gachaSplash": "./images/characters/starrail/sparkle/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/sparkle/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/sparkle/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/sparkle/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/sparkle/gachaCard",
+    "bannerCard": "/assets/characters/starrail/sparkle/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

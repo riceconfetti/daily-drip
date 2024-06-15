@@ -4,9 +4,9 @@
   "element": "pyro",
   "bannerName": "",
   "images": {
-    "gachaSplash": "./images/characters/genshin/diluc/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/diluc/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/diluc/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/diluc/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/diluc/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/diluc/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

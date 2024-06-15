@@ -4,9 +4,9 @@
   "element": "pyro",
   "bannerName": "Sparkling Steps",
   "images": {
-    "gachaSplash": "./images/characters/genshin/klee/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/klee/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/klee/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/klee/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/klee/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/klee/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

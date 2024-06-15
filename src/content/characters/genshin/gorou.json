@@ -4,8 +4,8 @@
   "element": "geo",
   "weaponType": "bow",
   "images": {
-    "gachaSplash": "./images/characters/gorou/gachaSpash.webp",
-    "gachaCard": "./images/characters/gorou/gachaCard.png",
-    "bannerCard": "./images/characters/gorou/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/gorou/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/gorou/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/gorou/bannerCard.png"
   }
 }

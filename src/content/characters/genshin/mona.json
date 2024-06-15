@@ -4,9 +4,9 @@
   "element": "hydro",
   "bannerName": "",
   "images": {
-    "gachaSplash": "./images/characters/genshin/mona/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/mona/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/mona/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/mona/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/mona/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/mona/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

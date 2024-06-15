@@ -4,8 +4,8 @@
   "element": "electro",
   "weaponType": "claymore",
   "images": {
-    "gachaSplash": "./images/characters/beidou/gachaSpash.webp",
-    "gachaCard": "./images/characters/beidou/gachaCard.png",
-    "bannerCard": "./images/characters/beidou/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/beidou/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/beidou/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/beidou/bannerCard.png"
   }
 }

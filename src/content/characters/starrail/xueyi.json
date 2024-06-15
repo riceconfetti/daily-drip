@@ -4,8 +4,8 @@
   "element": "quantum",
   "weaponType": "destruction",
   "images": {
-    "gachaSplash": "./images/characters/starrail/xueyi/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/xueyi/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/xueyi/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/xueyi/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/xueyi/gachaCard",
+    "bannerCard": "/assets/characters/starrail/xueyi/bannerCard"
   }
 }

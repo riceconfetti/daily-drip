@@ -4,9 +4,9 @@
   "element": "electro",
   "bannerName": "Twilight Arbiter",
   "images": {
-    "gachaSplash": "./images/characters/genshin/cyno/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/cyno/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/cyno/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/cyno/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/cyno/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/cyno/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

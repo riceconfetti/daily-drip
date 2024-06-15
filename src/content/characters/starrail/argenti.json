@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/starrail/argenti/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/argenti/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/argenti/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/argenti/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/argenti/gachaCard",
+    "bannerCard": "/assets/characters/starrail/argenti/bannerCard"
   }
 }

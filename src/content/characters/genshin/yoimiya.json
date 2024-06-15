@@ -5,9 +5,9 @@
   "weaponType": "bow",
   "bannerName": "Tapestry of Golden Flame",
   "images": {
-    "gachaSplash": "./images/characters/genshin/yoimiya/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/yoimiya/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/yoimiya/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/yoimiya/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/yoimiya/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/yoimiya/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

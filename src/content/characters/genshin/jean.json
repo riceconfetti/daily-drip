@@ -5,9 +5,9 @@
   "weaponType": "sword",
   "bannerName": "",
   "images": {
-    "gachaSplash": "./images/characters/genshin/jean/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/jean/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/jean/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/jean/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/jean/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/jean/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

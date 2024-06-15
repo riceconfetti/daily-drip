@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/genshin/chiori/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/chiori/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/chiori/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/chiori/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/chiori/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/chiori/bannerCard.png"
   }
 }

@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/bailu/gachaSpash.png",
-    "gachaCard": "./images/characters/bailu/gachaCard.png",
-    "bannerCard": "./images/characters/bailu/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/bailu/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/bailu/gachaCard",
+    "bannerCard": "/assets/characters/starrail/bailu/bannerCard"
   }
 }

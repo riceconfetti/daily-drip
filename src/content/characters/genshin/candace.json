@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "hydro",
   "images": {
-    "gachaSplash": "./images/characters/candace/gachaSpash.webp",
-    "gachaCard": "./images/characters/candace/gachaCard.png",
-    "bannerCard": "./images/characters/candace/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/candace/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/candace/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/candace/bannerCard.png"
   }
 }

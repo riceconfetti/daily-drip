@@ -4,8 +4,8 @@
   "element": "electro",
   "weaponType": "gauntlet",
   "images": {
-    "gachaSplash": "./images/characters/wuwa/yuanwu/gachaSpash.png",
-    "gachaCard": "./images/characters/wuwa/yuanwu/gachaCard.png",
-    "bannerCard": "./images/characters/wuwa/yuanwu/bannerCard.png"
+    "gachaSplash": "./assets/characters/wuwa/yuanwu/gachaSpash.png",
+    "gachaCard": "./assets/characters/wuwa/yuanwu/gachaCard.png",
+    "bannerCard": "./assets/characters/wuwa/yuanwu/bannerCard.png"
   }
 }

@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/starrail/topaz/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/topaz/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/topaz/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/topaz/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/topaz/gachaCard",
+    "bannerCard": "/assets/characters/starrail/topaz/bannerCard"
   }
 }

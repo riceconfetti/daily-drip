@@ -1,7 +1,7 @@
 {
   "name": "Jiaoqiu",
   "rarity": 5,
-  "element": "starrail",
+  "element": "fire",
   "weaponType": "nihility",
   "bannerName": "?????",
   "colors": {
@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/starrail/jiaoqiu/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/jiaoqiu/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/jiaoqiu/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/jiaoqiu/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/jiaoqiu/gachaCard",
+    "bannerCard": "/assets/characters/starrail/jiaoqiu/bannerCard"
   }
 }

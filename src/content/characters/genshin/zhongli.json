@@ -5,9 +5,9 @@
   "weaponType": "polearm",
   "bannerName": "Gentry of Hermitage",
   "images": {
-    "gachaSplash": "./images/characters/genshin/zhongli/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/zhongli/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/zhongli/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/zhongli/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/zhongli/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/zhongli/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

@@ -5,7 +5,7 @@
   import CharacterCard from "./characters/character-card.svelte";
   import WeaponCard from "./weapons/weapon-card.svelte";
   import dayjs from "dayjs";
-  export let version: Version, game;
+  export let version: Version, game, images;
 </script>
 
 <section
@@ -17,8 +17,8 @@
       class={`flex flex-col gap-2 ${dayjs(phase.date) < dayjs() ? "grayscale" : ""}`}
     >
       <PhaseHeader {phase} />
-      <CharacterCard characters={phase.characters} />
-      <WeaponCard weapons={phase.weapons} />
+      <CharacterCard characters={phase.characters} {images}/>
+      <!-- <WeaponCard weapons={phase.weapons} /> -->
     </div>
   {/each}
 </section>

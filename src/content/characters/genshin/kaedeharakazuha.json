@@ -4,9 +4,9 @@
   "element": "anemo",
   "bannerName": "Leaves in the Wind",
   "images": {
-    "gachaSplash": "./images/characters/genshin/kaedehara kazuha/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/kaedehara kazuha/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/kaedehara kazuha/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/kaedeharakazuha/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/kaedeharakazuha/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/kaedeharakazuha/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

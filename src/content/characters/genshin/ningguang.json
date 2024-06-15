@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "geo",
   "images": {
-    "gachaSplash": "./images/characters/genshin/ningguang/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/ningguang/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/ningguang/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/ningguang/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/ningguang/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/ningguang/bannerCard.png"
   }
 }

@@ -28,6 +28,12 @@ const weaponCollection = await getCollection("weapons", ({ id }) => {
 
 let versions: Version[] = [];
 
+const images = import.meta.glob(
+    "../assets/characters/starrail/*/gachaCard.png",
+    { eager: true }
+  );
+
+console.log(images)
 versionCollection.forEach(({ data }) => {
   let v = new Version(data);
   if (dayjs(v.startDate) > dayjs().subtract(3, "week")) {
@@ -56,7 +62,7 @@ versionCollection.forEach(({ data }) => {
 
 <Layout title="The Daily Drip">
   <section class="p-4 flex flex-col items-center gap-4 md:max-w-[1400px]">
-    {versions.map((version) => <Banner {version} {game} client:load />)}
+    {versions.map((version) => <Banner {version} {game} {images} client:load />)}
   </section>
 
   <!-- <Banner {version} game="genshin" /> -->

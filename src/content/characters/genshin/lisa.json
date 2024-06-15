@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "electro",
   "images": {
-    "gachaSplash": "./images/characters/genshin/lisa/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/lisa/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/lisa/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/lisa/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/lisa/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/lisa/bannerCard.png"
   }
 }

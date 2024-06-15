@@ -5,9 +5,9 @@
   "weaponType": "sword",
   "bannerName": "",
   "images": {
-    "gachaSplash": "./images/characters/genshin/qiqi/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/qiqi/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/qiqi/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/qiqi/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/qiqi/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/qiqi/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

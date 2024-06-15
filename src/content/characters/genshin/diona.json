@@ -4,8 +4,8 @@
   "element": "cryo",
   "weaponType": "bow",
   "images": {
-    "gachaSplash": "./images/characters/diona/gachaSpash.webp",
-    "gachaCard": "./images/characters/diona/gachaCard.png",
-    "bannerCard": "./images/characters/diona/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/diona/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/diona/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/diona/bannerCard.png"
   }
 }

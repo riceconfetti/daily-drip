@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "pyro",
   "images": {
-    "gachaSplash": "./images/characters/gaming/gachaSpash.webp",
-    "gachaCard": "./images/characters/gaming/gachaCard.png",
-    "bannerCard": "./images/characters/gaming/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/gaming/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/gaming/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/gaming/bannerCard.png"
   }
 }

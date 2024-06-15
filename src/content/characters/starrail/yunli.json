@@ -10,8 +10,8 @@
     "textAccent": "text-[#D88F45]"
   },
   "images": {
-    "gachaSplash": "./images/characters/albedo/gachaSpash.png",
-    "gachaCard": "./images/characters/albedo/gachaCard.png",
-    "bannerCard": "./images/characters/albedo/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/yunli/gachaSpash",
+    "gachaCard": "/assets/paths/destruction",
+    "bannerCard": "/assets/characters/starrail/yunli/bannerCard"
   }
 }

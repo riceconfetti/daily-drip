@@ -4,8 +4,8 @@
   "element": "ice",
   "weaponType": "destruction",
   "images": {
-    "gachaSplash": "./images/characters/starrail/misha/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/misha/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/misha/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/misha/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/misha/gachaCard",
+    "bannerCard": "/assets/characters/starrail/misha/bannerCard"
   }
 }

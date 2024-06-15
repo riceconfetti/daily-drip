@@ -10,8 +10,8 @@
     "textAccent": "text-[#D88F45]"
   },
   "images": {
-    "gachaSplash": "./images/characters/albedo/gachaSpash.png",
-    "gachaCard": "./images/characters/albedo/gachaCard.png",
-    "bannerCard": "./images/characters/albedo/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/lingsha/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/lingsha/gachaCard",
+    "bannerCard": "/assets/characters/starrail/lingsha/bannerCard"
   }
 }

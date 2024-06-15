@@ -4,9 +4,9 @@
   "element": "anemo",
   "bannerName": "From Ashes Reborn",
   "images": {
-    "gachaSplash": "./images/characters/genshin/wanderer/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/wanderer/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/wanderer/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/wanderer/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/wanderer/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/wanderer/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
