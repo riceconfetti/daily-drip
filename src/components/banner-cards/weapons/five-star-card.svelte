@@ -19,15 +19,18 @@
 </script>
 
 <div
-  class="flex relative h-full justify-between w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 pl-2 rounded-sm items-center"
+  class="flex relative h-auto justify-between w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 rounded-sm items-center"
 >
-  <h1
-    class="text-[.4rem] text-balance sm:text-[.5rem] md:text-[.7rem] lg:text-[.45rem] lg:leading-normal xl:text-[.7rem]"
-  >
-    {weapon.name}
-  </h1>
+  <div class="h-min p-2 pr-4">
+    <h1
+      class="text-[.3rem] text-balance sm:text-2xs md:text-xs lg:text-[.45rem] lg:leading-normal xl:text-[.7rem]"
+    >
+      {weapon.name}
+    </h1>
+  </div>
+
   <img
-    class="h-0 aspect-square min-h-full"
+    class="h-0 absolute right-0 aspect-square min-h-full"
     src={weaponImage.default.src}
     alt={`${weapon.name} Icon`}
   />
