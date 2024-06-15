@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "hydro",
   "bannerName": "Decree of the Deeps",
-  "splashArt": "/gacha-splashArt/neuvillette.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/neuvillette/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/neuvillette/gachaCard.png",

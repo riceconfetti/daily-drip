@@ -2,5 +2,10 @@
   "name": "Guinaifen",
   "rarity": 4,
   "element": "fire",
-  "weaponType": "nihility"
+  "weaponType": "nihility",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/guinaifen/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/guinaifen/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/guinaifen/bannerCard.png"
+  }
 }

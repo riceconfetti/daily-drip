@@ -4,7 +4,6 @@
   "element": "quantum",
   "weaponType": "erudition",
   "bannerName": "Lien of Life, Lease on Fate",
-  "splashArt": "/gacha-splash/jade.png",
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
     "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",

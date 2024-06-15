@@ -1,0 +1,17 @@
+{
+  "name": "Changli",
+  "rarity": 5,
+  "element": "fusion",
+  "weaponType": "sword",
+  "bannerName": "?????",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/changli/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/changli/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/changli/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
+}

@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "hydro",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/mona.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/mona/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/mona/gachaCard.png",

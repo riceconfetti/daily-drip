@@ -3,5 +3,15 @@
   "rarity": 5,
   "element": "havoc",
   "weaponType": "sword",
-  "bannerName": "?????"
+  "bannerName": "?????",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/camellya/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/camellya/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/camellya/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

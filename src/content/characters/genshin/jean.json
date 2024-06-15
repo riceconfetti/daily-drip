@@ -4,7 +4,6 @@
   "element": "anemo",
   "weaponType": "sword",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/jean.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/jean/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/jean/gachaCard.png",

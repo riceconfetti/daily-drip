@@ -4,7 +4,6 @@
   "element": "cryo",
   "weaponType": "sword",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/qiqi.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/qiqi/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/qiqi/gachaCard.png",

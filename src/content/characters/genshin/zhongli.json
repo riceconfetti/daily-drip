@@ -4,7 +4,6 @@
   "element": "geo",
   "weaponType": "polearm",
   "bannerName": "Gentry of Hermitage",
-  "splashArt": "/gacha-splashArt/zhongli.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/zhongli/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/zhongli/gachaCard.png",

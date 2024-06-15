@@ -2,5 +2,10 @@
   "name": "Aalto",
   "rarity": 4,
   "element": "aero",
-  "weaponType": "pistols"
+  "weaponType": "pistols",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/aalto/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/aalto/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/aalto/bannerCard.png"
+  }
 }

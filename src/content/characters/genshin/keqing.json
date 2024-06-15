@@ -4,7 +4,6 @@
   "element": "electro",
   "weaponType": "sword",
   "bannerName": "Dance of Lanterns",
-  "splashArt": "/gacha-splashArt/keqing.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/keqing/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/keqing/gachaCard.png",

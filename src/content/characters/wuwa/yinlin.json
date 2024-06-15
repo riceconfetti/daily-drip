@@ -4,5 +4,14 @@
   "element": "electro",
   "weaponType": "rectifier",
   "bannerName": "?????",
-  "splashArt": "./gacha-splash/yinlin.webp"
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/yinlin/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/yinlin/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/yinlin/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

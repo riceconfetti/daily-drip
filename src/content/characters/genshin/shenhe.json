@@ -4,7 +4,6 @@
   "element": "cryo",
   "weaponType": "polearm",
   "bannerName": "The Transcendent One Returns",
-  "splashArt": "/gacha-splashArt/shenhe.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/shenhe/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/shenhe/gachaCard.png",

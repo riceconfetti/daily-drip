@@ -1,0 +1,17 @@
+{
+  "name": "Jinhsi",
+  "rarity": 5,
+  "element": "spectro",
+  "weaponType": "broadblade",
+  "bannerName": "?????",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/jinhsi/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/jinhsi/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/jinhsi/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
+}

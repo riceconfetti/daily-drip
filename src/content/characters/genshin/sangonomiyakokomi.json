@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "hydro",
   "bannerName": "Drifting Luminescence",
-  "splashArt": "/gacha-splashArt/kokomi.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/sangonomiya kokomi/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/sangonomiya kokomi/gachaCard.png",

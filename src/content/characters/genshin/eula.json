@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "cryo",
   "bannerName": "Born of Ocean Swell",
-  "splashArt": "/gacha-splashArt/eula.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/eula/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/eula/gachaCard.png",

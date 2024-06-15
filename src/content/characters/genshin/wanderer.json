@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "anemo",
   "bannerName": "From Ashes Reborn",
-  "splashArt": "/gacha-splashArt/wanderer.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/wanderer/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/wanderer/gachaCard.png",

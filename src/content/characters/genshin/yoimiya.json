@@ -4,7 +4,6 @@
   "element": "pyro",
   "weaponType": "bow",
   "bannerName": "Tapestry of Golden Flame",
-  "splashArt": "/gacha-splashArt/yoimiya.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/yoimiya/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/yoimiya/gachaCard.png",

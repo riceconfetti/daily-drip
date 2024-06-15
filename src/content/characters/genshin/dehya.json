@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "pyro",
   "bannerName": "Auric Blaze",
-  "splashArt": "/gacha-splashArt/dehya.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/dehya/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/dehya/gachaCard.png",

@@ -1,1 +1,10 @@
-{ "name": "Pela", "rarity": 4, "element": "ice" }
+{
+  "name": "Pela",
+  "rarity": 4,
+  "element": "ice",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/pela/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/pela/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/pela/bannerCard.png"
+  }
+}

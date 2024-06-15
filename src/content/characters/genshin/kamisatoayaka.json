@@ -4,7 +4,6 @@
   "element": "cryo",
   "weaponType": "sword",
   "bannerName": "The Heron's Court",
-  "splashArt": "/gacha-splashArt/ayaka.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/kamisato ayaka/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/kamisato ayaka/gachaCard.png",

@@ -1,1 +1,10 @@
-{ "name": "Asta", "rarity": 4, "element": "fire" }
+{
+  "name": "Asta",
+  "rarity": 4,
+  "element": "fire",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/asta/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/asta/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/asta/bannerCard.png"
+  }
+}

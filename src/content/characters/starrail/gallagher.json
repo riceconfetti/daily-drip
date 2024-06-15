@@ -2,5 +2,10 @@
   "name": "Gallagher",
   "rarity": 4,
   "element": "fire",
-  "weaponType": "abundance"
+  "weaponType": "abundance",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/gallagher/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/gallagher/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/gallagher/bannerCard.png"
+  }
 }

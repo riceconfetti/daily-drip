@@ -2,5 +2,10 @@
   "name": "Yangyang",
   "rarity": 4,
   "element": "aero",
-  "weaponType": "sword"
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/yangyang/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/yangyang/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/yangyang/bannerCard.png"
+  }
 }

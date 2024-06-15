@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "dendro",
   "bannerName": "The Moongrass' Enlightenment",
-  "splashArt": "/gacha-splashArt/nahida.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/nahida/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/nahida/gachaCard.png",

@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "pyro",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/diluc.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/diluc/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/diluc/gachaCard.png",

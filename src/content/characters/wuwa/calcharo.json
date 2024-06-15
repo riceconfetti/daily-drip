@@ -4,5 +4,14 @@
   "element": "electro",
   "weaponType": "broadblade",
   "bannerName": "?????",
-  "splashArt": "./gacha-splash/calcharo.webp"
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/calcharo/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/calcharo/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/calcharo/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

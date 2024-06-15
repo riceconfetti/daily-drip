@@ -10,7 +10,8 @@
       "$layouts/*": ["src/layouts"],
       "$pages/*": ["src/pages"],
       "$styles/*": ["src/styles"],
-      "$scripts/*": ["src/scripts"]
+      "$scripts/*": ["src/scripts"],
+      "$utils/*": [""]
     }
   }
 }

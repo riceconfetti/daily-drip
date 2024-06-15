@@ -4,7 +4,6 @@
   "element": "dendro",
   "weaponType": "bow",
   "bannerName": "Viridescent Vigil",
-  "splashArt": "/gacha-splashArt/tighnari.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/tighnari/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/tighnari/gachaCard.png",

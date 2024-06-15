@@ -1,1 +1,11 @@
-{ "name": "Lynx", "rarity": 4, "element": "quantum", "weaponType": "abundance" }
+{
+  "name": "Lynx",
+  "rarity": 4,
+  "element": "quantum",
+  "weaponType": "abundance",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/lynx/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/lynx/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/lynx/bannerCard.png"
+  }
+}

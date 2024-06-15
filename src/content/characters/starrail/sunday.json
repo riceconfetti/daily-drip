@@ -2,5 +2,15 @@
   "name": "Sunday",
   "rarity": 5,
   "element": "ice",
-  "bannerName": "?????"
+  "bannerName": "?????",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/sunday/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/sunday/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/sunday/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

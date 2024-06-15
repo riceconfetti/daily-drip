@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "electro",
   "bannerName": "Twilight Arbiter",
-  "splashArt": "/gacha-splashArt/cyno.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/cyno/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/cyno/gachaCard.png",

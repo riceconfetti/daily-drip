@@ -4,5 +4,14 @@
   "element": "imaginary",
   "weaponType": "destruction",
   "bannerName": "Epochal Spectrum",
-  "splashArt": "/gacha-splashArt/yinyuejun.png"
+  "images": {
+    "gachaSplash": "./images/characters/starrail/dan heng: imbibitor lunae/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/dan heng: imbibitor lunae/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/dan heng: imbibitor lunae/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "anemo",
   "bannerName": "?????",
-  "splashArt": "/gacha-splashArt/xianyun.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/xianyun/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/xianyun/gachaCard.png",

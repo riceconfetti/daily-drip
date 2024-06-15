@@ -2,5 +2,10 @@
   "name": "Baizhi",
   "rarity": 4,
   "element": "glacio",
-  "weaponType": "rectifier"
+  "weaponType": "rectifier",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/baizhi/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/baizhi/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/baizhi/bannerCard.png"
+  }
 }
