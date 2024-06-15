@@ -1,1 +1,11 @@
-{"name":"Yun Jin","rarity":4,"element":"geo","weaponType":"polearm","images":{"gachaSplash":"yunjin/gachaSpash","gachaCard":"yunjin/gachaCard","bannerCard":"yunjin/bannerCard"}}
+{
+  "name": "Yun Jin",
+  "rarity": 4,
+  "element": "geo",
+  "weaponType": "polearm",
+  "images": {
+    "gachaSplash": "yunjin/gachaSpash",
+    "gachaCard": "yunjin/gachaCard",
+    "bannerCard": "yunjin/bannerCard"
+  }
+}

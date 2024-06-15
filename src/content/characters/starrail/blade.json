@@ -1,1 +1,17 @@
-{"name":"Blade","rarity":5,"element":"wind","weaponType":"destruction","bannerName":"A Lost Soul","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"blade/gachaSpash","gachaCard":"blade/gachaCard","bannerCard":"blade/bannerCard"}}
+{
+  "name": "Blade",
+  "rarity": 5,
+  "element": "wind",
+  "weaponType": "destruction",
+  "bannerName": "A Lost Soul",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "blade/gachaSpash",
+    "gachaCard": "blade/gachaCard",
+    "bannerCard": "blade/bannerCard"
+  }
+}

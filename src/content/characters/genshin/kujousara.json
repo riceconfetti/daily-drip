@@ -1,1 +1,11 @@
-{"name":"Kujou Sara","rarity":4,"element":"electro","weaponType":"bow","images":{"gachaSplash":"kujousara/gachaSpash","gachaCard":"kujousara/gachaCard","bannerCard":"kujousara/bannerCard"}}
+{
+  "name": "Kujou Sara",
+  "rarity": 4,
+  "element": "electro",
+  "weaponType": "bow",
+  "images": {
+    "gachaSplash": "kujousara/gachaSpash",
+    "gachaCard": "kujousara/gachaCard",
+    "bannerCard": "kujousara/bannerCard"
+  }
+}

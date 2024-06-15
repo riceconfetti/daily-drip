@@ -1,1 +1,17 @@
-{"name":"Huohuo","rarity":5,"element":"wind","weaponType":"abundance","bannerName":"Bloom in Gloom","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"huohuo/gachaSpash","gachaCard":"huohuo/gachaCard","bannerCard":"huohuo/bannerCard"}}
+{
+  "name": "Huohuo",
+  "rarity": 5,
+  "element": "wind",
+  "weaponType": "abundance",
+  "bannerName": "Bloom in Gloom",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "huohuo/gachaSpash",
+    "gachaCard": "huohuo/gachaCard",
+    "bannerCard": "huohuo/bannerCard"
+  }
+}

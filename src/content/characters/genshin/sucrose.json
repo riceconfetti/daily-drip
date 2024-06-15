@@ -1,1 +1,10 @@
-{"name":"Sucrose","rarity":4,"element":"anemo","images":{"gachaSplash":"sucrose/gachaSpash","gachaCard":"sucrose/gachaCard","bannerCard":"sucrose/bannerCard"}}
+{
+  "name": "Sucrose",
+  "rarity": 4,
+  "element": "anemo",
+  "images": {
+    "gachaSplash": "sucrose/gachaSpash",
+    "gachaCard": "sucrose/gachaCard",
+    "bannerCard": "sucrose/bannerCard"
+  }
+}

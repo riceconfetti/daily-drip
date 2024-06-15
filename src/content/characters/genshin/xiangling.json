@@ -1,1 +1,11 @@
-{"name":"Xiangling","rarity":4,"element":"pyro","weaponType":"polearm","images":{"gachaSplash":"xiangling/gachaSpash","gachaCard":"xiangling/gachaCard","bannerCard":"xiangling/bannerCard"}}
+{
+  "name": "Xiangling",
+  "rarity": 4,
+  "element": "pyro",
+  "weaponType": "polearm",
+  "images": {
+    "gachaSplash": "xiangling/gachaSpash",
+    "gachaCard": "xiangling/gachaCard",
+    "bannerCard": "xiangling/bannerCard"
+  }
+}

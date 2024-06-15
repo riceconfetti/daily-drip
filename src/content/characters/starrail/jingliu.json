@@ -1,1 +1,17 @@
-{"name":"Jingliu","rarity":5,"element":"ice","weaponType":"destruction","bannerName":"Gentle Eclipse of the Moon","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"jingliu/gachaSpash","gachaCard":"jingliu/gachaCard","bannerCard":"jingliu/bannerCard"}}
+{
+  "name": "Jingliu",
+  "rarity": 5,
+  "element": "ice",
+  "weaponType": "destruction",
+  "bannerName": "Gentle Eclipse of the Moon",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "jingliu/gachaSpash",
+    "gachaCard": "jingliu/gachaCard",
+    "bannerCard": "jingliu/bannerCard"
+  }
+}

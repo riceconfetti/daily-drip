@@ -1,1 +1,17 @@
-{"name":"Nilou","rarity":5,"element":"hydro","weaponType":"sword","bannerName":"Twirling Lotus","colors":{"primary":"bg-gradient-to-r from-[#002E54] to-[#EA8E71]","secondary":"bg-gradient-to-t from-[#972218] to-[#9DCADD00]","textAccent":"text-[#F25D43]"},"images":{"gachaSplash":"nilou/gachaSpash","gachaCard":"nilou/gachaCard","bannerCard":"nilou/bannerCard"}}
+{
+  "name": "Nilou",
+  "rarity": 5,
+  "element": "hydro",
+  "weaponType": "sword",
+  "bannerName": "Twirling Lotus",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#002E54] to-[#EA8E71]",
+    "secondary": "bg-gradient-to-t from-[#972218] to-[#9DCADD00]",
+    "textAccent": "text-[#F25D43]"
+  },
+  "images": {
+    "gachaSplash": "nilou/gachaSpash",
+    "gachaCard": "nilou/gachaCard",
+    "bannerCard": "nilou/bannerCard"
+  }
+}

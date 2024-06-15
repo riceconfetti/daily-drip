@@ -1,1 +1,17 @@
-{"name":"Bronya","rarity":5,"element":"wind","weaponType":"harmony","bannerName":"","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"bronya/gachaSpash","gachaCard":"bronya/gachaCard","bannerCard":"bronya/bannerCard"}}
+{
+  "name": "Bronya",
+  "rarity": 5,
+  "element": "wind",
+  "weaponType": "harmony",
+  "bannerName": "",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "bronya/gachaSpash",
+    "gachaCard": "bronya/gachaCard",
+    "bannerCard": "bronya/bannerCard"
+  }
+}

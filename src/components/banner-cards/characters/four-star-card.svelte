@@ -1,31 +1,7 @@
 <script lang="ts">
   import { Image } from "@unpic/svelte";
+  import colors from "$assets/gradients.json";
   export let character, images, game;
-
-  const colors = {
-    hydro:
-      "bg-gradient-to-r from-genshin-hydro-gradient-from to-genshin-hydro-gradient-to",
-    dendro:
-      "bg-gradient-to-r from-genshin-dendro-gradient-from to-genshin-dendro-gradient-to",
-    anemo:
-      "bg-gradient-to-r from-genshin-anemo-gradient-from to-genshin-anemo-gradient-to",
-    geo: "bg-gradient-to-r from-genshin-geo-gradient-from to-genshin-geo-gradient-to",
-    electro:
-      "bg-gradient-to-r from-genshin-electro-gradient-from to-genshin-electro-gradient-to",
-    pyro: "bg-gradient-to-r from-genshin-pyro-gradient-from to-genshin-pyro-gradient-to",
-    cryo: "bg-gradient-to-r from-genshin-cryo-gradient-from to-genshin-cryo-gradient-to",
-
-    genshin:
-      "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
-
-    starrail:
-      "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
-
-    wuwa: "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
-
-    reverse:
-      "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
-  };
 
   const bannerCard =
     images.bannerCards[`../assets/characters/${character.id}/bannerCard.png`] !=
@@ -47,7 +23,11 @@
     height={300}
     width={1150}
   ></Image>
-  <div class="absolute flex items-center w-full h-full p-2">
-    <h1 class={`text-white text-[.6rem] sm:text-xs`}>{character.name}</h1>
+  <div class="absolute flex items-center w-full h-full p-2 md:p-4">
+    <h1
+      class={`text-white text-[.6rem] sm:text-xs md:text-base lg:text-sm xl:text-base`}
+    >
+      {character.name}
+    </h1>
   </div>
 </div>
