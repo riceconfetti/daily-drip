@@ -22,7 +22,7 @@
   class="flex relative h-full justify-between w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 pl-2 rounded-sm items-center"
 >
   <h1
-    class="text-[.4rem] text-balance sm:text-2xs md:text-xs lg:text-[.45rem] lg:leading-normal xl:text-[.7rem]"
+    class="text-[.4rem] text-balance sm:text-2xs md:text-[.7rem] lg:text-[.45rem] lg:leading-normal xl:text-[.7rem]"
   >
     {weapon.name}
   </h1>
