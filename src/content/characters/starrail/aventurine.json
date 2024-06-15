@@ -1,1 +1,17 @@
-{"name":"Aventurine","rarity":5,"element":"imaginary","weaponType":"preservation","bannerName":"Gilded Imprisonment","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"aventurine/gachaSpash","gachaCard":"aventurine/gachaCard","bannerCard":"aventurine/bannerCard"}}
+{
+  "name": "Aventurine",
+  "rarity": 5,
+  "element": "imaginary",
+  "weaponType": "preservation",
+  "bannerName": "Gilded Imprisonment",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "aventurine/gachaSpash",
+    "gachaCard": "aventurine/gachaCard",
+    "bannerCard": "aventurine/bannerCard"
+  }
+}

@@ -1,1 +1,10 @@
-{"name":"Tingyun","rarity":4,"element":"lightning","images":{"gachaSplash":"tingyun/gachaSpash","gachaCard":"tingyun/gachaCard","bannerCard":"tingyun/bannerCard"}}
+{
+  "name": "Tingyun",
+  "rarity": 4,
+  "element": "lightning",
+  "images": {
+    "gachaSplash": "tingyun/gachaSpash",
+    "gachaCard": "tingyun/gachaCard",
+    "bannerCard": "tingyun/bannerCard"
+  }
+}

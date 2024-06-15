@@ -1,1 +1,17 @@
-{"name":"Furina","rarity":5,"element":"hydro","weaponType":"sword","bannerName":"Chanson of Many Waters","colors":{"primary":"bg-gradient-to-r from-[#0A1D59] to-[#7CAAF7]","secondary":"bg-gradient-to-t from-[#04064C] to-[#8FD6FD00]","textAccent":"text-[#7CAAF7]"},"images":{"gachaSplash":"furina/gachaSpash","gachaCard":"furina/gachaCard","bannerCard":"furina/bannerCard"}}
+{
+  "name": "Furina",
+  "rarity": 5,
+  "element": "hydro",
+  "weaponType": "sword",
+  "bannerName": "Chanson of Many Waters",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#0A1D59] to-[#7CAAF7]",
+    "secondary": "bg-gradient-to-t from-[#04064C] to-[#8FD6FD00]",
+    "textAccent": "text-[#7CAAF7]"
+  },
+  "images": {
+    "gachaSplash": "furina/gachaSpash",
+    "gachaCard": "furina/gachaCard",
+    "bannerCard": "furina/bannerCard"
+  }
+}

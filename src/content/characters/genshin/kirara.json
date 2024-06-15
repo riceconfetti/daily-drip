@@ -1,1 +1,11 @@
-{"name":"Kirara","rarity":4,"element":"dendro","weaponType":"sword","images":{"gachaSplash":"kirara/gachaSpash","gachaCard":"kirara/gachaCard","bannerCard":"kirara/bannerCard"}}
+{
+  "name": "Kirara",
+  "rarity": 4,
+  "element": "dendro",
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "kirara/gachaSpash",
+    "gachaCard": "kirara/gachaCard",
+    "bannerCard": "kirara/bannerCard"
+  }
+}

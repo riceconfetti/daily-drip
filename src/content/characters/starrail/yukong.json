@@ -1,1 +1,10 @@
-{"name":"Yukong","rarity":4,"element":"imaginary","images":{"gachaSplash":"yukong/gachaSpash","gachaCard":"yukong/gachaCard","bannerCard":"yukong/bannerCard"}}
+{
+  "name": "Yukong",
+  "rarity": 4,
+  "element": "imaginary",
+  "images": {
+    "gachaSplash": "yukong/gachaSpash",
+    "gachaCard": "yukong/gachaCard",
+    "bannerCard": "yukong/bannerCard"
+  }
+}

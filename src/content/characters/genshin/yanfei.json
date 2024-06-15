@@ -1,1 +1,10 @@
-{"name":"Yanfei","rarity":4,"element":"pyro","images":{"gachaSplash":"yanfei/gachaSpash","gachaCard":"yanfei/gachaCard","bannerCard":"yanfei/bannerCard"}}
+{
+  "name": "Yanfei",
+  "rarity": 4,
+  "element": "pyro",
+  "images": {
+    "gachaSplash": "yanfei/gachaSpash",
+    "gachaCard": "yanfei/gachaCard",
+    "bannerCard": "yanfei/bannerCard"
+  }
+}

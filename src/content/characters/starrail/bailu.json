@@ -1,1 +1,17 @@
-{"name":"Bailu","rarity":5,"element":"lightning","weaponType":"abundance","bannerName":"","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"bailu/gachaSpash","gachaCard":"bailu/gachaCard","bannerCard":"bailu/bannerCard"}}
+{
+  "name": "Bailu",
+  "rarity": 5,
+  "element": "lightning",
+  "weaponType": "abundance",
+  "bannerName": "",
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  },
+  "images": {
+    "gachaSplash": "bailu/gachaSpash",
+    "gachaCard": "bailu/gachaCard",
+    "bannerCard": "bailu/bannerCard"
+  }
+}

@@ -1,1 +1,10 @@
-{"name":"Dan Heng","rarity":4,"element":"wind","images":{"gachaSplash":"danheng/gachaSpash","gachaCard":"danheng/gachaCard","bannerCard":"danheng/bannerCard"}}
+{
+  "name": "Dan Heng",
+  "rarity": 4,
+  "element": "wind",
+  "images": {
+    "gachaSplash": "danheng/gachaSpash",
+    "gachaCard": "danheng/gachaCard",
+    "bannerCard": "danheng/bannerCard"
+  }
+}

@@ -1,1 +1,10 @@
-{"name":"Sushang","rarity":4,"element":"physical","images":{"gachaSplash":"sushang/gachaSpash","gachaCard":"sushang/gachaCard","bannerCard":"sushang/bannerCard"}}
+{
+  "name": "Sushang",
+  "rarity": 4,
+  "element": "physical",
+  "images": {
+    "gachaSplash": "sushang/gachaSpash",
+    "gachaCard": "sushang/gachaCard",
+    "bannerCard": "sushang/bannerCard"
+  }
+}

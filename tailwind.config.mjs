@@ -90,6 +90,48 @@ export default {
         },
         starrail: {
           event: "#6D2628",
+          wind: {
+            gradient: {
+              from: "#32693E",
+              to: "#BAE9C0",
+            },
+          },
+          lightning: {
+            gradient: {
+              from: "#49104B",
+              to: "#E687FE",
+            },
+          },
+          physical: {
+            gradient: {
+              from: "#413D3D",
+              to: "#B8B8B8",
+            },
+          },
+          fire: {
+            gradient: {
+              from: "#4F2B1E",
+              to: "#FA8562",
+            },
+          },
+          ice: {
+            gradient: {
+              from: "#218BCD",
+              to: "#BDF3FF",
+            },
+          },
+          quantum: {
+            gradient: {
+              from: "#32267E",
+              to: "#9E9BE5",
+            },
+          },
+          imaginary: {
+            gradient: {
+              from: "#C2AC16",
+              to: "#FFF398",
+            },
+          },
         },
         reverse: {
           event: "#D48917",

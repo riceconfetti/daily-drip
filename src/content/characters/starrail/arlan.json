@@ -1,1 +1,10 @@
-{"name":"Arlan","rarity":4,"element":"lightning","images":{"gachaSplash":"arlan/gachaSpash","gachaCard":"arlan/gachaCard","bannerCard":"arlan/bannerCard"}}
+{
+  "name": "Arlan",
+  "rarity": 4,
+  "element": "lightning",
+  "images": {
+    "gachaSplash": "arlan/gachaSpash",
+    "gachaCard": "arlan/gachaCard",
+    "bannerCard": "arlan/bannerCard"
+  }
+}

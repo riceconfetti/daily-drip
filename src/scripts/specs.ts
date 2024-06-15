@@ -57,10 +57,11 @@ export function getPhase(
       rarity: 5,
       bannerName: "????",
       element: game,
+      weaponType: game,
       images: {
-        gachaSplash: `/assets/characters/${game}/gachaSpash`,
-        gachaCard: `/assets/paths/${game}`,
-        bannerCard: `/assets/characters/${game}/bannerCard`,
+        gachaSplash: `${game}/gachaSplash`,
+        gachaCard: `${game}/gachaCard`,
+        bannerCard: `${game}/bannerCard`,
       },
     });
   }
@@ -71,9 +72,9 @@ export function getPhase(
       rarity: 4,
       element: game,
       images: {
-        gachaSplash: `/assets/characters/${game}/gachaSpash`,
-        gachaCard: `/assets/characters/${game}/gachaCard`,
-        bannerCard: `/assets/characters/${game}/bannerCard`,
+        gachaSplash: `${game}/gachaSplash`,
+        gachaCard: `${game}/gachaCard`,
+        bannerCard: `${game}/bannerCard`,
       },
     });
   }

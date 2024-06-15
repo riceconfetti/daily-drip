@@ -1,1 +1,11 @@
-{"name":"Guinaifen","rarity":4,"element":"fire","weaponType":"nihility","images":{"gachaSplash":"guinaifen/gachaSpash","gachaCard":"guinaifen/gachaCard","bannerCard":"guinaifen/bannerCard"}}
+{
+  "name": "Guinaifen",
+  "rarity": 4,
+  "element": "fire",
+  "weaponType": "nihility",
+  "images": {
+    "gachaSplash": "guinaifen/gachaSpash",
+    "gachaCard": "guinaifen/gachaCard",
+    "bannerCard": "guinaifen/bannerCard"
+  }
+}
