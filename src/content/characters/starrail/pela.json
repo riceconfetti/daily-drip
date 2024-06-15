@@ -1,10 +1,1 @@
-{
-  "name": "Pela",
-  "rarity": 4,
-  "element": "ice",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/pela/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/pela/gachaCard",
-    "bannerCard": "/assets/characters/starrail/pela/bannerCard"
-  }
-}
+{"name":"Pela","rarity":4,"element":"ice","images":{"gachaSplash":"pela/gachaSpash","gachaCard":"pela/gachaCard","bannerCard":"pela/bannerCard"}}

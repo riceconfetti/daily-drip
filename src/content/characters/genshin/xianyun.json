@@ -1,16 +1,1 @@
-{
-  "name": "Xianyun",
-  "rarity": 5,
-  "element": "anemo",
-  "bannerName": "?????",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/xianyun/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/xianyun/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/xianyun/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Xianyun","rarity":5,"element":"anemo","bannerName":"?????","images":{"gachaSplash":"xianyun/gachaSpash","gachaCard":"xianyun/gachaCard","bannerCard":"xianyun/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

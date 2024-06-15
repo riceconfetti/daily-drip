@@ -1,10 +1,1 @@
-{
-  "name": "Barbara",
-  "rarity": 4,
-  "element": "hydro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/barbara/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/barbara/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/barbara/bannerCard.png"
-  }
-}
+{"name":"Barbara","rarity":4,"element":"hydro","images":{"gachaSplash":"barbara/gachaSpash","gachaCard":"barbara/gachaCard","bannerCard":"barbara/bannerCard"}}

@@ -1,17 +1,1 @@
-{
-  "name": "Black Swan",
-  "rarity": 5,
-  "element": "wind",
-  "weaponType": "nihility",
-  "bannerName": "Ripples in Reflection",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  },
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/blackswan/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/blackswan/gachaCard",
-    "bannerCard": "/assets/characters/starrail/blackswan/bannerCard"
-  }
-}
+{"name":"Black Swan","rarity":5,"element":"wind","weaponType":"nihility","bannerName":"Ripples in Reflection","colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"},"images":{"gachaSplash":"blackswan/gachaSpash","gachaCard":"blackswan/gachaCard","bannerCard":"blackswan/bannerCard"}}

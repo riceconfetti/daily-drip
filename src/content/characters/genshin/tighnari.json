@@ -1,17 +1,1 @@
-{
-  "name": "Tighnari",
-  "rarity": 5,
-  "element": "dendro",
-  "weaponType": "bow",
-  "bannerName": "Viridescent Vigil",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/tighnari/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/tighnari/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/tighnari/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Tighnari","rarity":5,"element":"dendro","weaponType":"bow","bannerName":"Viridescent Vigil","images":{"gachaSplash":"tighnari/gachaSpash","gachaCard":"tighnari/gachaCard","bannerCard":"tighnari/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

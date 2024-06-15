@@ -1,11 +1,1 @@
-{
-  "name": "Luka",
-  "rarity": 4,
-  "element": "physical",
-  "weaponType": "nihility",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/luka/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/luka/gachaCard",
-    "bannerCard": "/assets/characters/starrail/luka/bannerCard"
-  }
-}
+{"name":"Luka","rarity":4,"element":"physical","weaponType":"nihility","images":{"gachaSplash":"luka/gachaSpash","gachaCard":"luka/gachaCard","bannerCard":"luka/bannerCard"}}

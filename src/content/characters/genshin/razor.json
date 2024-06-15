@@ -1,10 +1,1 @@
-{
-  "name": "Razor",
-  "rarity": 4,
-  "element": "electro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/razor/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/razor/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/razor/bannerCard.png"
-  }
-}
+{"name":"Razor","rarity":4,"element":"electro","images":{"gachaSplash":"razor/gachaSpash","gachaCard":"razor/gachaCard","bannerCard":"razor/bannerCard"}}

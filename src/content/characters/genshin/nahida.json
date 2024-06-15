@@ -1,16 +1,1 @@
-{
-  "name": "Nahida",
-  "rarity": 5,
-  "element": "dendro",
-  "bannerName": "The Moongrass' Enlightenment",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/nahida/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/nahida/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/nahida/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Nahida","rarity":5,"element":"dendro","bannerName":"The Moongrass' Enlightenment","images":{"gachaSplash":"nahida/gachaSpash","gachaCard":"nahida/gachaCard","bannerCard":"nahida/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

@@ -1,10 +1,1 @@
-{
-  "name": "Natasha",
-  "rarity": 4,
-  "element": "physical",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/natasha/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/natasha/gachaCard",
-    "bannerCard": "/assets/characters/starrail/natasha/bannerCard"
-  }
-}
+{"name":"Natasha","rarity":4,"element":"physical","images":{"gachaSplash":"natasha/gachaSpash","gachaCard":"natasha/gachaCard","bannerCard":"natasha/bannerCard"}}

@@ -1,10 +1,1 @@
-{
-  "name": "Herta",
-  "rarity": 4,
-  "element": "ice",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/herta/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/herta/gachaCard",
-    "bannerCard": "/assets/characters/starrail/herta/bannerCard"
-  }
-}
+{"name":"Herta","rarity":4,"element":"ice","images":{"gachaSplash":"herta/gachaSpash","gachaCard":"herta/gachaCard","bannerCard":"herta/bannerCard"}}

@@ -1,17 +1,1 @@
-{
-  "name": "Emelie",
-  "rarity": 5,
-  "element": "dendro",
-  "weaponType": "polearm",
-  "bannerName": "Renowned Perfumer",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#094533] to-[#FFCECF]",
-    "secondary": "bg-gradient-to-t from-[#094533] to-[#EFACCA00]",
-    "textAccent": "text-[#EFACCA]"
-  },
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/emelie/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/emelie/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/emelie/bannerCard.png"
-  }
-}
+{"name":"Emelie","rarity":5,"element":"dendro","weaponType":"polearm","bannerName":"Renowned Perfumer","colors":{"primary":"bg-gradient-to-r from-[#094533] to-[#FFCECF]","secondary":"bg-gradient-to-t from-[#094533] to-[#EFACCA00]","textAccent":"text-[#EFACCA]"},"images":{"gachaSplash":"emelie/gachaSpash","gachaCard":"emelie/gachaCard","bannerCard":"emelie/bannerCard"}}

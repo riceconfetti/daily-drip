@@ -1,11 +1,1 @@
-{
-  "name": "Bennett",
-  "rarity": 4,
-  "element": "pyro",
-  "weaponType": "sword",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/bennett/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/bennett/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/bennett/bannerCard.png"
-  }
-}
+{"name":"Bennett","rarity":4,"element":"pyro","weaponType":"sword","images":{"gachaSplash":"bennett/gachaSpash","gachaCard":"bennett/gachaCard","bannerCard":"bennett/bannerCard"}}

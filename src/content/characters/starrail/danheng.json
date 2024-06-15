@@ -1,10 +1,1 @@
-{
-  "name": "Dan Heng",
-  "rarity": 4,
-  "element": "wind",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/danheng/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/danheng/gachaCard",
-    "bannerCard": "/assets/characters/starrail/danheng/bannerCard"
-  }
-}
+{"name":"Dan Heng","rarity":4,"element":"wind","images":{"gachaSplash":"danheng/gachaSpash","gachaCard":"danheng/gachaCard","bannerCard":"danheng/bannerCard"}}

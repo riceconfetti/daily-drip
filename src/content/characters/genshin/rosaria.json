@@ -1,11 +1,1 @@
-{
-  "name": "Rosaria",
-  "rarity": 4,
-  "element": "cryo",
-  "weaponType": "polearm",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/rosaria/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/rosaria/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/rosaria/bannerCard.png"
-  }
-}
+{"name":"Rosaria","rarity":4,"element":"cryo","weaponType":"polearm","images":{"gachaSplash":"rosaria/gachaSpash","gachaCard":"rosaria/gachaCard","bannerCard":"rosaria/bannerCard"}}

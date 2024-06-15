@@ -1,16 +1,1 @@
-{
-  "name": "Diluc",
-  "rarity": 5,
-  "element": "pyro",
-  "bannerName": "",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/diluc/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/diluc/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/diluc/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Diluc","rarity":5,"element":"pyro","bannerName":"","images":{"gachaSplash":"diluc/gachaSpash","gachaCard":"diluc/gachaCard","bannerCard":"diluc/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

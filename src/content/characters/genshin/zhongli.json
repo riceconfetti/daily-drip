@@ -1,17 +1,1 @@
-{
-  "name": "Zhongli",
-  "rarity": 5,
-  "element": "geo",
-  "weaponType": "polearm",
-  "bannerName": "Gentry of Hermitage",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/zhongli/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/zhongli/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/zhongli/bannerCard.png"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Zhongli","rarity":5,"element":"geo","weaponType":"polearm","bannerName":"Gentry of Hermitage","images":{"gachaSplash":"zhongli/gachaSpash","gachaCard":"zhongli/gachaCard","bannerCard":"zhongli/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

@@ -1,16 +1,1 @@
-{
-  "name": "Navia",
-  "rarity": 5,
-  "element": "geo",
-  "bannerName": "In the Name of Rosula",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#34281F] to-[#EDA822]",
-    "secondary": "bg-gradient-to-t from-[#34281F] to-[#EDA82200]",
-    "textAccent": "text-[#EBBC64]"
-  },
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/navia/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/navia/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/navia/bannerCard.png"
-  }
-}
+{"name":"Navia","rarity":5,"element":"geo","bannerName":"In the Name of Rosula","colors":{"primary":"bg-gradient-to-r from-[#34281F] to-[#EDA822]","secondary":"bg-gradient-to-t from-[#34281F] to-[#EDA82200]","textAccent":"text-[#EBBC64]"},"images":{"gachaSplash":"navia/gachaSpash","gachaCard":"navia/gachaCard","bannerCard":"navia/bannerCard"}}

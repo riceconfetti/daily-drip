@@ -3,7 +3,7 @@
   import dayjs from "dayjs";
   import relativeTime from "dayjs/plugin/relativeTime.js";
   dayjs.extend(relativeTime);
-  export let eventDetails;
+  export let eventDetails, images;
 
   const eventType =
     dayjs(eventDetails.startDate) > dayjs() ? "Starting" : "Ending";
@@ -18,6 +18,15 @@
     reverse: "playfair-display-sc-bold",
     wuwa: "philosopher-bold",
   };
+
+  const bannerPath = `../assets/characters/${eventDetails.game}/${eventDetails.image}.png`;
+  const bannerImage =
+    images[eventDetails.game].bannerCards[bannerPath] != undefined
+      ? images[eventDetails.game].bannerCards[bannerPath]
+      : images[eventDetails.game].placeHolders[
+          `../assets/placeholders/${eventDetails.game}/bannerCard.png`
+        ];
+  //console.log(bannerImage);
 </script>
 
 <div
@@ -33,8 +42,8 @@
     </h3>
   </div>
 
-  <enhanced:img
-    src={eventDetails.image}
+  <Image
+    src={bannerImage.default.src}
     height={1200}
     width={4600}
     class="h-full gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%]"

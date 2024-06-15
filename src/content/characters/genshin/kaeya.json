@@ -1,11 +1,1 @@
-{
-  "name": "Kaeya",
-  "rarity": 4,
-  "element": "cryo",
-  "weaponType": "sword",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/kaeya/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/kaeya/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/kaeya/bannerCard.png"
-  }
-}
+{"name":"Kaeya","rarity":4,"element":"cryo","weaponType":"sword","images":{"gachaSplash":"kaeya/gachaSpash","gachaCard":"kaeya/gachaCard","bannerCard":"kaeya/bannerCard"}}

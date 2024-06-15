@@ -1,10 +1,1 @@
-{
-  "name": "Candace",
-  "rarity": 4,
-  "element": "hydro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/candace/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/candace/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/candace/bannerCard.png"
-  }
-}
+{"name":"Candace","rarity":4,"element":"hydro","images":{"gachaSplash":"candace/gachaSpash","gachaCard":"candace/gachaCard","bannerCard":"candace/bannerCard"}}

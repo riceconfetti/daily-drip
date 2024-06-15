@@ -1,17 +1,1 @@
-{
-  "name": "Dan Heng: Imbibitor Lunae",
-  "rarity": 5,
-  "element": "imaginary",
-  "weaponType": "destruction",
-  "bannerName": "Epochal Spectrum",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/danhengimbibitorlunae/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/danhengimbibitorlunae/gachaCard",
-    "bannerCard": "/assets/characters/starrail/danhengimbibitorlunae/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Dan Heng: Imbibitor Lunae","rarity":5,"element":"imaginary","weaponType":"destruction","bannerName":"Epochal Spectrum","images":{"gachaSplash":"danhengimbibitorlunae/gachaSpash","gachaCard":"danhengimbibitorlunae/gachaCard","bannerCard":"danhengimbibitorlunae/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

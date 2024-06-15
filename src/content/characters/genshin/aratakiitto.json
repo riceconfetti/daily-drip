@@ -1,16 +1,1 @@
-{
-  "name": "Arataki Itto",
-  "rarity": 5,
-  "element": "geo",
-  "bannerName": "Oni's Royale",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#433531] to-[#FFBD51]",
-    "secondary": "bg-gradient-to-t from-[#322A28] to-[#5F2E2F00]",
-    "textAccent": "text-[#FFD87D]"
-  },
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/aratakiitto/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/aratakiitto/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/aratakiitto/bannerCard.png"
-  }
-}
+{"name":"Arataki Itto","rarity":5,"element":"geo","bannerName":"Oni's Royale","colors":{"primary":"bg-gradient-to-r from-[#433531] to-[#FFBD51]","secondary":"bg-gradient-to-t from-[#322A28] to-[#5F2E2F00]","textAccent":"text-[#FFD87D]"},"images":{"gachaSplash":"aratakiitto/gachaSpash","gachaCard":"aratakiitto/gachaCard","bannerCard":"aratakiitto/bannerCard"}}

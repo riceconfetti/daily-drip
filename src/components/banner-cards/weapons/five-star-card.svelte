@@ -1,6 +1,21 @@
 <script lang="ts">
-  import { Image } from "@unpic/svelte";
-  export let weapon;
+  export let weapon, images, game;
+  const weaponImage =
+    images.weapons[
+      `../assets/weapons/${weapon.name.replace(
+        /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+        ""
+      )}.webp`
+    ] != undefined
+      ? images.weapons[
+          `../assets/weapons/${weapon.name.replace(
+            /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+            ""
+          )}.webp`
+        ]
+      : images.placeHolders[
+          `../assets/placeholders/${game}/fiveStar_${weapon.game == "starrail" ? "default" : weapon.weaponType}.png`
+        ];
 </script>
 
 <div
@@ -11,7 +26,7 @@
   </h1>
   <img
     class="h-0 aspect-square min-h-full"
-    src={weapon.icon}
+    src={weaponImage.default.src}
     alt={`${weapon.name} Icon`}
   />
 </div>

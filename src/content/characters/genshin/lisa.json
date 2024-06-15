@@ -1,10 +1,1 @@
-{
-  "name": "Lisa",
-  "rarity": 4,
-  "element": "electro",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/lisa/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/lisa/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/lisa/bannerCard.png"
-  }
-}
+{"name":"Lisa","rarity":4,"element":"electro","images":{"gachaSplash":"lisa/gachaSpash","gachaCard":"lisa/gachaCard","bannerCard":"lisa/bannerCard"}}

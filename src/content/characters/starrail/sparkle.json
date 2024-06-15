@@ -1,17 +1,1 @@
-{
-  "name": "Sparkle",
-  "rarity": 5,
-  "element": "quantum",
-  "weaponType": "harmony",
-  "bannerName": "Sparkling Splendor",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/sparkle/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/sparkle/gachaCard",
-    "bannerCard": "/assets/characters/starrail/sparkle/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Sparkle","rarity":5,"element":"quantum","weaponType":"harmony","bannerName":"Sparkling Splendor","images":{"gachaSplash":"sparkle/gachaSpash","gachaCard":"sparkle/gachaCard","bannerCard":"sparkle/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

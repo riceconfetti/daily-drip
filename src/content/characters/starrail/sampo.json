@@ -1,10 +1,1 @@
-{
-  "name": "Sampo",
-  "rarity": 4,
-  "element": "wind",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/sampo/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/sampo/gachaCard",
-    "bannerCard": "/assets/characters/starrail/sampo/bannerCard"
-  }
-}
+{"name":"Sampo","rarity":4,"element":"wind","images":{"gachaSplash":"sampo/gachaSpash","gachaCard":"sampo/gachaCard","bannerCard":"sampo/bannerCard"}}

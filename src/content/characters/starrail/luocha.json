@@ -1,17 +1,1 @@
-{
-  "name": "Luocha",
-  "rarity": 5,
-  "element": "imaginary",
-  "weaponType": "abundance",
-  "bannerName": "Laic Pursuit",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/luocha/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/luocha/gachaCard",
-    "bannerCard": "/assets/characters/starrail/luocha/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Luocha","rarity":5,"element":"imaginary","weaponType":"abundance","bannerName":"Laic Pursuit","images":{"gachaSplash":"luocha/gachaSpash","gachaCard":"luocha/gachaCard","bannerCard":"luocha/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

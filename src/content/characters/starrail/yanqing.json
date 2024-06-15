@@ -1,17 +1,1 @@
-{
-  "name": "Yanqing",
-  "rarity": 5,
-  "element": "ice",
-  "weaponType": "hunt",
-  "bannerName": "",
-  "images": {
-    "gachaSplash": "/assets/characters/starrail/yanqing/gachaSpash",
-    "gachaCard": "/assets/characters/starrail/yanqing/gachaCard",
-    "bannerCard": "/assets/characters/starrail/yanqing/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
-}
+{"name":"Yanqing","rarity":5,"element":"ice","weaponType":"hunt","bannerName":"","images":{"gachaSplash":"yanqing/gachaSpash","gachaCard":"yanqing/gachaCard","bannerCard":"yanqing/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

@@ -1,10 +1,1 @@
-{
-  "name": "Ningguang",
-  "rarity": 4,
-  "element": "geo",
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/ningguang/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/ningguang/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/ningguang/bannerCard.png"
-  }
-}
+{"name":"Ningguang","rarity":4,"element":"geo","images":{"gachaSplash":"ningguang/gachaSpash","gachaCard":"ningguang/gachaCard","bannerCard":"ningguang/bannerCard"}}

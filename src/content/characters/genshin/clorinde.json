@@ -1,17 +1,1 @@
-{
-  "name": "Clorinde",
-  "rarity": 5,
-  "element": "electro",
-  "weaponType": "sword",
-  "bannerName": "Illuminating Lightning",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#192234] to-[#9D85CF]",
-    "secondary": "bg-gradient-to-t from-[#1A2045] to-[#404FAB00]",
-    "textAccent": "text-[#9D85CF]"
-  },
-  "images": {
-    "gachaSplash": "./assets/characters/genshin/clorinde/gachaSpash.png",
-    "gachaCard": "./assets/characters/genshin/clorinde/gachaCard.png",
-    "bannerCard": "./assets/characters/genshin/clorinde/bannerCard.png"
-  }
-}
+{"name":"Clorinde","rarity":5,"element":"electro","weaponType":"sword","bannerName":"Illuminating Lightning","colors":{"primary":"bg-gradient-to-r from-[#192234] to-[#9D85CF]","secondary":"bg-gradient-to-t from-[#1A2045] to-[#404FAB00]","textAccent":"text-[#9D85CF]"},"images":{"gachaSplash":"clorinde/gachaSpash","gachaCard":"clorinde/gachaCard","bannerCard":"clorinde/bannerCard"}}
