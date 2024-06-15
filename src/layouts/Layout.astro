@@ -24,8 +24,7 @@ const { title } = Astro.props;
       }
       function showPage() {
         document.getElementById("loader").classList.toggle("opacity-0");
-        document.getElementById("loader").classList.toggle("z-50");
-        document.getElementById("loader").classList.toggle("z-0");
+        setTimeout(document.getElementById("loader").classList.toggle("hidden"), 500)
       }
     </script>
     <title>{title}</title>
