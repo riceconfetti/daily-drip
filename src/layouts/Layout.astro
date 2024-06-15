@@ -25,6 +25,7 @@ const { title } = Astro.props;
       function showPage() {
         document.getElementById("loader").classList.toggle("opacity-0");
         document.getElementById("loader").classList.toggle("z-50");
+        document.getElementById("loader").classList.toggle("z-0");
       }
     </script>
     <title>{title}</title>
@@ -39,8 +40,7 @@ const { title } = Astro.props;
       >
         <slot />
       </div>
-    </main>
-    <div
+      <div
       id="loader"
       class="absolute inset-0 text-accent-dark z-50 bg-dark flex flex-col items-center justify-center transition-opacity"
     >
@@ -53,6 +53,8 @@ const { title } = Astro.props;
       color="rgb(193 156 100)"
     ></l-square>
     </div>
+    </main>
+    
     
     <script>
       import "../scripts/menu.js";
