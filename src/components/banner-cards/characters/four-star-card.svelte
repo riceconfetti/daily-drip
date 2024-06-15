@@ -44,8 +44,8 @@
     src={bannerCard.default.src}
     alt={`${character.name} Art`}
     layout="constrained"
-    height={1200}
-    width={4600}
+    height={300}
+    width={1150}
   ></Image>
   <div class="absolute flex items-center w-full h-full p-2">
     <h1 class={`text-white text-[.6rem] sm:text-xs`}>{character.name}</h1>
