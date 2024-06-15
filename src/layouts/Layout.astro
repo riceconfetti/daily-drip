@@ -2,7 +2,6 @@
 import "../styles/style.css";
 import "remixicon/fonts/remixicon.css";
 import NavBar from "../components/NavBar.astro";
-import Loader from "../components/Loader.jsx";
 interface Props {
   title: string;
 }
@@ -45,11 +44,20 @@ const { title } = Astro.props;
       id="loader"
       class="absolute inset-0 text-accent-dark z-50 bg-dark flex flex-col items-center justify-center transition-opacity"
     >
-      <Loader client:only="react"></Loader>
+      <l-square
+      size="35"
+      stroke="5"
+      stroke-length="0.25"
+      bg-opacity="0.1"
+      speed="1.2"
+      color="rgb(193 156 100)"
+    ></l-square>
     </div>
     
     <script>
       import "../scripts/menu.js";
+      import { square } from 'ldrs'
+       square.register()
     </script>
   </body>
 </html>
