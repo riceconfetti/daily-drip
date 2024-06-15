@@ -9,8 +9,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/genshin/baizhu/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/baizhu/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/baizhu/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/baizhu/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/baizhu/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/baizhu/bannerCard.png"
   }
 }

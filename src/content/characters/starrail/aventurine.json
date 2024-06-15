@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/aventurine/gachaSpash.png",
-    "gachaCard": "./images/characters/aventurine/gachaCard.png",
-    "bannerCard": "./images/characters/aventurine/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/aventurine/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/aventurine/gachaCard",
+    "bannerCard": "/assets/characters/starrail/aventurine/bannerCard"
   }
 }

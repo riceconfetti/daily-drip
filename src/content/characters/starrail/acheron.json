@@ -5,9 +5,9 @@
   "weaponType": "nihility",
   "bannerName": "Words of Yore",
   "images": {
-    "gachaSplash": "./images/characters/starrail/acheron/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/acheron/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/acheron/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/acheron/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/acheron/gachaCard",
+    "bannerCard": "/assets/characters/starrail/acheron/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

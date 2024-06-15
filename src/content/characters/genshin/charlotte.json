@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "cryo",
   "images": {
-    "gachaSplash": "./images/characters/charlotte/gachaSpash.webp",
-    "gachaCard": "./images/characters/charlotte/gachaCard.png",
-    "bannerCard": "./images/characters/charlotte/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/charlotte/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/charlotte/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/charlotte/bannerCard.png"
   }
 }

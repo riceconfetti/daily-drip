@@ -1,6 +1,12 @@
 <script lang="ts">
   import { Image } from "@unpic/svelte";
-  export let character;
+
+  export let character, images;
+  console.log(character.id);
+  const gachaCard =
+    images[`../assets/characters/${character.id}/gachaCard.png`] != undefined
+      ? images[`../assets/characters/${character.id}/gachaCard.png`]
+      : images["../assets/characters/starrail/firefly/gachaCard.png"];
 </script>
 
 <div
@@ -22,11 +28,11 @@
       height={2100}
       width={1200}
       alt={`${character.element} Art`}
-      src={`./images/backgrounds/${character.element}.png`}
+      src={`src/assets/backgrounds/${character.element}.png`}
     />
     <Image
-      class={`relative w-full h-full ${character.spec ? "border-2 lg:border-4 [border-image:url(/images/textures/holo-4.jpg)_10_round]" : ""}`}
-      src={character.images.gachaCard}
+      class={`relative w-full h-full ${character.spec ? "border-2 lg:border-4 [border-image:url(/textures/holo-4.jpg)_10_round]" : ""}`}
+      src={gachaCard.default.src}
       alt={`${character.name} Art`}
       height={2100}
       width={1200}

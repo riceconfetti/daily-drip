@@ -4,8 +4,8 @@
   "element": "fire",
   "weaponType": "nihility",
   "images": {
-    "gachaSplash": "./images/characters/starrail/guinaifen/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/guinaifen/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/guinaifen/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/guinaifen/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/guinaifen/gachaCard",
+    "bannerCard": "/assets/characters/starrail/guinaifen/bannerCard"
   }
 }

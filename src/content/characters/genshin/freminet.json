@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "cryo",
   "images": {
-    "gachaSplash": "./images/characters/freminet/gachaSpash.webp",
-    "gachaCard": "./images/characters/freminet/gachaCard.png",
-    "bannerCard": "./images/characters/freminet/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/freminet/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/freminet/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/freminet/bannerCard.png"
   }
 }

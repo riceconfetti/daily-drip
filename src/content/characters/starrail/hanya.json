@@ -4,8 +4,8 @@
   "element": "physical",
   "weaponType": "harmony",
   "images": {
-    "gachaSplash": "./images/characters/starrail/hanya/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/hanya/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/hanya/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/hanya/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/hanya/gachaCard",
+    "bannerCard": "/assets/characters/starrail/hanya/bannerCard"
   }
 }

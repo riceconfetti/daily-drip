@@ -5,9 +5,9 @@
   "weaponType": "polearm",
   "bannerName": "Reign of Serenity",
   "images": {
-    "gachaSplash": "./images/characters/genshin/raiden shogun/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/raiden shogun/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/raiden shogun/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/raidenshogun/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/raidenshogun/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/raidenshogun/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

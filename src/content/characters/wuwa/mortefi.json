@@ -4,8 +4,8 @@
   "element": "fusion",
   "weaponType": "pistols",
   "images": {
-    "gachaSplash": "./images/characters/wuwa/mortefi/gachaSpash.png",
-    "gachaCard": "./images/characters/wuwa/mortefi/gachaCard.png",
-    "bannerCard": "./images/characters/wuwa/mortefi/bannerCard.png"
+    "gachaSplash": "./assets/characters/wuwa/mortefi/gachaSpash.png",
+    "gachaCard": "./assets/characters/wuwa/mortefi/gachaCard.png",
+    "bannerCard": "./assets/characters/wuwa/mortefi/bannerCard.png"
   }
 }

@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "anemo",
   "images": {
-    "gachaSplash": "./images/characters/genshin/shikanoinheizou/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/shikanoinheizou/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/shikanoinheizou/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/shikanoinheizou/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/shikanoinheizou/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/shikanoinheizou/bannerCard.png"
   }
 }

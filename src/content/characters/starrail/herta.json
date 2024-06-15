@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "ice",
   "images": {
-    "gachaSplash": "./images/characters/starrail/herta/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/herta/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/herta/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/herta/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/herta/gachaCard",
+    "bannerCard": "/assets/characters/starrail/herta/bannerCard"
   }
 }

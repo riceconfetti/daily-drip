@@ -5,9 +5,9 @@
   "weaponType": "abundance",
   "bannerName": "Laic Pursuit",
   "images": {
-    "gachaSplash": "./images/characters/starrail/luocha/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/luocha/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/luocha/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/luocha/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/luocha/gachaCard",
+    "bannerCard": "/assets/characters/starrail/luocha/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

@@ -4,8 +4,8 @@
   "element": "hydro",
   "weaponType": "sword",
   "images": {
-    "gachaSplash": "./images/characters/genshin/xingqiu/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/xingqiu/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/xingqiu/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/xingqiu/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/xingqiu/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/xingqiu/bannerCard.png"
   }
 }

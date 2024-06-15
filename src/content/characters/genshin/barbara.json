@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "hydro",
   "images": {
-    "gachaSplash": "./images/characters/genshin/barbara/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/barbara/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/barbara/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/barbara/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/barbara/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/barbara/bannerCard.png"
   }
 }

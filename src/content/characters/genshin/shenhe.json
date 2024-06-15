@@ -5,9 +5,9 @@
   "weaponType": "polearm",
   "bannerName": "The Transcendent One Returns",
   "images": {
-    "gachaSplash": "./images/characters/genshin/shenhe/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/shenhe/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/shenhe/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/shenhe/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/shenhe/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/shenhe/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

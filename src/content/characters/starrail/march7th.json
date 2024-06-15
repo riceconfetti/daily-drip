@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "ice",
   "images": {
-    "gachaSplash": "./images/characters/starrail/march 7th/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/march 7th/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/march 7th/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/march7th/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/march7th/gachaCard",
+    "bannerCard": "/assets/characters/starrail/march7th/bannerCard"
   }
 }

@@ -4,9 +4,9 @@
   "element": "anemo",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./images/characters/genshin/xianyun/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/xianyun/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/xianyun/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/xianyun/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/xianyun/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/xianyun/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "pyro",
   "images": {
-    "gachaSplash": "./images/characters/chevreuse/gachaSpash.webp",
-    "gachaCard": "./images/characters/chevreuse/gachaCard.png",
-    "bannerCard": "./images/characters/chevreuse/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/chevreuse/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/chevreuse/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/chevreuse/bannerCard.png"
   }
 }

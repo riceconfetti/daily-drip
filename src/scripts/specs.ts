@@ -7,7 +7,7 @@ export function getPhase(
   number,
   eventCollection,
   characterCollection,
-  weaponCollection,
+  weaponCollection
 ) {
   let phase: Phase = {
     number: number,
@@ -30,14 +30,15 @@ export function getPhase(
       number === 0
         ? event.data.startDate === data.startDate
         : number === 1
-          ? event.data.endDate === data.endDate
-          : false;
+        ? event.data.endDate === data.endDate
+        : false;
 
     if (inPhase) {
       let character = characterCollection.find(
-        (c) => c.id === event.data.character.id,
+        (c) => c.id === event.data.character.id
       );
       let characterData = character.data;
+      characterData.id = character.id;
       if (event.data.status === "spec") {
         characterData.spec = true;
       }
@@ -57,9 +58,9 @@ export function getPhase(
       bannerName: "????",
       element: game,
       images: {
-        gachaSplash: `./images/characters/${game}/gachaSpash.png`,
-        gachaCard: `./images/paths/${game}.png`,
-        bannerCard: `./images/characters/${game}/bannerCard.png`,
+        gachaSplash: `/assets/characters/${game}/gachaSpash`,
+        gachaCard: `/assets/paths/${game}`,
+        bannerCard: `/assets/characters/${game}/bannerCard`,
       },
     });
   }
@@ -70,9 +71,9 @@ export function getPhase(
       rarity: 4,
       element: game,
       images: {
-        gachaSplash: `./images/characters/${game}/gachaSpash.png`,
-        gachaCard: `./images/characters/${game}/gachaCard.png`,
-        bannerCard: `./images/characters/${game}/bannerCard.png`,
+        gachaSplash: `/assets/characters/${game}/gachaSpash`,
+        gachaCard: `/assets/characters/${game}/gachaCard`,
+        bannerCard: `/assets/characters/${game}/bannerCard`,
       },
     });
   }

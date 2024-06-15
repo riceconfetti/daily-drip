@@ -1,8 +1,8 @@
 {
   "name": "Feixiao",
   "rarity": 5,
-  "element": "starrail",
-  "weaponType": "starrail",
+  "element": "wind",
+  "weaponType": "hunt",
   "bannerName": "???",
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/feixiao/gachaSpash.png",
-    "gachaCard": "./images/characters/feixiao/gachaCard.png",
-    "bannerCard": "./images/characters/feixiao/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/feixiao/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/feixiao/gachaCard",
+    "bannerCard": "/assets/characters/starrail/feixiao/bannerCard"
   }
 }

@@ -4,9 +4,9 @@
   "element": "pyro",
   "bannerName": "Moment of Bloom",
   "images": {
-    "gachaSplash": "./images/characters/genshin/hutao/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/hutao/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/hutao/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/hutao/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/hutao/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/hutao/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

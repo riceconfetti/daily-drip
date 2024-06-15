@@ -5,9 +5,9 @@
   "weaponType": "erudition",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./images/characters/starrail/screwllum/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/screwllum/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/screwllum/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/screwllum/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/screwllum/gachaCard",
+    "bannerCard": "/assets/characters/starrail/screwllum/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

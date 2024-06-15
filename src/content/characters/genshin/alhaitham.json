@@ -10,8 +10,8 @@
     "textAccent": "text-[#91B97D]"
   },
   "images": {
-    "gachaSplash": "./images/characters/genshin/alhaitham/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/alhaitham/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/alhaitham/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/alhaitham/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/alhaitham/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/alhaitham/bannerCard.png"
   }
 }

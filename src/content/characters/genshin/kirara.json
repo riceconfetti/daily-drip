@@ -4,8 +4,8 @@
   "element": "dendro",
   "weaponType": "sword",
   "images": {
-    "gachaSplash": "./images/characters/kirara/gachaSpash.webp",
-    "gachaCard": "./images/characters/kirara/gachaCard.png",
-    "bannerCard": "./images/characters/kirara/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/kirara/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/kirara/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/kirara/bannerCard.png"
   }
 }

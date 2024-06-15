@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/jingliu/gachaSpash.png",
-    "gachaCard": "./images/characters/jingliu/gachaCard.png",
-    "bannerCard": "./images/characters/jingliu/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/jingliu/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/jingliu/gachaCard",
+    "bannerCard": "/assets/characters/starrail/jingliu/bannerCard"
   }
 }

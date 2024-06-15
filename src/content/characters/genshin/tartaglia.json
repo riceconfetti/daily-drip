@@ -5,9 +5,9 @@
   "weaponType": "bow",
   "bannerName": "Farewell of Snezhnaya",
   "images": {
-    "gachaSplash": "./images/characters/genshin/tartaglia/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/tartaglia/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/tartaglia/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/tartaglia/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/tartaglia/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/tartaglia/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

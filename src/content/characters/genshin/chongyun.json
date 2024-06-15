@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "cryo",
   "images": {
-    "gachaSplash": "./images/characters/chongyun/gachaSpash.webp",
-    "gachaCard": "./images/characters/chongyun/gachaCard.png",
-    "bannerCard": "./images/characters/chongyun/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/chongyun/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/chongyun/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/chongyun/bannerCard.png"
   }
 }

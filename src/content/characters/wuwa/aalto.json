@@ -4,8 +4,8 @@
   "element": "aero",
   "weaponType": "pistols",
   "images": {
-    "gachaSplash": "./images/characters/wuwa/aalto/gachaSpash.png",
-    "gachaCard": "./images/characters/wuwa/aalto/gachaCard.png",
-    "bannerCard": "./images/characters/wuwa/aalto/bannerCard.png"
+    "gachaSplash": "./assets/characters/wuwa/aalto/gachaSpash.png",
+    "gachaCard": "./assets/characters/wuwa/aalto/gachaCard.png",
+    "bannerCard": "./assets/characters/wuwa/aalto/bannerCard.png"
   }
 }

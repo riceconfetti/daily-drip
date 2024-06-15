@@ -10,8 +10,8 @@
     "textAccent": "text-[#D88F45]"
   },
   "images": {
-    "gachaSplash": "./images/characters/genshin/albedo/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/albedo/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/albedo/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/albedo/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/albedo/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/albedo/bannerCard.png"
   }
 }

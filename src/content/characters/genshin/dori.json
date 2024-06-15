@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "electro",
   "images": {
-    "gachaSplash": "./images/characters/dori/gachaSpash.webp",
-    "gachaCard": "./images/characters/dori/gachaCard.png",
-    "bannerCard": "./images/characters/dori/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/dori/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/dori/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/dori/bannerCard.png"
   }
 }

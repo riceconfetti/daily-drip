@@ -4,9 +4,9 @@
   "element": "cryo",
   "bannerName": "Born of Ocean Swell",
   "images": {
-    "gachaSplash": "./images/characters/genshin/eula/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/eula/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/eula/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/eula/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/eula/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/eula/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

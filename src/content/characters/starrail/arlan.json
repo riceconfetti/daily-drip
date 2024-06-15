@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "lightning",
   "images": {
-    "gachaSplash": "./images/characters/starrail/arlan/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/arlan/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/arlan/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/arlan/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/arlan/gachaCard",
+    "bannerCard": "/assets/characters/starrail/arlan/bannerCard"
   }
 }

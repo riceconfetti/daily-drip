@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "physical",
   "images": {
-    "gachaSplash": "./images/characters/starrail/sushang/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/sushang/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/sushang/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/sushang/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/sushang/gachaCard",
+    "bannerCard": "/assets/characters/starrail/sushang/bannerCard"
   }
 }

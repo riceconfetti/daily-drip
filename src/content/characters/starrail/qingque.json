@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "quantum",
   "images": {
-    "gachaSplash": "./images/characters/starrail/qingque/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/qingque/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/qingque/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/qingque/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/qingque/gachaCard",
+    "bannerCard": "/assets/characters/starrail/qingque/bannerCard"
   }
 }

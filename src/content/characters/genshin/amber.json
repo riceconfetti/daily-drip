@@ -4,8 +4,8 @@
   "element": "pyro",
   "weaponType": "bow",
   "images": {
-    "gachaSplash": "./images/characters/amber/gachaSpash.webp",
-    "gachaCard": "./images/characters/amber/gachaCard.png",
-    "bannerCard": "./images/characters/amber/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/amber/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/amber/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/amber/bannerCard.png"
   }
 }

@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/starrail/ruanmei/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/ruanmei/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/ruanmei/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/ruanmei/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/ruanmei/gachaCard",
+    "bannerCard": "/assets/characters/starrail/ruanmei/bannerCard"
   }
 }

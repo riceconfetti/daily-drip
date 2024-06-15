@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/starrail/firefly/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/firefly/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/firefly/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/firefly/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/firefly/gachaCard",
+    "bannerCard": "/assets/characters/starrail/firefly/bannerCard"
   }
 }

@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "dendro",
   "images": {
-    "gachaSplash": "./images/characters/kaveh/gachaSpash.webp",
-    "gachaCard": "./images/characters/kaveh/gachaCard.png",
-    "bannerCard": "./images/characters/kaveh/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/kaveh/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/kaveh/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/kaveh/bannerCard.png"
   }
 }

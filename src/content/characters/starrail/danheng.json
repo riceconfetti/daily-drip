@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "wind",
   "images": {
-    "gachaSplash": "./images/characters/starrail/dan heng/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/dan heng/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/dan heng/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/danheng/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/danheng/gachaCard",
+    "bannerCard": "/assets/characters/starrail/danheng/bannerCard"
   }
 }

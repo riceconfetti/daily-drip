@@ -4,8 +4,8 @@
   "element": "dendro",
   "weaponType": "polearm",
   "images": {
-    "gachaSplash": "./images/characters/genshin/yaoyao/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/yaoyao/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/yaoyao/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/yaoyao/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/yaoyao/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/yaoyao/bannerCard.png"
   }
 }

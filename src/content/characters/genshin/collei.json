@@ -4,8 +4,8 @@
   "element": "dendro",
   "weaponType": "bow",
   "images": {
-    "gachaSplash": "./images/characters/collei/gachaSpash.webp",
-    "gachaCard": "./images/characters/collei/gachaCard.png",
-    "bannerCard": "./images/characters/collei/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/collei/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/collei/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/collei/bannerCard.png"
   }
 }

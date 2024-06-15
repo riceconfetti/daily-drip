@@ -4,8 +4,8 @@
   "element": "geo",
   "weaponType": "polearm",
   "images": {
-    "gachaSplash": "./images/characters/genshin/yun jin/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/yun jin/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/yun jin/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/yunjin/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/yunjin/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/yunjin/bannerCard.png"
   }
 }

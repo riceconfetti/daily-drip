@@ -5,9 +5,9 @@
   "weaponType": "bow",
   "bannerName": "Conjuring Chiaroscuro",
   "images": {
-    "gachaSplash": "./images/characters/genshin/lyney/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/lyney/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/lyney/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/lyney/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/lyney/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/lyney/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

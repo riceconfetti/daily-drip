@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "anemo",
   "images": {
-    "gachaSplash": "./images/characters/genshin/sayu/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/sayu/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/sayu/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/sayu/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/sayu/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/sayu/bannerCard.png"
   }
 }

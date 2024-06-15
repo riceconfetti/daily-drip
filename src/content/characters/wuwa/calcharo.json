@@ -5,9 +5,9 @@
   "weaponType": "broadblade",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./images/characters/wuwa/calcharo/gachaSpash.png",
-    "gachaCard": "./images/characters/wuwa/calcharo/gachaCard.png",
-    "bannerCard": "./images/characters/wuwa/calcharo/bannerCard.png"
+    "gachaSplash": "./assets/characters/wuwa/calcharo/gachaSpash.png",
+    "gachaCard": "./assets/characters/wuwa/calcharo/gachaCard.png",
+    "bannerCard": "./assets/characters/wuwa/calcharo/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

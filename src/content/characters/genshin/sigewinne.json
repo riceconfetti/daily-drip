@@ -10,8 +10,8 @@
     "textAccent": "text-[#034A88]"
   },
   "images": {
-    "gachaSplash": "./images/characters/genshin/sigewinne/gachaSpash.webp",
-    "gachaCard": "./images/characters/genshin/sigewinne/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/sigewinne/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/sigewinne/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/sigewinne/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/sigewinne/bannerCard.png"
   }
 }

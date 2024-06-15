@@ -5,9 +5,9 @@
   "weaponType": "rectifier",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./images/characters/wuwa/verina/gachaSpash.png",
-    "gachaCard": "./images/characters/wuwa/verina/gachaCard.png",
-    "bannerCard": "./images/characters/wuwa/verina/bannerCard.png"
+    "gachaSplash": "./assets/characters/wuwa/verina/gachaSpash.png",
+    "gachaCard": "./assets/characters/wuwa/verina/gachaCard.png",
+    "bannerCard": "./assets/characters/wuwa/verina/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

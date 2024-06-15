@@ -5,9 +5,9 @@
   "weaponType": "bow",
   "bannerName": "Ballad in Goblets",
   "images": {
-    "gachaSplash": "./images/characters/genshin/venti/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/venti/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/venti/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/venti/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/venti/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/venti/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

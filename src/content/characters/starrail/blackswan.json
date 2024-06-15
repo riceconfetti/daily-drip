@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/blackswan/gachaSpash.png",
-    "gachaCard": "./images/characters/blackswan/gachaCard.png",
-    "bannerCard": "./images/characters/blackswan/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/blackswan/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/blackswan/gachaCard",
+    "bannerCard": "/assets/characters/starrail/blackswan/bannerCard"
   }
 }

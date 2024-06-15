@@ -5,9 +5,9 @@
   "weaponType": "nihility",
   "bannerName": "Contract Zero",
   "images": {
-    "gachaSplash": "./images/characters/starrail/silver wolf/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/silver wolf/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/silver wolf/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/silverwolf/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/silverwolf/gachaCard",
+    "bannerCard": "/assets/characters/starrail/silverwolf/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

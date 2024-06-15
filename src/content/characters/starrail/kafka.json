@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/starrail/kafaka/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/kafaka/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/kafaka/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/kafka/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/kafka/gachaCard",
+    "bannerCard": "/assets/characters/starrail/kafka/bannerCard"
   }
 }

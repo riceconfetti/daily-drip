@@ -4,9 +4,9 @@
   "element": "hydro",
   "bannerName": "Drifting Luminescence",
   "images": {
-    "gachaSplash": "./images/characters/genshin/sangonomiya kokomi/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/sangonomiya kokomi/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/sangonomiya kokomi/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/sangonomiyakokomi/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/sangonomiyakokomi/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/sangonomiyakokomi/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

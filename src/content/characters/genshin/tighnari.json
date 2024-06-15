@@ -5,9 +5,9 @@
   "weaponType": "bow",
   "bannerName": "Viridescent Vigil",
   "images": {
-    "gachaSplash": "./images/characters/genshin/tighnari/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/tighnari/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/tighnari/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/tighnari/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/tighnari/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/tighnari/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

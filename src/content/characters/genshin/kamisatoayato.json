@@ -5,9 +5,9 @@
   "weaponType": "sword",
   "bannerName": "Azure Excursion",
   "images": {
-    "gachaSplash": "./images/characters/genshin/kamisato ayato/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/kamisato ayato/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/kamisato ayato/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/kamisatoayato/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/kamisatoayato/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/kamisatoayato/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

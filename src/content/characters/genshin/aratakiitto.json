@@ -9,8 +9,8 @@
     "textAccent": "text-[#FFD87D]"
   },
   "images": {
-    "gachaSplash": "./images/characters/genshin/aratakiitto/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/aratakiitto/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/aratakiitto/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/aratakiitto/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/aratakiitto/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/aratakiitto/bannerCard.png"
   }
 }

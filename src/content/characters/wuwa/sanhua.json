@@ -4,8 +4,8 @@
   "element": "glacio",
   "weaponType": "sword",
   "images": {
-    "gachaSplash": "./images/characters/wuwa/sanhua/gachaSpash.png",
-    "gachaCard": "./images/characters/wuwa/sanhua/gachaCard.png",
-    "bannerCard": "./images/characters/wuwa/sanhua/bannerCard.png"
+    "gachaSplash": "./assets/characters/wuwa/sanhua/gachaSpash.png",
+    "gachaCard": "./assets/characters/wuwa/sanhua/gachaCard.png",
+    "bannerCard": "./assets/characters/wuwa/sanhua/bannerCard.png"
   }
 }

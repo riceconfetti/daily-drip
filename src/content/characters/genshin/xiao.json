@@ -5,9 +5,9 @@
   "weaponType": "polearm",
   "bannerName": "Invitation to Mundane Life",
   "images": {
-    "gachaSplash": "./images/characters/genshin/xiao/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/xiao/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/xiao/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/xiao/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/xiao/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/xiao/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

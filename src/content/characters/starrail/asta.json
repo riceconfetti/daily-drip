@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "fire",
   "images": {
-    "gachaSplash": "./images/characters/starrail/asta/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/asta/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/asta/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/asta/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/asta/gachaCard",
+    "bannerCard": "/assets/characters/starrail/asta/bannerCard"
   }
 }

@@ -1,12 +1,12 @@
 {
   "name": "Serval",
-  "rarity": 5,
+  "rarity": 4,
   "element": "lightning",
   "bannerName": "",
   "images": {
-    "gachaSplash": "./images/characters/starrail/serval/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/serval/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/serval/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/serval/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/serval/gachaCard",
+    "bannerCard": "/assets/characters/starrail/serval/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "geo",
   "images": {
-    "gachaSplash": "./images/characters/genshin/noelle/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/noelle/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/noelle/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/noelle/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/noelle/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/noelle/bannerCard.png"
   }
 }

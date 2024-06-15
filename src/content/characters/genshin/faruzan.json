@@ -4,8 +4,8 @@
   "element": "anemo",
   "weaponType": "bow",
   "images": {
-    "gachaSplash": "./images/characters/faruzan/gachaSpash.webp",
-    "gachaCard": "./images/characters/faruzan/gachaCard.png",
-    "bannerCard": "./images/characters/faruzan/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/faruzan/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/faruzan/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/faruzan/bannerCard.png"
   }
 }

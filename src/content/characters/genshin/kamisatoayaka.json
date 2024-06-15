@@ -5,9 +5,9 @@
   "weaponType": "sword",
   "bannerName": "The Heron's Court",
   "images": {
-    "gachaSplash": "./images/characters/genshin/kamisato ayaka/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/kamisato ayaka/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/kamisato ayaka/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/kamisatoayaka/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/kamisatoayaka/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/kamisatoayaka/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

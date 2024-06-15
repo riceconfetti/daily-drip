@@ -4,8 +4,8 @@
   "element": "electro",
   "weaponType": "bow",
   "images": {
-    "gachaSplash": "./images/characters/genshin/kujou sara/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/kujou sara/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/kujou sara/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/kujousara/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/kujousara/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/kujousara/bannerCard.png"
   }
 }

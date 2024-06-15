@@ -5,9 +5,9 @@
   "weaponType": "destruction",
   "bannerName": "Epochal Spectrum",
   "images": {
-    "gachaSplash": "./images/characters/starrail/dan heng: imbibitor lunae/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/dan heng: imbibitor lunae/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/dan heng: imbibitor lunae/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/danhengimbibitorlunae/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/danhengimbibitorlunae/gachaCard",
+    "bannerCard": "/assets/characters/starrail/danhengimbibitorlunae/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

@@ -10,8 +10,8 @@
     "textAccent": "text-[#999]"
   },
   "images": {
-    "gachaSplash": "./images/characters/drratio/gachaSpash.png",
-    "gachaCard": "./images/characters/drratio/gachaCard.png",
-    "bannerCard": "./images/characters/drratio/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/drratio/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/drratio/gachaCard",
+    "bannerCard": "/assets/characters/starrail/drratio/bannerCard"
   }
 }

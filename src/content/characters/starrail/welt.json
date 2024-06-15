@@ -5,9 +5,9 @@
   "weaponType": "nihility",
   "bannerName": "",
   "images": {
-    "gachaSplash": "./images/characters/starrail/welt/gachaSpash.png",
-    "gachaCard": "./images/characters/starrail/welt/gachaCard.png",
-    "bannerCard": "./images/characters/starrail/welt/bannerCard.png"
+    "gachaSplash": "/assets/characters/starrail/welt/gachaSpash",
+    "gachaCard": "/assets/characters/starrail/welt/gachaCard",
+    "bannerCard": "/assets/characters/starrail/welt/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

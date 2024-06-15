@@ -4,9 +4,9 @@
   "element": "electro",
   "bannerName": "Everbloom Violet",
   "images": {
-    "gachaSplash": "./images/characters/genshin/yaemiko/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/yaemiko/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/yaemiko/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/yaemiko/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/yaemiko/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/yaemiko/bannerCard.png"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

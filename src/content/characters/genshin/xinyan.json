@@ -3,8 +3,8 @@
   "rarity": 4,
   "element": "pyro",
   "images": {
-    "gachaSplash": "./images/characters/genshin/xinyan/gachaSpash.png",
-    "gachaCard": "./images/characters/genshin/xinyan/gachaCard.png",
-    "bannerCard": "./images/characters/genshin/xinyan/bannerCard.png"
+    "gachaSplash": "./assets/characters/genshin/xinyan/gachaSpash.png",
+    "gachaCard": "./assets/characters/genshin/xinyan/gachaCard.png",
+    "bannerCard": "./assets/characters/genshin/xinyan/bannerCard.png"
   }
 }
