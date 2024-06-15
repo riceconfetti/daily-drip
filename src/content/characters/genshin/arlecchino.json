@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "pyro",
   "bannerName": "The Hearth's Ashen Shadow",
-  "splashArt": "/gacha-splashArt/arlecchino.webp",
   "images": {
     "gachaSplash": "./images/characters/genshin/arlecchino/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/arlecchino/gachaCard.png",

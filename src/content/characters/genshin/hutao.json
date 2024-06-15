@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "pyro",
   "bannerName": "Moment of Bloom",
-  "splashArt": "/gacha-splashArt/hutao.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/hutao/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/hutao/gachaCard.png",

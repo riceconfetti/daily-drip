@@ -2,5 +2,10 @@
   "name": "Sanhua",
   "rarity": 4,
   "element": "glacio",
-  "weaponType": "sword"
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/sanhua/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/sanhua/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/sanhua/bannerCard.png"
+  }
 }

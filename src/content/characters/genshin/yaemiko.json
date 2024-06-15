@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "electro",
   "bannerName": "Everbloom Violet",
-  "splashArt": "/gacha-splashArt/yaemiko.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/yaemiko/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/yaemiko/gachaCard.png",

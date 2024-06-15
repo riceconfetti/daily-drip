@@ -4,5 +4,14 @@
   "element": "imaginary",
   "weaponType": "nihility",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/welt.png"
+  "images": {
+    "gachaSplash": "./images/characters/starrail/welt/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/welt/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/welt/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

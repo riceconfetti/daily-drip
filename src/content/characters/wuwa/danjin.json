@@ -2,5 +2,10 @@
   "name": "Danjin",
   "rarity": 4,
   "element": "havoc",
-  "weaponType": "sword"
+  "weaponType": "sword",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/danjin/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/danjin/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/danjin/bannerCard.png"
+  }
 }

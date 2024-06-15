@@ -2,5 +2,10 @@
   "name": "Hanya",
   "rarity": 4,
   "element": "physical",
-  "weaponType": "harmony"
+  "weaponType": "harmony",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/hanya/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/hanya/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/hanya/bannerCard.png"
+  }
 }

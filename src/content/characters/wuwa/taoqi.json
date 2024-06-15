@@ -2,5 +2,10 @@
   "name": "Taoqi",
   "rarity": 4,
   "element": "havoc",
-  "weaponType": "broadblade"
+  "weaponType": "broadblade",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/taoqi/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/taoqi/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/taoqi/bannerCard.png"
+  }
 }

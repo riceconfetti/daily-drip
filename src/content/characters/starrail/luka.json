@@ -1,1 +1,10 @@
-{ "name": "Luka", "rarity": 4, "element": "physical" }
+{
+  "name": "Luka",
+  "rarity": 4,
+  "element": "physical",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/luka/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/luka/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/luka/bannerCard.png"
+  }
+}

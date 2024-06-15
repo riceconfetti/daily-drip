@@ -4,7 +4,6 @@
   "element": "anemo",
   "weaponType": "bow",
   "bannerName": "Ballad in Goblets",
-  "splashArt": "/gacha-splashArt/venti.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/venti/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/venti/gachaCard.png",

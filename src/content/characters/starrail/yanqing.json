@@ -4,5 +4,14 @@
   "element": "ice",
   "weaponType": "hunt",
   "bannerName": "",
-  "splashArt": "/gacha-splashArt/yanqing.png"
+  "images": {
+    "gachaSplash": "./images/characters/starrail/yanqing/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/yanqing/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/yanqing/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

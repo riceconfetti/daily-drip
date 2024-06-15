@@ -4,5 +4,14 @@
   "element": "glacio",
   "weaponType": "gauntlet",
   "bannerName": "?????",
-  "splashArt": "./gacha-splash/lingyang.webp"
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/lingyang/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/lingyang/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/lingyang/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

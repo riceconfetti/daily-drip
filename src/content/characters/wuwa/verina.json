@@ -4,5 +4,14 @@
   "element": "spectro",
   "weaponType": "rectifier",
   "bannerName": "?????",
-  "splashArt": "./gacha-splash/verina.webp"
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/verina/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/verina/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/verina/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

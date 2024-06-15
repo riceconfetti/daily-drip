@@ -1,1 +1,10 @@
-{ "name": "Arlan", "rarity": 4, "element": "lightning" }
+{
+  "name": "Arlan",
+  "rarity": 4,
+  "element": "lightning",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/arlan/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/arlan/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/arlan/bannerCard.png"
+  }
+}

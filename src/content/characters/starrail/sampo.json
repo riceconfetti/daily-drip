@@ -1,1 +1,10 @@
-{ "name": "Sampo", "rarity": 4, "element": "wind" }
+{
+  "name": "Sampo",
+  "rarity": 4,
+  "element": "wind",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/sampo/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/sampo/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/sampo/bannerCard.png"
+  }
+}

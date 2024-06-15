@@ -1,1 +1,10 @@
-{ "name": "March 7th", "rarity": 4, "element": "ice" }
+{
+  "name": "March 7th",
+  "rarity": 4,
+  "element": "ice",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/march 7th/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/march 7th/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/march 7th/bannerCard.png"
+  }
+}

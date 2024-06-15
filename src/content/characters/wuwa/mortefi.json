@@ -2,5 +2,10 @@
   "name": "Mortefi",
   "rarity": 4,
   "element": "fusion",
-  "weaponType": "pistols"
+  "weaponType": "pistols",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/mortefi/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/mortefi/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/mortefi/bannerCard.png"
+  }
 }

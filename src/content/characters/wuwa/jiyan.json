@@ -4,5 +4,14 @@
   "element": "aero",
   "weaponType": "broadblade",
   "bannerName": "?????",
-  "splashArt": "./gacha-splash/jiyan.webp"
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/jiyan/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/jiyan/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/jiyan/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

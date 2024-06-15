@@ -4,7 +4,6 @@
   "element": "anemo",
   "weaponType": "polearm",
   "bannerName": "Invitation to Mundane Life",
-  "splashArt": "/gacha-splashArt/xiao.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/xiao/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/xiao/gachaCard.png",

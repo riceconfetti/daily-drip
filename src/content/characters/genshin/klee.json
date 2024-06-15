@@ -3,7 +3,6 @@
   "rarity": 5,
   "element": "pyro",
   "bannerName": "Sparkling Steps",
-  "splashArt": "/gacha-splashArt/klee.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/klee/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/klee/gachaCard.png",

@@ -4,7 +4,6 @@
   "element": "pyro",
   "weaponType": "bow",
   "bannerName": "Conjuring Chiaroscuro",
-  "splashArt": "/gacha-splashArt/lyney.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/lyney/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/lyney/gachaCard.png",

@@ -2,5 +2,10 @@
   "name": "Yuanwu",
   "rarity": 4,
   "element": "electro",
-  "weaponType": "gauntlet"
+  "weaponType": "gauntlet",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/yuanwu/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/yuanwu/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/yuanwu/bannerCard.png"
+  }
 }

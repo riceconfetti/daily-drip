@@ -7,7 +7,7 @@ export function getPhase(
   number,
   eventCollection,
   characterCollection,
-  weaponCollection
+  weaponCollection,
 ) {
   let phase: Phase = {
     number: number,
@@ -30,12 +30,12 @@ export function getPhase(
       number === 0
         ? event.data.startDate === data.startDate
         : number === 1
-        ? event.data.endDate === data.endDate
-        : false;
+          ? event.data.endDate === data.endDate
+          : false;
 
     if (inPhase) {
       let character = characterCollection.find(
-        (c) => c.id === event.data.character.id
+        (c) => c.id === event.data.character.id,
       );
       let characterData = character.data;
       if (event.data.status === "spec") {

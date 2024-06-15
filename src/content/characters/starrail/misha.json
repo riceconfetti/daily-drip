@@ -2,5 +2,10 @@
   "name": "Misha",
   "rarity": 4,
   "element": "ice",
-  "weaponType": "destruction"
+  "weaponType": "destruction",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/misha/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/misha/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/misha/bannerCard.png"
+  }
 }

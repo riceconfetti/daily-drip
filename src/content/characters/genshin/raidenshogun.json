@@ -4,7 +4,6 @@
   "element": "electro",
   "weaponType": "polearm",
   "bannerName": "Reign of Serenity",
-  "splashArt": "/gacha-splashArt/raidenshogun.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/raiden shogun/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/raiden shogun/gachaCard.png",

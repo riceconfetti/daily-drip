@@ -4,5 +4,14 @@
   "element": "quantum",
   "weaponType": "hunt",
   "bannerName": "Butterfly on Swordtip",
-  "splashArt": "/gacha-splashArt/seele.png"
+  "images": {
+    "gachaSplash": "./images/characters/starrail/seele/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/seele/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/seele/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

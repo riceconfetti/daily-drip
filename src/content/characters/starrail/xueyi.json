@@ -2,5 +2,10 @@
   "name": "Xueyi",
   "rarity": 4,
   "element": "quantum",
-  "weaponType": "destruction"
+  "weaponType": "destruction",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/xueyi/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/xueyi/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/xueyi/bannerCard.png"
+  }
 }

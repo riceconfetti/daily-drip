@@ -4,5 +4,14 @@
   "element": "aero",
   "weaponType": "gauntlet",
   "bannerName": "?????",
-  "splashArt": "./gacha-splash/jianxin.webp"
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/jianxin/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/jianxin/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/jianxin/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

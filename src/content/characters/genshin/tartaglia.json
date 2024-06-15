@@ -4,7 +4,6 @@
   "element": "hydro",
   "weaponType": "bow",
   "bannerName": "Farewell of Snezhnaya",
-  "splashArt": "/gacha-splashArt/tartaglia.png",
   "images": {
     "gachaSplash": "./images/characters/genshin/tartaglia/gachaSpash.png",
     "gachaCard": "./images/characters/genshin/tartaglia/gachaCard.png",

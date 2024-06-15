@@ -89,7 +89,7 @@ const versionsCollection = defineCollection({
         z.object({
           fiveStars: z.array(reference("weapons")),
           fourStars: z.array(reference("weapons")),
-        })
+        }),
       ),
       chronicle: z.object({
         characters: z.array(z.string()),

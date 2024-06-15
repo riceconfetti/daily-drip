@@ -4,5 +4,14 @@
   "element": "quantum",
   "weaponType": "harmony",
   "bannerName": "Sparkling Splendor",
-  "splashArt": "/gacha-splashArt/sparkle.png"
+  "images": {
+    "gachaSplash": "./images/characters/starrail/sparkle/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/sparkle/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/sparkle/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }

@@ -2,5 +2,10 @@
   "name": "Chixia",
   "rarity": 4,
   "element": "fusion",
-  "weaponType": "pistols"
+  "weaponType": "pistols",
+  "images": {
+    "gachaSplash": "./images/characters/wuwa/chixia/gachaSpash.png",
+    "gachaCard": "./images/characters/wuwa/chixia/gachaCard.png",
+    "bannerCard": "./images/characters/wuwa/chixia/bannerCard.png"
+  }
 }

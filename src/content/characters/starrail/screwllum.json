@@ -3,5 +3,15 @@
   "rarity": 5,
   "element": "imaginary",
   "weaponType": "erudition",
-  "bannerName": "?????"
+  "bannerName": "?????",
+  "images": {
+    "gachaSplash": "./images/characters/starrail/screwllum/gachaSpash.png",
+    "gachaCard": "./images/characters/starrail/screwllum/gachaCard.png",
+    "bannerCard": "./images/characters/starrail/screwllum/bannerCard.png"
+  },
+  "colors": {
+    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+    "textAccent": "text-[#999]"
+  }
 }
