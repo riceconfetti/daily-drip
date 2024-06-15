@@ -28,8 +28,8 @@
   <div class="relative w-full h-full">
     <Image
       class="absolute inset-0 w-full h-full"
-      height={2100}
-      width={1200}
+      height={1050}
+      width={600}
       alt={`${character.element} Art`}
       src={images.backgrounds[`../assets/backgrounds/${character.element}.png`]
         .default.src}
@@ -38,8 +38,8 @@
       class={`relative w-full h-full ${character.spec ? "border-2 lg:border-4 [border-image:url(/textures/holo-4.jpg)_10_round]" : ""}`}
       src={gachaCard.default.src}
       alt={`${character.name} Art`}
-      height={2100}
-      width={1200}
+      height={1050}
+      width={600}
     />
   </div>
 </div>
