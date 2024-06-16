@@ -1,6 +1,1 @@
-{
-  "name": "Frostbearer",
-  "rarity": 4,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/Frostbearer.webp"
-}
+{"name":"Frostbearer","rarity":4,"weaponType":"catalyst","icon":"Frostbearer.webp"}

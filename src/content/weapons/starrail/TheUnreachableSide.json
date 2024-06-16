@@ -1,6 +1,1 @@
-{
-  "name": "The Unreachable Side",
-  "rarity": 5,
-  "weaponType": "destruction",
-  "icon": "./images/weapons/TheUnreachableSide.webp"
-}
+{"name":"The Unreachable Side","rarity":5,"weaponType":"destruction","icon":"TheUnreachableSide.webp"}

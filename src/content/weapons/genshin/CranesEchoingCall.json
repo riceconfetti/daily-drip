@@ -1,6 +1,1 @@
-{
-  "name": "Crane's Echoing Call",
-  "rarity": 5,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/CranesEchoingCall.webp"
-}
+{"name":"Crane's Echoing Call","rarity":5,"weaponType":"catalyst","icon":"CranesEchoingCall.webp"}

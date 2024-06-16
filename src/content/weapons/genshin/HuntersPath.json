@@ -1,6 +1,1 @@
-{
-  "name": "Hunter's Path",
-  "rarity": 5,
-  "weaponType": "bow",
-  "icon": "./images/weapons/HuntersPath.webp"
-}
+{"name":"Hunter's Path","rarity":5,"weaponType":"bow","icon":"HuntersPath.webp"}

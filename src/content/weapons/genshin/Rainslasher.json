@@ -1,6 +1,1 @@
-{
-  "name": "Rainslasher",
-  "rarity": 4,
-  "weaponType": "claymore",
-  "icon": "./images/weapons/Rainslasher.webp"
-}
+{"name":"Rainslasher","rarity":4,"weaponType":"claymore","icon":"Rainslasher.webp"}

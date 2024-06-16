@@ -1,6 +1,1 @@
-{
-  "name": "Only Silence Remains",
-  "rarity": 4,
-  "weaponType": "hunt",
-  "icon": "./images/weapons/OnlySilenceRemains.webp"
-}
+{"name":"Only Silence Remains","rarity":4,"weaponType":"hunt","icon":"OnlySilenceRemains.webp"}

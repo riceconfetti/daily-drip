@@ -1,6 +1,1 @@
-{
-  "name": "Polar Star",
-  "rarity": 5,
-  "weaponType": "bow",
-  "icon": "./images/weapons/PolarStar.webp"
-}
+{"name":"Polar Star","rarity":5,"weaponType":"bow","icon":"PolarStar.webp"}

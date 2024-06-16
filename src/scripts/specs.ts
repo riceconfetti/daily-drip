@@ -146,7 +146,7 @@ export function getPhase(
         rarity: 4,
         game: game,
         weaponType: "default",
-        icon: "./images/weapons/default/fourStars/starrail_default.png",
+        icon: `./images/weapons/default/fourStars/${game}_default.png`,
       });
     }
   }

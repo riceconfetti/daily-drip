@@ -1,6 +1,1 @@
-{
-  "name": "On the Fall of an Aeon",
-  "rarity": 5,
-  "weaponType": "destruction",
-  "icon": "./images/weapons/OntheFallofanAeon.webp"
-}
+{"name":"On the Fall of an Aeon","rarity":5,"weaponType":"destruction","icon":"OntheFallofanAeon.webp"}

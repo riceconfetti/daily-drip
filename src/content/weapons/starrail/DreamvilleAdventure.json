@@ -1,6 +1,1 @@
-{
-  "name": "Dreamville Adventure",
-  "rarity": 4,
-  "weaponType": "harmony",
-  "icon": "./images/weapons/DreamvilleAdventure.webp"
-}
+{"name":"Dreamville Adventure","rarity":4,"weaponType":"harmony","icon":"DreamvilleAdventure.webp"}

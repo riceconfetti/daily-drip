@@ -1,6 +1,1 @@
-{
-  "name": "Sailing Towards a Second Life",
-  "rarity": 5,
-  "weaponType": "hunt",
-  "icon": "./images/weapons/SailingTowardsaSecondLife.webp"
-}
+{"name":"Sailing Towards a Second Life","rarity":5,"weaponType":"hunt","icon":"SailingTowardsaSecondLife.webp"}

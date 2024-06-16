@@ -1,6 +1,1 @@
-{
-  "name": "What Is Real?",
-  "rarity": 4,
-  "weaponType": "abundance",
-  "icon": "./images/weapons/WhatIsReal.webp"
-}
+{"name":"What Is Real?","rarity":4,"weaponType":"abundance","icon":"WhatIsReal.webp"}

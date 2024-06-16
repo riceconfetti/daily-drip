@@ -1,6 +1,1 @@
-{
-  "name": "Fading Twilight",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/FadingTwilight.webp"
-}
+{"name":"Fading Twilight","rarity":4,"weaponType":"bow","icon":"FadingTwilight.webp"}

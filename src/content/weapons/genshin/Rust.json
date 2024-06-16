@@ -1,6 +1,1 @@
-{
-  "name": "Rust",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/Rust.webp"
-}
+{"name":"Rust","rarity":4,"weaponType":"bow","icon":"Rust.webp"}

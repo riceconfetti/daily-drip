@@ -1,6 +1,1 @@
-{
-  "name": "Dialogues of the Desert Sages",
-  "rarity": 4,
-  "weaponType": "polearm",
-  "icon": "./images/weapons/DialoguesoftheDesertSages.webp"
-}
+{"name":"Dialogues of the Desert Sages","rarity":4,"weaponType":"polearm","icon":"DialoguesoftheDesertSages.webp"}

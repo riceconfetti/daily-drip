@@ -1,6 +1,1 @@
-{
-  "name": "Wolf-Fang",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/WolfFang.webp"
-}
+{"name":"Wolf-Fang","rarity":4,"weaponType":"sword","icon":"WolfFang.webp"}

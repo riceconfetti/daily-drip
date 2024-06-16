@@ -1,6 +1,1 @@
-{
-  "name": "The Alley Flash",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/TheAlleyFlash.webp"
-}
+{"name":"The Alley Flash","rarity":4,"weaponType":"sword","icon":"TheAlleyFlash.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Before Dawn",
-  "rarity": 5,
-  "weaponType": "erudition",
-  "icon": "./images/weapons/BeforeDawn.webp"
-}
+{"name":"Before Dawn","rarity":5,"weaponType":"erudition","icon":"BeforeDawn.webp"}

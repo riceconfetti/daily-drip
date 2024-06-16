@@ -1,6 +1,1 @@
-{
-  "name": "Mouun's Moon",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/MouunsMoon.webp"
-}
+{"name":"Mouun's Moon","rarity":4,"weaponType":"bow","icon":"MouunsMoon.webp"}

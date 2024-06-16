@@ -1,6 +1,1 @@
-{
-  "name": "Memories of the Past",
-  "rarity": 4,
-  "weaponType": "harmony",
-  "icon": "./images/weapons/MemoriesofthePast.webp"
-}
+{"name":"Memories of the Past","rarity":4,"weaponType":"harmony","icon":"MemoriesofthePast.webp"}

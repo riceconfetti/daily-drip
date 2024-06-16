@@ -1,6 +1,1 @@
-{
-  "name": "The Stringless",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/TheStringless.webp"
-}
+{"name":"The Stringless","rarity":4,"weaponType":"bow","icon":"TheStringless.webp"}

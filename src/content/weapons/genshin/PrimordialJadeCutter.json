@@ -1,6 +1,1 @@
-{
-  "name": "Primordial Jade Cutter",
-  "rarity": 5,
-  "weaponType": "sword",
-  "icon": "./images/weapons/PrimordialJadeCutter.webp"
-}
+{"name":"Primordial Jade Cutter","rarity":5,"weaponType":"sword","icon":"PrimordialJadeCutter.webp"}

@@ -83,7 +83,7 @@
                   {date}
                   month={month.value}
                   data-game={isDate(date)}
-                  class="crimson-text-regular p-2 leading-none group relative inline-flex w-full h-auto aspect-square items-center justify-center whitespace-nowrap rounded-9px border border-transparent bg-transparent text-sm font-normal text-foreground hover:border-foreground rounded-md data-[game='genshin']:bg-genshin-event data-[game='genshin']:text-white data-[game='starrail']:bg-starrail-event data-[game='starrail']:text-white data-[game='reverse']:bg-reverse-event data-[game='reverse']:text-white data-[game='wuwa']:bg-wuwa-event data-[game='wuwa']:text-white md:p-0 md:w-4 md:min-h-0 md:text-xs "
+                  class="crimson-text-regular p-2 leading-none group relative inline-flex w-full h-auto aspect-square items-center justify-center whitespace-nowrap rounded-9px border border-transparent bg-transparent text-sm font-normal text-foreground hover:border-foreground rounded-md data-[game='genshin']:bg-genshin-event data-[game='genshin']:text-white data-[game='starrail']:bg-starrail-event data-[game='starrail']:text-white data-[game='reverse']:bg-reverse-event data-[game='reverse']:text-white data-[game='wuwa']:bg-wuwa-event data-[game='wuwa']:text-white md:p-[.35rem] md:w-min md:min-h-0"
                 >
                   {date.day}
                 </Calendar.Day>

@@ -1,6 +1,1 @@
-{
-  "name": "Compound Bow",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/CompoundBow.webp"
-}
+{"name":"Compound Bow","rarity":4,"weaponType":"bow","icon":"CompoundBow.webp"}

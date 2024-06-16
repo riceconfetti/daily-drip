@@ -1,6 +1,1 @@
-{
-  "name": "Blackcliff Agate",
-  "rarity": 4,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/BlackcliffAgate.webp"
-}
+{"name":"Blackcliff Agate","rarity":4,"weaponType":"catalyst","icon":"BlackcliffAgate.webp"}

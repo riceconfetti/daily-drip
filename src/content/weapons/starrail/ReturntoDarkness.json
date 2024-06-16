@@ -1,6 +1,1 @@
-{
-  "name": "Return to Darkness",
-  "rarity": 4,
-  "weaponType": "hunt",
-  "icon": "./images/weapons/ReturntoDarkness.webp"
-}
+{"name":"Return to Darkness","rarity":4,"weaponType":"hunt","icon":"ReturntoDarkness.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Night on the Milky Way",
-  "rarity": 5,
-  "weaponType": "erudition",
-  "icon": "./images/weapons/NightontheMilkyWay.webp"
-}
+{"name":"Night on the Milky Way","rarity":5,"weaponType":"erudition","icon":"NightontheMilkyWay.webp"}

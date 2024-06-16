@@ -1,6 +1,1 @@
-{
-  "name": "Final Victor",
-  "rarity": 4,
-  "weaponType": "hunt",
-  "icon": "./images/weapons/FinalVictor.webp"
-}
+{"name":"Final Victor","rarity":4,"weaponType":"hunt","icon":"FinalVictor.webp"}

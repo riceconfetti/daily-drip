@@ -1,6 +1,1 @@
-{
-  "name": "Splendor of Tranquil Waters",
-  "rarity": 5,
-  "weaponType": "sword",
-  "icon": "./images/weapons/SplendorofTranquilWaters.webp"
-}
+{"name":"Splendor of Tranquil Waters","rarity":5,"weaponType":"sword","icon":"SplendorofTranquilWaters.webp"}

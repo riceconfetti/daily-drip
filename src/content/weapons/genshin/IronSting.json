@@ -1,6 +1,1 @@
-{
-  "name": "Iron Sting",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/IronSting.webp"
-}
+{"name":"Iron Sting","rarity":4,"weaponType":"sword","icon":"IronSting.webp"}

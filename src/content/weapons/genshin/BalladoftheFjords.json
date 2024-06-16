@@ -1,6 +1,1 @@
-{
-  "name": "Ballad of the Fjords",
-  "rarity": 4,
-  "weaponType": "polearm",
-  "icon": "./images/weapons/BalladoftheFjords.webp"
-}
+{"name":"Ballad of the Fjords","rarity":4,"weaponType":"polearm","icon":"BalladoftheFjords.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Skyward Atlas",
-  "rarity": 5,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/SkywardAtlas.webp"
-}
+{"name":"Skyward Atlas","rarity":5,"weaponType":"catalyst","icon":"SkywardAtlas.webp"}

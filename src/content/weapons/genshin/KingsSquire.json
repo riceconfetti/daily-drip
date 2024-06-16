@@ -1,6 +1,1 @@
-{
-  "name": "King's Squire",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/KingsSquire.webp"
-}
+{"name":"King's Squire","rarity":4,"weaponType":"bow","icon":"KingsSquire.webp"}

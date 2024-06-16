@@ -1,6 +1,1 @@
-{
-  "name": "Favonius Warbow",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/FavoniusWarbow.webp"
-}
+{"name":"Favonius Warbow","rarity":4,"weaponType":"bow","icon":"FavoniusWarbow.webp"}

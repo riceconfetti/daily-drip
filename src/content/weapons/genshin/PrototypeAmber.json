@@ -1,6 +1,1 @@
-{
-  "name": "Prototype Amber",
-  "rarity": 4,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/PrototypeAmber.webp"
-}
+{"name":"Prototype Amber","rarity":4,"weaponType":"catalyst","icon":"PrototypeAmber.webp"}

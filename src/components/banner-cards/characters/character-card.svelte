@@ -12,7 +12,9 @@
     <FiveStarCard {character} {images} {game} />
   {/each}
   <div class="flex flex-col justify-between gap-2">
-    <h2 class="text-2xs text-right mt-1 text-dark sm:text-sm">
+    <h2
+      class="text-2xs text-right mt-1 text-dark sm:text-sm md:text-lg lg:text-base xl:text-lg"
+    >
       Featured Four Stars
     </h2>
     {#each characters.fourStars as character}

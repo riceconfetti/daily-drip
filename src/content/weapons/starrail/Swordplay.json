@@ -1,6 +1,1 @@
-{
-  "name": "Swordplay",
-  "rarity": 4,
-  "weaponType": "hunt",
-  "icon": "./images/weapons/Swordplay.webp"
-}
+{"name":"Swordplay","rarity":4,"weaponType":"hunt","icon":"Swordplay.webp"}

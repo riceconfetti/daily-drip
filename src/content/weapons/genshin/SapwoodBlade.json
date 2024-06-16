@@ -1,6 +1,1 @@
-{
-  "name": "Sapwood Blade",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/SapwoodBlade.webp"
-}
+{"name":"Sapwood Blade","rarity":4,"weaponType":"sword","icon":"SapwoodBlade.webp"}

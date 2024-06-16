@@ -1,6 +1,1 @@
-{
-  "name": "Summit Shaper",
-  "rarity": 5,
-  "weaponType": "sword",
-  "icon": "./images/weapons/SummitShaper.webp"
-}
+{"name":"Summit Shaper","rarity":5,"weaponType":"sword","icon":"SummitShaper.webp"}

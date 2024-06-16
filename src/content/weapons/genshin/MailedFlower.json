@@ -1,6 +1,1 @@
-{
-  "name": "Mailed Flower",
-  "rarity": 4,
-  "weaponType": "claymore",
-  "icon": "./images/weapons/MailedFlower.webp"
-}
+{"name":"Mailed Flower","rarity":4,"weaponType":"claymore","icon":"MailedFlower.webp"}

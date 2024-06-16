@@ -1,6 +1,1 @@
-{
-  "name": "Skyward Harp",
-  "rarity": 5,
-  "weaponType": "bow",
-  "icon": "./images/weapons/SkywardHarp.webp"
-}
+{"name":"Skyward Harp","rarity":5,"weaponType":"bow","icon":"SkywardHarp.webp"}

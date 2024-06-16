@@ -1,6 +1,1 @@
-{
-  "name": "In the Name of the World",
-  "rarity": 5,
-  "weaponType": "nihility",
-  "icon": "./images/weapons/IntheNameoftheWorld.webp"
-}
+{"name":"In the Name of the World","rarity":5,"weaponType":"nihility","icon":"IntheNameoftheWorld.webp"}

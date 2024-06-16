@@ -1,6 +1,1 @@
-{
-  "name": "Good Night and Sleep Well",
-  "rarity": 4,
-  "weaponType": "nihility",
-  "icon": "./images/weapons/GoodNightandSleepWell.webp"
-}
+{"name":"Good Night and Sleep Well","rarity":4,"weaponType":"nihility","icon":"GoodNightandSleepWell.webp"}

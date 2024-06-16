@@ -1,6 +1,1 @@
-{
-  "name": "Elegy for the End",
-  "rarity": 5,
-  "weaponType": "bow",
-  "icon": "./images/weapons/ElegyfortheEnd.webp"
-}
+{"name":"Elegy for the End","rarity":5,"weaponType":"bow","icon":"ElegyfortheEnd.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Flames Afar",
-  "rarity": 4,
-  "weaponType": "destruction",
-  "icon": "./images/weapons/FlamesAfar.webp"
-}
+{"name":"Flames Afar","rarity":4,"weaponType":"destruction","icon":"FlamesAfar.webp"}

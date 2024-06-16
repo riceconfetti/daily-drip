@@ -1,6 +1,1 @@
-{
-  "name": "Aquila Favonia",
-  "rarity": 5,
-  "weaponType": "sword",
-  "icon": "./images/weapons/AquilaFavonia.webp"
-}
+{"name":"Aquila Favonia","rarity":5,"weaponType":"sword","icon":"AquilaFavonia.webp"}

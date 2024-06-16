@@ -1,6 +1,1 @@
-{
-  "name": "Today Is Another Peaceful Day",
-  "rarity": 4,
-  "weaponType": "erudition",
-  "icon": "./images/weapons/TodayIsAnotherPeacefulDay.webp"
-}
+{"name":"Today Is Another Peaceful Day","rarity":4,"weaponType":"erudition","icon":"TodayIsAnotherPeacefulDay.webp"}

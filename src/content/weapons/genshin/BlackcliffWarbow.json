@@ -1,6 +1,1 @@
-{
-  "name": "Blackcliff Warbow",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/BlackcliffWarbow.webp"
-}
+{"name":"Blackcliff Warbow","rarity":4,"weaponType":"bow","icon":"BlackcliffWarbow.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "The Moles Welcome You",
-  "rarity": 4,
-  "weaponType": "destruction",
-  "icon": "./images/weapons/TheMolesWelcomeYou.webp"
-}
+{"name":"The Moles Welcome You","rarity":4,"weaponType":"destruction","icon":"TheMolesWelcomeYou.webp"}

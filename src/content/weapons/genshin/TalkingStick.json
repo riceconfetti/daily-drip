@@ -1,6 +1,1 @@
-{
-  "name": "Talking Stick",
-  "rarity": 4,
-  "weaponType": "claymore",
-  "icon": "./images/weapons/TalkingStick.webp"
-}
+{"name":"Talking Stick","rarity":4,"weaponType":"claymore","icon":"TalkingStick.webp"}

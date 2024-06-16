@@ -1,6 +1,1 @@
-{
-  "name": "Prospector's Drill",
-  "rarity": 4,
-  "weaponType": "polearm",
-  "icon": "./images/weapons/ProspectorsDrill.webp"
-}
+{"name":"Prospector's Drill","rarity":4,"weaponType":"polearm","icon":"ProspectorsDrill.webp"}
