@@ -1,1 +1,6 @@
-{"name":"Crescent Pike","rarity":4,"weaponType":"polearm","icon":"CrescentPike.webp"}
+{
+  "name": "Crescent Pike",
+  "rarity": 4,
+  "weaponType": "polearm",
+  "icon": "CrescentPike.webp"
+}

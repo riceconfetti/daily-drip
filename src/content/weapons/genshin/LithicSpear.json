@@ -1,1 +1,6 @@
-{"name":"Lithic Spear","rarity":4,"weaponType":"polearm","icon":"LithicSpear.webp"}
+{
+  "name": "Lithic Spear",
+  "rarity": 4,
+  "weaponType": "polearm",
+  "icon": "LithicSpear.webp"
+}

@@ -1,1 +1,6 @@
-{"name":"Toukabou Shigure","rarity":4,"weaponType":"sword","icon":"ToukabouShigure.webp"}
+{
+  "name": "Toukabou Shigure",
+  "rarity": 4,
+  "weaponType": "sword",
+  "icon": "ToukabouShigure.webp"
+}

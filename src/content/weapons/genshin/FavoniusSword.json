@@ -1,1 +1,6 @@
-{"name":"Favonius Sword","rarity":4,"weaponType":"sword","icon":"FavoniusSword.webp"}
+{
+  "name": "Favonius Sword",
+  "rarity": 4,
+  "weaponType": "sword",
+  "icon": "FavoniusSword.webp"
+}

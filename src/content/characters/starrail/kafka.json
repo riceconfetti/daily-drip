@@ -5,9 +5,9 @@
   "weaponType": "nihility",
   "bannerName": "Nessun Dorma",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#561D3E] to-[#655061]",
+    "secondary": "bg-gradient-to-t from-[#561D3E] to-[#65506100]",
+    "textAccent": "text-[#17001A]"
   },
   "images": {
     "gachaSplash": "kafka/gachaSpash",

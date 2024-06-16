@@ -1,1 +1,6 @@
-{"name":"Moonpiercer","rarity":4,"weaponType":"polearm","icon":"Moonpiercer.webp"}
+{
+  "name": "Moonpiercer",
+  "rarity": 4,
+  "weaponType": "polearm",
+  "icon": "Moonpiercer.webp"
+}

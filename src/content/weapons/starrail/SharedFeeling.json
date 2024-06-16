@@ -1,1 +1,6 @@
-{"name":"Shared Feeling","rarity":4,"weaponType":"abundance","icon":"SharedFeeling.webp"}
+{
+  "name": "Shared Feeling",
+  "rarity": 4,
+  "weaponType": "abundance",
+  "icon": "SharedFeeling.webp"
+}

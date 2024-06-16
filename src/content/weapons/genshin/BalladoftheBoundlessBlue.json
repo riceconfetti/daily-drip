@@ -1,1 +1,6 @@
-{"name":"Ballad of the Boundless Blue","rarity":4,"weaponType":"catalyst","icon":"BalladoftheBoundlessBlue.webp"}
+{
+  "name": "Ballad of the Boundless Blue",
+  "rarity": 4,
+  "weaponType": "catalyst",
+  "icon": "BalladoftheBoundlessBlue.webp"
+}

@@ -10,8 +10,8 @@
     "bannerCard": "sparkle/bannerCard"
   },
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#7F0F0F] to-[#CD7177]",
+    "secondary": "bg-gradient-to-t from-[#7F0F0F] to-[#CD717700]",
+    "textAccent": "text-[#1E2344]"
   }
 }

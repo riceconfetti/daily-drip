@@ -1,1 +1,6 @@
-{"name":"Crimson Moon's Semblance","rarity":5,"weaponType":"polearm","icon":"CrimsonMoonsSemblance.webp"}
+{
+  "name": "Crimson Moon's Semblance",
+  "rarity": 5,
+  "weaponType": "polearm",
+  "icon": "CrimsonMoonsSemblance.webp"
+}

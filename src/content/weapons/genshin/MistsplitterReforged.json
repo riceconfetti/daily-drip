@@ -1,1 +1,6 @@
-{"name":"Mistsplitter Reforged","rarity":5,"weaponType":"sword","icon":"MistsplitterReforged.webp"}
+{
+  "name": "Mistsplitter Reforged",
+  "rarity": 5,
+  "weaponType": "sword",
+  "icon": "MistsplitterReforged.webp"
+}

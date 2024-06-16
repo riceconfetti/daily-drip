@@ -10,8 +10,8 @@
     "bannerCard": "silverwolf/bannerCard"
   },
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#111A3D] to-[#4F50BC]",
+    "secondary": "bg-gradient-to-t from-[#111A3D] to-[#4F50BC00]",
+    "textAccent": "text-[#E47FDD]"
   }
 }

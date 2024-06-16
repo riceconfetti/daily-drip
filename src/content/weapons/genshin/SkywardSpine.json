@@ -1,1 +1,6 @@
-{"name":"Skyward Spine","rarity":5,"weaponType":"polearm","icon":"SkywardSpine.webp"}
+{
+  "name": "Skyward Spine",
+  "rarity": 5,
+  "weaponType": "polearm",
+  "icon": "SkywardSpine.webp"
+}

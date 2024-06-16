@@ -1,1 +1,6 @@
-{"name":"This Is Me!","rarity":4,"weaponType":"preservation","icon":"ThisIsMe.webp"}
+{
+  "name": "This Is Me!",
+  "rarity": 4,
+  "weaponType": "preservation",
+  "icon": "ThisIsMe.webp"
+}

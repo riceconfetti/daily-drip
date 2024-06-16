@@ -4,8 +4,9 @@
     images.weapons[`../assets/weapons/${weapon.icon}`] != undefined
       ? images.weapons[`../assets/weapons/${weapon.icon}`]
       : images.placeHolders[
-          `../assets/placeholders/${game}/fiveStar_${weapon.game != "genshin" ? "default" : weapon.weaponType}.png`
+          `../assets/placeholders/${game}/fiveStar_${game != "genshin" ? "default" : weapon.weaponType}.png`
         ];
+  //console.log(weaponImage);
   if (weaponImage == undefined) {
     console.log(weaponImage);
   }
@@ -14,7 +15,9 @@
 <div
   class="flex relative h-auto justify-between w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 rounded-sm items-center"
 >
-  <div class="h-min p-2 pr-4">
+  <div
+    class="h-min p-2 pr-4 sm:max-w-[130px] lg:max-w-[110px] xl:max-w-[130px]"
+  >
     <h1
       class="text-[.3rem] text-balance sm:text-2xs md:text-xs lg:text-[.45rem] lg:leading-normal xl:text-[.7rem]"
     >

@@ -1,1 +1,6 @@
-{"name":"Mappa Mare","rarity":4,"weaponType":"catalyst","icon":"MappaMare.webp"}
+{
+  "name": "Mappa Mare",
+  "rarity": 4,
+  "weaponType": "catalyst",
+  "icon": "MappaMare.webp"
+}

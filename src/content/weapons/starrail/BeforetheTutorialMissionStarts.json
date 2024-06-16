@@ -1,1 +1,6 @@
-{"name":"Before the Tutorial Mission Starts","rarity":4,"weaponType":"nihility","icon":"BeforetheTutorialMissionStarts.webp"}
+{
+  "name": "Before the Tutorial Mission Starts",
+  "rarity": 4,
+  "weaponType": "nihility",
+  "icon": "BeforetheTutorialMissionStarts.webp"
+}

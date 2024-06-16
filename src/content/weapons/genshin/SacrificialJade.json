@@ -1,1 +1,6 @@
-{"name":"Sacrificial Jade","rarity":4,"weaponType":"catalyst","icon":"SacrificialJade.webp"}
+{
+  "name": "Sacrificial Jade",
+  "rarity": 4,
+  "weaponType": "catalyst",
+  "icon": "SacrificialJade.webp"
+}

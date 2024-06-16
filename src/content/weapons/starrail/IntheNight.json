@@ -1,1 +1,6 @@
-{"name":"In the Night","rarity":5,"weaponType":"hunt","icon":"IntheNight.webp"}
+{
+  "name": "In the Night",
+  "rarity": 5,
+  "weaponType": "hunt",
+  "icon": "IntheNight.webp"
+}

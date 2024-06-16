@@ -1,1 +1,6 @@
-{"name":"Blackcliff Warbow","rarity":4,"weaponType":"bow","icon":"BlackcliffWarbow.webp"}
+{
+  "name": "Blackcliff Warbow",
+  "rarity": 4,
+  "weaponType": "bow",
+  "icon": "BlackcliffWarbow.webp"
+}

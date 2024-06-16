@@ -1,1 +1,6 @@
-{"name":"Mitternachts Waltz","rarity":4,"weaponType":"bow","icon":"MitternachtsWaltz.webp"}
+{
+  "name": "Mitternachts Waltz",
+  "rarity": 4,
+  "weaponType": "bow",
+  "icon": "MitternachtsWaltz.webp"
+}
