@@ -14,10 +14,9 @@
       : images.placeHolders[
           `../assets/placeholders/${game}/${game === "starrail" ? character.weaponType : character.element}.png`
         ];
-  // if (gachaCard == undefined) {
-  //   console.log(character);
-  // }
-  // console.log(character.name)
+  if (gachaCard == undefined) {
+    console.log(character);
+  }
 </script>
 
 <div
@@ -47,7 +46,7 @@
         .default.src}
     />
     <Image
-      class={`relative w-full h-full ${character.spec ? "border-2 lg:border-4 [border-image:url(/textures/holo-4.jpg)_10_round]" : ""}`}
+      class={`relative w-full h-full ${character.spec ? "border-2 sm:border-4 md:border-6 [border-image:url(/textures/holo-4.jpg)_10_round]" : ""}`}
       src={gachaCard.default.src}
       alt={`${character.name} Art`}
       height={1050}

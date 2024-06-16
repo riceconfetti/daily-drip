@@ -5,9 +5,9 @@
   "weaponType": "rectifier",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/encore/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/encore/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/encore/bannerCard.png"
+    "gachaSplash": "encore/gachaSpash",
+    "gachaCard": "encore/gachaCard",
+    "bannerCard": "encore/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

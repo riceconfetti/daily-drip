@@ -4,8 +4,8 @@
   "element": "glacio",
   "weaponType": "rectifier",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/baizhi/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/baizhi/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/baizhi/bannerCard.png"
+    "gachaSplash": "baizhi/gachaSpash",
+    "gachaCard": "baizhi/gachaCard",
+    "bannerCard": "baizhi/bannerCard"
   }
 }

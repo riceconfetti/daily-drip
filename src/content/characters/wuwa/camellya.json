@@ -5,9 +5,9 @@
   "weaponType": "sword",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/camellya/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/camellya/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/camellya/bannerCard.png"
+    "gachaSplash": "camellya/gachaSpash",
+    "gachaCard": "camellya/gachaCard",
+    "bannerCard": "camellya/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

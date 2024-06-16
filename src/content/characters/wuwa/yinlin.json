@@ -5,9 +5,9 @@
   "weaponType": "rectifier",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/yinlin/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/yinlin/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/yinlin/bannerCard.png"
+    "gachaSplash": "yinlin/gachaSpash",
+    "gachaCard": "yinlin/gachaCard",
+    "bannerCard": "yinlin/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

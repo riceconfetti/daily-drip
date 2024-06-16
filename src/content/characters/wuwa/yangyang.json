@@ -4,8 +4,8 @@
   "element": "aero",
   "weaponType": "sword",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/yangyang/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/yangyang/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/yangyang/bannerCard.png"
+    "gachaSplash": "yangyang/gachaSpash",
+    "gachaCard": "yangyang/gachaCard",
+    "bannerCard": "yangyang/bannerCard"
   }
 }

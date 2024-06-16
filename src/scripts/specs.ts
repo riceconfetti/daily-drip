@@ -30,7 +30,8 @@ export function getPhase(
       number === 0
         ? event.data.startDate === data.startDate
         : number === 1
-        ? event.data.endDate === data.endDate
+        ? dayjs(event.data.startDate) > dayjs(data.startDate) &&
+          dayjs(event.data.startDate) < dayjs(data.endDate)
         : false;
 
     if (inPhase) {
@@ -51,7 +52,9 @@ export function getPhase(
     }
   });
 
-  while (phase.characters.fiveStars.length < 2) {
+  let simBanners = game == "wuwa" ? 1 : 2;
+
+  while (phase.characters.fiveStars.length < simBanners) {
     phase.characters.fiveStars.push({
       name: "????",
       rarity: 5,
@@ -100,7 +103,7 @@ export function getPhase(
     phase.weapons.fourStars.push(weapon.data);
   });
 
-  while (phase.weapons.fiveStars.length < 2) {
+  while (phase.weapons.fiveStars.length < simBanners) {
     phase.weapons.fiveStars.push({
       name: "????",
       rarity: 5,
@@ -110,7 +113,7 @@ export function getPhase(
     });
   }
 
-  if (phase.weapons.fourStars.length < 5 && game != "starrail") {
+  if (phase.weapons.fourStars.length < 5 && game == "genshin") {
     const weaponTypes = {
       genshin: ["bow", "sword", "catalyst", "polearm", "claymore"],
     };
@@ -136,7 +139,7 @@ export function getPhase(
         weaponTypes[game].indexOf(b.weaponType)
       );
     });
-  } else if (game == "starrail") {
+  } else {
     while (phase.weapons.fourStars.length < 3) {
       phase.weapons.fourStars.push({
         name: "????",

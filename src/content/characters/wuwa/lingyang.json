@@ -5,9 +5,9 @@
   "weaponType": "gauntlet",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/lingyang/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/lingyang/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/lingyang/bannerCard.png"
+    "gachaSplash": "lingyang/gachaSpash",
+    "gachaCard": "lingyang/gachaCard",
+    "bannerCard": "lingyang/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

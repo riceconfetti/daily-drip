@@ -22,11 +22,11 @@ const fs = require("fs");
 //   });
 // });
 
-let characters = fs.readdirSync("./src/content/characters/genshin");
+let characters = fs.readdirSync("./src/content/characters/wuwa");
 
 characters.forEach((c) => {
   fs.readFile(
-    `./src/content/characters/genshin/${c}`,
+    `./src/content/characters/wuwa/${c}`,
     "utf8",
     function (err, data) {
       if (err) {
@@ -66,7 +66,7 @@ characters.forEach((c) => {
       }
 
       fs.writeFile(
-        `./src/content/characters/genshin/${c}`,
+        `./src/content/characters/wuwa/${c}`,
         JSON.stringify(character),
         (err) => {
           if (err) {
@@ -118,7 +118,7 @@ characters.forEach((c) => {
 //   };
 
 //   fs.writeFile(
-//     `./src/content/weapons/genshin/${w.replace(
+//     `./src/content/weapons/wuwa/${w.replace(
 //       /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
 //       "",
 //     )}.json`,
