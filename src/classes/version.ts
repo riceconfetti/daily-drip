@@ -19,6 +19,10 @@ export class Version {
   endDate: string;
   name?: string;
   phases?: Phase[];
+  chronicle: {
+    characters: Character[];
+    weapons: Weapon[];
+  };
   constructor(data) {
     this.version = data.version;
     this.startDate = data.startDate;
