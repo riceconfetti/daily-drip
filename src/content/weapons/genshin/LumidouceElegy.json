@@ -1,1 +1,6 @@
-{"name":"Lumidouce Elegy","rarity":5,"weaponType":"polearm","icon":"LumidouceElegy.webp"}
+{
+  "name": "Lumidouce Elegy",
+  "rarity": 5,
+  "weaponType": "polearm",
+  "icon": "LumidouceElegy.webp"
+}

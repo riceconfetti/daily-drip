@@ -1,1 +1,6 @@
-{"name":"Night of Fright","rarity":5,"weaponType":"abundance","icon":"NightofFright.webp"}
+{
+  "name": "Night of Fright",
+  "rarity": 5,
+  "weaponType": "abundance",
+  "icon": "NightofFright.webp"
+}

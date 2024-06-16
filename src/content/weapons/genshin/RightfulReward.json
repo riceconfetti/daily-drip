@@ -1,1 +1,6 @@
-{"name":"Rightful Reward","rarity":4,"weaponType":"polearm","icon":"RightfulReward.webp"}
+{
+  "name": "Rightful Reward",
+  "rarity": 4,
+  "weaponType": "polearm",
+  "icon": "RightfulReward.webp"
+}

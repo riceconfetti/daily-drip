@@ -5,9 +5,9 @@
   "weaponType": "destruction",
   "bannerName": "Gentle Eclipse of the Moon",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#67A5EA] to-[#F8FEFF]",
+    "secondary": "bg-gradient-to-t from-[#121C33] to-[#6DAAEB00]",
+    "textAccent": "text-[#3950BB]"
   },
   "images": {
     "gachaSplash": "jingliu/gachaSpash",

@@ -1,1 +1,6 @@
-{"name":"I Shall Be My Own Sword","rarity":5,"weaponType":"destruction","icon":"IShallBeMyOwnSword.webp"}
+{
+  "name": "I Shall Be My Own Sword",
+  "rarity": 5,
+  "weaponType": "destruction",
+  "icon": "IShallBeMyOwnSword.webp"
+}

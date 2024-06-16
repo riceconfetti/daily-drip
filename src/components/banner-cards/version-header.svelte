@@ -1,6 +1,6 @@
 <script lang="ts">
   import dayjs from "dayjs";
-  export let version;
+  export let version, game;
 </script>
 
 <div class="flex flex-col gap-2 sm:col-span-2">
@@ -10,9 +10,7 @@
     <p>Version {version.version}</p>
     <p>{dayjs(version.startDate).format("MMMM DD YYYY")}</p>
   </div>
-  <h1
-    class="playfair-display-sc-bold text-dark text-center sm:text-2xl md:text-4xl"
-  >
+  <h1 class="{game} text-dark text-center sm:text-2xl md:text-4xl py-2">
     {version.name ? version.name : `Version ${version.version} - XXXXX`}
   </h1>
 </div>

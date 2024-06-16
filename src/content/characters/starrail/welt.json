@@ -10,8 +10,8 @@
     "bannerCard": "welt/bannerCard"
   },
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#2D3E78] to-[#F8F6F8]",
+    "secondary": "bg-gradient-to-t from-[#2D3E78] to-[#94949400]",
+    "textAccent": "text-[#6B1334]"
   }
 }

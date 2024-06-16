@@ -11,7 +11,7 @@
 <section
   class={`flex flex-col gap-3 bg-white bg-opacity-30 shadow-md p-4 ${game} lg:grid lg:grid-cols-2 lg:gap-5`}
 >
-  <VersionHeader {version} />
+  <VersionHeader {version} {game} />
   {#each version.phases as phase}
     <div
       class={`flex flex-col gap-2 ${dayjs(phase.date) < dayjs() ? "grayscale" : ""}`}

@@ -1,1 +1,6 @@
-{"name":"Whiteblind","rarity":4,"weaponType":"claymore","icon":"Whiteblind.webp"}
+{
+  "name": "Whiteblind",
+  "rarity": 4,
+  "weaponType": "claymore",
+  "icon": "Whiteblind.webp"
+}

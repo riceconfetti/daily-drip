@@ -22,55 +22,55 @@ const fs = require("fs");
 //   });
 // });
 
-// let characters = fs.readdirSync("./src/content/characters/wuwa");
+let characters = fs.readdirSync("./src/content/characters/starrail");
 
-// fs.readFile("utils/wuwaGradients.json", "utf8", function (err, data) {
-//   if (err) {
-//     console.error(err);
-//     return;
-//   }
+fs.readFile("utils/starrailGradients.json", "utf8", function (err, data) {
+  if (err) {
+    console.error(err);
+    return;
+  }
 
-//   let gradient = JSON.parse(data);
+  let gradient = JSON.parse(data);
 
-//   characters.forEach((c) => {
-//     fs.readFile(
-//       `./src/content/characters/wuwa/${c}`,
-//       "utf8",
-//       function (err, data) {
-//         if (err) {
-//           console.log(err);
-//           return;
-//         }
-//         let character = JSON.parse(data);
+  characters.forEach((c) => {
+    fs.readFile(
+      `./src/content/characters/starrail/${c}`,
+      "utf8",
+      function (err, data) {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        let character = JSON.parse(data);
 
-//         console.log(gradient);
-//         console.log(character.name);
+        console.log(gradient);
+        console.log(character.name);
 
-//         if (gradient[character.name] != undefined) {
-//           character.colors = {
-//             primary: `bg-gradient-to-r from-[${
-//               gradient[character.name]["P-From"]
-//             }] to-[${gradient[character.name]["P-To"]}]`,
-//             secondary: `bg-gradient-to-t from-[${
-//               gradient[character.name]["S-From"]
-//             }] to-[${gradient[character.name]["S-To"]}00]`,
-//             textAccent: `text-[${gradient[character.name].Text}]`,
-//           };
-//         }
+        if (gradient[character.name] != undefined) {
+          character.colors = {
+            primary: `bg-gradient-to-r from-[${
+              gradient[character.name]["P-From"]
+            }] to-[${gradient[character.name]["P-To"]}]`,
+            secondary: `bg-gradient-to-t from-[${
+              gradient[character.name]["S-From"]
+            }] to-[${gradient[character.name]["S-To"]}00]`,
+            textAccent: `text-[${gradient[character.name].Text}]`,
+          };
+        }
 
-//         fs.writeFile(
-//           `./src/content/characters/wuwa/${c}`,
-//           JSON.stringify(character),
-//           (err) => {
-//             if (err) {
-//               console.error(err);
-//             }
-//           }
-//         );
-//       }
-//     );
-//   });
-// });
+        fs.writeFile(
+          `./src/content/characters/starrail/${c}`,
+          JSON.stringify(character),
+          (err) => {
+            if (err) {
+              console.error(err);
+            }
+          }
+        );
+      }
+    );
+  });
+});
 
 // characters.forEach((c) => {
 //   fs.readFile(

@@ -1,1 +1,6 @@
-{"name":"The Bell","rarity":4,"weaponType":"claymore","icon":"TheBell.webp"}
+{
+  "name": "The Bell",
+  "rarity": 4,
+  "weaponType": "claymore",
+  "icon": "TheBell.webp"
+}

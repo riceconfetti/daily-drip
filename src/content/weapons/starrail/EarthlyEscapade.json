@@ -1,1 +1,6 @@
-{"name":"Earthly Escapade","rarity":5,"weaponType":"harmony","icon":"EarthlyEscapade.webp"}
+{
+  "name": "Earthly Escapade",
+  "rarity": 5,
+  "weaponType": "harmony",
+  "icon": "EarthlyEscapade.webp"
+}

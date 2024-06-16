@@ -1,1 +1,6 @@
-{"name":"Wandering Evenstar","rarity":4,"weaponType":"catalyst","icon":"WanderingEvenstar.webp"}
+{
+  "name": "Wandering Evenstar",
+  "rarity": 4,
+  "weaponType": "catalyst",
+  "icon": "WanderingEvenstar.webp"
+}

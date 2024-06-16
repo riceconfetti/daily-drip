@@ -10,8 +10,8 @@
     "bannerCard": "acheron/bannerCard"
   },
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#222357] to-[#D9D5FC]",
+    "secondary": "bg-gradient-to-t from-[#121337] to-[#D9D5FC00]",
+    "textAccent": "text-[#F33241]"
   }
 }

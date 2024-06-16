@@ -5,9 +5,9 @@
   "weaponType": "erudition",
   "bannerName": "Swirl of Heavenly Spear",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#253E43] to-[#1E1A1A]",
+    "secondary": "bg-gradient-to-t from-[#253E43] to-[#1E1A1A00]",
+    "textAccent": "text-[#A13033]"
   },
   "images": {
     "gachaSplash": "jingyuan/gachaSpash",

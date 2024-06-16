@@ -1,1 +1,6 @@
-{"name":"Sword of Descension","rarity":4,"weaponType":"sword","icon":"SwordofDescension.webp"}
+{
+  "name": "Sword of Descension",
+  "rarity": 4,
+  "weaponType": "sword",
+  "icon": "SwordofDescension.webp"
+}

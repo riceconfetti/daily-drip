@@ -1,1 +1,6 @@
-{"name":"Staff of the Scarlet Sands","rarity":5,"weaponType":"polearm","icon":"StaffoftheScarletSands.webp"}
+{
+  "name": "Staff of the Scarlet Sands",
+  "rarity": 5,
+  "weaponType": "polearm",
+  "icon": "StaffoftheScarletSands.webp"
+}

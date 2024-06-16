@@ -1,1 +1,6 @@
-{"name":"Moment of Victory","rarity":5,"weaponType":"preservation","icon":"MomentofVictory.webp"}
+{
+  "name": "Moment of Victory",
+  "rarity": 5,
+  "weaponType": "preservation",
+  "icon": "MomentofVictory.webp"
+}

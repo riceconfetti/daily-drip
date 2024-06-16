@@ -5,9 +5,9 @@
   "weaponType": "preservation",
   "bannerName": "",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#0B1E6B] to-[#24BAFF]",
+    "secondary": "bg-gradient-to-t from-[#0B1E6B] to-[#24BAFF00]",
+    "textAccent": "text-[#CC8B3F]"
   },
   "images": {
     "gachaSplash": "gepard/gachaSpash",

@@ -5,9 +5,9 @@
   "weaponType": "nihility",
   "bannerName": "Ripples in Reflection",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#120465] to-[#E6E1FF]",
+    "secondary": "bg-gradient-to-t from-[#120465] to-[#E6E1FF00]",
+    "textAccent": "text-[#89D8FF]"
   },
   "images": {
     "gachaSplash": "blackswan/gachaSpash",

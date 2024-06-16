@@ -5,9 +5,9 @@
   "weaponType": "destruction",
   "bannerName": "",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#AE1D18] to-[#B66E69]",
+    "secondary": "bg-gradient-to-t from-[#AE1D18] to-[#B66E6900]",
+    "textAccent": "text-[#413065]"
   },
   "images": {
     "gachaSplash": "clara/gachaSpash",

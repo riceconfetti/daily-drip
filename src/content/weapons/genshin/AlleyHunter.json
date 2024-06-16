@@ -1,1 +1,6 @@
-{"name":"Alley Hunter","rarity":4,"weaponType":"bow","icon":"AlleyHunter.webp"}
+{
+  "name": "Alley Hunter",
+  "rarity": 4,
+  "weaponType": "bow",
+  "icon": "AlleyHunter.webp"
+}

@@ -1,1 +1,6 @@
-{"name":"Favonius Greatsword","rarity":4,"weaponType":"claymore","icon":"FavoniusGreatsword.webp"}
+{
+  "name": "Favonius Greatsword",
+  "rarity": 4,
+  "weaponType": "claymore",
+  "icon": "FavoniusGreatsword.webp"
+}

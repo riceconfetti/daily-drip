@@ -1,1 +1,6 @@
-{"name":"Deathmatch","rarity":4,"weaponType":"polearm","icon":"Deathmatch.webp"}
+{
+  "name": "Deathmatch",
+  "rarity": 4,
+  "weaponType": "polearm",
+  "icon": "Deathmatch.webp"
+}

@@ -5,9 +5,9 @@
   "weaponType": "preservation",
   "bannerName": "Forseen, Foreknown, Foretold",
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#351E4E] to-[#BF78A4]",
+    "secondary": "bg-gradient-to-t from-[#37223F] to-[#9F5A8300]",
+    "textAccent": "text-[#CA5FD7]"
   },
   "images": {
     "gachaSplash": "fuxuan/gachaSpash",

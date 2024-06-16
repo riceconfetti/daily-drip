@@ -1,1 +1,6 @@
-{"name":"Luxurious Sea-Lord","rarity":4,"weaponType":"claymore","icon":"LuxuriousSeaLord.webp"}
+{
+  "name": "Luxurious Sea-Lord",
+  "rarity": 4,
+  "weaponType": "claymore",
+  "icon": "LuxuriousSeaLord.webp"
+}

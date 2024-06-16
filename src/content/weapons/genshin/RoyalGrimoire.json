@@ -1,1 +1,6 @@
-{"name":"Royal Grimoire","rarity":4,"weaponType":"catalyst","icon":"RoyalGrimoire.webp"}
+{
+  "name": "Royal Grimoire",
+  "rarity": 4,
+  "weaponType": "catalyst",
+  "icon": "RoyalGrimoire.webp"
+}
