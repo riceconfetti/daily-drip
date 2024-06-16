@@ -1,6 +1,1 @@
-{
-  "name": "Post-Op Conversation",
-  "rarity": 4,
-  "weaponType": "abundance",
-  "icon": "./images/weapons/PostOpConversation.webp"
-}
+{"name":"Post-Op Conversation","rarity":4,"weaponType":"abundance","icon":"PostOpConversation.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Past and Future",
-  "rarity": 4,
-  "weaponType": "harmony",
-  "icon": "./images/weapons/PastandFuture.webp"
-}
+{"name":"Past and Future","rarity":4,"weaponType":"harmony","icon":"PastandFuture.webp"}

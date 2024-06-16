@@ -1,6 +1,1 @@
-{
-  "name": "Kagotsurube Isshin",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/KagotsurubeIsshin.webp"
-}
+{"name":"Kagotsurube Isshin","rarity":4,"weaponType":"sword","icon":"KagotsurubeIsshin.webp"}

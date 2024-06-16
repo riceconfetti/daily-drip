@@ -1,6 +1,1 @@
-{
-  "name": "Brighter Than the Sun",
-  "rarity": 5,
-  "weaponType": "destruction",
-  "icon": "./images/weapons/BrighterThantheSun.webp"
-}
+{"name":"Brighter Than the Sun","rarity":5,"weaponType":"destruction","icon":"BrighterThantheSun.webp"}

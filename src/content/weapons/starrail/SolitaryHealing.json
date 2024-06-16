@@ -1,6 +1,1 @@
-{
-  "name": "Solitary Healing",
-  "rarity": 5,
-  "weaponType": "nihility",
-  "icon": "./images/weapons/SolitaryHealing.webp"
-}
+{"name":"Solitary Healing","rarity":5,"weaponType":"nihility","icon":"SolitaryHealing.webp"}

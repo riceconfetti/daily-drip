@@ -1,6 +1,1 @@
-{
-  "name": "Quid Pro Quo",
-  "rarity": 4,
-  "weaponType": "abundance",
-  "icon": "./images/weapons/QuidProQuo.webp"
-}
+{"name":"Quid Pro Quo","rarity":4,"weaponType":"abundance","icon":"QuidProQuo.webp"}

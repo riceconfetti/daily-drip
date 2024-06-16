@@ -1,6 +1,1 @@
-{
-  "name": "Favonius Codex",
-  "rarity": 4,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/FavoniusCodex.webp"
-}
+{"name":"Favonius Codex","rarity":4,"weaponType":"catalyst","icon":"FavoniusCodex.webp"}

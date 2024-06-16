@@ -1,6 +1,1 @@
-{
-  "name": "Indelible Promise",
-  "rarity": 4,
-  "weaponType": "destruction",
-  "icon": "./images/weapons/IndeliblePromise.webp"
-}
+{"name":"Indelible Promise","rarity":4,"weaponType":"destruction","icon":"IndeliblePromise.webp"}

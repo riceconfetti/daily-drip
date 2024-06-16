@@ -1,6 +1,1 @@
-{
-  "name": "Dodoco Tales",
-  "rarity": 4,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/DodocoTales.webp"
-}
+{"name":"Dodoco Tales","rarity":4,"weaponType":"catalyst","icon":"DodocoTales.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "The Dockhand's Assistant",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/TheDockhandsAssistant.webp"
-}
+{"name":"The Dockhand's Assistant","rarity":4,"weaponType":"sword","icon":"TheDockhandsAssistant.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Sacrificial Bow",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/SacrificialBow.webp"
-}
+{"name":"Sacrificial Bow","rarity":4,"weaponType":"bow","icon":"SacrificialBow.webp"}

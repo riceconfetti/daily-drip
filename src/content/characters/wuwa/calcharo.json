@@ -10,8 +10,8 @@
     "bannerCard": "calcharo/bannerCard"
   },
   "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
+    "primary": "bg-gradient-to-r from-[#282143] to-[#786F98]",
+    "secondary": "bg-gradient-to-t from-[#2A2445] to-[#6859AB00]",
+    "textAccent": "text-[#A8A5D2]"
   }
 }

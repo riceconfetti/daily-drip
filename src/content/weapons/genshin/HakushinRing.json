@@ -1,6 +1,1 @@
-{
-  "name": "Hakushin Ring",
-  "rarity": 4,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/HakushinRing.webp"
-}
+{"name":"Hakushin Ring","rarity":4,"weaponType":"catalyst","icon":"HakushinRing.webp"}

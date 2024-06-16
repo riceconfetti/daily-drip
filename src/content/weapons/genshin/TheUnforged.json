@@ -1,6 +1,1 @@
-{
-  "name": "The Unforged",
-  "rarity": 5,
-  "weaponType": "claymore",
-  "icon": "./images/weapons/TheUnforged.webp"
-}
+{"name":"The Unforged","rarity":5,"weaponType":"claymore","icon":"TheUnforged.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Cloudforged",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/Cloudforged.webp"
-}
+{"name":"Cloudforged","rarity":4,"weaponType":"bow","icon":"Cloudforged.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Planetary Rendezvous",
-  "rarity": 4,
-  "weaponType": "harmony",
-  "icon": "./images/weapons/PlanetaryRendezvous.webp"
-}
+{"name":"Planetary Rendezvous","rarity":4,"weaponType":"harmony","icon":"PlanetaryRendezvous.webp"}

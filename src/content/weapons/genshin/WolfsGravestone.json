@@ -1,6 +1,1 @@
-{
-  "name": "Wolf's Gravestone",
-  "rarity": 5,
-  "weaponType": "claymore",
-  "icon": "./images/weapons/WolfsGravestone.webp"
-}
+{"name":"Wolf's Gravestone","rarity":5,"weaponType":"claymore","icon":"WolfsGravestone.webp"}

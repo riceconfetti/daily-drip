@@ -1,6 +1,1 @@
-{
-  "name": "River Flows in Spring",
-  "rarity": 4,
-  "weaponType": "hunt",
-  "icon": "./images/weapons/RiverFlowsinSpring.webp"
-}
+{"name":"River Flows in Spring","rarity":4,"weaponType":"hunt","icon":"RiverFlowsinSpring.webp"}

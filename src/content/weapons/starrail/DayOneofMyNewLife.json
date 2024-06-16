@@ -1,6 +1,1 @@
-{
-  "name": "Day One of My New Life",
-  "rarity": 4,
-  "weaponType": "preservation",
-  "icon": "./images/weapons/DayOneofMyNewLife.webp"
-}
+{"name":"Day One of My New Life","rarity":4,"weaponType":"preservation","icon":"DayOneofMyNewLife.webp"}

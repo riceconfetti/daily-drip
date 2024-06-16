@@ -1,6 +1,1 @@
-{
-  "name": "Texture of Memories",
-  "rarity": 5,
-  "weaponType": "preservation",
-  "icon": "./images/weapons/TextureofMemories.webp"
-}
+{"name":"Texture of Memories","rarity":5,"weaponType":"preservation","icon":"TextureofMemories.webp"}

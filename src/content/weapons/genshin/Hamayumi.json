@@ -1,6 +1,1 @@
-{
-  "name": "Hamayumi",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/Hamayumi.webp"
-}
+{"name":"Hamayumi","rarity":4,"weaponType":"bow","icon":"Hamayumi.webp"}

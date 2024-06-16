@@ -1,6 +1,1 @@
-{
-  "name": "Thundering Pulse",
-  "rarity": 5,
-  "weaponType": "bow",
-  "icon": "./images/weapons/ThunderingPulse.webp"
-}
+{"name":"Thundering Pulse","rarity":5,"weaponType":"bow","icon":"ThunderingPulse.webp"}

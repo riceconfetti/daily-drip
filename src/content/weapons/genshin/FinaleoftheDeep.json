@@ -1,6 +1,1 @@
-{
-  "name": "Finale of the Deep",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/FinaleoftheDeep.webp"
-}
+{"name":"Finale of the Deep","rarity":4,"weaponType":"sword","icon":"FinaleoftheDeep.webp"}

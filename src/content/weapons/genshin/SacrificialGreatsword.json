@@ -1,6 +1,1 @@
-{
-  "name": "Sacrificial Greatsword",
-  "rarity": 4,
-  "weaponType": "claymore",
-  "icon": "./images/weapons/SacrificialGreatsword.webp"
-}
+{"name":"Sacrificial Greatsword","rarity":4,"weaponType":"claymore","icon":"SacrificialGreatsword.webp"}

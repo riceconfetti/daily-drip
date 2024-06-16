@@ -1,6 +1,1 @@
-{
-  "name": "Forest Regalia",
-  "rarity": 4,
-  "weaponType": "claymore",
-  "icon": "./images/weapons/ForestRegalia.webp"
-}
+{"name":"Forest Regalia","rarity":4,"weaponType":"claymore","icon":"ForestRegalia.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Cinnabar Spindle",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/CinnabarSpindle.webp"
-}
+{"name":"Cinnabar Spindle","rarity":4,"weaponType":"sword","icon":"CinnabarSpindle.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Favonius Lance",
-  "rarity": 4,
-  "weaponType": "polearm",
-  "icon": "./images/weapons/FavoniusLance.webp"
-}
+{"name":"Favonius Lance","rarity":4,"weaponType":"polearm","icon":"FavoniusLance.webp"}

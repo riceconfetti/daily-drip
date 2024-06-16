@@ -1,21 +1,14 @@
 <script lang="ts">
   export let weapon, images, game;
   const weaponImage =
-    images.weapons[
-      `../assets/weapons/${weapon.name.replace(
-        /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-        ""
-      )}.webp`
-    ] != undefined
-      ? images.weapons[
-          `../assets/weapons/${weapon.name.replace(
-            /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-            ""
-          )}.webp`
-        ]
+    images.weapons[`../assets/weapons/${weapon.icon}`] != undefined
+      ? images.weapons[`../assets/weapons/${weapon.icon}`]
       : images.placeHolders[
-          `../assets/placeholders/${game}/fiveStar_${weapon.game == "starrail" ? "default" : weapon.weaponType}.png`
+          `../assets/placeholders/${game}/fiveStar_${weapon.game != "genshin" ? "default" : weapon.weaponType}.png`
         ];
+  if (weaponImage == undefined) {
+    console.log(weaponImage);
+  }
 </script>
 
 <div

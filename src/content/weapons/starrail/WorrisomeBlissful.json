@@ -1,6 +1,1 @@
-{
-  "name": "Worrisome, Blissful",
-  "rarity": 5,
-  "weaponType": "hunt",
-  "icon": "./images/weapons/WorrisomeBlissful.webp"
-}
+{"name":"Worrisome, Blissful","rarity":5,"weaponType":"hunt","icon":"WorrisomeBlissful.webp"}

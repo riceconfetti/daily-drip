@@ -1,6 +1,1 @@
-{
-  "name": "Prototype Crescent",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "./images/weapons/PrototypeCrescent.webp"
-}
+{"name":"Prototype Crescent","rarity":4,"weaponType":"bow","icon":"PrototypeCrescent.webp"}

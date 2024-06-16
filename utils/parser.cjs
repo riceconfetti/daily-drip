@@ -22,61 +22,109 @@ const fs = require("fs");
 //   });
 // });
 
-let characters = fs.readdirSync("./src/content/characters/wuwa");
+// let characters = fs.readdirSync("./src/content/characters/wuwa");
 
-characters.forEach((c) => {
-  fs.readFile(
-    `./src/content/characters/wuwa/${c}`,
-    "utf8",
-    function (err, data) {
-      if (err) {
-        console.log(err);
-        return;
-      }
-      let character = JSON.parse(data);
+// fs.readFile("utils/wuwaGradients.json", "utf8", function (err, data) {
+//   if (err) {
+//     console.error(err);
+//     return;
+//   }
 
-      if (character.splashArt) {
-        delete character.splashArt;
-      }
+//   let gradient = JSON.parse(data);
 
-      character.images = {
-        gachaSplash: `${character.name
-          .toLowerCase()
-          .replace(
-            /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-            ""
-          )}/gachaSpash`,
-        gachaCard: `${character.name
-          .toLowerCase()
-          .replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "")}/gachaCard`,
-        bannerCard: `${character.name
-          .toLowerCase()
-          .replace(
-            /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-            ""
-          )}/bannerCard`,
-      };
+//   characters.forEach((c) => {
+//     fs.readFile(
+//       `./src/content/characters/wuwa/${c}`,
+//       "utf8",
+//       function (err, data) {
+//         if (err) {
+//           console.log(err);
+//           return;
+//         }
+//         let character = JSON.parse(data);
 
-      if (character.rarity == 5 && character.colors == undefined) {
-        character.colors = {
-          primary: "bg-gradient-to-r from-[#000] to-[#fff]",
-          secondary: "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-          textAccent: "text-[#999]",
-        };
-      }
+//         console.log(gradient);
+//         console.log(character.name);
 
-      fs.writeFile(
-        `./src/content/characters/wuwa/${c}`,
-        JSON.stringify(character),
-        (err) => {
-          if (err) {
-            console.error(err);
-          }
-        }
-      );
-    }
-  );
-});
+//         if (gradient[character.name] != undefined) {
+//           character.colors = {
+//             primary: `bg-gradient-to-r from-[${
+//               gradient[character.name]["P-From"]
+//             }] to-[${gradient[character.name]["P-To"]}]`,
+//             secondary: `bg-gradient-to-t from-[${
+//               gradient[character.name]["S-From"]
+//             }] to-[${gradient[character.name]["S-To"]}00]`,
+//             textAccent: `text-[${gradient[character.name].Text}]`,
+//           };
+//         }
+
+//         fs.writeFile(
+//           `./src/content/characters/wuwa/${c}`,
+//           JSON.stringify(character),
+//           (err) => {
+//             if (err) {
+//               console.error(err);
+//             }
+//           }
+//         );
+//       }
+//     );
+//   });
+// });
+
+// characters.forEach((c) => {
+//   fs.readFile(
+//     `./src/content/characters/wuwa/${c}`,
+//     "utf8",
+//     function (err, data) {
+//       if (err) {
+//         console.log(err);
+//         return;
+//       }
+//       let character = JSON.parse(data);
+
+//       if (character.splashArt) {
+//         delete character.splashArt;
+//       }
+
+//       character.images = {
+//         gachaSplash: `${character.name
+//           .toLowerCase()
+//           .replace(
+//             /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+//             ""
+//           )}/gachaSpash`,
+//         gachaCard: `${character.name
+//           .toLowerCase()
+//           .replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "")}/gachaCard`,
+//         bannerCard: `${character.name
+//           .toLowerCase()
+//           .replace(
+//             /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+//             ""
+//           )}/bannerCard`,
+//       };
+
+//       if (character.rarity == 5 && character.colors == undefined) {
+//         character.colors = {
+//           primary: "bg-gradient-to-r from-[#000] to-[#fff]",
+//           secondary: "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+//           textAccent: "text-[#999]",
+//         };
+//       }
+
+//       fs.writeFile(
+//         `./src/content/characters/wuwa/${c}`,
+//         JSON.stringify(character),
+//         (err) => {
+//           if (err) {
+//             console.error(err);
+//           }
+//         }
+//       );
+//     }
+//   );
+// });
 
 // let weapons = [
 //   "Favonius Sword",
@@ -106,27 +154,33 @@ characters.forEach((c) => {
 // let type = "sword";
 // let rarity = 4;
 
-// weapons.forEach((w) => {
-//   let weapon = {
-//     name: w,
-//     rarity: rarity,
-//     weaponType: type,
-//     icon: `./images/weapons/${w.replace(
-//       /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-//       "",
-//     )}.webp`,
-//   };
+// let weapons = fs.readdirSync("./src/content/weapons/starrail");
 
-//   fs.writeFile(
-//     `./src/content/weapons/wuwa/${w.replace(
-//       /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-//       "",
-//     )}.json`,
-//     JSON.stringify(weapon),
-//     (err) => {
+// weapons = weapons.forEach((w) => {
+//   fs.readFile(
+//     `./src/content/weapons/starrail/${w}`,
+//     "utf8",
+//     function (err, data) {
 //       if (err) {
 //         console.error(err);
+//         return;
 //       }
-//     },
+
+//       let weapon = JSON.parse(data);
+//       weapon.icon = `${weapon.name.replace(
+//         /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+//         ""
+//       )}.webp`;
+
+//       fs.writeFile(
+//         `./src/content/weapons/starrail/${w}`,
+//         JSON.stringify(weapon),
+//         (err) => {
+//           if (err) {
+//             console.error(err);
+//           }
+//         }
+//       );
+//     }
 //   );
 // });

@@ -1,6 +1,1 @@
-{
-  "name": "Royal Greatsword",
-  "rarity": 4,
-  "weaponType": "claymore",
-  "icon": "./images/weapons/RoyalGreatsword.webp"
-}
+{"name":"Royal Greatsword","rarity":4,"weaponType":"claymore","icon":"RoyalGreatsword.webp"}

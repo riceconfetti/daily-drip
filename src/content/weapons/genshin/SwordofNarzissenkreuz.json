@@ -1,6 +1,1 @@
-{
-  "name": "Sword of Narzissenkreuz",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/SwordofNarzissenkreuz.webp"
-}
+{"name":"Sword of Narzissenkreuz","rarity":4,"weaponType":"sword","icon":"SwordofNarzissenkreuz.webp"}

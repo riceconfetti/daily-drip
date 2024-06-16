@@ -1,6 +1,1 @@
-{
-  "name": "Tome of the Eternal Flow",
-  "rarity": 5,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/TomeoftheEternalFlow.webp"
-}
+{"name":"Tome of the Eternal Flow","rarity":5,"weaponType":"catalyst","icon":"TomeoftheEternalFlow.webp"}

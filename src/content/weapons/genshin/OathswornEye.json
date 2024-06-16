@@ -1,6 +1,1 @@
-{
-  "name": "Oathsworn Eye",
-  "rarity": 4,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/OathswornEye.webp"
-}
+{"name":"Oathsworn Eye","rarity":4,"weaponType":"catalyst","icon":"OathswornEye.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "Festering Desire",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/FesteringDesire.webp"
-}
+{"name":"Festering Desire","rarity":4,"weaponType":"sword","icon":"FesteringDesire.webp"}

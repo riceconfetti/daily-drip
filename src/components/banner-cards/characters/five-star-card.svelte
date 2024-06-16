@@ -6,15 +6,15 @@
 
   const gachaCard =
     images.gachaCards[
-      `../assets/characters/${game}/${character.images.gachaCard}.png`
+      `../assets/characters/${game}/${character.images ? character.images.gachaCard : ""}.png`
     ] != undefined
       ? images.gachaCards[
-          `../assets/characters/${game}/${character.images.gachaCard}.png`
+          `../assets/characters/${game}/${character.images ? character.images.gachaCard : ""}.png`
         ]
       : images.placeHolders[
           `../assets/placeholders/${game}/${game === "starrail" ? character.weaponType : character.element}.png`
         ];
-  if (gachaCard == undefined) {
+  if (gachaCard && gachaCard == undefined) {
     console.log(character);
   }
 </script>
@@ -31,7 +31,7 @@
       {character.bannerName}
     </h2>
     <h1
-      class="text-white text-[.6rem] sm:text-sm md:text-lg lg:text-base xl:text-lg"
+      class="text-white text-[.6rem] sm:text-sm md:text-xl lg:text-base xl:text-lg"
     >
       {character.name}
     </h1>

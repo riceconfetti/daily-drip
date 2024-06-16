@@ -1,6 +1,1 @@
-{
-  "name": "Concert for Two",
-  "rarity": 4,
-  "weaponType": "preservation",
-  "icon": "./images/weapons/ConcertforTwo.webp"
-}
+{"name":"Concert for Two","rarity":4,"weaponType":"preservation","icon":"ConcertforTwo.webp"}

@@ -1,6 +1,1 @@
-{
-  "name": "The First Great Magic",
-  "rarity": 5,
-  "weaponType": "bow",
-  "icon": "./images/weapons/TheFirstGreatMagic.webp"
-}
+{"name":"The First Great Magic","rarity":5,"weaponType":"bow","icon":"TheFirstGreatMagic.webp"}

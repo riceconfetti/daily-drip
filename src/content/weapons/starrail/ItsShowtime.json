@@ -1,6 +1,1 @@
-{
-  "name": "It's Showtime",
-  "rarity": 4,
-  "weaponType": "nihility",
-  "icon": "./images/weapons/ItsShowtime.webp"
-}
+{"name":"It's Showtime","rarity":4,"weaponType":"nihility","icon":"ItsShowtime.webp"}

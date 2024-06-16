@@ -1,6 +1,1 @@
-{
-  "name": "Kagura's Verity",
-  "rarity": 5,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/KagurasVerity.webp"
-}
+{"name":"Kagura's Verity","rarity":5,"weaponType":"catalyst","icon":"KagurasVerity.webp"}

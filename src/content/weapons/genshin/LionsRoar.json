@@ -1,6 +1,1 @@
-{
-  "name": "Lion's Roar",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "./images/weapons/LionsRoar.webp"
-}
+{"name":"Lion's Roar","rarity":4,"weaponType":"sword","icon":"LionsRoar.webp"}

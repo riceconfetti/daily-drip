@@ -1,6 +1,1 @@
-{
-  "name": "Hey, Over Here",
-  "rarity": 4,
-  "weaponType": "abundance",
-  "icon": "./images/weapons/HeyOverHere.webp"
-}
+{"name":"Hey, Over Here","rarity":4,"weaponType":"abundance","icon":"HeyOverHere.webp"}

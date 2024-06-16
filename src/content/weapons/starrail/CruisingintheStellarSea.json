@@ -1,6 +1,1 @@
-{
-  "name": "Cruising in the Stellar Sea",
-  "rarity": 5,
-  "weaponType": "hunt",
-  "icon": "./images/weapons/CruisingintheStellarSea.webp"
-}
+{"name":"Cruising in the Stellar Sea","rarity":5,"weaponType":"hunt","icon":"CruisingintheStellarSea.webp"}

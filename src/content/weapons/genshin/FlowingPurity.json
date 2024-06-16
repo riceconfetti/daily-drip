@@ -1,6 +1,1 @@
-{
-  "name": "Flowing Purity",
-  "rarity": 4,
-  "weaponType": "catalyst",
-  "icon": "./images/weapons/FlowingPurity.webp"
-}
+{"name":"Flowing Purity","rarity":4,"weaponType":"catalyst","icon":"FlowingPurity.webp"}
