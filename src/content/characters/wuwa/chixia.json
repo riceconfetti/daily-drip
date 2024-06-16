@@ -4,8 +4,8 @@
   "element": "fusion",
   "weaponType": "pistols",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/chixia/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/chixia/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/chixia/bannerCard.png"
+    "gachaSplash": "chixia/gachaSpash",
+    "gachaCard": "chixia/gachaCard",
+    "bannerCard": "chixia/bannerCard"
   }
 }

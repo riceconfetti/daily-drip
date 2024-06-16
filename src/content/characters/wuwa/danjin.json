@@ -4,8 +4,8 @@
   "element": "havoc",
   "weaponType": "sword",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/danjin/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/danjin/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/danjin/bannerCard.png"
+    "gachaSplash": "danjin/gachaSpash",
+    "gachaCard": "danjin/gachaCard",
+    "bannerCard": "danjin/bannerCard"
   }
 }

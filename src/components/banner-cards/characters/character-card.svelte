@@ -5,7 +5,9 @@
 </script>
 
 <!-- Characters -->
-<section class="grid grid-cols-[auto_auto_45%] gap-2">
+<section
+  class={`grid gap-2 ${game == "wuwa" ? "grid-cols-[auto_65%]" : "grid-cols-[auto_auto_45%]"}`}
+>
   {#each characters.fiveStars as character}
     <FiveStarCard {character} {images} {game} />
   {/each}

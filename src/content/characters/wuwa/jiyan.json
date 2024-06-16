@@ -5,9 +5,9 @@
   "weaponType": "broadblade",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/jiyan/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/jiyan/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/jiyan/bannerCard.png"
+    "gachaSplash": "jiyan/gachaSpash",
+    "gachaCard": "jiyan/gachaCard",
+    "bannerCard": "jiyan/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

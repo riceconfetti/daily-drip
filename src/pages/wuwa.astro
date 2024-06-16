@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Version } from "../classes/version.ts";
+import Banner from "../components/banner-cards/banner.svelte";
+import { getCollection } from "astro:content";
+import { getPhase } from "../scripts/specs.ts";
+import dayjs from "dayjs";
+
+let game = "wuwa";
+
+const images = {
+  backgrounds: import.meta.glob("../assets/backgrounds/*.png", {eager: true}),
+  gachaCards: import.meta.glob(
+    "../assets/characters/wuwa/*/gachaCard.png",
+    { eager: true }
+  ),
+  bannerCards: import.meta.glob(
+    "../assets/characters/wuwa/*/bannerCard.png",
+    { eager: true }
+  ),
+  weapons: import.meta.glob("../assets/weapons/*{.webp,.png}" , {eager: true}),
+  
+  placeHolders: import.meta.glob(
+    "../assets/placeholders/wuwa/*.png",
+    { eager: true }
+  )
+}
+
+
+const versionCollection = await getCollection("versions", ({ id }) => {
+  return id.startsWith(game);
+});
+
+const characterCollection = await getCollection("characters", ({ id }) => {
+  return id.startsWith(game);
+});
+
+const eventCollection = await getCollection("events", ({ id, data }) => {
+  return (
+    id.startsWith(game) && (data.type === "banner" || data.type === "rate-up")
+  );
+});
+
+const weaponCollection = await getCollection("weapons", ({ id }) => {
+  return id.startsWith(game);
+});
+
+let versions: Version[] = [];
+
+
+versionCollection.forEach(({ data }) => {
+  let v = new Version(data);
+  if (dayjs(v.startDate) > dayjs().subtract(3, "week")) {
+    v.phases = [
+      getPhase(
+        game,
+        data,
+        0,
+        eventCollection,
+        characterCollection,
+        weaponCollection
+      ),
+      getPhase(
+        game,
+        data,
+        1,
+        eventCollection,
+        characterCollection,
+        weaponCollection
+      ),
+    ];
+    versions.push(v);
+  }
+});
+---
+
+<Layout title="The Daily Drip">
+  <section class="p-4 flex flex-col items-center gap-4 md:max-w-[1400px]">
+    {versions.map((version) => <Banner {version} {game} {images} client:load />)}
+  </section>
+
+  <!-- <Banner {version} game="genshin" /> -->
+</Layout>

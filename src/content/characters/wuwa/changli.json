@@ -5,9 +5,9 @@
   "weaponType": "sword",
   "bannerName": "?????",
   "images": {
-    "gachaSplash": "./assets/characters/wuwa/changli/gachaSpash.png",
-    "gachaCard": "./assets/characters/wuwa/changli/gachaCard.png",
-    "bannerCard": "./assets/characters/wuwa/changli/bannerCard.png"
+    "gachaSplash": "changli/gachaSpash",
+    "gachaCard": "changli/gachaCard",
+    "bannerCard": "changli/bannerCard"
   },
   "colors": {
     "primary": "bg-gradient-to-r from-[#000] to-[#fff]",

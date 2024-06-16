@@ -138,6 +138,42 @@ export default {
         },
         wuwa: {
           event: "#464953",
+          spectro: {
+            gradient: {
+              from: "#322F24",
+              to: "#AE9A4E",
+            },
+          },
+          aero: {
+            gradient: {
+              from: "#252724",
+              to: "#779573",
+            },
+          },
+          glacio: {
+            gradient: {
+              from: "#232A2B",
+              to: "#54A4B1",
+            },
+          },
+          electro: {
+            gradient: {
+              from: "#29242A",
+              to: "#945AA1",
+            },
+          },
+          fusion: {
+            gradient: {
+              from: "#2B2124",
+              to: "#C23D5E",
+            },
+          },
+          havoc: {
+            gradient: {
+              from: "#2B1F25",
+              to: "#91285B",
+            },
+          },
         },
       },
     },
