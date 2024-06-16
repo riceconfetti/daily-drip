@@ -54,6 +54,8 @@ const eventCollection = defineCollection({
     endDate: z.string().date(),
     title: z.string().optional(),
     character: reference("characters").optional(),
+    weapon: reference("weapons").optional(),
+    priority: z.boolean().optional(),
     image: z.string().optional(),
     colors: z
       .object({
@@ -91,10 +93,6 @@ const versionsCollection = defineCollection({
           fourStars: z.array(reference("weapons")),
         })
       ),
-      chronicle: z.object({
-        characters: z.array(z.string()),
-        weapons: z.array(z.string()),
-      }),
     })
     .partial(),
 });

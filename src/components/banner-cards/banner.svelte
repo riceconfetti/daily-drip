@@ -4,6 +4,7 @@
   import { Version } from "../../classes/version.ts";
   import CharacterCard from "./characters/character-card.svelte";
   import WeaponCard from "./weapons/weapon-card.svelte";
+  import ChronicledCard from "./chronicled-wish/chronicled-card.svelte";
   import dayjs from "dayjs";
   export let version: Version, game, images;
 </script>
@@ -12,6 +13,9 @@
   class={`flex flex-col gap-3 bg-white bg-opacity-30 shadow-md p-4 ${game} lg:grid lg:grid-cols-2 lg:gap-5`}
 >
   <VersionHeader {version} {game} />
+  {#if version.chronicle}
+    <ChronicledCard chronicle={version.chronicle} {images} {game} />
+  {/if}
   {#each version.phases as phase}
     <div
       class={`flex flex-col gap-2 ${dayjs(phase.date) < dayjs() ? "grayscale" : ""}`}

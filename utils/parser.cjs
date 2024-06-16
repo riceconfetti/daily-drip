@@ -22,55 +22,55 @@ const fs = require("fs");
 //   });
 // });
 
-let characters = fs.readdirSync("./src/content/characters/starrail");
+// let characters = fs.readdirSync("./src/content/characters/starrail");
 
-fs.readFile("utils/starrailGradients.json", "utf8", function (err, data) {
-  if (err) {
-    console.error(err);
-    return;
-  }
+// fs.readFile("utils/starrailGradients.json", "utf8", function (err, data) {
+//   if (err) {
+//     console.error(err);
+//     return;
+//   }
 
-  let gradient = JSON.parse(data);
+//   let gradient = JSON.parse(data);
 
-  characters.forEach((c) => {
-    fs.readFile(
-      `./src/content/characters/starrail/${c}`,
-      "utf8",
-      function (err, data) {
-        if (err) {
-          console.log(err);
-          return;
-        }
-        let character = JSON.parse(data);
+//   characters.forEach((c) => {
+//     fs.readFile(
+//       `./src/content/characters/starrail/${c}`,
+//       "utf8",
+//       function (err, data) {
+//         if (err) {
+//           console.log(err);
+//           return;
+//         }
+//         let character = JSON.parse(data);
 
-        console.log(gradient);
-        console.log(character.name);
+//         console.log(gradient);
+//         console.log(character.name);
 
-        if (gradient[character.name] != undefined) {
-          character.colors = {
-            primary: `bg-gradient-to-r from-[${
-              gradient[character.name]["P-From"]
-            }] to-[${gradient[character.name]["P-To"]}]`,
-            secondary: `bg-gradient-to-t from-[${
-              gradient[character.name]["S-From"]
-            }] to-[${gradient[character.name]["S-To"]}00]`,
-            textAccent: `text-[${gradient[character.name].Text}]`,
-          };
-        }
+//         if (gradient[character.name] != undefined) {
+//           character.colors = {
+//             primary: `bg-gradient-to-r from-[${
+//               gradient[character.name]["P-From"]
+//             }] to-[${gradient[character.name]["P-To"]}]`,
+//             secondary: `bg-gradient-to-t from-[${
+//               gradient[character.name]["S-From"]
+//             }] to-[${gradient[character.name]["S-To"]}00]`,
+//             textAccent: `text-[${gradient[character.name].Text}]`,
+//           };
+//         }
 
-        fs.writeFile(
-          `./src/content/characters/starrail/${c}`,
-          JSON.stringify(character),
-          (err) => {
-            if (err) {
-              console.error(err);
-            }
-          }
-        );
-      }
-    );
-  });
-});
+//         fs.writeFile(
+//           `./src/content/characters/starrail/${c}`,
+//           JSON.stringify(character),
+//           (err) => {
+//             if (err) {
+//               console.error(err);
+//             }
+//           }
+//         );
+//       }
+//     );
+//   });
+// });
 
 // characters.forEach((c) => {
 //   fs.readFile(
@@ -126,33 +126,35 @@ fs.readFile("utils/starrailGradients.json", "utf8", function (err, data) {
 //   );
 // });
 
-// let weapons = [
-//   "Favonius Sword",
-//   "The Flute",
-//   "Sacrificial Sword",
-//   "Royal Longsword",
-//   "Lion's Roar",
-//   "Prototype Rancour",
-//   "Iron Sting",
-//   "Blackcliff Longsword",
-//   "The Black Sword",
-//   "The Alley Flash",
-//   "Sword of Descension",
-//   "Festering Desire",
-//   "Amenoma Kageuchi",
-//   "Cinnabar Spindle",
-//   "Kagotsurube Isshin",
-//   "Sapwood Blade",
-//   "Xiphos' Moonlight",
-//   "Toukabou Shigure",
-//   "Wolf-Fang",
-//   "Finale of the Deep",
-//   "Fleuve Cendre Ferryman",
-//   "The Dockhand's Assistant",
-//   "Sword of Narzissenkreuz",
-// ];
-// let type = "sword";
-// let rarity = 4;
+let weapons = [
+  ["Cosmic Ripples", "Stringmaster"],
+  ["Variation", "Rectifier#25", "Jinzhou Keeper", "Comet Flare", "Augment"],
+];
+
+let type = "rectifier";
+
+weapons.forEach((wArray, i) => {
+  let rarity = i == 0 ? 5 : 4;
+
+  wArray.forEach((w) => {
+    let path = w.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "");
+    let weapon = {
+      name: w,
+      rarity: rarity,
+      weaponType: type,
+      icon: `${path}.webp`,
+    };
+    fs.writeFile(
+      `./src/content/weapons/wuwa/${path}`,
+      JSON.stringify(weapon),
+      (err) => {
+        if (err) {
+          console.error(err);
+        }
+      }
+    );
+  });
+});
 
 // let weapons = fs.readdirSync("./src/content/weapons/starrail");
 

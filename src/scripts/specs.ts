@@ -21,8 +21,10 @@ export function getPhase(
     },
   };
 
-  let events = eventCollection.filter(({ id }) => {
-    return id.startsWith(`${game}/${data.version}`);
+  let events = eventCollection.filter((e) => {
+    return (
+      e.id.startsWith(`${game}/${data.version}`) && e.data.type != "chronicle"
+    );
   });
 
   events.forEach((event) => {
