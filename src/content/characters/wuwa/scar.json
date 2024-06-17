@@ -1,12 +1,12 @@
 {
-  "name": "Scar",
-  "rarity": 5,
-  "element": "fusion",
-  "weaponType": "wuwa",
-  "bannerName": "?????",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
+	"name": "Scar",
+	"rarity": 5,
+	"element": "fusion",
+	"weaponType": "wuwa",
+	"bannerName": "?????",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+		"textAccent": "text-[#999]"
+	}
 }

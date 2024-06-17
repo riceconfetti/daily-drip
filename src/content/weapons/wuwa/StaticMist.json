@@ -1,6 +1,6 @@
 {
-  "name": "Static Mist",
-  "rarity": 5,
-  "weaponType": "pistol",
-  "icon": "StaticMist.webp"
+	"name": "Static Mist",
+	"rarity": 5,
+	"weaponType": "pistol",
+	"icon": "StaticMist.webp"
 }

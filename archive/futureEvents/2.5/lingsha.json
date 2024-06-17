@@ -1,8 +1,8 @@
 {
-  "status": "spec",
-  "type": "banner",
-  "character": "starrail/lingsha",
-  "game": "starrail",
-  "startDate": "2024-10-02",
-  "endDate": "2024-10-22"
+	"status": "spec",
+	"type": "banner",
+	"character": "starrail/lingsha",
+	"game": "starrail",
+	"startDate": "2024-10-02",
+	"endDate": "2024-10-22"
 }

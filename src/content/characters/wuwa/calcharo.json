@@ -1,17 +1,17 @@
 {
-  "name": "Calcharo",
-  "rarity": 5,
-  "element": "electro",
-  "weaponType": "broadblade",
-  "bannerName": "?????",
-  "images": {
-    "gachaSplash": "calcharo/gachaSpash",
-    "gachaCard": "calcharo/gachaCard",
-    "bannerCard": "calcharo/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#282143] to-[#786F98]",
-    "secondary": "bg-gradient-to-t from-[#2A2445] to-[#6859AB00]",
-    "textAccent": "text-[#A8A5D2]"
-  }
+	"name": "Calcharo",
+	"rarity": 5,
+	"element": "electro",
+	"weaponType": "broadblade",
+	"bannerName": "?????",
+	"images": {
+		"gachaSplash": "calcharo/gachaSpash",
+		"gachaCard": "calcharo/gachaCard",
+		"bannerCard": "calcharo/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#282143] to-[#786F98]",
+		"secondary": "bg-gradient-to-t from-[#2A2445] to-[#6859AB00]",
+		"textAccent": "text-[#A8A5D2]"
+	}
 }

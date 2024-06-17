@@ -1,25 +1,22 @@
 {
-  "version": 4.7,
-  "name": "An Everlasting Dream Intertwined",
-  "startDate": "2024-06-04",
-  "endDate": "2024-07-16",
-  "weapons": [
-    {
-      "fiveStars": ["genshin/LightofFoliarIncision", "genshin/Absolution"],
-      "fourStars": [
-        "genshin/TheStringless",
-        "genshin/SacrificialSword",
-        "genshin/TheWidsith",
-        "genshin/LithicSpear",
-        "genshin/SacrificialGreatsword"
-      ]
-    },
-    {
-      "fiveStars": [
-        "genshin/SplendorofTranquilWaters",
-        "genshin/SilvershowerHeartstrings"
-      ],
-      "fourStars": []
-    }
-  ]
+	"version": 4.7,
+	"name": "An Everlasting Dream Intertwined",
+	"startDate": "2024-06-04",
+	"endDate": "2024-07-16",
+	"weapons": [
+		{
+			"fiveStars": ["genshin/LightofFoliarIncision", "genshin/Absolution"],
+			"fourStars": [
+				"genshin/TheStringless",
+				"genshin/SacrificialSword",
+				"genshin/TheWidsith",
+				"genshin/LithicSpear",
+				"genshin/SacrificialGreatsword"
+			]
+		},
+		{
+			"fiveStars": ["genshin/SplendorofTranquilWaters", "genshin/SilvershowerHeartstrings"],
+			"fourStars": []
+		}
+	]
 }

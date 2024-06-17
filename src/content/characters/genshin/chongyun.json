@@ -1,10 +1,10 @@
 {
-  "name": "Chongyun",
-  "rarity": 4,
-  "element": "cryo",
-  "images": {
-    "gachaSplash": "chongyun/gachaSpash",
-    "gachaCard": "chongyun/gachaCard",
-    "bannerCard": "chongyun/bannerCard"
-  }
+	"name": "Chongyun",
+	"rarity": 4,
+	"element": "cryo",
+	"images": {
+		"gachaSplash": "chongyun/gachaSpash",
+		"gachaCard": "chongyun/gachaCard",
+		"bannerCard": "chongyun/bannerCard"
+	}
 }

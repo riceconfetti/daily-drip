@@ -1,17 +1,17 @@
 {
-  "name": "Encore",
-  "rarity": 5,
-  "element": "fusion",
-  "weaponType": "rectifier",
-  "bannerName": "?????",
-  "images": {
-    "gachaSplash": "encore/gachaSpash",
-    "gachaCard": "encore/gachaCard",
-    "bannerCard": "encore/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#9C5661] to-[#EFBBC3]",
-    "secondary": "bg-gradient-to-t from-[#CF7062] to-[#FFE1E500]",
-    "textAccent": "text-[#7D2936]"
-  }
+	"name": "Encore",
+	"rarity": 5,
+	"element": "fusion",
+	"weaponType": "rectifier",
+	"bannerName": "?????",
+	"images": {
+		"gachaSplash": "encore/gachaSpash",
+		"gachaCard": "encore/gachaCard",
+		"bannerCard": "encore/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#9C5661] to-[#EFBBC3]",
+		"secondary": "bg-gradient-to-t from-[#CF7062] to-[#FFE1E500]",
+		"textAccent": "text-[#7D2936]"
+	}
 }

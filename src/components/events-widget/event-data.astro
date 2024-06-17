@@ -1,32 +1,30 @@
 ---
-import EventWidget from "./event-widget.svelte";
-import { getCollection } from "astro:content";
-import { Event } from "../../classes/event.ts";
+import EventWidget from './event-widget.svelte'
+import { getCollection } from 'astro:content'
+import { Event } from '../../classes/event.ts'
 
-const {images} = Astro.props;
+const { images } = Astro.props
 
-const eventCollection = await getCollection("events", ({ data }) => {
-  return data.type == "banner" && data.status == "confirmed";
-});
-const characterCollection = await getCollection("characters");
+const eventCollection = await getCollection('events', ({ data }) => {
+	return data.type == 'banner' && data.status == 'confirmed'
+})
+const characterCollection = await getCollection('characters')
 
-let events: Event[] = new Array();
+let events: Event[] = new Array()
 eventCollection.forEach(({ data }) => {
-  let event = new Event(data);
-  event.game = data.game.id;
-  event.startDate = data.startDate;
-  event.endDate = data.endDate;
-  if (data.type == "banner") {
-    const character = characterCollection.find(
-      (c) => c.id == data.character.id
-    );
-    event.title = character.data.bannerName;
-    event.image = character.data.images.bannerCard;
-    event.colors = character.data.colors;
-  }
-  //console.log(event);
-  events.push(event);
-});
+	let event = new Event(data)
+	event.game = data.game.id
+	event.startDate = data.startDate
+	event.endDate = data.endDate
+	if (data.type == 'banner') {
+		const character = characterCollection.find((c) => c.id == data.character.id)
+		event.title = character.data.bannerName
+		event.image = character.data.images.bannerCard
+		event.colors = character.data.colors
+	}
+	//console.log(event);
+	events.push(event)
+})
 ---
 
 <EventWidget {images} {events} client:load />

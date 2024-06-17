@@ -1,116 +1,84 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Version } from "../classes/version.ts";
-import Banner from "../components/banner-cards/banner.svelte";
-import { getCollection } from "astro:content";
-import { getPhase } from "../scripts/specs.ts";
-import dayjs from "dayjs";
-import type { Character } from "src/classes/character";
-import { Weapon } from "src/classes/weapon";
+import Layout from '../layouts/Layout.astro'
+import { Version } from '../classes/version.ts'
+import Banner from '../components/banner-cards/banner.svelte'
+import { getCollection } from 'astro:content'
+import { getPhase } from '../scripts/specs.ts'
+import dayjs from 'dayjs'
+import type { Character } from 'src/classes/character'
+import { Weapon } from 'src/classes/weapon'
 
-let game = "genshin";
+let game = 'genshin'
 
 const images = {
+	backgrounds: import.meta.glob('../assets/backgrounds/*.png', { eager: true }),
+	gachaCards: import.meta.glob('../assets/characters/genshin/*/gachaCard.png', { eager: true }),
+	bannerCards: import.meta.glob('../assets/characters/genshin/*/bannerCard.png', { eager: true }),
+	weapons: import.meta.glob('../assets/weapons/*{.webp,.png}', { eager: true }),
 
-  backgrounds: import.meta.glob("../assets/backgrounds/*.png", {eager: true}),
-  gachaCards: import.meta.glob(
-    "../assets/characters/genshin/*/gachaCard.png",
-    { eager: true }
-  ),
-  bannerCards: import.meta.glob(
-    "../assets/characters/genshin/*/bannerCard.png",
-    { eager: true }
-  ),
-  weapons: import.meta.glob("../assets/weapons/*{.webp,.png}" , {eager: true}),
-  
-  placeHolders: import.meta.glob(
-    "../assets/placeholders/genshin/*.png",
-    { eager: true }
-  )
+	placeHolders: import.meta.glob('../assets/placeholders/genshin/*.png', { eager: true })
 }
 
-const versionCollection = await getCollection("versions", ({ id}) => {
-  return id.startsWith(game);
-});
+const versionCollection = await getCollection('versions', ({ id }) => {
+	return id.startsWith(game)
+})
 
-const characterCollection = await getCollection("characters", ({ id }) => {
-  return id.startsWith(game);
-});
+const characterCollection = await getCollection('characters', ({ id }) => {
+	return id.startsWith(game)
+})
 
-const eventCollection = await getCollection("events", ({ id, data }) => {
-  return (
-    id.startsWith(game) && (data.type === "banner" || data.type === "rate-up")
-  );
-});
+const eventCollection = await getCollection('events', ({ id, data }) => {
+	return id.startsWith(game) && (data.type === 'banner' || data.type === 'rate-up')
+})
 
-const weaponCollection = await getCollection("weapons", ({ id }) => {
-  return id.startsWith(game);
-});
+const weaponCollection = await getCollection('weapons', ({ id }) => {
+	return id.startsWith(game)
+})
 
-let versions: Version[] = [];
+let versions: Version[] = []
 
 versionCollection.forEach(({ data }) => {
-  let v = new Version(data);
-  
-  let chronicledWish = eventCollection.filter(({ id, data }) => {
-    return id.startsWith(`${game}/${v.version}`) && data.type == "chronicle";
-  });
+	let v = new Version(data)
 
-  chronicledWish.forEach((e)=>{
-    if(e.data.character) {
-      let character = characterCollection.find(
-        (c) => c.id === e.data.character.id
-      );
-      let characterData: Character = character.data;
+	let chronicledWish = eventCollection.filter(({ id, data }) => {
+		return id.startsWith(`${game}/${v.version}`) && data.type == 'chronicle'
+	})
 
-      if (e.data.status === "spec") {
-        characterData.spec = true;
-      }
-      v.chronicle.characters.push(characterData);
-    } else if(e.data.weapon) {
-      let weapon = weaponCollection.find(
-        (w) => w.id === e.data.weapon.id
-      );
-    
-      let weaponData: Weapon = new Weapon(weapon.data, game, e.data.priority);
+	chronicledWish.forEach((e) => {
+		if (e.data.character) {
+			let character = characterCollection.find((c) => c.id === e.data.character.id)
+			let characterData: Character = character.data
 
-      if (e.data.status === "spec") {
-        weaponData.spec = true;
-      }
-      v.chronicle.weapons.push(weaponData);
-    }
-  })
+			if (e.data.status === 'spec') {
+				characterData.spec = true
+			}
+			v.chronicle.characters.push(characterData)
+		} else if (e.data.weapon) {
+			let weapon = weaponCollection.find((w) => w.id === e.data.weapon.id)
 
-  if (dayjs(v.startDate) > dayjs().subtract(3, "week")) {
-    v.phases = [
-      getPhase(
-        game,
-        data,
-        0,
-        eventCollection,
-        characterCollection,
-        weaponCollection
-      ),
-      getPhase(
-        game,
-        data,
-        1,
-        eventCollection,
-        characterCollection,
-        weaponCollection
-      ),
-    ];
-    versions.push(v);
-  }
-});
+			let weaponData: Weapon = new Weapon(weapon.data, game, e.data.priority)
+
+			if (e.data.status === 'spec') {
+				weaponData.spec = true
+			}
+			v.chronicle.weapons.push(weaponData)
+		}
+	})
+
+	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
+		v.phases = [
+			getPhase(game, data, 0, eventCollection, characterCollection, weaponCollection),
+			getPhase(game, data, 1, eventCollection, characterCollection, weaponCollection)
+		]
+		versions.push(v)
+	}
+})
 ---
 
 <Layout title="The Daily Drip">
-  <section
-    class="p-2 lg:p-4 flex flex-col items-center gap-4 h-max md:max-w-[1400px]"
-  >
-    {versions.map((version) => <Banner {version} {game} {images} client:load />)}
-  </section>
+	<section class="p-2 lg:p-4 flex flex-col items-center gap-4 h-max md:max-w-[1400px]">
+		{versions.map((version) => <Banner {version} {game} {images} client:load />)}
+	</section>
 
-  <!-- <Banner {version} game="genshin" /> -->
+	<!-- <Banner {version} game="genshin" /> -->
 </Layout>

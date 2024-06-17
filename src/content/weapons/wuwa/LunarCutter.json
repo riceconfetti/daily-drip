@@ -1,6 +1,6 @@
 {
-  "name": "Lunar Cutter",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "LunarCutter.webp"
+	"name": "Lunar Cutter",
+	"rarity": 4,
+	"weaponType": "sword",
+	"icon": "LunarCutter.webp"
 }

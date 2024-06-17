@@ -1,17 +1,17 @@
 {
-  "name": "Gepard",
-  "rarity": 5,
-  "element": "ice",
-  "weaponType": "preservation",
-  "bannerName": "",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#0B1E6B] to-[#24BAFF]",
-    "secondary": "bg-gradient-to-t from-[#0B1E6B] to-[#24BAFF00]",
-    "textAccent": "text-[#CC8B3F]"
-  },
-  "images": {
-    "gachaSplash": "gepard/gachaSpash",
-    "gachaCard": "gepard/gachaCard",
-    "bannerCard": "gepard/bannerCard"
-  }
+	"name": "Gepard",
+	"rarity": 5,
+	"element": "ice",
+	"weaponType": "preservation",
+	"bannerName": "",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#0B1E6B] to-[#24BAFF]",
+		"secondary": "bg-gradient-to-t from-[#0B1E6B] to-[#24BAFF00]",
+		"textAccent": "text-[#CC8B3F]"
+	},
+	"images": {
+		"gachaSplash": "gepard/gachaSpash",
+		"gachaCard": "gepard/gachaCard",
+		"bannerCard": "gepard/bannerCard"
+	}
 }

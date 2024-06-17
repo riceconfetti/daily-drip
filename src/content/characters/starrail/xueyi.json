@@ -1,11 +1,11 @@
 {
-  "name": "Xueyi",
-  "rarity": 4,
-  "element": "quantum",
-  "weaponType": "destruction",
-  "images": {
-    "gachaSplash": "xueyi/gachaSpash",
-    "gachaCard": "xueyi/gachaCard",
-    "bannerCard": "xueyi/bannerCard"
-  }
+	"name": "Xueyi",
+	"rarity": 4,
+	"element": "quantum",
+	"weaponType": "destruction",
+	"images": {
+		"gachaSplash": "xueyi/gachaSpash",
+		"gachaCard": "xueyi/gachaCard",
+		"bannerCard": "xueyi/bannerCard"
+	}
 }

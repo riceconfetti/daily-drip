@@ -1,17 +1,17 @@
 {
-  "name": "Kafka",
-  "rarity": 5,
-  "element": "lightning",
-  "weaponType": "nihility",
-  "bannerName": "Nessun Dorma",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#561D3E] to-[#655061]",
-    "secondary": "bg-gradient-to-t from-[#561D3E] to-[#65506100]",
-    "textAccent": "text-[#17001A]"
-  },
-  "images": {
-    "gachaSplash": "kafka/gachaSpash",
-    "gachaCard": "kafka/gachaCard",
-    "bannerCard": "kafka/bannerCard"
-  }
+	"name": "Kafka",
+	"rarity": 5,
+	"element": "lightning",
+	"weaponType": "nihility",
+	"bannerName": "Nessun Dorma",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#561D3E] to-[#655061]",
+		"secondary": "bg-gradient-to-t from-[#561D3E] to-[#65506100]",
+		"textAccent": "text-[#17001A]"
+	},
+	"images": {
+		"gachaSplash": "kafka/gachaSpash",
+		"gachaCard": "kafka/gachaCard",
+		"bannerCard": "kafka/bannerCard"
+	}
 }

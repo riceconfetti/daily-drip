@@ -1,17 +1,17 @@
 {
-  "name": "Albedo",
-  "rarity": 5,
-  "element": "geo",
-  "weaponType": "sword",
-  "bannerName": "Secretum Secretorum",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#392916] to-[#D88F45]",
-    "secondary": "bg-gradient-to-t from-[#392916] to-[#8F541700]",
-    "textAccent": "text-[#D88F45]"
-  },
-  "images": {
-    "gachaSplash": "albedo/gachaSpash",
-    "gachaCard": "albedo/gachaCard",
-    "bannerCard": "albedo/bannerCard"
-  }
+	"name": "Albedo",
+	"rarity": 5,
+	"element": "geo",
+	"weaponType": "sword",
+	"bannerName": "Secretum Secretorum",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#392916] to-[#D88F45]",
+		"secondary": "bg-gradient-to-t from-[#392916] to-[#8F541700]",
+		"textAccent": "text-[#D88F45]"
+	},
+	"images": {
+		"gachaSplash": "albedo/gachaSpash",
+		"gachaCard": "albedo/gachaCard",
+		"bannerCard": "albedo/bannerCard"
+	}
 }

@@ -1,91 +1,79 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import CalendarWidget from "../components/CalendarWidget.svelte";
-import EventsWidget from "../components/events-widget/event-data.astro";
-import { getCollection } from "astro:content";
+import Layout from '../layouts/Layout.astro'
+import CalendarWidget from '../components/CalendarWidget.svelte'
+import EventsWidget from '../components/events-widget/event-data.astro'
+import { getCollection } from 'astro:content'
 
 const images = {
-  genshin: {
-    bannerCards: import.meta.glob(
-  "../assets/characters/genshin/*/bannerCard.png",
-  { eager: true }),
-    placeHolders: import.meta.glob(
-  "../assets/placeholders/genshin/*.png",
-  { eager: true })
-  },
-  starrail: {
-    bannerCards: import.meta.glob(
-  "../assets/characters/starrail/*/bannerCard.png",
-  { eager: true }),
-    placeHolders: import.meta.glob(
-  "../assets/placeholders/starrail/*.png",
-  { eager: true })
-  },
-  wuwa: {
-    bannerCards: import.meta.glob(
-  "../assets/characters/wuwa/*/bannerCard.png",
-  { eager: true }),
-    placeHolders: import.meta.glob(
-  "../assets/placeholders/wuwa/*.png",
-  { eager: true })
-  }
-  
+	genshin: {
+		bannerCards: import.meta.glob('../assets/characters/genshin/*/bannerCard.png', { eager: true }),
+		placeHolders: import.meta.glob('../assets/placeholders/genshin/*.png', { eager: true })
+	},
+	starrail: {
+		bannerCards: import.meta.glob('../assets/characters/starrail/*/bannerCard.png', {
+			eager: true
+		}),
+		placeHolders: import.meta.glob('../assets/placeholders/starrail/*.png', { eager: true })
+	},
+	wuwa: {
+		bannerCards: import.meta.glob('../assets/characters/wuwa/*/bannerCard.png', { eager: true }),
+		placeHolders: import.meta.glob('../assets/placeholders/wuwa/*.png', { eager: true })
+	}
 }
 
 const genshin = [
-  ...new Set(
-    (
-      await getCollection("events", ({ id, data }) => {
-        return id.startsWith("genshin/") && data.status == "confirmed";
-      })
-    ).map((e) => e.data.startDate)
-  ),
-];
+	...new Set(
+		(
+			await getCollection('events', ({ id, data }) => {
+				return id.startsWith('genshin/') && data.status == 'confirmed'
+			})
+		).map((e) => e.data.startDate)
+	)
+]
 
 const starrail = [
-  ...new Set(
-    (
-      await getCollection("events", ({ id, data }) => {
-        return id.startsWith("starrail/") && data.status == "confirmed";
-      })
-    ).map((e) => e.data.startDate)
-  ),
-];
+	...new Set(
+		(
+			await getCollection('events', ({ id, data }) => {
+				return id.startsWith('starrail/') && data.status == 'confirmed'
+			})
+		).map((e) => e.data.startDate)
+	)
+]
 
 const reverse = [
-  ...new Set(
-    (
-      await getCollection("events", ({ id, data }) => {
-        return id.startsWith("reverse") && data.status == "confirmed";
-      })
-    ).map((e) => e.data.startDate)
-  ),
-];
+	...new Set(
+		(
+			await getCollection('events', ({ id, data }) => {
+				return id.startsWith('reverse') && data.status == 'confirmed'
+			})
+		).map((e) => e.data.startDate)
+	)
+]
 
 const wuwa = [
-  ...new Set(
-    (
-      await getCollection("events", ({ data }) => {
-        return data.game.id === "wuwa" && data.status == "confirmed";
-      })
-    ).map((e) => e.data.startDate)
-  ),
-];
+	...new Set(
+		(
+			await getCollection('events', ({ data }) => {
+				return data.game.id === 'wuwa' && data.status == 'confirmed'
+			})
+		).map((e) => e.data.startDate)
+	)
+]
 ---
 
 <Layout title="The Daily Drip">
-  <section
-    class="p-2 lg:min-h-0 lg:p-4 flex flex-col gap-4 box-border lg:max-w-[1400px] lg:grid lg:auto-cols-[60%_auto] lg:gap-8 lg:h-full lg:overflow-hidden"
-  >
-    <div class="p-4 bg-dark bg-opacity-20 rounded-md md:col-span-2 h-min">
-      <p class="playfair-display-regular text-sm">
-        Welcome to <span class="font-bold text-center">The Daily Drip</span>,
-        your place for gacha game leaks and speculations! These are my personal
-        predictions for upcoming gacha banners, and you use this data at your
-        own risk!
-      </p>
-    </div>
-    <CalendarWidget {genshin} {wuwa} {reverse} {starrail} client:load />
-    <EventsWidget {images}/>
-  </section>
+	<section
+		class="p-2 lg:min-h-0 lg:p-4 flex flex-col gap-4 box-border lg:max-w-[1400px] lg:grid lg:auto-cols-[60%_auto] lg:gap-8 lg:h-full lg:overflow-hidden"
+	>
+		<div class="p-4 bg-dark bg-opacity-20 rounded-md md:col-span-2 h-min">
+			<p class="playfair-display-regular text-sm">
+				Welcome to <span class="font-bold text-center">The Daily Drip</span>, your place for gacha
+				game leaks and speculations! These are my personal predictions for upcoming gacha banners,
+				and you use this data at your own risk!
+			</p>
+		</div>
+		<CalendarWidget {genshin} {wuwa} {reverse} {starrail} client:load />
+		<EventsWidget {images} />
+	</section>
 </Layout>

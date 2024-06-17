@@ -1,17 +1,17 @@
 {
-  "name": "Yunli",
-  "rarity": 5,
-  "element": "physical",
-  "weaponType": "destruction",
-  "bannerName": "???",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#392916] to-[#D88F45]",
-    "secondary": "bg-gradient-to-t from-[#392916] to-[#8F541700]",
-    "textAccent": "text-[#D88F45]"
-  },
-  "images": {
-    "gachaSplash": "yunli/gachaSpash",
-    "gachaCard": "yunli/gachaCard",
-    "bannerCard": "yunli/bannerCard"
-  }
+	"name": "Yunli",
+	"rarity": 5,
+	"element": "physical",
+	"weaponType": "destruction",
+	"bannerName": "???",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#392916] to-[#D88F45]",
+		"secondary": "bg-gradient-to-t from-[#392916] to-[#8F541700]",
+		"textAccent": "text-[#D88F45]"
+	},
+	"images": {
+		"gachaSplash": "yunli/gachaSpash",
+		"gachaCard": "yunli/gachaCard",
+		"bannerCard": "yunli/bannerCard"
+	}
 }

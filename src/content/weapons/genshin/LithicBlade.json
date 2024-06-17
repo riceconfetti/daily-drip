@@ -1,6 +1,6 @@
 {
-  "name": "Lithic Blade",
-  "rarity": 4,
-  "weaponType": "claymore",
-  "icon": "LithicBlade.webp"
+	"name": "Lithic Blade",
+	"rarity": 4,
+	"weaponType": "claymore",
+	"icon": "LithicBlade.webp"
 }

@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require('fs')
 
 // fs.readFile("./characters.json", "utf8", function (err, data) {
 //   if (err) {
@@ -127,34 +127,30 @@ const fs = require("fs");
 // });
 
 let weapons = [
-  ["Cosmic Ripples", "Stringmaster"],
-  ["Variation", "Rectifier#25", "Jinzhou Keeper", "Comet Flare", "Augment"],
-];
+	['Cosmic Ripples', 'Stringmaster'],
+	['Variation', 'Rectifier#25', 'Jinzhou Keeper', 'Comet Flare', 'Augment']
+]
 
-let type = "rectifier";
+let type = 'rectifier'
 
 weapons.forEach((wArray, i) => {
-  let rarity = i == 0 ? 5 : 4;
+	let rarity = i == 0 ? 5 : 4
 
-  wArray.forEach((w) => {
-    let path = w.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "");
-    let weapon = {
-      name: w,
-      rarity: rarity,
-      weaponType: type,
-      icon: `${path}.webp`,
-    };
-    fs.writeFile(
-      `./src/content/weapons/wuwa/${path}`,
-      JSON.stringify(weapon),
-      (err) => {
-        if (err) {
-          console.error(err);
-        }
-      },
-    );
-  });
-});
+	wArray.forEach((w) => {
+		let path = w.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, '')
+		let weapon = {
+			name: w,
+			rarity: rarity,
+			weaponType: type,
+			icon: `${path}.webp`
+		}
+		fs.writeFile(`./src/content/weapons/wuwa/${path}`, JSON.stringify(weapon), (err) => {
+			if (err) {
+				console.error(err)
+			}
+		})
+	})
+})
 
 // let weapons = fs.readdirSync("./src/content/weapons/starrail");
 

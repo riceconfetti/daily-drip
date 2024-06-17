@@ -1,24 +1,22 @@
 <script lang="ts">
-  import FiveStarCard from "./five-star-card.svelte";
-  import FourStarCard from "./four-star-card.svelte";
-  export let characters, images, game;
+	import FiveStarCard from './five-star-card.svelte'
+	import FourStarCard from './four-star-card.svelte'
+	export let characters, images, game
 </script>
 
 <!-- Characters -->
 <section
-  class={`grid gap-2 ${game == "wuwa" ? "grid-cols-[auto_65%]" : "grid-cols-[auto_auto_45%]"}`}
+	class={`grid gap-2 ${game == 'wuwa' ? 'grid-cols-[auto_65%]' : 'grid-cols-[auto_auto_45%]'}`}
 >
-  {#each characters.fiveStars as character}
-    <FiveStarCard {character} {images} {game} />
-  {/each}
-  <div class="flex flex-col justify-between gap-2">
-    <h2
-      class="text-2xs text-right mt-1 text-dark sm:text-sm md:text-lg lg:text-base xl:text-lg"
-    >
-      Featured Four Stars
-    </h2>
-    {#each characters.fourStars as character}
-      <FourStarCard {character} {images} {game} />
-    {/each}
-  </div>
+	{#each characters.fiveStars as character}
+		<FiveStarCard {character} {images} {game} />
+	{/each}
+	<div class="flex flex-col justify-between gap-2">
+		<h2 class="text-2xs text-right mt-1 text-dark sm:text-sm md:text-lg lg:text-base xl:text-lg">
+			Featured Four Stars
+		</h2>
+		{#each characters.fourStars as character}
+			<FourStarCard {character} {images} {game} />
+		{/each}
+	</div>
 </section>

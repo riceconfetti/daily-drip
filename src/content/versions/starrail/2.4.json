@@ -1,15 +1,15 @@
 {
-  "version": 2.4,
-  "startDate": "2024-07-30",
-  "endDate": "2024-09-10",
-  "weapons": [
-    {
-      "fiveStars": ["starrail/NightofFright", "starrail/fiveStar_default"],
-      "fourStars": []
-    },
-    {
-      "fiveStars": ["starrail/IntheNight", "starrail/fiveStar_default"],
-      "fourStars": []
-    }
-  ]
+	"version": 2.4,
+	"startDate": "2024-07-30",
+	"endDate": "2024-09-10",
+	"weapons": [
+		{
+			"fiveStars": ["starrail/NightofFright", "starrail/fiveStar_default"],
+			"fourStars": []
+		},
+		{
+			"fiveStars": ["starrail/IntheNight", "starrail/fiveStar_default"],
+			"fourStars": []
+		}
+	]
 }
