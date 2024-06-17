@@ -1,17 +1,17 @@
 {
-  "name": "Boothill",
-  "rarity": 5,
-  "element": "physical",
-  "weaponType": "hunt",
-  "bannerName": "Dusty Trail's Lone Star",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#222222] to-[#8E8E8E]",
-    "secondary": "bg-gradient-to-t from-[#822022] to-[#795A4100]",
-    "textAccent": "text-[#C8373D]"
-  },
-  "images": {
-    "gachaSplash": "boothill/gachaSpash",
-    "gachaCard": "boothill/gachaCard",
-    "bannerCard": "boothill/bannerCard"
-  }
+	"name": "Boothill",
+	"rarity": 5,
+	"element": "physical",
+	"weaponType": "hunt",
+	"bannerName": "Dusty Trail's Lone Star",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#222222] to-[#8E8E8E]",
+		"secondary": "bg-gradient-to-t from-[#822022] to-[#795A4100]",
+		"textAccent": "text-[#C8373D]"
+	},
+	"images": {
+		"gachaSplash": "boothill/gachaSpash",
+		"gachaCard": "boothill/gachaCard",
+		"bannerCard": "boothill/bannerCard"
+	}
 }

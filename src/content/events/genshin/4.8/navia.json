@@ -1,8 +1,8 @@
 {
-  "status": "spec",
-  "type": "banner",
-  "character": "genshin/navia",
-  "game": "genshin",
-  "startDate": "2024-07-16",
-  "endDate": "2024-08-06"
+	"status": "spec",
+	"type": "banner",
+	"character": "genshin/navia",
+	"game": "genshin",
+	"startDate": "2024-07-16",
+	"endDate": "2024-08-06"
 }

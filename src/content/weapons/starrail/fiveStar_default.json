@@ -1,7 +1,7 @@
 {
-  "name": "????",
-  "rarity": 5,
-  "game": "starrail",
-  "weaponType": "default",
-  "icon": "./images/weapons/default/fiveStars/starrail_default.png"
+	"name": "????",
+	"rarity": 5,
+	"game": "starrail",
+	"weaponType": "default",
+	"icon": "./images/weapons/default/fiveStars/starrail_default.png"
 }

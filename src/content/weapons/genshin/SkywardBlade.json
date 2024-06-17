@@ -1,6 +1,6 @@
 {
-  "name": "Skyward Blade",
-  "rarity": 5,
-  "weaponType": "sword",
-  "icon": "SkywardBlade.webp"
+	"name": "Skyward Blade",
+	"rarity": 5,
+	"weaponType": "sword",
+	"icon": "SkywardBlade.webp"
 }

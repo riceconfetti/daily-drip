@@ -1,11 +1,11 @@
 {
-  "name": "Lynx",
-  "rarity": 4,
-  "element": "quantum",
-  "weaponType": "abundance",
-  "images": {
-    "gachaSplash": "lynx/gachaSpash",
-    "gachaCard": "lynx/gachaCard",
-    "bannerCard": "lynx/bannerCard"
-  }
+	"name": "Lynx",
+	"rarity": 4,
+	"element": "quantum",
+	"weaponType": "abundance",
+	"images": {
+		"gachaSplash": "lynx/gachaSpash",
+		"gachaCard": "lynx/gachaCard",
+		"bannerCard": "lynx/bannerCard"
+	}
 }

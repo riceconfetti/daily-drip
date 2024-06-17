@@ -1,17 +1,17 @@
 {
-  "name": "Jinhsi",
-  "rarity": 5,
-  "element": "spectro",
-  "weaponType": "broadblade",
-  "bannerName": "Thawborn Renewal",
-  "images": {
-    "gachaSplash": "jinhsi/gachaSpash",
-    "gachaCard": "jinhsi/gachaCard",
-    "bannerCard": "jinhsi/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#2F4749] to-[#9FABAD]",
-    "secondary": "bg-gradient-to-t from-[#1F3130] to-[#9FB5AA00]",
-    "textAccent": "text-[#7EB3B5]"
-  }
+	"name": "Jinhsi",
+	"rarity": 5,
+	"element": "spectro",
+	"weaponType": "broadblade",
+	"bannerName": "Thawborn Renewal",
+	"images": {
+		"gachaSplash": "jinhsi/gachaSpash",
+		"gachaCard": "jinhsi/gachaCard",
+		"bannerCard": "jinhsi/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#2F4749] to-[#9FABAD]",
+		"secondary": "bg-gradient-to-t from-[#1F3130] to-[#9FB5AA00]",
+		"textAccent": "text-[#7EB3B5]"
+	}
 }

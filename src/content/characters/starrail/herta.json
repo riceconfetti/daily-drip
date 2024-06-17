@@ -1,10 +1,10 @@
 {
-  "name": "Herta",
-  "rarity": 4,
-  "element": "ice",
-  "images": {
-    "gachaSplash": "herta/gachaSpash",
-    "gachaCard": "herta/gachaCard",
-    "bannerCard": "herta/bannerCard"
-  }
+	"name": "Herta",
+	"rarity": 4,
+	"element": "ice",
+	"images": {
+		"gachaSplash": "herta/gachaSpash",
+		"gachaCard": "herta/gachaCard",
+		"bannerCard": "herta/bannerCard"
+	}
 }

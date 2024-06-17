@@ -1,6 +1,6 @@
 {
-  "name": "Landau's Choice",
-  "rarity": 4,
-  "weaponType": "preservation",
-  "icon": "LandausChoice.webp"
+	"name": "Landau's Choice",
+	"rarity": 4,
+	"weaponType": "preservation",
+	"icon": "LandausChoice.webp"
 }

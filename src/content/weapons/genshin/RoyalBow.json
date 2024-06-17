@@ -1,6 +1,6 @@
 {
-  "name": "Royal Bow",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "RoyalBow.webp"
+	"name": "Royal Bow",
+	"rarity": 4,
+	"weaponType": "bow",
+	"icon": "RoyalBow.webp"
 }

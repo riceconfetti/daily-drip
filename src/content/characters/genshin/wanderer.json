@@ -1,16 +1,16 @@
 {
-  "name": "Wanderer",
-  "rarity": 5,
-  "element": "anemo",
-  "bannerName": "From Ashes Reborn",
-  "images": {
-    "gachaSplash": "wanderer/gachaSpash",
-    "gachaCard": "wanderer/gachaCard",
-    "bannerCard": "wanderer/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
+	"name": "Wanderer",
+	"rarity": 5,
+	"element": "anemo",
+	"bannerName": "From Ashes Reborn",
+	"images": {
+		"gachaSplash": "wanderer/gachaSpash",
+		"gachaCard": "wanderer/gachaCard",
+		"bannerCard": "wanderer/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+		"textAccent": "text-[#999]"
+	}
 }

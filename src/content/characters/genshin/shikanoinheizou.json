@@ -1,10 +1,10 @@
 {
-  "name": "ShikanoinHeizou",
-  "rarity": 4,
-  "element": "anemo",
-  "images": {
-    "gachaSplash": "shikanoinheizou/gachaSpash",
-    "gachaCard": "shikanoinheizou/gachaCard",
-    "bannerCard": "shikanoinheizou/bannerCard"
-  }
+	"name": "ShikanoinHeizou",
+	"rarity": 4,
+	"element": "anemo",
+	"images": {
+		"gachaSplash": "shikanoinheizou/gachaSpash",
+		"gachaCard": "shikanoinheizou/gachaCard",
+		"bannerCard": "shikanoinheizou/bannerCard"
+	}
 }

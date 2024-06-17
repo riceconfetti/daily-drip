@@ -1,17 +1,17 @@
 {
-  "name": "Luocha",
-  "rarity": 5,
-  "element": "imaginary",
-  "weaponType": "abundance",
-  "bannerName": "Laic Pursuit",
-  "images": {
-    "gachaSplash": "luocha/gachaSpash",
-    "gachaCard": "luocha/gachaCard",
-    "bannerCard": "luocha/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#184E3B] to-[#FCF6E0]",
-    "secondary": "bg-gradient-to-t from-[#184E3B] to-[#A7986300]",
-    "textAccent": "text-[#0E272A]"
-  }
+	"name": "Luocha",
+	"rarity": 5,
+	"element": "imaginary",
+	"weaponType": "abundance",
+	"bannerName": "Laic Pursuit",
+	"images": {
+		"gachaSplash": "luocha/gachaSpash",
+		"gachaCard": "luocha/gachaCard",
+		"bannerCard": "luocha/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#184E3B] to-[#FCF6E0]",
+		"secondary": "bg-gradient-to-t from-[#184E3B] to-[#A7986300]",
+		"textAccent": "text-[#0E272A]"
+	}
 }

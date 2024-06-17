@@ -1,11 +1,11 @@
 {
-  "name": "Sethos",
-  "rarity": 4,
-  "element": "electro",
-  "weaponType": "bow",
-  "images": {
-    "gachaSplash": "sethos/gachaSpash",
-    "gachaCard": "sethos/gachaCard",
-    "bannerCard": "sethos/bannerCard"
-  }
+	"name": "Sethos",
+	"rarity": 4,
+	"element": "electro",
+	"weaponType": "bow",
+	"images": {
+		"gachaSplash": "sethos/gachaSpash",
+		"gachaCard": "sethos/gachaCard",
+		"bannerCard": "sethos/bannerCard"
+	}
 }

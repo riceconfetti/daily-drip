@@ -1,11 +1,11 @@
 {
-  "name": "Sanhua",
-  "rarity": 4,
-  "element": "glacio",
-  "weaponType": "sword",
-  "images": {
-    "gachaSplash": "sanhua/gachaSpash",
-    "gachaCard": "sanhua/gachaCard",
-    "bannerCard": "sanhua/bannerCard"
-  }
+	"name": "Sanhua",
+	"rarity": 4,
+	"element": "glacio",
+	"weaponType": "sword",
+	"images": {
+		"gachaSplash": "sanhua/gachaSpash",
+		"gachaCard": "sanhua/gachaCard",
+		"bannerCard": "sanhua/bannerCard"
+	}
 }

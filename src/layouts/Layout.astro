@@ -1,65 +1,62 @@
 ---
-import "../styles/style.css";
-import "remixicon/fonts/remixicon.css";
-import NavBar from "../components/NavBar.astro";
+import '../styles/style.css'
+import 'remixicon/fonts/remixicon.css'
+import NavBar from '../components/NavBar.astro'
 interface Props {
-  title: string;
+	title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <script is:inline>
-      let myVar;
-      function myFunction() {
-        myVar = setTimeout(showPage, 1000);
-      }
-      function showPage() {
-        document.getElementById("loader").classList.toggle("opacity-0");
-        document.getElementById("loader").classList.toggle("z-50");
-        document.getElementById("loader").classList.toggle("z-0");
-      }
-    </script>
-    <title>{title}</title>
-  </head>
-  <body class="bg-light relative h-dvh w-dvw" onload="myFunction()">
-    <main id="content"
-      class="relative flex flex-col overflow-x-hidden size-full items-center lg:overflow-hidden"
-    > 
-      <NavBar />
-      <div
-        class="z-10 p-2 w-full flex flex-1 justify-center lg:min-h-0 lg:p-4 lg:overflow-auto"
-      >
-        <slot />
-      </div>
-      <div
-      id="loader"
-      class=" fixed inset-0 text-accent-dark z-50 bg-dark flex flex-col items-center justify-center transition-opacity"
-    >
-      <l-square
-      size="35"
-      stroke="5"
-      stroke-length="0.25"
-      bg-opacity="0.1"
-      speed="1.2"
-      color="rgb(193 156 100)"
-      ></l-square>
-    </div>
-    </main>
-    
-    
-    <script>
-      import "../scripts/menu.js";
-      import { square } from 'ldrs'
-       square.register()
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<script is:inline>
+			let myVar
+			function myFunction() {
+				myVar = setTimeout(showPage, 1000)
+			}
+			function showPage() {
+				document.getElementById('loader').classList.toggle('opacity-0')
+				document.getElementById('loader').classList.toggle('z-50')
+				document.getElementById('loader').classList.toggle('z-0')
+			}
+		</script>
+		<title>{title}</title>
+	</head>
+	<body class="bg-light relative h-dvh w-dvw" onload="myFunction()">
+		<main
+			id="content"
+			class="relative flex flex-col overflow-x-hidden size-full items-center lg:overflow-hidden"
+		>
+			<NavBar />
+			<div class="z-10 p-2 w-full flex flex-1 justify-center lg:min-h-0 lg:p-4 lg:overflow-auto">
+				<slot />
+			</div>
+			<div
+				id="loader"
+				class="fixed inset-0 text-accent-dark z-50 bg-dark flex flex-col items-center justify-center transition-opacity"
+			>
+				<l-square
+					size="35"
+					stroke="5"
+					stroke-length="0.25"
+					bg-opacity="0.1"
+					speed="1.2"
+					color="rgb(193 156 100)"></l-square>
+			</div>
+		</main>
+
+		<script>
+			import '../scripts/menu.js'
+			import { square } from 'ldrs'
+			square.register()
+		</script>
+	</body>
 </html>

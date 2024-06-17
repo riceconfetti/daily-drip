@@ -1,17 +1,17 @@
 {
-  "name": "Yelan",
-  "rarity": 5,
-  "element": "hydro",
-  "weaponType": "bow",
-  "bannerName": "Discerner of Enigmas",
-  "images": {
-    "gachaSplash": "yelan/gachaSpash",
-    "gachaCard": "yelan/gachaCard",
-    "bannerCard": "yelan/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
+	"name": "Yelan",
+	"rarity": 5,
+	"element": "hydro",
+	"weaponType": "bow",
+	"bannerName": "Discerner of Enigmas",
+	"images": {
+		"gachaSplash": "yelan/gachaSpash",
+		"gachaCard": "yelan/gachaCard",
+		"bannerCard": "yelan/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+		"textAccent": "text-[#999]"
+	}
 }

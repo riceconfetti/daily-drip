@@ -1,11 +1,11 @@
 {
-  "name": "Aalto",
-  "rarity": 4,
-  "element": "aero",
-  "weaponType": "pistols",
-  "images": {
-    "gachaSplash": "aalto/gachaSpash",
-    "gachaCard": "aalto/gachaCard",
-    "bannerCard": "aalto/bannerCard"
-  }
+	"name": "Aalto",
+	"rarity": 4,
+	"element": "aero",
+	"weaponType": "pistols",
+	"images": {
+		"gachaSplash": "aalto/gachaSpash",
+		"gachaCard": "aalto/gachaCard",
+		"bannerCard": "aalto/bannerCard"
+	}
 }

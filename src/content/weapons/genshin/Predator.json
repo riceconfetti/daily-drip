@@ -1,6 +1,6 @@
 {
-  "name": "Predator",
-  "rarity": 4,
-  "weaponType": "bow",
-  "icon": "Predator.webp"
+	"name": "Predator",
+	"rarity": 4,
+	"weaponType": "bow",
+	"icon": "Predator.webp"
 }

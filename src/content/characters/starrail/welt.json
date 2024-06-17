@@ -1,17 +1,17 @@
 {
-  "name": "Welt",
-  "rarity": 5,
-  "element": "imaginary",
-  "weaponType": "nihility",
-  "bannerName": "",
-  "images": {
-    "gachaSplash": "welt/gachaSpash",
-    "gachaCard": "welt/gachaCard",
-    "bannerCard": "welt/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#2D3E78] to-[#F8F6F8]",
-    "secondary": "bg-gradient-to-t from-[#2D3E78] to-[#94949400]",
-    "textAccent": "text-[#6B1334]"
-  }
+	"name": "Welt",
+	"rarity": 5,
+	"element": "imaginary",
+	"weaponType": "nihility",
+	"bannerName": "",
+	"images": {
+		"gachaSplash": "welt/gachaSpash",
+		"gachaCard": "welt/gachaCard",
+		"bannerCard": "welt/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#2D3E78] to-[#F8F6F8]",
+		"secondary": "bg-gradient-to-t from-[#2D3E78] to-[#94949400]",
+		"textAccent": "text-[#6B1334]"
+	}
 }

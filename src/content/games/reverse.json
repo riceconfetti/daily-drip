@@ -1,9 +1,9 @@
 {
-  "name": "Reverse: 1999",
-  "icon": "",
-  "times": {
-    "maintenance": "15:00:00",
-    "reset": "10:00:00",
-    "update": "10:00:00"
-  }
+	"name": "Reverse: 1999",
+	"icon": "",
+	"times": {
+		"maintenance": "15:00:00",
+		"reset": "10:00:00",
+		"update": "10:00:00"
+	}
 }

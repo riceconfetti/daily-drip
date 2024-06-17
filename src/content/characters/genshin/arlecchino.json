@@ -1,16 +1,16 @@
 {
-  "name": "Arlecchino",
-  "rarity": 5,
-  "element": "pyro",
-  "bannerName": "The Hearth's Ashen Shadow",
-  "images": {
-    "gachaSplash": "arlecchino/gachaSpash",
-    "gachaCard": "arlecchino/gachaCard",
-    "bannerCard": "arlecchino/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
+	"name": "Arlecchino",
+	"rarity": 5,
+	"element": "pyro",
+	"bannerName": "The Hearth's Ashen Shadow",
+	"images": {
+		"gachaSplash": "arlecchino/gachaSpash",
+		"gachaCard": "arlecchino/gachaCard",
+		"bannerCard": "arlecchino/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+		"textAccent": "text-[#999]"
+	}
 }

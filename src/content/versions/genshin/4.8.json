@@ -1,15 +1,15 @@
 {
-  "version": 4.8,
-  "startDate": "2024-07-16",
-  "endDate": "2024-08-27",
-  "weapons": [
-    {
-      "fiveStars": ["genshin/Verdict", "genshin/KeyofKhajNisut"],
-      "fourStars": []
-    },
-    {
-      "fiveStars": ["genshin/LumidouceElegy", "genshin/AquaSimulacra"],
-      "fourStars": []
-    }
-  ]
+	"version": 4.8,
+	"startDate": "2024-07-16",
+	"endDate": "2024-08-27",
+	"weapons": [
+		{
+			"fiveStars": ["genshin/Verdict", "genshin/KeyofKhajNisut"],
+			"fourStars": []
+		},
+		{
+			"fiveStars": ["genshin/LumidouceElegy", "genshin/AquaSimulacra"],
+			"fourStars": []
+		}
+	]
 }

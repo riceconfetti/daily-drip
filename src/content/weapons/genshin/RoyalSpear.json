@@ -1,6 +1,6 @@
 {
-  "name": "Royal Spear",
-  "rarity": 4,
-  "weaponType": "polearm",
-  "icon": "RoyalSpear.webp"
+	"name": "Royal Spear",
+	"rarity": 4,
+	"weaponType": "polearm",
+	"icon": "RoyalSpear.webp"
 }

@@ -1,11 +1,11 @@
 {
-  "name": "Misha",
-  "rarity": 4,
-  "element": "ice",
-  "weaponType": "destruction",
-  "images": {
-    "gachaSplash": "misha/gachaSpash",
-    "gachaCard": "misha/gachaCard",
-    "bannerCard": "misha/bannerCard"
-  }
+	"name": "Misha",
+	"rarity": 4,
+	"element": "ice",
+	"weaponType": "destruction",
+	"images": {
+		"gachaSplash": "misha/gachaSpash",
+		"gachaCard": "misha/gachaCard",
+		"bannerCard": "misha/bannerCard"
+	}
 }

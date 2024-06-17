@@ -1,6 +1,6 @@
 {
-  "name": "Lion's Roar",
-  "rarity": 4,
-  "weaponType": "sword",
-  "icon": "LionsRoar.webp"
+	"name": "Lion's Roar",
+	"rarity": 4,
+	"weaponType": "sword",
+	"icon": "LionsRoar.webp"
 }

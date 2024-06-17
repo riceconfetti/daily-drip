@@ -1,16 +1,16 @@
 {
-  "name": "Baizhu",
-  "rarity": 5,
-  "element": "dendro",
-  "bannerName": "Immaculate Pulse",
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  },
-  "images": {
-    "gachaSplash": "baizhu/gachaSpash",
-    "gachaCard": "baizhu/gachaCard",
-    "bannerCard": "baizhu/bannerCard"
-  }
+	"name": "Baizhu",
+	"rarity": 5,
+	"element": "dendro",
+	"bannerName": "Immaculate Pulse",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+		"textAccent": "text-[#999]"
+	},
+	"images": {
+		"gachaSplash": "baizhu/gachaSpash",
+		"gachaCard": "baizhu/gachaCard",
+		"bannerCard": "baizhu/bannerCard"
+	}
 }

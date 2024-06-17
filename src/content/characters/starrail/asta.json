@@ -1,10 +1,10 @@
 {
-  "name": "Asta",
-  "rarity": 4,
-  "element": "fire",
-  "images": {
-    "gachaSplash": "asta/gachaSpash",
-    "gachaCard": "asta/gachaCard",
-    "bannerCard": "asta/bannerCard"
-  }
+	"name": "Asta",
+	"rarity": 4,
+	"element": "fire",
+	"images": {
+		"gachaSplash": "asta/gachaSpash",
+		"gachaCard": "asta/gachaCard",
+		"bannerCard": "asta/bannerCard"
+	}
 }

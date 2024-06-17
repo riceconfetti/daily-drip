@@ -1,11 +1,11 @@
 {
-  "name": "Hanya",
-  "rarity": 4,
-  "element": "physical",
-  "weaponType": "harmony",
-  "images": {
-    "gachaSplash": "hanya/gachaSpash",
-    "gachaCard": "hanya/gachaCard",
-    "bannerCard": "hanya/bannerCard"
-  }
+	"name": "Hanya",
+	"rarity": 4,
+	"element": "physical",
+	"weaponType": "harmony",
+	"images": {
+		"gachaSplash": "hanya/gachaSpash",
+		"gachaCard": "hanya/gachaCard",
+		"bannerCard": "hanya/bannerCard"
+	}
 }

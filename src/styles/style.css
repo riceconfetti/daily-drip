@@ -1,283 +1,283 @@
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: "HYImpact";
-  src: url("/fonts/HYImpact/HYImpact-Regular.ttf");
-  font-weight: 400;
+	font-family: 'HYImpact';
+	src: url('/fonts/HYImpact/HYImpact-Regular.ttf');
+	font-weight: 400;
 }
 
 body {
-  --swup-overlay-theme-color: #232323;
+	--swup-overlay-theme-color: #232323;
 }
 
 .genshin {
-  @apply font-genshin;
+	@apply font-genshin;
 }
 
 .starrail {
-  @apply font-starrail font-semibold;
+	@apply font-starrail font-semibold;
 }
 
 .reverse {
-  @apply font-reverse font-bold;
+	@apply font-reverse font-bold;
 }
 
 .wuwa {
-  @apply font-wuwa font-bold;
+	@apply font-wuwa font-bold;
 }
 
 .hy-impact-regular {
-  font-family: "HYImpact";
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'HYImpact';
+	font-weight: 400;
+	font-style: normal;
 }
 
 .philosopher-regular {
-  font-family: "Philosopher", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Philosopher', sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .philosopher-bold {
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Philosopher', sans-serif;
+	font-weight: 700;
+	font-style: normal;
 }
 
 .philosopher-regular-italic {
-  font-family: "Philosopher", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+	font-family: 'Philosopher', sans-serif;
+	font-weight: 400;
+	font-style: italic;
 }
 
 .philosopher-bold-italic {
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+	font-family: 'Philosopher', sans-serif;
+	font-weight: 700;
+	font-style: italic;
 }
 
 .bai-jamjuree-extralight {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 200;
+	font-style: normal;
 }
 
 .bai-jamjuree-light {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 300;
+	font-style: normal;
 }
 
 .bai-jamjuree-regular {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .bai-jamjuree-medium {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 500;
+	font-style: normal;
 }
 
 .bai-jamjuree-semibold {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 600;
+	font-style: normal;
 }
 
 .bai-jamjuree-bold {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 700;
+	font-style: normal;
 }
 
 .bai-jamjuree-extralight-italic {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 200;
-  font-style: italic;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 200;
+	font-style: italic;
 }
 
 .bai-jamjuree-light-italic {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 300;
+	font-style: italic;
 }
 
 .bai-jamjuree-regular-italic {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 400;
+	font-style: italic;
 }
 
 .bai-jamjuree-medium-italic {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 500;
-  font-style: italic;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 500;
+	font-style: italic;
 }
 
 .bai-jamjuree-semibold-italic {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 600;
-  font-style: italic;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 600;
+	font-style: italic;
 }
 
 .bai-jamjuree-bold-italic {
-  font-family: "Bai Jamjuree", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-weight: 700;
+	font-style: italic;
 }
 
 .playfair-display-sc-regular {
-  font-family: "Playfair Display SC", serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Playfair Display SC', serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .playfair-display-sc-bold {
-  font-family: "Playfair Display SC", serif;
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Playfair Display SC', serif;
+	font-weight: 700;
+	font-style: normal;
 }
 
 .playfair-display-sc-black {
-  font-family: "Playfair Display SC", serif;
-  font-weight: 900;
-  font-style: normal;
+	font-family: 'Playfair Display SC', serif;
+	font-weight: 900;
+	font-style: normal;
 }
 
 .playfair-display-sc-regular-italic {
-  font-family: "Playfair Display SC", serif;
-  font-weight: 400;
-  font-style: italic;
+	font-family: 'Playfair Display SC', serif;
+	font-weight: 400;
+	font-style: italic;
 }
 
 .playfair-display-sc-bold-italic {
-  font-family: "Playfair Display SC", serif;
-  font-weight: 700;
-  font-style: italic;
+	font-family: 'Playfair Display SC', serif;
+	font-weight: 700;
+	font-style: italic;
 }
 
 .playfair-display-sc-black-italic {
-  font-family: "Playfair Display SC", serif;
-  font-weight: 900;
-  font-style: italic;
+	font-family: 'Playfair Display SC', serif;
+	font-weight: 900;
+	font-style: italic;
 }
 
 .playfair-display-regular {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .playfair-display-medium {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
 }
 
 .playfair-display-semibold {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
 }
 .playfair-display-bold {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
 }
 
 .playfair-display-extrabold {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
 }
 .playfair-display-black {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: normal;
 }
 .playfair-display-italic {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: italic;
 }
 
 .playfair-display-medium-italic {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: italic;
 }
 
 .playfair-display-semibold-italic {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: italic;
 }
 .playfair-display-bold-italic {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: italic;
 }
 
 .playfair-display-extrabold-italic {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: italic;
 }
 .playfair-display-black-italic {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: italic;
+	font-family: 'Playfair Display', serif;
+	font-optical-sizing: auto;
+	font-weight: 900;
+	font-style: italic;
 }
 
 .crimson-text-regular {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Crimson Text', serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .crimson-text-semibold {
-  font-family: "Crimson Text", serif;
-  font-weight: 600;
-  font-style: normal;
+	font-family: 'Crimson Text', serif;
+	font-weight: 600;
+	font-style: normal;
 }
 
 .crimson-text-bold {
-  font-family: "Crimson Text", serif;
-  font-weight: 700;
-  font-style: normal;
+	font-family: 'Crimson Text', serif;
+	font-weight: 700;
+	font-style: normal;
 }
 
 .crimson-text-regular-italic {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  font-style: italic;
+	font-family: 'Crimson Text', serif;
+	font-weight: 400;
+	font-style: italic;
 }
 
 .crimson-text-semibold-italic {
-  font-family: "Crimson Text", serif;
-  font-weight: 600;
-  font-style: italic;
+	font-family: 'Crimson Text', serif;
+	font-weight: 600;
+	font-style: italic;
 }
 
 .crimson-text-bold-italic {
-  font-family: "Crimson Text", serif;
-  font-weight: 700;
-  font-style: italic;
+	font-family: 'Crimson Text', serif;
+	font-weight: 700;
+	font-style: italic;
 }

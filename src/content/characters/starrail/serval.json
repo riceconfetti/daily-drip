@@ -1,11 +1,11 @@
 {
-  "name": "Serval",
-  "rarity": 4,
-  "element": "lightning",
-  "bannerName": "",
-  "images": {
-    "gachaSplash": "serval/gachaSpash",
-    "gachaCard": "serval/gachaCard",
-    "bannerCard": "serval/bannerCard"
-  }
+	"name": "Serval",
+	"rarity": 4,
+	"element": "lightning",
+	"bannerName": "",
+	"images": {
+		"gachaSplash": "serval/gachaSpash",
+		"gachaCard": "serval/gachaCard",
+		"bannerCard": "serval/bannerCard"
+	}
 }

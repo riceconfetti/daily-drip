@@ -1,17 +1,17 @@
 {
-  "name": "Screwllum",
-  "rarity": 5,
-  "element": "imaginary",
-  "weaponType": "erudition",
-  "bannerName": "?????",
-  "images": {
-    "gachaSplash": "screwllum/gachaSpash",
-    "gachaCard": "screwllum/gachaCard",
-    "bannerCard": "screwllum/bannerCard"
-  },
-  "colors": {
-    "primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-    "secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-    "textAccent": "text-[#999]"
-  }
+	"name": "Screwllum",
+	"rarity": 5,
+	"element": "imaginary",
+	"weaponType": "erudition",
+	"bannerName": "?????",
+	"images": {
+		"gachaSplash": "screwllum/gachaSpash",
+		"gachaCard": "screwllum/gachaCard",
+		"bannerCard": "screwllum/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+		"textAccent": "text-[#999]"
+	}
 }
