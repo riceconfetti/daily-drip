@@ -18,9 +18,9 @@
 
 <div
 	class={twMerge(
-		'relative flex aspect-square h-min items-center justify-between gap-2 rounded-sm bg-gradient-to-b from-[#37263D] to-[#9367A3] px-2 text-white',
+		'relative flex h-0 min-h-full items-center justify-center gap-2 rounded-sm bg-gradient-to-b from-[#37263D] to-[#9367A3] p-1 text-white basis-1/5 flex-grow',
 		className
 	)}
 >
-	<Image src={weaponImage.default.src} height={256} width={256} />
+	<img class="object-cover h-full object-center" src={weaponImage.default.src} alt={weapon.name} />
 </div>

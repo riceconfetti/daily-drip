@@ -38,6 +38,9 @@ export function getPhase(
 			if (event.data.status === 'spec') {
 				characterData.spec = true
 			}
+			if (event.data.type === 'debut') {
+				characterData.debut = true
+			}
 			if (character.data.rarity === 5) {
 				// 5 Star
 				phase.characters.fiveStars.push(characterData)

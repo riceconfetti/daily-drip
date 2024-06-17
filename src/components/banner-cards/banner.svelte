@@ -17,7 +17,7 @@
 		<ChronicledCard class="lg:col-span-2" chronicle={version.chronicle} {images} {game} />
 	{/if}
 	{#each version.phases as phase}
-		<div class={`flex flex-col gap-2 ${dayjs(phase.date) < dayjs() ? 'grayscale' : ''}`}>
+		<div class={`flex flex-col h-full gap-2 ${dayjs(phase.date) < dayjs() ? 'grayscale' : ''}`}>
 			<PhaseHeader {phase} />
 			<CharacterCard characters={phase.characters} {images} {game} />
 			<WeaponCard weapons={phase.weapons} {images} {game} />

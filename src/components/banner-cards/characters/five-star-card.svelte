@@ -51,5 +51,12 @@
 			height={1050}
 			width={600}
 		/>
+		{#if character.debut}
+			<div
+				class="bg-yellow-400 absolute top-1 left-1 p-[.1rem] bai-jamjuree-bold text-[.5rem] md:p-1 md:text-2xs"
+			>
+				NEW
+			</div>
+		{/if}
 	</div>
 </div>
