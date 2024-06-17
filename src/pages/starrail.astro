@@ -48,7 +48,14 @@ versionCollection.forEach(({ data }) => {
 ---
 
 <Layout title="The Daily Drip">
-	<section class="p-4 flex flex-col items-center gap-4 h-max md:max-w-[1400px]">
+	<section class="p-2 flex flex-col items-center gap-4 h-max md:max-w-[1400px]">
+		<div class="p-4 bg-dark text-accent-dark rounded-md md:col-span-2 h-min w-full">
+			<p class="crimson-text-semibold text-xs md:text-sm lg:text-base text-center text-balance">
+				Multi-colored borders means the prediction is an unconfirmed speculation. Cards without
+				borders have had one or more outside sources share their banner or rerun potential. All
+				predictions are still subject to change up until their official announcment.
+			</p>
+		</div>
 		{versions.map((version) => <Banner {version} {game} {images} client:load />)}
 	</section>
 
