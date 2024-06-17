@@ -1,1 +1,6 @@
-{"name":"Scale: Slasher","rarity":4,"weaponType":"sword","icon":"ScaleSlasher.webp"}
+{
+  "name": "Scale: Slasher",
+  "rarity": 4,
+  "weaponType": "sword",
+  "icon": "ScaleSlasher.webp"
+}

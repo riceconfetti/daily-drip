@@ -91,7 +91,7 @@ const versionsCollection = defineCollection({
         z.object({
           fiveStars: z.array(reference("weapons")),
           fourStars: z.array(reference("weapons")),
-        })
+        }),
       ),
     })
     .partial(),

@@ -17,7 +17,7 @@
 
   <div>
     {#each chronicle.weapons as weapon}
-      <WeaponCard {weapon} {images} {game}/>
+      <WeaponCard {weapon} {images} {game} />
     {/each}
   </div>
 </section>

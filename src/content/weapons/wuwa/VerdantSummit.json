@@ -1,1 +1,6 @@
-{"name":"Verdant Summit","rarity":5,"weaponType":"broadblade","icon":"VerdantSummit.webp"}
+{
+  "name": "Verdant Summit",
+  "rarity": 5,
+  "weaponType": "broadblade",
+  "icon": "VerdantSummit.webp"
+}

@@ -1,1 +1,6 @@
-{"name":"Cadenza","rarity":4,"weaponType":"pistol","icon":"Cadenza.webp"}
+{
+  "name": "Cadenza",
+  "rarity": 4,
+  "weaponType": "pistol",
+  "icon": "Cadenza.webp"
+}
