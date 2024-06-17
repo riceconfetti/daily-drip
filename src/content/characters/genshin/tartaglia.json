@@ -1,17 +1,1 @@
-{
-	"name": "Tartaglia",
-	"rarity": 5,
-	"element": "hydro",
-	"weaponType": "bow",
-	"bannerName": "Farewell of Snezhnaya",
-	"images": {
-		"gachaSplash": "tartaglia/gachaSpash",
-		"gachaCard": "tartaglia/gachaCard",
-		"bannerCard": "tartaglia/bannerCard"
-	},
-	"colors": {
-		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-		"textAccent": "text-[#999]"
-	}
-}
+{"name":"Tartaglia","rarity":5,"element":"hydro","weaponType":"bow","bannerName":"Farewell of Snezhnaya","images":{"gachaSplash":"tartaglia/gachaSplash","gachaCard":"tartaglia/gachaCard","bannerCard":"tartaglia/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

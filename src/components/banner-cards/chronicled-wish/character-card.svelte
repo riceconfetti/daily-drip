@@ -2,39 +2,39 @@
 	import { Image } from '@unpic/svelte'
 
 	export let character, images, game
-	//console.log(character.id);
+	//console.log(character)
 
-	const gachaCard =
-		images.gachaCards[
-			`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.png`
+	const gachaSplash =
+		images.gachaSplash[
+			`../assets/characters/${game}/${character.images ? character.images.gachaSplash : ''}.png`
 		] != undefined
-			? images.gachaCards[
-					`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.png`
+			? images.gachaSplash[
+					`../assets/characters/${game}/${character.images ? character.images.gachaSplash : ''}.png`
 				]
 			: images.placeHolders[
 					`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.png`
 				]
-	if (gachaCard && gachaCard == undefined) {
+	if (gachaSplash && gachaSplash == undefined) {
 		console.log(character)
 	}
 </script>
 
 <div
-	class={`border border-black shadow-xl border-opacity-20 relative flex flex-col h-full justify-end`}
+	class={`relative flex h-full flex-col justify-end border border-black border-opacity-20 shadow-xl`}
 >
-	<div class="relative w-full h-full">
-		<Image
-			class="absolute inset-0 w-full h-full"
-			height={1050}
+	<div class="relative h-full w-full">
+		<img
+			class="absolute aspect-square w-full lg:h-full object-cover lg:aspect-[1/2]"
 			width={600}
 			alt={`${character.element} Art`}
-			src={images.backgrounds[`../assets/backgrounds/${character.element}.png`].default.src}
+			src={images.backgrounds[`../assets/backgrounds/${game}/${character.element}.png`].default.src}
 		/>
-		<Image
-			class={`relative w-full h-full ${character.spec ? 'border-2 sm:border-4 md:border-6 [border-image:url(/textures/holo-4.jpg)_10_round]' : ''}`}
-			src={gachaCard.default.src}
+
+		<img
+			class={`relative object-cover aspect-square lg:aspect-[1/2] w-full ${character.spec ? 'border-2 [border-image:url(/textures/holo-4.jpg)_10_round]' : ''}`}
+			data-spec={character.spec}
+			src={gachaSplash.default.src}
 			alt={`${character.name} Art`}
-			height={1050}
 			width={600}
 		/>
 	</div>

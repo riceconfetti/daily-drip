@@ -29,11 +29,11 @@
 </script>
 
 <div
-	class={`w-full relative flex flex-col gap-2 rounded-md overflow-hidden ${eventDetails.colors.primary} ${fonts[eventDetails.game]}`}
+	class={`relative flex w-full flex-col gap-2 overflow-hidden rounded-md ${eventDetails.colors.primary} ${fonts[eventDetails.game]}`}
 >
-	<div class="absolute inset-0 z-10 flex flex-col h-full w-full justify-center p-4">
-		<h2 class=" text-white text-sm z-10">{eventDetails.title}</h2>
-		<h3 class={`${eventDetails.colors.textAccent} text-xs z-10`}>
+	<div class="absolute inset-0 z-10 flex h-full w-full flex-col justify-center p-4">
+		<h2 class=" z-10 text-sm text-white">{eventDetails.title}</h2>
+		<h3 class={`${eventDetails.colors.textAccent} z-10 text-xs`}>
 			{eventType}
 			{timeUntil}
 		</h3>

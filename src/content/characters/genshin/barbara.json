@@ -1,10 +1,1 @@
-{
-	"name": "Barbara",
-	"rarity": 4,
-	"element": "hydro",
-	"images": {
-		"gachaSplash": "barbara/gachaSpash",
-		"gachaCard": "barbara/gachaCard",
-		"bannerCard": "barbara/bannerCard"
-	}
-}
+{"name":"Barbara","rarity":4,"element":"hydro","images":{"gachaSplash":"barbara/gachaSplash","gachaCard":"barbara/gachaCard","bannerCard":"barbara/bannerCard"}}

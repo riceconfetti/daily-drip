@@ -1,0 +1,9 @@
+{
+	"status": "spec",
+	"type": "chronicle",
+	"weapon": "genshin/SummitShaper",
+	"priority": true,
+	"game": "genshin",
+	"startDate": "2024-08-06",
+	"endDate": "2024-08-27"
+}

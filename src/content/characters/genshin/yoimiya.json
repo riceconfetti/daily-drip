@@ -1,17 +1,1 @@
-{
-	"name": "Yoimiya",
-	"rarity": 5,
-	"element": "pyro",
-	"weaponType": "bow",
-	"bannerName": "Tapestry of Golden Flame",
-	"images": {
-		"gachaSplash": "yoimiya/gachaSpash",
-		"gachaCard": "yoimiya/gachaCard",
-		"bannerCard": "yoimiya/bannerCard"
-	},
-	"colors": {
-		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-		"textAccent": "text-[#999]"
-	}
-}
+{"name":"Yoimiya","rarity":5,"element":"pyro","weaponType":"bow","bannerName":"Tapestry of Golden Flame","images":{"gachaSplash":"yoimiya/gachaSplash","gachaCard":"yoimiya/gachaCard","bannerCard":"yoimiya/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}

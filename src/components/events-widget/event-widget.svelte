@@ -21,15 +21,15 @@
 </script>
 
 <section
-	class="transition overlay lg:min-h-0 flex flex-col gap-2 w-full h-full md:flex-row lg:flex-col lg:overflow-auto lg:p-4"
+	class="overlay flex h-full w-full flex-col gap-2 transition md:flex-row lg:min-h-0 lg:flex-col lg:overflow-auto lg:p-4"
 >
-	<div class="flex flex-col gap-2 w-full">
+	<div class="flex w-full flex-col gap-2">
 		<h2 class="playfair-display-semibold text-dark">Current Events</h2>
 		{#each currentEvents as eventDetails}
 			<EventSingle {eventDetails} {images} />
 		{/each}
 	</div>
-	<div class="flex flex-col gap-2 w-full">
+	<div class="flex w-full flex-col gap-2">
 		<h2 class="playfair-display-semibold text-dark">Upcoming Events</h2>
 		{#each upcomingEvents as eventDetails}
 			<EventSingle {eventDetails} {images} />
