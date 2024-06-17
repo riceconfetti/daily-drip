@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { twMerge } from "tailwind-merge";
+  let className = "";
+  export { className as class };
   export let weapon, images, game;
   const weaponImage =
     images.weapons[`../assets/weapons/${weapon.icon}`] != undefined
@@ -13,7 +16,10 @@
 </script>
 
 <div
-  class="flex relative h-auto justify-between w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 rounded-sm items-center"
+  class={twMerge(
+    "flex relative h-auto justify-between w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 rounded-sm items-center",
+    className,
+  )}
 >
   <div
     class="h-min p-2 pr-4 sm:max-w-[130px] lg:max-w-[110px] xl:max-w-[130px]"

@@ -1,1 +1,6 @@
-{"name":"Discord","rarity":4,"weaponType":"broadblade","icon":"Discord.webp"}
+{
+  "name": "Discord",
+  "rarity": 4,
+  "weaponType": "broadblade",
+  "icon": "Discord.webp"
+}

@@ -1,1 +1,6 @@
-{"name":"Emerald of Genesis","rarity":5,"weaponType":"sword","icon":"EmeraldofGenesis.webp"}
+{
+  "name": "Emerald of Genesis",
+  "rarity": 5,
+  "weaponType": "sword",
+  "icon": "EmeraldofGenesis.webp"
+}

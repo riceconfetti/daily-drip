@@ -1,1 +1,6 @@
-{"name":"Stringmaster","rarity":5,"weaponType":"rectifier","icon":"Stringmaster.webp"}
+{
+  "name": "Stringmaster",
+  "rarity": 5,
+  "weaponType": "rectifier",
+  "icon": "Stringmaster.webp"
+}

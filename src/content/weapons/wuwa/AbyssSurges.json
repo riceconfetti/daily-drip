@@ -1,1 +1,6 @@
-{"name":"Abyss Surges","rarity":5,"weaponType":"gauntlet","icon":"AbyssSurges.webp"}
+{
+  "name": "Abyss Surges",
+  "rarity": 5,
+  "weaponType": "gauntlet",
+  "icon": "AbyssSurges.webp"
+}

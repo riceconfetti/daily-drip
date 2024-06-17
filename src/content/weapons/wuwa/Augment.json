@@ -1,1 +1,6 @@
-{"name":"Augment","rarity":4,"weaponType":"rectifier","icon":"Augment.webp"}
+{
+  "name": "Augment",
+  "rarity": 4,
+  "weaponType": "rectifier",
+  "icon": "Augment.webp"
+}

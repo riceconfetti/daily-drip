@@ -151,7 +151,7 @@ weapons.forEach((wArray, i) => {
         if (err) {
           console.error(err);
         }
-      }
+      },
     );
   });
 });
