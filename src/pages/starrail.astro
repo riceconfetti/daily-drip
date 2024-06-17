@@ -75,7 +75,7 @@ versionCollection.forEach(({ data }) => {
 ---
 
 <Layout title="The Daily Drip">
-  <section class="p-4 flex flex-col items-center gap-4 md:max-w-[1400px]">
+  <section class="p-4 flex flex-col items-center gap-4 h-max md:max-w-[1400px]">
     {versions.map((version) => <Banner {version} {game} {images} client:load />)}
   </section>
 
