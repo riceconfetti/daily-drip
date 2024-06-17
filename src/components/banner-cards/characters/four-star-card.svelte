@@ -14,18 +14,18 @@
 </script>
 
 <div
-	class={`flex relative w-full shadow-lg border-0 border-black border-opacity-20 items-center ${colors[game][character.element]} ${character.spec ? 'border-2 sm:border-4 md:border-6 [border-image:url(/textures/holo-4.jpg)_10_round]' : ''}`}
+	class={`relative flex w-full items-center border-0 border-black border-opacity-20 shadow-lg ${colors[game][character.element]} ${character.spec ? 'md:border-6 border-2 [border-image:url(/textures/holo-4.jpg)_10_round] sm:border-4' : ''}`}
 >
 	<Image
-		class={`gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%] right-0 h-full`}
+		class={`right-0 h-full gradient-mask-l-[transparent,rgba(0,0,0,1.0)_0px,rgba(0,0,0,0.8)_30%]`}
 		src={bannerCard.default.src}
 		alt={`${character.name} Art`}
 		layout="constrained"
 		height={300}
 		width={1150}
 	></Image>
-	<div class="absolute flex items-center w-full h-full p-2 md:p-4">
-		<h1 class={`text-white text-[.6rem] sm:text-xs md:text-base lg:text-sm xl:text-base`}>
+	<div class="absolute flex h-full w-full items-center p-2 md:p-4">
+		<h1 class={`text-[.6rem] text-white sm:text-xs md:text-base lg:text-sm xl:text-base`}>
 			{character.name}
 		</h1>
 	</div>

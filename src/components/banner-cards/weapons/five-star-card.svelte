@@ -15,22 +15,14 @@
 	}
 </script>
 
-<div
-	class={twMerge(
-		'flex relative justify-between h-auto w-full bg-gradient-to-r text-white from-[#272317] to-[#8D7D52] gap-2 rounded-sm items-center',
-		className
-	)}
->
+<div class={twMerge('relative flex h-auto w-full items-center justify-between gap-2 rounded-sm bg-gradient-to-r from-[#272317] to-[#8D7D52] text-white', className)}>
 	<div class="h-min p-2 pr-4 sm:max-w-[130px] lg:max-w-[110px] xl:max-w-[130px]">
-		<h1
-			class="text-[.3rem] text-balance sm:text-2xs md:text-xs lg:text-[.45rem] lg:leading-normal xl:text-[.7rem]"
-		>
+		<h1 class="text-balance text-[.3rem] sm:text-2xs md:text-xs lg:text-[.45rem] lg:leading-normal xl:text-[.7rem]">
 			{weapon.name}
 		</h1>
 	</div>
-
 	<img
-		class="h-0 absolute right-0 aspect-square min-h-full"
+		class="absolute right-0 aspect-square h-0 min-h-full"
 		src={weaponImage.default.src}
 		alt={`${weapon.name} Icon`}
 	/>

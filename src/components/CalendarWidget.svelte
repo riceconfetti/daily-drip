@@ -32,19 +32,19 @@
 <Calendar.Root
 	let:months
 	let:weekdays
-	class="w-full lg:min-h-0 flex flex-col text-center md:h-full md:grid md:grid-rows-[fit-content(theme(spacing.32))] p-4"
+	class="flex w-full flex-col p-4 text-center md:grid md:h-full md:grid-rows-[fit-content(theme(spacing.32))] lg:min-h-0"
 	fixedWeeks={true}
 	weekdayFormat="short"
 >
-	<Calendar.Header class="playfair-display-sc-bold flex justify-between items-center gap-2 p-2">
+	<Calendar.Header class="playfair-display-sc-bold flex items-center justify-between gap-2 p-2">
 		<Calendar.PrevButton
-			class="inline-flex size-10 items-center justify-center rounded-9px bg-background-alt hover:bg-muted active:scale-98 active:transition-all"
+			class="rounded-9px bg-background-alt hover:bg-muted active:scale-98 inline-flex size-10 items-center justify-center active:transition-all"
 		>
 			<i class="ri-arrow-left-s-line"></i>
 		</Calendar.PrevButton>
 		<Calendar.Heading />
 		<Calendar.NextButton
-			class="inline-flex size-10 items-center justify-center rounded-9px bg-background-alt hover:bg-muted active:scale-98 active:transition-all"
+			class="rounded-9px bg-background-alt hover:bg-muted active:scale-98 inline-flex size-10 items-center justify-center active:transition-all"
 		>
 			<i class="ri-arrow-right-s-line"></i>
 		</Calendar.NextButton>
@@ -52,41 +52,41 @@
 
 	{#each months as month, i (i)}
 		<Calendar.Grid
-			class="lg:min-h-0 md:text-left md:h-full md:w-full md:flex md:flex-col md:gap-4 md:border-collapse"
+			class="md:flex md:h-full md:w-full md:border-collapse md:flex-col md:gap-4 md:text-left lg:min-h-0"
 		>
-			<Calendar.GridHead class="hidden md:block h-min">
+			<Calendar.GridHead class="hidden h-min md:block">
 				<Calendar.GridRow
-					class="grid grid-cols-7 justify-items-center text-dark text-opacity-50 playfair-display-sc-bold"
+					class="playfair-display-sc-bold grid grid-cols-7 justify-items-center text-dark text-opacity-50"
 				>
 					{#each weekdays as day}
-						<Calendar.HeadCell class="text-xs align-center">
+						<Calendar.HeadCell class="align-center text-xs">
 							<div>{day.slice(0, 3)}</div>
 						</Calendar.HeadCell>
 					{/each}
 				</Calendar.GridRow>
 			</Calendar.GridHead>
 			<Calendar.GridBody
-				class=" min-h-0 md:grid md:grid-rows-6 md:h-full md:border md:border-black md:border-opacity-20 md:divide-y"
+				class=" min-h-0 md:grid md:h-full md:grid-rows-6 md:divide-y md:border md:border-black md:border-opacity-20"
 			>
 				{#each month.weeks as weekDates}
 					<Calendar.GridRow
-						class="md:grid md:grid-cols-7 md:border-black md:border-opacity-20 md:align-top md:divide-x"
+						class="md:grid md:grid-cols-7 md:divide-x md:border-black md:border-opacity-20 md:align-top"
 					>
 						{#each weekDates as date}
 							<Calendar.Cell
 								{date}
-								class="min-h-0 md:p-1 md:aspect-square md:px-2 md:h-full md:w-full md:border-black md:border-opacity-20 p-2"
+								class="min-h-0 p-2 md:aspect-square md:h-full md:w-full md:border-black md:border-opacity-20 md:p-1 md:px-2"
 							>
 								<Calendar.Day
 									{date}
 									month={month.value}
 									data-game={isDate(date)}
-									class="crimson-text-regular p-2 leading-none group relative inline-flex w-full h-auto aspect-square items-center justify-center whitespace-nowrap rounded-9px border border-transparent bg-transparent text-sm font-normal text-foreground hover:border-foreground rounded-md data-[game='genshin']:bg-genshin-event data-[game='genshin']:text-white data-[game='starrail']:bg-starrail-event data-[game='starrail']:text-white data-[game='reverse']:bg-reverse-event data-[game='reverse']:text-white data-[game='wuwa']:bg-wuwa-event data-[game='wuwa']:text-white md:p-[.35rem] md:w-min md:min-h-0 data-[outside-month]:pointer-events-none data-[disabled]:opacity-20 data-[selected]:text-background data-[unavailable]:text-muted-foreground"
+									class="crimson-text-regular rounded-9px text-foreground hover:border-foreground data-[selected]:text-background data-[unavailable]:text-muted-foreground group relative inline-flex aspect-square h-auto w-full items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-transparent p-2 text-sm font-normal leading-none data-[outside-month]:pointer-events-none data-[game='genshin']:bg-genshin-event data-[game='reverse']:bg-reverse-event data-[game='starrail']:bg-starrail-event data-[game='wuwa']:bg-wuwa-event data-[game='genshin']:text-white data-[game='reverse']:text-white data-[game='starrail']:text-white data-[game='wuwa']:text-white data-[disabled]:opacity-20 md:min-h-0 md:w-min md:p-[.35rem]"
 								>
 									{date.day}
 								</Calendar.Day>
 								<p
-									class={`ml-1 hidden w-min ${isDate(date) == 'genshin' ? 'text-2xs' : 'text-xs'} ${isDate(date)} md:inline text-[#535353] xl:${isDate(date) == 'genshin' ? 'text-xs' : 'text-sm'}`}
+									class={`ml-1 hidden w-min ${isDate(date) == 'genshin' ? 'text-2xs' : 'text-xs'} ${isDate(date)} text-[#535353] md:inline xl:${isDate(date) == 'genshin' ? 'text-xs' : 'text-sm'}`}
 								>
 									{isDate(date).charAt(0).toUpperCase() + isDate(date).slice(1)}
 								</p>

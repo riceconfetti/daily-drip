@@ -1,10 +1,1 @@
-{
-	"name": "Sayu",
-	"rarity": 4,
-	"element": "anemo",
-	"images": {
-		"gachaSplash": "sayu/gachaSpash",
-		"gachaCard": "sayu/gachaCard",
-		"bannerCard": "sayu/bannerCard"
-	}
-}
+{"name":"Sayu","rarity":4,"element":"anemo","images":{"gachaSplash":"sayu/gachaSplash","gachaCard":"sayu/gachaCard","bannerCard":"sayu/bannerCard"}}

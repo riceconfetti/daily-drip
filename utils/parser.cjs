@@ -22,9 +22,9 @@ const fs = require('fs')
 //   });
 // });
 
-// let characters = fs.readdirSync("./src/content/characters/starrail");
+let characters = fs.readdirSync("./src/content/characters/genshin");
 
-// fs.readFile("utils/starrailGradients.json", "utf8", function (err, data) {
+// fs.readFile("utils/genshinGradients.json", "utf8", function (err, data) {
 //   if (err) {
 //     console.error(err);
 //     return;
@@ -34,7 +34,7 @@ const fs = require('fs')
 
 //   characters.forEach((c) => {
 //     fs.readFile(
-//       `./src/content/characters/starrail/${c}`,
+//       `./src/content/characters/genshin/${c}`,
 //       "utf8",
 //       function (err, data) {
 //         if (err) {
@@ -59,7 +59,7 @@ const fs = require('fs')
 //         }
 
 //         fs.writeFile(
-//           `./src/content/characters/starrail/${c}`,
+//           `./src/content/characters/genshin/${c}`,
 //           JSON.stringify(character),
 //           (err) => {
 //             if (err) {
@@ -72,38 +72,38 @@ const fs = require('fs')
 //   });
 // });
 
-// characters.forEach((c) => {
-//   fs.readFile(
-//     `./src/content/characters/wuwa/${c}`,
-//     "utf8",
-//     function (err, data) {
-//       if (err) {
-//         console.log(err);
-//         return;
-//       }
-//       let character = JSON.parse(data);
+characters.forEach((c) => {
+  fs.readFile(
+    `./src/content/characters/genshin/${c}`,
+    "utf8",
+    function (err, data) {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      let character = JSON.parse(data);
 
-//       if (character.splashArt) {
-//         delete character.splashArt;
-//       }
+      if (character.splashArt) {
+        delete character.splashArt;
+      }
 
-//       character.images = {
-//         gachaSplash: `${character.name
-//           .toLowerCase()
-//           .replace(
-//             /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-//             ""
-//           )}/gachaSpash`,
-//         gachaCard: `${character.name
-//           .toLowerCase()
-//           .replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "")}/gachaCard`,
-//         bannerCard: `${character.name
-//           .toLowerCase()
-//           .replace(
-//             /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
-//             ""
-//           )}/bannerCard`,
-//       };
+      character.images = {
+        gachaSplash: `${character.name
+          .toLowerCase()
+          .replace(
+            /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+            ""
+          )}/gachaSplash`,
+        gachaCard: `${character.name
+          .toLowerCase()
+          .replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, "")}/gachaCard`,
+        bannerCard: `${character.name
+          .toLowerCase()
+          .replace(
+            /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g,
+            ""
+          )}/bannerCard`,
+      };
 
 //       if (character.rarity == 5 && character.colors == undefined) {
 //         character.colors = {
@@ -113,50 +113,50 @@ const fs = require('fs')
 //         };
 //       }
 
-//       fs.writeFile(
-//         `./src/content/characters/wuwa/${c}`,
-//         JSON.stringify(character),
-//         (err) => {
-//           if (err) {
-//             console.error(err);
-//           }
-//         }
-//       );
-//     }
-//   );
-// });
+      fs.writeFile(
+        `./src/content/characters/genshin/${c}`,
+        JSON.stringify(character),
+        (err) => {
+          if (err) {
+            console.error(err);
+          }
+        }
+      );
+    }
+  );
+});
 
-let weapons = [
-	['Cosmic Ripples', 'Stringmaster'],
-	['Variation', 'Rectifier#25', 'Jinzhou Keeper', 'Comet Flare', 'Augment']
-]
+// let weapons = [
+// 	['Cosmic Ripples', 'Stringmaster'],
+// 	['Variation', 'Rectifier#25', 'Jinzhou Keeper', 'Comet Flare', 'Augment']
+// ]
 
-let type = 'rectifier'
+// let type = 'rectifier'
 
-weapons.forEach((wArray, i) => {
-	let rarity = i == 0 ? 5 : 4
+// weapons.forEach((wArray, i) => {
+// 	let rarity = i == 0 ? 5 : 4
 
-	wArray.forEach((w) => {
-		let path = w.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, '')
-		let weapon = {
-			name: w,
-			rarity: rarity,
-			weaponType: type,
-			icon: `${path}.webp`
-		}
-		fs.writeFile(`./src/content/weapons/wuwa/${path}`, JSON.stringify(weapon), (err) => {
-			if (err) {
-				console.error(err)
-			}
-		})
-	})
-})
+// 	wArray.forEach((w) => {
+// 		let path = w.replace(/[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g, '')
+// 		let weapon = {
+// 			name: w,
+// 			rarity: rarity,
+// 			weaponType: type,
+// 			icon: `${path}.webp`
+// 		}
+// 		fs.writeFile(`./src/content/weapons/genshin/${path}`, JSON.stringify(weapon), (err) => {
+// 			if (err) {
+// 				console.error(err)
+// 			}
+// 		})
+// 	})
+// })
 
-// let weapons = fs.readdirSync("./src/content/weapons/starrail");
+// let weapons = fs.readdirSync("./src/content/weapons/genshin");
 
 // weapons = weapons.forEach((w) => {
 //   fs.readFile(
-//     `./src/content/weapons/starrail/${w}`,
+//     `./src/content/weapons/genshin/${w}`,
 //     "utf8",
 //     function (err, data) {
 //       if (err) {
@@ -171,7 +171,7 @@ weapons.forEach((wArray, i) => {
 //       )}.webp`;
 
 //       fs.writeFile(
-//         `./src/content/weapons/starrail/${w}`,
+//         `./src/content/weapons/genshin/${w}`,
 //         JSON.stringify(weapon),
 //         (err) => {
 //           if (err) {

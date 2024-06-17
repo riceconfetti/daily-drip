@@ -18,7 +18,7 @@
 
 <div
 	class={twMerge(
-		'flex relative h-min aspect-square justify-between bg-gradient-to-b text-white from-[#37263D] to-[#9367A3] gap-2 rounded-sm items-center px-2',
+		'relative flex aspect-square h-min items-center justify-between gap-2 rounded-sm bg-gradient-to-b from-[#37263D] to-[#9367A3] px-2 text-white',
 		className
 	)}
 >

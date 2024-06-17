@@ -1,10 +1,1 @@
-{
-	"name": "Razor",
-	"rarity": 4,
-	"element": "electro",
-	"images": {
-		"gachaSplash": "razor/gachaSpash",
-		"gachaCard": "razor/gachaCard",
-		"bannerCard": "razor/bannerCard"
-	}
-}
+{"name":"Razor","rarity":4,"element":"electro","images":{"gachaSplash":"razor/gachaSplash","gachaCard":"razor/gachaCard","bannerCard":"razor/bannerCard"}}

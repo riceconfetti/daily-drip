@@ -6,15 +6,15 @@
 
 <!-- Weapons -->
 
-<section class="flex flex-col w-full">
-	<h2 class="text-dark text-2xs sm:text-sm">Rate Up Weapons</h2>
+<section class="flex w-full flex-col">
+	<h2 class="text-2xs text-dark sm:text-sm">Rate Up Weapons</h2>
 	<div
 		class={`grid grid-cols-[1fr_1fr_45%] gap-2 ${game == 'wuwa' ? 'grid-cols-[1fr_65%]' : 'grid-cols-[1fr_1fr_45%]'}`}
 	>
 		{#each weapons.fiveStars as weapon}
 			<FiveStarCard {weapon} {images} {game} />
 		{/each}
-		<div class="flex justify-between w-full h-full gap-1">
+		<div class="flex h-full w-full justify-between gap-1">
 			{#each weapons.fourStars as weapon}
 				<FourStarCard {weapon} {images} {game} />
 			{/each}
