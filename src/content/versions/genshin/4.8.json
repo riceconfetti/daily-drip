@@ -4,11 +4,11 @@
   "endDate": "2024-08-27",
   "weapons": [
     {
-      "fiveStars": ["genshin/LumidouceElegy", "genshin/KeyofKhajNisut"],
+      "fiveStars": ["genshin/Verdict", "genshin/KeyofKhajNisut"],
       "fourStars": []
     },
     {
-      "fiveStars": ["genshin/Verdict", "genshin/CashflowSupervision"],
+      "fiveStars": ["genshin/LumidouceElegy", "genshin/AquaSimulacra"],
       "fourStars": []
     }
   ]
