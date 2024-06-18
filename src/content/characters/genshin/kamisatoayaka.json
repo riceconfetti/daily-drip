@@ -1,1 +1,17 @@
-{"name":"Kamisato Ayaka","rarity":5,"element":"cryo","weaponType":"sword","bannerName":"The Heron's Court","images":{"gachaSplash":"kamisatoayaka/gachaSplash","gachaCard":"kamisatoayaka/gachaCard","bannerCard":"kamisatoayaka/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}
+{
+	"name": "Kamisato Ayaka",
+	"rarity": 5,
+	"element": "cryo",
+	"weaponType": "sword",
+	"bannerName": "The Heron's Court",
+	"images": {
+		"gachaSplash": "kamisatoayaka/gachaSplash",
+		"gachaCard": "kamisatoayaka/gachaCard",
+		"bannerCard": "kamisatoayaka/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#2A2E6C] to-[#86B0E1]",
+		"secondary": "bg-gradient-to-t from-[#293B59] to-[#94A9EB00]",
+		"textAccent": "text-[#EC8DA9]"
+	}
+}

@@ -1,1 +1,11 @@
-{"name":"Lynette","rarity":4,"element":"anemo","weaponType":"sword","images":{"gachaSplash":"lynette/gachaSplash","gachaCard":"lynette/gachaCard","bannerCard":"lynette/bannerCard"}}
+{
+	"name": "Lynette",
+	"rarity": 4,
+	"element": "anemo",
+	"weaponType": "sword",
+	"images": {
+		"gachaSplash": "lynette/gachaSplash",
+		"gachaCard": "lynette/gachaCard",
+		"bannerCard": "lynette/bannerCard"
+	}
+}

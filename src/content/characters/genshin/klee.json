@@ -1,1 +1,16 @@
-{"name":"Klee","rarity":5,"element":"pyro","bannerName":"Sparkling Steps","images":{"gachaSplash":"klee/gachaSplash","gachaCard":"klee/gachaCard","bannerCard":"klee/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}
+{
+	"name": "Klee",
+	"rarity": 5,
+	"element": "pyro",
+	"bannerName": "Sparkling Steps",
+	"images": {
+		"gachaSplash": "klee/gachaSplash",
+		"gachaCard": "klee/gachaCard",
+		"bannerCard": "klee/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#5E1307] to-[#C4280F]",
+		"secondary": "bg-gradient-to-t from-[#4B0F04] to-[#D2313100]",
+		"textAccent": "text-[#D8BA8A]"
+	}
+}

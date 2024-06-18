@@ -1,1 +1,11 @@
-{"name":"KukiShinobu","rarity":4,"element":"electro","weaponType":"sword","images":{"gachaSplash":"kukishinobu/gachaSplash","gachaCard":"kukishinobu/gachaCard","bannerCard":"kukishinobu/bannerCard"}}
+{
+	"name": "Kuki Shinobu",
+	"rarity": 4,
+	"element": "electro",
+	"weaponType": "sword",
+	"images": {
+		"gachaSplash": "kukishinobu/gachaSplash",
+		"gachaCard": "kukishinobu/gachaCard",
+		"bannerCard": "kukishinobu/bannerCard"
+	}
+}

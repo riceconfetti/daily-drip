@@ -1,1 +1,10 @@
-{"name":"Lisa","rarity":4,"element":"electro","images":{"gachaSplash":"lisa/gachaSplash","gachaCard":"lisa/gachaCard","bannerCard":"lisa/bannerCard"}}
+{
+	"name": "Lisa",
+	"rarity": 4,
+	"element": "electro",
+	"images": {
+		"gachaSplash": "lisa/gachaSplash",
+		"gachaCard": "lisa/gachaCard",
+		"bannerCard": "lisa/bannerCard"
+	}
+}

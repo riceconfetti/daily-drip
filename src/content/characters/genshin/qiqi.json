@@ -1,1 +1,17 @@
-{"name":"Qiqi","rarity":5,"element":"cryo","weaponType":"sword","bannerName":"","images":{"gachaSplash":"qiqi/gachaSplash","gachaCard":"qiqi/gachaCard","bannerCard":"qiqi/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}
+{
+	"name": "Qiqi",
+	"rarity": 5,
+	"element": "cryo",
+	"weaponType": "sword",
+	"bannerName": "",
+	"images": {
+		"gachaSplash": "qiqi/gachaSplash",
+		"gachaCard": "qiqi/gachaCard",
+		"bannerCard": "qiqi/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#382A67] to-[#AAB0F2]",
+		"secondary": "bg-gradient-to-t from-[#2C455B] to-[#5E92C100]",
+		"textAccent": "text-[#4BA5FC]"
+	}
+}
