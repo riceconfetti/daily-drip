@@ -4,11 +4,11 @@
 	"endDate": "2024-09-10",
 	"weapons": [
 		{
-			"fiveStars": ["starrail/NightofFright", "starrail/fiveStar_default"],
+			"fiveStars": ["starrail/fiveStar_default", "starrail/NightofFright"],
 			"fourStars": []
 		},
 		{
-			"fiveStars": ["starrail/IntheNight", "starrail/fiveStar_default"],
+			"fiveStars": [ "starrail/fiveStar_default", "starrail/IntheNight"],
 			"fourStars": []
 		}
 	]

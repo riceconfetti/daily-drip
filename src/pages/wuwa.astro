@@ -26,7 +26,10 @@ const characterCollection = await getCollection('characters', ({ id }) => {
 })
 
 const eventCollection = await getCollection('events', ({ id, data }) => {
-	return id.startsWith(game) && (data.type === 'banner' || data.type === 'rate-up')
+	return (
+		id.startsWith(game) &&
+		(data.type === 'banner' || data.type === 'rate-up' || data.type == 'debut')
+	)
 })
 
 const weaponCollection = await getCollection('weapons', ({ id }) => {
