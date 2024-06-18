@@ -1,1 +1,11 @@
-{"name":"Yaoyao","rarity":4,"element":"dendro","weaponType":"polearm","images":{"gachaSplash":"yaoyao/gachaSplash","gachaCard":"yaoyao/gachaCard","bannerCard":"yaoyao/bannerCard"}}
+{
+	"name": "Yaoyao",
+	"rarity": 4,
+	"element": "dendro",
+	"weaponType": "polearm",
+	"images": {
+		"gachaSplash": "yaoyao/gachaSplash",
+		"gachaCard": "yaoyao/gachaCard",
+		"bannerCard": "yaoyao/bannerCard"
+	}
+}

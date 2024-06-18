@@ -1,1 +1,16 @@
-{"name":"Mona","rarity":5,"element":"hydro","bannerName":"","images":{"gachaSplash":"mona/gachaSplash","gachaCard":"mona/gachaCard","bannerCard":"mona/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}
+{
+	"name": "Mona",
+	"rarity": 5,
+	"element": "hydro",
+	"bannerName": "",
+	"images": {
+		"gachaSplash": "mona/gachaSplash",
+		"gachaCard": "mona/gachaCard",
+		"bannerCard": "mona/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#422A71] to-[#A1AAE9]",
+		"secondary": "bg-gradient-to-t from-[#492E7F] to-[#8453E500]",
+		"textAccent": "text-[#EBB38F]"
+	}
+}

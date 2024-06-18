@@ -1,1 +1,11 @@
-{"name":"Gorou","rarity":4,"element":"geo","weaponType":"bow","images":{"gachaSplash":"gorou/gachaSplash","gachaCard":"gorou/gachaCard","bannerCard":"gorou/bannerCard"}}
+{
+	"name": "Gorou",
+	"rarity": 4,
+	"element": "geo",
+	"weaponType": "bow",
+	"images": {
+		"gachaSplash": "gorou/gachaSplash",
+		"gachaCard": "gorou/gachaCard",
+		"bannerCard": "gorou/bannerCard"
+	}
+}

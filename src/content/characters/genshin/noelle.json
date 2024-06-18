@@ -1,1 +1,10 @@
-{"name":"Noelle","rarity":4,"element":"geo","images":{"gachaSplash":"noelle/gachaSplash","gachaCard":"noelle/gachaCard","bannerCard":"noelle/bannerCard"}}
+{
+	"name": "Noelle",
+	"rarity": 4,
+	"element": "geo",
+	"images": {
+		"gachaSplash": "noelle/gachaSplash",
+		"gachaCard": "noelle/gachaCard",
+		"bannerCard": "noelle/bannerCard"
+	}
+}

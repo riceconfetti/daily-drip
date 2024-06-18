@@ -1,1 +1,11 @@
-{"name":"Mika","rarity":4,"element":"cryo","weaponType":"polearm","images":{"gachaSplash":"mika/gachaSplash","gachaCard":"mika/gachaCard","bannerCard":"mika/bannerCard"}}
+{
+	"name": "Mika",
+	"rarity": 4,
+	"element": "cryo",
+	"weaponType": "polearm",
+	"images": {
+		"gachaSplash": "mika/gachaSplash",
+		"gachaCard": "mika/gachaCard",
+		"bannerCard": "mika/bannerCard"
+	}
+}

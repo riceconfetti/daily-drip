@@ -1,1 +1,17 @@
-{"name":"Sigewinne","rarity":5,"element":"hydro","weaponType":"bow","bannerName":"Romaritime Meluserenity","colors":{"primary":"bg-gradient-to-r from-[#669ECB] to-[#EFA0B4]","secondary":"bg-gradient-to-t from-[#669ECB] to-[#EFA0B400]","textAccent":"text-[#034A88]"},"images":{"gachaSplash":"sigewinne/gachaSplash","gachaCard":"sigewinne/gachaCard","bannerCard":"sigewinne/bannerCard"}}
+{
+	"name": "Sigewinne",
+	"rarity": 5,
+	"element": "hydro",
+	"weaponType": "bow",
+	"bannerName": "Romaritime Meluserenity",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#669ECB] to-[#EFA0B4]",
+		"secondary": "bg-gradient-to-t from-[#669ECB] to-[#EFA0B400]",
+		"textAccent": "text-[#034A88]"
+	},
+	"images": {
+		"gachaSplash": "sigewinne/gachaSplash",
+		"gachaCard": "sigewinne/gachaCard",
+		"bannerCard": "sigewinne/bannerCard"
+	}
+}

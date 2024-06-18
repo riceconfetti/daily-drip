@@ -1,1 +1,17 @@
-{"name":"Raiden Shogun","rarity":5,"element":"electro","weaponType":"polearm","bannerName":"Reign of Serenity","images":{"gachaSplash":"raidenshogun/gachaSplash","gachaCard":"raidenshogun/gachaCard","bannerCard":"raidenshogun/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}
+{
+	"name": "Raiden Shogun",
+	"rarity": 5,
+	"element": "electro",
+	"weaponType": "polearm",
+	"bannerName": "Reign of Serenity",
+	"images": {
+		"gachaSplash": "raidenshogun/gachaSplash",
+		"gachaCard": "raidenshogun/gachaCard",
+		"bannerCard": "raidenshogun/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#22103E] to-[#9A71CE]",
+		"secondary": "bg-gradient-to-t from-[#29255E] to-[#813DB700]",
+		"textAccent": "text-[#EBBFF9]"
+	}
+}

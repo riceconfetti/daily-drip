@@ -3,6 +3,7 @@
 	"icon": "",
 	"times": {
 		"maintenance": "22:00:00",
+		"version": "03:00:00",
 		"update": {
 			"as": "10:00:00",
 			"eu": "17:00:00",

@@ -24,4 +24,3 @@
 >
 	<Image src={weaponImage.default.src} height={256} width={256} />
 </div>
-

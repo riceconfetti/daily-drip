@@ -1,1 +1,10 @@
-{"name":"Ningguang","rarity":4,"element":"geo","images":{"gachaSplash":"ningguang/gachaSplash","gachaCard":"ningguang/gachaCard","bannerCard":"ningguang/bannerCard"}}
+{
+	"name": "Ningguang",
+	"rarity": 4,
+	"element": "geo",
+	"images": {
+		"gachaSplash": "ningguang/gachaSplash",
+		"gachaCard": "ningguang/gachaCard",
+		"bannerCard": "ningguang/bannerCard"
+	}
+}

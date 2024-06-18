@@ -1,1 +1,16 @@
-{"name":"Neuvillette","rarity":5,"element":"hydro","bannerName":"Decree of the Deeps","images":{"gachaSplash":"neuvillette/gachaSplash","gachaCard":"neuvillette/gachaCard","bannerCard":"neuvillette/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}
+{
+	"name": "Neuvillette",
+	"rarity": 5,
+	"element": "hydro",
+	"bannerName": "Decree of the Deeps",
+	"images": {
+		"gachaSplash": "neuvillette/gachaSplash",
+		"gachaCard": "neuvillette/gachaCard",
+		"bannerCard": "neuvillette/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#252C50] to-[#AFD2E5]",
+		"secondary": "bg-gradient-to-t from-[#2D334C] to-[#1586EE00]",
+		"textAccent": "text-[#179BF4]"
+	}
+}

@@ -1,1 +1,17 @@
-{"name":"Ganyu","rarity":5,"element":"cryo","weaponType":"bow","bannerName":"Adrift in the Harbor","images":{"gachaSplash":"ganyu/gachaSplash","gachaCard":"ganyu/gachaCard","bannerCard":"ganyu/bannerCard"},"colors":{"primary":"bg-gradient-to-r from-[#000] to-[#fff]","secondary":"bg-gradient-to-t from-[#000] to-[#ffffff00]","textAccent":"text-[#999]"}}
+{
+	"name": "Ganyu",
+	"rarity": 5,
+	"element": "cryo",
+	"weaponType": "bow",
+	"bannerName": "Adrift in the Harbor",
+	"images": {
+		"gachaSplash": "ganyu/gachaSplash",
+		"gachaCard": "ganyu/gachaCard",
+		"bannerCard": "ganyu/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#5482D8] to-[#302835]",
+		"secondary": "bg-gradient-to-t from-[#1B255D] to-[#95B0D000]",
+		"textAccent": "text-[#BF2741]"
+	}
+}

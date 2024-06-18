@@ -51,7 +51,9 @@ const eventCollection = defineCollection({
 		type: z.string(), //banner, webEvent?, limitedEvent?, gameMode?
 		game: reference('games'),
 		startDate: z.string().date(),
+		startTime: z.string().optional(),
 		endDate: z.string().date(),
+		endTime: z.string().optional(),
 		title: z.string().optional(),
 		character: reference('characters').optional(),
 		weapon: reference('weapons').optional(),
