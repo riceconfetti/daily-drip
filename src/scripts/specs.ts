@@ -40,7 +40,7 @@ export function getPhase(
 			}
 			if (event.data.type === 'debut') {
 				characterData.debut = true
-			}
+			} 
 			if (character.data.rarity === 5) {
 				// 5 Star
 				phase.characters.fiveStars.push(characterData)
@@ -48,6 +48,12 @@ export function getPhase(
 				phase.characters.fourStars.push(characterData)
 			}
 		}
+
+		phase.characters.fiveStars.sort((a, b) => {
+			const x = a.debut ? 1 : -1;
+			const y = b.debut ? 1: -1;
+			return y-x;
+		})
 	})
 
 	let simBanners = game == 'wuwa' ? 1 : 2

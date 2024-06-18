@@ -1,6 +1,7 @@
 export class Character {
 	name?: string
 	spec?: boolean
+	debut?: boolean
 	rarity?: number
 	element?: string
 	weaponType?: string
