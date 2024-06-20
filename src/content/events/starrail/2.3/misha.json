@@ -3,6 +3,9 @@
 	"type": "rate-up",
 	"character": "starrail/misha",
 	"game": "starrail",
-	"startDate": "2024-06-18",
-	"endDate": "2024-07-10"
+	"startDate": "2024-06-19",
+	"endDate": "2024-07-10",
+	"startTime": "03:00:00",
+	"endTime": "15:00:00"
 }
+
