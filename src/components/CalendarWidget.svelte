@@ -1,11 +1,15 @@
 <script lang="ts">
 	import { Calendar } from 'bits-ui'
-	import { parseDate, CalendarDate } from '@internationalized/date'
-	import { Event } from '../classes/event'
+	import dayjs from 'dayjs'
+	import { CalendarDate, parseDate } from '@internationalized/date'
+	import utc from 'dayjs/plugin/utc'
+	dayjs.extend(utc)
+
 	export let genshin, starrail, reverse, wuwa
 
 	function findGame(game, date) {
-		return game.find((e) => e === date.toString()) != undefined
+		//console.log(date.toString())
+		return game.find((e) => e.startsWith(date.toString())) != undefined
 	}
 
 	function isDate(date) {

@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro'
 import CalendarWidget from '../components/CalendarWidget.svelte'
 import EventsWidget from '../components/events-widget/event-data.astro'
 import { getCollection } from 'astro:content'
+import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+dayjs.extend(utc)
 
 const images = {
 	genshin: {
@@ -21,13 +24,26 @@ const images = {
 	}
 }
 
+function getTime(t) {
+	if (t != undefined) {
+		return 'T' + t + 'Z'
+	} else {
+		return ''
+	}
+}
+
 const genshin = [
 	...new Set(
 		(
 			await getCollection('events', ({ id, data }) => {
 				return id.startsWith('genshin/') && data.status == 'confirmed'
 			})
-		).map((e) => e.data.startDate)
+		).map((e) =>
+			dayjs
+				.utc(e.data.startDate + getTime(e.data.startTime))
+				.utcOffset(-5)
+				.format()
+		)
 	)
 ]
 
@@ -37,7 +53,12 @@ const starrail = [
 			await getCollection('events', ({ id, data }) => {
 				return id.startsWith('starrail/') && data.status == 'confirmed'
 			})
-		).map((e) => e.data.startDate)
+		).map((e) =>
+			dayjs
+				.utc(e.data.startDate + getTime(e.data.startTime))
+				.utcOffset(-5)
+				.format()
+		)
 	)
 ]
 
@@ -47,7 +68,12 @@ const reverse = [
 			await getCollection('events', ({ id, data }) => {
 				return id.startsWith('reverse') && data.status == 'confirmed'
 			})
-		).map((e) => e.data.startDate)
+		).map((e) =>
+			dayjs
+				.utc(e.data.startDate + getTime(e.data.startTime))
+				.utcOffset(-5)
+				.format()
+		)
 	)
 ]
 
@@ -57,7 +83,12 @@ const wuwa = [
 			await getCollection('events', ({ data }) => {
 				return data.game.id === 'wuwa' && data.status == 'confirmed'
 			})
-		).map((e) => e.data.startDate)
+		).map((e) =>
+			dayjs
+				.utc(e.data.startDate + getTime(e.data.startTime))
+				.utcOffset(-5)
+				.format()
+		)
 	)
 ]
 ---
