@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Yeseva+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +17,13 @@ body {
 	@apply font-genshin;
 }
 
+.genshin.text-xs,
+.genshin.text-2xs,
+.genshin.text-3xs,
+.genshin.text-4xs {
+	@apply font-genshinSmall;
+}
+
 .starrail {
 	@apply font-starrail font-semibold;
 }
@@ -31,6 +38,12 @@ body {
 
 .hy-impact-regular {
 	font-family: 'HYImpact';
+	font-weight: 400;
+	font-style: normal;
+}
+
+.yeseva-one-regular {
+	font-family: 'Yeseva One', serif;
 	font-weight: 400;
 	font-style: normal;
 }
