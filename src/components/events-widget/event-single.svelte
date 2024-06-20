@@ -11,13 +11,6 @@
 			? dayjs().to(dayjs(eventDetails.startDate))
 			: dayjs().to(dayjs(eventDetails.endDate))
 
-	const fonts = {
-		genshin: 'hy-impact-regular',
-		starrail: 'bai-jamjuree-bold',
-		reverse: 'playfair-display-sc-bold',
-		wuwa: 'philosopher-bold'
-	}
-
 	const bannerPath = `../assets/characters/${eventDetails.game}/${eventDetails.image}.png`
 	const bannerImage =
 		images[eventDetails.game].bannerCards[bannerPath] != undefined
@@ -29,11 +22,11 @@
 </script>
 
 <div
-	class={`relative flex w-full flex-col gap-2 overflow-hidden rounded-md ${eventDetails.colors.primary} ${fonts[eventDetails.game]}`}
+	class={`relative flex w-full flex-col gap-2 overflow-hidden rounded-md ${eventDetails.colors.primary}`}
 >
 	<div class="absolute inset-0 z-10 flex h-full w-full flex-col justify-center p-4">
-		<h2 class=" z-10 text-sm text-white">{eventDetails.title}</h2>
-		<h3 class={`${eventDetails.colors.textAccent} z-10 text-xs`}>
+		<h2 class={`z-10 text-sm text-white ${eventDetails.game}`}>{eventDetails.title}</h2>
+		<h3 class={`${eventDetails.colors.textAccent} z-10 text-xs ${eventDetails.game}`}>
 			{eventType}
 			{timeUntil}
 		</h3>

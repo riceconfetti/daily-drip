@@ -4,10 +4,13 @@ export default {
 	theme: {
 		extend: {
 			fontSize: {
-				'2xs': '.6rem'
+				xs: '.75rem',
+				'2xs': '.6rem',
+				'3xs': '.35rem'
 			},
 			fontFamily: {
 				genshin: ['"HYImpact"', 'serif'],
+				genshinSmall: ['"Yeseva One"', 'serif'],
 				starrail: ['"Bai Jamjuree"', 'sans-serif'],
 				reverse: ['"Playfair Display SC"', 'serif'],
 				wuwa: ['"Philosopher"', 'serif']
