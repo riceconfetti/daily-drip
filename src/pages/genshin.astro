@@ -7,7 +7,6 @@ import { getPhase } from '../scripts/specs.ts'
 import dayjs from 'dayjs'
 import type { Character } from 'src/classes/character'
 import { Weapon } from 'src/classes/weapon'
-import { array } from 'astro/zod'
 
 let game = 'genshin'
 
@@ -17,29 +16,28 @@ const images = {
 	gachaSplash: import.meta.glob('../assets/characters/genshin/*/gachaSplash.png', { eager: true }),
 	bannerCards: import.meta.glob('../assets/characters/genshin/*/bannerCard.png', { eager: true }),
 	weapons: import.meta.glob('../assets/weapons/*{.webp,.png}', { eager: true }),
-
 	placeHolders: import.meta.glob('../assets/placeholders/genshin/*.png', { eager: true })
 }
 
+const collections = {
+	characters: await getCollection('characters', ({ id }) => {
+		return id.startsWith(game)
+	}),
+	weapons: await getCollection('weapons', ({ id }) => {
+		return id.startsWith(game)
+	}),
+	events: await getCollection('events', ({ id, data }) => {
+		return (
+			id.startsWith(game) &&
+			(data.type === 'banner' ||
+				data.type === 'rate-up' ||
+				data.type === 'chronicle' ||
+				data.type === 'debut')
+		)
+	})
+}
+
 const versionCollection = await getCollection('versions', ({ id }) => {
-	return id.startsWith(game)
-})
-
-const characterCollection = await getCollection('characters', ({ id }) => {
-	return id.startsWith(game)
-})
-
-const eventCollection = await getCollection('events', ({ id, data }) => {
-	return (
-		id.startsWith(game) &&
-		(data.type === 'banner' ||
-			data.type === 'rate-up' ||
-			data.type === 'chronicle' ||
-			data.type === 'debut')
-	)
-})
-
-const weaponCollection = await getCollection('weapons', ({ id }) => {
 	return id.startsWith(game)
 })
 
@@ -48,7 +46,7 @@ let versions: Version[] = []
 versionCollection.forEach(({ data }) => {
 	let v = new Version(data)
 
-	let chronicledWish = eventCollection.filter(({ id, data }) => {
+	let chronicledWish = collections.events.filter(({ id, data }) => {
 		return id.startsWith(`${game}/${v.version}`) && data.type === 'chronicle'
 	})
 
@@ -61,7 +59,7 @@ versionCollection.forEach(({ data }) => {
 
 		chronicledWish.forEach((e) => {
 			if (e.data.character) {
-				let character = characterCollection.find((c) => c.id === e.data.character.id)
+				let character = collections.characters.find((c) => c.id === e.data.character.id)
 				let characterData: Character = character.data
 
 				if (e.data.status === 'spec') {
@@ -69,7 +67,7 @@ versionCollection.forEach(({ data }) => {
 				}
 				v.chronicle.characters.push(characterData)
 			} else if (e.data.weapon) {
-				let weapon = weaponCollection.find((w) => w.id === e.data.weapon.id)
+				let weapon = collections.weapons.find((w) => w.id === e.data.weapon.id)
 
 				let weaponData: Weapon = new Weapon(weapon.data, game, e.data.priority)
 
@@ -90,10 +88,7 @@ versionCollection.forEach(({ data }) => {
 	//console.log(v)
 
 	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
-		v.phases = [
-			getPhase(game, data, 0, eventCollection, characterCollection, weaponCollection),
-			getPhase(game, data, 1, eventCollection, characterCollection, weaponCollection)
-		]
+		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
 		versions.push(v)
 	}
 })
