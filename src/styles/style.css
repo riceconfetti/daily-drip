@@ -9,19 +9,30 @@
 	font-weight: 400;
 }
 
+@font-face {
+	font-family: 'Vintage';
+	src: url('/fonts/Vintage/Web/vintage-webfont.woff2') format('woff2');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Vintage';
+	src: url('/fonts/Vintage/Web/vintage-outline-webfont.woff2');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'Vintage';
+	src: url('/fonts/Vintage/Web/vintage-extrude-webfont.woff2');
+	font-weight: 700;
+}
+
 body {
 	--swup-overlay-theme-color: #232323;
 }
 
 .genshin {
 	@apply font-genshin;
-}
-
-.genshin.text-xs,
-.genshin.text-2xs,
-.genshin.text-3xs,
-.genshin.text-4xs {
-	@apply font-genshinSmall;
 }
 
 .starrail {
