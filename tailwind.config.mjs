@@ -9,7 +9,7 @@ export default {
 				'3xs': '.35rem'
 			},
 			fontFamily: {
-				genshin: ['"HYImpact"', 'serif'],
+				genshin: ['"Vintage"', 'serif'],
 				genshinSmall: ['"Yeseva One"', 'serif'],
 				starrail: ['"Bai Jamjuree"', 'sans-serif'],
 				reverse: ['"Playfair Display SC"', 'serif'],
