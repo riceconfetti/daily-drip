@@ -16,6 +16,7 @@ export interface Phase {
 export class Version {
 	version: number
 	startDate: string
+	midDate: string
 	endDate: string
 	name?: string
 	phases?: Phase[]
@@ -26,6 +27,7 @@ export class Version {
 	constructor(data) {
 		this.version = data.version
 		this.startDate = data.startDate
+		this.midDate = data.midDate
 		this.endDate = data.startDate
 		if (data.name != undefined) {
 			this.name = data.name

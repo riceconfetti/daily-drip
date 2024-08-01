@@ -1,7 +1,8 @@
+import { version } from 'react'
 import type { Phase } from '../classes/version.ts'
 import dayjs from 'dayjs'
 
-let simBanners = (game) => 'wuwa' ? 1 : 2
+let simBanners = (game) => (game === 'wuwa' ? 1 : 2)
 
 function getCharacters(game, events, collections) {
 	let characters = {
@@ -9,31 +10,34 @@ function getCharacters(game, events, collections) {
 		fourStars: []
 	}
 
-	events.filter(({data})=>{return data.type != "weapon"}).forEach((event) => {
-		let character = collections.character.find((c) => c.id === event.data.character.id)
-		let characterData = character.data
-		characterData.id = character.id
-		if (event.data.status === 'spec') {
-			characterData.spec = true
-		}
-		if (event.data.type === 'debut') {
-			characterData.debut = true
-		} 
-		if (character.data.rarity === 5) {
-			// 5 Star
-			characters.fiveStars.push(characterData)
-		} else {
-			characters.fourStars.push(characterData)
-		}
-	})
+	events
+		.filter(({ data }) => {
+			return data.type != 'weapon'
+		})
+		.forEach((event) => {
+			let character = collections.characters.find((c) => c.id === event.data.character.id)
+			let characterData = character.data
+			characterData.id = character.id
+			if (event.data.status === 'spec') {
+				characterData.spec = true
+			}
+			if (event.data.type === 'debut') {
+				characterData.debut = true
+			}
+			if (character.data.rarity === 5) {
+				// 5 Star
+				characters.fiveStars.push(characterData)
+			} else {
+				characters.fourStars.push(characterData)
+			}
+		})
 
 	characters.fiveStars.sort((a, b) => {
-		const x = a.debut ? 1 : -1;
-		const y = b.debut ? 1: -1;
-		return y-x;
+		const x = a.debut ? 1 : -1
+		const y = b.debut ? 1 : -1
+		return y - x
 	})
 
-	
 	while (characters.fiveStars.length < simBanners(game)) {
 		characters.fiveStars.push({
 			name: '????',
@@ -62,8 +66,7 @@ function getCharacters(game, events, collections) {
 		})
 	}
 
-
-	return characters;
+	return characters
 }
 
 function getWeapons(game, events, collections) {
@@ -84,7 +87,6 @@ function getWeapons(game, events, collections) {
 				weapons.fourStars.push(weaponData)
 			}
 		}
-	
 	})
 
 	while (weapons.fiveStars.length < simBanners(game)) {
@@ -132,28 +134,30 @@ function getWeapons(game, events, collections) {
 		}
 	}
 
-
+	return weapons
 }
 
-export function getPhase(
-	game,
-	versionData,
-	number,
-	collections
-) {
-	let events = collections.event.filter((e) => {
-		return e.id.startsWith(`${game}/${versionData.version}`) && e.versionData.type != 'chronicle' 
-	})
+export function getPhase(game, versionData, number, collections, timezone) {
+	console.log(versionData.midDate)
+	let phaseDate = number === 0 ? versionData.startDate : versionData.midDate
+
+	//console.log(collections.events)
+
+	let events = collections.events.filter(
+		({ id, data }) =>
+			id.startsWith(`${game}/${versionData.version}`) &&
+			data.type != 'chronicle' &&
+			data.startDate === phaseDate
+	)
+
+	//console.log(events)
 
 	let phase: Phase = {
 		number: number,
-		date: number === 0 ? versionData.startDate : dayjs(versionData.startDate).add(3, 'week').format('YYYY-MM-DD'),
-		characters: {
-			fiveStars: [],
-			fourStars: []
-		}
+		date: phaseDate,
+		characters: getCharacters(game, events, collections),
+		weapons: getWeapons(game, events, collections)
 	}
-	
 
 	return phase
 }

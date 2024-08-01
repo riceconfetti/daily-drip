@@ -1,7 +1,8 @@
 {
 	"status": "confirmed",
 	"type": "banner",
-	"character": "genshin/nilou",
+	"character": "genshin/navia",
+	"weapon": "genshin/Verdict",
 	"game": "genshin",
 	"startDate": "2024-07-16",
 	"endDate": "2024-08-06"

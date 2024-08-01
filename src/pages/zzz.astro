@@ -1,28 +1,25 @@
 ---
-import Disclaimer from '$components/Disclaimer.astro'
 import Layout from '../layouts/Layout.astro'
 import { Version } from '../classes/version.ts'
 import Banner from '../components/banner-cards/banner.svelte'
-import { getCollection, getEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
 import { getPhase } from '../scripts/specs.ts'
 import dayjs from 'dayjs'
 import type { Character } from 'src/classes/character'
 import { Weapon } from 'src/classes/weapon'
-import { tz_genshin } from 'src/scripts/settings'
 
-let game = 'genshin'
+let game = 'zzz'
 
 const images = {
-	backgrounds: import.meta.glob('../assets/backgrounds/genshin/*.png', { eager: true }),
-	gachaCards: import.meta.glob('../assets/characters/genshin/*/gachaCard.png', { eager: true }),
-	gachaSplash: import.meta.glob('../assets/characters/genshin/*/gachaSplash.png', { eager: true }),
-	bannerCards: import.meta.glob('../assets/characters/genshin/*/bannerCard.png', { eager: true }),
+	backgrounds: import.meta.glob('../assets/backgrounds/zzz/*.png', { eager: true }),
+	gachaCards: import.meta.glob('../assets/characters/zzz/*/gachaCard.png', { eager: true }),
+	gachaSplash: import.meta.glob('../assets/characters/zzz/*/gachaSplash.png', { eager: true }),
+	bannerCards: import.meta.glob('../assets/characters/zzz/*/bannerCard.png', { eager: true }),
 	weapons: import.meta.glob('../assets/weapons/*{.webp,.png}', { eager: true }),
-	placeHolders: import.meta.glob('../assets/placeholders/genshin/*.png', { eager: true })
+	placeHolders: import.meta.glob('../assets/placeholders/zzz/*.png', { eager: true })
 }
 
 const collections = {
-	game: await getEntry('games', game),
 	characters: await getCollection('characters', ({ id }) => {
 		return id.startsWith(game)
 	}),
@@ -91,19 +88,16 @@ versionCollection.forEach(({ data }) => {
 	//console.log(v)
 
 	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
-		v.phases = [
-			getPhase(game, data, 0, collections, tz_genshin),
-			getPhase(game, data, 1, collections, tz_genshin)
-		]
+		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
 		versions.push(v)
 	}
 })
 ---
 
 <Layout title="The Daily Drip">
-	<section class="p-2 lg:p-4 flex flex-col items-center gap-4 h-max md:max-w-[1400px]">
+	<section class="p-2 flex flex-col items-center h-max gap-4 md:max-w-[1400px]">
 		{versions.map((version) => <Banner {version} {game} {images} client:load />)}
 	</section>
 
-	<!-- <Banner {version} game="genshin" /> -->
+	<!-- <Banner {version} game="zzz" /> -->
 </Layout>

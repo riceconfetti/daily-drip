@@ -88,6 +88,7 @@ const versionsCollection = defineCollection({
 			version: z.number(),
 			name: z.string(),
 			startDate: z.string().date(),
+			midDate: z.string().date(),
 			endDate: z.string().date(),
 			weapons: z.array(
 				z.object({

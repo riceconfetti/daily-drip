@@ -1,38 +1,44 @@
 ---
+import Disclaimer from '$components/Disclaimer.astro'
 import Layout from '../layouts/Layout.astro'
 import { Version } from '../classes/version.ts'
 import Banner from '../components/banner-cards/banner.svelte'
 import { getCollection } from 'astro:content'
 import { getPhase } from '../scripts/specs.ts'
 import dayjs from 'dayjs'
+import type { Character } from 'src/classes/character'
+import { Weapon } from 'src/classes/weapon'
 
 let game = 'wuwa'
 
 const images = {
 	backgrounds: import.meta.glob('../assets/backgrounds/wuwa/*.png', { eager: true }),
 	gachaCards: import.meta.glob('../assets/characters/wuwa/*/gachaCard.png', { eager: true }),
+	gachaSplash: import.meta.glob('../assets/characters/wuwa/*/gachaSplash.png', { eager: true }),
 	bannerCards: import.meta.glob('../assets/characters/wuwa/*/bannerCard.png', { eager: true }),
 	weapons: import.meta.glob('../assets/weapons/*{.webp,.png}', { eager: true }),
-
 	placeHolders: import.meta.glob('../assets/placeholders/wuwa/*.png', { eager: true })
 }
 
+const collections = {
+	characters: await getCollection('characters', ({ id }) => {
+		return id.startsWith(game)
+	}),
+	weapons: await getCollection('weapons', ({ id }) => {
+		return id.startsWith(game)
+	}),
+	events: await getCollection('events', ({ id, data }) => {
+		return (
+			id.startsWith(game) &&
+			(data.type === 'banner' ||
+				data.type === 'rate-up' ||
+				data.type === 'chronicle' ||
+				data.type === 'debut')
+		)
+	})
+}
+
 const versionCollection = await getCollection('versions', ({ id }) => {
-	return id.startsWith(game)
-})
-
-const characterCollection = await getCollection('characters', ({ id }) => {
-	return id.startsWith(game)
-})
-
-const eventCollection = await getCollection('events', ({ id, data }) => {
-	return (
-		id.startsWith(game) &&
-		(data.type === 'banner' || data.type === 'rate-up' || data.type == 'debut')
-	)
-})
-
-const weaponCollection = await getCollection('weapons', ({ id }) => {
 	return id.startsWith(game)
 })
 
@@ -40,11 +46,50 @@ let versions: Version[] = []
 
 versionCollection.forEach(({ data }) => {
 	let v = new Version(data)
+
+	let chronicledWish = collections.events.filter(({ id, data }) => {
+		return id.startsWith(`${game}/${v.version}`) && data.type === 'chronicle'
+	})
+
+	//console.log(chronicledWish)
+	if (chronicledWish.length != 0) {
+		v.chronicle = {
+			characters: [],
+			weapons: []
+		}
+
+		chronicledWish.forEach((e) => {
+			if (e.data.character) {
+				let character = collections.characters.find((c) => c.id === e.data.character.id)
+				let characterData: Character = character.data
+
+				if (e.data.status === 'spec') {
+					characterData.spec = true
+				}
+				v.chronicle.characters.push(characterData)
+			} else if (e.data.weapon) {
+				let weapon = collections.weapons.find((w) => w.id === e.data.weapon.id)
+
+				let weaponData: Weapon = new Weapon(weapon.data, game, e.data.priority)
+
+				if (e.data.status === 'spec') {
+					weaponData.spec = true
+				}
+				v.chronicle.weapons.push(weaponData)
+			}
+		})
+
+		v.chronicle.weapons.sort((a, b) => {
+			const x = a.priority ? 1 : 0
+			const y = b.priority ? 1 : 0
+			return y - x
+		})
+	}
+
+	//console.log(v)
+
 	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
-		v.phases = [
-			getPhase(game, data, 0, eventCollection, characterCollection, weaponCollection),
-			getPhase(game, data, 1, eventCollection, characterCollection, weaponCollection)
-		]
+		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
 		versions.push(v)
 	}
 })
@@ -52,15 +97,8 @@ versionCollection.forEach(({ data }) => {
 
 <Layout title="The Daily Drip">
 	<section class="p-2 flex flex-col items-center h-max gap-4 md:max-w-[1400px]">
-		<div class="p-4 bg-dark text-accent-dark rounded-md md:col-span-2 h-min w-full">
-			<p class="crimson-text-semibold text-xs md:text-sm lg:text-base text-center text-balance">
-				Multi-colored borders means the prediction is an unconfirmed speculation. Cards without
-				borders have had one or more outside sources share their banner or rerun potential. All
-				predictions are still subject to change up until their official announcment.
-			</p>
-		</div>
 		{versions.map((version) => <Banner {version} {game} {images} client:load />)}
 	</section>
 
-	<!-- <Banner {version} game="genshin" /> -->
+	<!-- <Banner {version} game="wuwa" /> -->
 </Layout>
