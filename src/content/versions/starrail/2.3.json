@@ -2,23 +2,6 @@
 	"version": 2.3,
 	"name": "Farewell Penacony",
 	"startDate": "2024-06-19",
-	"endDate": "2024-07-30",
-	"weapons": [
-		{
-			"fiveStars": ["starrail/WhereaboutsShouldDreamsRest", "starrail/PastSelfinMirror"],
-			"fourStars": [
-				"starrail/MemoriesofthePast",
-				"starrail/DayOneofMyNewLife",
-				"starrail/EyesofthePrey"
-			]
-		},
-		{
-			"fiveStars": [ "starrail/YetHopeIsPriceless", "starrail/AnInstantBeforeAGaze"],
-			"fourStars": [
-				"starrail/AftertheCharmonyFall",
-				"starrail/SharedFeeling",
-				"starrail/TrendoftheUniversalMarket"
-			]
-		}
-	]
+	"midDate": "2024-07-10",
+	"endDate": "2024-07-30"
 }

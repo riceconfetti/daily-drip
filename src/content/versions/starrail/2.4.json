@@ -1,15 +1,6 @@
 {
 	"version": 2.4,
 	"startDate": "2024-07-30",
-	"endDate": "2024-09-10",
-	"weapons": [
-		{
-			"fiveStars": ["starrail/fiveStar_default", "starrail/NightofFright"],
-			"fourStars": []
-		},
-		{
-			"fiveStars": [ "starrail/fiveStar_default", "starrail/IntheNight"],
-			"fourStars": []
-		}
-	]
+	"midDate": "2024-08-21",
+	"endDate": "2024-09-10"
 }

@@ -1,7 +1,8 @@
 {
 	"status": "confirmed",
 	"type": "banner",
-	"character": "genshin/navia",
+	"character": "genshin/nilou",
+	"weapon": "genshin/KeyofKhajNisut",
 	"game": "genshin",
 	"startDate": "2024-07-16",
 	"endDate": "2024-08-06"
