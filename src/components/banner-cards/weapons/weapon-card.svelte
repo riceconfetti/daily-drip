@@ -9,7 +9,7 @@
 <section class="flex w-full flex-col flex-grow">
 	<h2 class="text-2xs text-dark sm:text-sm">Rate Up Weapons</h2>
 	<div
-		class={`grid grid-cols-[1fr_1fr_45%] gap-2 flex-grow ${game == 'wuwa' ? 'grid-cols-[1fr_65%]' : 'grid-cols-[1fr_1fr_45%]'}`}
+		class={`grid grid-cols-[1fr_1fr_40%] gap-2 flex-grow ${game == 'wuwa' ? 'grid-cols-[1fr_65%]' : 'grid-cols-[1fr_1fr_45%]'}`}
 	>
 		{#each weapons.fiveStars as weapon}
 			<FiveStarCard {weapon} {images} {game} />

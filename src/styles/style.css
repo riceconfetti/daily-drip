@@ -27,12 +27,48 @@
 	font-weight: 700;
 }
 
+@font-face {
+	font-family: 'Behind the Nineties';
+	src: url('fonts/Behind_the_Nineties/UPRIGHT/Behind-The-Nineties-Rg.woff2');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Behind the Nineties';
+	src: url('fonts/Behind_the_Nineties/UPRIGHT/Behind-The-Nineties-Md.woff2');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Behind the Nineties';
+	src: url('fonts/Behind_the_Nineties/UPRIGHT/Behind-The-Nineties-Smbd.woff2');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Behind the Nineties';
+	src: url('fonts/Behind_the_Nineties/UPRIGHT/Behind-The-Nineties-Bd.woff2');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Behind the Nineties';
+	src: url('fonts/Behind_the_Nineties/UPRIGHT/Behind-The-Nineties-Xbd.woff2');
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'Behind the Nineties';
+	src: url('fonts/Behind_the_Nineties/UPRIGHT/Behind-The-Nineties-Blk.woff2');
+	font-weight: 900;
+}
+
 body {
 	--swup-overlay-theme-color: #232323;
 }
 
 .genshin {
-	@apply font-genshin;
+	@apply font-genshin font-bold;
 }
 
 .starrail {

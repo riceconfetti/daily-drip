@@ -4,6 +4,6 @@
 	"times": {
 		"maintenance": "15:00:00",
 		"reset": "10:00:00",
-		"update": "10:00:00"
+		"update": [{ "zone": "na", "time": "10:00:00" }]
 	}
 }
