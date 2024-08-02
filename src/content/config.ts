@@ -5,7 +5,16 @@ const gameCollection = defineCollection({
 	schema: z.object({
 		name: z.string(),
 		icon: z.string(),
-		times: z.object({})
+		times: z.object({
+			maintenance: z.string().time(),
+			version: z.string().time(),
+			update: z.array(
+				z.object({
+					zone: z.string(),
+					time: z.string().time()
+				})
+			)
+		})
 	})
 })
 

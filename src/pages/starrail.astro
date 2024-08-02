@@ -3,11 +3,12 @@ import Disclaimer from '$components/Disclaimer.astro'
 import Layout from '../layouts/Layout.astro'
 import { Version } from '../classes/version.ts'
 import Banner from '../components/banner-cards/banner.svelte'
-import { getCollection } from 'astro:content'
+import { getCollection, getEntry } from 'astro:content'
 import { getPhase } from '../scripts/specs.ts'
 import dayjs from 'dayjs'
 import type { Character } from 'src/classes/character'
 import { Weapon } from 'src/classes/weapon'
+import { tz_starrail } from 'src/scripts/settings'
 
 let game = 'starrail'
 
@@ -21,6 +22,7 @@ const images = {
 }
 
 const collections = {
+	game: await getEntry('games', game),
 	characters: await getCollection('characters', ({ id }) => {
 		return id.startsWith(game)
 	}),
@@ -89,7 +91,10 @@ versionCollection.forEach(({ data }) => {
 	//console.log(v)
 
 	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
-		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
+		v.phases = [
+			getPhase(game, data, 0, collections, tz_starrail),
+			getPhase(game, data, 1, collections, tz_starrail)
+		]
 		versions.push(v)
 	}
 })

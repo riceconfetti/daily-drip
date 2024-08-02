@@ -138,7 +138,7 @@ function getWeapons(game, events, collections) {
 }
 
 export function getPhase(game, versionData, number, collections, timezone) {
-	console.log(versionData.midDate)
+	//console.log(versionData.midDate)
 	let phaseDate = number === 0 ? versionData.startDate : versionData.midDate
 
 	//console.log(collections.events)
@@ -150,14 +150,32 @@ export function getPhase(game, versionData, number, collections, timezone) {
 			data.startDate === phaseDate
 	)
 
+	console.log(collections.game.data.times.update.find((t) => t.zone == timezone.value))
+	const stime =
+		number === 0
+			? collections.game.data.times.version
+			: collections.game.data.times.update.find((t) => t.zone == timezone.value).time
+	const etime =
+		number === 0
+			? collections.game.data.times.update.find((t) => t.zone == timezone.value).time
+			: collections.game.data.times.maintenance
+
+	events.forEach((e) => {
+		if (number === 0) {
+			e.startDate = `${e.startDate}T${stime}Z`
+			e.endDate = `${e.endDate}T${etime}Z `
+		}
+	})
+
 	//console.log(events)
 
 	let phase: Phase = {
 		number: number,
-		date: phaseDate,
+		date: `${phaseDate}T${stime}Z`,
 		characters: getCharacters(game, events, collections),
 		weapons: getWeapons(game, events, collections)
 	}
+	console.log(phase.date)
 
 	return phase
 }

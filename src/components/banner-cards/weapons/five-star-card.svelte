@@ -25,7 +25,7 @@
 		class="h-min p-2 pr-4 sm:max-w-[130px] md:max-w-[140px] lg:max-w-[110px] xl:max-w-[135px] min-h-8 md:min-h-12 flex items-center"
 	>
 		<h1
-			class="text-balance text-[.3rem] sm:text-2xs md:text-xs lg:text-[.45rem] lg:leading-normal xl:text-[.7rem]"
+			class="text-balance text-[.3rem] sm:text-2xs md:text-xs lg:text-2xs lg:leading-normal xl:text-[.7rem]"
 		>
 			{weapon.name}
 		</h1>
