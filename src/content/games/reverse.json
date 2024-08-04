@@ -3,6 +3,7 @@
 	"icon": "",
 	"times": {
 		"maintenance": "15:00:00",
+		"version": "20:00:00",
 		"reset": "10:00:00",
 		"update": [{ "zone": "na", "time": "10:00:00" }]
 	}

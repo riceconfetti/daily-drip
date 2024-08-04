@@ -150,7 +150,7 @@ export function getPhase(game, versionData, number, collections, timezone) {
 			data.startDate === phaseDate
 	)
 
-	console.log(collections.game.data.times.update.find((t) => t.zone == timezone.value))
+	//console.log(collections.game.data.times.update.find((t) => t.zone == timezone.value))
 	const stime =
 		number === 0
 			? collections.game.data.times.version
@@ -175,7 +175,7 @@ export function getPhase(game, versionData, number, collections, timezone) {
 		characters: getCharacters(game, events, collections),
 		weapons: getWeapons(game, events, collections)
 	}
-	console.log(phase.date)
+	//console.log(phase.date)
 
 	return phase
 }
