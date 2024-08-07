@@ -6,7 +6,7 @@
 
 <!-- Characters -->
 <section
-	class={`grid gap-2 ${game == 'wuwa' ? 'grid-cols-[auto_65%]' : 'grid-cols-[auto_auto_40%]'}`}
+	class={`grid gap-2 ${game == 'wuwa' ? 'grid-cols-[auto_65%]' : 'grid-cols-[1fr_1fr_45%] lg:grid-cols-[1fr_1fr_40%]'}`}
 >
 	{#each characters.fiveStars as character}
 		<FiveStarCard {character} {images} {game} />
