@@ -2,6 +2,7 @@
 	"status": "confirmed",
 	"type": "debut",
 	"character": "starrail/yunli",
+	"weapon": "starrail/DanceatSunset",
 	"game": "starrail",
 	"startDate": "2024-07-30",
 	"endDate": "2024-08-21"

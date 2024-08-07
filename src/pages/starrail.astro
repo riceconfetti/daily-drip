@@ -30,13 +30,7 @@ const collections = {
 		return id.startsWith(game)
 	}),
 	events: await getCollection('events', ({ id, data }) => {
-		return (
-			id.startsWith(game) &&
-			(data.type === 'banner' ||
-				data.type === 'rate-up' ||
-				data.type === 'chronicle' ||
-				data.type === 'debut')
-		)
+		return id.startsWith(game)
 	})
 }
 

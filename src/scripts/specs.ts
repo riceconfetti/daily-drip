@@ -3,6 +3,9 @@ import type { Phase } from '../classes/version.ts'
 import dayjs from 'dayjs'
 
 let simBanners = (game) => (game === 'wuwa' ? 1 : 2)
+const weaponTypes = {
+	genshin: ['bow', 'sword', 'catalyst', 'polearm', 'claymore']
+}
 
 function getCharacters(game, events, collections) {
 	let characters = {
@@ -77,9 +80,13 @@ function getWeapons(game, events, collections) {
 
 	events.forEach((event) => {
 		if (event.data.weapon) {
+			//console.log(event.data.weapon)
 			let weapon = collections.weapons.find((w) => w.id === event.data.weapon.id)
 			let weaponData = weapon.data
 			weaponData.id = weapon.id
+			if (event.data.type === 'debut') {
+				weaponData.debut = true
+			}
 			if (weapon.data.rarity === 5) {
 				// 5 Star
 				weapons.fiveStars.push(weaponData)
@@ -100,15 +107,8 @@ function getWeapons(game, events, collections) {
 	}
 
 	if (weapons.fourStars.length < 5 && game == 'genshin') {
-		const weaponTypes = {
-			genshin: ['bow', 'sword', 'catalyst', 'polearm', 'claymore']
-		}
-
 		weaponTypes[game].forEach((weapon) => {
-			const weaponTypeExists =
-				weapons.fourStars.find((w) => {
-					w.weaponType == weapon
-				}) != undefined
+			const weaponTypeExists = weapons.fourStars.some((w) => w.weaponType === weapon)
 			if (!weaponTypeExists) {
 				weapons.fourStars.push({
 					name: '????',
@@ -118,9 +118,6 @@ function getWeapons(game, events, collections) {
 					game: game
 				})
 			}
-		})
-		weapons.fourStars.sort((a, b) => {
-			return weaponTypes[game].indexOf(a.weaponType) - weaponTypes[game].indexOf(b.weaponType)
 		})
 	} else {
 		while (weapons.fourStars.length < 3) {
@@ -133,6 +130,17 @@ function getWeapons(game, events, collections) {
 			})
 		}
 	}
+	if (game === 'genshin') {
+		weapons.fourStars.sort((a, b) => {
+			return weaponTypes[game].indexOf(a.weaponType) - weaponTypes[game].indexOf(b.weaponType)
+		})
+	}
+
+	weapons.fiveStars.sort((a, b) => {
+		const x = a.debut ? 1 : -1
+		const y = b.debut ? 1 : -1
+		return y - x
+	})
 
 	return weapons
 }
