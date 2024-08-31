@@ -14,6 +14,9 @@
 		{#each weapons.fiveStars as weapon}
 			<FiveStarCard {weapon} {images} {game} />
 		{/each}
+
+		<slot />
+
 		<div class="flex h-full w-full justify-between gap-1 flex-grow">
 			{#each weapons.fourStars as weapon}
 				<FourStarCard {weapon} {images} {game} />

@@ -5,9 +5,9 @@
 	"weaponType": "hunt",
 	"bannerName": "???",
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-		"textAccent": "text-[#999]"
+		"primary": "bg-gradient-to-r from-[#C69261] to-[#9DCED2]",
+		"secondary": "bg-gradient-to-t from-[#0B3643] to-[#66666600]",
+		"textAccent": "text-[#224B62]"
 	},
 	"images": {
 		"gachaSplash": "feixiao/gachaSpash",

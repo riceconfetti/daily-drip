@@ -29,7 +29,7 @@ const collections = {
 	weapons: await getCollection('weapons', ({ id }) => {
 		return id.startsWith(game)
 	}),
-	events: await getCollection('events', ({ id, data }) => {
+	events: await getCollection('events', ({ id }) => {
 		return id.startsWith(game)
 	})
 }
@@ -42,45 +42,6 @@ let versions: Version[] = []
 
 versionCollection.forEach(({ data }) => {
 	let v = new Version(data)
-
-	let chronicledWish = collections.events.filter(({ id, data }) => {
-		return id.startsWith(`${game}/${v.version}`) && data.type === 'chronicle'
-	})
-
-	//console.log(chronicledWish)
-	if (chronicledWish.length != 0) {
-		v.chronicle = {
-			characters: [],
-			weapons: []
-		}
-
-		chronicledWish.forEach((e) => {
-			if (e.data.character) {
-				let character = collections.characters.find((c) => c.id === e.data.character.id)
-				let characterData: Character = character.data
-
-				if (e.data.status === 'spec') {
-					characterData.spec = true
-				}
-				v.chronicle.characters.push(characterData)
-			} else if (e.data.weapon) {
-				let weapon = collections.weapons.find((w) => w.id === e.data.weapon.id)
-
-				let weaponData: Weapon = new Weapon(weapon.data, game, e.data.priority)
-
-				if (e.data.status === 'spec') {
-					weaponData.spec = true
-				}
-				v.chronicle.weapons.push(weaponData)
-			}
-		})
-
-		v.chronicle.weapons.sort((a, b) => {
-			const x = a.priority ? 1 : 0
-			const y = b.priority ? 1 : 0
-			return y - x
-		})
-	}
 
 	//console.log(v)
 

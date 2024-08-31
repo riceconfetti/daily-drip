@@ -1,6 +1,6 @@
 {
-	"status": "spec",
-	"type": "banner",
+	"status": "confirmed",
+	"type": "select",
 	"character": "starrail/blackswan",
 	"weapon": "starrail/ReforgedRemembrance",
 	"game": "starrail",
