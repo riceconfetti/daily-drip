@@ -1,8 +1,8 @@
 {
 	"status": "confirmed",
-	"type": "debut",
-	"character": "starrail/feixiao",
-	"weapon": "starrail/IVentureForthtoHunt",
+	"type": "select",
+	"character": "starrail/robin",
+	"weapon": "starrail/FlowingNightglow",
 	"game": "starrail",
 	"startDate": "2024-09-10",
 	"endDate": "2024-10-02"
