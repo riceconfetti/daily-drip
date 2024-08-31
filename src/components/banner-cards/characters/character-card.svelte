@@ -9,8 +9,9 @@
 	class={`grid gap-2 ${game == 'wuwa' ? 'grid-cols-[auto_65%]' : 'grid-cols-[1fr_1fr_45%] lg:grid-cols-[1fr_1fr_40%]'}`}
 >
 	{#each characters.fiveStars as character}
-		<FiveStarCard {character} {images} {game} />
+		<FiveStarCard {character} {images} {game} select={false} />
 	{/each}
+	<slot />
 	<div class="flex flex-col justify-end gap-4">
 		<h2 class="mt-1 text-right text-2xs text-dark sm:text-sm md:text-xl xl:text-xl">
 			Featured Four Stars

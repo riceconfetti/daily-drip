@@ -1,13 +1,15 @@
 import { version } from 'react'
 import type { Phase } from '../classes/version.ts'
 import dayjs from 'dayjs'
+import type { Character } from 'src/classes/character.ts'
+import { Weapon } from 'src/classes/weapon.ts'
 
 let simBanners = (game) => (game === 'wuwa' ? 1 : 2)
 const weaponTypes = {
 	genshin: ['bow', 'sword', 'catalyst', 'polearm', 'claymore']
 }
 
-function getCharacters(game, events, collections) {
+function getCharacters(game, events, collections, select) {
 	let characters = {
 		fiveStars: [],
 		fourStars: []
@@ -15,7 +17,7 @@ function getCharacters(game, events, collections) {
 
 	events
 		.filter(({ data }) => {
-			return data.type != 'weapon'
+			return data.type != 'weapon' && data.type != 'select'
 		})
 		.forEach((event) => {
 			let character = collections.characters.find((c) => c.id === event.data.character.id)
@@ -27,6 +29,7 @@ function getCharacters(game, events, collections) {
 			if (event.data.type === 'debut') {
 				characterData.debut = true
 			}
+
 			if (character.data.rarity === 5) {
 				// 5 Star
 				characters.fiveStars.push(characterData)
@@ -41,7 +44,7 @@ function getCharacters(game, events, collections) {
 		return y - x
 	})
 
-	while (characters.fiveStars.length < simBanners(game)) {
+	while (characters.fiveStars.length < simBanners(game) && !select) {
 		characters.fiveStars.push({
 			name: '????',
 			rarity: 5,
@@ -72,31 +75,35 @@ function getCharacters(game, events, collections) {
 	return characters
 }
 
-function getWeapons(game, events, collections) {
+function getWeapons(game, events, collections, select) {
 	let weapons = {
 		fiveStars: [],
 		fourStars: []
 	}
 
-	events.forEach((event) => {
-		if (event.data.weapon) {
-			//console.log(event.data.weapon)
-			let weapon = collections.weapons.find((w) => w.id === event.data.weapon.id)
-			let weaponData = weapon.data
-			weaponData.id = weapon.id
-			if (event.data.type === 'debut') {
-				weaponData.debut = true
+	events
+		.filter(({ data }) => {
+			return data.type != 'select'
+		})
+		.forEach((event) => {
+			if (event.data.weapon) {
+				//console.log(event.data.weapon)
+				let weapon = collections.weapons.find((w) => w.id === event.data.weapon.id)
+				let weaponData = weapon.data
+				weaponData.id = weapon.id
+				if (event.data.type === 'debut') {
+					weaponData.debut = true
+				}
+				if (weapon.data.rarity === 5) {
+					// 5 Star
+					weapons.fiveStars.push(weaponData)
+				} else {
+					weapons.fourStars.push(weaponData)
+				}
 			}
-			if (weapon.data.rarity === 5) {
-				// 5 Star
-				weapons.fiveStars.push(weaponData)
-			} else {
-				weapons.fourStars.push(weaponData)
-			}
-		}
-	})
+		})
 
-	while (weapons.fiveStars.length < simBanners(game)) {
+	while (weapons.fiveStars.length < simBanners(game) && !select) {
 		weapons.fiveStars.push({
 			name: '????',
 			rarity: 5,
@@ -148,7 +155,6 @@ function getWeapons(game, events, collections) {
 export function getPhase(game, versionData, number, collections, timezone) {
 	//console.log(versionData.midDate)
 	let phaseDate = number === 0 ? versionData.startDate : versionData.midDate
-
 	//console.log(collections.events)
 
 	let events = collections.events.filter(
@@ -157,6 +163,14 @@ export function getPhase(game, versionData, number, collections, timezone) {
 			data.type != 'chronicle' &&
 			data.startDate === phaseDate
 	)
+
+	const select = events.some((x) => x.data.type == 'select')
+
+	let selectEvents = events.filter(({ id, data }) => {
+		return data.type === 'select'
+	})
+
+	//console.log(select)
 
 	//console.log(collections.game.data.times.update.find((t) => t.zone == timezone.value))
 	const stime =
@@ -175,15 +189,49 @@ export function getPhase(game, versionData, number, collections, timezone) {
 		}
 	})
 
-	//console.log(events)
-
 	let phase: Phase = {
 		number: number,
 		date: `${phaseDate}T${stime}Z`,
-		characters: getCharacters(game, events, collections),
-		weapons: getWeapons(game, events, collections)
+		characters: getCharacters(game, events, collections, select),
+		weapons: getWeapons(game, events, collections, select)
 	}
-	//console.log(phase.date)
 
+	if (selectEvents.length != 0) {
+		let indelibleCoterie = {
+			characters: [],
+			weapons: []
+		}
+
+		selectEvents.forEach((e) => {
+			if (e.data.character) {
+				let character = collections.characters.find((c) => c.id === e.data.character.id)
+				let characterData: Character = character.data
+
+				if (e.data.status === 'spec') {
+					characterData.spec = true
+				}
+				indelibleCoterie.characters.push(characterData)
+			}
+			if (e.data.weapon) {
+				let weapon = collections.weapons.find((w) => w.id === e.data.weapon.id)
+
+				let weaponData: Weapon = new Weapon(weapon.data, game, e.data.priority)
+
+				if (e.data.status === 'spec') {
+					weaponData.spec = true
+				}
+				indelibleCoterie.weapons.push(weaponData)
+			}
+		})
+
+		indelibleCoterie.weapons.sort((a, b) => {
+			const x = a.priority ? 1 : 0
+			const y = b.priority ? 1 : 0
+			return y - x
+		})
+		//console.log(indelibleCoterie)
+		phase.select = indelibleCoterie
+	}
+	// console.log(phase)
 	return phase
 }

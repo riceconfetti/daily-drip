@@ -5,8 +5,12 @@
 	import CharacterCard from './characters/character-card.svelte'
 	import WeaponCard from './weapons/weapon-card.svelte'
 	import ChronicledCard from './chronicled-wish/chronicled-card.svelte'
+	import FiveStarCharacterCard from './characters/five-star-card.svelte'
+	import FiveStarWeaponCard from './weapons/five-star-card.svelte'
 	import dayjs from 'dayjs'
 	export let version: Version, game, images
+
+	$: selectIndex = [0, 0]
 </script>
 
 <section
@@ -16,11 +20,50 @@
 	{#if version.chronicle}
 		<ChronicledCard class="lg:col-span-2" chronicle={version.chronicle} {images} {game} />
 	{/if}
-	{#each version.phases as phase}
+	{#each version.phases as phase, pIndex}
 		<div class={`flex flex-col h-full gap-2 ${dayjs(phase.date) < dayjs() ? 'grayscale' : ''}`}>
 			<PhaseHeader {phase} />
-			<CharacterCard characters={phase.characters} {images} {game} />
-			<WeaponCard weapons={phase.weapons} {images} {game} />
+			<CharacterCard characters={phase.characters} {images} {game}>
+				{#if phase.select}
+					<div
+						class="flex flex-col p-[2px] w-full h-full bg-gradient-to-br from-dark to-accent-light"
+					>
+						<div class="flex w-full justify-between p-1">
+							<button
+								on:click={() =>
+									selectIndex[pIndex] === 0
+										? (selectIndex[pIndex] = phase.select.characters.length - 1)
+										: selectIndex[pIndex]--}
+							>
+								<i class="ri-arrow-left-s-line text-white"></i>
+							</button>
+							<p class="text-white text-sm">Indelible Coterie</p>
+							<button
+								on:click={() =>
+									selectIndex[pIndex] === phase.select.characters.length - 1
+										? (selectIndex[pIndex] = 0)
+										: selectIndex[pIndex]++}
+							>
+								<i class="ri-arrow-right-s-line text-white"></i>
+							</button>
+						</div>
+						{#each phase.select.characters as character, sIndex}
+							{#if selectIndex[pIndex] === sIndex}
+								<FiveStarCharacterCard {character} {images} {game} />
+							{/if}
+						{/each}
+					</div>
+				{/if}
+			</CharacterCard>
+			<WeaponCard weapons={phase.weapons} {images} {game}>
+				{#if phase.select}
+					{#each phase.select.weapons as weapon, sIndex}
+						{#if selectIndex[pIndex] === sIndex}
+							<FiveStarWeaponCard {weapon} {images} {game} />
+						{/if}
+					{/each}
+				{/if}
+			</WeaponCard>
 		</div>
 	{/each}
 </section>

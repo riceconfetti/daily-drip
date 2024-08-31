@@ -5,9 +5,9 @@
 	"weaponType": "abundance",
 	"bannerName": "???",
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#392916] to-[#D88F45]",
-		"secondary": "bg-gradient-to-t from-[#392916] to-[#8F541700]",
-		"textAccent": "text-[#D88F45]"
+		"primary": "bg-gradient-to-r from-[#8E1508] to-[#FDE7E0]",
+		"secondary": "bg-gradient-to-t from-[#8E1508] to-[#E9A9A600]",
+		"textAccent": "text-[#F5C0AC]"
 	},
 	"images": {
 		"gachaSplash": "lingsha/gachaSpash",

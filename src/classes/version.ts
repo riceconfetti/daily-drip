@@ -4,6 +4,10 @@ import type { Weapon } from './weapon'
 export interface Phase {
 	number: number
 	date: string
+	select?: {
+		characters: Character[]
+		weapons: Weapon[]
+	}
 	characters?: {
 		fiveStars: Character[]
 		fourStars: Character[]
@@ -24,6 +28,7 @@ export class Version {
 		characters: Character[]
 		weapons: Weapon[]
 	}
+
 	constructor(data) {
 		this.version = data.version
 		this.startDate = data.startDate
