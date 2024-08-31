@@ -1,0 +1,17 @@
+{
+	"name": "Kinich",
+	"rarity": 5,
+	"element": "dendro",
+	"weaponType": "Claymore",
+	"bannerName": "?????",
+	"images": {
+		"gachaSplash": "kinich/gachaSplash",
+		"gachaCard": "kinich/gachaCard",
+		"bannerCard": "kinich/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#fff00]",
+		"textAccent": "text-[#fff]"
+	}
+}

@@ -27,12 +27,12 @@
 	class={`relative flex h-full flex-col justify-end border border-black border-opacity-20 shadow-xl`}
 >
 	<div
-		class={`absolute bottom-0 z-10 flex h-2/3 w-full flex-col items-center justify-end gap-1 p-3 text-center sm:p-4 md:p-6 lg:p-4 xl:p-5 ${character.colors ? character.colors.secondary : ''}`}
+		class={`absolute bottom-0 z-10 flex h-2/3 w-full flex-col items-center justify-end gap-1 py-3 px-1 text-center lg:p-4 xl:p-5 ${character.colors ? character.colors.secondary : ''}`}
 	>
-		<h2 class="text-[.35rem] text-white sm:text-[.5rem] md:text-xs lg:text-2xs xl:text-xs">
+		<h2 class="text-[.4rem] text-white sm:text-[.6rem] md:text-xs lg:text-2xs xl:text-xs">
 			{character.bannerName}
 		</h2>
-		<h1 class="text-[.6rem] text-white sm:text-sm md:text-xl lg:text-base xl:text-lg">
+		<h1 class="text-[.6rem] text-white sm:text-sm md:text-lg lg:text-base xl:text-lg">
 			{character.name}
 		</h1>
 	</div>
