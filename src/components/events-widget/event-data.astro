@@ -6,7 +6,10 @@ import { Event } from '../../classes/event.ts'
 const { images } = Astro.props
 
 const eventCollection = await getCollection('events', ({ data }) => {
-	return (data.type == 'banner' || data.type == 'debut') && data.status == 'confirmed'
+	return (
+		(data.type == 'banner' || data.type == 'debut' || data.type == 'select') &&
+		data.status == 'confirmed'
+	)
 })
 const characterCollection = await getCollection('characters')
 
@@ -16,7 +19,7 @@ eventCollection.forEach(({ data }) => {
 	event.game = data.game.id
 	event.startDate = data.startDate + (data.startTime != undefined ? `T${data.startTime}Z` : '')
 	event.endDate = data.endDate + (data.endTime != undefined ? `T${data.endTime}Z` : '')
-	if (data.type == 'banner' || data.type == 'debut') {
+	if (data.type == 'banner' || data.type == 'debut' || data.type == 'select') {
 		const character = characterCollection.find((c) => c.id == data.character.id)
 		event.title = character.data.bannerName
 		event.image = character.data.images.bannerCard
