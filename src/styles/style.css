@@ -68,7 +68,7 @@ body {
 }
 
 .genshin {
-	@apply font-genshin font-bold;
+	@apply font-genshin font-bold tracking-wide;
 }
 
 .starrail {

@@ -1,0 +1,11 @@
+{
+	"name": "Kachina",
+	"rarity": 4,
+	"element": "geo",
+	"weaponType": "Polearm",
+	"images": {
+		"gachaSplash": "kachina/gachaSplash",
+		"gachaCard": "kachina/gachaCard",
+		"bannerCard": "kachina/bannerCard"
+	}
+}
