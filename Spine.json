@@ -1,0 +1,20 @@
+{"skeleton":{"images":"src\assets\characters\zzz\"},
+"bones":[{"name":"root"}],
+"slots":[
+	{"name":"zzz/zhuyuan","bone":"root","attachment":"zhuyuan/gachaCard"},
+	{"name":"zzz/qingyi","bone":"root","attachment":"qingyi/gachaCard"},
+	{"name":"zzz/ellen","bone":"root","attachment":"ellen/gachaCard"},
+	{"name":"zzz/burnice","bone":"root","attachment":"burnice/gachaCard"},
+	{"name":"zzz/jane","bone":"root","attachment":"jane/gachaCard"}
+],
+"skins":{
+	"default":{
+		"zzz/zhuyuan":{"zzz/zhuyuan":{"x":3961.5,"y":524.5,"width":601,"height":1051}},
+		"zzz/qingyi":{"zzz/qingyi":{"x":3361.5,"y":524.5,"width":601,"height":1051}},
+		"zzz/ellen":{"zzz/ellen":{"x":2761.5,"y":524.5,"width":601,"height":1051}},
+		"zzz/burnice":{"zzz/burnice":{"x":2161.5,"y":524.5,"width":601,"height":1051}},
+		"zzz/jane":{"zzz/jane":{"x":1561.5,"y":524.5,"width":601,"height":1051}}
+	}
+},
+"animations":{"animation":{}}
+}
