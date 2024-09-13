@@ -6,13 +6,13 @@
 
 	const gachaSplash =
 		images.gachaSplash[
-			`../assets/characters/${game}/${character.images ? character.images.gachaSplash : ''}.png`
+			`../assets/characters/${game}/${character.images ? character.images.gachaSplash : ''}.webp`
 		] != undefined
 			? images.gachaSplash[
-					`../assets/characters/${game}/${character.images ? character.images.gachaSplash : ''}.png`
+					`../assets/characters/${game}/${character.images ? character.images.gachaSplash : ''}.webp`
 				]
 			: images.placeHolders[
-					`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.png`
+					`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.webp`
 				]
 	if (gachaSplash && gachaSplash == undefined) {
 		console.log(character)
@@ -27,7 +27,8 @@
 			class="absolute aspect-square w-full lg:h-full object-cover lg:aspect-[1/2]"
 			width={600}
 			alt={`${character.element} Art`}
-			src={images.backgrounds[`../assets/backgrounds/${game}/${character.element}.png`].default.src}
+			src={images.backgrounds[`../assets/backgrounds/${game}/${character.element}.webp`].default
+				.src}
 		/>
 
 		<img
