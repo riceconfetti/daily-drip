@@ -13,12 +13,18 @@ import { tz_genshin } from 'src/scripts/settings'
 let game = 'genshin'
 
 const images = {
-	backgrounds: import.meta.glob('../assets/backgrounds/genshin/*.png', { eager: true }),
-	gachaCards: import.meta.glob('../assets/characters/genshin/*/gachaCard.png', { eager: true }),
-	gachaSplash: import.meta.glob('../assets/characters/genshin/*/gachaSplash.png', { eager: true }),
-	bannerCards: import.meta.glob('../assets/characters/genshin/*/bannerCard.png', { eager: true }),
+	backgrounds: import.meta.glob('../assets/backgrounds/genshin/*{.webp,.png}', { eager: true }),
+	gachaCards: import.meta.glob('../assets/characters/genshin/*/gachaCard{.webp,.png}', {
+		eager: true
+	}),
+	gachaSplash: import.meta.glob('../assets/characters/genshin/*/gachaSplash{.webp,.png}', {
+		eager: true
+	}),
+	bannerCards: import.meta.glob('../assets/characters/genshin/*/bannerCard{.webp,.png}', {
+		eager: true
+	}),
 	weapons: import.meta.glob('../assets/weapons/*{.webp,.png}', { eager: true }),
-	placeHolders: import.meta.glob('../assets/placeholders/genshin/*.png', { eager: true })
+	placeHolders: import.meta.glob('../assets/placeholders/genshin/*{.webp,.png}', { eager: true })
 }
 
 const collections = {

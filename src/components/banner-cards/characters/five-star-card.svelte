@@ -6,21 +6,23 @@
 
 	const gachaCard =
 		images.gachaCards[
-			`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.png`
+			`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.webp`
 		] != undefined
 			? images.gachaCards[
-					`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.png`
+					`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.webp`
 				]
 			: images.placeHolders[
-					`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.png`
+					`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.webp`
 				]
-	if (gachaCard && gachaCard == undefined) {
-		console.log(character)
-	}
+	// if (gachaCard && gachaCard == undefined) {
+	// 	console.log(character)
+	// }
 
-	if (images.backgrounds[`../assets/backgrounds/${game}/${character.element}.png`] == undefined) {
-		console.log(`${game}/${character.element}`)
-	}
+	// if (images.backgrounds[`../assets/backgrounds/${game}/${character.element}.webp`] == undefined) {
+	// 	console.log(`${game}/${character.element}`)
+	// }
+
+	console.log(gachaCard)
 </script>
 
 <div
@@ -42,7 +44,8 @@
 			height={1050}
 			width={600}
 			alt={`${character.element} Art`}
-			src={images.backgrounds[`../assets/backgrounds/${game}/${character.element}.png`].default.src}
+			src={images.backgrounds[`../assets/backgrounds/${game}/${character.element}.webp`].default
+				.src}
 		/>
 		<Image
 			class={`relative h-full w-full ${character.spec ? 'md:border-6 border-2 [border-image:url(/textures/holo-4.jpg)_10_round] sm:border-4' : ''}`}
