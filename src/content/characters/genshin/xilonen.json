@@ -10,8 +10,8 @@
 		"bannerCard": "xilonen/bannerCard"
 	},
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-		"secondary": "bg-gradient-to-t from-[#000] to-[#fff00]",
-		"textAccent": "text-[#fff]"
+		"primary": "bg-gradient-to-r from-[#F9AB00] to-[#90D6CC]",
+		"secondary": "bg-gradient-to-t from-[#DDAB04] to-[#F6549D00]",
+		"textAccent": "text-[#68F1DB]"
 	}
 }

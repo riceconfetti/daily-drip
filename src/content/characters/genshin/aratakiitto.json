@@ -4,7 +4,7 @@
 	"element": "geo",
 	"bannerName": "Oni's Royale",
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#433531] to-[#FFBD51]",
+		"primary": "bg-gradient-to-r from-[#A41A12] to-[#3E1110]",
 		"secondary": "bg-gradient-to-t from-[#322A28] to-[#5F2E2F00]",
 		"textAccent": "text-[#FFD87D]"
 	},

@@ -4,7 +4,7 @@
 	"element": "dendro",
 	"bannerName": "Immaculate Pulse",
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#0A463D] to-[#8BD2A9]",
+		"primary": "bg-gradient-to-r from-[#196253] to-[#ABCB97]",
 		"secondary": "bg-gradient-to-t from-[#092B2D] to-[#2E8D7A00]",
 		"textAccent": "text-[#00242F]"
 	},
