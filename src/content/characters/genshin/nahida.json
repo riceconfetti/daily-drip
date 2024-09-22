@@ -9,7 +9,7 @@
 		"bannerCard": "nahida/bannerCard"
 	},
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#379751] to-[#FDFFF9]",
+		"primary": "bg-gradient-to-r from-[#75B18B] to-[#FDFFF9]",
 		"secondary": "bg-gradient-to-t from-[#254534] to-[#ABDFB700]",
 		"textAccent": "text-[#0E3124]"
 	}

@@ -5,9 +5,9 @@
 	"weaponType": "sword",
 	"bannerName": "Secretum Secretorum",
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#392916] to-[#D88F45]",
+		"primary": "bg-gradient-to-r from-[#C18830] to-[#F7E4CD]",
 		"secondary": "bg-gradient-to-t from-[#392916] to-[#8F541700]",
-		"textAccent": "text-[#D88F45]"
+		"textAccent": "text-[#362F6D]"
 	},
 	"images": {
 		"gachaSplash": "albedo/gachaSplash",

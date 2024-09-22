@@ -38,7 +38,7 @@ export default {
 						bg: '#5EBEA1',
 						text: '#000000B3',
 						gradient: {
-							from: '#0F6C5C',
+							from: '#24785B',
 							to: '#44CAAA'
 						}
 					},
@@ -46,7 +46,7 @@ export default {
 						bg: '#8350A1',
 						text: '#000000B3',
 						gradient: {
-							from: '#341861',
+							from: '#2A1B3E',
 							to: '#6A31C6'
 						}
 					},
@@ -54,15 +54,15 @@ export default {
 						bg: '#C8A839',
 						text: '#000000B3',
 						gradient: {
-							from: '#715C12',
-							to: '#CEAD57'
+							from: '#6C4700',
+							to: '#DAB24B'
 						}
 					},
 					dendro: {
 						bg: '#7DB26A',
 						text: '#000000B3',
 						gradient: {
-							from: '#0D4A10',
+							from: '#0D3B10',
 							to: '#6EB96D'
 						}
 					},
@@ -70,15 +70,15 @@ export default {
 						bg: '#B8E3F1',
 						text: '#000000B3',
 						gradient: {
-							from: '#0E4E7D',
-							to: '#79B6CE'
+							from: '#24587D',
+							to: '#A0BAD1'
 						}
 					},
 					hydro: {
 						bg: '#5F91DD',
 						text: '#000000B3',
 						gradient: {
-							from: '#161464',
+							from: '#001B58',
 							to: '#4472CA'
 						}
 					},
@@ -86,7 +86,7 @@ export default {
 						bg: '#F25252',
 						text: '#000000B3',
 						gradient: {
-							from: '#341402',
+							from: '#581402',
 							to: '#A6280F'
 						}
 					}
