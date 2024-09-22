@@ -9,8 +9,10 @@ dayjs.extend(utc)
 
 const images = {
 	genshin: {
-		bannerCards: import.meta.glob('../assets/characters/genshin/*/bannerCard.png', { eager: true }),
-		placeHolders: import.meta.glob('../assets/placeholders/genshin/*.png', { eager: true })
+		bannerCards: import.meta.glob('../assets/characters/genshin/*/bannerCard.webp', {
+			eager: true
+		}),
+		placeHolders: import.meta.glob('../assets/placeholders/genshin/*.webp', { eager: true })
 	},
 	starrail: {
 		bannerCards: import.meta.glob('../assets/characters/starrail/*/bannerCard.png', {
