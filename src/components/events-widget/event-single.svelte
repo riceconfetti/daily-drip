@@ -11,12 +11,12 @@
 			? dayjs().to(dayjs(eventDetails.startDate))
 			: dayjs().to(dayjs(eventDetails.endDate))
 
-	const bannerPath = `../assets/characters/${eventDetails.game}/${eventDetails.image}.png`
+	const bannerPath = `../assets/characters/${eventDetails.game}/${eventDetails.image}.${eventDetails.game == 'genshin' ? 'webp' : 'png'}`
 	const bannerImage =
 		images[eventDetails.game].bannerCards[bannerPath] != undefined
 			? images[eventDetails.game].bannerCards[bannerPath]
 			: images[eventDetails.game].placeHolders[
-					`../assets/placeholders/${eventDetails.game}/bannerCard.png`
+					`../assets/placeholders/${eventDetails.game}/bannerCard.webp`
 				]
 	//console.log(bannerImage);
 </script>

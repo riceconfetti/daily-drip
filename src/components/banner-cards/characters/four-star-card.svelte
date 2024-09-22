@@ -4,9 +4,9 @@
 	export let character, images, game
 
 	const bannerCard =
-		images.bannerCards[`../assets/characters/${character.id}/bannerCard.png`] != undefined
-			? images.bannerCards[`../assets/characters/${character.id}/bannerCard.png`]
-			: images.placeHolders[`../assets/placeholders/${game}/bannerCard.png`]
+		images.bannerCards[`../assets/characters/${character.id}/bannerCard.webp`] != undefined
+			? images.bannerCards[`../assets/characters/${character.id}/bannerCard.webp`]
+			: images.placeHolders[`../assets/placeholders/${game}/bannerCard.webp`]
 
 	if (bannerCard == undefined) {
 		console.log(character)
