@@ -24,7 +24,7 @@ const images = {
 		eager: true
 	}),
 	weapons: import.meta.glob('../assets/weapons/*.webp', { eager: true }),
-	placeHolders: import.meta.glob('../assets/placeholders/genshin/*.webp', { eager: true })
+	placeHolders: import.meta.glob('../assets/placeholders/genshin/*{.webp, .png}', { eager: true })
 }
 
 const collections = {
