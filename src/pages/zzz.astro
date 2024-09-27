@@ -7,6 +7,7 @@ import { getPhase } from '../scripts/specs.ts'
 import dayjs from 'dayjs'
 import type { Character } from 'src/classes/character'
 import { Weapon } from 'src/classes/weapon'
+import { tz_zzz } from 'src/scripts/settings'
 
 let game = 'zzz'
 
@@ -88,7 +89,10 @@ versionCollection.forEach(({ data }) => {
 	//console.log(v)
 
 	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
-		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
+		v.phases = [
+			getPhase(game, data, 0, collections, tz_zzz),
+			getPhase(game, data, 1, collections, tz_zzz)
+		]
 		versions.push(v)
 	}
 })

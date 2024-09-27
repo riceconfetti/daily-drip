@@ -3,7 +3,7 @@
 	"rarity": 5,
 	"element": "wind",
 	"weaponType": "hunt",
-	"bannerName": "???",
+	"bannerName": "Stormrider's Bolt",
 	"colors": {
 		"primary": "bg-gradient-to-r from-[#C69261] to-[#9DCED2]",
 		"secondary": "bg-gradient-to-t from-[#0B3643] to-[#66666600]",
