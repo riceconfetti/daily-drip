@@ -13,18 +13,18 @@ import { tz_starrail } from 'src/scripts/settings'
 let game = 'starrail'
 
 const images = {
-	backgrounds: import.meta.glob('../assets/backgrounds/starrail/*{.webp,.png}', { eager: true }),
-	gachaCards: import.meta.glob('../assets/characters/starrail/*/gachaCard{.webp,.png}', {
+	backgrounds: import.meta.glob('../assets/backgrounds/starrail/*.webp', { eager: true }),
+	gachaCards: import.meta.glob('../assets/characters/starrail/*/gachaCard.webp', {
 		eager: true
 	}),
-	gachaSplash: import.meta.glob('../assets/characters/starrail/*/gachaSplash{.webp,.png}', {
+	gachaSplash: import.meta.glob('../assets/characters/starrail/*/gachaSplash.webp', {
 		eager: true
 	}),
-	bannerCards: import.meta.glob('../assets/characters/starrail/*/bannerCard{.webp,.png}', {
+	bannerCards: import.meta.glob('../assets/characters/starrail/*/bannerCard.webp', {
 		eager: true
 	}),
-	weapons: import.meta.glob('../assets/weapons/*{.webp,.png}', { eager: true }),
-	placeHolders: import.meta.glob('../assets/placeholders/starrail/*{.webp,.png}', { eager: true })
+	weapons: import.meta.glob('../assets/weapons/*.webp', { eager: true }),
+	placeHolders: import.meta.glob('../assets/placeholders/starrail/*.webp', { eager: true })
 }
 
 const collections = {

@@ -1,7 +1,12 @@
 {
 	"name": "Xiangli Yao",
 	"rarity": 5,
-	"element": "wuwa",
-	"weaponType": "wuwa",
-	"bannerName": "?????"
+	"element": "electro",
+	"weaponType": "gauntlets",
+	"bannerName": "Celestial Revelation",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#181D51] to-[#87C0EF]",
+		"secondary": "bg-gradient-to-t from-[#3C4475] to-[#6A7B8900]",
+		"textAccent": "text-[#617EAF]"
+	}
 }
