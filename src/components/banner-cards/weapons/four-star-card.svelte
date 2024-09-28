@@ -9,7 +9,7 @@
 		images.weapons[`../assets/weapons/${weapon.icon}`] != undefined
 			? images.weapons[`../assets/weapons/${weapon.icon}`]
 			: images.placeHolders[
-					`../assets/placeholders/${game}/fourStar_${weapon.game != 'genshin' ? 'default' : weapon.weaponType}.png`
+					`../assets/placeholders/${game}/fourStar_${weapon.game != 'genshin' ? 'default' : weapon.weaponType}.webp`
 				]
 	if (weaponImage == undefined) {
 		console.log(weaponImage)

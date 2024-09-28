@@ -4,6 +4,11 @@
 	"element": "glacio",
 	"weaponType": "rectifier",
 	"bannerName": "Chromatic Prose",
+	"images": {
+		"gachaSplash": "zhezhi/gachaSpash",
+		"gachaCard": "zhezhi/gachaCard",
+		"bannerCard": "zhezhi/bannerCard"
+	},
 	"colors": {
 		"primary": "bg-gradient-to-r from-[#4295A2] to-[#FFFBFB]",
 		"secondary": "bg-gradient-to-t from-[#CA7A79] to-[#7CB8D500]",
