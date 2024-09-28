@@ -1,0 +1,17 @@
+{
+	"name": "Shorekeeper",
+	"rarity": 5,
+	"element": "spectro",
+	"weaponType": "rectifier",
+	"bannerName": "Till the Sea Turns Clear",
+	"images": {
+		"gachaSplash": "shorekeeper/gachaSpash",
+		"gachaCard": "shorekeeper/gachaCard",
+		"bannerCard": "shorekeeper/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#0D1316] to-[#2951AA]",
+		"secondary": "bg-gradient-to-t from-[#98C3F8] to-[#00000000]",
+		"textAccent": "text-[#AEDAF0]"
+	}
+}

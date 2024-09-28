@@ -29,7 +29,7 @@
 	class={`relative flex h-full flex-col justify-end border border-black border-opacity-20 shadow-xl`}
 >
 	<div
-		class={`absolute bottom-0 z-10 flex h-2/3 w-full flex-col items-center justify-end gap-1 py-3 px-1 text-center lg:p-4 xl:p-5 ${character.colors ? character.colors.secondary : ''}`}
+		class={`absolute bottom-0 z-10 flex h-1/2 w-full flex-col items-center justify-end gap-1 py-3 px-1 text-center lg:p-4 xl:p-5 ${character.colors ? character.colors.secondary : ''}`}
 	>
 		<h2 class="text-[.4rem] text-white sm:text-[.6rem] md:text-xs lg:text-2xs xl:text-xs">
 			{character.bannerName}
