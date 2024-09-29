@@ -1,0 +1,11 @@
+{
+	"name": "Yangyang",
+	"rarity": 4,
+	"element": "aero",
+	"weaponType": "sword",
+	"images": {
+		"gachaSplash": "yangyang/gachaSpash",
+		"gachaCard": "yangyang/gachaCard",
+		"bannerCard": "yangyang/bannerCard"
+	}
+}

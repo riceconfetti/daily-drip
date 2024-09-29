@@ -1,0 +1,20 @@
+{
+	"name": "Genshin Impact",
+	"icon": "",
+	"times": {
+		"maintenance": "22:00:00",
+		"version": "03:00:00",
+		"update": [
+			{ "zone": "as", "time": "10:00:00" },
+			{ "zone": "sar", "time": "10:00:00" },
+			{ "zone": "eu", "time": "17:00:00" },
+			{ "zone": "na", "time": "23:00:00" }
+		],
+		"reset": {
+			"as": "20:00:00",
+			"sar": "20:00:00",
+			"eu": "03:00:00",
+			"na": "09:00:00"
+		}
+	}
+}

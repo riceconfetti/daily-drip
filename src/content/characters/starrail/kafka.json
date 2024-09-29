@@ -1,0 +1,17 @@
+{
+	"name": "Kafka",
+	"rarity": 5,
+	"element": "lightning",
+	"weaponType": "nihility",
+	"bannerName": "Nessun Dorma",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#5A0B39] to-[#B47BA9]",
+		"secondary": "bg-gradient-to-t from-[#561D3E] to-[#65506100]",
+		"textAccent": "text-[#17001A]"
+	},
+	"images": {
+		"gachaSplash": "kafka/gachaSpash",
+		"gachaCard": "kafka/gachaCard",
+		"bannerCard": "kafka/bannerCard"
+	}
+}

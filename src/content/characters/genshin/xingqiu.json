@@ -1,0 +1,11 @@
+{
+	"name": "Xingqiu",
+	"rarity": 4,
+	"element": "hydro",
+	"weaponType": "sword",
+	"images": {
+		"gachaSplash": "xingqiu/gachaSplash",
+		"gachaCard": "xingqiu/gachaCard",
+		"bannerCard": "xingqiu/bannerCard"
+	}
+}

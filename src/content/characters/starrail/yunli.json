@@ -1,0 +1,17 @@
+{
+	"name": "Yunli",
+	"rarity": 5,
+	"element": "physical",
+	"weaponType": "destruction",
+	"bannerName": "Mountain Thrown, Cloud Dispersed",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#073650] to-[#F0520E]",
+		"secondary": "bg-gradient-to-t from-[#481716] to-[#F4850200]",
+		"textAccent": "text-[#F4A036]"
+	},
+	"images": {
+		"gachaSplash": "yunli/gachaSpash",
+		"gachaCard": "yunli/gachaCard",
+		"bannerCard": "yunli/bannerCard"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Keqing",
+	"rarity": 5,
+	"element": "electro",
+	"weaponType": "sword",
+	"bannerName": "Dance of Lanterns",
+	"images": {
+		"gachaSplash": "keqing/gachaSplash",
+		"gachaCard": "keqing/gachaCard",
+		"bannerCard": "keqing/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#311F32] to-[#955E98]",
+		"secondary": "bg-gradient-to-t from-[#261827] to-[#79729000]",
+		"textAccent": "text-[#A1B4D0]"
+	}
+}

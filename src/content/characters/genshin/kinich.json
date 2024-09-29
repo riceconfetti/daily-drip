@@ -1,0 +1,17 @@
+{
+	"name": "Kinich",
+	"rarity": 5,
+	"element": "dendro",
+	"weaponType": "Claymore",
+	"bannerName": "Seeker of Flame-Wrought Secrets",
+	"images": {
+		"gachaSplash": "kinich/gachaSplash",
+		"gachaCard": "kinich/gachaCard",
+		"bannerCard": "kinich/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#031813] to-[#E6E85B]",
+		"secondary": "bg-gradient-to-t from-[#041818] to-[#CAF4A600]",
+		"textAccent": "text-[#DEEE54]"
+	}
+}

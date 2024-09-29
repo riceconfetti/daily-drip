@@ -1,0 +1,10 @@
+{
+	"name": "Charlotte",
+	"rarity": 4,
+	"element": "cryo",
+	"images": {
+		"gachaSplash": "charlotte/gachaSplash",
+		"gachaCard": "charlotte/gachaCard",
+		"bannerCard": "charlotte/bannerCard"
+	}
+}

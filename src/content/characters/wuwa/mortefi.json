@@ -1,0 +1,11 @@
+{
+	"name": "Mortefi",
+	"rarity": 4,
+	"element": "fusion",
+	"weaponType": "pistols",
+	"images": {
+		"gachaSplash": "mortefi/gachaSpash",
+		"gachaCard": "mortefi/gachaCard",
+		"bannerCard": "mortefi/bannerCard"
+	}
+}

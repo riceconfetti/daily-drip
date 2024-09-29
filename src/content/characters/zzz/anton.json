@@ -1,0 +1,11 @@
+{
+    "name": "Anton",
+    "rarity": 4,
+    "images": {
+        "gachaSplash": "anton/gachaSplash",
+        "gachaCard": "anton/gachaCard",
+        "bannerCard": "anton/bannerCard"
+    },
+    "element": "electric",
+    "weaponType": "zzz"
+}

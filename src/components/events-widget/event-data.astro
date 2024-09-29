@@ -1,0 +1,20 @@
+---
+import EventWidget from './event-widget.svelte'
+import { getCollection } from 'astro:content'
+
+const { images } = Astro.props
+
+const collections = {
+	events: await getCollection(
+		'events',
+		({ data }) =>
+			(data.type == 'banner' || data.type == 'debut' || data.type == 'select') &&
+			data.status == 'confirmed'
+	),
+	characters: await getCollection('characters'),
+	games: await getCollection('games'),
+	versions: await getCollection('versions')
+}
+---
+
+<EventWidget {images} {collections} client:load />

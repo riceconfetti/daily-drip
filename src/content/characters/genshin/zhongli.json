@@ -1,0 +1,17 @@
+{
+	"name": "Zhongli",
+	"rarity": 5,
+	"element": "geo",
+	"weaponType": "polearm",
+	"bannerName": "Gentry of Hermitage",
+	"images": {
+		"gachaSplash": "zhongli/gachaSplash",
+		"gachaCard": "zhongli/gachaCard",
+		"bannerCard": "zhongli/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#271913] to-[#EEBB63]",
+		"secondary": "bg-gradient-to-t from-[#391B0D] to-[#B2653600]",
+		"textAccent": "text-[#BBA656]"
+	}
+}

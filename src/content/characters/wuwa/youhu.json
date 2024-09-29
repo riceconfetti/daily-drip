@@ -1,0 +1,11 @@
+{
+	"name": "Youhu",
+	"rarity": 4,
+	"element": "glacio",
+	"weaponType": "gauntlets",
+	"images": {
+		"gachaSplash": "youhu/gachaSpash",
+		"gachaCard": "youhu/gachaCard",
+		"bannerCard": "youhu/bannerCard"
+	}
+}

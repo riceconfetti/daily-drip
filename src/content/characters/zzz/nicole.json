@@ -1,0 +1,11 @@
+{
+    "name": "Nicole",
+    "rarity": 4,
+    "images": {
+        "gachaSplash": "nicole/gachaSplash",
+        "gachaCard": "nicole/gachaCard",
+        "bannerCard": "nicole/bannerCard"
+    },
+    "element": "ether",
+    "weaponType": "zzz"
+}

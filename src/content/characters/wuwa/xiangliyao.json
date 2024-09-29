@@ -1,0 +1,17 @@
+{
+	"name": "Xiangli Yao",
+	"rarity": 5,
+	"element": "electro",
+	"weaponType": "gauntlets",
+	"bannerName": "Celestial Revelation",
+	"images": {
+		"gachaSplash": "xiangliyao/gachaSpash",
+		"gachaCard": "xiangliyao/gachaCard",
+		"bannerCard": "xiangliyao/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#181D51] to-[#87C0EF]",
+		"secondary": "bg-gradient-to-t from-[#3C4475] to-[#6A7B8900]",
+		"textAccent": "text-[#617EAF]"
+	}
+}

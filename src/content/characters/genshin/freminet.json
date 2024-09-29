@@ -1,0 +1,10 @@
+{
+	"name": "Freminet",
+	"rarity": 4,
+	"element": "cryo",
+	"images": {
+		"gachaSplash": "freminet/gachaSplash",
+		"gachaCard": "freminet/gachaCard",
+		"bannerCard": "freminet/bannerCard"
+	}
+}

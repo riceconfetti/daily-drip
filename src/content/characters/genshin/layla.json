@@ -1,0 +1,11 @@
+{
+	"name": "Layla",
+	"rarity": 4,
+	"element": "cryo",
+	"weaponType": "sword",
+	"images": {
+		"gachaSplash": "layla/gachaSplash",
+		"gachaCard": "layla/gachaCard",
+		"bannerCard": "layla/bannerCard"
+	}
+}

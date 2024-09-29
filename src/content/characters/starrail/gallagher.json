@@ -1,0 +1,11 @@
+{
+	"name": "Gallagher",
+	"rarity": 4,
+	"element": "fire",
+	"weaponType": "abundance",
+	"images": {
+		"gachaSplash": "gallagher/gachaSpash",
+		"gachaCard": "gallagher/gachaCard",
+		"bannerCard": "gallagher/bannerCard"
+	}
+}

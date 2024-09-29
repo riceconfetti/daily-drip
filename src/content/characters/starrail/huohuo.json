@@ -1,0 +1,17 @@
+{
+	"name": "Huohuo",
+	"rarity": 5,
+	"element": "wind",
+	"weaponType": "abundance",
+	"bannerName": "Bloom in Gloom",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#252F3B] to-[#C0DFBB]",
+		"secondary": "bg-gradient-to-t from-[#254336] to-[#C0DFBB00]",
+		"textAccent": "text-[#D26023]"
+	},
+	"images": {
+		"gachaSplash": "huohuo/gachaSpash",
+		"gachaCard": "huohuo/gachaCard",
+		"bannerCard": "huohuo/bannerCard"
+	}
+}

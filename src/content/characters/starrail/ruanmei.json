@@ -1,0 +1,17 @@
+{
+	"name": "Ruan Mei",
+	"rarity": 5,
+	"element": "ice",
+	"weaponType": "harmony",
+	"bannerName": "Floral Triptych",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#344459] to-[#A8BCC8]",
+		"secondary": "bg-gradient-to-t from-[#26394B] to-[#EAD4C600]",
+		"textAccent": "text-[#DEBE8D]"
+	},
+	"images": {
+		"gachaSplash": "ruanmei/gachaSpash",
+		"gachaCard": "ruanmei/gachaCard",
+		"bannerCard": "ruanmei/bannerCard"
+	}
+}

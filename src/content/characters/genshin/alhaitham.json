@@ -1,0 +1,17 @@
+{
+	"name": "Alhaitham",
+	"rarity": 5,
+	"element": "dendro",
+	"weaponType": "sword",
+	"bannerName": "Caution in Confidence",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#002613] to-[#82AF6B]",
+		"secondary": "bg-gradient-to-t from-[#0A1C13] to-[#82C3A000]",
+		"textAccent": "text-[#91B97D]"
+	},
+	"images": {
+		"gachaSplash": "alhaitham/gachaSplash",
+		"gachaCard": "alhaitham/gachaCard",
+		"bannerCard": "alhaitham/bannerCard"
+	}
+}

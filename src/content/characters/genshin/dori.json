@@ -1,0 +1,10 @@
+{
+	"name": "Dori",
+	"rarity": 4,
+	"element": "electro",
+	"images": {
+		"gachaSplash": "dori/gachaSplash",
+		"gachaCard": "dori/gachaCard",
+		"bannerCard": "dori/bannerCard"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Taoqi",
+	"rarity": 4,
+	"element": "havoc",
+	"weaponType": "broadblade",
+	"images": {
+		"gachaSplash": "taoqi/gachaSpash",
+		"gachaCard": "taoqi/gachaCard",
+		"bannerCard": "taoqi/bannerCard"
+	}
+}

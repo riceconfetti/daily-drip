@@ -1,0 +1,17 @@
+{
+	"name": "Lingyang",
+	"rarity": 5,
+	"element": "glacio",
+	"weaponType": "gauntlet",
+	"bannerName": "?????",
+	"images": {
+		"gachaSplash": "lingyang/gachaSpash",
+		"gachaCard": "lingyang/gachaCard",
+		"bannerCard": "lingyang/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#842216] to-[#FFE7B9]",
+		"secondary": "bg-gradient-to-t from-[#933528] to-[#BD6F6F00]",
+		"textAccent": "text-[#E77E75]"
+	}
+}

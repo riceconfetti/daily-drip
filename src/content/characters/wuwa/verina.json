@@ -1,0 +1,17 @@
+{
+	"name": "Verina",
+	"rarity": 5,
+	"element": "spectro",
+	"weaponType": "rectifier",
+	"bannerName": "?????",
+	"images": {
+		"gachaSplash": "verina/gachaSpash",
+		"gachaCard": "verina/gachaCard",
+		"bannerCard": "verina/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#2F4031] to-[#7AA67F]",
+		"secondary": "bg-gradient-to-t from-[#314333] to-[#DAEBEC00]",
+		"textAccent": "text-[#9ABBAB]"
+	}
+}

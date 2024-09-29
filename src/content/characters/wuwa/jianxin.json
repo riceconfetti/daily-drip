@@ -1,0 +1,17 @@
+{
+	"name": "Jianxin",
+	"rarity": 5,
+	"element": "aero",
+	"weaponType": "gauntlet",
+	"bannerName": "?????",
+	"images": {
+		"gachaSplash": "jianxin/gachaSpash",
+		"gachaCard": "jianxin/gachaCard",
+		"bannerCard": "jianxin/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#355953] to-[#D4D5D6]",
+		"secondary": "bg-gradient-to-t from-[#405B58] to-[#FFFFFF00]",
+		"textAccent": "text-[#212827]"
+	}
+}

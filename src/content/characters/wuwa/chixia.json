@@ -1,0 +1,11 @@
+{
+	"name": "Chixia",
+	"rarity": 4,
+	"element": "fusion",
+	"weaponType": "pistols",
+	"images": {
+		"gachaSplash": "chixia/gachaSpash",
+		"gachaCard": "chixia/gachaCard",
+		"bannerCard": "chixia/bannerCard"
+	}
+}

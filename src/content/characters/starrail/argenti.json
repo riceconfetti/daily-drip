@@ -1,0 +1,17 @@
+{
+	"name": "Argenti",
+	"rarity": 5,
+	"element": "physical",
+	"weaponType": "erudition",
+	"bannerName": "Thorns of Scented Crown",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#5F0505] to-[#B74743]",
+		"secondary": "bg-gradient-to-t from-[#941817] to-[#52393100]",
+		"textAccent": "text-[#D0A167]"
+	},
+	"images": {
+		"gachaSplash": "argenti/gachaSpash",
+		"gachaCard": "argenti/gachaCard",
+		"bannerCard": "argenti/bannerCard"
+	}
+}

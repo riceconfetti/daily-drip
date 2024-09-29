@@ -1,0 +1,16 @@
+{
+	"name": "Hu Tao",
+	"rarity": 5,
+	"element": "pyro",
+	"bannerName": "Moment of Bloom",
+	"images": {
+		"gachaSplash": "hutao/gachaSplash",
+		"gachaCard": "hutao/gachaCard",
+		"bannerCard": "hutao/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
+		"textAccent": "text-[#999]"
+	}
+}

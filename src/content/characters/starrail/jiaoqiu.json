@@ -1,0 +1,17 @@
+{
+	"name": "Jiaoqiu",
+	"rarity": 5,
+	"element": "fire",
+	"weaponType": "nihility",
+	"bannerName": "Persuasions Within Crucible",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#9B2A2C] to-[#CFA196]",
+		"secondary": "bg-gradient-to-t from-[#62101C] to-[#F8A0A000]",
+		"textAccent": "text-[#E7AFB2]"
+	},
+	"images": {
+		"gachaSplash": "jiaoqiu/gachaSpash",
+		"gachaCard": "jiaoqiu/gachaCard",
+		"bannerCard": "jiaoqiu/bannerCard"
+	}
+}

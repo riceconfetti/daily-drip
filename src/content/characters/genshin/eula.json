@@ -1,0 +1,16 @@
+{
+	"name": "Eula",
+	"rarity": 5,
+	"element": "cryo",
+	"bannerName": "Born of Ocean Swell",
+	"images": {
+		"gachaSplash": "eula/gachaSplash",
+		"gachaCard": "eula/gachaCard",
+		"bannerCard": "eula/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#6381B3] to-[#BBC8CE]",
+		"secondary": "bg-gradient-to-t from-[#5675A5] to-[#21284000]",
+		"textAccent": "text-[#A8E5F4]"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Changli",
+	"rarity": 5,
+	"element": "fusion",
+	"weaponType": "sword",
+	"bannerName": "Vermillion's Ploy",
+	"images": {
+		"gachaSplash": "changli/gachaSpash",
+		"gachaCard": "changli/gachaCard",
+		"bannerCard": "changli/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#932C21] to-[#C78071]",
+		"secondary": "bg-gradient-to-t from-[#A73D36] to-[#BE7A7E00]",
+		"textAccent": "text-[#F0BEBF]"
+	}
+}

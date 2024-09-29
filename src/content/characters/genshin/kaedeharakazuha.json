@@ -1,0 +1,16 @@
+{
+	"name": "Kaedehara Kazuha",
+	"rarity": 5,
+	"element": "anemo",
+	"bannerName": "Leaves in the Wind",
+	"images": {
+		"gachaSplash": "kaedeharakazuha/gachaSplash",
+		"gachaCard": "kaedeharakazuha/gachaCard",
+		"bannerCard": "kaedeharakazuha/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#C13219] to-[#497063]",
+		"secondary": "bg-gradient-to-t from-[#4E7D6D] to-[#97443E00]",
+		"textAccent": "text-[#62C09B]"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Silver Wolf",
+	"rarity": 5,
+	"element": "quantum",
+	"weaponType": "nihility",
+	"bannerName": "Contract Zero",
+	"images": {
+		"gachaSplash": "silverwolf/gachaSpash",
+		"gachaCard": "silverwolf/gachaCard",
+		"bannerCard": "silverwolf/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#111A3D] to-[#4F50BC]",
+		"secondary": "bg-gradient-to-t from-[#111A3D] to-[#4F50BC00]",
+		"textAccent": "text-[#E47FDD]"
+	}
+}

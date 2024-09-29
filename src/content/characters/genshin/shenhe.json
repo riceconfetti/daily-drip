@@ -1,0 +1,17 @@
+{
+	"name": "Shenhe",
+	"rarity": 5,
+	"element": "cryo",
+	"weaponType": "polearm",
+	"bannerName": "The Transcendent One Returns",
+	"images": {
+		"gachaSplash": "shenhe/gachaSplash",
+		"gachaCard": "shenhe/gachaCard",
+		"bannerCard": "shenhe/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#315C76] to-[#D7ECF5]",
+		"secondary": "bg-gradient-to-t from-[#21486A] to-[#97ABBB00]",
+		"textAccent": "text-[#FF5A5A]"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Yinlin",
+	"rarity": 5,
+	"element": "electro",
+	"weaponType": "rectifier",
+	"bannerName": "When Thunder Pours",
+	"images": {
+		"gachaSplash": "yinlin/gachaSpash",
+		"gachaCard": "yinlin/gachaCard",
+		"bannerCard": "yinlin/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#441014] to-[#BEA2DD]",
+		"secondary": "bg-gradient-to-t from-[#46122B] to-[#71444800]",
+		"textAccent": "text-[#C3606A]"
+	}
+}

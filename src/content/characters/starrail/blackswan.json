@@ -1,0 +1,17 @@
+{
+	"name": "Black Swan",
+	"rarity": 5,
+	"element": "wind",
+	"weaponType": "nihility",
+	"bannerName": "Ripples in Reflection",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#120465] to-[#E6E1FF]",
+		"secondary": "bg-gradient-to-t from-[#230465] to-[#E6E1FF00]",
+		"textAccent": "text-[#89D8FF]"
+	},
+	"images": {
+		"gachaSplash": "blackswan/gachaSpash",
+		"gachaCard": "blackswan/gachaCard",
+		"bannerCard": "blackswan/bannerCard"
+	}
+}

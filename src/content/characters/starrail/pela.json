@@ -1,0 +1,10 @@
+{
+	"name": "Pela",
+	"rarity": 4,
+	"element": "ice",
+	"images": {
+		"gachaSplash": "pela/gachaSpash",
+		"gachaCard": "pela/gachaCard",
+		"bannerCard": "pela/bannerCard"
+	}
+}

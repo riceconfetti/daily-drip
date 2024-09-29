@@ -1,0 +1,17 @@
+{
+	"name": "Lyney",
+	"rarity": 5,
+	"element": "pyro",
+	"weaponType": "bow",
+	"bannerName": "Conjuring Chiaroscuro",
+	"images": {
+		"gachaSplash": "lyney/gachaSplash",
+		"gachaCard": "lyney/gachaCard",
+		"bannerCard": "lyney/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#3E0915] to-[#DF4858]",
+		"secondary": "bg-gradient-to-t from-[#2C060F] to-[#93213500]",
+		"textAccent": "text-[#BDA78A]"
+	}
+}
