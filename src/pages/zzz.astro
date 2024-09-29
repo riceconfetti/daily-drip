@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { Version } from '../classes/version.ts'
+import Banner from '../components/banner-cards/banner.svelte'
+import { getCollection, getEntry } from 'astro:content'
+import { getPhase } from '../scripts/specs.ts'
+import dayjs from 'dayjs'
+import { tz_zzz } from 'src/scripts/settings'
+
+let game = 'zzz'
+
+const images = {
+	backgrounds: import.meta.glob('../assets/backgrounds/zzz/*.webp', { eager: true }),
+	gachaCards: import.meta.glob('../assets/characters/zzz/*/gachaCard.webp', { eager: true }),
+	gachaSplash: import.meta.glob('../assets/characters/zzz/*/gachaSplash.webp', { eager: true }),
+	bannerCards: import.meta.glob('../assets/characters/zzz/*/bannerCard.webp', { eager: true }),
+	weapons: import.meta.glob('../assets/weapons/*{.webp,.png}', { eager: true }),
+	placeHolders: import.meta.glob('../assets/placeholders/zzz/*.webp', { eager: true })
+}
+
+const collections = {
+	game: await getEntry('games', game),
+	characters: await getCollection('characters', ({ id }) => {
+		return id.startsWith(game)
+	}),
+	weapons: await getCollection('weapons', ({ id }) => {
+		return id.startsWith(game)
+	}),
+	events: await getCollection('events', ({ id, data }) => {
+		return (
+			id.startsWith(game) &&
+			(data.type === 'banner' ||
+				data.type === 'rate-up' ||
+				data.type === 'chronicle' ||
+				data.type === 'debut')
+		)
+	})
+}
+
+const versionCollection = await getCollection('versions', ({ id }) => {
+	return id.startsWith(game)
+})
+
+let versions: Version[] = []
+
+versionCollection.forEach(({ data }) => {
+	let v = new Version(data)
+
+	//console.log(v)
+
+	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
+		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
+		versions.push(v)
+	}
+})
+---
+
+<Layout title="The Daily Drip">
+	<section class="p-2 flex flex-col items-center h-max gap-4 md:max-w-[1400px]">
+		{
+			versions.map((version) => (
+				<Banner {version} {game} gameData={collections.game.data} {images} client:load />
+			))
+		}
+	</section>
+
+	<!-- <Banner {version} game="zzz" /> -->
+</Layout>

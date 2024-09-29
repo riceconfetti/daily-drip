@@ -1,0 +1,11 @@
+{
+	"name": "Sethos",
+	"rarity": 4,
+	"element": "electro",
+	"weaponType": "bow",
+	"images": {
+		"gachaSplash": "sethos/gachaSplash",
+		"gachaCard": "sethos/gachaCard",
+		"bannerCard": "sethos/bannerCard"
+	}
+}

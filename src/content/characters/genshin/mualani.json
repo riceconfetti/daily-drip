@@ -1,0 +1,17 @@
+{
+	"name": "Mualani",
+	"rarity": 5,
+	"element": "hydro",
+	"weaponType": "Catalyst",
+	"bannerName": "Sharktacular Safari",
+	"images": {
+		"gachaSplash": "mualani/gachaSplash",
+		"gachaCard": "mualani/gachaCard",
+		"bannerCard": "mualani/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#142677] to-[#25D8FD]",
+		"secondary": "bg-gradient-to-t from-[#02407D] to-[#0078D400]",
+		"textAccent": "text-[#F7C91E]"
+	}
+}

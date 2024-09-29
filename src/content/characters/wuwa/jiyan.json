@@ -1,0 +1,17 @@
+{
+	"name": "Jiyan",
+	"rarity": 5,
+	"element": "aero",
+	"weaponType": "broadblade",
+	"bannerName": "Prevail the Lasting Night",
+	"images": {
+		"gachaSplash": "jiyan/gachaSpash",
+		"gachaCard": "jiyan/gachaCard",
+		"bannerCard": "jiyan/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#236966] to-[#90E0DF]",
+		"secondary": "bg-gradient-to-t from-[#1C2A31] to-[#AEF8F500]",
+		"textAccent": "text-[#002626]"
+	}
+}

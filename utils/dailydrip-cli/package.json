@@ -1,0 +1,21 @@
+{
+	"name": "dailydrip-cli",
+	"version": "1.0.0",
+	"description": "cli app for adding new characters and events to the daily drip site",
+	"main": "bin/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Rhylen Nguyen",
+	"license": "MIT",
+	"bin": {
+		"addCharacter": "./bin/character.js",
+		"addWeapon": "./bin/weapon.js",
+		"addVersion": "./bin/version.js",
+		"addEvent": "./bin/event.js",
+		"initVersion": "./bin/initVersion.js"
+	},
+	"dependencies": {
+		"yargs": "13.2"
+	}
+}

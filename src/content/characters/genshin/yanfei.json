@@ -1,0 +1,10 @@
+{
+	"name": "Yanfei",
+	"rarity": 4,
+	"element": "pyro",
+	"images": {
+		"gachaSplash": "yanfei/gachaSplash",
+		"gachaCard": "yanfei/gachaCard",
+		"bannerCard": "yanfei/bannerCard"
+	}
+}

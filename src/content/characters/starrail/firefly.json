@@ -1,0 +1,17 @@
+{
+	"name": "Firefly",
+	"rarity": 5,
+	"element": "fire",
+	"weaponType": "destruction",
+	"bannerName": "Firefull Flyshine",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#2D565F] to-[#FFD872]",
+		"secondary": "bg-gradient-to-t from-[#59280C] to-[#4AD2B200]",
+		"textAccent": "text-[#F8B031]"
+	},
+	"images": {
+		"gachaSplash": "firefly/gachaSpash",
+		"gachaCard": "firefly/gachaCard",
+		"bannerCard": "firefly/bannerCard"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Xiao",
+	"rarity": 5,
+	"element": "anemo",
+	"weaponType": "polearm",
+	"bannerName": "Invitation to Mundane Life",
+	"images": {
+		"gachaSplash": "xiao/gachaSplash",
+		"gachaCard": "xiao/gachaCard",
+		"bannerCard": "xiao/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#0A3E3E] to-[#87BFCA]",
+		"secondary": "bg-gradient-to-t from-[#154148] to-[#69C5C100]",
+		"textAccent": "text-[#97C69F]"
+	}
+}

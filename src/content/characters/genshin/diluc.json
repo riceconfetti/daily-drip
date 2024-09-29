@@ -1,0 +1,16 @@
+{
+	"name": "Diluc",
+	"rarity": 5,
+	"element": "pyro",
+	"bannerName": "",
+	"images": {
+		"gachaSplash": "diluc/gachaSplash",
+		"gachaCard": "diluc/gachaCard",
+		"bannerCard": "diluc/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#B8110D] to-[#42332F]",
+		"secondary": "bg-gradient-to-t from-[#AF210A] to-[#4A332900]",
+		"textAccent": "text-[#F8B44D]"
+	}
+}

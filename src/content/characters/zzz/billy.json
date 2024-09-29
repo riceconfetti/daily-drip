@@ -1,0 +1,11 @@
+{
+    "name": "Billy",
+    "rarity": 4,
+    "images": {
+        "gachaSplash": "billy/gachaSplash",
+        "gachaCard": "billy/gachaCard",
+        "bannerCard": "billy/bannerCard"
+    },
+    "element": "physical",
+    "weaponType": "zzz"
+}

@@ -1,0 +1,10 @@
+{
+	"name": "Natasha",
+	"rarity": 4,
+	"element": "physical",
+	"images": {
+		"gachaSplash": "natasha/gachaSpash",
+		"gachaCard": "natasha/gachaCard",
+		"bannerCard": "natasha/bannerCard"
+	}
+}

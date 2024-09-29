@@ -1,20 +1,61 @@
 {
-  "name": "~documents-github-daily-drip",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^4.0.4",
-    "enkanetwork.js": "^2.6.0",
-    "nanostores": "^0.9.5"
-  },
-  "devDependencies": {
-    "sass": "^1.69.5"
-  }
+	"name": "~documents-github-daily-drip",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"host": "astro dev --host",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/preact": "^3.5.0",
+		"@astrojs/react": "^3.6.0",
+		"@astrojs/svelte": "^5.6.0",
+		"@astrojs/tailwind": "^5.1.0",
+		"@internationalized/date": "^3.5.4",
+		"@nanostores/persistent": "^0.10.2",
+		"@swup/astro": "^1.4.1",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@unpic/svelte": "^0.0.53",
+		"astro": "^4.11.0",
+		"bits-ui": "^0.21.10",
+		"chai": "^5.1.1",
+		"chromedriver": "^126.0.1",
+		"colorthief": "^2.2.0",
+		"dayjs": "^1.11.11",
+		"enkanetwork.js": "^2.6.0",
+		"ldrs": "^1.0.2",
+		"mocha": "^10.4.0",
+		"nanostores": "^0.9.5",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"remixicon": "^4.3.0",
+		"selenium-webdriver": "^4.21.0",
+		"svelte": "^4.2.17",
+		"swup": "^4.6.1",
+		"tailwind-gradient-mask-image": "^1.2.0",
+		"tailwind-merge": "^2.3.0",
+		"typescript": "^5.4.5"
+	},
+	"devDependencies": {
+		"@sveltejs/enhanced-img": "^0.3.0",
+		"autoprefixer": "^10.4.19",
+		"mocha": "^10.4.0",
+		"postcss": "^8.4.38",
+		"postcss-import": "^16.1.0",
+		"prettier": "^3.3.2",
+		"prettier-plugin-astro": "^0.14.0",
+		"prettier-plugin-svelte": "^3.2.4",
+		"prettier-plugin-tailwindcss": "^0.6.4",
+		"sass": "^1.69.5",
+		"sharp": "^0.33.4",
+		"svgo": "^3.3.2",
+		"tailwindcss": "^3.4.4",
+		"vite-aliases": "^0.11.7",
+		"vite-plugin-image-optimizer": "^1.1.8"
+	}
 }

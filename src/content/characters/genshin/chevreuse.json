@@ -1,0 +1,10 @@
+{
+	"name": "Chevreuse",
+	"rarity": 4,
+	"element": "pyro",
+	"images": {
+		"gachaSplash": "chevreuse/gachaSplash",
+		"gachaCard": "chevreuse/gachaCard",
+		"bannerCard": "chevreuse/bannerCard"
+	}
+}

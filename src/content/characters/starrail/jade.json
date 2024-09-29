@@ -1,0 +1,17 @@
+{
+	"name": "Jade",
+	"rarity": 5,
+	"element": "quantum",
+	"weaponType": "erudition",
+	"bannerName": "Lien of Life, Lease on Fate",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#130F35] to-[#999EC9]",
+		"secondary": "bg-gradient-to-t from-[#1B1072] to-[#DBA9DF00]",
+		"textAccent": "text-[#D7A5DD]"
+	},
+	"images": {
+		"gachaSplash": "jade/gachaSpash",
+		"gachaCard": "jade/gachaCard",
+		"bannerCard": "jade/bannerCard"
+	}
+}

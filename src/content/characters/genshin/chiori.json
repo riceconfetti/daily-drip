@@ -1,0 +1,17 @@
+{
+	"name": "Chiori",
+	"rarity": 5,
+	"element": "geo",
+	"weaponType": "sword",
+	"bannerName": "????",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#762F14] to-[#E2B44A]",
+		"secondary": "bg-gradient-to-t from-[#7A2A15] to-[#C9933A00]",
+		"textAccent": "text-[#FF9C51]"
+	},
+	"images": {
+		"gachaSplash": "chiori/gachaSplash",
+		"gachaCard": "chiori/gachaCard",
+		"bannerCard": "chiori/bannerCard"
+	}
+}

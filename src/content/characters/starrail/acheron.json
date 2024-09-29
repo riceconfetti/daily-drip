@@ -1,0 +1,17 @@
+{
+	"name": "Acheron",
+	"rarity": 5,
+	"element": "lightning",
+	"weaponType": "nihility",
+	"bannerName": "Words of Yore",
+	"images": {
+		"gachaSplash": "acheron/gachaSpash",
+		"gachaCard": "acheron/gachaCard",
+		"bannerCard": "acheron/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#222357] to-[#D9D5FC]",
+		"secondary": "bg-gradient-to-t from-[#121337] to-[#D9D5FC00]",
+		"textAccent": "text-[#F33241]"
+	}
+}

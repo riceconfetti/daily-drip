@@ -1,0 +1,17 @@
+{
+	"name": "Fu Xuan",
+	"rarity": 5,
+	"element": "quantum",
+	"weaponType": "preservation",
+	"bannerName": "Forseen, Foreknown, Foretold",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#351E4E] to-[#BF78A4]",
+		"secondary": "bg-gradient-to-t from-[#37223F] to-[#9F5A8300]",
+		"textAccent": "text-[#F15FD6]"
+	},
+	"images": {
+		"gachaSplash": "fuxuan/gachaSpash",
+		"gachaCard": "fuxuan/gachaCard",
+		"bannerCard": "fuxuan/bannerCard"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "Robin",
+	"rarity": 5,
+	"element": "physical",
+	"weaponType": "harmony",
+	"bannerName": "Just Intonation",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#514D96] to-[#DCDFF7]",
+		"secondary": "bg-gradient-to-t from-[#512499] to-[#FAE2EC00]",
+		"textAccent": "text-[#2D249C]"
+	},
+	"images": {
+		"gachaSplash": "robin/gachaSpash",
+		"gachaCard": "robin/gachaCard",
+		"bannerCard": "robin/bannerCard"
+	}
+}

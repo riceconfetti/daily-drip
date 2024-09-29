@@ -1,0 +1,10 @@
+{
+	"name": "Xinyan",
+	"rarity": 4,
+	"element": "pyro",
+	"images": {
+		"gachaSplash": "xinyan/gachaSplash",
+		"gachaCard": "xinyan/gachaCard",
+		"bannerCard": "xinyan/bannerCard"
+	}
+}

@@ -1,3 +1,20 @@
 {
-  "extends": "astro/tsconfigs/base"
+	"extends": "astro/tsconfigs/base",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"esModuleInterop": true,
+		"paths": {
+			"$components/*": ["src/components/*"],
+			"$assets/*": ["src/assets/*"],
+			"$classes": ["src/classes/*"],
+			"$content/*": ["src/content/*"],
+			"$layouts/*": ["src/layouts/*"],
+			"$pages/*": ["src/pages/*"],
+			"$styles/*": ["src/styles/*"],
+			"$scripts/*": ["src/scripts/*"],
+			"$utils/*": ["src/utils/*"]
+		},
+		"jsx": "react-jsx",
+		"jsxImportSource": "react"
+	}
 }

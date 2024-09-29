@@ -1,0 +1,17 @@
+{
+	"name": "Sparkle",
+	"rarity": 5,
+	"element": "quantum",
+	"weaponType": "harmony",
+	"bannerName": "Sparkling Splendor",
+	"images": {
+		"gachaSplash": "sparkle/gachaSpash",
+		"gachaCard": "sparkle/gachaCard",
+		"bannerCard": "sparkle/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#7F0F0F] to-[#CD7177]",
+		"secondary": "bg-gradient-to-t from-[#7F0F0F] to-[#CD717700]",
+		"textAccent": "text-[#7ED0EC]"
+	}
+}

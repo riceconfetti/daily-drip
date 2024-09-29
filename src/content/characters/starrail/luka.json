@@ -1,0 +1,11 @@
+{
+	"name": "Luka",
+	"rarity": 4,
+	"element": "physical",
+	"weaponType": "nihility",
+	"images": {
+		"gachaSplash": "luka/gachaSpash",
+		"gachaCard": "luka/gachaCard",
+		"bannerCard": "luka/bannerCard"
+	}
+}

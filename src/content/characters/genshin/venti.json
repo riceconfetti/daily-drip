@@ -1,0 +1,17 @@
+{
+	"name": "Venti",
+	"rarity": 5,
+	"element": "anemo",
+	"weaponType": "bow",
+	"bannerName": "Ballad in Goblets",
+	"images": {
+		"gachaSplash": "venti/gachaSplash",
+		"gachaCard": "venti/gachaCard",
+		"bannerCard": "venti/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#1C6641] to-[#8CF5D9]",
+		"secondary": "bg-gradient-to-t from-[#25443B] to-[#296B7000]",
+		"textAccent": "text-[#DEFDB7]"
+	}
+}

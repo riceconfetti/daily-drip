@@ -1,0 +1,17 @@
+{
+	"name": "Bronya",
+	"rarity": 5,
+	"element": "wind",
+	"weaponType": "harmony",
+	"bannerName": "",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#223584] to-[#8C87C0]",
+		"secondary": "bg-gradient-to-t from-[#223584] to-[#8C87C000]",
+		"textAccent": "text-[#041545]"
+	},
+	"images": {
+		"gachaSplash": "bronya/gachaSpash",
+		"gachaCard": "bronya/gachaCard",
+		"bannerCard": "bronya/bannerCard"
+	}
+}

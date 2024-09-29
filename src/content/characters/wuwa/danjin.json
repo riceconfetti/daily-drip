@@ -1,0 +1,11 @@
+{
+	"name": "Danjin",
+	"rarity": 4,
+	"element": "havoc",
+	"weaponType": "sword",
+	"images": {
+		"gachaSplash": "danjin/gachaSpash",
+		"gachaCard": "danjin/gachaCard",
+		"bannerCard": "danjin/bannerCard"
+	}
+}

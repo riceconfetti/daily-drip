@@ -1,0 +1,65 @@
+{
+	"Calcharo": {
+		"Text": "#A8A5D2",
+		"P-From": "#282143",
+		"P-To": "#786F98",
+		"S-From": "#2A2445",
+		"S-To": "#6859AB"
+	},
+	"Changli": {
+		"Text": "#F0BEBF",
+		"P-From": "#932C21",
+		"P-To": "#C78071",
+		"S-From": "#A73D36",
+		"S-To": "#BE7A7E"
+	},
+	"Encore": {
+		"Text": "#7D2936",
+		"P-From": "#9C5661",
+		"P-To": "#EFBBC3",
+		"S-From": "#CF7062",
+		"S-To": "#FFE1E5"
+	},
+	"Jianxin": {
+		"Text": "#212827",
+		"P-From": "#355953",
+		"P-To": "#D4D5D6",
+		"S-From": "#405B58",
+		"S-To": "#FFFFFF"
+	},
+	"Jinhsi": {
+		"Text": "#7EB3B5",
+		"P-From": "#2F4749",
+		"P-To": "#9FABAD",
+		"S-From": "#1F3130",
+		"S-To": "#9FB5AA"
+	},
+	"Jiyan": {
+		"Text": "#002626",
+		"P-From": "#236966",
+		"P-To": "#90E0DF",
+		"S-From": "#1C2A31",
+		"S-To": "#AEF8F5"
+	},
+	"Lingyang": {
+		"Text": "#E77E75",
+		"P-From": "#842216",
+		"P-To": "#FFE7B9",
+		"S-From": "#933528",
+		"S-To": "#BD6F6F"
+	},
+	"Verina": {
+		"Text": "#9ABBAB",
+		"P-From": "#2F4031",
+		"P-To": "#7AA67F",
+		"S-From": "#314333",
+		"S-To": "#DAEBEC"
+	},
+	"Yinlin": {
+		"Text": "#C3606A",
+		"P-From": "#441014",
+		"P-To": "#BEA2DD",
+		"S-From": "#46122B",
+		"S-To": "#714448"
+	}
+}

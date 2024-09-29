@@ -1,0 +1,17 @@
+{
+	"name": "Yanqing",
+	"rarity": 5,
+	"element": "ice",
+	"weaponType": "hunt",
+	"bannerName": "",
+	"images": {
+		"gachaSplash": "yanqing/gachaSpash",
+		"gachaCard": "yanqing/gachaCard",
+		"bannerCard": "yanqing/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#14335B] to-[#97F1FA]",
+		"secondary": "bg-gradient-to-t from-[#1B466C] to-[#93C4E200]",
+		"textAccent": "text-[#5AA2C4]"
+	}
+}

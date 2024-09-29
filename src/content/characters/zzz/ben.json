@@ -1,0 +1,11 @@
+{
+    "name": "Ben",
+    "rarity": 4,
+    "images": {
+        "gachaSplash": "ben/gachaSplash",
+        "gachaCard": "ben/gachaCard",
+        "bannerCard": "ben/bannerCard"
+    },
+    "element": "fire",
+    "weaponType": "zzz"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "Dehya",
+	"rarity": 5,
+	"element": "pyro",
+	"bannerName": "Auric Blaze",
+	"images": {
+		"gachaSplash": "dehya/gachaSplash",
+		"gachaCard": "dehya/gachaCard",
+		"bannerCard": "dehya/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#2C1617] to-[#BE1F00]",
+		"secondary": "bg-gradient-to-t from-[#360C03] to-[#F30B0400]",
+		"textAccent": "text-[#F2BC6F]"
+	}
+}

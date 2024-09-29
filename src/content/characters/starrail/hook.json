@@ -1,0 +1,10 @@
+{
+	"name": "Hook",
+	"rarity": 4,
+	"element": "fire",
+	"images": {
+		"gachaSplash": "hook/gachaSpash",
+		"gachaCard": "hook/gachaCard",
+		"bannerCard": "hook/bannerCard"
+	}
+}

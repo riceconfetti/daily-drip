@@ -1,0 +1,16 @@
+{
+	"name": "Navia",
+	"rarity": 5,
+	"element": "geo",
+	"bannerName": "In the Name of Rosula",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#35364C] to-[#5774B3]",
+		"secondary": "bg-gradient-to-t from-[#34281F] to-[#EDA82200]",
+		"textAccent": "text-[#EBBC64]"
+	},
+	"images": {
+		"gachaSplash": "navia/gachaSplash",
+		"gachaCard": "navia/gachaCard",
+		"bannerCard": "navia/bannerCard"
+	}
+}

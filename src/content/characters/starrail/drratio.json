@@ -1,0 +1,17 @@
+{
+	"name": "Dr. Ratio",
+	"rarity": 5,
+	"element": "imaginary",
+	"weaponType": "hunt",
+	"bannerName": "Panta Rei",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#372817] to-[#CCB088]",
+		"secondary": "bg-gradient-to-t from-[#372817] to-[#A57E4700]",
+		"textAccent": "text-[#F3D69C]"
+	},
+	"images": {
+		"gachaSplash": "drratio/gachaSpash",
+		"gachaCard": "drratio/gachaCard",
+		"bannerCard": "drratio/bannerCard"
+	}
+}

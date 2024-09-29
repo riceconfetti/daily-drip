@@ -1,0 +1,10 @@
+{
+	"name": "Sampo",
+	"rarity": 4,
+	"element": "wind",
+	"images": {
+		"gachaSplash": "sampo/gachaSpash",
+		"gachaCard": "sampo/gachaCard",
+		"bannerCard": "sampo/bannerCard"
+	}
+}

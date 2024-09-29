@@ -1,0 +1,12 @@
+{"skeleton":{"images":""},
+"bones":[{"name":"root"}],
+"slots":[
+	{"name":"zzz","bone":"root","attachment":"zzz"}
+],
+"skins":{
+	"default":{
+		"zzz":{"zzz":{"x":4452.5,"y":2863.5,"width":601,"height":1051}}
+	}
+},
+"animations":{"animation":{}}
+}

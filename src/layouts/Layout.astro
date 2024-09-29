@@ -1,157 +1,72 @@
 ---
+import '../styles/style.css'
+import 'remixicon/fonts/remixicon.css'
+import NavBar from '../components/NavBar.astro'
+import SettingModal from '$components/SettingModal.svelte'
 interface Props {
-  title: string;
+	title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <main>
-      <div class="header">
-        <p id="volume">Volume No. 1</p>
-        <p id="date">
-          {
-            new Date().toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })
-          }
-        </p>
-      </div>
-      <a id="title" href="/">
-        <svg viewBox="0 0 126 18">
-          <text x="0" y="15">The Daily Drip</text>
-        </svg>
-      </a>
-      <nav>
-        <a href="/issues">issues</a>
-        <a href="/genshin">genshin</a>
-        <a href="/starrail">star rail</a>
-      </nav>
-      <slot />
-    </main>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Welcome to The Daily Drip, your place for gacha
+				game leaks and banner speculations!"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<script is:inline>
+			let myVar
+			function myFunction() {
+				myVar = setTimeout(showPage, 700)
+			}
+			function showPage() {
+				document.getElementById('loader').classList.toggle('opacity-0')
+				document.getElementById('loader').classList.toggle('z-50')
+				document.getElementById('loader').classList.toggle('z-0')
+			}
+		</script>
+		<title>{title}</title>
+	</head>
+	<body class="relative h-dvh w-dvw bg-light" onload="myFunction()">
+		<SettingModal client:visible />
+		<main
+			id="content"
+			class="relative flex flex-col overflow-x-hidden size-full items-center pb-2 lg:overflow-hidden"
+		>
+			<div
+				id="loader"
+				class="fixed inset-0 text-accent-dark z-50 bg-dark flex flex-col items-center justify-center transition-opacity"
+			>
+				<l-square
+					size="35"
+					stroke="5"
+					stroke-length="0.25"
+					bg-opacity="0.1"
+					speed="1.2"
+					color="rgb(193 156 100)"></l-square>
+			</div>
+			<NavBar />
+			<div class="z-10 p-2 w-full flex flex-1 justify-center lg:min-h-0 lg:p-4 lg:overflow-auto">
+				<slot />
+			</div>
+			<p class="text-2xs text-dark text-opacity-50 text-center text-balance pt-1">
+				The Daily Drip is an unaffiliated fansite. All game contents and materials are trademarks
+				and copyright of their respective companies.
+			</p>
+		</main>
+
+		<script>
+			import '../scripts/menu.js'
+			import { square } from 'ldrs'
+			square.register()
+		</script>
+	</body>
 </html>
-<style is:global lang="scss">
-  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  :root {
-    font-family: "Times New Roman", Times, serif;
-    margin: 0;
-  }
-
-  :root {
-    --wind: #396c69;
-    --quantum: #413776;
-    --physical: #484a52;
-    --ice: #496d81;
-    --lightning: #692e70;
-    --fire: #74322a;
-    --imaginary: #87773b;
-    --hydro: #21458d;
-    --cryo: #2b6c88;
-    --anemo: #26817e;
-    --dendro: #48913f;
-    --geo: #6b5526;
-    --pyro: #813326;
-    --electro: #8749b3;
-    --default: #1b1b1b;
-  }
-
-  html {
-    font-family: system-ui, sans-serif;
-    background: #8f8f8f;
-    background-size: 224px;
-    display: flex;
-    justify-content: center;
-    padding: 4vw;
-  }
-
-  body {
-    width: 1019px;
-  }
-
-  main {
-    display: flex;
-    padding: 32px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    background: #d1d1d1;
-    box-shadow: 2px 3px 18px 0px rgba(0, 0, 0, 0.2);
-
-    .header {
-      width: 100%;
-      display: flex;
-      padding-block: 0.7rem;
-      justify-content: space-between;
-      font-family: "Playfair Display";
-      font-weight: 700;
-      line-height: 120%;
-      border-block: 1px solid grey;
-    }
-
-    #title {
-      text-decoration: none;
-      color: black;
-      width: 100%;
-      svg {
-        width: 100%;
-        text {
-          font-family: "Playfair Display SC";
-          font-weight: bold;
-          width: 100%;
-          line-height: 100%;
-        }
-      }
-    }
-
-    nav {
-      background: #222;
-      display: inline-flex;
-      padding: 10px;
-      justify-content: center;
-      align-self: stretch;
-      align-items: flex-start;
-      gap: 40px;
-      a {
-        color: #fff;
-        text-align: center;
-        font-family: "Playfair Display SC";
-        text-decoration: none;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 1;
-      }
-    }
-  }
-
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-</style>

@@ -1,0 +1,17 @@
+{
+	"name": "Topaz",
+	"rarity": 5,
+	"element": "fire",
+	"weaponType": "hunt",
+	"bannerName": "Sunset Clause",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#7A060A] to-[#FF566B]",
+		"secondary": "bg-gradient-to-t from-[#6A0A12] to-[#FF586B00]",
+		"textAccent": "text-[#D69E35]"
+	},
+	"images": {
+		"gachaSplash": "topaz/gachaSpash",
+		"gachaCard": "topaz/gachaCard",
+		"bannerCard": "topaz/bannerCard"
+	}
+}

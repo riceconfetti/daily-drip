@@ -1,0 +1,10 @@
+{
+	"name": "March 7th",
+	"rarity": 4,
+	"element": "ice",
+	"images": {
+		"gachaSplash": "march7th/gachaSpash",
+		"gachaCard": "march7th/gachaCard",
+		"bannerCard": "march7th/bannerCard"
+	}
+}

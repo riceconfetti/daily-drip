@@ -1,0 +1,17 @@
+{
+	"name": "Clara",
+	"rarity": 5,
+	"element": "physical",
+	"weaponType": "destruction",
+	"bannerName": "",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#AE1D18] to-[#B66E69]",
+		"secondary": "bg-gradient-to-t from-[#AE1D18] to-[#B66E6900]",
+		"textAccent": "text-[#413065]"
+	},
+	"images": {
+		"gachaSplash": "clara/gachaSpash",
+		"gachaCard": "clara/gachaCard",
+		"bannerCard": "clara/bannerCard"
+	}
+}

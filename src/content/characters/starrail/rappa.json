@@ -1,0 +1,17 @@
+{
+	"name": "Rappa",
+	"rarity": 5,
+	"images": {
+		"gachaSplash": "rappa/gachaSplash",
+		"gachaCard": "rappa/gachaCard",
+		"bannerCard": "rappa/bannerCard"
+	},
+	"element": "imaginary",
+	"weaponType": "erudition",
+	"bannerName": "?????",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
+		"textAccent": "text-[#000]"
+	}
+}

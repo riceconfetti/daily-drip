@@ -1,0 +1,16 @@
+{
+	"name": "Cyno",
+	"rarity": 5,
+	"element": "electro",
+	"bannerName": "Twilight Arbiter",
+	"images": {
+		"gachaSplash": "cyno/gachaSplash",
+		"gachaCard": "cyno/gachaCard",
+		"bannerCard": "cyno/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#1D192D] to-[#7D7CCD]",
+		"secondary": "bg-gradient-to-t from-[#2C1455] to-[#1D192D00]",
+		"textAccent": "text-[#EABA76]"
+	}
+}

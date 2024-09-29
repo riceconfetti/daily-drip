@@ -1,0 +1,17 @@
+{
+	"name": "Kamisato Ayato",
+	"rarity": 5,
+	"element": "hydro",
+	"weaponType": "sword",
+	"bannerName": "Azure Excursion",
+	"images": {
+		"gachaSplash": "kamisatoayato/gachaSplash",
+		"gachaCard": "kamisatoayato/gachaCard",
+		"bannerCard": "kamisatoayato/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#233B64] to-[#4876AA]",
+		"secondary": "bg-gradient-to-t from-[#1E1A4D] to-[#69B8EF00]",
+		"textAccent": "text-[#BCCEEC]"
+	}
+}

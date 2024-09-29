@@ -1,0 +1,17 @@
+{
+	"name": "Caesar",
+	"rarity": 5,
+	"images": {
+		"gachaSplash": "caesar/gachaSplash",
+		"gachaCard": "caesar/gachaCard",
+		"bannerCard": "caesar/bannerCard"
+	},
+	"element": "physical",
+	"weaponType": "zzz",
+	"bannerName": "Ember-Crowned Overlord",
+	"colors": {
+		"primary": "bg-gradient-to-r from-zzz-physical-gradient-from to-zzz-physical-gradient-to",
+		"secondary": "bg-gradient-to-t from-zzz-physical-gradient-from to-[#F5E80000]",
+		"textAccent": "text-[#F91300]"
+	}
+}

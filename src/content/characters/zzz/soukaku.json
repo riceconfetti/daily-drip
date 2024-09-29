@@ -1,0 +1,11 @@
+{
+    "name": "Soukaku",
+    "rarity": 4,
+    "images": {
+        "gachaSplash": "soukaku/gachaSplash",
+        "gachaCard": "soukaku/gachaCard",
+        "bannerCard": "soukaku/bannerCard"
+    },
+    "element": "ice",
+    "weaponType": "zzz"
+}

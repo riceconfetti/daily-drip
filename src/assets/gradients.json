@@ -1,0 +1,50 @@
+{
+	"genshin": {
+		"genshin": "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
+		"hydro": "bg-gradient-to-r from-genshin-hydro-gradient-from to-genshin-hydro-gradient-to",
+		"dendro": "bg-gradient-to-r from-genshin-dendro-gradient-from to-genshin-dendro-gradient-to",
+		"anemo": "bg-gradient-to-r from-genshin-anemo-gradient-from to-genshin-anemo-gradient-to",
+		"geo": "bg-gradient-to-r from-genshin-geo-gradient-from to-genshin-geo-gradient-to",
+		"electro": "bg-gradient-to-r from-genshin-electro-gradient-from to-genshin-electro-gradient-to",
+		"pyro": "bg-gradient-to-r from-genshin-pyro-gradient-from to-genshin-pyro-gradient-to",
+		"cryo": "bg-gradient-to-r from-genshin-cryo-gradient-from to-genshin-cryo-gradient-to"
+	},
+	"starrail": {
+		"starrail": "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
+		"wind": "bg-gradient-to-r from-starrail-wind-gradient-from to-starrail-wind-gradient-to",
+		"lightning": "bg-gradient-to-r from-starrail-lightning-gradient-from to-starrail-lightning-gradient-to",
+		"physical": "bg-gradient-to-r from-starrail-physical-gradient-from to-starrail-physical-gradient-to",
+		"fire": "bg-gradient-to-r from-starrail-fire-gradient-from to-starrail-fire-gradient-to",
+		"ice": "bg-gradient-to-r from-starrail-ice-gradient-from to-starrail-ice-gradient-to",
+		"quantum": "bg-gradient-to-r from-starrail-quantum-gradient-from to-starrail-quantum-gradient-to",
+		"imaginary": "bg-gradient-to-r from-starrail-imaginary-gradient-from to-starrail-imaginary-gradient-to"
+	},
+	"wuwa": {
+		"wuwa": "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
+		"spectro": "bg-gradient-to-r from-wuwa-spectro-gradient-from to-wuwa-spectro-gradient-to",
+		"aero": "bg-gradient-to-r from-wuwa-aero-gradient-from to-wuwa-aero-gradient-to",
+		"glacio": "bg-gradient-to-r from-wuwa-glacio-gradient-from to-wuwa-glacio-gradient-to",
+		"electro": "bg-gradient-to-r from-wuwa-electro-gradient-from to-wuwa-electro-gradient-to",
+		"fusion": "bg-gradient-to-r from-wuwa-fusion-gradient-from to-wuwa-fusion-gradient-to",
+		"havoc": "bg-gradient-to-r from-wuwa-havoc-gradient-from to-wuwa-havoc-gradient-to"
+	},
+	"reverse": "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
+	"zzz": {
+		"physical": "bg-gradient-to-r from-zzz-physical-gradient-from to-zzz-physical-gradient-to",
+		"fire": "bg-gradient-to-r from-zzz-fire-gradient-from to-zzz-fire-gradient-to",
+		"ice": "bg-gradient-to-r from-zzz-ice-gradient-from to-zzz-ice-gradient-to",
+		"electric": "bg-gradient-to-r from-zzz-electric-gradient-from to-zzz-electric-gradient-to",
+		"ether": "bg-gradient-to-r from-zzz-ether-gradient-from to-zzz-ether-gradient-to",
+		"physical_secondary": "bg-gradient-to-t from-zzz-physical-gradient-from to-[#F5E80000]",
+		"fire_secondary": "bg-gradient-to-t from-zzz-fire-gradient-from to-[#FFB04E00]",
+		"ice_secondary": "bg-gradient-to-t from-zzz-ice-gradient-from to-[#B1F8F900]",
+		"electric_secondary": "bg-gradient-to-t from-zzz-electric-gradient-from to-[#5DEDFC00]",
+		"ether_secondary": "bg-gradient-to-t from-zzz-ether-gradient-from to-[#8BC6FC]",
+		"physical_text": "text-[#F91300]",
+		"fire_text": "text-[#790000]",
+		"ice_text": "text-[#007F93]",
+		"electric_text": "text-[#4CFFFF]",
+		"ether_text": "text-[#950000]",
+		"zzz": "bg-gradient-to-r from-zzz-default-gradient-from to-zzz-default-gradient-to"
+	}
+}

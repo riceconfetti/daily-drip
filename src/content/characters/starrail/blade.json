@@ -1,0 +1,17 @@
+{
+	"name": "Blade",
+	"rarity": 5,
+	"element": "wind",
+	"weaponType": "destruction",
+	"bannerName": "A Lost Soul",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#A92E17] to-[#18191F]",
+		"secondary": "bg-gradient-to-t from-[#6F2005] to-[#50221000]",
+		"textAccent": "text-[#53B0B6]"
+	},
+	"images": {
+		"gachaSplash": "blade/gachaSpash",
+		"gachaCard": "blade/gachaCard",
+		"bannerCard": "blade/bannerCard"
+	}
+}

@@ -1,0 +1,205 @@
+{
+	"Boothill": {
+		"Text": "#C8373D",
+		"P-From": "#222222",
+		"P-To": "#8E8E8E",
+		"S-From": "#822022",
+		"S-To": "#795A41"
+	},
+	"Jade": {
+		"Text": "#D7A5DD",
+		"P-From": "#130F35",
+		"P-To": "#999EC9",
+		"S-From": "#1B1072",
+		"S-To": "#DBA9DF"
+	},
+	"Firefly": {
+		"Text": "#F8B031",
+		"P-From": "#2D565F",
+		"P-To": "#FFD872",
+		"S-From": "#0AA49A",
+		"S-To": "#D2734A"
+	},
+	"Robin": {
+		"Text": "#2D249C",
+		"P-From": "#514D96",
+		"P-To": "#DCDFF7",
+		"S-From": "#512499",
+		"S-To": "#FAE2EC"
+	},
+	"Acheron": {
+		"Text": "#F33241",
+		"P-From": "#222357",
+		"P-To": "#D9D5FC",
+		"S-From": "#121337",
+		"S-To": "#D9D5FC"
+	},
+	"Black Swan": {
+		"Text": "#89D8FF",
+		"P-From": "#120465",
+		"P-To": "#E6E1FF",
+		"S-From": "#120465",
+		"S-To": "#E6E1FF"
+	},
+	"Sparkle": {
+		"Text": "#1E2344",
+		"P-From": "#7F0F0F",
+		"P-To": "#CD7177",
+		"S-From": "#7F0F0F",
+		"S-To": "#CD7177"
+	},
+	"Dr. Ratio": {
+		"Text": "#F3D69C",
+		"P-From": "#372817",
+		"P-To": "#CCB088",
+		"S-From": "#372817",
+		"S-To": "#A57E47"
+	},
+	"Aventurine": {
+		"Text": "#CC64EC",
+		"P-From": "#0A3436",
+		"P-To": "#72BCBA",
+		"S-From": "#0A3436",
+		"S-To": "#4A8785"
+	},
+	"Ruan Mei": {
+		"Text": "#DEBE8D",
+		"P-From": "#344459",
+		"P-To": "#A8BCC8",
+		"S-From": "#26394B",
+		"S-To": "#EAD4C6"
+	},
+	"Argenti": {
+		"Text": "#D0A167",
+		"P-From": "#5F0505",
+		"P-To": "#B74743",
+		"S-From": "#941817",
+		"S-To": "#523931"
+	},
+	"Huohuo": {
+		"Text": "#D26023",
+		"P-From": "#252F3B",
+		"P-To": "#C0DFBB",
+		"S-From": "#254336",
+		"S-To": "#C0DFBB"
+	},
+	"Dan Heng • Imbibitor Lunae": {
+		"Text": "#1B2929",
+		"P-From": "#293C48",
+		"P-To": "#A2B9BF",
+		"S-From": "#0F1F29",
+		"S-To": "#558794"
+	},
+	"Jingliu": {
+		"Text": "#3950BB",
+		"P-From": "#67A5EA",
+		"P-To": "#F8FEFF",
+		"S-From": "#121C33",
+		"S-To": "#6DAAEB"
+	},
+	"Bailu": {
+		"Text": "#D2819A",
+		"P-From": "#24356A",
+		"P-To": "#DBD2EC",
+		"S-From": "#081130",
+		"S-To": "#8A6AC5"
+	},
+	"Yanqing": {
+		"Text": "#5AA2C4",
+		"P-From": "#14335B",
+		"P-To": "#97F1FA",
+		"S-From": "#1B466C",
+		"S-To": "#93C4E2"
+	},
+	"Fu Xuan": {
+		"Text": "#CA5FD7",
+		"P-From": "#351E4E",
+		"P-To": "#BF78A4",
+		"S-From": "#37223F",
+		"S-To": "#9F5A83"
+	},
+	"Blade": {
+		"Text": "#53B0B6",
+		"P-From": "#A92E17",
+		"P-To": "#18191F",
+		"S-From": "#6F2005",
+		"S-To": "#502210"
+	},
+	"Jing Yuan": {
+		"Text": "#A13033",
+		"P-From": "#253E43",
+		"P-To": "#1E1A1A",
+		"S-From": "#253E43",
+		"S-To": "#1E1A1A"
+	},
+	"Luocha": {
+		"Text": "#0E272A",
+		"P-From": "#184E3B",
+		"P-To": "#FCF6E0",
+		"S-From": "#184E3B",
+		"S-To": "#A79863"
+	},
+	"Topaz & Numby": {
+		"Text": "#D69E35",
+		"P-From": "#7A060A",
+		"P-To": "#FF566B",
+		"S-From": "#6A0A12",
+		"S-To": "#FF586B"
+	},
+	"Clara": {
+		"Text": "#413065",
+		"P-From": "#AE1D18",
+		"P-To": "#B66E69",
+		"S-From": "#AE1D18",
+		"S-To": "#B66E69"
+	},
+	"Gepard": {
+		"Text": "#CC8B3F",
+		"P-From": "#0B1E6B",
+		"P-To": "#24BAFF",
+		"S-From": "#0B1E6B",
+		"S-To": "#24BAFF"
+	},
+	"Seele": {
+		"Text": "#F9146F",
+		"P-From": "#130873",
+		"P-To": "#CE80F4",
+		"S-From": "#130873",
+		"S-To": "#CE80F4"
+	},
+	"Bronya": {
+		"Text": "#041545",
+		"P-From": "#223584",
+		"P-To": "#8C87C0",
+		"S-From": "#223584",
+		"S-To": "#8C87C0"
+	},
+	"Silver Wolf": {
+		"Text": "#E47FDD",
+		"P-From": "#111A3D",
+		"P-To": "#4F50BC",
+		"S-From": "#111A3D",
+		"S-To": "#4F50BC"
+	},
+	"Kafka": {
+		"Text": "#17001A",
+		"P-From": "#561D3E",
+		"P-To": "#655061",
+		"S-From": "#561D3E",
+		"S-To": "#655061"
+	},
+	"Welt": {
+		"Text": "#6B1334",
+		"P-From": "#2D3E78",
+		"P-To": "#F8F6F8",
+		"S-From": "#2D3E78",
+		"S-To": "#949494"
+	},
+	"Himeko": {
+		"Text": "#D2AA7E",
+		"P-From": "#5A1717",
+		"P-To": "#C6605A",
+		"S-From": "#5A1717",
+		"S-To": "#C6605A"
+	}
+}

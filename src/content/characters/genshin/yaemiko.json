@@ -1,0 +1,16 @@
+{
+	"name": "Yae Miko",
+	"rarity": 5,
+	"element": "electro",
+	"bannerName": "Everbloom Violet",
+	"images": {
+		"gachaSplash": "yaemiko/gachaSplash",
+		"gachaCard": "yaemiko/gachaCard",
+		"bannerCard": "yaemiko/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#E86061] to-[#BEA8FF]",
+		"secondary": "bg-gradient-to-t from-[#A93433] to-[#F7C4BB00]",
+		"textAccent": "text-[#701829]"
+	}
+}

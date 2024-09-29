@@ -1,0 +1,17 @@
+{
+	"name": "Tighnari",
+	"rarity": 5,
+	"element": "dendro",
+	"weaponType": "bow",
+	"bannerName": "Viridescent Vigil",
+	"images": {
+		"gachaSplash": "tighnari/gachaSplash",
+		"gachaCard": "tighnari/gachaCard",
+		"bannerCard": "tighnari/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#212E50] to-[#66B476]",
+		"secondary": "bg-gradient-to-t from-[#074356] to-[#A8C83E00]",
+		"textAccent": "text-[#E9D538]"
+	}
+}

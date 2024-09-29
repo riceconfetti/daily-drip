@@ -1,0 +1,16 @@
+{
+	"name": "Arlecchino",
+	"rarity": 5,
+	"element": "pyro",
+	"bannerName": "The Hearth's Ashen Shadow",
+	"images": {
+		"gachaSplash": "arlecchino/gachaSplash",
+		"gachaCard": "arlecchino/gachaCard",
+		"bannerCard": "arlecchino/bannerCard"
+	},
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#240000] to-[#8A0101]",
+		"secondary": "bg-gradient-to-t from-[#6F180D] to-[#11080800]",
+		"textAccent": "text-[#D43D2B]"
+	}
+}
