@@ -13,7 +13,8 @@ export default {
 				genshinSmall: ['"Yeseva One"', 'serif'],
 				starrail: ['"Bai Jamjuree"', 'sans-serif'],
 				reverse: ['"Playfair Display SC"', 'serif'],
-				wuwa: ['"Philosopher"', 'serif']
+				wuwa: ['"Philosopher"', 'serif'],
+				zzz: ['Akira Expanded', 'san-serif']
 			},
 			colors: {
 				dark: '#232323',
@@ -177,6 +178,19 @@ export default {
 							to: '#91285B'
 						}
 					}
+				},
+				zzz: {
+					event: '#FF6801',
+					physical: {
+						gradient: { from: '#FF6100', to: '#F5E800' }
+					},
+					fire: {
+						gradient: { from: '#E50500', to: '#FFB04E' }
+					},
+					ice: { gradient: { from: '#00A8B6', to: '#B1F8F9' } },
+					electric: { gradient: { from: '#0035FF', to: '#5DEDFC' } },
+					ether: { gradient: { from: '#F70307', to: '#8BC6FC' } },
+					default: { gradient: { from: '#212322', to: '#FF6801' } }
 				}
 			}
 		}

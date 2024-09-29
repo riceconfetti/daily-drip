@@ -63,6 +63,18 @@
 	font-weight: 900;
 }
 
+@font-face {
+	font-family: 'Akira Expanded';
+	src: url('/fonts/Akira_Expanded/akira_super_bold-webfont.woff2');
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: 'Akira Expanded';
+	src: url('/fonts/Akira_Expanded/akira_bold-webfont.woff2');
+	font-weight: 400;
+}
+
 body {
 	--swup-overlay-theme-color: #232323;
 }
@@ -81,6 +93,10 @@ body {
 
 .wuwa {
 	@apply font-wuwa font-bold;
+}
+
+.zzz {
+	@apply font-zzz font-bold tracking-wide;
 }
 
 .hy-impact-regular {

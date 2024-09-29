@@ -1,0 +1,30 @@
+{"skeleton":{"images":"characters\zzz\"},
+"bones":[{"name":"root"}],
+"slots":[
+	{"name":"nicole","bone":"root","attachment":"nicole/gachaCard"},
+	{"name":"seth","bone":"root","attachment":"seth/gachaCard"},
+	{"name":"anton","bone":"root","attachment":"anton/gachaCard"},
+	{"name":"anby","bone":"root","attachment":"anby/gachaCard"},
+	{"name":"soukaku","bone":"root","attachment":"soukaku/gachaCard"},
+	{"name":"ben","bone":"root","attachment":"ben/gachaCard"},
+	{"name":"lucy","bone":"root","attachment":"lucy/gachaCard"},
+	{"name":"corin","bone":"root","attachment":"corin/gachaCard"},
+	{"name":"piper","bone":"root","attachment":"piper/gachaCard"},
+	{"name":"billy","bone":"root","attachment":"billy/gachaCard"}
+],
+"skins":{
+	"default":{
+		"nicole":{"nicole":{"x":7505.5,"y":3674.5,"width":601,"height":1051}},
+		"seth":{"seth":{"x":6905.5,"y":3674.5,"width":601,"height":1051}},
+		"anton":{"anton":{"x":6905.5,"y":2564.5,"width":601,"height":1051}},
+		"anby":{"anby":{"x":6905.5,"y":1415.5,"width":601,"height":1051}},
+		"soukaku":{"soukaku":{"x":6305.5,"y":3674.5,"width":601,"height":1051}},
+		"ben":{"ben":{"x":5705.5,"y":3674.5,"width":601,"height":1051}},
+		"lucy":{"lucy":{"x":5705.5,"y":2564.5,"width":601,"height":1051}},
+		"corin":{"corin":{"x":5105.5,"y":3674.5,"width":601,"height":1051}},
+		"piper":{"piper":{"x":5105.5,"y":2564.5,"width":601,"height":1051}},
+		"billy":{"billy":{"x":5105.5,"y":1415.5,"width":601,"height":1051}}
+	}
+},
+"animations":{"animation":{}}
+}

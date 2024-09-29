@@ -1,0 +1,11 @@
+{
+    "name": "Lucy",
+    "rarity": 4,
+    "images": {
+        "gachaSplash": "lucy/gachaSplash",
+        "gachaCard": "lucy/gachaCard",
+        "bannerCard": "lucy/bannerCard"
+    },
+    "element": "fire",
+    "weaponType": "zzz"
+}

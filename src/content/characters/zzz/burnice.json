@@ -1,0 +1,17 @@
+{
+	"name": "Burnice",
+	"rarity": 5,
+	"images": {
+		"gachaSplash": "burnice/gachaSplash",
+		"gachaCard": "burnice/gachaCard",
+		"bannerCard": "burnice/bannerCard"
+	},
+	"element": "fire",
+	"weaponType": "zzz",
+	"bannerName": "Born to Burn",
+	"colors": {
+		"primary": "bg-gradient-to-r from-zzz-fire-gradient-from to-zzz-fire-gradient-to",
+		"secondary": "bg-gradient-to-t from-zzz-fire-gradient-from to-[#FFB04E00]",
+		"textAccent": "text-[#790000]"
+	}
+}

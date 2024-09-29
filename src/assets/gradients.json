@@ -28,5 +28,23 @@
 		"fusion": "bg-gradient-to-r from-wuwa-fusion-gradient-from to-wuwa-fusion-gradient-to",
 		"havoc": "bg-gradient-to-r from-wuwa-havoc-gradient-from to-wuwa-havoc-gradient-to"
 	},
-	"reverse": "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to"
+	"reverse": "bg-gradient-to-r from-genshin-default-gradient-from to-genshin-default-gradient-to",
+	"zzz": {
+		"physical": "bg-gradient-to-r from-zzz-physical-gradient-from to-zzz-physical-gradient-to",
+		"fire": "bg-gradient-to-r from-zzz-fire-gradient-from to-zzz-fire-gradient-to",
+		"ice": "bg-gradient-to-r from-zzz-ice-gradient-from to-zzz-ice-gradient-to",
+		"electric": "bg-gradient-to-r from-zzz-electric-gradient-from to-zzz-electric-gradient-to",
+		"ether": "bg-gradient-to-r from-zzz-ether-gradient-from to-zzz-ether-gradient-to",
+		"physical_secondary": "bg-gradient-to-t from-zzz-physical-gradient-from to-[#F5E80000]",
+		"fire_secondary": "bg-gradient-to-t from-zzz-fire-gradient-from to-[#FFB04E00]",
+		"ice_secondary": "bg-gradient-to-t from-zzz-ice-gradient-from to-[#B1F8F900]",
+		"electric_secondary": "bg-gradient-to-t from-zzz-electric-gradient-from to-[#5DEDFC00]",
+		"ether_secondary": "bg-gradient-to-t from-zzz-ether-gradient-from to-[#8BC6FC]",
+		"physical_text": "text-[#F91300]",
+		"fire_text": "text-[#790000]",
+		"ice_text": "text-[#007F93]",
+		"electric_text": "text-[#4CFFFF]",
+		"ether_text": "text-[#950000]",
+		"zzz": "bg-gradient-to-r from-zzz-default-gradient-from to-zzz-default-gradient-to"
+	}
 }

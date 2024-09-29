@@ -1,10 +1,11 @@
-import { version } from 'react'
-import type { Phase } from '../classes/version.ts'
 import dayjs from 'dayjs'
+import type { Phase } from '../classes/version.ts'
 import type { Character } from 'src/classes/character.ts'
 import { Weapon } from 'src/classes/weapon.ts'
 
-let simBanners = (game) => (game === 'wuwa' ? 1 : 2)
+let simBanners = (game) => (game === 'wuwa' || game === 'zzz' ? 1 : 2)
+let rateUpBanners = (game) => (game === 'zzz' ? 2 : 3)
+
 const weaponTypes = {
 	genshin: ['bow', 'sword', 'catalyst', 'polearm', 'claymore']
 }
@@ -55,15 +56,21 @@ function getCharacters(game, events, collections, select) {
 				gachaSplash: `${game}/gachaSplash`,
 				gachaCard: `${game}/gachaCard`,
 				bannerCard: `${game}/bannerCard`
+			},
+			colors: {
+				primary: 'bg-gradient-to-r from-[#000] to-[#FFF]',
+				secondary: 'bg-gradient-to-t from-[#000] to-[#00000000]',
+				textAccent: 'text-[#000]'
 			}
 		})
 	}
 
-	while (characters.fourStars.length < 3) {
+	while (characters.fourStars.length < rateUpBanners(game)) {
 		characters.fourStars.push({
 			name: '????',
 			rarity: 4,
 			element: game,
+			weaponType: game,
 			images: {
 				gachaSplash: `${game}/gachaSplash`,
 				gachaCard: `${game}/gachaCard`,
@@ -109,7 +116,7 @@ function getWeapons(game, events, collections, select) {
 			rarity: 5,
 			game: game,
 			weaponType: 'default',
-			icon: `./images/weapons/default/fiveStars/${game}_default.png`
+			icon: `./images/weapons/default/fiveStars/${game}_default.webp`
 		})
 	}
 
@@ -121,19 +128,19 @@ function getWeapons(game, events, collections, select) {
 					name: '????',
 					rarity: 5,
 					weaponType: weapon,
-					icon: `./images/weapons/default/fourStars/${game}_${weapon}.png`,
+					icon: `./images/weapons/default/fourStars/${game}_${weapon}.webp`,
 					game: game
 				})
 			}
 		})
 	} else {
-		while (weapons.fourStars.length < 3) {
+		while (weapons.fourStars.length < rateUpBanners(game)) {
 			weapons.fourStars.push({
 				name: '????',
 				rarity: 4,
 				game: game,
 				weaponType: 'default',
-				icon: `./images/weapons/default/fourStars/${game}_default.png`
+				icon: `./images/weapons/default/fourStars/${game}_default.webp`
 			})
 		}
 	}

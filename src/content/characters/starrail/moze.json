@@ -1,11 +1,11 @@
 {
-	"name": "Moze",
-	"rarity": 4,
-	"element": "lightning",
-	"weaponType": "hunt",
-	"images": {
-		"gachaSplash": "moze/gachaSpash",
-		"gachaCard": "moze/gachaCard",
-		"bannerCard": "moze/bannerCard"
-	}
+    "name": "Moze",
+    "rarity": 4,
+    "images": {
+        "gachaSplash": "moze/gachaSplash",
+        "gachaCard": "moze/gachaCard",
+        "bannerCard": "moze/bannerCard"
+    },
+    "element": "lightning",
+    "weaponType": "hunt"
 }
