@@ -84,7 +84,7 @@ body {
 }
 
 .starrail {
-	@apply font-starrail font-semibold;
+	@apply font-starrail font-bold;
 }
 
 .reverse {
