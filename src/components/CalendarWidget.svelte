@@ -1,16 +1,109 @@
 <script lang="ts">
 	import { Calendar } from 'bits-ui'
-	import dayjs from 'dayjs'
 	import { CalendarDate, parseDate } from '@internationalized/date'
+	import { settings } from '$scripts/settings'
+	import dayjs from 'dayjs'
 	import utc from 'dayjs/plugin/utc'
+	import timezone from 'dayjs/plugin/timezone'
 	dayjs.extend(utc)
+	dayjs.extend(timezone)
 
-	export let genshin, starrail, reverse, wuwa, zzz
+	export let events, versions, games
 
 	function findGame(game, date) {
-		//console.log(date.toString())
-		return game.find((e) => e.startsWith(date.toString())) != undefined
+		// console.log(dayjs(date))
+		return game.find((e) => e.isSame(dayjs(date), 'day'))
 	}
+
+	let eventDates = {
+		genshin: events.filter(({ id }) => id.startsWith('genshin/')),
+		starrail: events.filter(({ id }) => id.startsWith('starrail/')),
+		wuwa: events.filter(({ id }) => id.startsWith('wuwa/')),
+		zzz: events.filter(({ id }) => id.startsWith('zzz/'))
+	}
+	// console.log(eventDates)
+
+	const genshin = [
+		...new Set(
+			eventDates.genshin.map((e) => {
+				let version = versions.find((v) => v.id.startsWith('genshin/' + e.id.split('/')[1])).data
+				let game = games.find((g) => g.id.startsWith('genshin')).data
+
+				if (e.data.startDate == version.startDate) {
+					return dayjs.utc(e.data.startDate + `T${game.times.version}Z`).tz(dayjs.tz.guess())
+				} else {
+					return dayjs
+						.utc(
+							e.data.startDate +
+								`T${game.times.update.find((t) => t.zone == settings.get().genshin).time}Z`
+						)
+						.tz(dayjs.tz.guess())
+				}
+			})
+		)
+	]
+
+	// console.data.log(genshin)
+
+	const starrail = [
+		...new Set(
+			eventDates.starrail.map((e) => {
+				let version = versions.find((v) => v.id.startsWith('starrail/' + e.id.split('/')[1])).data
+				let game = games.find((g) => g.id.startsWith('starrail')).data
+
+				if (e.data.startDate == version.startDate) {
+					return dayjs.utc(e.data.startDate + `T${game.times.version}Z`).tz(dayjs.tz.guess())
+				} else {
+					return dayjs
+						.utc(
+							e.data.startDate +
+								`T${game.times.update.find((t) => t.zone == settings.get().starrail).time}Z`
+						)
+						.tz(dayjs.tz.guess())
+				}
+			})
+		)
+	]
+
+	const wuwa = [
+		...new Set(
+			eventDates.wuwa.map((e) => {
+				let version = versions.find((v) => v.id.startsWith('wuwa/' + e.id.split('/')[1])).data
+				let game = games.find((g) => g.id.startsWith('wuwa')).data
+
+				if (e.data.startDate == version.startDate) {
+					return dayjs.utc(e.data.startDate + `T${game.times.version}Z`).tz(dayjs.tz.guess())
+				} else {
+					return dayjs
+						.utc(
+							e.data.startDate +
+								`T${game.times.update.find((t) => t.zone == settings.get().wuwa).time}Z`
+						)
+						.tz(dayjs.tz.guess())
+				}
+			})
+		)
+	]
+
+	const zzz = [
+		...new Set(
+			eventDates.zzz.map((e) => {
+				let version = versions.find((v) => v.id.startsWith('zzz/' + e.id.split('/')[1])).data
+				let game = games.find((g) => g.id.startsWith('zzz')).data
+
+				if (e.data.startDate == version.startDate) {
+					return dayjs.utc(e.data.startDate + `T${game.times.version}Z`).tz(dayjs.tz.guess())
+				} else {
+					return dayjs
+						.utc(
+							e.data.startDate +
+								`T${game.times.update.find((t) => t.zone == settings.get().zzz).time}Z`
+						)
+						.tz(dayjs.tz.guess())
+				}
+			})
+		)
+	]
 
 	function isDate(date) {
 		let game = ''
@@ -18,8 +111,6 @@
 			game = 'genshin'
 		} else if (findGame(starrail, date)) {
 			game = 'starrail'
-		} else if (findGame(reverse, date)) {
-			game = 'reverse'
 		} else if (findGame(wuwa, date)) {
 			game = 'wuwa'
 		} else if (findGame(zzz, date)) {
@@ -27,12 +118,6 @@
 		}
 		return game
 	}
-
-	// console.log("Genshin");
-	// console.log(genshin);
-
-	// console.log("Starrail");
-	// console.log(starrail);
 </script>
 
 <Calendar.Root
@@ -44,12 +129,14 @@
 >
 	<Calendar.Header class="playfair-display-sc-bold flex items-center justify-between gap-2 p-2">
 		<Calendar.PrevButton
+			disabled
 			class="rounded-9px bg-background-alt hover:bg-muted active:scale-98 inline-flex size-10 items-center justify-center active:transition-all"
 		>
 			<i class="ri-arrow-left-s-line"></i>
 		</Calendar.PrevButton>
 		<Calendar.Heading />
 		<Calendar.NextButton
+			disabled
 			class="rounded-9px bg-background-alt hover:bg-muted active:scale-98 inline-flex size-10 items-center justify-center active:transition-all"
 		>
 			<i class="ri-arrow-right-s-line"></i>

@@ -2,6 +2,7 @@
 import '../styles/style.css'
 import 'remixicon/fonts/remixicon.css'
 import NavBar from '../components/NavBar.astro'
+import SettingModal from '$components/SettingModal.svelte'
 interface Props {
 	title: string
 }
@@ -35,76 +36,7 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body class="relative h-dvh w-dvw bg-light" onload="myFunction()">
-		<div
-			id="settings"
-			class="absolute h-dvh w-dvw bg-dark bg-opacity-20 z-50 backdrop-blur-sm hidden items-center justify-center"
-		>
-			<div class="bg-light rounded p-4 flex flex-col playfair-display-semibold gap-4 w-3/5">
-				<h2 class="playfair-display-sc-bold text-2xl">Settings</h2>
-				<hr class="border-accent-light" />
-				<ul class="grid grid-cols-2 gap-4">
-					<li class="grid grid-cols-subgrid col-span-2">
-						<label for="setting_genshin">Genshin Impact</label>
-						<select
-							class="bg-dark bg-opacity-10 border border-accent-light border-opacity-20 text-accent-light px-2 text-sm rounded-sm"
-							name="setting_genshin"
-							id="setting_genshin"
-						>
-							<option value="na">America</option>
-							<option value="as">Asia</option>
-							<option value="eu">Europe</option>
-							<option value="sar">TW/HK/MO</option>
-						</select>
-					</li>
-					<li class="grid grid-cols-subgrid col-span-2">
-						<label for="setting_starrail">Honkai: Starrail</label>
-						<select
-							class="bg-dark bg-opacity-10 border border-accent-light border-opacity-20 text-accent-light px-2 text-sm rounded-sm"
-							name="setting_starrail"
-							id="setting_starrail"
-						>
-							<option value="na">America</option>
-							<option value="as">Asia</option>
-							<option value="eu">Europe</option>
-						</select>
-					</li>
-					<li class="grid grid-cols-subgrid col-span-2">
-						<label for="setting_wuwa">Wuthing Waves</label>
-						<select
-							class="bg-dark bg-opacity-10 border border-accent-light border-opacity-20 text-accent-light px-2 text-sm rounded-sm"
-							name="setting_wuwa"
-							id="setting_wuwa"
-						>
-							<option value="na">America</option>
-							<option value="sea">SEA</option>
-							<option value="as">Asia</option>
-							<option value="eu">Europe</option>
-							<option value="hmt">HMT</option>
-						</select>
-					</li>
-					<li class="grid grid-cols-subgrid col-span-2">
-						<label for="setting_zzz">Zenless Zone Zero</label>
-						<select
-							class="bg-dark bg-opacity-10 border border-accent-light border-opacity-20 text-accent-light px-2 text-sm rounded-sm"
-							name="setting_zzz"
-							id="setting_zzz"
-						>
-							<option value="na">America</option>
-							<option value="as">Asia</option>
-							<option value="eu">Europe</option>
-							<option value="sar">HK/TW/MO</option>
-						</select>
-					</li>
-				</ul>
-				<hr class="border-accent-light" />
-				<div class="flex gap-2 justify-end items-center">
-					<button id="setting_confirm" class="rounded bg-accent-light text-light p-1 px-2"
-						>Confirm</button
-					>
-					<button id="setting_close" class="rounded bg-dark text-light p-1 px-2">Close</button>
-				</div>
-			</div>
-		</div>
+		<SettingModal client:visible />
 		<main
 			id="content"
 			class="relative flex flex-col overflow-x-hidden size-full items-center pb-2 lg:overflow-hidden"

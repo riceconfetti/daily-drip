@@ -3,9 +3,6 @@ import Layout from '../layouts/Layout.astro'
 import CalendarWidget from '../components/CalendarWidget.svelte'
 import EventsWidget from '../components/events-widget/event-data.astro'
 import { getCollection } from 'astro:content'
-import dayjs from 'dayjs'
-import utc from 'dayjs/plugin/utc'
-dayjs.extend(utc)
 
 const images = {
 	genshin: {
@@ -30,88 +27,13 @@ const images = {
 	}
 }
 
-function getTime(t) {
-	if (t != undefined) {
-		return 'T' + t + 'Z'
-	} else {
-		return ''
-	}
-}
+const events = await getCollection('events', ({ data }) => {
+	return data.status == 'confirmed'
+})
 
-const genshin = [
-	...new Set(
-		(
-			await getCollection('events', ({ id, data }) => {
-				return id.startsWith('genshin/') && data.status == 'confirmed'
-			})
-		).map((e) =>
-			dayjs
-				.utc(e.data.startDate + getTime(e.data.startTime))
-				.utcOffset(-5)
-				.format()
-		)
-	)
-]
+const games = await getCollection('games')
 
-const zzz = [
-	...new Set(
-		(
-			await getCollection('events', ({ id, data }) => {
-				return id.startsWith('zzz/') && data.status == 'confirmed'
-			})
-		).map((e) =>
-			dayjs
-				.utc(e.data.startDate + getTime(e.data.startTime))
-				.utcOffset(-5)
-				.format()
-		)
-	)
-]
-
-const starrail = [
-	...new Set(
-		(
-			await getCollection('events', ({ id, data }) => {
-				return id.startsWith('starrail/') && data.status == 'confirmed'
-			})
-		).map((e) =>
-			dayjs
-				.utc(e.data.startDate + getTime(e.data.startTime))
-				.utcOffset(-5)
-				.format()
-		)
-	)
-]
-
-const reverse = [
-	...new Set(
-		(
-			await getCollection('events', ({ id, data }) => {
-				return id.startsWith('reverse') && data.status == 'confirmed'
-			})
-		).map((e) =>
-			dayjs
-				.utc(e.data.startDate + getTime(e.data.startTime))
-				.utcOffset(-5)
-				.format()
-		)
-	)
-]
-
-const wuwa = [
-	...new Set(
-		(
-			await getCollection('events', ({ data }) => {
-				return data.game.id === 'wuwa' && data.status == 'confirmed'
-			})
-		).map((e) =>
-			dayjs
-				.utc(e.data.startDate + getTime(e.data.startTime))
-				.utcOffset(-5)
-				.format()
-		)
-	)
-]
+const versions = await getCollection('versions')
 ---
 
 <Layout title="The Daily Drip">
@@ -126,7 +48,7 @@ const wuwa = [
 			</p>
 		</div>
 		<div class="flex flex-col lg:flex-row gap-8 h-full min-h-0">
-			<CalendarWidget {genshin} {wuwa} {reverse} {starrail} {zzz} client:load />
+			<CalendarWidget {events} {versions} {games} client:load />
 			<EventsWidget {images} />
 		</div>
 	</section>

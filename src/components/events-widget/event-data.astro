@@ -1,33 +1,20 @@
 ---
 import EventWidget from './event-widget.svelte'
 import { getCollection } from 'astro:content'
-import { Event } from '../../classes/event.ts'
 
 const { images } = Astro.props
 
-const eventCollection = await getCollection('events', ({ data }) => {
-	return (
-		(data.type == 'banner' || data.type == 'debut' || data.type == 'select') &&
-		data.status == 'confirmed'
-	)
-})
-const characterCollection = await getCollection('characters')
-
-let events: Event[] = new Array()
-eventCollection.forEach(({ data }) => {
-	let event = new Event(data)
-	event.game = data.game.id
-	event.startDate = data.startDate + (data.startTime != undefined ? `T${data.startTime}Z` : '')
-	event.endDate = data.endDate + (data.endTime != undefined ? `T${data.endTime}Z` : '')
-	if (data.type == 'banner' || data.type == 'debut' || data.type == 'select') {
-		const character = characterCollection.find((c) => c.id == data.character.id)
-		event.title = character.data.bannerName
-		event.image = character.data.images.bannerCard
-		event.colors = character.data.colors
-	}
-	//console.log(event);
-	events.push(event)
-})
+const collections = {
+	events: await getCollection(
+		'events',
+		({ data }) =>
+			(data.type == 'banner' || data.type == 'debut' || data.type == 'select') &&
+			data.status == 'confirmed'
+	),
+	characters: await getCollection('characters'),
+	games: await getCollection('games'),
+	versions: await getCollection('versions')
+}
 ---
 
-<EventWidget {images} {events} client:load />
+<EventWidget {images} {collections} client:load />

@@ -14,15 +14,6 @@
 			: images.placeHolders[
 					`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.webp`
 				]
-	// if (gachaCard && gachaCard == undefined) {
-	// 	console.log(character)
-	// }
-
-	// if (images.backgrounds[`../assets/backgrounds/${game}/${character.element}.webp`] == undefined) {
-	// 	console.log(`${game}/${character.element}`)
-	// }
-
-	console.log(gachaCard)
 </script>
 
 <div
