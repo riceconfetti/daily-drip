@@ -1,16 +1,17 @@
 {
-	"name": "Sunday",
-	"rarity": 5,
-	"element": "ice",
-	"bannerName": "?????",
-	"images": {
-		"gachaSplash": "sunday/gachaSpash",
-		"gachaCard": "sunday/gachaCard",
-		"bannerCard": "sunday/bannerCard"
-	},
-	"colors": {
-		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-		"textAccent": "text-[#999]"
-	}
+    "name": "Sunday",
+    "rarity": 5,
+    "images": {
+        "gachaSplash": "sunday/gachaSplash",
+        "gachaCard": "sunday/gachaCard",
+        "bannerCard": "sunday/bannerCard"
+    },
+    "element": "ice",
+    "weaponType": "harmony",
+    "bannerName": "?????",
+    "colors": {
+        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
+        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
+        "textAccent": "text-[#000]"
+    }
 }
