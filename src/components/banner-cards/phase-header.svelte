@@ -1,6 +1,11 @@
 <script lang="ts">
 	import dayjs from 'dayjs'
+	import utc from 'dayjs/plugin/utc'
+	import timezone from 'dayjs/plugin/timezone'
 	export let phase
+
+	dayjs.extend(utc)
+	dayjs.extend(timezone)
 </script>
 
 <div
@@ -8,6 +13,9 @@
 >
 	<h1>Phase {phase.number + 1}</h1>
 	<p>
-		{dayjs(phase.date).format('MMM D')} @ {dayjs(phase.date).format('h a')}
+		{dayjs.utc(phase.date).tz(dayjs.tz.guess()).format('MMM D')} @ {dayjs
+			.utc(phase.date)
+			.tz(dayjs.tz.guess())
+			.format('h a')}
 	</p>
 </div>

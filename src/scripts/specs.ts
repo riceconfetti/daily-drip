@@ -159,7 +159,7 @@ function getWeapons(game, events, collections, select) {
 	return weapons
 }
 
-export function getPhase(game, versionData, number, collections, timezone) {
+export function getPhase(game, versionData, number, collections) {
 	//console.log(versionData.midDate)
 	let phaseDate = number === 0 ? versionData.startDate : versionData.midDate
 	//console.log(collections.events)
@@ -177,28 +177,9 @@ export function getPhase(game, versionData, number, collections, timezone) {
 		return data.type === 'select'
 	})
 
-	//console.log(select)
-
-	//console.log(collections.game.data.times.update.find((t) => t.zone == timezone.value))
-	const stime =
-		number === 0
-			? collections.game.data.times.version
-			: collections.game.data.times.update.find((t) => t.zone == timezone.value).time
-	const etime =
-		number === 0
-			? collections.game.data.times.update.find((t) => t.zone == timezone.value).time
-			: collections.game.data.times.maintenance
-
-	events.forEach((e) => {
-		if (number === 0) {
-			e.startDate = `${e.startDate}T${stime}Z`
-			e.endDate = `${e.endDate}T${etime}Z `
-		}
-	})
-
 	let phase: Phase = {
 		number: number,
-		date: `${phaseDate}T${stime}Z`,
+		date: `${phaseDate}`,
 		characters: getCharacters(game, events, collections, select),
 		weapons: getWeapons(game, events, collections, select)
 	}
@@ -242,3 +223,18 @@ export function getPhase(game, versionData, number, collections, timezone) {
 	// console.log(phase)
 	return phase
 }
+
+export function getTimeVersion(version, timezone, game) {
+	let v = JSON.parse(JSON.stringify(version))
+
+	v.startDate = version.startDate + `T${game.times.version}Z`
+	v.midDate = version.midDate + `T${game.times.update.find((t) => t.zone == timezone).time}Z`
+	v.endDate = version.endDate + `T${game.times.maintenance}Z`
+
+	v.phases[0].date = v.startDate
+	v.phases[1].date = v.midDate
+
+	return v
+}
+
+export function getEventTimes(events, game, timezone, versions) {}

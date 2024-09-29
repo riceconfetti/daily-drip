@@ -1,7 +1,54 @@
 <script lang="ts">
-	import dayjs from 'dayjs'
 	import EventSingle from './event-single.svelte'
-	export let events, images
+	import { Event } from '../../classes/event.ts'
+	import { settings } from '$scripts/settings'
+	import dayjs from 'dayjs'
+	import utc from 'dayjs/plugin/utc'
+	import timezone from 'dayjs/plugin/timezone'
+	dayjs.extend(utc)
+	dayjs.extend(timezone)
+
+	export let collections, images
+
+	let timesEvents = collections.events.map((e) => {
+		let timeEvent = JSON.parse(JSON.stringify(e)).data
+		let version = collections.versions.find((v) =>
+			v.id.startsWith(e.data.game.id + '/' + e.id.split('/')[1])
+		).data
+		let game = collections.games.find((g) => g.id.startsWith(e.data.game.id)).data
+
+		if (e.data.startDate == version.startDate) {
+			timeEvent.startDate = dayjs
+				.utc(e.data.startDate + `T${game.times.version}Z`)
+				.tz(dayjs.tz.guess())
+				.format('YYYY-MM-DDTHH:mm[Z]')
+		} else {
+			timeEvent.starDate = dayjs
+				.utc(
+					e.data.startDate +
+						`T${game.times.update.find((t) => t.zone == settings.get().genshin).time}Z`
+				)
+				.tz(dayjs.tz.guess())
+				.format('YYYY-MM-DDTHH:mm[Z]')
+		}
+		return timeEvent
+	})
+
+	let events: Event[] = new Array()
+	timesEvents.forEach((data) => {
+		let event = new Event(data)
+		event.game = data.game.id
+		event.startDate = data.startDate
+		event.endDate = data.endDate
+		if (data.type == 'banner' || data.type == 'debut' || data.type == 'select') {
+			const character = collections.characters.find((c) => c.id == data.character.id)
+			event.title = character.data.bannerName
+			event.image = character.data.images.bannerCard
+			event.colors = character.data.colors
+		}
+		//console.log(event);
+		events.push(event)
+	})
 
 	$: currentEvents = events
 		.filter((e) => {

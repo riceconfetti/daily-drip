@@ -7,8 +7,13 @@
 	import ChronicledCard from './chronicled-wish/chronicled-card.svelte'
 	import FiveStarCharacterCard from './characters/five-star-card.svelte'
 	import FiveStarWeaponCard from './weapons/five-star-card.svelte'
+	import { settings } from '$scripts/settings'
+	import { getTimeVersion } from '$scripts/specs.ts'
 	import dayjs from 'dayjs'
-	export let version: Version, game, images
+	export let version: Version, game, images, gameData
+
+	let timezone = JSON.parse(JSON.stringify(settings.get()))
+	version = getTimeVersion(version, timezone[game], gameData)
 
 	$: selectIndex = [0, 0]
 </script>
@@ -28,7 +33,7 @@
 					<div
 						class="flex flex-col p-[2px] w-full h-full bg-gradient-to-br from-dark to-accent-light"
 					>
-						<div class="flex w-full justify-between p-1">
+						<div class="flex w-full justify-between p-1 items-center">
 							<button
 								on:click={() =>
 									selectIndex[pIndex] === 0
@@ -37,7 +42,7 @@
 							>
 								<i class="ri-arrow-left-s-line text-white"></i>
 							</button>
-							<p class="text-white text-sm">Indelible Coterie</p>
+							<p class="text-white text-2xs md:text-sm lg:text-2xs xl:text-sm">Indelible Coterie</p>
 							<button
 								on:click={() =>
 									selectIndex[pIndex] === phase.select.characters.length - 1

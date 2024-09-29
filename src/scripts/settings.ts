@@ -1,8 +1,15 @@
-import { atom } from 'nanostores'
+import { persistentMap } from '@nanostores/persistent'
 
-const genshin = atom('na')
-const starrail = atom('na')
-const wuwa = atom('na')
-const zzz = atom('na')
+export type SettingsValue = {
+	genshin: 'na' | 'as' | 'eu' | 'sar'
+	starrail: 'na' | 'as' | 'eu'
+	wuwa: 'na' | 'sea' | 'as' | 'eu' | 'hmt'
+	zzz: 'na' | 'as' | 'eu' | 'sar'
+}
 
-export { genshin as tz_genshin, starrail as tz_starrail, wuwa as tz_wuwa, zzz as tz_zzz }
+export const settings = persistentMap<SettingsValue>('timezones', {
+	genshin: 'na',
+	starrail: 'na',
+	wuwa: 'na',
+	zzz: 'na'
+})

@@ -11,6 +11,10 @@ document.querySelector('#setting_close').addEventListener('click', () => {
 	document.querySelector('#settings').classList.toggle('flex')
 	document.querySelector('#settings').classList.toggle('hidden')
 })
+document.querySelector('#setting_confirm').addEventListener('click', () => {
+	document.querySelector('#settings').classList.toggle('flex')
+	document.querySelector('#settings').classList.toggle('hidden')
+})
 
 document.querySelector('#settings_gear').addEventListener('click', () => {
 	document.querySelector('#settings').classList.toggle('flex')

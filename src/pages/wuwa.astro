@@ -85,10 +85,7 @@ versionCollection.forEach(({ data }) => {
 	//console.log(v)
 
 	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
-		v.phases = [
-			getPhase(game, data, 0, collections, tz_wuwa),
-			getPhase(game, data, 1, collections, tz_wuwa)
-		]
+		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
 		versions.push(v)
 	}
 })
@@ -96,7 +93,11 @@ versionCollection.forEach(({ data }) => {
 
 <Layout title="The Daily Drip">
 	<section class="p-2 flex flex-col items-center h-max gap-4 md:max-w-[1400px]">
-		{versions.map((version) => <Banner {version} {game} {images} client:load />)}
+		{
+			versions.map((version) => (
+				<Banner {version} {game} gameData={collections.game.data} {images} client:load />
+			))
+		}
 	</section>
 
 	<!-- <Banner {version} game="wuwa" /> -->
