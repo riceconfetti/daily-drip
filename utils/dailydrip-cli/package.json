@@ -13,6 +13,7 @@
 		"addWeapon": "./bin/weapon.js",
 		"addVersion": "./bin/version.js",
 		"addEvent": "./bin/event.js",
+		"addGradient": "./bin/gradient.js",
 		"initVersion": "./bin/initVersion.js"
 	},
 	"dependencies": {

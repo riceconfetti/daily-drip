@@ -1,8 +1,9 @@
 {
-	"status": "spec",
+	"status": "confirmed",
 	"type": "debut",
 	"game": "starrail",
 	"startDate": "2024-10-15",
 	"endDate": "2024-10-02",
-	"character": "starrail/rappa"
+	"character": "starrail/rappa",
+	"weapon": "starrail/NinjutsuInscriptionDazzlingEvilbreaker"
 }

@@ -4,16 +4,17 @@
 	export let character, images, game
 	//console.log(character.id);
 
-	const gachaCard =
+	const gc_found =
 		images.gachaCards[
 			`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.webp`
 		] != undefined
-			? images.gachaCards[
-					`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.webp`
-				]
-			: images.placeHolders[
-					`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.webp`
-				]
+	const gachaCard = gc_found
+		? images.gachaCards[
+				`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.webp`
+			]
+		: images.placeHolders[
+				`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.webp`
+			]
 </script>
 
 <div
@@ -43,7 +44,7 @@
 				.src}
 		/>
 		<Image
-			class={`relative h-full w-full ${character.spec ? 'md:border-6 border-2 [border-image:url(/textures/holo-4.jpg)_10_round] sm:border-4' : ''}`}
+			class={`relative h-full w-full ${character.spec ? 'md:border-6 border-2 [border-image:url(/textures/holo-4.jpg)_10_round] sm:border-4' : ''} ${!gc_found ? 'mix-blend-hard-light' : ''}`}
 			src={gachaCard.default.src}
 			alt={`${character.name} Art`}
 			height={1050}

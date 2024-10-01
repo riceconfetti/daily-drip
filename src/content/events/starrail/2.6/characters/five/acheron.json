@@ -1,8 +1,9 @@
 {
-    "status": "spec",
-    "type": "banner",
-    "game": "starrail",
-    "startDate": "2024-10-15",
-    "endDate": "2024-10-02",
-    "character": "starrail/acheron"
+	"status": "spec",
+	"type": "banner",
+	"game": "starrail",
+	"startDate": "2024-10-15",
+	"endDate": "2024-10-02",
+	"character": "starrail/acheron",
+	"weapon": "starrail/AlongthePassingShore"
 }

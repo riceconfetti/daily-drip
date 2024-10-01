@@ -30,18 +30,25 @@ const options = yargs
 		type: 'number',
 		demandOption: true
 	})
+	.option('k', {
+		alias: 'key',
+		describe: 'Optional Key',
+		type: 'string'
+	})
 	.option('b', { alias: 'banner', describe: 'Banner Name', type: 'string' })
 	.option('w', { alias: 'weapon', describe: 'Weapon Type', type: 'string' })
 	.option('e', { alias: 'element', describe: 'Element', type: 'string' }).argv
 
-let characterPath = `src/content/characters/${options.game}/${options.name.toLowerCase().replace(SYMBOLS, '')}.json`
+const characterKey = options.key ? options.key : options.name.toLowerCase().replace(SYMBOLS, '')
+const characterPath = `src/content/characters/${options.game}/${characterKey}.json`
+
 let characterObj = {
 	name: options.name,
 	rarity: options.rarity,
 	images: {
-		gachaSplash: options.name.toLowerCase().replace(SYMBOLS, '') + '/gachaSplash',
-		gachaCard: options.name.toLowerCase().replace(SYMBOLS, '') + '/gachaCard',
-		bannerCard: options.name.toLowerCase().replace(SYMBOLS, '') + '/bannerCard'
+		gachaSplash: characterKey + '/gachaSplash',
+		gachaCard: characterKey + '/gachaCard',
+		bannerCard: characterKey + '/bannerCard'
 	}
 }
 

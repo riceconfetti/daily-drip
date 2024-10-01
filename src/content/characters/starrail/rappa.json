@@ -10,8 +10,8 @@
 	"weaponType": "erudition",
 	"bannerName": "?????",
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
-		"secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
-		"textAccent": "text-[#000]"
+		"primary": "bg-gradient-to-r from-[#462FC9] to-[#6BEB79]",
+		"secondary": "bg-gradient-to-t from-[#BF1B19] to-[#FFE8EC00]",
+		"textAccent": "text-[#F1DE76]"
 	}
 }
