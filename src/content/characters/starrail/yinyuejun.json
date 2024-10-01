@@ -1,17 +1,17 @@
 {
 	"name": "Dan Heng: Imbibitor Lunae",
 	"rarity": 5,
+	"images": {
+		"gachaSplash": "yinyuejun/gachaSplash",
+		"gachaCard": "yinyuejun/gachaCard",
+		"bannerCard": "yinyuejun/bannerCard"
+	},
 	"element": "imaginary",
 	"weaponType": "destruction",
 	"bannerName": "Epochal Spectrum",
-	"images": {
-		"gachaSplash": "danhengimbibitorlunae/gachaSpash",
-		"gachaCard": "danhengimbibitorlunae/gachaCard",
-		"bannerCard": "danhengimbibitorlunae/bannerCard"
-	},
 	"colors": {
-		"primary": "bg-gradient-to-r from-[#000] to-[#fff]",
-		"secondary": "bg-gradient-to-t from-[#000] to-[#ffffff00]",
-		"textAccent": "text-[#999]"
+		"primary": "bg-gradient-to-r from-[#293C48] to-[#A2B9BF]",
+		"secondary": "bg-gradient-to-t from-[#0F1F29] to-[#55879400]",
+		"textAccent": "text-[#1B2929]"
 	}
 }

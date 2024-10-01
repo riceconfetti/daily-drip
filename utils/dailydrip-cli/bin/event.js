@@ -59,15 +59,17 @@ switch (options.type) {
 		break
 	case 'weapon':
 		eventPath += '/weapons'
+		break
 	case 'chronicle':
 		eventPath += '/chronicle'
+		break
 }
 
 if (!fs.existsSync(eventPath)) {
 	fs.mkdirSync(eventPath, { recursive: true })
 }
 
-eventPath += `/${options.type == 'chronicle' ? 'chronicle_' : '' + options.name ? options.name : options.weapon ? options.weapon : 'phase_' + options.half}.json`
+eventPath += `/${options.type == 'chronicle' ? 'chronicle_' : '' + (options.name != undefined ? options.name : options.weapon != undefined ? options.weapon : 'phase_' + options.half)}.json`
 
 let eventObj = {
 	status: 'spec',

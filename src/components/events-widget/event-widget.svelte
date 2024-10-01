@@ -60,7 +60,7 @@
 
 	$: upcomingEvents = events
 		.filter((e) => {
-			return dayjs(e.startDate) > dayjs() && dayjs(e.startDate) < dayjs().add(4, 'w')
+			return dayjs(e.startDate) > dayjs() && dayjs(e.startDate) < dayjs().add(6, 'w')
 		})
 		.sort((a, b) => {
 			return dayjs(a.startDate) < dayjs(b.startDate) ? -1 : 1
