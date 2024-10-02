@@ -2,7 +2,6 @@
 
 const yargs = require('yargs')
 const fs = require('fs')
-const SYMBOLS = /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g
 
 const options = yargs
 	.usage('Usage: -n <name>')
