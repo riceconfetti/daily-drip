@@ -22,12 +22,24 @@
 				.utc(e.data.startDate + `T${game.times.version}Z`)
 				.tz(dayjs.tz.guess())
 				.format('YYYY-MM-DDTHH:mm[Z]')
+			timeEvent.endDate = dayjs
+				.utc(
+					e.data.endDate +
+						`T${game.times.update.find((t) => t.zone == settings.get()[e.data.game.id]).time}Z`
+				)
+				.tz(dayjs.tz.guess())
+				.format('YYYY-MM-DDTHH:mm[Z]')
 		} else {
-			timeEvent.starDate = dayjs
+			timeEvent.startDate = dayjs
 				.utc(
 					e.data.startDate +
-						`T${game.times.update.find((t) => t.zone == settings.get().genshin).time}Z`
+						`T${game.times.update.find((t) => t.zone == settings.get()[e.data.game.id]).time}Z`
 				)
+				.tz(dayjs.tz.guess())
+				.format('YYYY-MM-DDTHH:mm[Z]')
+
+			timeEvent.endDate = dayjs
+				.utc(e.data.endDate + `T${game.times.maintenance}Z`)
 				.tz(dayjs.tz.guess())
 				.format('YYYY-MM-DDTHH:mm[Z]')
 		}

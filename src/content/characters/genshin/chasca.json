@@ -1,0 +1,17 @@
+{
+    "name": "Chasca",
+    "rarity": 5,
+    "images": {
+        "gachaSplash": "chasca/gachaSplash",
+        "gachaCard": "chasca/gachaCard",
+        "bannerCard": "chasca/bannerCard"
+    },
+    "element": "genshin",
+    "weaponType": "genshin",
+    "bannerName": "?????",
+    "colors": {
+        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
+        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
+        "textAccent": "text-[#000]"
+    }
+}
