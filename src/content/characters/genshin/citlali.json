@@ -1,0 +1,17 @@
+{
+    "name": "Citlali",
+    "rarity": 5,
+    "images": {
+        "gachaSplash": "citlali/gachaSplash",
+        "gachaCard": "citlali/gachaCard",
+        "bannerCard": "citlali/bannerCard"
+    },
+    "element": "genshin",
+    "weaponType": "genshin",
+    "bannerName": "?????",
+    "colors": {
+        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
+        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
+        "textAccent": "text-[#000]"
+    }
+}

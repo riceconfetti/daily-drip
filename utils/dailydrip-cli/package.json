@@ -13,6 +13,7 @@
 		"dailydrip-cli": "bin/index.js"
 	},
 	"dependencies": {
+		"@inquirer/prompts": "^6.0.1",
 		"ora": "^8.1.0",
 		"yargs": "13.2"
 	}

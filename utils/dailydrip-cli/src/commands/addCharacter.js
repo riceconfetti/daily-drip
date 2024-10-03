@@ -1,76 +1,74 @@
 #!/usr/bin/env node
-import inquirer from 'inquirer'
+import { input, select, number, confirm } from '@inquirer/prompts'
 import chalk from 'chalk'
 import ora from 'ora'
-import { addCharacter } from '../lib/characters.js'
+import { addCharacter } from '../lib/character.js'
 
 async function input() {
-	let character = await inquirer.prompt([
-		{
-			name: 'game',
+	let character = {
+		game: await select({
 			message: 'Select the game:',
-			type: 'list',
-			choices: ['genshin', 'starrail', 'zzz', 'wuwa']
-		},
-		{
-			name: 'name',
-			message: 'Enter the name of the character:',
-			type: 'input'
-		},
-		{
-			name: 'key',
-			message: 'Enter an alternative key for the character:',
-			type: 'input'
-		},
-		{
-			name: 'rarity',
-			message: 'Enter the rarity:',
-			type: 'number'
-		},
-		{
-			name: 'weapon',
-			message: 'Enter the weapon type:',
-			type: 'input'
-		},
-		{
-			name: 'element',
-			message: 'Enter the element:',
-			type: 'input'
-		},
-		{
-			name: 'banner',
-			message: 'Enter the banner name:',
-			type: 'input'
-		}
-	])
-	let colorsQ = await inquirer.prompt([
-		{ name: 'confirm', message: 'Do you want to add colors?', type: 'confirm' }
-	])
+			choices: [
+				{
+					value: 'genshin',
+					name: 'Genshin Impact'
+				},
+				{
+					value: 'starrail',
+					name: 'Honkai: Starrail'
+				},
+				{
+					value: 'wuwa',
+					name: 'Wuthering Waves'
+				},
+				{
+					value: 'zzz',
+					name: 'Zenless Zone Zero'
+				}
+			]
+		}),
+		name: await input({
+			message: 'Enter the name of the character:'
+		}),
+		key: await input({
+			message: 'Enter an alternative key for the character:'
+		}),
+		rarity: await number({
+			message: 'Enter the rarity:'
+		}),
+		weapon: await input({
+			message: 'Enter the weapon type:'
+		}),
+		element: await input({
+			message: 'Enter the element:'
+		}),
+		banner: await input({
+			message: 'Enter the banner name:'
+		})
+	}
 
-	if (colorsQ.confirm) {
-		let colors = await inquirer.prompt([
-			{
-				name: 'primary',
-				message: 'Enter the primary colors:',
-				type: 'input'
-			},
-			{
-				name: 'secondary',
-				message: 'Enter the secondary colors:',
-				type: 'input'
-			},
-			{
-				name: 'textAccent',
-				message: 'Enter the text color:',
-				type: 'input'
+	if (character.rarity == 5) {
+		const confirmColors = await confirm({ message: 'Do you want to add colors?', type: 'confirm' })
+
+		if (confirmColors) {
+			let colors = {
+				primary: await input({
+					message: 'Enter the primary colors:'
+				}),
+				secondary: await input({
+					message: 'Enter the secondary colors:'
+				}),
+				textAccent: await input({
+					message: 'Enter the text color:'
+				})
 			}
-		])
 
-		for (let c in colors) {
-			if (c != 'text') colors[c] = colors[c].split(' ')
+			for (let c in colors) {
+				if (c != 'text') colors[c] = colors[c].split(' ')
+			}
+
+			character.colors = colors
 		}
-
-		character.colors = colors
 	}
 
 	return character
@@ -82,15 +80,11 @@ const askQuestions = async () => {
 	do {
 		const userRes = await input()
 		characterArray.push(userRes)
-		const confirmQ = await inquirer.prompt([
-			{
-				name: 'confirm',
-				message: 'Do you want to add more characters?',
-				type: 'confirm'
-			}
-		])
-		if (confirmQ.confirm) {
+		const confirmQ = await confirm({ message: 'Do you want to add more characters?' })
+
+		if (confirmQ) {
 			loop = true
+			console.log('-----------------------')
 		} else {
 			loop = false
 		}
@@ -103,7 +97,7 @@ export default async function addCharacters() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Creating the todos...').start()
+		let spinner = ora('Adding characters...').start()
 
 		for (let i in userResponse) {
 			const response = userResponse[i]
