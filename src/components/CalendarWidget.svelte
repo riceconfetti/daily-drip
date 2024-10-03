@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Calendar } from 'bits-ui'
-	import { CalendarDate, parseDate } from '@internationalized/date'
 	import { settings } from '$scripts/settings'
 	import dayjs from 'dayjs'
 	import utc from 'dayjs/plugin/utc'
@@ -39,10 +38,6 @@
 			return event
 		})
 	)
-
-	function getEvent(date) {
-		return eventDates[dayjs(date).format()]
-	}
 
 	const isDateUnavailable: Calendar.Props['isDateUnavailable'] = (date) => {
 		return dayjs(date).format('YYYY-MM-DD') in eventDates
