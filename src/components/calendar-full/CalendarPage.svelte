@@ -40,17 +40,18 @@
 	)
 
 	const isDateUnavailable: Calendar.Props['isDateUnavailable'] = (date) => {
-		return dayjs(date).format('YYYY-MM-DD') in eventDates
+		return dayjs(date.toString()).format('YYYY-MM-DD') in eventDates
 	}
 </script>
 
 <Calendar.Root
-	class="rounded-[15px] p-[22px] shadow-card"
+	class="p-2 w-full h-full min-h-0 flex flex-col"
 	let:months
 	let:weekdays
 	{isDateUnavailable}
 	weekdayFormat="short"
-	fixedWeeks={true}
+	fixedWeeks={false}
+	numberOfMonths={1}
 >
 	<Calendar.Header class="flex items-center justify-between">
 		<Calendar.PrevButton
@@ -65,31 +66,34 @@
 			<i class="ri-arrow-right-s-line"></i>
 		</Calendar.NextButton>
 	</Calendar.Header>
-	<div class="flex flex-col space-y-4 pt-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-		{#each months as month, i (i)}
-			<Calendar.Grid class="w-full border-collapse select-none space-y-1">
-				<Calendar.GridHead>
-					<Calendar.GridRow class="mb-1 flex w-full justify-between">
-						{#each weekdays as day}
-							<Calendar.HeadCell class="w-10 rounded-md text-xs !font-normal text-muted-foreground">
-								<div>{day.slice(0, 2)}</div>
-							</Calendar.HeadCell>
-						{/each}
-					</Calendar.GridRow>
-				</Calendar.GridHead>
-				<Calendar.GridBody>
+
+	<div class="flex flex-col gap-4 h-full min-h-0">
+		<Calendar.GridHead class="grid grid-cols-7">
+			<Calendar.GridRow
+				class="grid grid-cols-subgrid col-span-7 crimson-text-semibold uppercase text-2xs"
+			>
+				{#each weekdays as day}
+					<Calendar.HeadCell class="w-10 rounded-md">
+						<div>{day.slice(0, 3)}</div>
+					</Calendar.HeadCell>
+				{/each}
+			</Calendar.GridRow>
+		</Calendar.GridHead>
+
+		<Calendar.Grid
+			class=" grid grid-cols-7 auto-rows-auto w-full h-full border border-dark min-h-0 border-opacity-20"
+		>
+			{#each months as month, i (i)}
+				<Calendar.GridBody
+					class="grid grid-cols-subgrid col-span-7 divide-y divide-dark divide-opacity-20"
+				>
 					{#each month.weeks as weekDates}
-						<Calendar.GridRow class="flex w-full">
+						<Calendar.GridRow
+							class="grid grid-cols-subgrid col-span-7 divide-x divide-opacity-20 divide-dark"
+						>
 							{#each weekDates as date}
-								<Calendar.Cell {date} class="relative size-10 !p-0 text-center text-sm">
-									<Calendar.Day
-										{date}
-										month={month.value}
-										class="group relative inline-flex size-10 items-center justify-center whitespace-nowrap rounded-9px border border-transparent bg-transparent p-0 text-sm font-normal text-foreground hover:border-foreground data-[disabled]:pointer-events-none data-[outside-month]:pointer-events-none data-[selected]:bg-foreground data-[selected]:font-medium data-[disabled]:text-foreground/30 data-[selected]:text-background data-[unavailable]:text-muted-foreground data-[unavailable]:line-through"
-									>
-										<div
-											class="absolute top-[5px] hidden size-1 rounded-full bg-foreground group-data-[today]:block group-data-[selected]:bg-background"
-										></div>
+								<Calendar.Cell {date} class="relative text-2xs h-full px-2 p-1">
+									<Calendar.Day {date} month={month.value} class=" flex justify-end">
 										{date.day}
 									</Calendar.Day>
 								</Calendar.Cell>
@@ -97,7 +101,7 @@
 						</Calendar.GridRow>
 					{/each}
 				</Calendar.GridBody>
-			</Calendar.Grid>
-		{/each}
+			{/each}
+		</Calendar.Grid>
 	</div>
 </Calendar.Root>
