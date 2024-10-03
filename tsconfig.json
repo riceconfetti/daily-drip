@@ -6,7 +6,7 @@
 		"paths": {
 			"$components/*": ["src/components/*"],
 			"$assets/*": ["src/assets/*"],
-			"$classes": ["src/classes/*"],
+			"$classes/*": ["src/classes/*"],
 			"$content/*": ["src/content/*"],
 			"$layouts/*": ["src/layouts/*"],
 			"$pages/*": ["src/pages/*"],

@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 import { program } from 'commander'
 import { select } from '@inquirer/prompts'
-import addCharacters from '../src/commands/addCharacter'
 import chalk from 'chalk'
+import addCharacters from '../src/commands/addCharacters'
+import editCharacters from '../src/commands/editCharacters'
+
 
 program.action(() => {
 	switch (addOrEdit()) {
@@ -41,6 +43,7 @@ program.action(() => {
 			}).then((answers) => {
 				switch (answers) {
 					case 'Character':
+							editCharacters()
 						break
 					case 'Weapon':
 						break

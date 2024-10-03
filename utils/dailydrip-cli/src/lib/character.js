@@ -61,8 +61,34 @@ export function addCharacter(answers) {
 }
 
 export function editCharacter(answers) {
-	const characterKey = answers.key ? answers.key : answers.name.toLowerCase().replace(SYMBOLS, '')
+	const characterKey = answers.key
 	const characterPath = `/src/content/characters/${answers.game}/${characterKey}.json`
 
 	let characterObj = JSON.parse(fs.readFileSync(characterPath, { encoding: utf8, flags: r }))
+
+	for (const [key, value] of Object.entries(answers)) {
+		if (key == 'colors') {
+			for (const [k, v] of Object.entries(value)) {
+				switch (k) {
+					case 'textAccent':
+						characterObj[k] = `text-[#${v}]`
+						break
+					case 'primary':
+						characterObj[k] = `bg-gradient-to-r from-[#${v[0]}] to-[#${v[1]}]`
+						break
+					case 'secondary':
+						characterObj[k] = `bg-gradient-to-t from-[#${v[0]}] to-[#${v[1]}00]`
+						break
+				}
+			}
+		} else {
+			characterObj[key] = value
+		}
+	}
+
+	fs.writeFile(characterPath, JSON.stringify(characterObj, null, 4), (err) => {
+		if (err) {
+			console.error(err)
+		}
+	})
 }

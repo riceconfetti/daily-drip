@@ -1,7 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+import CalendarPage from '$components/calendar-full/CalendarPage.svelte'
+
+const events = await getCollection('events', ({ data }) => {
+	return data.status == 'confirmed'
+})
+
+const games = await getCollection('games')
+
+const versions = await getCollection('versions')
 ---
 
 <Layout title="The Daily Drip">
-	<div></div>
+	<CalendarPage {events} {games} {versions} client:load/>
 </Layout>
