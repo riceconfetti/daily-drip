@@ -24,9 +24,15 @@
 <div
 	class={`relative flex w-full flex-col gap-2 overflow-hidden rounded-md ${eventDetails.colors.primary}`}
 >
-	<div class="absolute inset-0 z-10 flex h-full w-full flex-col justify-center p-4">
-		<h2 class={`z-10 text-sm text-white ${eventDetails.game}`}>{eventDetails.title}</h2>
-		<h3 class={`${eventDetails.colors.textAccent} z-10 text-xs ${eventDetails.game}`}>
+	<div class="absolute inset-0 z-10 flex h-full w-2/3 flex-col justify-center p-4">
+		<h2
+			class={`z-10 ${eventDetails.game == 'zzz' ? 'text-xs' : 'text-sm'} text-white ${eventDetails.game} text-balance `}
+		>
+			{eventDetails.title}
+		</h2>
+		<h3
+			class={`${eventDetails.colors.textAccent} z-10  ${eventDetails.game == 'zzz' ? 'text-2xs' : 'text-xs'} ${eventDetails.game}`}
+		>
 			{eventType}
 			{timeUntil}
 		</h3>

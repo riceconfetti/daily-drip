@@ -2,10 +2,10 @@
 import { input, select, number, confirm } from '@inquirer/prompts'
 import chalk from 'chalk'
 import ora from 'ora'
-import { addCharacter } from '../lib/character.js'
+import { addWeapon } from '../lib/weapon.js'
 
 async function init() {
-	let character = {
+	let weapon = {
 		game: await select({
 			message: 'Select the game:',
 			choices: [
@@ -28,58 +28,25 @@ async function init() {
 			]
 		}),
 		name: await input({
-			message: 'Enter the name of the character:'
-		}),
-		key: await input({
-			message: 'Enter an alternative key for the character:'
+			message: 'Enter the name of the weapon:'
 		}),
 		rarity: await number({
 			message: 'Enter the rarity:'
 		}),
-		weapon: await input({
+		type: await input({
 			message: 'Enter the weapon type:'
-		}),
-		element: await input({
-			message: 'Enter the element:'
-		}),
-		banner: await input({
-			message: 'Enter the banner name:'
 		})
 	}
 
-	if (character.rarity == 5) {
-		const confirmColors = await confirm({ message: 'Do you want to add colors?', type: 'confirm' })
-
-		if (confirmColors) {
-			let colors = {
-				primary: await input({
-					message: 'Enter the primary colors:'
-				}),
-				secondary: await input({
-					message: 'Enter the secondary colors:'
-				}),
-				textAccent: await input({
-					message: 'Enter the text color:'
-				})
-			}
-
-			for (let c in colors) {
-				if (c != 'text') colors[c] = colors[c].split(' ')
-			}
-
-			character.colors = colors
-		}
-	}
-
-	return character
+	return weapon
 }
 
 const askQuestions = async () => {
-	const characterArray = []
+	const weaponArray = []
 	let loop = false
 	do {
 		const userRes = await init()
-		characterArray.push(userRes)
+		weaponArray.push(userRes)
 		const confirmQ = await confirm({ message: 'Do you want to add more characters?' })
 
 		if (confirmQ) {
@@ -90,22 +57,22 @@ const askQuestions = async () => {
 		}
 	} while (loop)
 
-	return characterArray
+	return weaponArray
 }
 
-export default async function addCharacters() {
+export default async function addWeapons() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Adding characters...').start()
+		let spinner = ora('Adding weapons...').start()
 
 		for (let i in userResponse) {
 			const response = userResponse[i]
-			addCharacter(response)
+			addWeapon(response)
 		}
 
 		spinner.stop()
-		console.log(chalk.greenBright('Characters added!'))
+		console.log(chalk.greenBright('Weapons added!'))
 	} catch (error) {
 		// Error Handling
 		console.log('Something went wrong, Error: ', error)

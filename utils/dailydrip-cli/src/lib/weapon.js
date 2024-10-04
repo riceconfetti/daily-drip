@@ -1,9 +1,6 @@
 import * as fs from 'fs'
 const SYMBOLS = /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g
 
-String.prototype.isEmpty = function () {
-	return this.length === 0 || !this.trim()
-}
 export function addWeapon(answers) {
 	let weaponPath = `src/content/weapons/${answers.game}/${answers.name.replace(SYMBOLS, '')}.json`
 	let weaponObj = {
@@ -25,6 +22,14 @@ export function editWeapon(answers) {
 	let weaponObj = JSON.parse(fs.readFileSync(weaponPath, { encoding: utf8, flags: r }))
 
 	for (const [key, value] of Object.entries(answers)) {
+		if (key == 'name') {
+			fs.rm(weaponPath, (err) => {
+				if (err) {
+					console.error(err)
+				}
+			})
+			weaponPath = `src/content/weapons/${answers.game}/${value.replace(SYMBOLS, '')}.json`
+		}
 		weaponObj[key] = value
 	}
 
