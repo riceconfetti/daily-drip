@@ -1,94 +1,86 @@
 #!/usr/bin/env node
+import * as fs from 'fs'
 
-const yargs = require('yargs')
-const fs = require('fs')
-const dayjs = require('dayjs')
+const SYMBOLS = /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g
 
-const options = yargs
-	.option('p', {
-		alias: 'patch',
-		describe: 'Patch',
-		type: 'number',
-		demandOption: true
-	})
-	.option('g', {
-		alias: 'game',
-		describe: 'Game',
-		type: 'string',
-		demandOption: true
-	})
-	.option('h', {
-		alias: 'half',
-		describe: 'phase half',
-		type: 'number',
-		demandOption: true
-	})
-	.option('t', {
-		alias: 'type',
-		describe: 'type',
-		type: 'string',
-		demandOption: true
-	})
-	.option('n', {
-		alias: 'name',
-		describe: 'Name',
-		type: 'string'
-	})
-	.option('w', {
-		alias: 'weapon',
-		describe: 'Weapon',
-		type: 'string'
-	}).argv
-
-const version = JSON.parse(
-	fs.readFileSync(`src/content/versions/${options.game}/${options.patch}.json`, {
-		encoding: 'utf8',
-		flag: 'r'
-	})
-)
-
-let eventPath = `src/content/events/${options.game}/${options.patch}`
-switch (options.type) {
-	case 'select':
-	case 'banner':
-	case 'debut':
-		eventPath += '/characters/five'
-		break
-	case 'rate-up':
-		eventPath += '/characters/four'
-		break
-	case 'weapon':
-		eventPath += '/weapons'
-		break
-	case 'chronicle':
-		eventPath += '/chronicle'
-		break
-}
-
-if (!fs.existsSync(eventPath)) {
-	fs.mkdirSync(eventPath, { recursive: true })
-}
-
-eventPath += `/${options.type == 'chronicle' ? 'chronicle_' : '' + (options.name != undefined ? options.name : options.weapon != undefined ? options.weapon : 'phase_' + options.half)}.json`
-
-let eventObj = {
-	status: 'spec',
-	type: options.type,
-	game: options.game,
-	startDate: options.half == 1 ? version.startDate : version.midDate,
-	endDate: options.half == 1 ? version.midDate : version.endDate
-}
-
-if (['select', 'banner', 'debut', 'rate-up'].includes(options.type)) {
-	eventObj.character = `${options.game}/${options.name}`
-}
-
-if (options.weapon) {
-	eventObj.weapon = `${options.game}/${options.weapon}`
-}
-
-fs.writeFile(eventPath, JSON.stringify(eventObj, null, 4), (err) => {
-	if (err) {
-		console.error(err)
+export function addEvent(answers) {
+	let eventPath = `src/content/events/${answers.game}/${answers.patch}`
+	switch (answers.type) {
+		case 'select':
+		case 'banner':
+		case 'debut':
+			eventPath += '/characters/five'
+			break
+		case 'rate-up':
+			eventPath += '/characters/four'
+			break
+		case 'weapon':
+			eventPath += '/weapons'
+			break
+		case 'chronicle':
+			eventPath += '/chronicle'
+			break
 	}
-})
+
+	if (!fs.existsSync(eventPath)) {
+		fs.mkdirSync(eventPath, { recursive: true })
+	}
+
+	eventPath += `/${answers.type == 'chronicle' ? 'chronicle_' : '' + (answers.name != undefined ? answers.name : answers.weapon != undefined ? answers.weapon : 'phase_' + answers.half)}.json`
+
+	let eventObj = {
+		status: answers.status,
+		type: answers.type,
+		game: answers.game,
+		startDate: answers.phase == 1 ? version.startDate : version.midDate,
+		endDate: answers.phase == 1 ? version.midDate : version.endDate
+	}
+
+	if (['select', 'banner', 'debut', 'rate-up'].includes(answers.type)) {
+		eventObj.character = `${answers.game}/${answers.name}`
+	}
+
+	if (answers.weapon) {
+		eventObj.weapon = `${answers.game}/${answers.weapon}`
+	}
+
+	fs.writeFile(eventPath, JSON.stringify(eventObj, null, 4), (err) => {
+		if (err) {
+			console.error(err)
+		}
+	})
+}
+
+export function editEvent(answers) {
+	let game = answers.path.split('/')[0]
+	let version = JSON.parse(
+		fs.readFileSync(`${game}/${answers.path.split('/')[2]}.json`, {
+			encoding: 'utf8',
+			flag: r
+		})
+	)
+	let eventPath = answers.path
+	let eventObj = JSON.parse(
+		fs.readFileSync(eventPath, {
+			encoding: 'utf8',
+			flag: r
+		})
+	)
+
+	for (const [key, value] of Object.entries(answers)) {
+		if (key == 'phase') {
+			eventObj.startDate = value == 1 ? version.startDate : version.midDate
+			eventObj.endDate = value == 1 ? version.midDate : version.endDate
+		} else if (key == 'character' || key == 'weapon') {
+			eventObj[key] = game + '/' + value
+		} else {
+			eventObj[key] = value
+		}
+	}
+
+	fs.writeFile(eventPath, JSON.stringify(eventObj, null, 4), (err) => {
+		if (err) {
+			console.error(err)
+		}
+	})
+}

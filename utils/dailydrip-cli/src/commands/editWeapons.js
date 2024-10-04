@@ -2,10 +2,10 @@
 import { input, select, checkbox, number, confirm } from '@inquirer/prompts'
 import chalk from 'chalk'
 import ora from 'ora'
-import { editCharacter } from '../lib/character.js'
+import { editWeapon } from '../lib/weapon.js'
 
 async function init() {
-	let character = {
+	let weapon = {
 		game: await select({
 			message: 'Select the game:',
 			choices: [
@@ -28,7 +28,7 @@ async function init() {
 			]
 		}),
 		key: await input({
-			message: 'Enter the character key:'
+			message: 'Enter the weapon key:'
 		})
 	}
 
@@ -36,52 +36,23 @@ async function init() {
 	do {
 		const editValue = await select({
 			message: 'What do you want to edit?',
-			choice: ['name', 'rarity', 'element', 'weapon', 'banner', 'colors']
+			choice: ['name', 'rarity', 'type']
 		})
 
 		switch (editValue) {
 			case 'name':
-				character.newName = await input({
+				weapon.newName = await input({
 					message: 'Enter the new name'
 				})
 			case 'rarity':
-				character.rarity = await number({
+				weapon.rarity = await number({
 					message: 'Enter new rarity:'
 				})
 				break
-			case 'element':
-				character.element = await input({
-					message: 'Enter new element:'
-				})
-				break
-			case 'weapon':
-				character.weapon = await input({
+			case 'type':
+				weapon.type = await input({
 					message: 'Enter new weapon type:'
 				})
-				break
-			case 'banner':
-				character.banner = await input({
-					message: 'Enter banner name:'
-				})
-				break
-			case 'colors':
-				const colorType = await checkbox({
-					message: 'Select the palette you want to edit:',
-					choices: ['primary', 'secondary', 'textAccent']
-				})
-
-				colorType.forEach(async (t) => {
-					const colors = await input({
-						message: 'Enter new color(s):'
-					})
-
-					if (t == 'primary' || t == 'secondary') {
-						character.colors[t] == colors.split(' ')
-					} else {
-						character.colors[t] == colors
-					}
-				})
-
 				break
 		}
 
@@ -95,16 +66,16 @@ async function init() {
 		}
 	} while (done)
 
-	return character
+	return weapon
 }
 
 const askQuestions = async () => {
-	const characterArray = []
+	const weaponArray = []
 	let loop = false
 	do {
 		const userRes = await init()
-		characterArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to edit more characters?' })
+		weaponArray.push(userRes)
+		const confirmQ = await confirm({ message: 'Do you want to edit more weapons?' })
 
 		if (confirmQ) {
 			loop = true
@@ -114,22 +85,22 @@ const askQuestions = async () => {
 		}
 	} while (loop)
 
-	return characterArray
+	return weaponArray
 }
 
-export default async function editCharacters() {
+export default async function editWeapons() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Editing characters...').start()
+		let spinner = ora('Editing weapons...').start()
 
 		for (let i in userResponse) {
 			const response = userResponse[i]
-			editCharacter(response)
+			editWeapon(response)
 		}
 
 		spinner.stop()
-		console.log(chalk.greenBright('Characters saved!'))
+		console.log(chalk.greenBright('Weapons saved!'))
 	} catch (error) {
 		// Error Handling
 		console.log('Something went wrong, Error: ', error)
