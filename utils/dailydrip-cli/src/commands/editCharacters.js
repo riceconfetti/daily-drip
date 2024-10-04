@@ -93,7 +93,7 @@ async function init() {
 		} else {
 			loop = false
 		}
-	} while (done)
+	} while (loop)
 
 	return character
 }
