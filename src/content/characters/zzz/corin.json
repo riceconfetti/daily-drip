@@ -1,11 +1,11 @@
 {
-    "name": "Corin",
-    "rarity": 4,
-    "images": {
-        "gachaSplash": "corin/gachaSplash",
-        "gachaCard": "corin/gachaCard",
-        "bannerCard": "corin/bannerCard"
-    },
-    "element": "physical",
-    "weaponType": "zzz"
+	"name": "Corin",
+	"rarity": 4,
+	"images": {
+		"gachaSplash": "corin/gachaSplash",
+		"gachaCard": "corin/gachaCard",
+		"bannerCard": "corin/bannerCard"
+	},
+	"element": "physical",
+	"weaponType": "zzz"
 }

@@ -114,26 +114,26 @@ quality are:
 
 Namely:
 
-*   `preset` will set up a default encoding configuration targeting a particular
-    type of input. It should appear first in the list of options, so that
-    subsequent options can take effect on top of this preset. Default value is
-    'default'.
-*   `sns` will progressively turn on (when going from 0 to 100) some additional
-    visual optimizations (like: segmentation map re-enforcement). This option
-    will balance the bit allocation differently. It tries to take bits from the
-    "easy" parts of the picture and use them in the "difficult" ones instead.
-    Usually, raising the sns value (at fixed -q value) leads to larger files,
-    but with better quality. Typical value is around '75'.
-*   `f` option directly links to the filtering strength used by the codec's
-    in-loop processing. The higher the value, the smoother the highly-compressed
-    area will look. This is particularly useful when aiming at very small files.
-    Typical values are around 20-30. Note that using the option
-    -strong/-nostrong will change the type of filtering. Use "-f 0" to turn
-    filtering off.
-*   `m` controls the trade-off between encoding speed and quality. Default is 4.
-    You can try -m 5 or -m 6 to explore more (time-consuming) encoding
-    possibilities. A lower value will result in faster encoding at the expense
-    of quality.
+- `preset` will set up a default encoding configuration targeting a particular
+  type of input. It should appear first in the list of options, so that
+  subsequent options can take effect on top of this preset. Default value is
+  'default'.
+- `sns` will progressively turn on (when going from 0 to 100) some additional
+  visual optimizations (like: segmentation map re-enforcement). This option
+  will balance the bit allocation differently. It tries to take bits from the
+  "easy" parts of the picture and use them in the "difficult" ones instead.
+  Usually, raising the sns value (at fixed -q value) leads to larger files,
+  but with better quality. Typical value is around '75'.
+- `f` option directly links to the filtering strength used by the codec's
+  in-loop processing. The higher the value, the smoother the highly-compressed
+  area will look. This is particularly useful when aiming at very small files.
+  Typical values are around 20-30. Note that using the option
+  -strong/-nostrong will change the type of filtering. Use "-f 0" to turn
+  filtering off.
+- `m` controls the trade-off between encoding speed and quality. Default is 4.
+  You can try -m 5 or -m 6 to explore more (time-consuming) encoding
+  possibilities. A lower value will result in faster encoding at the expense
+  of quality.
 
 ## Decoding tool
 

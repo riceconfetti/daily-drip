@@ -1,11 +1,11 @@
 {
-    "name": "Piper",
-    "rarity": 4,
-    "images": {
-        "gachaSplash": "piper/gachaSplash",
-        "gachaCard": "piper/gachaCard",
-        "bannerCard": "piper/bannerCard"
-    },
-    "element": "physical",
-    "weaponType": "zzz"
+	"name": "Piper",
+	"rarity": 4,
+	"images": {
+		"gachaSplash": "piper/gachaSplash",
+		"gachaCard": "piper/gachaCard",
+		"bannerCard": "piper/bannerCard"
+	},
+	"element": "physical",
+	"weaponType": "zzz"
 }
