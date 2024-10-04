@@ -42,13 +42,13 @@ export function addCharacter(answers) {
 		} else {
 			const aColors = answers.colors
 			characterObj.colors = {
-				primary: aColors.primary.isEmpty()
+				primary: !aColors.primary.isEmpty()
 					? `bg-gradient-to-r from-[#${aColors.primary[0]}] to-[#${aColors.primary[1]}]`
 					: 'bg-gradient-to-r from-[#000] to-[#FFF]',
-				secondary: aColors.secondary.isEmpty()
+				secondary: !aColors.secondary.isEmpty()
 					? `bg-gradient-to-t from-[#${aColors.secondary[0]}] to-[#${aColors.secondary[1]}00]`
 					: 'bg-gradient-to-t from-[#000] to-[#FFF00]',
-				textAccent: aColors.textAccent.isEmpty() ? `text-[#${aColors.textAccent}]` : 'text-[#000]'
+				textAccent: !aColors.textAccent.isEmpty() ? `text-[#${aColors.textAccent}]` : 'text-[#000]'
 			}
 		}
 	}

@@ -64,7 +64,7 @@ async function init() {
 			}
 
 			for (let c in colors) {
-				if (c != 'text') colors[c] = colors[c].split(' ')
+				if (c != 'text' && colors[c] != '') colors[c] = colors[c].split(' ')
 			}
 
 			character.colors = colors

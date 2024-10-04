@@ -1,17 +1,17 @@
 {
-    "name": "Mavuika",
-    "rarity": 5,
-    "images": {
-        "gachaSplash": "mavuika/gachaSplash",
-        "gachaCard": "mavuika/gachaCard",
-        "bannerCard": "mavuika/bannerCard"
-    },
-    "element": "pyro",
-    "weaponType": "genshin",
-    "bannerName": "?????",
-    "colors": {
-        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
-        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
-        "textAccent": "text-[#000]"
-    }
+	"name": "Mavuika",
+	"rarity": 5,
+	"images": {
+		"gachaSplash": "mavuika/gachaSplash",
+		"gachaCard": "mavuika/gachaCard",
+		"bannerCard": "mavuika/bannerCard"
+	},
+	"element": "pyro",
+	"weaponType": "genshin",
+	"bannerName": "?????",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
+		"secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
+		"textAccent": "text-[#000]"
+	}
 }

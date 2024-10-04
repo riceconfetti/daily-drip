@@ -1,50 +1,35 @@
 #!/usr/bin/env node
+import * as fs from 'fs'
+import dayjs from 'dayjs'
 
-const yargs = require('yargs')
-const fs = require('fs')
-const dayjs = require('dayjs')
+const SYMBOLS = /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g
 
-const options = yargs
-	.usage('Usage: -p <patch> -g <game> -n <name>')
-	.option('p', {
-		alias: 'patch',
-		describe: 'Patch',
-		type: 'number',
-		demandOption: true
-	})
-	.option('g', {
-		alias: 'game',
-		describe: 'Game',
-		type: 'string',
-		demandOption: true
-	})
-	.option('n', {
-		alias: 'name',
-		describe: 'Name',
-		type: 'string'
-	}).argv
-
-const versions = fs.readdirSync(`src/content/versions/${options.game}`)
-const lastVersion = JSON.parse(
-	fs.readFileSync(`src/content/versions/${options.game}/` + versions.at(-1), {
-		encoding: 'utf8',
-		flag: 'r'
-	})
-)
-
-let versionPath = `src/content/versions/${options.game}/${options.patch}.json`
-let versionObj = {
-	version: options.patch,
-	startDate: lastVersion.endDate,
-	midDate: dayjs(lastVersion.endDate).add(21, 'day').format('YYYY-MM-DD'),
-	endDate: dayjs(lastVersion.endDate).add(42, 'day').format('YYYY-MM-DD')
+String.prototype.isEmpty = function () {
+	return this.length === 0 || !this.trim()
 }
+export function addVersion(answers) {
+	const versions = fs.readdirSync(`src/content/versions/${answers.game}`)
+	const lastVersion = JSON.parse(
+		fs.readFileSync(`src/content/versions/${answers.game}/` + versions.at(-1), {
+			encoding: 'utf8',
+			flag: 'r'
+		})
+	)
 
-if (options.name) {
-	versionObj.name = options.name
-}
-fs.writeFile(versionPath, JSON.stringify(versionObj, null, 4), (err) => {
-	if (err) {
-		console.error(err)
+	let versionPath = `src/content/versions/${answers.game}/${answers.patch}.json`
+	let versionObj = {
+		version: answers.patch,
+		startDate: lastVersion.endDate,
+		midDate: dayjs(lastVersion.endDate).add(21, 'day').format('YYYY-MM-DD'),
+		endDate: dayjs(lastVersion.endDate).add(42, 'day').format('YYYY-MM-DD')
 	}
-})
+
+	if (answers.name) {
+		versionObj.name = answers.name
+	}
+	fs.writeFile(versionPath, JSON.stringify(versionObj, null, 4), (err) => {
+		if (err) {
+			console.error(err)
+		}
+	})
+}

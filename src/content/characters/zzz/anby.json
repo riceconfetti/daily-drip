@@ -1,11 +1,11 @@
 {
-    "name": "Anby",
-    "rarity": 4,
-    "images": {
-        "gachaSplash": "anby/gachaSplash",
-        "gachaCard": "anby/gachaCard",
-        "bannerCard": "anby/bannerCard"
-    },
-    "element": "electric",
-    "weaponType": "zzz"
+	"name": "Anby",
+	"rarity": 4,
+	"images": {
+		"gachaSplash": "anby/gachaSplash",
+		"gachaCard": "anby/gachaCard",
+		"bannerCard": "anby/bannerCard"
+	},
+	"element": "electric",
+	"weaponType": "zzz"
 }

@@ -1,8 +1,8 @@
 {
-    "status": "spec",
-    "type": "weapon",
-    "game": "starrail",
-    "startDate": "2024-10-02",
-    "endDate": "2024-10-15",
-    "weapon": "starrail/PlanetaryRendezvous"
+	"status": "spec",
+	"type": "weapon",
+	"game": "starrail",
+	"startDate": "2024-10-02",
+	"endDate": "2024-10-15",
+	"weapon": "starrail/PlanetaryRendezvous"
 }

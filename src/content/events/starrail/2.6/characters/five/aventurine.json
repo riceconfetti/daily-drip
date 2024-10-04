@@ -1,9 +1,9 @@
 {
-    "status": "spec",
-    "type": "banner",
-    "game": "starrail",
-    "startDate": "2024-10-02",
-    "endDate": "2024-10-15",
-    "character": "starrail/aventurine",
-    "weapon": "starrail/InherentlyUnjustDestiny"
+	"status": "spec",
+	"type": "banner",
+	"game": "starrail",
+	"startDate": "2024-10-02",
+	"endDate": "2024-10-15",
+	"character": "starrail/aventurine",
+	"weapon": "starrail/InherentlyUnjustDestiny"
 }

@@ -1,11 +1,11 @@
 {
-    "name": "Reca",
-    "rarity": 4,
-    "images": {
-        "gachaSplash": "reca/gachaSplash",
-        "gachaCard": "reca/gachaCard",
-        "bannerCard": "reca/bannerCard"
-    },
-    "element": "starrail",
-    "weaponType": "starrail"
+	"name": "Reca",
+	"rarity": 4,
+	"images": {
+		"gachaSplash": "reca/gachaSplash",
+		"gachaCard": "reca/gachaCard",
+		"bannerCard": "reca/bannerCard"
+	},
+	"element": "starrail",
+	"weaponType": "starrail"
 }

@@ -1,8 +1,8 @@
 {
-    "status": "spec",
-    "type": "debut",
-    "game": "starrail",
-    "startDate": "2024-10-15",
-    "endDate": "2024-11-05",
-    "character": "starrail/sunday"
+	"status": "spec",
+	"type": "debut",
+	"game": "starrail",
+	"startDate": "2024-10-15",
+	"endDate": "2024-11-05",
+	"character": "starrail/sunday"
 }

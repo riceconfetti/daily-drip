@@ -1,11 +1,11 @@
 {
-    "name": "Ororon",
-    "rarity": 4,
-    "images": {
-        "gachaSplash": "ororon/gachaSplash",
-        "gachaCard": "ororon/gachaCard",
-        "bannerCard": "ororon/bannerCard"
-    },
-    "element": "genshin",
-    "weaponType": "genshin"
+	"name": "Ororon",
+	"rarity": 4,
+	"images": {
+		"gachaSplash": "ororon/gachaSplash",
+		"gachaCard": "ororon/gachaCard",
+		"bannerCard": "ororon/bannerCard"
+	},
+	"element": "genshin",
+	"weaponType": "genshin"
 }

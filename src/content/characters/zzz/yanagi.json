@@ -1,17 +1,17 @@
 {
-    "name": "Yanagi",
-    "rarity": 5,
-    "images": {
-        "gachaSplash": "yanagi/gachaSplash",
-        "gachaCard": "yanagi/gachaCard",
-        "bannerCard": "yanagi/bannerCard"
-    },
-    "element": "electric",
-    "weaponType": "anomaly",
-    "bannerName": "?????",
-    "colors": {
-        "primary": "bg-gradient-to-r from-zzz-electric-gradient-from to-zzz-electric-gradient-to",
-        "secondary": "bg-gradient-to-t from-zzz-electric-gradient-from to-[#5DEDFC00]",
-        "textAccent": "text-[#4CFFFF]"
-    }
+	"name": "Yanagi",
+	"rarity": 5,
+	"images": {
+		"gachaSplash": "yanagi/gachaSplash",
+		"gachaCard": "yanagi/gachaCard",
+		"bannerCard": "yanagi/bannerCard"
+	},
+	"element": "electric",
+	"weaponType": "anomaly",
+	"bannerName": "?????",
+	"colors": {
+		"primary": "bg-gradient-to-r from-zzz-electric-gradient-from to-zzz-electric-gradient-to",
+		"secondary": "bg-gradient-to-t from-zzz-electric-gradient-from to-[#5DEDFC00]",
+		"textAccent": "text-[#4CFFFF]"
+	}
 }

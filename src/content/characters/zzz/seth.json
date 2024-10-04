@@ -1,11 +1,11 @@
 {
-    "name": "Seth",
-    "rarity": 4,
-    "images": {
-        "gachaSplash": "seth/gachaSplash",
-        "gachaCard": "seth/gachaCard",
-        "bannerCard": "seth/bannerCard"
-    },
-    "element": "electric",
-    "weaponType": "zzz"
+	"name": "Seth",
+	"rarity": 4,
+	"images": {
+		"gachaSplash": "seth/gachaSplash",
+		"gachaCard": "seth/gachaCard",
+		"bannerCard": "seth/bannerCard"
+	},
+	"element": "electric",
+	"weaponType": "zzz"
 }
