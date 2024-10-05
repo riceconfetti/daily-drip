@@ -53,11 +53,7 @@ export function addCharacter(answers) {
 		}
 	}
 
-	fs.writeFile(characterPath, JSON.stringify(characterObj, null, 4), (err) => {
-		if (err) {
-			console.error(err)
-		}
-	})
+	fs.writeFileSync(characterPath, JSON.stringify(characterObj, null, 4))
 }
 
 export function editCharacter(answers) {
@@ -86,9 +82,5 @@ export function editCharacter(answers) {
 		}
 	}
 
-	fs.writeFile(characterPath, JSON.stringify(characterObj, null, 4), (err) => {
-		if (err) {
-			console.error(err)
-		}
-	})
+	fs.writeFileSync(characterPath, JSON.stringify(characterObj, null, 4))
 }

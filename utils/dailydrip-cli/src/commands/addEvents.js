@@ -5,7 +5,7 @@ import ora from 'ora'
 import { addEvent } from '../lib/event.js'
 
 async function init() {
-	let character = {
+	let event = {
 		game: await select({
 			message: 'Select the game:',
 			choices: [
@@ -30,22 +30,39 @@ async function init() {
 		patch: await number({
 			message: 'Enter the patch number:'
 		}),
-		name: await input({
-			message: 'Enter the name patch:'
+		type: await input({
+			message: 'Enter the event type:'
 		}),
-		initialize: await confirm({ message: 'Do you want to initialize events?' })
+		status: await input({
+			message: 'Enter the event status:'
+		}),
+		phase: await number({
+			message: 'Enter the phase number:'
+		})
 	}
 
-	return character
+	if (['select', 'banner', 'debut', 'rate-up'].includes(event.type)) {
+		event.character = await input({
+			message: 'Enter character name:'
+		})
+	}
+
+	if (['select', 'banner', 'debut', 'weapon'].includes(event.type)) {
+		event.weapon = await input({
+			message: 'Enter weapon name:'
+		})
+	}
+
+	return event
 }
 
 const askQuestions = async () => {
-	const versionArray = []
+	const eventArray = []
 	let loop = false
 	do {
 		const userRes = await init()
-		versionArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to add more versions?' })
+		eventArray.push(userRes)
+		const confirmQ = await confirm({ message: 'Do you want to add more events?' })
 
 		if (confirmQ) {
 			loop = true
@@ -62,7 +79,7 @@ export default async function addEvents() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Adding characters...').start()
+		let spinner = ora('Adding events...').start()
 
 		for (let i in userResponse) {
 			const response = userResponse[i]
@@ -70,7 +87,7 @@ export default async function addEvents() {
 		}
 
 		spinner.stop()
-		console.log(chalk.greenBright('Versions added!'))
+		console.log(chalk.greenBright('Events added!'))
 	} catch (error) {
 		// Error Handling
 		console.log('Something went wrong, Error: ', error)

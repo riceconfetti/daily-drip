@@ -32,13 +32,12 @@ async function init() {
 		})
 	}
 
-	let loop = false
-	do {
-		const editValue = await select({
-			message: 'What do you want to edit?',
-			choice: ['name', 'rarity', 'element', 'weapon', 'banner', 'colors']
-		})
+	const actions = await checkbox({
+		message: 'What do you want to edit?',
+		choice: ['name', 'rarity', 'element', 'weapon', 'banner', 'colors']
+	})
 
+	for (const editValue of actions) {
 		switch (editValue) {
 			case 'name':
 				character.newName = await input({
@@ -66,7 +65,7 @@ async function init() {
 				break
 			case 'colors':
 				const colorType = await checkbox({
-					message: 'Select the palette you want to edit:',
+					message: 'Select the palette(s) you want to edit:',
 					choices: ['primary', 'secondary', 'textAccent']
 				})
 
@@ -84,16 +83,7 @@ async function init() {
 
 				break
 		}
-
-		const confirmValues = await confirm({ message: 'Do you want to edit another value?' })
-
-		if (confirmValues) {
-			loop = true
-			console.log(chalk.greenBright('.........'))
-		} else {
-			loop = false
-		}
-	} while (loop)
+	}
 
 	return character
 }
