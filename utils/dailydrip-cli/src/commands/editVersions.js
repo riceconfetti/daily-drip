@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { input, select, number, confirm } from '@inquirer/prompts'
+import { input, select, checkbox, number, confirm, search } from '@inquirer/prompts'
 import chalk from 'chalk'
 import ora from 'ora'
-import { addVersion } from '../lib/version.js'
+import { editVersion } from '../lib/version.js'
 
 async function init() {
 	let version = {
@@ -30,13 +30,33 @@ async function init() {
 		patch: await number({
 			message: 'Enter the patch number:',
 			step: 0.1
-		}),
-		name: await input({
-			message: 'Enter the patch name:'
-		}),
-		initialize: await confirm({ message: 'Do you want to initialize events?' })
+		})
 	}
 
+	const actions = await checkbox({
+		message: 'What do you want to edit?',
+		choices: ['name', 'startDate', 'midDate', 'endDate']
+	})
+
+	for (const editValue of actions) {
+		switch (editValue) {
+			case 'name':
+				version.status = await input({
+					message: 'Enter version name:'
+				})
+				break
+			case 'startDate':
+			case 'midDate':
+			case 'endDate':
+				version[editValue] = await input({
+					message: 'Enter new date:'
+				})
+				version.updateEvents = await confirm({
+					message: 'Do you want to update events?'
+				})
+				break
+		}
+	}
 	return version
 }
 
@@ -46,7 +66,7 @@ const askQuestions = async () => {
 	do {
 		const userRes = await init()
 		versionArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to add more versions?' })
+		const confirmQ = await confirm({ message: 'Do you want to edit more versions?' })
 
 		if (confirmQ) {
 			loop = true
@@ -59,19 +79,19 @@ const askQuestions = async () => {
 	return versionArray
 }
 
-export default async function addVersions() {
+export default async function editVersions() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Adding version...').start()
+		let spinner = ora('Editing versions...').start()
 
 		for (let i in userResponse) {
 			const response = userResponse[i]
-			addVersion(response)
+			editVersion(response)
 		}
 
 		spinner.stop()
-		console.log(chalk.greenBright('Versions added!'))
+		console.log(chalk.greenBright('Versions saved!'))
 	} catch (error) {
 		// Error Handling
 		console.log('Something went wrong, Error: ', error)

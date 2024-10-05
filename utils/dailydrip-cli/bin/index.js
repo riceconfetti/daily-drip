@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 import { program } from 'commander'
 import { select } from '@inquirer/prompts'
-import chalk from 'chalk'
 import addCharacters from '../src/commands/addCharacters.js'
+import addWeapons from '../src/commands/addWeapons.js'
+import addVersions from '../src/commands/addVersions.js'
+import addEvents from '../src/commands/addEvents.js'
 import editCharacters from '../src/commands/editCharacters.js'
+import editWeapons from '../src/commands/editWeapons.js'
+import editEvents from '../src/commands/editEvents.js'
+import editVersions from '../src/commands/editVersions.js'
 
 program.action(async () => {
 	let action = await select({

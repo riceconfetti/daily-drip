@@ -32,40 +32,30 @@ async function init() {
 		})
 	}
 
-	let loop = false
-	do {
-		const editValue = await select({
-			message: 'What do you want to edit?',
-			choice: ['name', 'rarity', 'type']
-		})
+	const actions = await checkbox({
+		message: 'What do you want to edit?',
+		choices: ['name', 'rarity', 'type']
+	})
 
+	for (const editValue of actions) {
 		switch (editValue) {
 			case 'name':
-				weapon.newName = await input({
+				weapon.name = await input({
 					message: 'Enter the new name'
 				})
+				break
 			case 'rarity':
 				weapon.rarity = await number({
 					message: 'Enter new rarity:'
 				})
 				break
 			case 'type':
-				weapon.type = await input({
+				weapon.weaponType = await input({
 					message: 'Enter new weapon type:'
 				})
 				break
 		}
-
-		const confirmValues = await confirm({ message: 'Do you want to edit another value?' })
-
-		if (confirmValues) {
-			loop = true
-			console.log(chalk.greenBright('.........'))
-		} else {
-			loop = false
-		}
-	} while (done)
-
+	}
 	return weapon
 }
 

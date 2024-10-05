@@ -16,6 +16,7 @@
 		"@inquirer/prompts": "^6.0.1",
 		"ansi-escapes": "^7.0.0",
 		"inquirer-action-select": "^0.0.3",
+		"inquirer-file-selector": "^0.4.0",
 		"ora": "^8.1.0",
 		"yargs": "13.2"
 	}

@@ -1,7 +1,4 @@
-#!/usr/bin/env node
 import * as fs from 'fs'
-
-const SYMBOLS = /[\s~`!@#$%^&*(){}\[\];:"'<,.>?\/\\|_+=-]/g
 
 export function addEvent(answers) {
 	let eventPath = `src/content/events/${answers.game}/${answers.patch}`
@@ -37,33 +34,32 @@ export function addEvent(answers) {
 	}
 
 	if (['select', 'banner', 'debut', 'rate-up'].includes(answers.type)) {
-		eventObj.character = `${answers.game}/${answers.name}`
+		eventObj.character = `${answers.game}/${answers.character}`
 	}
 
 	if (answers.weapon) {
 		eventObj.weapon = `${answers.game}/${answers.weapon}`
 	}
 
-	fs.writeFile(eventPath, JSON.stringify(eventObj, null, 4), (err) => {
-		if (err) {
-			console.error(err)
-		}
-	})
+	fs.writeFileSync(eventPath, JSON.stringify(eventObj, null, 4))
 }
 
 export function editEvent(answers) {
-	let game = answers.path.split('/')[0]
+	let game = answers.path.split('events\\')[1].split('\\')[0]
 	let version = JSON.parse(
-		fs.readFileSync(`${game}/${answers.path.split('/')[2]}.json`, {
-			encoding: 'utf8',
-			flag: r
-		})
+		fs.readFileSync(
+			`src/content/versions/${game}/${answers.path.split('events\\')[1].split('\\')[1]}.json`,
+			{
+				encoding: 'utf8',
+				flag: 'r'
+			}
+		)
 	)
 	let eventPath = answers.path
 	let eventObj = JSON.parse(
 		fs.readFileSync(eventPath, {
 			encoding: 'utf8',
-			flag: r
+			flag: 'r'
 		})
 	)
 
@@ -73,14 +69,10 @@ export function editEvent(answers) {
 			eventObj.endDate = value == 1 ? version.midDate : version.endDate
 		} else if (key == 'character' || key == 'weapon') {
 			eventObj[key] = game + '/' + value
-		} else {
+		} else if (key != 'path') {
 			eventObj[key] = value
 		}
 	}
 
-	fs.writeFile(eventPath, JSON.stringify(eventObj, null, 4), (err) => {
-		if (err) {
-			console.error(err)
-		}
-	})
+	fs.writeFileSync(eventPath, JSON.stringify(eventObj, null, 4))
 }

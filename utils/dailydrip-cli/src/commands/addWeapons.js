@@ -47,7 +47,7 @@ const askQuestions = async () => {
 	do {
 		const userRes = await init()
 		weaponArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to add more characters?' })
+		const confirmQ = await confirm({ message: 'Do you want to add more weapons?' })
 
 		if (confirmQ) {
 			loop = true
