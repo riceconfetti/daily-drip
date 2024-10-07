@@ -1,6 +1,8 @@
 {
-	"version": 2.6,
-	"startDate": "2024-10-15",
-	"midDate": "2024-10-02",
-	"endDate": "2024-10-15"
+    "version": 2.6,
+    "startDate": "2024-10-15",
+    "midDate": "2024-10-02",
+    "endDate": "2024-10-15",
+    "game": "starrail",
+    "status": "Annals of Pinecany's Mappou Age"
 }

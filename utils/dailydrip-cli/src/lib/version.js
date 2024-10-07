@@ -164,7 +164,7 @@ function initializeEvents(game, patch, version) {
 
 export function editVersion(answers) {
 	let versionPath = `src/content/versions/${answers.game}/${answers.patch}.json`
-	let versionObj = JSON.parse(fs.readFileSync(versionPath, { encoding: 'utf8', flag: r }))
+	let versionObj = JSON.parse(fs.readFileSync(versionPath))
 
 	for (const [key, value] of Object.entries(answers)) {
 		if (key == 'patch') {
