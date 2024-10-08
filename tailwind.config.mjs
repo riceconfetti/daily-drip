@@ -1,22 +1,58 @@
+import { fontFamily } from 'tailwindcss/defaultTheme'
+
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
+	darkMode: ['class'],
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,json}'],
+	safelist: ['dark'],
 	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px'
+			}
+		},
 		extend: {
 			fontSize: {
 				xs: '.75rem',
 				'2xs': '.6rem',
 				'3xs': '.35rem'
 			},
-			fontFamily: {
-				genshin: ['Behind the Nineties', 'serif'],
-				genshinSmall: ['"Yeseva One"', 'serif'],
-				starrail: ['"Bai Jamjuree"', 'sans-serif'],
-				reverse: ['"Playfair Display SC"', 'serif'],
-				wuwa: ['"Philosopher"', 'serif'],
-				zzz: ['Akira Expanded', 'san-serif']
-			},
 			colors: {
+				border: 'hsl(var(--border) / <alpha-value>)',
+				input: 'hsl(var(--input) / <alpha-value>)',
+				ring: 'hsl(var(--ring) / <alpha-value>)',
+				background: 'hsl(var(--background) / <alpha-value>)',
+				foreground: 'hsl(var(--foreground) / <alpha-value>)',
+				primary: {
+					DEFAULT: 'hsl(var(--primary) / <alpha-value>)',
+					foreground: 'hsl(var(--primary-foreground) / <alpha-value>)'
+				},
+				secondary: {
+					DEFAULT: 'hsl(var(--secondary) / <alpha-value>)',
+					foreground: 'hsl(var(--secondary-foreground) / <alpha-value>)'
+				},
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive) / <alpha-value>)',
+					foreground: 'hsl(var(--destructive-foreground) / <alpha-value>)'
+				},
+				muted: {
+					DEFAULT: 'hsl(var(--muted) / <alpha-value>)',
+					foreground: 'hsl(var(--muted-foreground) / <alpha-value>)'
+				},
+				accent: {
+					DEFAULT: 'hsl(var(--accent) / <alpha-value>)',
+					foreground: 'hsl(var(--accent-foreground) / <alpha-value>)'
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover) / <alpha-value>)',
+					foreground: 'hsl(var(--popover-foreground) / <alpha-value>)'
+				},
+				card: {
+					DEFAULT: 'hsl(var(--card) / <alpha-value>)',
+					foreground: 'hsl(var(--card-foreground) / <alpha-value>)'
+				},
 				dark: '#232323',
 				light: '#D1D1D1',
 				text: {
@@ -192,8 +228,24 @@ export default {
 					ether: { gradient: { from: '#F70307', to: '#8BC6FC' } },
 					default: { gradient: { from: '#212322', to: '#FF6801' } }
 				}
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				sans: [...fontFamily.sans],
+				genshin: ['Behind the Nineties', 'serif'],
+				genshinSmall: ['"Yeseva One"', 'serif'],
+				starrail: ['"Bai Jamjuree"', 'sans-serif'],
+				reverse: ['"Playfair Display SC"', 'serif'],
+				wuwa: ['"Philosopher"', 'serif'],
+				zzz: ['Akira Expanded', 'san-serif']
 			}
 		}
 	},
 	plugins: [require('tailwind-gradient-mask-image')]
 }
+
+export default config
