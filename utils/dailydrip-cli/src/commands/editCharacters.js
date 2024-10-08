@@ -34,7 +34,7 @@ async function init() {
 
 	const actions = await checkbox({
 		message: 'What do you want to edit?',
-		choice: ['name', 'rarity', 'element', 'weapon', 'banner', 'colors']
+		choices: ['name', 'rarity', 'element', 'weapon', 'banner', 'colors']
 	})
 
 	for (const editValue of actions) {
@@ -59,7 +59,7 @@ async function init() {
 				})
 				break
 			case 'banner':
-				character.banner = await input({
+				character.bannerName = await input({
 					message: 'Enter banner name:'
 				})
 				break

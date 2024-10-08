@@ -22,8 +22,9 @@ async function init() {
 	for (const editValue of actions) {
 		switch (editValue) {
 			case 'status':
-				event.status = await input({
-					message: 'Enter event status:'
+				event.status = await select({
+					message: 'Select event status:',
+					choices: ['spec', 'confirmed']
 				})
 				break
 			case 'type':

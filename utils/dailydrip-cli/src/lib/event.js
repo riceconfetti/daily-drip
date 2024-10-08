@@ -2,6 +2,9 @@ import * as fs from 'fs'
 
 export function addEvent(answers) {
 	let eventPath = `src/content/events/${answers.game}/${answers.patch}`
+	let version = JSON.parse(
+		fs.readFileSync(`src/content/versions/${answers.game}/${answers.patch}.json`)
+	)
 	switch (answers.type) {
 		case 'select':
 		case 'banner':
@@ -23,7 +26,7 @@ export function addEvent(answers) {
 		fs.mkdirSync(eventPath, { recursive: true })
 	}
 
-	eventPath += `/${answers.type == 'chronicle' ? 'chronicle_' : '' + (answers.name != undefined ? answers.name : answers.weapon != undefined ? answers.weapon : 'phase_' + answers.half)}.json`
+	eventPath += `/${answers.type == 'chronicle' ? 'chronicle_' : '' + (answers.character ? answers.character : answers.weapon ? answers.weapon : 'phase_' + answers.phase)}.json`
 
 	let eventObj = {
 		status: answers.status,
