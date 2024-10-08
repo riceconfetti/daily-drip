@@ -28,7 +28,8 @@ async function init() {
 			]
 		}),
 		patch: await number({
-			message: 'Enter the patch number:'
+			message: 'Enter the patch number:',
+			step: 0.1
 		}),
 		type: await input({
 			message: 'Enter the event type:'
