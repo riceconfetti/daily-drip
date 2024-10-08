@@ -41,7 +41,7 @@ async function init() {
 	for (const editValue of actions) {
 		switch (editValue) {
 			case 'name':
-				version.status = await input({
+				version.name = await input({
 					message: 'Enter version name:'
 				})
 				break

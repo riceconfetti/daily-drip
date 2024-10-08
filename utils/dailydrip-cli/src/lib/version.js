@@ -169,7 +169,7 @@ export function editVersion(answers) {
 	for (const [key, value] of Object.entries(answers)) {
 		if (key == 'patch') {
 			versionObj.version = value
-		} else {
+		} else if (key != 'game') {
 			versionObj[key] = value
 		}
 	}
