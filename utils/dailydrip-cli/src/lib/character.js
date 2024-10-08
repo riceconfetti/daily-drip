@@ -58,9 +58,9 @@ export function addCharacter(answers) {
 
 export function editCharacter(answers) {
 	const characterKey = answers.key
-	const characterPath = `/src/content/characters/${answers.game}/${characterKey}.json`
+	const characterPath = `src/content/characters/${answers.game}/${characterKey}.json`
 
-	let characterObj = JSON.parse(fs.readFileSync(characterPath, { encoding: utf8, flags: r }))
+	let characterObj = JSON.parse(fs.readFileSync(characterPath))
 
 	for (const [key, value] of Object.entries(answers)) {
 		if (key == 'colors') {

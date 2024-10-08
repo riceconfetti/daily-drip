@@ -31,24 +31,26 @@ async function init() {
 			message: 'Enter the patch number:',
 			step: 0.1
 		}),
-		type: await input({
-			message: 'Enter the event type:'
-		}),
-		status: await input({
-			message: 'Enter the event status:'
-		}),
 		phase: await number({
 			message: 'Enter the phase number:'
+		}),
+		type: await select({
+			message: 'Select the event type:',
+			choices: ['banner', 'rate-up', 'weapon', 'debut', 'select', 'chronicle']
+		}),
+		status: await select({
+			message: 'Select the event status:',
+			choices: ['spec', 'confirmed']
 		})
 	}
 
-	if (['select', 'banner', 'debut', 'rate-up'].includes(event.type)) {
+	if (['select', 'banner', 'debut', 'rate-up', 'chronicle'].includes(event.type)) {
 		event.character = await input({
 			message: 'Enter character name:'
 		})
 	}
 
-	if (['select', 'banner', 'debut', 'weapon'].includes(event.type)) {
+	if (['select', 'banner', 'debut', 'weapon', 'chronicle'].includes(event.type)) {
 		event.weapon = await input({
 			message: 'Enter weapon name:'
 		})
@@ -73,7 +75,7 @@ const askQuestions = async () => {
 		}
 	} while (loop)
 
-	return characterArray
+	return eventArray
 }
 
 export default async function addEvents() {
