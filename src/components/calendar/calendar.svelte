@@ -27,7 +27,6 @@
 	for (let i = 0; i < dayjs().daysInMonth(); i++) {}
 
 	function getDay(date) {
-		console.log(dayjs(new Date(init.year, init.month, date + 1)).day())
 		return dayjs(new Date(init.year, init.month, date + 1)).day()
 	}
 </script>
