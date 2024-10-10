@@ -1,0 +1,65 @@
+{
+  "$ref": "#/definitions/games",
+  "definitions": {
+    "games": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "times": {
+          "type": "object",
+          "properties": {
+            "maintenance": {
+              "type": "string",
+              "format": "time"
+            },
+            "version": {
+              "type": "string",
+              "format": "time"
+            },
+            "update": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "zone": {
+                    "type": "string"
+                  },
+                  "time": {
+                    "type": "string",
+                    "format": "time"
+                  }
+                },
+                "required": [
+                  "zone",
+                  "time"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "maintenance",
+            "version",
+            "update"
+          ],
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "icon",
+        "times"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
