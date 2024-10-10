@@ -1,0 +1,33 @@
+{
+  "$ref": "#/definitions/weapons",
+  "definitions": {
+    "weapons": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "rarity": {
+          "type": "number"
+        },
+        "weaponType": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "rarity",
+        "weaponType",
+        "icon"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

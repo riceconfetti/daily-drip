@@ -68,19 +68,25 @@ async function init() {
 					message: 'Select the palette(s) you want to edit:',
 					choices: ['primary', 'secondary', 'textAccent']
 				})
+				let colorObj = {
+					primary: '',
+					secondary: '',
+					textAccent: ''
+				}
 
-				colorType.forEach(async (t) => {
+				for (const t of colorType) {
 					const colors = await input({
 						message: 'Enter new color(s):'
 					})
+					console.log(t)
 
 					if (t == 'primary' || t == 'secondary') {
-						character.colors[t] == colors.split(' ')
+						colorObj[t] = colors.split(' ')
 					} else {
-						character.colors[t] == colors
+						colorObj[t] = colors
 					}
-				})
-
+				}
+				character.colors = colorObj
 				break
 		}
 	}

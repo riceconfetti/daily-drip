@@ -1,0 +1,130 @@
+{
+  "$ref": "#/definitions/versions",
+  "definitions": {
+    "versions": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "midDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "weapons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fiveStars": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "collection": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "collection"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "slug": {
+                          "type": "string"
+                        },
+                        "collection": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "slug",
+                        "collection"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              },
+              "fourStars": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "collection": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "collection"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "slug": {
+                          "type": "string"
+                        },
+                        "collection": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "slug",
+                        "collection"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              }
+            },
+            "required": [
+              "fiveStars",
+              "fourStars"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

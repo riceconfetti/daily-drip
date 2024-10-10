@@ -1,19 +1,17 @@
 {
-    "name": "Sunday",
-    "rarity": 5,
-    "images": {
-        "gachaSplash": "sunday/gachaSplash",
-        "gachaCard": "sunday/gachaCard",
-        "bannerCard": "sunday/bannerCard"
-    },
-    "element": "imaginary",
-    "weaponType": "harmony",
-    "bannerName": "?????",
-    "colors": {
-        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
-        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
-        "textAccent": "text-[#000]"
-    },
-    "game": "starrail",
-    "key": "sunday"
+	"name": "Sunday",
+	"rarity": 5,
+	"images": {
+		"gachaSplash": "sunday/gachaSplash",
+		"gachaCard": "sunday/gachaCard",
+		"bannerCard": "sunday/bannerCard"
+	},
+	"element": "imaginary",
+	"weaponType": "harmony",
+	"bannerName": "?????",
+	"colors": {
+		"primary": "bg-gradient-to-r from-[#1D3368] to-[#ABBCCF]",
+		"secondary": "bg-gradient-to-t from-[#193066] to-[#8D8EB000]",
+		"textAccent": "text-[#D7BA5C]"
+	}
 }

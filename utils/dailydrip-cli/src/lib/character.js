@@ -62,22 +62,30 @@ export function editCharacter(answers) {
 
 	let characterObj = JSON.parse(fs.readFileSync(characterPath))
 
+	console.log(Object.entries(answers))
 	for (const [key, value] of Object.entries(answers)) {
 		if (key == 'colors') {
 			for (const [k, v] of Object.entries(value)) {
 				switch (k) {
 					case 'textAccent':
-						characterObj[k] = `text-[#${v}]`
+						characterObj.colors[k] = v != '' ? `text-[#${v}]` : 'text-[#000]'
 						break
 					case 'primary':
-						characterObj[k] = `bg-gradient-to-r from-[#${v[0]}] to-[#${v[1]}]`
+						console.log(v)
+						characterObj.colors[k] =
+							v != ''
+								? `bg-gradient-to-r from-[#${v[0]}] to-[#${v[1]}]`
+								: 'bg-gradient-to-r from-[#000] to-[#FFF]'
 						break
 					case 'secondary':
-						characterObj[k] = `bg-gradient-to-t from-[#${v[0]}] to-[#${v[1]}00]`
+						characterObj.colors[k] =
+							v != ''
+								? `bg-gradient-to-t from-[#${v[0]}] to-[#${v[1]}00]`
+								: 'bg-gradient-to-t from-[#000] to-[#FFF00]'
 						break
 				}
 			}
-		} else {
+		} else if (!['game', 'key'].includes(key)) {
 			characterObj[key] = value
 		}
 	}

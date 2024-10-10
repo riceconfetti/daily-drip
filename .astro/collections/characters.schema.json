@@ -1,0 +1,70 @@
+{
+  "$ref": "#/definitions/characters",
+  "definitions": {
+    "characters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "rarity": {
+          "type": "number"
+        },
+        "element": {
+          "type": "string"
+        },
+        "weaponType": {
+          "type": "string"
+        },
+        "bannerName": {
+          "type": "string"
+        },
+        "colors": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "string"
+            },
+            "secondary": {
+              "type": "string"
+            },
+            "textAccent": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "primary",
+            "secondary",
+            "textAccent"
+          ],
+          "additionalProperties": false
+        },
+        "images": {
+          "type": "object",
+          "properties": {
+            "gachaSplash": {
+              "type": "string"
+            },
+            "gachaCard": {
+              "type": "string"
+            },
+            "bannerCard": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "rarity",
+        "element"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
