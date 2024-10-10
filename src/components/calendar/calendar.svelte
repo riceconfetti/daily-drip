@@ -81,8 +81,12 @@
 		gsap.registerPlugin(ScrollTrigger, Observer)
 
 		gsap.set('.weekBefore', { yPercent: -100 })
-		gsap.to('.weekBefore', { yPercent: 0 })
-		gsap.to('.mainWeeks', { yPercent: 25 })
+		function getbefore() {
+			gsap.to('.weekBefore', { yPercent: 0 })
+			gsap.to('.mainWeeks', { yPercent: 25 })
+		}
+
+		document.querySelector('.mainWeeks').addEventListener('click', getbefore)
 	})
 </script>
 
