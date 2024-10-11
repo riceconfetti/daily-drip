@@ -1,0 +1,17 @@
+{
+    "name": "Fugue",
+    "rarity": 5,
+    "images": {
+        "gachaSplash": "fugue/gachaSplash",
+        "gachaCard": "fugue/gachaCard",
+        "bannerCard": "fugue/bannerCard"
+    },
+    "element": "fire",
+    "weaponType": "nihility",
+    "bannerName": "?????",
+    "colors": {
+        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
+        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
+        "textAccent": "text-[#000]"
+    }
+}

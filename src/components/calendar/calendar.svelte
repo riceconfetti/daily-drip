@@ -10,6 +10,8 @@
 	import gsap from 'gsap/dist/gsap'
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 	import { Observer } from 'gsap/dist/Observer'
+	import { settings } from '$scripts/settings'
+	import CalendarEvent from './calendar-event.svelte'
 
 	dayjs.extend(isoWeek)
 	dayjs.extend(weekOfYear)
@@ -109,7 +111,6 @@
 	}
 
 	let calendar = initCalendar(calendarMap)
-	let newCalendar = initCalendar(calendarMap)
 	let refDate = calendar.main[1][4]
 
 	onMount(() => {
@@ -161,6 +162,48 @@
 			})
 		}
 	})
+
+	export let events, versions, games, characters
+
+	let eventMap = events.map((e) => {
+		let game = e.data.game.id
+		let version = versions.find((v) => v.id.startsWith(game + '/' + e.id.split('/')[1])).data
+		let gameData = games.find((g) => g.id.startsWith(game)).data
+		let cData = characters.find((c) => c.id == e.data.character.id).data
+
+		let times = {
+			start: version.startDate + `T${gameData.times.version}Z`,
+			mid:
+				version.midDate +
+				`T${gameData.times.update.find((t) => t.zone == settings.get()[game]).time}Z`,
+			end: version.endDate + `T${gameData.times.maintenance}Z`
+		}
+
+		let event = e
+		event.game = game
+		event.label = cData.bannerName
+		event.element = cData.element
+
+		if (e.data.startDate == version.startDate) {
+			event.startWeek = dayjs.utc(times.start).isoWeek()
+			event.endWeek = dayjs.utc(times.mid).isoWeek()
+
+			event.startDate = dayjs.utc(times.start).tz(dayjs.tz.guess())
+			event.endDate = dayjs.utc(times.mid).tz(dayjs.tz.guess())
+		} else {
+			event.startWeek = dayjs.utc(times.mid).isoWeek()
+			event.endWeek = dayjs.utc(times.end).isoWeek()
+
+			event.startDate = dayjs.utc(times.mid).tz(dayjs.tz.guess())
+			event.endDate = dayjs.utc(times.end).tz(dayjs.tz.guess())
+		}
+
+		return event
+	})
+
+	function getEvents(events, week) {
+		return events.filter((e) => e.startWeek <= week && e.endWeek >= week)
+	}
 </script>
 
 <main id="fullPageCalendar" class="w-full h-full p-2 flex flex-col gap-2">
@@ -177,10 +220,13 @@
 	<div class="calendar w-full h-full relative overflow-hidden">
 		<!-- Before -->
 		<div
-			class="panel weekBefore z-10 top-0 border-b-0 absolute inset-x-0 border box-border border-dark border-opacity-30 h-1/4"
+			class="panel weekBefore top-0 border-b-0 absolute inset-x-0 border box-border grid grid-cols-8 border-dark border-opacity-30 h-1/4"
 		>
+			<div class="p-4 h-full w-full flex items-center justify-center">
+				<p>{calendar.before[0].isoWeek()}</p>
+			</div>
 			<div
-				class="relative w-full h-full text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-7 bg-light"
+				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 h-full grid-flow-dense"
 			>
 				{#each calendar.before as day}
 					<div
@@ -190,16 +236,23 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min"
-				></div>
+					class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense"
+				>
+					{#each getEvents(eventMap, calendar.before[0].isoWeek()) as event}
+						<CalendarEvent game={event.game} {event} week={calendar.before[0].isoWeek()} />
+					{/each}
+				</div>
 			</div>
 		</div>
 
 		<!-- Main -->
 		<div
-			class="panel mainWeeks box-border absolute inset-0 border border-dark border-opacity-30 w-full grid grid-cols-7 auto-rows-auto divide-y divide-dark divide-opacity-30 bg-light"
+			class="panel mainWeeks box-border absolute inset-0 border border-dark border-opacity-30 w-full grid grid-cols-8 auto-rows-auto divide-y divide-dark divide-opacity-30 bg-light"
 		>
 			{#each calendar.main as week, index}
+				<div class="p-4 h-full w-full flex items-center justify-center">
+					<p>{week[0].isoWeek()}</p>
+				</div>
 				<div
 					class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7"
 				>
@@ -212,18 +265,25 @@
 					{/each}
 
 					<div
-						class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min"
-					></div>
+						class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense"
+					>
+						{#each getEvents(eventMap, week[0].isoWeek()) as event}
+							<CalendarEvent game={event.game} {event} week={week[0].isoWeek()} />
+						{/each}
+					</div>
 				</div>
 			{/each}
 		</div>
 
 		<!-- After -->
 		<div
-			class="panel weekAfter bottom-0 border-t-0 absolute inset-x-0 border box-border border-dark border-opacity-30 h-1/4"
+			class="panel weekAfter bottom-0 border-t-0 absolute inset-x-0 border box-border grid grid-cols-8 border-dark border-opacity-30 h-1/4"
 		>
+			<div class="p-4 h-full w-full flex items-center justify-center">
+				<p>{calendar.after[0].isoWeek()}</p>
+			</div>
 			<div
-				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-7 bg-light h-full w-full"
+				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 bg-light h-full"
 			>
 				{#each calendar.after as day}
 					<div
@@ -233,8 +293,12 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min"
-				></div>
+					class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense"
+				>
+					{#each getEvents(eventMap, calendar.after[0].isoWeek()) as event}
+						<CalendarEvent game={event.game} {event} week={calendar.after[0].isoWeek()} />
+					{/each}
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1045,6 +1045,11 @@ declare module 'astro:content' {
   collection: "characters";
   data: InferEntrySchema<"characters">
 };
+"starrail/fugue": {
+	id: "starrail/fugue";
+  collection: "characters";
+  data: InferEntrySchema<"characters">
+};
 "starrail/fuxuan": {
 	id: "starrail/fuxuan";
   collection: "characters";
@@ -2014,6 +2019,11 @@ declare module 'astro:content' {
 };
 "starrail/2.6/weapons/DreamsMontage": {
 	id: "starrail/2.6/weapons/DreamsMontage";
+  collection: "events";
+  data: InferEntrySchema<"events">
+};
+"starrail/2.7/characters/five/fugue": {
+	id: "starrail/2.7/characters/five/fugue";
   collection: "events";
   data: InferEntrySchema<"events">
 };

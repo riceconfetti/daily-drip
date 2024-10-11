@@ -28,7 +28,7 @@
 					dayjs
 						.utc(
 							e.data.startDate +
-								`T${gameData.times.update.find((t) => t.zone == settings.get().genshin).time}Z`
+								`T${gameData.times.update.find((t) => t.zone == settings.get()[game]).time}Z`
 						)
 						.tz(dayjs.tz.guess())
 						.format('YYYY-MM-DD')
@@ -100,7 +100,7 @@
 									{date}
 									month={month.value}
 									data-game={event}
-									class="crimson-text-regular rounded-9px text-foreground hover:border-foreground data-[selected]:text-background data-[unavailable]:text-muted-foreground group relative inline-flex aspect-square h-auto w-full items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-transparent p-2 text-sm font-normal leading-none data-[outside-month]:pointer-events-none data-[game='genshin']:bg-genshin-event data-[game='zzz']:bg-zzz-event data-[game='starrail']:bg-starrail-event data-[game='wuwa']:bg-wuwa-event data-[game='genshin']:text-white data-[game='zzz']:text-white data-[game='starrail']:text-white data-[game='wuwa']:text-white data-[disabled]:opacity-20 md:min-h-0 md:w-min md:p-[.35rem]"
+									class="crimson-text-regular rounded-9px text-foreground hover:border-foreground data-[selected]:text-background group relative inline-flex aspect-square h-auto w-full items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-transparent p-2 text-sm font-normal leading-none data-[outside-month]:pointer-events-none data-[game='genshin']:bg-genshin-event data-[game='zzz']:bg-zzz-event data-[game='starrail']:bg-starrail-event data-[game='wuwa']:bg-wuwa-event data-[game='genshin']:text-white data-[game='zzz']:text-white data-[game='starrail']:text-white data-[game='wuwa']:text-white data-[disabled]:opacity-20 md:min-h-0 md:w-min md:p-[.35rem]"
 								>
 									{date.day}
 								</Calendar.Day>
