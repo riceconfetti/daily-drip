@@ -204,6 +204,7 @@
 	function getEvents(events, week) {
 		return events.filter((e) => e.startWeek <= week && e.endWeek >= week)
 	}
+	let testing = false
 </script>
 
 <main id="fullPageCalendar" class="w-full h-full p-2 flex flex-col gap-2">
@@ -220,11 +221,13 @@
 	<div class="calendar w-full h-full relative overflow-hidden">
 		<!-- Before -->
 		<div
-			class="panel weekBefore top-0 border-b-0 absolute inset-x-0 border box-border grid grid-cols-8 border-dark border-opacity-30 h-1/4"
+			class={`panel weekBefore top-0 border-b-0 absolute inset-x-0 border box-border grid border-dark border-opacity-30 h-1/4 ${testing ? 'grid-cols-8' : 'grid-cols-7'}`}
 		>
-			<div class="p-4 h-full w-full flex items-center justify-center">
-				<p>{calendar.before[0].isoWeek()}</p>
-			</div>
+			{#if testing}
+				<div class="p-4 h-full w-full flex items-center justify-center">
+					<p>{calendar.before[0].isoWeek()}</p>
+				</div>
+			{/if}
 			<div
 				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 h-full grid-flow-dense"
 			>
@@ -247,12 +250,14 @@
 
 		<!-- Main -->
 		<div
-			class="panel mainWeeks box-border absolute inset-0 border border-dark border-opacity-30 w-full grid grid-cols-8 auto-rows-auto divide-y divide-dark divide-opacity-30 bg-light"
+			class={`panel mainWeeks box-border absolute inset-0 border border-dark border-opacity-30 w-full grid auto-rows-auto divide-y divide-dark divide-opacity-30 bg-light ${testing ? 'grid-cols-8' : 'grid-cols-7'}`}
 		>
 			{#each calendar.main as week, index}
-				<div class="p-4 h-full w-full flex items-center justify-center">
-					<p>{week[0].isoWeek()}</p>
-				</div>
+				{#if testing}
+					<div class="p-4 h-full w-full flex items-center justify-center">
+						<p>{week[0].isoWeek()}</p>
+					</div>
+				{/if}
 				<div
 					class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7"
 				>
@@ -277,11 +282,13 @@
 
 		<!-- After -->
 		<div
-			class="panel weekAfter bottom-0 border-t-0 absolute inset-x-0 border box-border grid grid-cols-8 border-dark border-opacity-30 h-1/4"
+			class={`panel weekAfter bottom-0 border-t-0 absolute inset-x-0 border box-border grid border-dark border-opacity-30 h-1/4 ${testing ? 'grid-cols-8' : 'grid-cols-7'}`}
 		>
-			<div class="p-4 h-full w-full flex items-center justify-center">
-				<p>{calendar.after[0].isoWeek()}</p>
-			</div>
+			{#if testing}
+				<div class="p-4 h-full w-full flex items-center justify-center">
+					<p>{calendar.after[0].isoWeek()}</p>
+				</div>
+			{/if}
 			<div
 				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 bg-light h-full"
 			>
