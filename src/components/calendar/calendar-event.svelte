@@ -1,5 +1,5 @@
 <script lang="ts">
-	import colors from '$assets/gradients.json'
+	import colors from './colors.json'
 	export let game, event, week
 
 	const startDay = [
@@ -30,5 +30,5 @@
 <button
 	class={` mx-2 px-2 flex items-start rounded h-5 text-ellipsis truncate ${game} ${startDay[start(week)]} ${durations[duration(week)]} ${colors[game][event.element]}`}
 >
-	<p class="text-light text-opacity-70 mix-blend-screen">{event.label}</p>
+	<p class="">{event.label}</p>
 </button>

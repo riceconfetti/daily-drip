@@ -131,42 +131,49 @@ const config = {
 				starrail: {
 					event: '#6D2628',
 					wind: {
+						bg: '#5AA07A',
 						gradient: {
 							from: '#32693E',
 							to: '#BAE9C0'
 						}
 					},
 					lightning: {
+						bg: '#9650A1',
 						gradient: {
 							from: '#49104B',
 							to: '#E687FE'
 						}
 					},
 					physical: {
+						bg: '#9650A1',
 						gradient: {
 							from: '#413D3D',
 							to: '#B8B8B8'
 						}
 					},
 					fire: {
+						bg: '#C73131',
 						gradient: {
 							from: '#4F2B1E',
 							to: '#FA8562'
 						}
 					},
 					ice: {
+						bg: '#B8E3F1',
 						gradient: {
 							from: '#218BCD',
 							to: '#BDF3FF'
 						}
 					},
 					quantum: {
+						bg: '#786CC0',
 						gradient: {
 							from: '#32267E',
 							to: '#9E9BE5'
 						}
 					},
 					imaginary: {
+						bg: '#D1C65C',
 						gradient: {
 							from: '#C2AC16',
 							to: '#FFF398'
@@ -179,36 +186,42 @@ const config = {
 				wuwa: {
 					event: '#464953',
 					spectro: {
+						bg: '#CAC062',
 						gradient: {
 							from: '#322F24',
 							to: '#AE9A4E'
 						}
 					},
 					aero: {
+						bg: '#5AA094',
 						gradient: {
 							from: '#252724',
 							to: '#779573'
 						}
 					},
 					glacio: {
+						bg: '#B8E3F1',
 						gradient: {
 							from: '#232A2B',
 							to: '#54A4B1'
 						}
 					},
 					electro: {
+						bg: '#A255B6',
 						gradient: {
 							from: '#29242A',
 							to: '#945AA1'
 						}
 					},
 					fusion: {
+						bg: '#DF3E5B',
 						gradient: {
 							from: '#2B2124',
 							to: '#C23D5E'
 						}
 					},
 					havoc: {
+						bg: '#CA0079',
 						gradient: {
 							from: '#2B1F25',
 							to: '#91285B'
