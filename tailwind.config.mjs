@@ -145,7 +145,7 @@ const config = {
 						}
 					},
 					physical: {
-						bg: '#9650A1',
+						bg: '#A3A3A3',
 						gradient: {
 							from: '#413D3D',
 							to: '#B8B8B8'
