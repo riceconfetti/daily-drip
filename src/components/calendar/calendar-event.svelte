@@ -25,10 +25,12 @@
 	const start = (week) => (week > event.startWeek ? 1 : event.startDate.day())
 	const duration = (week) =>
 		week < event.endWeek ? 7 - start(week) : event.endDate.day() - start(week) - 1
+
+	console.log(event.data.character)
 </script>
 
 <button
-	class={` mx-2 px-2 flex items-start rounded h-3 text-ellipsis truncate ${game} ${startDay[start(week)]} ${durations[duration(week)]} ${colors[game][event.element]}`}
+	class={` mx-2 px-2 flex items-center justify-items-start rounded h-3 md:h-5 text-ellipsis truncate ${game} ${startDay[start(week)]} ${durations[duration(week)]} ${event.colors.primary} ${event.colors.textAccent} `}
 >
 	<p class="text-2xs leading-tight">{event.label}</p>
 </button>

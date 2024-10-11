@@ -183,6 +183,7 @@
 		event.game = game
 		event.label = cData.bannerName
 		event.element = cData.element
+		event.colors = cData.colors
 
 		if (e.data.startDate == version.startDate) {
 			event.startWeek = dayjs.utc(times.start).isoWeek()
