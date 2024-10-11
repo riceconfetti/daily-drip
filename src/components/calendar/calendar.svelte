@@ -229,7 +229,7 @@
 				</div>
 			{/if}
 			<div
-				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 h-full grid-flow-dense"
+				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 h-full"
 			>
 				{#each calendar.before as day}
 					<div
@@ -239,7 +239,7 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense"
+					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full"
 				>
 					{#each getEvents(eventMap, calendar.before[0].isoWeek()) as event}
 						<CalendarEvent game={event.game} {event} week={calendar.before[0].isoWeek()} />
@@ -259,7 +259,7 @@
 					</div>
 				{/if}
 				<div
-					class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7"
+					class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 overflow-auto"
 				>
 					{#each week as day}
 						<div
@@ -270,7 +270,7 @@
 					{/each}
 
 					<div
-						class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense"
+						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full"
 					>
 						{#each getEvents(eventMap, week[0].isoWeek()) as event}
 							<CalendarEvent game={event.game} {event} week={week[0].isoWeek()} />
@@ -300,7 +300,7 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense"
+					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-auto"
 				>
 					{#each getEvents(eventMap, calendar.after[0].isoWeek()) as event}
 						<CalendarEvent game={event.game} {event} week={calendar.after[0].isoWeek()} />
