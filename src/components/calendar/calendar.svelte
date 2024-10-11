@@ -126,10 +126,9 @@
 			wheelSpeed: -1,
 			tolerance: 50,
 			preventDefault: true,
-			onPress: (self) => {
-				// on touch devices like iOS, if we want to prevent scrolling, we must call preventDefault() on the touchstart (Observer doesn't do that because that would also prevent side-scrolling which is undesirable in most cases)
-				ScrollTrigger.isTouch && self.event.preventDefault()
-			}
+			allowClicks: true,
+			onEnable: (self) => (self.savedScroll = self.scrollY()), // save the scroll position
+			onChangeY: (self) => self.scrollY(self.savedScroll) // refuse to scroll
 		})
 
 		function getBefore() {
@@ -178,15 +177,22 @@
 	<div class="calendar w-full h-full relative overflow-hidden">
 		<!-- Before -->
 		<div
-			class="panel weekBefore z-10 top-0 border-b-0 absolute inset-x-0 border box-border border-dark border-opacity-30 text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-7 bg-light h-1/4"
+			class="panel weekBefore z-10 top-0 border-b-0 absolute inset-x-0 border box-border border-dark border-opacity-30 h-1/4"
 		>
-			{#each calendar.before as day}
+			<div
+				class="relative w-full h-full text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-7 bg-light"
+			>
+				{#each calendar.before as day}
+					<div
+						class={`${columns[day.day()]} p-2 crimson-text-regular ${dayjs().isSame(day, 'day') ? 'text-accent-light' : ''} ${day.month() != refDate.month() ? 'bg-dark bg-opacity-10' : ''}`}
+					>
+						{day.date()}
+					</div>
+				{/each}
 				<div
-					class={`${columns[day.day()]} p-2 crimson-text-regular ${dayjs().isSame(day, 'day') ? 'text-accent-light' : ''} ${day.month() != refDate.month() ? 'bg-dark bg-opacity-10' : ''}`}
-				>
-					{day.date()}
-				</div>
-			{/each}
+					class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min"
+				></div>
+			</div>
 		</div>
 
 		<!-- Main -->
@@ -195,7 +201,7 @@
 		>
 			{#each calendar.main as week, index}
 				<div
-					class=" text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7"
+					class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7"
 				>
 					{#each week as day}
 						<div
@@ -204,21 +210,32 @@
 							{day.date()}
 						</div>
 					{/each}
+
+					<div
+						class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min"
+					></div>
 				</div>
 			{/each}
 		</div>
 
 		<!-- After -->
 		<div
-			class="panel box-border border-t-0 weekAfter -z-10 bottom-0 absolute inset-x-0 border border-dark border-opacity-30 text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-7 bg-light h-1/4"
+			class="panel weekAfter bottom-0 border-t-0 absolute inset-x-0 border box-border border-dark border-opacity-30 h-1/4"
 		>
-			{#each calendar.after as day}
+			<div
+				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-7 bg-light h-full w-full"
+			>
+				{#each calendar.after as day}
+					<div
+						class={`${columns[day.day()]} p-2 crimson-text-regular ${dayjs().isSame(day, 'day') ? 'text-accent-light' : ''} ${day.month() != refDate.month() ? 'bg-dark bg-opacity-10' : ''}`}
+					>
+						{day.date()}
+					</div>
+				{/each}
 				<div
-					class={`${columns[day.day()]} p-2 crimson-text-regular ${dayjs().isSame(day, 'day') ? 'text-accent-light' : ''} ${day.month() != refDate.month() ? 'bg-dark bg-opacity-10' : ''}`}
-				>
-					{day.date()}
-				</div>
-			{/each}
+					class="absolute inset-y-2 top-10 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min"
+				></div>
+			</div>
 		</div>
 	</div>
 </main>
