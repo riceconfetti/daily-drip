@@ -28,7 +28,7 @@
 </script>
 
 <button
-	class={` mx-2 px-2 flex items-start rounded h-5 text-ellipsis truncate ${game} ${startDay[start(week)]} ${durations[duration(week)]} ${colors[game][event.element]}`}
+	class={` mx-2 px-2 flex items-start rounded h-3 text-ellipsis truncate ${game} ${startDay[start(week)]} ${durations[duration(week)]} ${colors[game][event.element]}`}
 >
-	<p class="">{event.label}</p>
+	<p class="text-2xs leading-tight">{event.label}</p>
 </button>
