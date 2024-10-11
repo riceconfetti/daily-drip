@@ -8,7 +8,7 @@ String.prototype.isEmpty = function () {
 
 export function addCharacter(answers) {
 	const characterKey = answers.key ? answers.key : answers.name.toLowerCase().replace(SYMBOLS, '')
-	const characterPath = `/src/content/characters/${answers.game}/${characterKey}.json`
+	const characterPath = `src/content/characters/${answers.game}/${characterKey}.json`
 
 	let characterObj = {
 		name: answers.name,

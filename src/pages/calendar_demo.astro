@@ -2,8 +2,20 @@
 import Layout from '../layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { Calendar } from '$components/calendar'
+
+const events = await getCollection('events', ({ data }) => {
+	return (
+		data.status == 'confirmed' && ['select', 'debut', 'banner', 'chronicle'].includes(data.type)
+	)
+})
+
+const games = await getCollection('games')
+
+const versions = await getCollection('versions')
+
+const characters = await getCollection('characters')
 ---
 
 <Layout title="The Daily Drip">
-	<Calendar client:load />
+	<Calendar {events} {games} {versions} {characters} client:load />
 </Layout>
