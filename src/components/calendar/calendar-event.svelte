@@ -1,6 +1,9 @@
 <script lang="ts">
-	import colors from './colors.json'
+	import { twMerge } from 'tailwind-merge'
 	export let game, event, week
+	let className = ''
+
+	export { className as class }
 
 	const startDay = [
 		'col-start-7',
@@ -26,11 +29,25 @@
 	const duration = (week) =>
 		week < event.endWeek ? 7 - start(week) : event.endDate.day() - start(week) - 1
 
-	console.log(event.data.character)
+	const fontMultipliers = {
+		genshin: 1,
+		starrail: 1,
+		wuwa: 1,
+		zzz: 0.75
+	}
 </script>
 
 <button
-	class={` mx-2 px-2 flex items-center justify-items-start rounded h-3 md:h-5 text-ellipsis truncate ${game} ${startDay[start(week)]} ${durations[duration(week)]} ${event.colors.primary} ${event.colors.textAccent} `}
+	class={twMerge(
+		`mx-2 px-2 flex items-center justify-items-start rounded h-3 md:h-5 text-ellipsis truncate ${game} ${startDay[start(week)]} ${durations[duration(week)]} ${event.colors.primary} ${event.colors.textAccent}`,
+		className
+	)}
 >
-	<p class="text-2xs leading-tight">{event.label}</p>
+	<p
+		style:--2xs={`${fontMultipliers[game] * 0.5}rem`}
+		style:--xs={`${fontMultipliers[game] * 0.7}rem`}
+		class="text-[length:var(--2xs)] md:text-[length:var(--xs)] leading-tight text-ellipsis truncate w-full text-left"
+	>
+		{event.label}
+	</p>
 </button>
