@@ -11,7 +11,7 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 	import { Observer } from 'gsap/dist/Observer'
 	import { settings } from '$scripts/settings'
-	import CalendarEvent from './calendar-event.svelte'
+	import { GridRow, Cell, Event } from './index.ts'
 
 	dayjs.extend(isoWeek)
 	dayjs.extend(weekOfYear)
@@ -19,6 +19,7 @@
 	dayjs.extend(timezone)
 	dayjs.extend(arraySupport)
 
+	const testing = false
 	const Day_Headings = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 	const columns = [
 		'col-start-7',
@@ -30,6 +31,9 @@
 		'col-start-6'
 	]
 
+	let windowWidth
+	let weekHeight
+	$: weeksDisplayed = windowWidth < 768 ? 3 : 4
 	const date = dayjs().date()
 	const month = dayjs().month()
 	const year = dayjs().year()
@@ -61,8 +65,12 @@
 			}
 		}
 
-		while (calendar.main.length > 4) {
-			calendar.after = calendar.main.pop()
+		while (calendar.main.length > weeksDisplayed) {
+			if (calendar.main.at(-1).includes([year, month, date])) {
+				calendar.before = calendar.main.shift()
+			} else {
+				calendar.after = calendar.main.pop()
+			}
 		}
 
 		if (calendar.before.length == 0) {
@@ -114,6 +122,7 @@
 	let refDate = calendar.main[1][4]
 
 	onMount(() => {
+		calendar = initCalendar(calendarMap)
 		gsap.registerPlugin(ScrollTrigger, Observer)
 		gsap.set('.weekBefore', { yPercent: -100 })
 		gsap.set('.weekAfter', { yPercent: 100 })
@@ -132,16 +141,20 @@
 			onChangeY: (self) => self.scrollY(self.savedScroll) // refuse to scroll
 		})
 
+		const duration = 0.7
+		const ease = 'power2.out'
 		function getBefore() {
 			animating = true
-			gsap.to('.calendar .weekBefore', { yPercent: 0 })
+			gsap.to('.calendar .weekBefore', { yPercent: 0, duration: duration, ease: ease })
 			gsap.to('.calendar .mainWeeks', {
-				yPercent: 25,
+				y: weekHeight,
+				duration: duration,
+				ease: ease,
 				onComplete: () => {
 					calendar = goBackWeek(calendar)
 					refDate = calendar.main[1][4]
 					gsap.set('.calendar .weekBefore', { yPercent: -100 })
-					gsap.set('.calendar .mainWeeks', { yPercent: 0 })
+					gsap.set('.calendar .mainWeeks', { y: 0 })
 					animating = false
 				}
 			})
@@ -149,14 +162,16 @@
 
 		function getAfter() {
 			animating = true
-			gsap.to('.calendar .weekAfter', { yPercent: 0 })
+			gsap.to('.calendar .weekAfter', { yPercent: 0, duration: duration, ease: ease })
 			gsap.to('.calendar .mainWeeks', {
-				yPercent: -25,
+				y: -1 * weekHeight,
+				duration: duration,
+				ease: ease,
 				onComplete: () => {
 					calendar = goForwardWeek(calendar)
 					refDate = calendar.main[1][4]
 					gsap.set('.calendar .weekAfter', { yPercent: 100 })
-					gsap.set('.calendar .mainWeeks', { yPercent: 0 })
+					gsap.set('.calendar .mainWeeks', { y: 0 })
 					animating = false
 				}
 			})
@@ -205,10 +220,16 @@
 	function getEvents(events, week) {
 		return events.filter((e) => e.startWeek <= week && e.endWeek >= week)
 	}
-	let testing = false
 </script>
 
-<main id="fullPageCalendar" class="w-full h-full p-2 flex flex-col gap-2">
+<main
+	id="fullPageCalendar"
+	class="w-full h-full p-2 flex flex-col gap-2"
+	bind:clientWidth={windowWidth}
+>
+	<!-- <button class="absolute top-2 left-2 rounded bg-dark text-accent-dark p-2"
+		>{weeksDisplayed}</button
+	> -->
 	<h2 class="playfair-display-sc-bold text-xl text-black text-opacity-70">
 		{refDate.format('MMMM')}
 	</h2>
@@ -222,16 +243,15 @@
 	<div class="calendar w-full h-full relative overflow-hidden">
 		<!-- Before -->
 		<div
-			class={`panel weekBefore top-0 border-b-0 absolute inset-x-0 border box-border grid border-dark border-opacity-30 h-1/4 ${testing ? 'grid-cols-8' : 'grid-cols-7'}`}
+			style:--weekHeight={weekHeight + 'px'}
+			class={`panel weekBefore top-0 border-b-0 absolute inset-x-0 border box-border grid border-dark border-opacity-30 h-[var(--weekHeight)] ${testing ? 'grid-cols-8' : 'grid-cols-7'}`}
 		>
 			{#if testing}
 				<div class="p-4 h-full w-full flex items-center justify-center">
 					<p>{calendar.before[0].isoWeek()}</p>
 				</div>
 			{/if}
-			<div
-				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 h-full"
-			>
+			<GridRow>
 				{#each calendar.before as day}
 					<div
 						class={`${columns[day.day()]} p-2 crimson-text-regular ${dayjs().isSame(day, 'day') ? 'text-accent-light' : ''} ${day.month() != refDate.month() ? 'bg-dark bg-opacity-10' : ''}`}
@@ -240,13 +260,13 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full"
+					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 				>
 					{#each getEvents(eventMap, calendar.before[0].isoWeek()) as event}
-						<CalendarEvent game={event.game} {event} week={calendar.before[0].isoWeek()} />
+						<Event game={event.game} {event} week={calendar.before[0].isoWeek()} />
 					{/each}
 				</div>
-			</div>
+			</GridRow>
 		</div>
 
 		<!-- Main -->
@@ -259,11 +279,10 @@
 						<p>{week[0].isoWeek()}</p>
 					</div>
 				{/if}
-				<div
-					class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 overflow-auto"
-				>
+				<GridRow>
 					{#each week as day}
 						<div
+							bind:clientHeight={weekHeight}
 							class={`${columns[day.day()]} p-2 crimson-text-regular ${dayjs().isSame(day, 'day') ? 'text-accent-light' : ''} ${day.month() != refDate.month() ? 'bg-dark bg-opacity-10' : ''}`}
 						>
 							{day.date()}
@@ -271,28 +290,28 @@
 					{/each}
 
 					<div
-						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full"
+						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 					>
 						{#each getEvents(eventMap, week[0].isoWeek()) as event}
-							<CalendarEvent game={event.game} {event} week={week[0].isoWeek()} />
+							<Event game={event.game} {event} week={week[0].isoWeek()} />
 						{/each}
 					</div>
-				</div>
+				</GridRow>
 			{/each}
 		</div>
 
 		<!-- After -->
 		<div
-			class={`panel weekAfter bottom-0 border-t-0 absolute inset-x-0 border box-border grid border-dark border-opacity-30 h-1/4 ${testing ? 'grid-cols-8' : 'grid-cols-7'}`}
+			style:--weekHeight={weekHeight + 'px'}
+			class={`panel weekAfter bottom-0 border-t-0 absolute inset-x-0 border box-border grid border-dark border-opacity-30 h-[var(--weekHeight)] ${testing ? 'grid-cols-8' : 'grid-cols-7'}`}
 		>
 			{#if testing}
 				<div class="p-4 h-full w-full flex items-center justify-center">
 					<p>{calendar.after[0].isoWeek()}</p>
 				</div>
 			{/if}
-			<div
-				class="relative text-sm divide-x divide-dark divide-opacity-30 grid grid-cols-subgrid w-full col-span-7 bg-light h-full"
-			>
+
+			<GridRow>
 				{#each calendar.after as day}
 					<div
 						class={`${columns[day.day()]} p-2 crimson-text-regular ${dayjs().isSame(day, 'day') ? 'text-accent-light' : ''} ${day.month() != refDate.month() ? 'bg-dark bg-opacity-10' : ''}`}
@@ -301,13 +320,13 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-auto"
+					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 				>
 					{#each getEvents(eventMap, calendar.after[0].isoWeek()) as event}
-						<CalendarEvent game={event.game} {event} week={calendar.after[0].isoWeek()} />
+						<Event game={event.game} {event} week={calendar.after[0].isoWeek()} />
 					{/each}
 				</div>
-			</div>
+			</GridRow>
 		</div>
 	</div>
 </main>
