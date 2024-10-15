@@ -25,6 +25,16 @@ const config = {
 				'span-21': 'span 21 / span 21',
 				'span-22': 'span 22 / span 22'
 			},
+			gridColumnStart: {
+				14: '14',
+				15: '15',
+				16: '16',
+				17: '17',
+				18: '18',
+				19: '19',
+				20: '20',
+				21: '21'
+			},
 			gridTemplateColumns: {
 				// Simple 16 column grid
 				21: 'repeat(21, minmax(0, 1fr))'

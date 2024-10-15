@@ -28,7 +28,13 @@
 	const start = (week) => (week > event.startWeek ? 1 : event.startDate.day())
 	const duration = (week) => {
 		if (week == event.startWeek) {
-			console.log(durations[8 - start(week)])
+			if (start(week) == 0) {
+				return durations[1][2]
+			} else {
+				return durations[8 - start(week)][2]
+			}
+		} else if (week == event.endWeek) {
+			return durations[7 - event.endDate.day()][0]
 		}
 		// else if (week < event.endWeek && week > event.startWeek) {
 		// 	return durations[7 - start(week)]
@@ -44,12 +50,6 @@
 		zzz: 0.75
 	}
 
-	if (duration(week) == undefined) {
-		console.log(week)
-		console.log(start(week))
-		console.log(event.startDate.day() + ' - ' + event.endDate.day())
-		console.log(event.label)
-	}
 	//
 </script>
 
