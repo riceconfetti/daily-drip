@@ -35,6 +35,8 @@
 			}
 		} else if (week == event.endWeek) {
 			return durations[7 - event.endDate.day()][0]
+		} else {
+			return durations[7][2]
 		}
 		// else if (week < event.endWeek && week > event.startWeek) {
 		// 	return durations[7 - start(week)]
