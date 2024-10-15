@@ -227,9 +227,11 @@ export function getPhase(game, versionData, number, collections) {
 export function getTimeVersion(version, timezone, game) {
 	let v = JSON.parse(JSON.stringify(version))
 
-	v.startDate = version.startDate + `T${game.times.version}Z`
-	v.midDate = version.midDate + `T${game.times.update.find((t) => t.zone == timezone).time}Z`
-	v.endDate = version.endDate + `T${game.times.maintenance}Z`
+	v.startDate = version.startDate + `T${game.times.version + game.times.zones.dev}`
+	v.midDate = version.midDate + `T${game.times.update + game.times.zones[timezone]}`
+	v.endDate =
+		version.endDate +
+		`T${game.times.maintenance + game.name != 'Zenless Zone Zero' ? game.times.zones.dev : game.times.zone[timezone]}`
 
 	v.phases[0].date = v.startDate
 	v.phases[1].date = v.midDate

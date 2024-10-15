@@ -6,14 +6,15 @@ const gameCollection = defineCollection({
 		name: z.string(),
 		icon: z.string(),
 		times: z.object({
-			maintenance: z.string().time(),
-			version: z.string().time(),
-			update: z.array(
-				z.object({
-					zone: z.string(),
-					time: z.string().time()
-				})
-			)
+			version: z.string(),
+			update: z.string(),
+			maintenance: z.string(),
+			zones: z.object({
+				dev: z.string(),
+				as: z.string(),
+				eu: z.string(),
+				na: z.string()
+			})
 		})
 	})
 })
