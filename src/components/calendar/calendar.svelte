@@ -5,7 +5,8 @@
 	import isoWeek from 'dayjs/plugin/isoWeek'
 	import weekOfYear from 'dayjs/plugin/weekOfYear'
 	import arraySupport from 'dayjs/plugin/arraySupport'
-	import groupBy from 'core-js/actual/array/group-by'
+	import pkg from 'core-js/actual/array/group-by'
+	const { groupBy } = pkg
 	import { onMount } from 'svelte'
 	import gsap from 'gsap/dist/gsap'
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
@@ -37,13 +38,12 @@
 	const date = dayjs().date()
 	const month = dayjs().month()
 	const year = dayjs().year()
-	const weeksInMonth = Math.ceil(dayjs().daysInMonth() / 7)
 	const calendarMap = Array(dayjs().daysInMonth())
 		.fill(0)
 		.map((_, i) => dayjs([year, month, i + 1]))
 		.groupBy((d) => d.isoWeek())
 
-	function initCalendar(calendarMap) {
+	function initCalendar(calendarMap: Object) {
 		let calendar = {
 			before: [],
 			main: Object.entries(calendarMap).map((x) => x[1]),
@@ -187,11 +187,12 @@
 		let cData = characters.find((c) => c.id == e.data.character.id).data
 
 		let times = {
-			start: version.startDate + `T${gameData.times.version}Z`,
+			start: version.startDate + `T${gameData.times.version + gameData.times.zones.dev}`,
 			mid:
-				version.midDate +
-				`T${gameData.times.update.find((t) => t.zone == settings.get()[game]).time}Z`,
-			end: version.endDate + `T${gameData.times.maintenance}Z`
+				version.midDate + `T${gameData.times.update + gameData.times.zones[settings.get()[game]]}`,
+			end:
+				version.endDate +
+				`T${gameData.times.maintenance + (game != 'zzz' ? gameData.times.zones.dev : gameData.times.zones[settings.get()['zzz']])}`
 		}
 
 		let event = e
@@ -201,19 +202,20 @@
 		event.colors = cData.colors
 
 		if (e.data.startDate == version.startDate) {
+			// console.log('phase 1')
 			event.startWeek = dayjs.utc(times.start).isoWeek()
 			event.endWeek = dayjs.utc(times.mid).isoWeek()
 
-			event.startDate = dayjs.utc(times.start).tz(dayjs.tz.guess())
-			event.endDate = dayjs.utc(times.mid).tz(dayjs.tz.guess())
+			event.startDate = dayjs.utc(times.start)
+			event.endDate = dayjs.utc(times.mid)
 		} else {
+			// console.log('phase 2')
 			event.startWeek = dayjs.utc(times.mid).isoWeek()
 			event.endWeek = dayjs.utc(times.end).isoWeek()
 
-			event.startDate = dayjs.utc(times.mid).tz(dayjs.tz.guess())
-			event.endDate = dayjs.utc(times.end).tz(dayjs.tz.guess())
+			event.startDate = dayjs.utc(times.mid)
+			event.endDate = dayjs.utc(times.end)
 		}
-
 		return event
 	})
 
@@ -290,8 +292,29 @@
 					{/each}
 
 					<div
-						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
+						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-21 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 					>
+						<button class="bg-accent-dark rounded">1</button>
+						<button class="bg-accent-dark rounded">2</button>
+						<button class="bg-accent-dark rounded">3</button>
+						<button class="bg-accent-dark rounded">4</button>
+						<button class="bg-accent-dark rounded">5</button>
+						<button class="bg-accent-dark rounded">6</button>
+						<button class="bg-accent-dark rounded">7</button>
+						<button class="bg-accent-dark rounded">8</button>
+						<button class="bg-accent-dark rounded">9</button>
+						<button class="bg-accent-dark rounded">10</button>
+						<button class="bg-accent-dark rounded">11</button>
+						<button class="bg-accent-dark rounded">12</button>
+						<button class="bg-accent-dark rounded">13</button>
+						<button class="bg-accent-dark rounded">14</button>
+						<button class="bg-accent-dark rounded">15</button>
+						<button class="bg-accent-dark rounded">16</button>
+						<button class="bg-accent-dark rounded">17</button>
+						<button class="bg-accent-dark rounded">18</button>
+						<button class="bg-accent-dark rounded">19</button>
+						<button class="bg-accent-dark rounded">20</button>
+						<button class="bg-accent-dark rounded">21</button>
 						{#each getEvents(eventMap, week[0].isoWeek()) as event}
 							<Event game={event.game} {event} week={week[0].isoWeek()} />
 						{/each}

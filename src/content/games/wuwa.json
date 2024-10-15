@@ -2,15 +2,14 @@
 	"name": "Wuthering Waves",
 	"icon": "",
 	"times": {
-		"version": "12:00:00",
-		"maintenance": "12:00:00",
-		"update": [
-			{ "zone": "as", "time": "12:00:00" },
-			{ "zone": "hmt", "time": "12:00:00" },
-			{ "zone": "sea", "time": "12:00:00" },
-			{ "zone": "eu", "time": "12:00:00" },
-			{ "zone": "na", "time": "12:00:00" }
-		],
-		"reset": "07:00:00"
+		"version": "11:00:00",
+		"update": "10:00:00",
+		"maintenance": "04:00:00",
+		"zones": {
+			"dev": "+08:00",
+			"as": "+08:00",
+			"eu": "+01:00",
+			"na": "-05:00"
+		}
 	}
 }

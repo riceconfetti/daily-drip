@@ -2224,11 +2224,6 @@ declare module 'astro:content' {
   collection: "games";
   data: InferEntrySchema<"games">
 };
-"reverse": {
-	id: "reverse";
-  collection: "games";
-  data: InferEntrySchema<"games">
-};
 "starrail": {
 	id: "starrail";
   collection: "games";

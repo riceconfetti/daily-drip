@@ -11,30 +11,28 @@
 
 	let eventDates = Object.fromEntries(
 		events.map((e) => {
-			let game = e.data.game.id
-			let version = versions.find((v) => v.id.startsWith(game + '/' + e.id.split('/')[1])).data
-			let gameData = games.find((g) => g.id.startsWith(game)).data
+			let version = versions.find((v) =>
+				v.id.startsWith(e.data.game.id + '/' + e.id.split('/')[1])
+			).data
+			let game = games.find((g) => g.id.startsWith(e.data.game.id))
+
+			let times = {
+				start: version.startDate + `T${game.data.times.version + game.data.times.zones.dev}`,
+				mid:
+					version.midDate +
+					`T${game.data.times.update + game.data.times.zones[settings.get()[game.id]]}`,
+				end:
+					version.endDate +
+					`T${game.data.times.maintenance + (game.data.name != 'Zenless Zone Zero' ? game.data.times.zones.dev : game.data.times.zones[settings.get()[game.id]])}`
+			}
 
 			let event = []
 			if (e.data.startDate == version.startDate) {
-				event.push(
-					dayjs
-						.utc(e.data.startDate + `T${gameData.times.version}Z`)
-						.tz(dayjs.tz.guess())
-						.format('YYYY-MM-DD')
-				)
+				event.push(dayjs.utc(times.start).tz(dayjs.tz.guess()).format('YYYY-MM-DD'))
 			} else {
-				event.push(
-					dayjs
-						.utc(
-							e.data.startDate +
-								`T${gameData.times.update.find((t) => t.zone == settings.get()[game]).time}Z`
-						)
-						.tz(dayjs.tz.guess())
-						.format('YYYY-MM-DD')
-				)
+				event.push(dayjs.utc(times.mid).tz(dayjs.tz.guess()).format('YYYY-MM-DD'))
 			}
-			event.push(game)
+			event.push(game.id)
 			return event
 		})
 	)
@@ -68,7 +66,7 @@
 
 	{#each months as month, i (i)}
 		<Calendar.Grid
-			class="md:flex md:h-full md:w-full md:border-collapse md:flex-col md:gap-4 md:text-left lg:min-h-0"
+			class="md:flex md:h-full md:w-full md:border-collapse md:flex-col md:gap-4 md:text-left md:min-h-0"
 		>
 			<Calendar.GridHead class="hidden h-min md:block">
 				<Calendar.GridRow
