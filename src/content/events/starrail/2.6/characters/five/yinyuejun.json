@@ -1,9 +1,9 @@
 {
-	"status": "spec",
+	"status": "confirmed",
 	"type": "banner",
 	"game": "starrail",
-	"startDate": "2024-10-02",
-	"endDate": "2024-10-15",
+	"startDate": "2024-10-23",
+	"endDate": "2024-11-13",
 	"character": "starrail/yinyuejun",
 	"weapon": "starrail/BrighterThantheSun"
 }

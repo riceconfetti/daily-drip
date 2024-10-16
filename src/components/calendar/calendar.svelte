@@ -2,7 +2,6 @@
 	import dayjs from 'dayjs'
 	import utc from 'dayjs/plugin/utc'
 	import timezone from 'dayjs/plugin/timezone'
-	import isoWeek from 'dayjs/plugin/isoWeek'
 	import weekOfYear from 'dayjs/plugin/weekOfYear'
 	import arraySupport from 'dayjs/plugin/arraySupport'
 	import pkg from 'core-js/actual/array/group-by'
@@ -14,22 +13,21 @@
 	import { settings } from '$scripts/settings'
 	import { GridRow, Cell, Event } from './index.ts'
 
-	dayjs.extend(isoWeek)
 	dayjs.extend(weekOfYear)
 	dayjs.extend(utc)
 	dayjs.extend(timezone)
 	dayjs.extend(arraySupport)
 
 	const testing = false
-	const Day_Headings = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+	const Day_Headings = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 	const columns = [
-		'col-start-7',
 		'col-start-1',
 		'col-start-2',
 		'col-start-3',
 		'col-start-4',
 		'col-start-5',
-		'col-start-6'
+		'col-start-6',
+		'col-start-7'
 	]
 
 	let windowWidth
@@ -41,7 +39,7 @@
 	const calendarMap = Array(dayjs().daysInMonth())
 		.fill(0)
 		.map((_, i) => dayjs([year, month, i + 1]))
-		.groupBy((d) => d.isoWeek())
+		.groupBy((d) => d.week())
 
 	function initCalendar(calendarMap: Object) {
 		let calendar = {
@@ -203,15 +201,15 @@
 
 		if (e.data.startDate == version.startDate) {
 			// console.log('phase 1')
-			event.startWeek = dayjs.utc(times.start).isoWeek()
-			event.endWeek = dayjs.utc(times.mid).isoWeek()
+			event.startWeek = dayjs.utc(times.start).week()
+			event.endWeek = dayjs.utc(times.mid).week()
 
 			event.startDate = dayjs.utc(times.start)
 			event.endDate = dayjs.utc(times.mid)
 		} else {
 			// console.log('phase 2')
-			event.startWeek = dayjs.utc(times.mid).isoWeek()
-			event.endWeek = dayjs.utc(times.end).isoWeek()
+			event.startWeek = dayjs.utc(times.mid).week()
+			event.endWeek = dayjs.utc(times.end).week()
 
 			event.startDate = dayjs.utc(times.mid)
 			event.endDate = dayjs.utc(times.end)
@@ -250,7 +248,7 @@
 		>
 			{#if testing}
 				<div class="p-4 h-full w-full flex items-center justify-center">
-					<p>{calendar.before[0].isoWeek()}</p>
+					<p>{calendar.before[0].week()}</p>
 				</div>
 			{/if}
 			<GridRow>
@@ -264,8 +262,8 @@
 				<div
 					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 				>
-					{#each getEvents(eventMap, calendar.before[0].isoWeek()) as event}
-						<Event game={event.game} {event} week={calendar.before[0].isoWeek()} />
+					{#each getEvents(eventMap, calendar.before[0].week()) as event}
+						<Event game={event.game} {event} week={calendar.before[0].week()} />
 					{/each}
 				</div>
 			</GridRow>
@@ -278,7 +276,7 @@
 			{#each calendar.main as week, index}
 				{#if testing}
 					<div class="p-4 h-full w-full flex items-center justify-center">
-						<p>{week[0].isoWeek()}</p>
+						<p>{week[0].week()}</p>
 					</div>
 				{/if}
 				<GridRow>
@@ -294,7 +292,7 @@
 					<div
 						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-21 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 					>
-						<button class="bg-accent-dark rounded">1</button>
+						<!-- <button class="bg-accent-dark rounded">1</button>
 						<button class="bg-accent-dark rounded">2</button>
 						<button class="bg-accent-dark rounded">3</button>
 						<button class="bg-accent-dark rounded">4</button>
@@ -314,9 +312,9 @@
 						<button class="bg-accent-dark rounded">18</button>
 						<button class="bg-accent-dark rounded">19</button>
 						<button class="bg-accent-dark rounded">20</button>
-						<button class="bg-accent-dark rounded">21</button>
-						{#each getEvents(eventMap, week[0].isoWeek()) as event}
-							<Event game={event.game} {event} week={week[0].isoWeek()} />
+						<button class="bg-accent-dark rounded">21</button> -->
+						{#each getEvents(eventMap, week[0].week()) as event}
+							<Event game={event.game} {event} week={week[0].week()} />
 						{/each}
 					</div>
 				</GridRow>
@@ -330,7 +328,7 @@
 		>
 			{#if testing}
 				<div class="p-4 h-full w-full flex items-center justify-center">
-					<p>{calendar.after[0].isoWeek()}</p>
+					<p>{calendar.after[0].week()}</p>
 				</div>
 			{/if}
 
@@ -345,8 +343,8 @@
 				<div
 					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 				>
-					{#each getEvents(eventMap, calendar.after[0].isoWeek()) as event}
-						<Event game={event.game} {event} week={calendar.after[0].isoWeek()} />
+					{#each getEvents(eventMap, calendar.after[0].week()) as event}
+						<Event game={event.game} {event} week={calendar.after[0].week()} />
 					{/each}
 				</div>
 			</GridRow>
