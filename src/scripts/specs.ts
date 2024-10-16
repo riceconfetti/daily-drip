@@ -231,7 +231,7 @@ export function getTimeVersion(version, timezone, game) {
 	v.midDate = version.midDate + `T${game.times.update + game.times.zones[timezone]}`
 	v.endDate =
 		version.endDate +
-		`T${game.times.maintenance + game.name != 'Zenless Zone Zero' ? game.times.zones.dev : game.times.zone[timezone]}`
+		`T${game.times.maintenance + (game.name != 'Zenless Zone Zero') ? game.times.zones.dev : game.times.zone[timezone]}`
 
 	v.phases[0].date = v.startDate
 	v.phases[1].date = v.midDate

@@ -15,6 +15,7 @@ const config = {
 		},
 		extend: {
 			gridColumn: {
+				'span-13': 'span 13 / span 13',
 				'span-14': 'span 14 / span 14',
 				'span-15': 'span 15 / span 15',
 				'span-16': 'span 16 / span 16',
@@ -26,6 +27,7 @@ const config = {
 				'span-22': 'span 22 / span 22'
 			},
 			gridColumnStart: {
+				13: '13',
 				14: '14',
 				15: '15',
 				16: '16',
