@@ -201,18 +201,18 @@
 
 		if (e.data.startDate == version.startDate) {
 			// console.log('phase 1')
-			event.startWeek = dayjs.utc(times.start).week()
-			event.endWeek = dayjs.utc(times.mid).week()
+			event.startWeek = dayjs(times.start).week()
+			event.endWeek = dayjs(times.mid).week()
 
-			event.startDate = dayjs.utc(times.start)
-			event.endDate = dayjs.utc(times.mid)
+			event.startDate = dayjs(times.start)
+			event.endDate = dayjs(times.mid)
 		} else {
 			// console.log('phase 2')
-			event.startWeek = dayjs.utc(times.mid).week()
-			event.endWeek = dayjs.utc(times.end).week()
+			event.startWeek = dayjs(times.mid).week()
+			event.endWeek = dayjs(times.end).week()
 
-			event.startDate = dayjs.utc(times.mid)
-			event.endDate = dayjs.utc(times.end)
+			event.startDate = dayjs(times.mid)
+			event.endDate = dayjs(times.end)
 		}
 		return event
 	})
@@ -260,7 +260,7 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
+					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-21 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 				>
 					{#each getEvents(eventMap, calendar.before[0].week()) as event}
 						<Event game={event.game} {event} week={calendar.before[0].week()} />
@@ -292,27 +292,6 @@
 					<div
 						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-21 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 					>
-						<!-- <button class="bg-accent-dark rounded">1</button>
-						<button class="bg-accent-dark rounded">2</button>
-						<button class="bg-accent-dark rounded">3</button>
-						<button class="bg-accent-dark rounded">4</button>
-						<button class="bg-accent-dark rounded">5</button>
-						<button class="bg-accent-dark rounded">6</button>
-						<button class="bg-accent-dark rounded">7</button>
-						<button class="bg-accent-dark rounded">8</button>
-						<button class="bg-accent-dark rounded">9</button>
-						<button class="bg-accent-dark rounded">10</button>
-						<button class="bg-accent-dark rounded">11</button>
-						<button class="bg-accent-dark rounded">12</button>
-						<button class="bg-accent-dark rounded">13</button>
-						<button class="bg-accent-dark rounded">14</button>
-						<button class="bg-accent-dark rounded">15</button>
-						<button class="bg-accent-dark rounded">16</button>
-						<button class="bg-accent-dark rounded">17</button>
-						<button class="bg-accent-dark rounded">18</button>
-						<button class="bg-accent-dark rounded">19</button>
-						<button class="bg-accent-dark rounded">20</button>
-						<button class="bg-accent-dark rounded">21</button> -->
 						{#each getEvents(eventMap, week[0].week()) as event}
 							<Event game={event.game} {event} week={week[0].week()} />
 						{/each}
@@ -341,7 +320,7 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
+					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-21 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 				>
 					{#each getEvents(eventMap, calendar.after[0].week()) as event}
 						<Event game={event.game} {event} week={calendar.after[0].week()} />

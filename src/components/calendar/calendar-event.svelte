@@ -33,7 +33,11 @@
 		if ([0, 1].includes(startEnd(week))) {
 			return startDay[0][0]
 		} else {
-			return startDay[event.startDate.day()][1]
+			if (game == 'hsr') {
+				return startDay[event.startDate.day() - 1][1]
+			} else {
+				return startDay[event.startDate.day()][1]
+			}
 		}
 	}
 	const duration = (week) => {
@@ -43,8 +47,8 @@
 		if (startEnd(week) == -1) {
 			return durations[7 - startDay][1]
 		} else if (startEnd(week) == 1) {
-			if (endDay == 1) {
-				return durations[endDay + 1][0]
+			if (game == 'hsr') {
+				return durations[endDay + 2][0]
 			} else {
 				return durations[endDay + 1][0]
 			}
@@ -76,11 +80,11 @@
 	>
 		<!-- <span class="mr-8 text-white mix-blend-exclusion">
 			{event.startWeek + '  -   ' + event.endWeek}
-		</span>
-		<span class="mr-8 text-white mix-blend-exclusion">
-			{event.startDate.format('MM/DD [@] HH')} <span class="mx-4"> | </span>
-			{event.endDate.format('MM/DD [@] HH')}
 		</span> -->
 		{event.label}
+		<span class="mr-8 hidden">
+			{event.startDate.format('MM/DD [@] HH')} <span class="mx-4"> | </span>
+			{event.endDate.format('MM/DD [@] HH')}
+		</span>
 	</p>
 </button>

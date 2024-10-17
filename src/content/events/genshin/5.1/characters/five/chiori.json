@@ -1,9 +1,9 @@
 {
-	"status": "confirmed",
-	"type": "banner",
-	"character": "genshin/chiori",
-	"weapon": "genshin/UrakuMisugiri",
-	"game": "genshin",
-	"startDate": "2024-10-08",
-	"endDate": "2024-10-29"
+    "status": "confirmed",
+    "type": "banner",
+    "character": "genshin/chiori",
+    "weapon": "genshin/UrakuMisugiri",
+    "game": "genshin",
+    "startDate": "2024-10-09",
+    "endDate": "2024-10-29"
 }

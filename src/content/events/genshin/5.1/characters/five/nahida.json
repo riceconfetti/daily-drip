@@ -1,9 +1,9 @@
 {
-	"status": "confirmed",
-	"type": "banner",
-	"character": "genshin/nahida",
-	"weapon": "genshin/AThousandFloatingDreams",
-	"game": "genshin",
-	"startDate": "2024-10-29",
-	"endDate": "2024-11-20"
+    "status": "confirmed",
+    "type": "banner",
+    "character": "genshin/nahida",
+    "weapon": "genshin/AThousandFloatingDreams",
+    "game": "genshin",
+    "startDate": "2024-10-29",
+    "endDate": "2024-11-20"
 }
