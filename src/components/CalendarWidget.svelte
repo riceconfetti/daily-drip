@@ -37,8 +37,10 @@
 		})
 	)
 
+	// console.log(eventDates)
+
 	const isDateUnavailable: Calendar.Props['isDateUnavailable'] = (date) => {
-		return dayjs(date).format('YYYY-MM-DD') in eventDates
+		return Object.keys(eventDates).includes(date.toString())
 	}
 </script>
 
@@ -91,9 +93,7 @@
 								{date}
 								class="min-h-0 p-2 md:aspect-square md:h-full md:w-full md:border-black md:border-opacity-20 md:p-1 md:px-2"
 							>
-								{@const event = isDateUnavailable
-									? eventDates[dayjs(date).format('YYYY-MM-DD')]
-									: ''}
+								{@const event = isDateUnavailable(date) ? eventDates[date.toString()] : ''}
 								<Calendar.Day
 									{date}
 									month={month.value}

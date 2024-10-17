@@ -1,8 +1,8 @@
 {
-    "status": "spec",
-    "type": "weapon",
-    "game": "starrail",
-    "startDate": "2024-11-13",
-    "endDate": "2024-12-03",
-    "weapon": "starrail/DreamsMontage"
+	"status": "spec",
+	"type": "weapon",
+	"game": "starrail",
+	"startDate": "2024-10-23",
+	"endDate": "2024-11-13",
+	"weapon": "starrail/DreamsMontage"
 }

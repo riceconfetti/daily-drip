@@ -2017,8 +2017,63 @@ declare module 'astro:content' {
   collection: "events";
   data: any
 };
+"starrail/2.6/characters/four/lynx": {
+	id: "starrail/2.6/characters/four/lynx";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/characters/four/march7th": {
+	id: "starrail/2.6/characters/four/march7th";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/characters/four/pela": {
+	id: "starrail/2.6/characters/four/pela";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/characters/four/sampo": {
+	id: "starrail/2.6/characters/four/sampo";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/characters/four/xueyi": {
+	id: "starrail/2.6/characters/four/xueyi";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/characters/four/yukong": {
+	id: "starrail/2.6/characters/four/yukong";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/weapons/AftertheCharmonyFall": {
+	id: "starrail/2.6/weapons/AftertheCharmonyFall";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/weapons/BoundlessChoreo": {
+	id: "starrail/2.6/weapons/BoundlessChoreo";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/weapons/DayOneofMyNewLife": {
+	id: "starrail/2.6/weapons/DayOneofMyNewLife";
+  collection: "events";
+  data: any
+};
 "starrail/2.6/weapons/DreamsMontage": {
 	id: "starrail/2.6/weapons/DreamsMontage";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/weapons/MaketheWorldClamor": {
+	id: "starrail/2.6/weapons/MaketheWorldClamor";
+  collection: "events";
+  data: any
+};
+"starrail/2.6/weapons/UndertheBlueSky": {
+	id: "starrail/2.6/weapons/UndertheBlueSky";
   collection: "events";
   data: any
 };
