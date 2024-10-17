@@ -1,17 +1,17 @@
 {
-	"name": "Rappa",
-	"rarity": 5,
-	"images": {
-		"gachaSplash": "rappa/gachaSplash",
-		"gachaCard": "rappa/gachaCard",
-		"bannerCard": "rappa/bannerCard"
-	},
-	"element": "imaginary",
-	"weaponType": "erudition",
-	"bannerName": "?????",
-	"colors": {
-		"primary": "bg-gradient-to-r from-[#462FC9] to-[#6BEB79]",
-		"secondary": "bg-gradient-to-t from-[#BF1B19] to-[#FFE8EC00]",
-		"textAccent": "text-[#F1DE76]"
-	}
+    "name": "Rappa",
+    "rarity": 5,
+    "images": {
+        "gachaSplash": "rappa/gachaSplash",
+        "gachaCard": "rappa/gachaCard",
+        "bannerCard": "rappa/bannerCard"
+    },
+    "element": "imaginary",
+    "weaponType": "erudition",
+    "bannerName": "Eyes of a Ninja",
+    "colors": {
+        "primary": "bg-gradient-to-r from-[#462FC9] to-[#6BEB79]",
+        "secondary": "bg-gradient-to-t from-[#BF1B19] to-[#FFE8EC00]",
+        "textAccent": "text-[#F1DE76]"
+    }
 }

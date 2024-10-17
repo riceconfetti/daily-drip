@@ -1,9 +1,9 @@
 {
-	"status": "confirmed",
-	"type": "banner",
-	"character": "genshin/yelan",
-	"weapon": "genshin/AquaSimulacra",
-	"game": "genshin",
-	"startDate": "2024-08-06",
-	"endDate": "2024-08-27"
+    "status": "confirmed",
+    "type": "banner",
+    "character": "genshin/yelan",
+    "weapon": "genshin/AquaSimulacra",
+    "game": "genshin",
+    "startDate": "2024-08-06",
+    "endDate": "2024-08-27"
 }
