@@ -2,17 +2,14 @@
 	"name": "Honkai: Star Rail",
 	"icon": "",
 	"times": {
-		"maintenance": "20:00:00",
-		"version": "03:00:00",
-		"update": [
-			{ "zone": "as", "time": "04:00:00" },
-			{ "zone": "eu", "time": "11:00:00" },
-			{ "zone": "na", "time": "17:00:00" }
-		],
-		"reset": {
-			"as": "20:00:00",
-			"eu": "03:00:00",
-			"na": "09:00:00"
+		"version": "11:00:00",
+		"update": "12:00:00",
+		"maintenance": "06:00:00",
+		"zones": {
+			"dev": "+08:00",
+			"as": "+08:00",
+			"eu": "+01:00",
+			"na": "-05:00"
 		}
 	}
 }

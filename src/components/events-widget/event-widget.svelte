@@ -15,34 +15,27 @@
 		let version = collections.versions.find((v) =>
 			v.id.startsWith(e.data.game.id + '/' + e.id.split('/')[1])
 		).data
-		let game = collections.games.find((g) => g.id.startsWith(e.data.game.id)).data
+		let game = collections.games.find((g) => g.id.startsWith(e.data.game.id))
+
+		let times = {
+			start: version.startDate + `T${game.data.times.version + game.data.times.zones.dev}`,
+			mid:
+				version.midDate +
+				`T${game.data.times.update + game.data.times.zones[settings.get()[game.id]]}`,
+			end:
+				version.endDate +
+				`T${game.data.times.maintenance + (game.data.name != 'Zenless Zone Zero' ? game.data.times.zones.dev : game.data.times.zones[settings.get()[game.id]])}`
+		}
 
 		if (e.data.startDate == version.startDate) {
-			timeEvent.startDate = dayjs
-				.utc(e.data.startDate + `T${game.times.version}Z`)
-				.tz(dayjs.tz.guess())
-				.format('YYYY-MM-DDTHH:mm[Z]')
-			timeEvent.endDate = dayjs
-				.utc(
-					e.data.endDate +
-						`T${game.times.update.find((t) => t.zone == settings.get()[e.data.game.id]).time}Z`
-				)
-				.tz(dayjs.tz.guess())
-				.format('YYYY-MM-DDTHH:mm[Z]')
+			timeEvent.startDate = dayjs.utc(times.start).tz(dayjs.tz.guess()).format()
+			timeEvent.endDate = dayjs.utc(times.mid).tz(dayjs.tz.guess()).format()
 		} else {
-			timeEvent.startDate = dayjs
-				.utc(
-					e.data.startDate +
-						`T${game.times.update.find((t) => t.zone == settings.get()[e.data.game.id]).time}Z`
-				)
-				.tz(dayjs.tz.guess())
-				.format('YYYY-MM-DDTHH:mm[Z]')
-
-			timeEvent.endDate = dayjs
-				.utc(e.data.endDate + `T${game.times.maintenance}Z`)
-				.tz(dayjs.tz.guess())
-				.format('YYYY-MM-DDTHH:mm[Z]')
+			timeEvent.startDate = dayjs.utc(times.mid).tz(dayjs.tz.guess()).format()
+			timeEvent.endDate = dayjs.utc(times.end).tz(dayjs.tz.guess()).format()
 		}
+
+		// console.log(timeEvent.startDate + '  -  ' + timeEvent.endDate)
 		return timeEvent
 	})
 
@@ -80,7 +73,7 @@
 </script>
 
 <section
-	class="overlay flex h-full w-full flex-col gap-2 transition md:flex-row lg:min-h-0 lg:flex-col lg:overflow-auto lg:p-4"
+	class="overlay flex w-full flex-col gap-2 transition md:flex-row lg:min-h-0 lg:flex-col lg:overflow-auto lg:p-4"
 >
 	<div class="flex w-full flex-col gap-2">
 		<h2 class="playfair-display-semibold text-dark">Current Events</h2>

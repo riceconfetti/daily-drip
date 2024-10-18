@@ -13,39 +13,45 @@
         "times": {
           "type": "object",
           "properties": {
-            "maintenance": {
-              "type": "string",
-              "format": "time"
-            },
             "version": {
-              "type": "string",
-              "format": "time"
+              "type": "string"
             },
             "update": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "zone": {
-                    "type": "string"
-                  },
-                  "time": {
-                    "type": "string",
-                    "format": "time"
-                  }
+              "type": "string"
+            },
+            "maintenance": {
+              "type": "string"
+            },
+            "zones": {
+              "type": "object",
+              "properties": {
+                "dev": {
+                  "type": "string"
                 },
-                "required": [
-                  "zone",
-                  "time"
-                ],
-                "additionalProperties": false
-              }
+                "as": {
+                  "type": "string"
+                },
+                "eu": {
+                  "type": "string"
+                },
+                "na": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "dev",
+                "as",
+                "eu",
+                "na"
+              ],
+              "additionalProperties": false
             }
           },
           "required": [
-            "maintenance",
             "version",
-            "update"
+            "update",
+            "maintenance",
+            "zones"
           ],
           "additionalProperties": false
         },
