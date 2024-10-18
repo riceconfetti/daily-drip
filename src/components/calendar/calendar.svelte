@@ -2,10 +2,10 @@
 	import dayjs from 'dayjs'
 	import utc from 'dayjs/plugin/utc'
 	import timezone from 'dayjs/plugin/timezone'
-	import isoWeek from 'dayjs/plugin/isoWeek'
 	import weekOfYear from 'dayjs/plugin/weekOfYear'
 	import arraySupport from 'dayjs/plugin/arraySupport'
-	import groupBy from 'core-js/actual/array/group-by'
+	import pkg from 'core-js/actual/array/group-by'
+	const { groupBy } = pkg
 	import { onMount } from 'svelte'
 	import gsap from 'gsap/dist/gsap'
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
@@ -13,22 +13,21 @@
 	import { settings } from '$scripts/settings'
 	import { GridRow, Cell, Event } from './index.ts'
 
-	dayjs.extend(isoWeek)
 	dayjs.extend(weekOfYear)
 	dayjs.extend(utc)
 	dayjs.extend(timezone)
 	dayjs.extend(arraySupport)
 
 	const testing = false
-	const Day_Headings = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+	const Day_Headings = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 	const columns = [
-		'col-start-7',
 		'col-start-1',
 		'col-start-2',
 		'col-start-3',
 		'col-start-4',
 		'col-start-5',
-		'col-start-6'
+		'col-start-6',
+		'col-start-7'
 	]
 
 	let windowWidth
@@ -37,13 +36,12 @@
 	const date = dayjs().date()
 	const month = dayjs().month()
 	const year = dayjs().year()
-	const weeksInMonth = Math.ceil(dayjs().daysInMonth() / 7)
 	const calendarMap = Array(dayjs().daysInMonth())
 		.fill(0)
 		.map((_, i) => dayjs([year, month, i + 1]))
-		.groupBy((d) => d.isoWeek())
+		.groupBy((d) => d.week())
 
-	function initCalendar(calendarMap) {
+	function initCalendar(calendarMap: Object) {
 		let calendar = {
 			before: [],
 			main: Object.entries(calendarMap).map((x) => x[1]),
@@ -187,11 +185,12 @@
 		let cData = characters.find((c) => c.id == e.data.character.id).data
 
 		let times = {
-			start: version.startDate + `T${gameData.times.version}Z`,
+			start: version.startDate + `T${gameData.times.version + gameData.times.zones.dev}`,
 			mid:
-				version.midDate +
-				`T${gameData.times.update.find((t) => t.zone == settings.get()[game]).time}Z`,
-			end: version.endDate + `T${gameData.times.maintenance}Z`
+				version.midDate + `T${gameData.times.update + gameData.times.zones[settings.get()[game]]}`,
+			end:
+				version.endDate +
+				`T${gameData.times.maintenance + (game != 'zzz' ? gameData.times.zones.dev : gameData.times.zones[settings.get()['zzz']])}`
 		}
 
 		let event = e
@@ -201,19 +200,20 @@
 		event.colors = cData.colors
 
 		if (e.data.startDate == version.startDate) {
-			event.startWeek = dayjs.utc(times.start).isoWeek()
-			event.endWeek = dayjs.utc(times.mid).isoWeek()
+			// console.log('phase 1')
+			event.startWeek = dayjs(times.start).week()
+			event.endWeek = dayjs(times.mid).week()
 
-			event.startDate = dayjs.utc(times.start).tz(dayjs.tz.guess())
-			event.endDate = dayjs.utc(times.mid).tz(dayjs.tz.guess())
+			event.startDate = dayjs(times.start)
+			event.endDate = dayjs(times.mid)
 		} else {
-			event.startWeek = dayjs.utc(times.mid).isoWeek()
-			event.endWeek = dayjs.utc(times.end).isoWeek()
+			// console.log('phase 2')
+			event.startWeek = dayjs(times.mid).week()
+			event.endWeek = dayjs(times.end).week()
 
-			event.startDate = dayjs.utc(times.mid).tz(dayjs.tz.guess())
-			event.endDate = dayjs.utc(times.end).tz(dayjs.tz.guess())
+			event.startDate = dayjs(times.mid)
+			event.endDate = dayjs(times.end)
 		}
-
 		return event
 	})
 
@@ -248,7 +248,7 @@
 		>
 			{#if testing}
 				<div class="p-4 h-full w-full flex items-center justify-center">
-					<p>{calendar.before[0].isoWeek()}</p>
+					<p>{calendar.before[0].week()}</p>
 				</div>
 			{/if}
 			<GridRow>
@@ -260,10 +260,10 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
+					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-21 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 				>
-					{#each getEvents(eventMap, calendar.before[0].isoWeek()) as event}
-						<Event game={event.game} {event} week={calendar.before[0].isoWeek()} />
+					{#each getEvents(eventMap, calendar.before[0].week()) as event}
+						<Event game={event.game} {event} week={calendar.before[0].week()} />
 					{/each}
 				</div>
 			</GridRow>
@@ -276,7 +276,7 @@
 			{#each calendar.main as week, index}
 				{#if testing}
 					<div class="p-4 h-full w-full flex items-center justify-center">
-						<p>{week[0].isoWeek()}</p>
+						<p>{week[0].week()}</p>
 					</div>
 				{/if}
 				<GridRow>
@@ -290,10 +290,10 @@
 					{/each}
 
 					<div
-						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
+						class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-21 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 					>
-						{#each getEvents(eventMap, week[0].isoWeek()) as event}
-							<Event game={event.game} {event} week={week[0].isoWeek()} />
+						{#each getEvents(eventMap, week[0].week()) as event}
+							<Event game={event.game} {event} week={week[0].week()} />
 						{/each}
 					</div>
 				</GridRow>
@@ -307,7 +307,7 @@
 		>
 			{#if testing}
 				<div class="p-4 h-full w-full flex items-center justify-center">
-					<p>{calendar.after[0].isoWeek()}</p>
+					<p>{calendar.after[0].week()}</p>
 				</div>
 			{/if}
 
@@ -320,10 +320,10 @@
 					</div>
 				{/each}
 				<div
-					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-7 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
+					class="absolute inset-y-2 top-8 border-none inset-x-0 grid grid-cols-21 gap-1 text-xs auto-rows-min grid-flow-dense max-h-full overflow-clip"
 				>
-					{#each getEvents(eventMap, calendar.after[0].isoWeek()) as event}
-						<Event game={event.game} {event} week={calendar.after[0].isoWeek()} />
+					{#each getEvents(eventMap, calendar.after[0].week()) as event}
+						<Event game={event.game} {event} week={calendar.after[0].week()} />
 					{/each}
 				</div>
 			</GridRow>

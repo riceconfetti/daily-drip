@@ -1,9 +1,9 @@
 {
-	"status": "confirmed",
-	"type": "debut",
-	"character": "starrail/jiaoqiu",
-	"weapon": "starrail/ThoseManySprings",
-	"game": "starrail",
-	"startDate": "2024-08-21",
-	"endDate": "2024-09-09"
+    "status": "confirmed",
+    "type": "debut",
+    "character": "starrail/jiaoqiu",
+    "weapon": "starrail/ThoseManySprings",
+    "game": "starrail",
+    "startDate": "2024-08-21",
+    "endDate": "2024-09-09"
 }

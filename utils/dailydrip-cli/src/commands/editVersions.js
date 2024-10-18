@@ -37,6 +37,7 @@ async function init() {
 		message: 'What do you want to edit?',
 		choices: ['name', 'startDate', 'midDate', 'endDate']
 	})
+	let askEvents = false
 
 	for (const editValue of actions) {
 		switch (editValue) {
@@ -51,12 +52,16 @@ async function init() {
 				version[editValue] = await input({
 					message: 'Enter new date:'
 				})
-				version.updateEvents = await confirm({
-					message: 'Do you want to update events?'
-				})
+				askEvents = true
 				break
 		}
 	}
+	if (askEvents) {
+		version.updateEvents = await confirm({
+			message: 'Do you want to update events?'
+		})
+	}
+
 	return version
 }
 

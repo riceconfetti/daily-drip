@@ -1,8 +1,8 @@
 {
-    "status": "spec",
-    "type": "debut",
-    "game": "starrail",
-    "startDate": "2024-11-05",
-    "endDate": "2024-11-26",
-    "character": "starrail/fugue"
+	"status": "spec",
+	"type": "debut",
+	"game": "starrail",
+	"startDate": "2024-12-24",
+	"endDate": "2024-01-14",
+	"character": "starrail/fugue"
 }

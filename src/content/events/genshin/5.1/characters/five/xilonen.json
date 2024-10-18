@@ -1,9 +1,9 @@
 {
-	"status": "confirmed",
-	"type": "debut",
-	"character": "genshin/xilonen",
-	"weapon": "genshin/PeakPatrolSong",
-	"game": "genshin",
-	"startDate": "2024-10-09",
-	"endDate": "2024-10-30"
+    "status": "confirmed",
+    "type": "debut",
+    "character": "genshin/xilonen",
+    "weapon": "genshin/PeakPatrolSong",
+    "game": "genshin",
+    "startDate": "2024-10-09",
+    "endDate": "2024-10-29"
 }
