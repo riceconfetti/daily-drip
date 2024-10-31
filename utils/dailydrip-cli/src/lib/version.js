@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import * as fs from 'fs'
 import dayjs from 'dayjs'
+import { version } from 'os'
 
 String.prototype.isEmpty = function () {
 	return this.length === 0 || !this.trim()
@@ -163,20 +164,40 @@ function initializeEvents(game, patch, version) {
 }
 
 export function editVersion(answers) {
-	let versionPath = `src/content/versions/${answers.game}/${answers.patch}.json`
+	let patch = answers.patch.toString()
+	if (patch.length == 1) {
+		patch = patch + '.0'
+	}
+	let versionPath = `src/content/versions/${answers.game}/${patch}.json`
 	let versionObj = JSON.parse(fs.readFileSync(versionPath))
+	let tempVerObj = JSON.parse(fs.readFileSync(versionPath))
 
 	for (const [key, value] of Object.entries(answers)) {
 		if (key == 'patch') {
 			versionObj.version = value
-		} else if (key != 'game') {
+		} else if (!['updateEvents', 'game'].includes(key)) {
 			versionObj[key] = value
 		}
 	}
 
-	fs.writeFile(versionPath, JSON.stringify(versionObj, null, 4), (err) => {
-		if (err) {
-			console.error(err)
-		}
-	})
+	if (answers.updateEvents) {
+		const eventPath = `src/content/events/${answers.game}/${patch}/`
+		let events = fs.readdirSync(eventPath, { recursive: true }).filter((f) => f.endsWith('.json'))
+
+		events.forEach((e) => {
+			// console.log(e)
+			let file = JSON.parse(fs.readFileSync(eventPath + e))
+			if (file.startDate == tempVerObj.startDate) {
+				file.startDate = versionObj.startDate
+				file.endDate = versionObj.midDate
+			} else {
+				file.startDate = versionObj.midDate
+				file.endDate = versionObj.endDate
+			}
+
+			fs.writeFileSync(eventPath + e, JSON.stringify(file, null, 4))
+		})
+	}
+
+	fs.writeFileSync(versionPath, JSON.stringify(versionObj, null, 4))
 }
