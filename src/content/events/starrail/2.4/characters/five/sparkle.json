@@ -1,9 +1,9 @@
 {
-	"status": "confirmed",
-	"type": "banner",
-	"character": "starrail/sparkle",
-	"weapon": "starrail/EarthlyEscapade",
-	"game": "starrail",
-	"startDate": "2024-08-21",
-	"endDate": "2024-09-09"
+    "status": "confirmed",
+    "type": "banner",
+    "character": "starrail/sparkle",
+    "weapon": "starrail/EarthlyEscapade",
+    "game": "starrail",
+    "startDate": "2024-08-21",
+    "endDate": "2024-09-09"
 }
