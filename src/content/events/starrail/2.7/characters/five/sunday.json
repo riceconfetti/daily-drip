@@ -1,8 +1,9 @@
 {
-	"status": "spec",
-	"type": "debut",
-	"game": "starrail",
-	"startDate": "2024-12-03",
-	"endDate": "2024-12-24",
-	"character": "starrail/sunday"
+    "status": "spec",
+    "type": "debut",
+    "game": "starrail",
+    "startDate": "2024-12-03",
+    "endDate": "2024-12-24",
+    "character": "starrail/sunday",
+    "weapon": "starrail/AGroundedAscent"
 }
