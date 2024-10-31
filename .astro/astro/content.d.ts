@@ -1757,6 +1757,31 @@ declare module 'astro:content' {
   collection: "events";
   data: any
 };
+"genshin/5.2/characters/five/chasca": {
+	id: "genshin/5.2/characters/five/chasca";
+  collection: "events";
+  data: any
+};
+"genshin/5.2/characters/five/lyney": {
+	id: "genshin/5.2/characters/five/lyney";
+  collection: "events";
+  data: any
+};
+"genshin/5.2/characters/five/neuvillette": {
+	id: "genshin/5.2/characters/five/neuvillette";
+  collection: "events";
+  data: any
+};
+"genshin/5.2/characters/five/zhongli": {
+	id: "genshin/5.2/characters/five/zhongli";
+  collection: "events";
+  data: any
+};
+"genshin/5.2/characters/four/ororon": {
+	id: "genshin/5.2/characters/four/ororon";
+  collection: "events";
+  data: any
+};
 "starrail/2.2/boothill": {
 	id: "starrail/2.2/boothill";
   collection: "events";
@@ -2438,6 +2463,11 @@ declare module 'astro:content' {
   collection: "weapons";
   data: any
 };
+"genshin/AstralVulturesCrimsonPlumage": {
+	id: "genshin/AstralVulturesCrimsonPlumage";
+  collection: "weapons";
+  data: any
+};
 "genshin/BalladoftheBoundlessBlue": {
 	id: "genshin/BalladoftheBoundlessBlue";
   collection: "weapons";
@@ -2480,6 +2510,11 @@ declare module 'astro:content' {
 };
 "genshin/CalamityQueller": {
 	id: "genshin/CalamityQueller";
+  collection: "weapons";
+  data: any
+};
+"genshin/CalamityofEshu": {
+	id: "genshin/CalamityofEshu";
   collection: "weapons";
   data: any
 };
@@ -2615,6 +2650,11 @@ declare module 'astro:content' {
 };
 "genshin/FleuveCendreFerryman": {
 	id: "genshin/FleuveCendreFerryman";
+  collection: "weapons";
+  data: any
+};
+"genshin/FlowerWreathedFeather": {
+	id: "genshin/FlowerWreathedFeather";
   collection: "weapons";
   data: any
 };
@@ -3143,6 +3183,11 @@ declare module 'astro:content' {
   collection: "weapons";
   data: any
 };
+"genshin/WaveridingWhirl": {
+	id: "genshin/WaveridingWhirl";
+  collection: "weapons";
+  data: any
+};
 "genshin/Whiteblind": {
 	id: "genshin/Whiteblind";
   collection: "weapons";
@@ -3170,6 +3215,11 @@ declare module 'astro:content' {
 };
 "genshin/XiphosMoonlight": {
 	id: "genshin/XiphosMoonlight";
+  collection: "weapons";
+  data: any
+};
+"starrail/AGroundedAscent": {
+	id: "starrail/AGroundedAscent";
   collection: "weapons";
   data: any
 };
@@ -3370,6 +3420,11 @@ declare module 'astro:content' {
 };
 "starrail/LandausChoice": {
 	id: "starrail/LandausChoice";
+  collection: "weapons";
+  data: any
+};
+"starrail/LongRoadLeadsHome": {
+	id: "starrail/LongRoadLeadsHome";
   collection: "weapons";
   data: any
 };

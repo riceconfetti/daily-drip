@@ -1,0 +1,9 @@
+{
+    "status": "spec",
+    "type": "banner",
+    "game": "genshin",
+    "startDate": "2024-12-11",
+    "endDate": "2025-01-01",
+    "character": "genshin/neuvillette",
+    "weapon": "genshin/TomeoftheEternalFlow"
+}

@@ -10,8 +10,8 @@
     "weaponType": "nihility",
     "bannerName": "?????",
     "colors": {
-        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
-        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
-        "textAccent": "text-[#000]"
+        "primary": "bg-gradient-to-r from-[#34221A] to-[#C52615]",
+        "secondary": "bg-gradient-to-t from-[#880E08] to-[#96714C00]",
+        "textAccent": "text-[#CCB392]"
     }
 }
