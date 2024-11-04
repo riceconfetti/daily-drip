@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { input, select, number, confirm } from '@inquirer/prompts'
+import { input, select, number, confirm, Separator } from '@inquirer/prompts'
 import setGame from './setGame.js'
 import chalk from 'chalk'
 import ora from 'ora'
@@ -75,7 +75,7 @@ export default async function addVersions() {
 			const response = userResponse[i]
 			let spinner = ora('Adding ' + response.patch).start()
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
+			await new Promise((resolve) => setTimeout(resolve, 400))
 			addVersion(response)
 			spinner.stopAndPersist()
 		}

@@ -26,30 +26,23 @@ export function addCharacter(answers) {
 	if (answers.rarity == 5) {
 		characterObj.bannerName = answers.banner ? answers.banner : '?????'
 
-		if (!answers.colors) {
-			characterObj.colors = {
-				primary:
-					answers.game === 'zzz'
-						? gradients.zzz[characterObj.element]
-						: 'bg-gradient-to-r from-[#000] to-[#FFF]',
-				secondary:
-					answers.game === 'zzz'
-						? gradients.zzz[characterObj.element + '_secondary']
-						: 'bg-gradient-to-t from-[#000] to-[#FFF00]',
-				textAccent:
-					answers.game === 'zzz' ? gradients.zzz[characterObj.element + '_text'] : 'text-[#000]'
-			}
-		} else {
-			const aColors = answers.colors
-			characterObj.colors = {
-				primary: !aColors.primary.isEmpty()
-					? `bg-gradient-to-r from-[#${aColors.primary[0]}] to-[#${aColors.primary[1]}]`
+		const aColors = answers.colors
+		characterObj.colors = {
+			primary: !aColors.primary.isEmpty()
+				? `bg-gradient-to-r from-[#${aColors.primary[0]}] to-[#${aColors.primary[1]}]`
+				: answers.game === 'zzz'
+					? gradients.zzz[characterObj.element]
 					: 'bg-gradient-to-r from-[#000] to-[#FFF]',
-				secondary: !aColors.secondary.isEmpty()
-					? `bg-gradient-to-t from-[#${aColors.secondary[0]}] to-[#${aColors.secondary[1]}00]`
+			secondary: !aColors.secondary.isEmpty()
+				? `bg-gradient-to-t from-[#${aColors.secondary[0]}] to-[#${aColors.secondary[1]}00]`
+				: answers.game === 'zzz'
+					? gradients.zzz[characterObj.element + '_secondary']
 					: 'bg-gradient-to-t from-[#000] to-[#FFF00]',
-				textAccent: !aColors.textAccent.isEmpty() ? `text-[#${aColors.textAccent}]` : 'text-[#000]'
-			}
+			textAccent: !aColors.textAccent.isEmpty()
+				? `text-[#${aColors.textAccent}]`
+				: answers.game === 'zzz'
+					? gradients.zzz[characterObj.element + '_text']
+					: 'text-[#000]'
 		}
 	}
 

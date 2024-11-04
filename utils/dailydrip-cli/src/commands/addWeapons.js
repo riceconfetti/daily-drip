@@ -76,7 +76,7 @@ export default async function addWeapons() {
 			const response = userResponse[i]
 			let spinner = ora('Adding ' + response.name).start()
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
+			await new Promise((resolve) => setTimeout(resolve, 400))
 			addWeapon(response)
 			spinner.stopAndPersist()
 		}

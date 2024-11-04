@@ -1,0 +1,11 @@
+{
+    "name": "Lumi",
+    "rarity": 4,
+    "images": {
+        "gachaSplash": "lumi/gachaSplash",
+        "gachaCard": "lumi/gachaCard",
+        "bannerCard": "lumi/bannerCard"
+    },
+    "element": "electro",
+    "weaponType": "broadblade"
+}

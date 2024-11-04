@@ -1,0 +1,17 @@
+{
+	"name": "Harumasa",
+	"rarity": 5,
+	"images": {
+		"gachaSplash": "harumasa/gachaSplash",
+		"gachaCard": "harumasa/gachaCard",
+		"bannerCard": "harumasa/bannerCard"
+	},
+	"element": "electric",
+	"weaponType": "attack",
+	"bannerName": "?????",
+	"colors": {
+		"primary": "bg-gradient-to-r from-zzz-electric-gradient-from to-zzz-electric-gradient-to",
+		"secondary": "bg-gradient-to-t from-zzz-electric-gradient-from to-[#5DEDFC00]",
+		"textAccent": "text-[#4CFFFF]"
+	}
+}
