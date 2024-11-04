@@ -61,15 +61,19 @@ export function addEvent(answers) {
 
 export function editEvent(answers) {
 	let game = answers.path.split('events\\')[1].split('\\')[0]
-	let version = JSON.parse(
-		fs.readFileSync(
-			`src/content/versions/${game}/${answers.path.split('events\\')[1].split('\\')[1]}.json`,
-			{
-				encoding: 'utf8',
-				flag: 'r'
-			}
+	let version
+	try {
+		version = JSON.parse(
+			fs.readFileSync(
+				`src/content/versions/${game}/${answers.path.split('events\\')[1].split('\\')[1]}.json`
+			)
 		)
-	)
+	} catch (err) {
+		if (err.code === 'ENOENT') {
+			console.log(`Version ${game}/${answers.path.split('events\\')[1].split('\\')[1]} Not Found!`)
+			return
+		}
+	}
 	let eventPath = answers.path
 	let eventObj = JSON.parse(
 		fs.readFileSync(eventPath, {

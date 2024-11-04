@@ -59,10 +59,17 @@ export function addCharacter(answers) {
 export function editCharacter(answers) {
 	const characterKey = answers.key
 	const characterPath = `src/content/characters/${answers.game}/${characterKey}.json`
+	let characterObj
 
-	let characterObj = JSON.parse(fs.readFileSync(characterPath))
+	try {
+		characterObj = JSON.parse(fs.readFileSync(characterPath))
+	} catch (err) {
+		if (err.code === 'ENOENT') {
+			console.log(`${answers.game}/${characterKey} Not Found!`)
+			return
+		}
+	}
 
-	console.log(Object.entries(answers))
 	for (const [key, value] of Object.entries(answers)) {
 		if (key == 'colors') {
 			for (const [k, v] of Object.entries(value)) {

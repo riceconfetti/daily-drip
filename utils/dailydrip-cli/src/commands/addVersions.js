@@ -12,7 +12,7 @@ async function askMenu() {
 			{ name: 'Add More Version(s)', value: 'addNew' },
 			{ name: 'Change Game', value: 'changeGame' },
 			new Separator(),
-			{ name: chalk.bold.green('Back'), value: 'back' },
+			{ name: chalk.bold.yellow('Back'), value: 'back' },
 			new Separator(' ')
 		]
 	})

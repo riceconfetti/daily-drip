@@ -11,7 +11,7 @@ async function askMenu() {
 		choices: [
 			{ name: 'Edit More Event(s)', value: 'addNew' },
 			new Separator(),
-			{ name: chalk.bold.green('Back'), value: 'back' },
+			{ name: chalk.bold.yellow('Back'), value: 'back' },
 			new Separator(' ')
 		]
 	})
