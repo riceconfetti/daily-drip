@@ -1,32 +1,27 @@
-#!/usr/bin/env node
-import { input, select, checkbox, number, confirm } from '@inquirer/prompts'
+import { input, select, checkbox, number, Separator } from '@inquirer/prompts'
+import setGame from './setGame.js'
 import chalk from 'chalk'
 import ora from 'ora'
 import { editWeapon } from '../lib/weapon.js'
 
-async function init() {
+async function askMenu() {
+	let action = await select({
+		message: 'What do you want to do next?: ',
+		choices: [
+			{ name: 'Edit More Version(s)', value: 'addNew' },
+			{ name: 'Change Game', value: 'changeGame' },
+			new Separator(),
+			{ name: chalk.bold.green('Back'), value: 'back' },
+			new Separator(' ')
+		]
+	})
+
+	return action
+}
+
+async function askNextWeapon(game) {
 	let weapon = {
-		game: await select({
-			message: 'Select the game:',
-			choices: [
-				{
-					value: 'genshin',
-					name: 'Genshin Impact'
-				},
-				{
-					value: 'starrail',
-					name: 'Honkai: Starrail'
-				},
-				{
-					value: 'wuwa',
-					name: 'Wuthering Waves'
-				},
-				{
-					value: 'zzz',
-					name: 'Zenless Zone Zero'
-				}
-			]
-		}),
+		game: game,
 		key: await input({
 			message: 'Enter the weapon key:'
 		})
@@ -61,19 +56,31 @@ async function init() {
 
 const askQuestions = async () => {
 	const weaponArray = []
-	let loop = false
-	do {
-		const userRes = await init()
-		weaponArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to edit more weapons?' })
-
-		if (confirmQ) {
-			loop = true
-			console.log(chalk.bgBlueBright('----------------'))
+	try {
+		let game = await setGame()
+		if (game === 'back') {
+			return
 		} else {
-			loop = false
+			weaponArray.push(await askNextWeapon(game))
+
+			let nextAction = await askMenu()
+			while (nextAction !== 'back') {
+				if (nextAction === 'changeGame') {
+					game = await setGame()
+					nextAction = await askMenu()
+				} else if (nextAction == 'addNew') {
+					weaponArray.push(await askNextWeapon(game))
+					nextAction = await askMenu()
+				}
+			}
 		}
-	} while (loop)
+	} catch (error) {
+		if (error instanceof Error && error.name === 'ExitPromptError') {
+			// noop; silence this error
+		} else {
+			throw error
+		}
+	}
 
 	return weaponArray
 }
@@ -82,15 +89,16 @@ export default async function editWeapons() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Editing weapons...').start()
-
 		for (let i in userResponse) {
 			const response = userResponse[i]
+			let spinner = ora('Editing ' + response.key).start()
+
+			await new Promise((resolve) => setTimeout(resolve, 1000))
 			editWeapon(response)
+			spinner.stopAndPersist()
 		}
 
-		spinner.stop()
-		console.log(chalk.greenBright('Weapons saved!'))
+		console.log(chalk.greenBright('Weapons saved!\n'))
 	} catch (error) {
 		// Error Handling
 		console.log('Something went wrong, Error: ', error)

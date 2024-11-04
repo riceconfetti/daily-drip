@@ -1,32 +1,27 @@
-#!/usr/bin/env node
-import { input, select, checkbox, number, confirm, search } from '@inquirer/prompts'
+import { input, select, checkbox, number, confirm, Separator } from '@inquirer/prompts'
+import setGame from './setGame.js'
 import chalk from 'chalk'
 import ora from 'ora'
 import { editVersion } from '../lib/version.js'
 
-async function init() {
+async function askMenu() {
+	let action = await select({
+		message: 'What do you want to do next?: ',
+		choices: [
+			{ name: 'Edit More Version(s)', value: 'addNew' },
+			{ name: 'Change Game', value: 'changeGame' },
+			new Separator(),
+			{ name: chalk.bold.green('Back'), value: 'back' },
+			new Separator(' ')
+		]
+	})
+
+	return action
+}
+
+async function askNextVersion(game) {
 	let version = {
-		game: await select({
-			message: 'Select the game:',
-			choices: [
-				{
-					value: 'genshin',
-					name: 'Genshin Impact'
-				},
-				{
-					value: 'starrail',
-					name: 'Honkai: Starrail'
-				},
-				{
-					value: 'wuwa',
-					name: 'Wuthering Waves'
-				},
-				{
-					value: 'zzz',
-					name: 'Zenless Zone Zero'
-				}
-			]
-		}),
+		game: game,
 		patch: await number({
 			message: 'Enter the patch number:',
 			step: 0.1
@@ -35,7 +30,12 @@ async function init() {
 
 	const actions = await checkbox({
 		message: 'What do you want to edit?',
-		choices: ['name', 'startDate', 'midDate', 'endDate']
+		choices: [
+			{ name: 'Version Name', value: 'name' },
+			{ name: 'Start Date', value: 'startDate' },
+			{ name: 'Mid Date', value: 'midDate' },
+			{ name: 'End Date', value: 'endDate' }
+		]
 	})
 	let askEvents = false
 
@@ -67,19 +67,31 @@ async function init() {
 
 const askQuestions = async () => {
 	const versionArray = []
-	let loop = false
-	do {
-		const userRes = await init()
-		versionArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to edit more versions?' })
-
-		if (confirmQ) {
-			loop = true
-			console.log(chalk.bgBlueBright('----------------'))
+	try {
+		let game = await setGame()
+		if (game === 'back') {
+			return
 		} else {
-			loop = false
+			versionArray.push(await askNextVersion(game))
+
+			let nextAction = await askMenu()
+			while (nextAction !== 'back') {
+				if (nextAction === 'changeGame') {
+					game = await setGame()
+					nextAction = await askMenu()
+				} else if (nextAction == 'addNew') {
+					versionArray.push(await askNextVersion(game))
+					nextAction = await askMenu()
+				}
+			}
 		}
-	} while (loop)
+	} catch (error) {
+		if (error instanceof Error && error.name === 'ExitPromptError') {
+			// noop; silence this error
+		} else {
+			throw error
+		}
+	}
 
 	return versionArray
 }
@@ -88,15 +100,16 @@ export default async function editVersions() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Editing versions...').start()
-
 		for (let i in userResponse) {
 			const response = userResponse[i]
+			let spinner = ora('Editing ' + response.patch).start()
+
+			await new Promise((resolve) => setTimeout(resolve, 1000))
 			editVersion(response)
+			spinner.stopAndPersist()
 		}
 
-		spinner.stop()
-		console.log(chalk.greenBright('Versions saved!'))
+		console.log(chalk.greenBright('Versions saved!\n'))
 	} catch (error) {
 		// Error Handling
 		console.log('Something went wrong, Error: ', error)

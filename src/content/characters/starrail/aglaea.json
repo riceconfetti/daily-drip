@@ -1,0 +1,17 @@
+{
+    "name": "Aglaea",
+    "rarity": 5,
+    "images": {
+        "gachaSplash": "aglaea/gachaSplash",
+        "gachaCard": "aglaea/gachaCard",
+        "bannerCard": "aglaea/bannerCard"
+    },
+    "element": "lightning",
+    "weaponType": "remembrance",
+    "bannerName": "?????",
+    "colors": {
+        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
+        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
+        "textAccent": "text-[#000]"
+    }
+}

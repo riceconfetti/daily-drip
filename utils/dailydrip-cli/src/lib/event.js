@@ -2,9 +2,19 @@ import * as fs from 'fs'
 
 export function addEvent(answers) {
 	let eventPath = `src/content/events/${answers.game}/${answers.patch}`
-	let version = JSON.parse(
-		fs.readFileSync(`src/content/versions/${answers.game}/${answers.patch}.json`)
-	)
+	let version
+
+	try {
+		version = JSON.parse(
+			fs.readFileSync(`src/content/versions/${answers.game}/${answers.patch}.json`)
+		)
+	} catch (err) {
+		if (err.code === 'ENOENT') {
+			console.log(`Version ${answers.patch} Not Found!`)
+			return
+		}
+	}
+
 	switch (answers.type) {
 		case 'select':
 		case 'banner':
@@ -26,7 +36,8 @@ export function addEvent(answers) {
 		fs.mkdirSync(eventPath, { recursive: true })
 	}
 
-	eventPath += `/${answers.type == 'chronicle' ? 'chronicle_' : '' + (answers.character ? answers.character : answers.weapon ? answers.weapon : 'phase_' + answers.phase)}.json`
+	const fileName = `${answers.type == 'chronicle' ? 'chronicle_' : '' + (answers.character ? answers.character : answers.weapon ? answers.weapon : 'phase_' + answers.phase)}.json`
+	eventPath += '/' + fileName
 
 	let eventObj = {
 		status: answers.status,
@@ -45,6 +56,7 @@ export function addEvent(answers) {
 	}
 
 	fs.writeFileSync(eventPath, JSON.stringify(eventObj, null, 4))
+	console.log(fileName + ' Added')
 }
 
 export function editEvent(answers) {
@@ -78,4 +90,5 @@ export function editEvent(answers) {
 	}
 
 	fs.writeFileSync(eventPath, JSON.stringify(eventObj, null, 4))
+	// console.log(eventPath.split('\\').at(-1) + ' Saved')
 }
