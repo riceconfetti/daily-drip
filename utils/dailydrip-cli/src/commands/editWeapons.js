@@ -93,7 +93,7 @@ export default async function editWeapons() {
 			const response = userResponse[i]
 			let spinner = ora('Editing ' + response.key).start()
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
+			await new Promise((resolve) => setTimeout(resolve, 400))
 			editWeapon(response)
 			spinner.stopAndPersist()
 		}

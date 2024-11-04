@@ -56,7 +56,6 @@ export function addEvent(answers) {
 	}
 
 	fs.writeFileSync(eventPath, JSON.stringify(eventObj, null, 4))
-	console.log(fileName + ' Added')
 }
 
 export function editEvent(answers) {
@@ -94,5 +93,4 @@ export function editEvent(answers) {
 	}
 
 	fs.writeFileSync(eventPath, JSON.stringify(eventObj, null, 4))
-	// console.log(eventPath.split('\\').at(-1) + ' Saved')
 }

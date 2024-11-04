@@ -1,0 +1,17 @@
+{
+	"name": "Miyabi",
+	"rarity": 5,
+	"images": {
+		"gachaSplash": "miyabi/gachaSplash",
+		"gachaCard": "miyabi/gachaCard",
+		"bannerCard": "miyabi/bannerCard"
+	},
+	"element": "ice",
+	"weaponType": "anomaly",
+	"bannerName": "?????",
+	"colors": {
+		"primary": "bg-gradient-to-r from-zzz-ice-gradient-from to-zzz-ice-gradient-to",
+		"secondary": "bg-gradient-to-t from-zzz-ice-gradient-from to-[#B1F8F900]",
+		"textAccent": "text-[#007F93]"
+	}
+}

@@ -95,7 +95,7 @@ export default async function editEvents() {
 			const response = userResponse[i]
 			let spinner = ora('Editing ' + response.path.split('\\').at(-1)).start()
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
+			await new Promise((resolve) => setTimeout(resolve, 400))
 			editEvent(response)
 			spinner.stopAndPersist()
 		}

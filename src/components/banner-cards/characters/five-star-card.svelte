@@ -13,7 +13,7 @@
 				`../assets/characters/${game}/${character.images ? character.images.gachaCard : ''}.webp`
 			]
 		: images.placeHolders[
-				`../assets/placeholders/${game}/${game === 'starrail' ? character.weaponType : character.element}.webp`
+				`../assets/placeholders/${game}/${game === 'starrail' || game === 'zzz' ? character.weaponType : character.element}.webp`
 			]
 </script>
 
@@ -44,7 +44,7 @@
 				.src}
 		/>
 		<Image
-			class={`relative h-full w-full ${character.spec ? 'md:border-6 border-2 [border-image:url(/textures/holo-4.jpg)_10_round] sm:border-4' : ''} ${!gc_found ? 'mix-blend-hard-light' : ''}`}
+			class={`relative h-full w-full ${character.spec ? 'md:border-6 border-2 [border-image:url(/textures/holo-4.jpg)_10_round] sm:border-4' : ''}`}
 			src={gachaCard.default.src}
 			alt={`${character.name} Art`}
 			height={1050}

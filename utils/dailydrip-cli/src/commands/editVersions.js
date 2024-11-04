@@ -104,7 +104,7 @@ export default async function editVersions() {
 			const response = userResponse[i]
 			let spinner = ora('Editing ' + response.patch).start()
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
+			await new Promise((resolve) => setTimeout(resolve, 400))
 			editVersion(response)
 			spinner.stopAndPersist()
 		}

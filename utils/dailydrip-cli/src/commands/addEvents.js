@@ -115,7 +115,7 @@ export default async function addEvents() {
 
 			let spinner = ora('Adding ' + fileName).start()
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
+			await new Promise((resolve) => setTimeout(resolve, 400))
 			addEvent(response)
 			spinner.stopAndPersist()
 		}

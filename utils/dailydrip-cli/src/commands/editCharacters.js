@@ -45,6 +45,7 @@ async function askNextCharacter(game) {
 				character.newName = await input({
 					message: 'Enter new name'
 				})
+				break
 			case 'rarity':
 				character.rarity = await number({
 					message: 'Enter new rarity:'
@@ -146,7 +147,7 @@ export default async function editCharacters() {
 			const response = userResponse[i]
 			let spinner = ora('Editing ' + response.key).start()
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
+			await new Promise((resolve) => setTimeout(resolve, 400))
 			editCharacter(response)
 			spinner.stopAndPersist()
 		}

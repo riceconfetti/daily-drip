@@ -7,10 +7,10 @@
 
 <!-- Characters -->
 <section
-	class={`grid gap-2 ${game == 'wuwa' ? 'grid-cols-[auto_65%]' : game == 'zzz' ? 'grid-cols-[auto_50%]' : 'grid-cols-[1fr_1fr_45%] lg:grid-cols-[1fr_1fr_40%]'}`}
+	class={`grid gap-2 ${game == 'wuwa' && characters.fiveStars.length < 2 ? 'grid-cols-[auto_65%]' : game == 'zzz' ? 'grid-cols-[auto_50%]' : 'grid-cols-[1fr_1fr_45%] lg:grid-cols-[1fr_1fr_40%]'}`}
 >
 	{#each characters.fiveStars as character}
-		<FiveStarCard {character} {images} {game} select={false} />
+		<FiveStarCard {character} {images} {game} />
 	{/each}
 	<slot />
 	<div class="flex flex-col justify-end gap-4">

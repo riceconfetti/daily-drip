@@ -37,18 +37,14 @@ async function askNextCharacter(game) {
 		}),
 		element: await input({
 			message: 'Enter character element:'
-		}),
-		banner: await input({
-			message: 'Enter banner name:'
 		})
 	}
 
 	if (character.rarity == 5) {
-		let colorObj = {
-			primary: '',
-			secondary: '',
-			textAccent: ''
-		}
+		character.banner = await input({
+			message: 'Enter banner name:'
+		})
+		let colorObj
 
 		let colorType
 		do {
@@ -77,7 +73,9 @@ async function askNextCharacter(game) {
 			}
 		} while (colorType !== 'back')
 
-		character.colors = colorObj
+		if (colorObj !== undefined) {
+			character.colors = colorObj
+		}
 	}
 
 	return character
@@ -121,7 +119,7 @@ export default async function addCharacters() {
 			const response = userResponse[i]
 			let spinner = ora('Adding ' + response.name).start()
 
-			await new Promise((resolve) => setTimeout(resolve, 1000))
+			await new Promise((resolve) => setTimeout(resolve, 400))
 			addCharacter(response)
 			spinner.stopAndPersist()
 		}
