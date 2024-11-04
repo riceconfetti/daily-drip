@@ -1,7 +1,5 @@
-#!/usr/bin/env node
 import * as fs from 'fs'
 import dayjs from 'dayjs'
-import { version } from 'os'
 
 String.prototype.isEmpty = function () {
 	return this.length === 0 || !this.trim()
@@ -168,9 +166,22 @@ export function editVersion(answers) {
 	if (patch.length == 1) {
 		patch = patch + '.0'
 	}
+
 	let versionPath = `src/content/versions/${answers.game}/${patch}.json`
-	let versionObj = JSON.parse(fs.readFileSync(versionPath))
-	let tempVerObj = JSON.parse(fs.readFileSync(versionPath))
+	let versionObj, tempVerObj
+	try {
+		versionObj = JSON.parse(
+			fs.readFileSync(`src/content/versions/${answers.game}/${answers.patch}.json`)
+		)
+		tempVersionObj = JSON.parse(
+			fs.readFileSync(`src/content/versions/${answers.game}/${answers.patch}.json`)
+		)
+	} catch (err) {
+		if (err.code === 'ENOENT') {
+			console.log(`Version ${answers.game}/${answers.patch} Not Found!`)
+			return
+		}
+	}
 
 	for (const [key, value] of Object.entries(answers)) {
 		if (key == 'patch') {

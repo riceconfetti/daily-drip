@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { program } from 'commander'
 import { select, Separator } from '@inquirer/prompts'
 import addCharacters from '../src/commands/addCharacters.js'
@@ -33,7 +32,7 @@ async function actionMenu() {
 			{ name: 'Add', value: 'add' },
 			{ name: 'Edit', value: 'edit' },
 			new Separator(),
-			{ name: chalk.bold.green('Back'), value: 'back' },
+			{ name: chalk.bold.yellow('Back'), value: 'back' },
 			new Separator(' ')
 		]
 	})
@@ -48,7 +47,7 @@ async function askNextAction() {
 			{ name: 'Version', value: 'version' },
 			{ name: 'Event', value: 'event' },
 			new Separator(),
-			{ name: chalk.bold.green('Exit'), value: 'exit' },
+			{ name: chalk.bold.yellow('Exit'), value: 'exit' },
 			new Separator(' ')
 		]
 	})

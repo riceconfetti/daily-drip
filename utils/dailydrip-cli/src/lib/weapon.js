@@ -15,7 +15,16 @@ export function addWeapon(answers) {
 
 export function editWeapon(answers) {
 	let weaponPath = `src/content/weapons/${answers.game}/${answers.key}.json`
-	let weaponObj = JSON.parse(fs.readFileSync(weaponPath, { encoding: 'utf8', flag: 'r' }))
+	let weaponObj
+
+	try {
+		weaponObj = JSON.parse(fs.readFileSync(weaponPath))
+	} catch (err) {
+		if (err.code === 'ENOENT') {
+			console.log(`${answers.game}/${answers.key} Not Found!`)
+			return
+		}
+	}
 
 	for (const [key, value] of Object.entries(answers)) {
 		if (key == 'name') {

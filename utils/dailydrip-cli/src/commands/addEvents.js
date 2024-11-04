@@ -14,7 +14,7 @@ async function askMenu() {
 			{ name: 'Change Patch', value: 'changePatch' },
 			{ name: 'Change Phase', value: 'changePhase' },
 			new Separator(),
-			{ name: chalk.bold.green('Back'), value: 'back' },
+			{ name: chalk.bold.yellow('Back'), value: 'back' },
 			new Separator(' ')
 		]
 	})

@@ -22,7 +22,7 @@ export default async function setGame() {
 				name: 'Zenless Zone Zero'
 			},
 			new Separator(),
-			{ name: chalk.bold.green('Back'), value: 'back' },
+			{ name: chalk.bold.yellow('Back'), value: 'back' },
 			new Separator(' ')
 		]
 	})

@@ -12,7 +12,7 @@ async function askMenu() {
 			{ name: 'Add More Character(s)', value: 'addNew' },
 			{ name: 'Change Game', value: 'changeGame' },
 			new Separator(),
-			{ name: chalk.bold.green('Back'), value: 'back' },
+			{ name: chalk.bold.yellow('Back'), value: 'back' },
 			new Separator(' ')
 		]
 	})
@@ -59,7 +59,7 @@ async function askNextCharacter(game) {
 					{ name: 'Secondary Gradient', value: 'secondary' },
 					{ name: 'Text Accent', value: 'textAccent' },
 					new Separator(),
-					{ name: chalk.bold.green('Back'), value: 'back' },
+					{ name: chalk.bold.yellow('Back'), value: 'back' },
 					new Separator(' ')
 				]
 			})
