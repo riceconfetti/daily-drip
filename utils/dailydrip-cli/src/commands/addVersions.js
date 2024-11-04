@@ -1,38 +1,34 @@
 #!/usr/bin/env node
 import { input, select, number, confirm } from '@inquirer/prompts'
+import setGame from './setGame.js'
 import chalk from 'chalk'
 import ora from 'ora'
 import { addVersion } from '../lib/version.js'
 
-async function init() {
+async function askMenu() {
+	let action = await select({
+		message: 'What do you want to do next?: ',
+		choices: [
+			{ name: 'Add More Version(s)', value: 'addNew' },
+			{ name: 'Change Game', value: 'changeGame' },
+			new Separator(),
+			{ name: chalk.bold.green('Back'), value: 'back' },
+			new Separator(' ')
+		]
+	})
+
+	return action
+}
+
+async function askNextVersion(game) {
 	let version = {
-		game: await select({
-			message: 'Select the game:',
-			choices: [
-				{
-					value: 'genshin',
-					name: 'Genshin Impact'
-				},
-				{
-					value: 'starrail',
-					name: 'Honkai: Starrail'
-				},
-				{
-					value: 'wuwa',
-					name: 'Wuthering Waves'
-				},
-				{
-					value: 'zzz',
-					name: 'Zenless Zone Zero'
-				}
-			]
-		}),
+		game: game,
 		patch: await number({
-			message: 'Enter the patch number:',
+			message: 'Enter version patch number:',
 			step: 0.1
 		}),
 		name: await input({
-			message: 'Enter the patch name:'
+			message: 'Enter version name:'
 		}),
 		initialize: await confirm({ message: 'Do you want to initialize events?' })
 	}
@@ -42,19 +38,31 @@ async function init() {
 
 const askQuestions = async () => {
 	const versionArray = []
-	let loop = false
-	do {
-		const userRes = await init()
-		versionArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to add more versions?' })
-
-		if (confirmQ) {
-			loop = true
-			console.log(chalk.bgBlueBright('----------------'))
+	try {
+		let game = await setGame()
+		if (game === 'back') {
+			return
 		} else {
-			loop = false
+			versionArray.push(await askNextVersion(game))
+
+			let nextAction = await askMenu()
+			while (nextAction !== 'back') {
+				if (nextAction === 'changeGame') {
+					game = await setGame()
+					nextAction = await askMenu()
+				} else if (nextAction == 'addNew') {
+					versionArray.push(await askNextVersion(game))
+					nextAction = await askMenu()
+				}
+			}
 		}
-	} while (loop)
+	} catch (error) {
+		if (error instanceof Error && error.name === 'ExitPromptError') {
+			// noop; silence this error
+		} else {
+			throw error
+		}
+	}
 
 	return versionArray
 }
@@ -63,14 +71,15 @@ export default async function addVersions() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Adding version...').start()
-
 		for (let i in userResponse) {
 			const response = userResponse[i]
+			let spinner = ora('Adding ' + response.patch).start()
+
+			await new Promise((resolve) => setTimeout(resolve, 1000))
 			addVersion(response)
+			spinner.stopAndPersist()
 		}
 
-		spinner.stop()
 		console.log(chalk.greenBright('Versions added!'))
 	} catch (error) {
 		// Error Handling

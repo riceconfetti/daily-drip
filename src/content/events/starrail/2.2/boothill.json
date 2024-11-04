@@ -1,10 +1,10 @@
 {
-	"status": "confirmed",
-	"type": "debut",
-	"character": "starrail/boothill",
-	"game": "starrail",
-	"startDate": "2024-05-29",
-	"endDate": "2024-06-18",
-	"startTime": "15:00:00",
-	"endTime": "22:00:00"
+    "status": "confirmed",
+    "type": "debut",
+    "character": "starrail/boothill",
+    "game": "starrail",
+    "startDate": "2024-05-29",
+    "endDate": "2024-06-18",
+    "startTime": "15:00:00",
+    "endTime": "22:00:00"
 }

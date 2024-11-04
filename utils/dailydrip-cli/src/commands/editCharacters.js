@@ -1,32 +1,27 @@
-#!/usr/bin/env node
-import { input, select, checkbox, number, confirm } from '@inquirer/prompts'
+import { input, select, checkbox, number, Separator } from '@inquirer/prompts'
+import setGame from './setGame.js'
 import chalk from 'chalk'
 import ora from 'ora'
 import { editCharacter } from '../lib/character.js'
 
-async function init() {
+async function askMenu() {
+	let action = await select({
+		message: 'What do you want to do next?: ',
+		choices: [
+			{ name: 'Edit More Character(s)', value: 'addNew' },
+			{ name: 'Change Game', value: 'changeGame' },
+			new Separator(),
+			{ name: chalk.bold.green('Back'), value: 'back' },
+			new Separator(' ')
+		]
+	})
+
+	return action
+}
+
+async function askNextCharacter(game) {
 	let character = {
-		game: await select({
-			message: 'Select the game:',
-			choices: [
-				{
-					value: 'genshin',
-					name: 'Genshin Impact'
-				},
-				{
-					value: 'starrail',
-					name: 'Honkai: Starrail'
-				},
-				{
-					value: 'wuwa',
-					name: 'Wuthering Waves'
-				},
-				{
-					value: 'zzz',
-					name: 'Zenless Zone Zero'
-				}
-			]
-		}),
+		game: game,
 		key: await input({
 			message: 'Enter the character key:'
 		})
@@ -34,14 +29,21 @@ async function init() {
 
 	const actions = await checkbox({
 		message: 'What do you want to edit?',
-		choices: ['name', 'rarity', 'element', 'weapon', 'banner', 'colors']
+		choices: [
+			{ name: 'Name', value: 'name' },
+			{ name: 'Rarity', value: 'rarity' },
+			{ name: 'Element', value: 'element' },
+			{ name: 'Weapon', value: 'weapon' },
+			{ name: 'Banner', value: 'banner' },
+			{ name: 'Colors', value: 'colors' }
+		]
 	})
 
 	for (const editValue of actions) {
 		switch (editValue) {
 			case 'name':
 				character.newName = await input({
-					message: 'Enter the new name'
+					message: 'Enter new name'
 				})
 			case 'rarity':
 				character.rarity = await number({
@@ -64,28 +66,39 @@ async function init() {
 				})
 				break
 			case 'colors':
-				const colorType = await checkbox({
-					message: 'Select the palette(s) you want to edit:',
-					choices: ['primary', 'secondary', 'textAccent']
-				})
 				let colorObj = {
 					primary: '',
 					secondary: '',
 					textAccent: ''
 				}
 
-				for (const t of colorType) {
-					const colors = await input({
-						message: 'Enter new color(s):'
+				let colorType
+				do {
+					colorType = await select({
+						message: 'Enter the color palette(s) (optional):',
+						choices: [
+							{ name: 'Primary Gradient', value: 'primary' },
+							{ name: 'Secondary Gradient', value: 'secondary' },
+							{ name: 'Text Accent', value: 'textAccent' },
+							new Separator(),
+							{ name: chalk.bold.green('Back'), value: 'back' },
+							new Separator(' ')
+						]
 					})
-					console.log(t)
 
-					if (t == 'primary' || t == 'secondary') {
-						colorObj[t] = colors.split(' ')
-					} else {
-						colorObj[t] = colors
+					if (colorType !== 'back') {
+						const colors = await input({
+							message: colorType + ':'
+						})
+
+						if (colorType == 'primary' || colorType == 'secondary') {
+							colorObj[colorType] = colors.split(' ')
+						} else {
+							colorObj[colorType] = colors
+						}
 					}
-				}
+				} while (colorType !== 'back')
+
 				character.colors = colorObj
 				break
 		}
@@ -95,20 +108,32 @@ async function init() {
 }
 
 const askQuestions = async () => {
-	const characterArray = []
-	let loop = false
-	do {
-		const userRes = await init()
-		characterArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to edit more characters?' })
-
-		if (confirmQ) {
-			loop = true
-			console.log(chalk.bgBlueBright('----------------'))
+	let characterArray = []
+	try {
+		let game = await setGame()
+		if (game === 'back') {
+			return
 		} else {
-			loop = false
+			characterArray.push(await askNextCharacter(game))
+
+			let nextAction = await askMenu()
+			while (nextAction !== 'back') {
+				if (nextAction === 'changeGame') {
+					game = await setGame()
+					nextAction = await askMenu()
+				} else if (nextAction == 'addNew') {
+					characterArray.push(await askNextCharacter(game))
+					nextAction = await askMenu()
+				}
+			}
 		}
-	} while (loop)
+	} catch (error) {
+		if (error instanceof Error && error.name === 'ExitPromptError') {
+			// noop; silence this error
+		} else {
+			throw error
+		}
+	}
 
 	return characterArray
 }
@@ -117,15 +142,16 @@ export default async function editCharacters() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Editing characters...').start()
-
 		for (let i in userResponse) {
 			const response = userResponse[i]
+			let spinner = ora('Editing ' + response.key).start()
+
+			await new Promise((resolve) => setTimeout(resolve, 1000))
 			editCharacter(response)
+			spinner.stopAndPersist()
 		}
 
-		spinner.stop()
-		console.log(chalk.greenBright('Characters saved!'))
+		console.log(chalk.greenBright('Characters saved!\n'))
 	} catch (error) {
 		// Error Handling
 		console.log('Something went wrong, Error: ', error)

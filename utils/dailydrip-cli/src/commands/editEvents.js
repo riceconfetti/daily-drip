@@ -1,11 +1,25 @@
-#!/usr/bin/env node
-import { input, select, checkbox, number, confirm, search } from '@inquirer/prompts'
+import { input, select, checkbox, number, Separator } from '@inquirer/prompts'
+import fileSelector from 'inquirer-file-selector'
 import chalk from 'chalk'
 import ora from 'ora'
 import { editEvent } from '../lib/event.js'
-import fileSelector from 'inquirer-file-selector'
 
-async function init() {
+async function askMenu() {
+	console.log('')
+	let action = await select({
+		message: 'What do you want to do next?: ',
+		choices: [
+			{ name: 'Edit More Event(s)', value: 'addNew' },
+			new Separator(),
+			{ name: chalk.bold.green('Back'), value: 'back' },
+			new Separator(' ')
+		]
+	})
+
+	return action
+}
+
+async function askNextEvent() {
 	let event = {
 		path: await fileSelector({
 			message: 'Enter the event path:',
@@ -54,19 +68,21 @@ async function init() {
 
 const askQuestions = async () => {
 	const eventArray = []
-	let loop = false
-	do {
-		const userRes = await init()
-		eventArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to edit more events?' })
+	try {
+		eventArray.push(await askNextEvent())
 
-		if (confirmQ) {
-			loop = true
-			console.log(chalk.bgBlueBright('----------------'))
-		} else {
-			loop = false
+		let nextAction = await askMenu()
+		while (nextAction !== 'back') {
+			eventArray.push(await askNextEvent())
+			nextAction = await askMenu()
 		}
-	} while (loop)
+	} catch (error) {
+		if (error instanceof Error && error.name === 'ExitPromptError') {
+			// noop; silence this error
+		} else {
+			throw error
+		}
+	}
 
 	return eventArray
 }
@@ -75,15 +91,16 @@ export default async function editEvents() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Editing events...').start()
-
 		for (let i in userResponse) {
 			const response = userResponse[i]
+			let spinner = ora('Editing ' + response.path.split('\\').at(-1)).start()
+
+			await new Promise((resolve) => setTimeout(resolve, 1000))
 			editEvent(response)
+			spinner.stopAndPersist()
 		}
 
-		spinner.stop()
-		console.log(chalk.greenBright('Events saved!'))
+		console.log(chalk.greenBright('Events saved!\n'))
 	} catch (error) {
 		// Error Handling
 		console.log('Something went wrong, Error: ', error)

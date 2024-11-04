@@ -1,94 +1,114 @@
 #!/usr/bin/env node
-import { input, select, number, confirm } from '@inquirer/prompts'
+import { input, select, number, checkbox, Separator } from '@inquirer/prompts'
+import setGame from './setGame.js'
 import chalk from 'chalk'
 import ora from 'ora'
 import { addCharacter } from '../lib/character.js'
 
-async function init() {
+async function askMenu() {
+	let action = await select({
+		message: 'What do you want to do next?: ',
+		choices: [
+			{ name: 'Add More Character(s)', value: 'addNew' },
+			{ name: 'Change Game', value: 'changeGame' },
+			new Separator(),
+			{ name: chalk.bold.green('Back'), value: 'back' },
+			new Separator(' ')
+		]
+	})
+
+	return action
+}
+
+async function askNextCharacter(game) {
 	let character = {
-		game: await select({
-			message: 'Select the game:',
-			choices: [
-				{
-					value: 'genshin',
-					name: 'Genshin Impact'
-				},
-				{
-					value: 'starrail',
-					name: 'Honkai: Starrail'
-				},
-				{
-					value: 'wuwa',
-					name: 'Wuthering Waves'
-				},
-				{
-					value: 'zzz',
-					name: 'Zenless Zone Zero'
-				}
-			]
-		}),
+		game: game,
 		name: await input({
-			message: 'Enter the name of the character:'
+			message: 'Enter character name:'
 		}),
 		key: await input({
-			message: 'Enter an alternative key for the character:'
+			message: 'Enter an alternative key for the character (optional):'
 		}),
 		rarity: await number({
-			message: 'Enter the rarity:'
+			message: 'Enter character rarity:'
 		}),
 		weapon: await input({
-			message: 'Enter the weapon type:'
+			message: 'Enter character weapon type:'
 		}),
 		element: await input({
-			message: 'Enter the element:'
+			message: 'Enter character element:'
 		}),
 		banner: await input({
-			message: 'Enter the banner name:'
+			message: 'Enter banner name:'
 		})
 	}
 
 	if (character.rarity == 5) {
-		const confirmColors = await confirm({ message: 'Do you want to add colors?', type: 'confirm' })
-
-		if (confirmColors) {
-			let colors = {
-				primary: await input({
-					message: 'Enter the primary colors:'
-				}),
-				secondary: await input({
-					message: 'Enter the secondary colors:'
-				}),
-				textAccent: await input({
-					message: 'Enter the text color:'
-				})
-			}
-
-			for (let c in colors) {
-				if (c != 'text' && colors[c] != '') colors[c] = colors[c].split(' ')
-			}
-
-			character.colors = colors
+		let colorObj = {
+			primary: '',
+			secondary: '',
+			textAccent: ''
 		}
+
+		let colorType
+		do {
+			colorType = await select({
+				message: 'Enter the color palette(s) (optional):',
+				choices: [
+					{ name: 'Primary Gradient', value: 'primary' },
+					{ name: 'Secondary Gradient', value: 'secondary' },
+					{ name: 'Text Accent', value: 'textAccent' },
+					new Separator(),
+					{ name: chalk.bold.green('Back'), value: 'back' },
+					new Separator(' ')
+				]
+			})
+
+			if (colorType !== 'back') {
+				const colors = await input({
+					message: colorType + ':'
+				})
+
+				if (colorType == 'primary' || colorType == 'secondary') {
+					colorObj[colorType] = colors.split(' ')
+				} else {
+					colorObj[colorType] = colors
+				}
+			}
+		} while (colorType !== 'back')
+
+		character.colors = colorObj
 	}
 
 	return character
 }
 
 const askQuestions = async () => {
-	const characterArray = []
-	let loop = false
-	do {
-		const userRes = await init()
-		characterArray.push(userRes)
-		const confirmQ = await confirm({ message: 'Do you want to add more characters?' })
-
-		if (confirmQ) {
-			loop = true
-			console.log(chalk.bgBlueBright('----------------'))
+	let characterArray = []
+	try {
+		let game = await setGame()
+		if (game === 'back') {
+			return
 		} else {
-			loop = false
+			characterArray.push(await askNextCharacter(game))
+			let nextAction = await askMenu()
+			while (nextAction !== 'back') {
+				if (nextAction === 'changeGame') {
+					game = await setGame()
+					nextAction = await askMenu()
+				} else if (nextAction == 'addNew') {
+					characterArray.push(await askNextCharacter(game))
+					nextAction = await askMenu()
+				}
+			}
 		}
-	} while (loop)
+	} catch (error) {
+		if (error instanceof Error && error.name === 'ExitPromptError') {
+			// noop; silence this error
+		} else {
+			throw error
+		}
+	}
 
 	return characterArray
 }
@@ -97,14 +117,15 @@ export default async function addCharacters() {
 	try {
 		const userResponse = await askQuestions()
 
-		let spinner = ora('Adding characters...').start()
-
 		for (let i in userResponse) {
 			const response = userResponse[i]
+			let spinner = ora('Adding ' + response.name).start()
+
+			await new Promise((resolve) => setTimeout(resolve, 1000))
 			addCharacter(response)
+			spinner.stopAndPersist()
 		}
 
-		spinner.stop()
 		console.log(chalk.greenBright('Characters added!'))
 	} catch (error) {
 		// Error Handling

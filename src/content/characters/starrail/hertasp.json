@@ -1,0 +1,17 @@
+{
+    "name": "Herta: SP",
+    "rarity": 5,
+    "images": {
+        "gachaSplash": "hertasp/gachaSplash",
+        "gachaCard": "hertasp/gachaCard",
+        "bannerCard": "hertasp/bannerCard"
+    },
+    "element": "ice",
+    "weaponType": "erudition",
+    "bannerName": "?????",
+    "colors": {
+        "primary": "bg-gradient-to-r from-[#000] to-[#FFF]",
+        "secondary": "bg-gradient-to-t from-[#000] to-[#FFF00]",
+        "textAccent": "text-[#000]"
+    }
+}
