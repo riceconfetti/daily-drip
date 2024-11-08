@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { input, select, number, confirm } from '@inquirer/prompts'
+import { input, select, number, Separator } from '@inquirer/prompts'
 import setGame from './setGame.js'
 import chalk from 'chalk'
 import ora from 'ora'
