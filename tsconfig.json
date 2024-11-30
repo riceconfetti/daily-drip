@@ -6,5 +6,16 @@
   ],
   "exclude": [
     "dist"
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "$assets/*": ["src/assets/*"],
+      "$components/*": ["src/components/*"],
+      "$layouts/*": ["src/layouts/*"],
+      "$pages/*": ["src/pages/*"],
+      "$services/*": ["src/services/*"],
+      "$types/*": ["src/types/*"],
+    }
+  }
 }
