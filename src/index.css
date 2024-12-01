@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+    --color-transparent: 'transparent'
+
+    /* IMPORTED COLORS */
+    --color-acheron-primary:
+    --color-acheron-secondary:
+    --color-acheron-accent:
+    /* END COLORS */
+}

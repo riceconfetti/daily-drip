@@ -1,13 +1,77 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "$layouts/Layout.astro";
+import ProxyService from "$services/imgproxy";
+import directus from "$services/directus";
+import { readItems } from "@directus/sdk";
+import palette from "$assets/palette.json";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const characters = await directus.request(
+  readItems("characters", {
+    fields: [
+      "id",
+      "name",
+      "game",
+      "primaryAttribute",
+      "secondaryAttribute",
+      "focalPoint",
+      "colors",
+    ],
+  })
+);
+const images = characters.map((c) => {
+  const path = "/characters/" + c.game + "/" + c.id + "/gachaSplash.webp";
+  const fp = JSON.parse(c.focalPoint);
+
+  const bannerCard = [
+    { key: "gravity", params: ["fp", 0, fp[1]] },
+    // {key: 'crop', params: [.65, .5]},
+    { key: "crop", params: [0.85, 0.4] },
+    { key: "resize", params: ["fit", 1150, 300] },
+    { key: "extend", params: ["1", "ea"] },
+  ];
+
+  const bannerPath = ProxyService.getImage(path, bannerCard);
+  return bannerPath;
+});
 ---
 
 <Layout>
-  <div class="bg-yellow text-green p-4">
-    <h1>Hello World</h1>
-    <p>This is a sentence</p>
-  </div>
+  {
+    characters.map((c, index) => (
+      <div class="relative m-12">
+        <div class="flex flex-col p-8 inset-0 absolute justify-center">
+          <h1 class="font-bold text-2xl capitalize text-gray-100">{c.name}</h1>
+          <h3
+            class="text-xl text-(--accent)"
+            style={`--accent: ${c.colors.accent}`}
+          >
+            Ending in X Days
+          </h3>
+        </div>
+        <img
+          style={`--gradientPrimary: ${c.colors.primary}; --gradientSecondary: ${c.colors.secondary}`}
+          class="rounded-lg bg-linear-to-r from-(--gradientPrimary) to-(--gradientSecondary)"
+          src={images[index]}
+        />
+      </div>
+    ))
+  }
+  <!-- 
+  <br />
+  <div class="flex flex-col gap-2 w-full p-12">
+    {
+      palettes.map((p) => (
+        <div class="flex gap-2">
+          {p.map((c) => (
+            <div
+              class="w-1/8 aspect-square flex gap-2"
+              style={"background-color: " + c.hex}
+            >
+              {c.hex}
+            </div>
+          ))}
+        </div>
+      ))
+    }
+  </div> -->
 </Layout>
