@@ -1,0 +1,70 @@
+---
+import Layout from "$layouts/Layout.astro";
+import ProxyService from "$services/imgproxy";
+import directus from "$services/directus";
+import { readItems } from "@directus/sdk";
+import { extractColors } from "extract-colors";
+
+const characters = await directus.request(
+  readItems("characters", {
+    fields: [
+      "id",
+      "name",
+      "game",
+      "primaryAttribute",
+      "secondaryAttribute",
+      "focalPoint",
+      "crop",
+      "colors",
+    ],
+  })
+);
+
+function isGraytone(r: number, g: number, b: number) {
+  if ((r == g && r == b && r == 0) || r + g + b < 20) {
+    return true;
+  } else {
+    const mean = (r + g + b) / 3;
+    const sum2diff = (r - mean) ** 2 + (g - mean) ** 2 + (b - mean) ** 2;
+    const variance = sum2diff / 3;
+    const standDev = Math.sqrt(variance);
+    return standDev / mean <= 0.06;
+  }
+}
+---
+
+<Layout>
+  <div class="grid grid-cols-5">
+    {
+      characters.map((c) => {
+        let path = "/characters/" + c.game + "/" + c.id + "/gachaSplash.webp";
+        const displayIcon = [
+          { key: "trim", params: [1, "FF00FF"] },
+          { key: "gravity", params: ["fp", c.focalPoint.x, c.focalPoint.y] },
+          { key: "crop", params: [300 * c.crop.x, 300 * c.crop.y] },
+          { key: "resize", params: ["fill", 200, 200] },
+        ];
+
+        const randomIcon = [
+          { key: "trim", params: [1, "FF00FF"] },
+          {
+            key: "gravity",
+            params: [
+              "fp",
+              c.focalPoint.x + Math.random() * 0.2 - 0.1,
+              c.focalPoint.y + Math.random() * 0.2 - 0.1,
+            ],
+          },
+          { key: "crop", params: [300 * c.crop.x, 300 * c.crop.y] },
+          { key: "resize", params: ["fill", 200, 200] },
+        ];
+
+        const iconPath = ProxyService.getImage(path, displayIcon);
+        const processPath = ProxyService.getImage(path, randomIcon);
+
+        // extractColors(processPath).then(console.log).catch(console.error);
+        return <img src={iconPath} />;
+      })
+    }
+  </div>
+</Layout>

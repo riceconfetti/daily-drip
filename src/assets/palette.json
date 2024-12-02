@@ -1,72 +1,172 @@
 {
-  "aventurine": [
-    {
-      "hex": "#c51312",
-      "red": 197,
-      "green": 19,
-      "blue": 18,
-      "area": 0.005792,
-      "hue": 0.0009310986964618248,
-      "saturation": 0.8325581395348838,
-      "lightness": 0.4215686274509804,
-      "intensity": 0.7019607843137255
+  "firefly": {
+    "id": "firefly",
+    "name": "Firefly",
+    "game": "starrail",
+    "primaryAttribute": "destruction",
+    "secondaryAttribute": "fire",
+    "bannerName": "Firefull Flyshine",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#87bbb0",
+        "red": 135,
+        "green": 187,
+        "blue": 176,
+        "area": 0.20315,
+        "hue": 0.4647435897435898,
+        "saturation": 0.276595744680851,
+        "lightness": 0.6313725490196078,
+        "intensity": 0.20392156862745095
+      },
+      {
+        "hex": "#e8edcb",
+        "red": 232,
+        "green": 237,
+        "blue": 203,
+        "area": 0.186275,
+        "hue": 0.19117647058823536,
+        "saturation": 0.485714285714286,
+        "lightness": 0.8627450980392157,
+        "intensity": 0.13333333333333336
+      },
+      {
+        "hex": "#362e35",
+        "red": 54,
+        "green": 46,
+        "blue": 53,
+        "area": 0.1182,
+        "hue": 0.8541666666666666,
+        "saturation": 0.08,
+        "lightness": 0.19607843137254902,
+        "intensity": 0.031372549019607836
+      },
+      {
+        "hex": "#507e7a",
+        "red": 80,
+        "green": 126,
+        "blue": 122,
+        "area": 0.07075,
+        "hue": 0.4855072463768116,
+        "saturation": 0.22330097087378645,
+        "lightness": 0.403921568627451,
+        "intensity": 0.18039215686274512
+      },
+      {
+        "hex": "#ca885a",
+        "red": 202,
+        "green": 136,
+        "blue": 90,
+        "area": 0.021175,
+        "hue": 0.06845238095238095,
+        "saturation": 0.5137614678899082,
+        "lightness": 0.5725490196078431,
+        "intensity": 0.4392156862745098
+      },
+      {
+        "hex": "#8a3e09",
+        "red": 138,
+        "green": 62,
+        "blue": 9,
+        "area": 0.000025,
+        "hue": 0.06847545219638243,
+        "saturation": 0.8775510204081634,
+        "lightness": 0.28823529411764703,
+        "intensity": 0.5058823529411764
+      }
+    ],
+    "crop": {
+      "x": 0.85,
+      "y": 0.85
     },
-    {
-      "hex": "#f0b754",
-      "red": 240,
-      "green": 183,
-      "blue": 84,
-      "area": 0.000096,
-      "hue": 0.10576923076923077,
-      "saturation": 0.8387096774193549,
-      "lightness": 0.6352941176470588,
-      "intensity": 0.611764705882353
-    },
-    {
-      "hex": "#1d9099",
-      "red": 29,
-      "green": 144,
-      "blue": 153,
-      "area": 0.000016,
-      "hue": 0.5120967741935484,
-      "saturation": 0.6813186813186813,
-      "lightness": 0.3568627450980392,
-      "intensity": 0.4862745098039216
+    "focalPoint": {
+      "x": 0.48,
+      "y": 0.48
     }
-  ],
-  "acheron": [
-    {
-      "hex": "#e72f3d",
-      "red": 231,
-      "green": 47,
-      "blue": 61,
-      "area": 0.013952,
-      "hue": 0.9873188405797101,
-      "saturation": 0.793103448275862,
-      "lightness": 0.5450980392156863,
-      "intensity": 0.7215686274509803
+  },
+  "acheron": {
+    "id": "acheron",
+    "name": "Acheron",
+    "game": "starrail",
+    "primaryAttribute": "nihility",
+    "secondaryAttribute": "lightning",
+    "bannerName": "Words of Yore",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#e92e3d",
+        "red": 233,
+        "green": 46,
+        "blue": 61,
+        "area": 0.558,
+        "hue": 0.9866310160427808,
+        "saturation": 0.8095238095238093,
+        "lightness": 0.5470588235294117,
+        "intensity": 0.7333333333333333
+      },
+      {
+        "hex": "#6b1929",
+        "red": 107,
+        "green": 25,
+        "blue": 41,
+        "area": 0.279725,
+        "hue": 0.9674796747967479,
+        "saturation": 0.6212121212121212,
+        "lightness": 0.25882352941176473,
+        "intensity": 0.3215686274509804
+      },
+      {
+        "hex": "#38367d",
+        "red": 56,
+        "green": 54,
+        "blue": 125,
+        "area": 0.08105,
+        "hue": 0.6713615023474179,
+        "saturation": 0.39664804469273746,
+        "lightness": 0.3509803921568627,
+        "intensity": 0.2784313725490196
+      },
+      {
+        "hex": "#c97e77",
+        "red": 201,
+        "green": 126,
+        "blue": 119,
+        "area": 0.053375,
+        "hue": 0.014227642276422772,
+        "saturation": 0.43157894736842095,
+        "lightness": 0.6274509803921569,
+        "intensity": 0.3215686274509803
+      },
+      {
+        "hex": "#a8a0f0",
+        "red": 168,
+        "green": 160,
+        "blue": 240,
+        "area": 0.01585,
+        "hue": 0.6833333333333332,
+        "saturation": 0.7272727272727272,
+        "lightness": 0.7843137254901961,
+        "intensity": 0.3137254901960784
+      },
+      {
+        "hex": "#01001c",
+        "red": 1,
+        "green": 0,
+        "blue": 28,
+        "area": 0.000875,
+        "hue": 0.6726190476190476,
+        "saturation": 1,
+        "lightness": 0.054901960784313725,
+        "intensity": 0.1098039215686275
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
     },
-    {
-      "hex": "#603ddc",
-      "red": 96,
-      "green": 61,
-      "blue": 220,
-      "area": 0.001056,
-      "hue": 0.7033542976939203,
-      "saturation": 0.6943231441048036,
-      "lightness": 0.5509803921568628,
-      "intensity": 0.6235294117647059
-    },
-    {
-      "hex": "#1c1c1c",
-      "red": 28,
-      "green": 28,
-      "blue": 28,
-      "area": 0.020752,
-      "hue": 0,
-      "saturation": 0,
-      "lightness": 0.10980392156862745,
-      "intensity": 0
+    "focalPoint": {
+      "x": 0.5,
+      "y": 0.25
     }
-  ]
+  }
 }

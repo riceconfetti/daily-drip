@@ -1,55 +1,69 @@
-import { createDirectus, rest, staticToken} from '@directus/sdk';
-import dotenv from 'dotenv'
-dotenv.config()
+import { createDirectus, rest, staticToken } from "@directus/sdk";
+import dotenv from "dotenv";
+dotenv.config();
 
-const token: string = String(process.env.DIRECTUS_TOKEN)
+const token: string = String(process.env.DIRECTUS_TOKEN);
 
 type Game = {
-  id: string,
-  name: string, 
-  elementMain: boolean, 
+  id: string;
+  name: string;
+  elementMain: boolean;
   imageFormats: {
-    name: string, 
+    name: string;
     transforms: {
-        key: string, 
-        params: (string | number)[]
-    }[]
-  }[]
-}
+      key: string;
+      params: (string | number)[];
+    }[];
+  }[];
+};
 
 type Character = {
-    id: string, 
-    name: string, 
-    game: Game,
-    rarity: 5 | 4,
-    bannerName: string,
-    primaryAttribute: Attribute,
-    secondaryAttribute: Attribute
-    focalPoint: string,
-    colors: {
-        primary: string,
-        secondary: string, 
-        accent: string
-    }
-}
-
+  id: string;
+  name: string;
+  game: Game;
+  rarity: 5 | 4;
+  bannerName: string;
+  primaryAttribute: Attribute;
+  secondaryAttribute: Attribute;
+  focalPoint: {
+    x: number;
+    y: number;
+  };
+  crop: {
+    x: number;
+    y: number;
+  };
+  colors: {
+    hex: string;
+    red: number;
+    green: number;
+    blue: number;
+    hue: number;
+    intensity: number;
+    lightness: number;
+    saturation: number;
+    area: number;
+  }[];
+};
 
 type Attribute = {
-    id: string,
-    primary: boolean,
-    game: Game,
-    colors?: {
-        colorPrimary: string,
-        colorSecondary: string,
-        colorAccent: string
-    }
-}
+  id: string;
+  primary: boolean;
+  game: Game;
+  colors?: {
+    colorPrimary: string;
+    colorSecondary: string;
+    colorAccent: string;
+  };
+};
 
 type Schema = {
-    games:Game[],
-    attributes: Attribute[]
-    characters: Character[]
-}
-const directus = createDirectus<Schema>('https://cms.dailydrip.news').with(staticToken(token)).with(rest());
+  games: Game[];
+  attributes: Attribute[];
+  characters: Character[];
+};
+const directus = createDirectus<Schema>("https://cms.dailydrip.news")
+  .with(staticToken(token))
+  .with(rest());
 
 export default directus;

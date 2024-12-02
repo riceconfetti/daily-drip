@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "colors": "node src/services/palette.cjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -14,6 +15,7 @@
     "@directus/sdk": "^18.0.0",
     "@tailwindcss/vite": "^4.0.0-beta.4",
     "astro": "^5.0.0-beta.12",
+    "chroma-js": "^3.1.2",
     "color.js": "^1.2.0",
     "colorthief": "^2.6.0",
     "dotenv": "^16.4.5",
