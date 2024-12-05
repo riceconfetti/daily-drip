@@ -168,5 +168,1266 @@
       "x": 0.5,
       "y": 0.25
     }
+  },
+  "kafka": {
+    "id": "kafka",
+    "name": "Kafka",
+    "game": "starrail",
+    "primaryAttribute": "nihility",
+    "secondaryAttribute": "lightning",
+    "bannerName": "Nessun Dorma",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#6b3068",
+        "red": 107,
+        "green": 48,
+        "blue": 104,
+        "area": 0.380675,
+        "hue": 0.8418079096045198,
+        "saturation": 0.38064516129032255,
+        "lightness": 0.303921568627451,
+        "intensity": 0.23137254901960785
+      },
+      {
+        "hex": "#f8d9fd",
+        "red": 248,
+        "green": 217,
+        "blue": 253,
+        "area": 0.1018,
+        "hue": 0.8101851851851851,
+        "saturation": 0.9000000000000004,
+        "lightness": 0.9215686274509804,
+        "intensity": 0.14117647058823524
+      },
+      {
+        "hex": "#1d1618",
+        "red": 29,
+        "green": 22,
+        "blue": 24,
+        "area": 0.0868,
+        "hue": 0.9523809523809524,
+        "saturation": 0.1372549019607843,
+        "lightness": 0.1,
+        "intensity": 0.027450980392156852
+      },
+      {
+        "hex": "#a781a5",
+        "red": 167,
+        "green": 129,
+        "blue": 165,
+        "area": 0.085025,
+        "hue": 0.8421052631578947,
+        "saturation": 0.17757009345794392,
+        "lightness": 0.580392156862745,
+        "intensity": 0.14901960784313728
+      }
+    ],
+    "crop": {
+      "x": 0.9,
+      "y": 0.9
+    },
+    "focalPoint": {
+      "x": 0.5,
+      "y": 0.34
+    }
+  },
+  "clara": {
+    "id": "clara",
+    "name": "Clara",
+    "game": "starrail",
+    "primaryAttribute": "destruction",
+    "secondaryAttribute": "physical",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#33395c",
+        "red": 51,
+        "green": 57,
+        "blue": 92,
+        "area": 0.592575,
+        "hue": 0.6422764227642276,
+        "saturation": 0.28671328671328666,
+        "lightness": 0.2803921568627451,
+        "intensity": 0.16078431372549018
+      },
+      {
+        "hex": "#8883a2",
+        "red": 136,
+        "green": 131,
+        "blue": 162,
+        "area": 0.169825,
+        "hue": 0.6935483870967744,
+        "saturation": 0.14285714285714285,
+        "lightness": 0.5745098039215686,
+        "intensity": 0.1215686274509804
+      },
+      {
+        "hex": "#b5badf",
+        "red": 181,
+        "green": 186,
+        "blue": 223,
+        "area": 0.016,
+        "hue": 0.6468253968253969,
+        "saturation": 0.3962264150943396,
+        "lightness": 0.7921568627450981,
+        "intensity": 0.16470588235294112
+      },
+      {
+        "hex": "#300201",
+        "red": 48,
+        "green": 2,
+        "blue": 1,
+        "area": 0.01255,
+        "hue": 0.0035460992907801418,
+        "saturation": 0.9591836734693879,
+        "lightness": 0.09607843137254901,
+        "intensity": 0.1843137254901961
+      },
+      {
+        "hex": "#811b26",
+        "red": 129,
+        "green": 27,
+        "blue": 38,
+        "area": 0.004575,
+        "hue": 0.9820261437908497,
+        "saturation": 0.6538461538461539,
+        "lightness": 0.30588235294117644,
+        "intensity": 0.39999999999999997
+      },
+      {
+        "hex": "#a1496a",
+        "red": 161,
+        "green": 73,
+        "blue": 106,
+        "area": 0.000375,
+        "hue": 0.9375,
+        "saturation": 0.37606837606837606,
+        "lightness": 0.4588235294117647,
+        "intensity": 0.34509803921568627
+      },
+      {
+        "hex": "#fe9db2",
+        "red": 254,
+        "green": 157,
+        "blue": 178,
+        "area": 0.000025,
+        "hue": 0.9639175257731959,
+        "saturation": 0.9797979797979799,
+        "lightness": 0.8058823529411765,
+        "intensity": 0.3803921568627451
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.42,
+      "y": 0.32
+    }
+  },
+  "arlan": {
+    "id": "arlan",
+    "name": "Arlan",
+    "game": "starrail",
+    "primaryAttribute": "destruction",
+    "secondaryAttribute": "lightning",
+    "bannerName": "?????",
+    "rarity": 4,
+    "colors": [
+      {
+        "hex": "#172957",
+        "red": 23,
+        "green": 41,
+        "blue": 87,
+        "area": 0.1647,
+        "hue": 0.6197916666666666,
+        "saturation": 0.5818181818181818,
+        "lightness": 0.21568627450980393,
+        "intensity": 0.25098039215686274
+      },
+      {
+        "hex": "#6372a4",
+        "red": 99,
+        "green": 114,
+        "blue": 164,
+        "area": 0.1553,
+        "hue": 0.6282051282051282,
+        "saturation": 0.2631578947368421,
+        "lightness": 0.515686274509804,
+        "intensity": 0.2549019607843137
+      },
+      {
+        "hex": "#c593f6",
+        "red": 197,
+        "green": 147,
+        "blue": 246,
+        "area": 0.048375,
+        "hue": 0.7508417508417509,
+        "saturation": 0.8461538461538465,
+        "lightness": 0.7705882352941176,
+        "intensity": 0.38823529411764734
+      },
+      {
+        "hex": "#eac7bf",
+        "red": 234,
+        "green": 199,
+        "blue": 191,
+        "area": 0.000075,
+        "hue": 0.031007751937984506,
+        "saturation": 0.5058823529411761,
+        "lightness": 0.8333333333333333,
+        "intensity": 0.1686274509803921
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.65,
+      "y": 0.42
+    }
+  },
+  "asta": {
+    "id": "asta",
+    "name": "Asta",
+    "game": "starrail",
+    "primaryAttribute": "harmony",
+    "secondaryAttribute": "fire",
+    "bannerName": "?????",
+    "rarity": 4,
+    "colors": [
+      {
+        "hex": "#7a769c",
+        "red": 122,
+        "green": 118,
+        "blue": 156,
+        "area": 0.3977,
+        "hue": 0.6842105263157895,
+        "saturation": 0.16101694915254242,
+        "lightness": 0.5372549019607844,
+        "intensity": 0.14901960784313725
+      },
+      {
+        "hex": "#18171f",
+        "red": 24,
+        "green": 23,
+        "blue": 31,
+        "area": 0.18125,
+        "hue": 0.6875,
+        "saturation": 0.14814814814814814,
+        "lightness": 0.10588235294117647,
+        "intensity": 0.03137254901960784
+      },
+      {
+        "hex": "#d6bbd4",
+        "red": 214,
+        "green": 187,
+        "blue": 212,
+        "area": 0.025025,
+        "hue": 0.8456790123456789,
+        "saturation": 0.24770642201834883,
+        "lightness": 0.7862745098039216,
+        "intensity": 0.10588235294117657
+      },
+      {
+        "hex": "#66553f",
+        "red": 102,
+        "green": 85,
+        "blue": 63,
+        "area": 0.014375,
+        "hue": 0.09401709401709397,
+        "saturation": 0.23636363636363636,
+        "lightness": 0.3235294117647059,
+        "intensity": 0.15294117647058825
+      }
+    ],
+    "crop": {
+      "x": 1.1,
+      "y": 1.1
+    },
+    "focalPoint": {
+      "x": 0.47,
+      "y": 0.385
+    }
+  },
+  "blackswan": {
+    "id": "blackswan",
+    "name": "Black Swan",
+    "game": "starrail",
+    "primaryAttribute": "nihility",
+    "secondaryAttribute": "wind",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#5c456d",
+        "red": 92,
+        "green": 69,
+        "blue": 109,
+        "area": 0.651825,
+        "hue": 0.7625000000000001,
+        "saturation": 0.22471910112359553,
+        "lightness": 0.34901960784313724,
+        "intensity": 0.1568627450980392
+      },
+      {
+        "hex": "#706adc",
+        "red": 112,
+        "green": 106,
+        "blue": 220,
+        "area": 0.113625,
+        "hue": 0.6754385964912281,
+        "saturation": 0.6195652173913044,
+        "lightness": 0.6392156862745099,
+        "intensity": 0.44705882352941173
+      },
+      {
+        "hex": "#d5d2ff",
+        "red": 213,
+        "green": 210,
+        "blue": 255,
+        "area": 0.1101,
+        "hue": 0.6777777777777779,
+        "saturation": 1,
+        "lightness": 0.9117647058823529,
+        "intensity": 0.17647058823529416
+      },
+      {
+        "hex": "#1b1722",
+        "red": 27,
+        "green": 23,
+        "blue": 34,
+        "area": 0.038025,
+        "hue": 0.7272727272727272,
+        "saturation": 0.1929824561403509,
+        "lightness": 0.11176470588235293,
+        "intensity": 0.043137254901960784
+      },
+      {
+        "hex": "#cba6a8",
+        "red": 203,
+        "green": 166,
+        "blue": 168,
+        "area": 0.0008,
+        "hue": 0.9909909909909911,
+        "saturation": 0.2624113475177303,
+        "lightness": 0.7235294117647059,
+        "intensity": 0.14509803921568618
+      },
+      {
+        "hex": "#162c9d",
+        "red": 22,
+        "green": 44,
+        "blue": 157,
+        "area": 0.000125,
+        "hue": 0.6395061728395062,
+        "saturation": 0.7541899441340781,
+        "lightness": 0.3509803921568628,
+        "intensity": 0.5294117647058824
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.41,
+      "y": 0.3
+    }
+  },
+  "blade": {
+    "id": "blade",
+    "name": "Blade",
+    "game": "starrail",
+    "primaryAttribute": "destruction",
+    "secondaryAttribute": "wind",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#343f54",
+        "red": 52,
+        "green": 63,
+        "blue": 84,
+        "area": 0.80115,
+        "hue": 0.609375,
+        "saturation": 0.23529411764705882,
+        "lightness": 0.26666666666666666,
+        "intensity": 0.12549019607843137
+      },
+      {
+        "hex": "#6184b6",
+        "red": 97,
+        "green": 132,
+        "blue": 182,
+        "area": 0.009275,
+        "hue": 0.5980392156862745,
+        "saturation": 0.36796536796536805,
+        "lightness": 0.5470588235294118,
+        "intensity": 0.33333333333333337
+      },
+      {
+        "hex": "#c0a4a2",
+        "red": 192,
+        "green": 164,
+        "blue": 162,
+        "area": 0.005425,
+        "hue": 0.011111111111111226,
+        "saturation": 0.19230769230769235,
+        "lightness": 0.6941176470588235,
+        "intensity": 0.11764705882352944
+      },
+      {
+        "hex": "#b13707",
+        "red": 177,
+        "green": 55,
+        "blue": 7,
+        "area": 0.00325,
+        "hue": 0.047058823529411764,
+        "saturation": 0.9239130434782609,
+        "lightness": 0.3607843137254902,
+        "intensity": 0.6666666666666666
+      },
+      {
+        "hex": "#f9e2d7",
+        "red": 249,
+        "green": 226,
+        "blue": 215,
+        "area": 0.000325,
+        "hue": 0.053921568627450935,
+        "saturation": 0.7391304347826089,
+        "lightness": 0.9098039215686274,
+        "intensity": 0.1333333333333334
+      },
+      {
+        "hex": "#c76e44",
+        "red": 199,
+        "green": 110,
+        "blue": 68,
+        "area": 0.000025,
+        "hue": 0.05343511450381681,
+        "saturation": 0.5390946502057612,
+        "lightness": 0.5235294117647059,
+        "intensity": 0.5137254901960783
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.5,
+      "y": 0.18
+    }
+  },
+  "fischl": {
+    "id": "fischl",
+    "name": "Fischl",
+    "game": "genshin",
+    "primaryAttribute": "electro",
+    "secondaryAttribute": "bow",
+    "bannerName": "?????",
+    "rarity": 4,
+    "colors": [
+      {
+        "hex": "#312527",
+        "red": 49,
+        "green": 37,
+        "blue": 39,
+        "area": 0.269575,
+        "hue": 0.9722222222222222,
+        "saturation": 0.13953488372093023,
+        "lightness": 0.16862745098039217,
+        "intensity": 0.047058823529411764
+      },
+      {
+        "hex": "#9d736f",
+        "red": 157,
+        "green": 115,
+        "blue": 111,
+        "area": 0.2677,
+        "hue": 0.014492753623188403,
+        "saturation": 0.1900826446280992,
+        "lightness": 0.5254901960784314,
+        "intensity": 0.18039215686274512
+      },
+      {
+        "hex": "#e6c9a5",
+        "red": 230,
+        "green": 201,
+        "blue": 165,
+        "area": 0.077675,
+        "hue": 0.09230769230769227,
+        "saturation": 0.5652173913043477,
+        "lightness": 0.7745098039215687,
+        "intensity": 0.25490196078431365
+      },
+      {
+        "hex": "#6650a0",
+        "red": 102,
+        "green": 80,
+        "blue": 160,
+        "area": 0.031675,
+        "hue": 0.7125,
+        "saturation": 0.3333333333333333,
+        "lightness": 0.47058823529411764,
+        "intensity": 0.3137254901960784
+      },
+      {
+        "hex": "#b187d4",
+        "red": 177,
+        "green": 135,
+        "blue": 212,
+        "area": 0.00455,
+        "hue": 0.7575757575757575,
+        "saturation": 0.47239263803681,
+        "lightness": 0.6803921568627451,
+        "intensity": 0.3019607843137256
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.52,
+      "y": 0.32
+    }
+  },
+  "huohuo": {
+    "id": "huohuo",
+    "name": "Huohuo",
+    "game": "starrail",
+    "primaryAttribute": "abundance",
+    "secondaryAttribute": "wind",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#252f3c",
+        "red": 37,
+        "green": 47,
+        "blue": 60,
+        "area": 0.465675,
+        "hue": 0.5942028985507246,
+        "saturation": 0.23711340206185563,
+        "lightness": 0.19019607843137254,
+        "intensity": 0.09019607843137253
+      },
+      {
+        "hex": "#4d98b3",
+        "red": 77,
+        "green": 152,
+        "blue": 179,
+        "area": 0.26355,
+        "hue": 0.5441176470588235,
+        "saturation": 0.40157480314960625,
+        "lightness": 0.5019607843137255,
+        "intensity": 0.39999999999999997
+      },
+      {
+        "hex": "#8c706e",
+        "red": 140,
+        "green": 112,
+        "blue": 110,
+        "area": 0.106775,
+        "hue": 0.01111111111111107,
+        "saturation": 0.12000000000000002,
+        "lightness": 0.4901960784313726,
+        "intensity": 0.11764705882352944
+      },
+      {
+        "hex": "#e9ca7e",
+        "red": 233,
+        "green": 202,
+        "blue": 126,
+        "area": 0.01135,
+        "hue": 0.11838006230529595,
+        "saturation": 0.7086092715231785,
+        "lightness": 0.7039215686274509,
+        "intensity": 0.4196078431372548
+      },
+      {
+        "hex": "#ff8030",
+        "red": 255,
+        "green": 128,
+        "blue": 48,
+        "area": 0.005025,
+        "hue": 0.0644122383252818,
+        "saturation": 1,
+        "lightness": 0.5941176470588235,
+        "intensity": 0.8117647058823529
+      },
+      {
+        "hex": "#b6c6d4",
+        "red": 182,
+        "green": 198,
+        "blue": 212,
+        "area": 0.002375,
+        "hue": 0.5777777777777778,
+        "saturation": 0.25862068965517254,
+        "lightness": 0.7725490196078432,
+        "intensity": 0.11764705882352945
+      },
+      {
+        "hex": "#611901",
+        "red": 97,
+        "green": 25,
+        "blue": 1,
+        "area": 0.00075,
+        "hue": 0.041666666666666664,
+        "saturation": 0.979591836734694,
+        "lightness": 0.19215686274509802,
+        "intensity": 0.3764705882352941
+      },
+      {
+        "hex": "#51e7eb",
+        "red": 81,
+        "green": 231,
+        "blue": 235,
+        "area": 0.000375,
+        "hue": 0.5043290043290043,
+        "saturation": 0.7938144329896905,
+        "lightness": 0.6196078431372549,
+        "intensity": 0.6039215686274507
+      },
+      {
+        "hex": "#055b7f",
+        "red": 5,
+        "green": 91,
+        "blue": 127,
+        "area": 0.000325,
+        "hue": 0.5491803278688524,
+        "saturation": 0.9242424242424242,
+        "lightness": 0.25882352941176473,
+        "intensity": 0.47843137254901963
+      },
+      {
+        "hex": "#b64013",
+        "red": 182,
+        "green": 64,
+        "blue": 19,
+        "area": 0.000075,
+        "hue": 0.0460122699386503,
+        "saturation": 0.8109452736318409,
+        "lightness": 0.3941176470588235,
+        "intensity": 0.6392156862745099
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.45,
+      "y": 0.35
+    }
+  },
+  "venti": {
+    "id": "venti",
+    "name": "Venti",
+    "game": "genshin",
+    "primaryAttribute": "anemo",
+    "secondaryAttribute": "bow",
+    "bannerName": "Ballad in Goblets",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#4bb196",
+        "red": 75,
+        "green": 177,
+        "blue": 150,
+        "area": 0.3411,
+        "hue": 0.45588235294117646,
+        "saturation": 0.4047619047619047,
+        "lightness": 0.49411764705882355,
+        "intensity": 0.39999999999999997
+      },
+      {
+        "hex": "#c5bca1",
+        "red": 197,
+        "green": 188,
+        "blue": 161,
+        "area": 0.11625,
+        "hue": 0.12500000000000003,
+        "saturation": 0.23684210526315794,
+        "lightness": 0.7019607843137254,
+        "intensity": 0.14117647058823535
+      },
+      {
+        "hex": "#b9fedd",
+        "red": 185,
+        "green": 254,
+        "blue": 221,
+        "area": 0.034375,
+        "hue": 0.4202898550724638,
+        "saturation": 0.9718309859154931,
+        "lightness": 0.8607843137254902,
+        "intensity": 0.2705882352941176
+      },
+      {
+        "hex": "#2b4430",
+        "red": 43,
+        "green": 68,
+        "blue": 48,
+        "area": 0.011675,
+        "hue": 0.36666666666666664,
+        "saturation": 0.22522522522522517,
+        "lightness": 0.21764705882352942,
+        "intensity": 0.0980392156862745
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.48,
+      "y": 0.35
+    }
+  },
+  "yukong": {
+    "id": "yukong",
+    "name": "Yukong",
+    "game": "starrail",
+    "primaryAttribute": "harmony",
+    "secondaryAttribute": "imaginary",
+    "bannerName": "?????",
+    "rarity": 4,
+    "colors": [
+      {
+        "hex": "#f4c995",
+        "red": 244,
+        "green": 201,
+        "blue": 149,
+        "area": 0.6202,
+        "hue": 0.09122807017543856,
+        "saturation": 0.8119658119658123,
+        "lightness": 0.7705882352941177,
+        "intensity": 0.37254901960784326
+      },
+      {
+        "hex": "#aa6c49",
+        "red": 170,
+        "green": 108,
+        "blue": 73,
+        "area": 0.179375,
+        "hue": 0.06013745704467355,
+        "saturation": 0.3991769547325103,
+        "lightness": 0.4764705882352941,
+        "intensity": 0.3803921568627451
+      },
+      {
+        "hex": "#3c545c",
+        "red": 60,
+        "green": 84,
+        "blue": 92,
+        "area": 0.09295,
+        "hue": 0.5416666666666666,
+        "saturation": 0.21052631578947367,
+        "lightness": 0.2980392156862745,
+        "intensity": 0.12549019607843137
+      },
+      {
+        "hex": "#002829",
+        "red": 0,
+        "green": 40,
+        "blue": 41,
+        "area": 0.007025,
+        "hue": 0.5040650406504065,
+        "saturation": 1,
+        "lightness": 0.0803921568627451,
+        "intensity": 0.16078431372549018
+      },
+      {
+        "hex": "#86829a",
+        "red": 134,
+        "green": 130,
+        "blue": 154,
+        "area": 0.005475,
+        "hue": 0.6944444444444445,
+        "saturation": 0.10619469026548672,
+        "lightness": 0.5568627450980392,
+        "intensity": 0.09411764705882353
+      },
+      {
+        "hex": "#714317",
+        "red": 113,
+        "green": 67,
+        "blue": 23,
+        "area": 0.0003,
+        "hue": 0.08148148148148149,
+        "saturation": 0.6617647058823529,
+        "lightness": 0.26666666666666666,
+        "intensity": 0.3529411764705882
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.45,
+      "y": 0.35
+    }
+  },
+  "zhongli": {
+    "id": "zhongli",
+    "name": "Zhongli",
+    "game": "genshin",
+    "primaryAttribute": "geo",
+    "secondaryAttribute": "polearm",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#8b5724",
+        "red": 139,
+        "green": 87,
+        "blue": 36,
+        "area": 0.7749,
+        "hue": 0.0825242718446602,
+        "saturation": 0.5885714285714285,
+        "lightness": 0.3431372549019608,
+        "intensity": 0.40392156862745093
+      },
+      {
+        "hex": "#ecbd54",
+        "red": 236,
+        "green": 189,
+        "blue": 84,
+        "area": 0.083825,
+        "hue": 0.11513157894736842,
+        "saturation": 0.8000000000000002,
+        "lightness": 0.6274509803921569,
+        "intensity": 0.5960784313725491
+      },
+      {
+        "hex": "#f6e5b6",
+        "red": 246,
+        "green": 229,
+        "blue": 182,
+        "area": 0.0066,
+        "hue": 0.12239583333333333,
+        "saturation": 0.7804878048780491,
+        "lightness": 0.8392156862745098,
+        "intensity": 0.25098039215686285
+      }
+    ],
+    "crop": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "focalPoint": {
+      "x": 0.3,
+      "y": 0.25
+    }
+  },
+  "raidenshogun": {
+    "id": "raidenshogun",
+    "name": "Raiden Shogun",
+    "game": "genshin",
+    "primaryAttribute": "electro",
+    "secondaryAttribute": "polearm",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#6854cf",
+        "red": 104,
+        "green": 84,
+        "blue": 207,
+        "area": 0.34115,
+        "hue": 0.6937669376693766,
+        "saturation": 0.5616438356164384,
+        "lightness": 0.5705882352941176,
+        "intensity": 0.48235294117647065
+      },
+      {
+        "hex": "#291c37",
+        "red": 41,
+        "green": 28,
+        "blue": 55,
+        "area": 0.340675,
+        "hue": 0.7469135802469137,
+        "saturation": 0.32530120481927716,
+        "lightness": 0.1627450980392157,
+        "intensity": 0.10588235294117647
+      },
+      {
+        "hex": "#d9b8e7",
+        "red": 217,
+        "green": 184,
+        "blue": 231,
+        "area": 0.112775,
+        "hue": 0.7836879432624113,
+        "saturation": 0.49473684210526303,
+        "lightness": 0.8137254901960784,
+        "intensity": 0.18431372549019603
+      },
+      {
+        "hex": "#977694",
+        "red": 151,
+        "green": 118,
+        "blue": 148,
+        "area": 0.02605,
+        "hue": 0.8484848484848485,
+        "saturation": 0.13692946058091288,
+        "lightness": 0.5274509803921569,
+        "intensity": 0.12941176470588237
+      },
+      {
+        "hex": "#7b375e",
+        "red": 123,
+        "green": 55,
+        "blue": 94,
+        "area": 0.003425,
+        "hue": 0.9044117647058824,
+        "saturation": 0.38202247191011235,
+        "lightness": 0.34901960784313724,
+        "intensity": 0.26666666666666666
+      },
+      {
+        "hex": "#fff0b4",
+        "red": 255,
+        "green": 240,
+        "blue": 180,
+        "area": 0.000025,
+        "hue": 0.13333333333333333,
+        "saturation": 1,
+        "lightness": 0.8529411764705883,
+        "intensity": 0.2941176470588234
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.44,
+      "y": 0.3
+    }
+  },
+  "nahida": {
+    "id": "nahida",
+    "name": "Nahida",
+    "game": "genshin",
+    "primaryAttribute": "dendro",
+    "secondaryAttribute": "catalyst",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#70ab85",
+        "red": 112,
+        "green": 171,
+        "blue": 133,
+        "area": 0.151575,
+        "hue": 0.39265536723163846,
+        "saturation": 0.25991189427312766,
+        "lightness": 0.5549019607843138,
+        "intensity": 0.23137254901960774
+      },
+      {
+        "hex": "#dcffe4",
+        "red": 220,
+        "green": 255,
+        "blue": 228,
+        "area": 0.0897,
+        "hue": 0.37142857142857144,
+        "saturation": 1,
+        "lightness": 0.9313725490196079,
+        "intensity": 0.13725490196078427
+      },
+      {
+        "hex": "#22281f",
+        "red": 34,
+        "green": 40,
+        "blue": 31,
+        "area": 0.02705,
+        "hue": 0.2777777777777778,
+        "saturation": 0.1267605633802817,
+        "lightness": 0.1392156862745098,
+        "intensity": 0.03529411764705882
+      },
+      {
+        "hex": "#997752",
+        "red": 153,
+        "green": 119,
+        "blue": 82,
+        "area": 0.00985,
+        "hue": 0.08685446009389673,
+        "saturation": 0.302127659574468,
+        "lightness": 0.4607843137254902,
+        "intensity": 0.27843137254901956
+      },
+      {
+        "hex": "#c4db92",
+        "red": 196,
+        "green": 219,
+        "blue": 146,
+        "area": 0.00335,
+        "hue": 0.21917808219178078,
+        "saturation": 0.503448275862069,
+        "lightness": 0.7156862745098038,
+        "intensity": 0.28627450980392166
+      },
+      {
+        "hex": "#95dd2f",
+        "red": 149,
+        "green": 221,
+        "blue": 47,
+        "area": 0.00005,
+        "hue": 0.23563218390804597,
+        "saturation": 0.71900826446281,
+        "lightness": 0.5254901960784314,
+        "intensity": 0.6823529411764706
+      },
+      {
+        "hex": "#4c8315",
+        "red": 76,
+        "green": 131,
+        "blue": 21,
+        "area": 0.00005,
+        "hue": 0.25,
+        "saturation": 0.7236842105263157,
+        "lightness": 0.2980392156862745,
+        "intensity": 0.4313725490196078
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1.1
+    },
+    "focalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    }
+  },
+  "silverwolf": {
+    "id": "silverwolf",
+    "name": "Silver Wolf",
+    "game": "starrail",
+    "primaryAttribute": "nihility",
+    "secondaryAttribute": "quantum",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#285281",
+        "red": 40,
+        "green": 82,
+        "blue": 129,
+        "area": 0.164125,
+        "hue": 0.5880149812734082,
+        "saturation": 0.5266272189349113,
+        "lightness": 0.33137254901960783,
+        "intensity": 0.34901960784313724
+      },
+      {
+        "hex": "#7a66e3",
+        "red": 122,
+        "green": 102,
+        "blue": 227,
+        "area": 0.05485,
+        "hue": 0.6933333333333334,
+        "saturation": 0.6906077348066297,
+        "lightness": 0.6450980392156862,
+        "intensity": 0.4901960784313726
+      },
+      {
+        "hex": "#ffdeff",
+        "red": 255,
+        "green": 222,
+        "blue": 255,
+        "area": 0.00715,
+        "hue": 0.8333333333333334,
+        "saturation": 1,
+        "lightness": 0.9352941176470588,
+        "intensity": 0.12941176470588234
+      },
+      {
+        "hex": "#89d2f2",
+        "red": 137,
+        "green": 210,
+        "blue": 242,
+        "area": 0.000325,
+        "hue": 0.5507936507936507,
+        "saturation": 0.8015267175572518,
+        "lightness": 0.7431372549019608,
+        "intensity": 0.41176470588235287
+      }
+    ],
+    "crop": {
+      "x": 1.2,
+      "y": 1.2
+    },
+    "focalPoint": {
+      "x": 0.55,
+      "y": 0.4
+    }
+  },
+  "argenti": {
+    "id": "argenti",
+    "name": "Argenti",
+    "game": "starrail",
+    "primaryAttribute": "erudition",
+    "secondaryAttribute": "physical",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#67191d",
+        "red": 103,
+        "green": 25,
+        "blue": 29,
+        "area": 0.274525,
+        "hue": 0.9914529914529915,
+        "saturation": 0.609375,
+        "lightness": 0.25098039215686274,
+        "intensity": 0.3058823529411765
+      },
+      {
+        "hex": "#d05c51",
+        "red": 208,
+        "green": 92,
+        "blue": 81,
+        "area": 0.0582,
+        "hue": 0.014435695538057748,
+        "saturation": 0.5746606334841629,
+        "lightness": 0.5666666666666667,
+        "intensity": 0.4980392156862745
+      },
+      {
+        "hex": "#595b68",
+        "red": 89,
+        "green": 91,
+        "blue": 104,
+        "area": 0.03115,
+        "hue": 0.6444444444444444,
+        "saturation": 0.07772020725388604,
+        "lightness": 0.3784313725490196,
+        "intensity": 0.058823529411764726
+      }
+    ],
+    "crop": {
+      "x": 0.7,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.32,
+      "y": 0.32
+    }
+  },
+  "robin": {
+    "id": "robin",
+    "name": "Robin",
+    "game": "starrail",
+    "primaryAttribute": "harmony",
+    "secondaryAttribute": "physical",
+    "bannerName": "?????",
+    "rarity": 5,
+    "colors": [
+      {
+        "hex": "#988bad",
+        "red": 152,
+        "green": 139,
+        "blue": 173,
+        "area": 0.340525,
+        "hue": 0.7303921568627452,
+        "saturation": 0.17171717171717182,
+        "lightness": 0.611764705882353,
+        "intensity": 0.1333333333333334
+      },
+      {
+        "hex": "#6434c1",
+        "red": 100,
+        "green": 52,
+        "blue": 193,
+        "area": 0.1453,
+        "hue": 0.7234042553191489,
+        "saturation": 0.5755102040816328,
+        "lightness": 0.48039215686274506,
+        "intensity": 0.5529411764705883
+      },
+      {
+        "hex": "#fbedd4",
+        "red": 251,
+        "green": 237,
+        "blue": 212,
+        "area": 0.122175,
+        "hue": 0.10683760683760689,
+        "saturation": 0.8297872340425531,
+        "lightness": 0.907843137254902,
+        "intensity": 0.15294117647058822
+      },
+      {
+        "hex": "#230602",
+        "red": 35,
+        "green": 6,
+        "blue": 2,
+        "area": 0.1203,
+        "hue": 0.0202020202020202,
+        "saturation": 0.8918918918918919,
+        "lightness": 0.07254901960784314,
+        "intensity": 0.1294117647058824
+      },
+      {
+        "hex": "#a92411",
+        "red": 169,
+        "green": 36,
+        "blue": 17,
+        "area": 0.076025,
+        "hue": 0.020833333333333332,
+        "saturation": 0.8172043010752689,
+        "lightness": 0.36470588235294116,
+        "intensity": 0.596078431372549
+      },
+      {
+        "hex": "#714743",
+        "red": 113,
+        "green": 71,
+        "blue": 67,
+        "area": 0.018325,
+        "hue": 0.014492753623188408,
+        "saturation": 0.25555555555555554,
+        "lightness": 0.3529411764705882,
+        "intensity": 0.18039215686274507
+      },
+      {
+        "hex": "#c19851",
+        "red": 193,
+        "green": 152,
+        "blue": 81,
+        "area": 0.001575,
+        "hue": 0.10565476190476192,
+        "saturation": 0.47457627118644063,
+        "lightness": 0.5372549019607843,
+        "intensity": 0.4392156862745098
+      },
+      {
+        "hex": "#b7b5f0",
+        "red": 183,
+        "green": 181,
+        "blue": 240,
+        "area": 0.000325,
+        "hue": 0.672316384180791,
+        "saturation": 0.6629213483146067,
+        "lightness": 0.8254901960784313,
+        "intensity": 0.23137254901960788
+      }
+    ],
+    "crop": {
+      "x": 1,
+      "y": 1
+    },
+    "focalPoint": {
+      "x": 0.5,
+      "y": 0.3
+    }
   }
 }

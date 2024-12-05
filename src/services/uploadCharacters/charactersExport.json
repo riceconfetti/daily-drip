@@ -1,0 +1,427 @@
+[
+	{
+		"id": "acheron",
+		"game": "starrail",
+		"name": "Acheron",
+		"rarity": 5,
+		"primaryAttribute": "nihility",
+		"secondaryAttribute": "lightning",
+		"bannerName": "Words of Yore",
+		"focalPoint": {
+			"x": 0.5,
+			"y": 0.25
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "argenti",
+		"game": "starrail",
+		"name": "Argenti",
+		"rarity": 5,
+		"primaryAttribute": "erudition",
+		"secondaryAttribute": "physical",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.32,
+			"y": 0.32
+		},
+		"crop": {
+			"x": 0.7,
+			"y": 1
+		}
+	},
+	{
+		"id": "arlan",
+		"game": "starrail",
+		"name": "Arlan",
+		"rarity": 4,
+		"primaryAttribute": "destruction",
+		"secondaryAttribute": "lightning",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.65,
+			"y": 0.42
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "asta",
+		"game": "starrail",
+		"name": "Asta",
+		"rarity": 4,
+		"primaryAttribute": "harmony",
+		"secondaryAttribute": "fire",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.47,
+			"y": 0.385
+		},
+		"crop": {
+			"x": 1.1,
+			"y": 1.1
+		}
+	},
+	{
+		"id": "aventurine",
+		"game": "starrail",
+		"name": "Aventurine",
+		"rarity": 5,
+		"primaryAttribute": "preservation",
+		"secondaryAttribute": "imaginary",
+		"bannerName": "Gilden Imprisonment",
+		"focalPoint": {
+			"x": 0.56,
+			"y": 0.38
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "blackswan",
+		"game": "starrail",
+		"name": "Black Swan",
+		"rarity": 5,
+		"primaryAttribute": "nihility",
+		"secondaryAttribute": "wind",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.41,
+			"y": 0.3
+		},
+		"crop": {
+			"x": 0.9,
+			"y": 1
+		}
+	},
+	{
+		"id": "blade",
+		"game": "starrail",
+		"name": "Blade",
+		"rarity": 5,
+		"primaryAttribute": "destruction",
+		"secondaryAttribute": "wind",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.5,
+			"y": 0.18
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "clara",
+		"game": "starrail",
+		"name": "Clara",
+		"rarity": 5,
+		"primaryAttribute": "destruction",
+		"secondaryAttribute": "physical",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.42,
+			"y": 0.32
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "firefly",
+		"game": "starrail",
+		"name": "Firefly",
+		"rarity": 5,
+		"primaryAttribute": "destruction",
+		"secondaryAttribute": "fire",
+		"bannerName": "Firefull Flyshine",
+		"focalPoint": {
+			"x": 0.48,
+			"y": 0.48
+		},
+		"crop": {
+			"x": 0.85,
+			"y": 0.85
+		}
+	},
+	{
+		"id": "fischl",
+		"game": "genshin",
+		"name": "Fischl",
+		"rarity": 4,
+		"primaryAttribute": "electro",
+		"secondaryAttribute": "bow",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.52,
+			"y": 0.32
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "fugue",
+		"game": "starrail",
+		"name": "Fugue",
+		"rarity": 5,
+		"primaryAttribute": "nihility",
+		"secondaryAttribute": "fire",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.5,
+			"y": 0.5
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "gepard",
+		"game": "starrail",
+		"name": "Gepard",
+		"rarity": 5,
+		"primaryAttribute": "preservation",
+		"secondaryAttribute": "ice",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.57,
+			"y": 0.44
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "huohuo",
+		"game": "starrail",
+		"name": "Huohuo",
+		"rarity": 5,
+		"primaryAttribute": "abundance",
+		"secondaryAttribute": "wind",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.45,
+			"y": 0.35
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "jingliu",
+		"game": "starrail",
+		"name": "Jingliu",
+		"rarity": 5,
+		"primaryAttribute": "destruction",
+		"secondaryAttribute": "ice",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.5,
+			"y": 0.24
+		},
+		"crop": {
+			"x": 1.1,
+			"y": 1.1
+		}
+	},
+	{
+		"id": "kafka",
+		"game": "starrail",
+		"name": "Kafka",
+		"rarity": 5,
+		"primaryAttribute": "nihility",
+		"secondaryAttribute": "lightning",
+		"bannerName": "Nessun Dorma",
+		"focalPoint": {
+			"x": 0.5,
+			"y": 0.34
+		},
+		"crop": {
+			"x": 0.9,
+			"y": 0.9
+		}
+	},
+	{
+		"id": "nahida",
+		"game": "genshin",
+		"name": "Nahida",
+		"rarity": 5,
+		"primaryAttribute": "dendro",
+		"secondaryAttribute": "catalyst",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.5,
+			"y": 0.5
+		},
+		"crop": {
+			"x": 1,
+			"y": 1.1
+		}
+	},
+	{
+		"id": "raidenshogun",
+		"game": "genshin",
+		"name": "Raiden Shogun",
+		"rarity": 5,
+		"primaryAttribute": "electro",
+		"secondaryAttribute": "polearm",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.44,
+			"y": 0.3
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "robin",
+		"game": "starrail",
+		"name": "Robin",
+		"rarity": 5,
+		"primaryAttribute": "harmony",
+		"secondaryAttribute": "physical",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.5,
+			"y": 0.3
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "silverwolf",
+		"game": "starrail",
+		"name": "Silver Wolf",
+		"rarity": 5,
+		"primaryAttribute": "nihility",
+		"secondaryAttribute": "quantum",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.55,
+			"y": 0.4
+		},
+		"crop": {
+			"x": 1.2,
+			"y": 1.2
+		}
+	},
+	{
+		"id": "sunday",
+		"game": "starrail",
+		"name": "Sunday",
+		"rarity": 5,
+		"primaryAttribute": "harmony",
+		"secondaryAttribute": "imaginary",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.48,
+			"y": 0.3
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "theherta",
+		"game": "starrail",
+		"name": "The Herta",
+		"rarity": 5,
+		"primaryAttribute": "erudition",
+		"secondaryAttribute": "ice",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.45,
+			"y": 0.45
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "venti",
+		"game": "genshin",
+		"name": "Venti",
+		"rarity": 5,
+		"primaryAttribute": "anemo",
+		"secondaryAttribute": "bow",
+		"bannerName": "Ballad in Goblets",
+		"focalPoint": {
+			"x": 0.48,
+			"y": 0.35
+		},
+		"crop": {
+			"x": 1,
+			"y": 1.1
+		}
+	},
+	{
+		"id": "yinyuejun",
+		"game": "starrail",
+		"name": "Dan Heng: Imbibitor Lunae",
+		"rarity": 5,
+		"primaryAttribute": "destruction",
+		"secondaryAttribute": "imaginary",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.56,
+			"y": 0.33
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "yukong",
+		"game": "starrail",
+		"name": "Yukong",
+		"rarity": 4,
+		"primaryAttribute": "harmony",
+		"secondaryAttribute": "imaginary",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.45,
+			"y": 0.35
+		},
+		"crop": {
+			"x": 1,
+			"y": 1
+		}
+	},
+	{
+		"id": "zhongli",
+		"game": "genshin",
+		"name": "Zhongli",
+		"rarity": 5,
+		"primaryAttribute": "geo",
+		"secondaryAttribute": "polearm",
+		"bannerName": "?????",
+		"focalPoint": {
+			"x": 0.44,
+			"y": 0.24
+		},
+		"crop": {
+			"x": 0.8,
+			"y": 0.8
+		}
+	}
+]

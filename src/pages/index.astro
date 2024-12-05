@@ -23,7 +23,7 @@ const characters = await directus.request(
 
 const images = characters.map((c) => {
   let path = "/characters/" + c.game + "/" + c.id + "/gachaSplash.webp";
-  const bannerCrop = { x: 0.85, y: 0.4 };
+  const bannerCrop = { x: 0.8, y: 0.44 };
 
   const bannerCard = [
     { key: "trim", params: [1, "FF00FF"] },
@@ -70,7 +70,7 @@ function sortBy(colors: any, param: any) {
 ---
 
 <Layout>
-  <div class="grid grid-cols-2 gap-3 p-8">
+  <div class="grid gap-3 p-8">
     {
       characters.map((c, index) => (
         <div class="relative ">

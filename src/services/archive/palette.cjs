@@ -50,7 +50,7 @@ async function updateData(path, obj) {
 }
 
 function getColors(c) {
-  if (c.colors == null) {
+  if (c.colors != null) {
     const path = "/characters/" + c.game + "/" + c.id + "/gachaSplash.webp";
     const icon = [
       { key: "trim", params: [1, "FF00FF"] },
@@ -58,10 +58,8 @@ function getColors(c) {
         key: "gravity",
         params: [
           "fp",
-          c.focalPoint.x + Math.random() * 0.2 - 0.1,
-          ,
-          c.focalPoint.y + Math.random() * 0.2 - 0.1,
-          ,
+          c.focalPoint.x + Math.random() * 0.4 - 0.2,
+          c.focalPoint.y + Math.random() * 0.4 - 0.2,
         ],
       },
       { key: "crop", params: [300 * c.crop.x, 300 * c.crop.y] },
@@ -81,9 +79,22 @@ function getColors(c) {
       hueDistance: 0.083,
     };
 
+    const request = async (url) => {
+      const response = await fetch(url);
+      const buffer = Buffer.from(await (await response.blob()).arrayBuffer());
+      return buffer;
+    };
+
+    request(src).then((buffer) => {
+      fs.writeFileSync("test.json", JSON.stringify(buffer, null, 2));
+    });
+
     getPixels(src, (err, pixels) => {
       if (!err) {
         const data = [...pixels.data];
+
+        // fs.appendFileSync("test.json", JSON.stringify(data, null, 2));
+
         const [width, height] = pixels.shape;
 
         extractColors({ data, width, height }, options)
@@ -126,7 +137,7 @@ function isGraytone(r, g, b) {
   }
 }
 
-getData("items/characters/acheron")
+getData("items/characters/nahida")
   .then(({ data }) => {
     // console.log(data);
     // data.forEach((c) => {
