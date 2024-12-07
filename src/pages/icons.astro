@@ -11,8 +11,8 @@ const characters = await directus.request(
       "id",
       "name",
       "game",
-      "primaryAttribute",
-      "secondaryAttribute",
+      "primary_attribute",
+      "secondary_attribute",
       "focalPoint",
       "crop",
       "colors",
@@ -34,7 +34,7 @@ function isGraytone(r: number, g: number, b: number) {
 ---
 
 <Layout>
-  <div class="grid grid-cols-5">
+  <!-- <div class="grid grid-cols-5">
     {
       characters.map((c) => {
         let path = "/characters/" + c.game + "/" + c.id + "/gachaSplash.webp";
@@ -66,5 +66,5 @@ function isGraytone(r: number, g: number, b: number) {
         return <img src={iconPath} />;
       })
     }
-  </div>
+  </div> -->
 </Layout>

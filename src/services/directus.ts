@@ -23,8 +23,8 @@ type Character = {
   game: Game;
   rarity: 5 | 4;
   bannerName: string;
-  primaryAttribute: Attribute;
-  secondaryAttribute: Attribute;
+  primary_attribute: Attribute;
+  secondary_attribute: Attribute;
   focalPoint: {
     x: number;
     y: number;
@@ -47,7 +47,8 @@ type Character = {
 };
 
 type Attribute = {
-  id: string;
+  id: number;
+  name: string;
   primary: boolean;
   game: Game;
   colors?: {

@@ -1,0 +1,42 @@
+---
+import Layout from "$layouts/Layout.astro";
+import ProxyService from "$services/imgproxy";
+import directus from "$services/directus";
+import { readItems } from "@directus/sdk";
+
+const characters = await directus.request(
+  readItems("characters", {
+    fields: [
+      "id",
+      "name",
+      "game",
+      "primary_attribute",
+      "secondary_attribute",
+      "focalPoint",
+      "crop",
+      "colors",
+    ],
+  })
+);
+---
+
+<Layout>
+  <div class="flex flex-col">
+    {
+      characters.map((c) => {
+        if (c != null && c.colors != null) {
+          return (
+            <div class="flex gap-1 p-2 flex-wrap w-full h-full">
+              {c.colors.map((col) => (
+                <span
+                  class="rounded-full min-h-full size-4 flex"
+                  style={"background: " + col.hex}
+                />
+              ))}
+            </div>
+          );
+        }
+      })
+    }
+  </div>
+</Layout>

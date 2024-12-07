@@ -1,0 +1,152 @@
+[
+	{
+		"id": 0,
+		"game": "starrail",
+		"name": "hunt",
+		"primary": true
+	},
+	{
+		"id": 1,
+		"game": "starrail",
+		"name": "destruction",
+		"primary": true
+	},
+	{
+		"id": 2,
+		"game": "starrail",
+		"name": "abundance",
+		"primary": true
+	},
+	{
+		"id": 3,
+		"game": "starrail",
+		"name": "nihility",
+		"primary": true
+	},
+	{
+		"id": 4,
+		"game": "starrail",
+		"name": "harmony",
+		"primary": true
+	},
+	{
+		"id": 5,
+		"game": "starrail",
+		"name": "preservation",
+		"primary": true
+	},
+	{
+		"id": 6,
+		"game": "starrail",
+		"name": "remembrance",
+		"primary": true
+	},
+	{
+		"id": 7,
+		"game": "starrail",
+		"name": "erudition",
+		"primary": true
+	},
+	{
+		"id": 8,
+		"game": "starrail",
+		"name": "lightning",
+		"primary": false
+	},
+	{
+		"id": 9,
+		"game": "starrail",
+		"name": "fire",
+		"primary": false
+	},
+	{
+		"id": 10,
+		"game": "starrail",
+		"name": "wind",
+		"primary": false
+	},
+	{
+		"id": 11,
+		"game": "starrail",
+		"name": "ice",
+		"primary": false
+	},
+	{
+		"id": 12,
+		"game": "starrail",
+		"name": "imaginary",
+		"primary": false
+	},
+	{
+		"id": 13,
+		"game": "starrail",
+		"name": "quantum",
+		"primary": false
+	},
+	{
+		"id": 14,
+		"game": "starrail",
+		"name": "physical",
+		"primary": false
+	},
+	{
+		"id": 15,
+		"game": "genshin",
+		"name": "anemo",
+		"primary": true
+	},
+	{
+		"id": 16,
+		"game": "genshin",
+		"name": "geo",
+		"primary": true
+	},
+	{
+		"id": 17,
+		"game": "genshin",
+		"name": "electro",
+		"primary": true
+	},
+	{
+		"id": 18,
+		"game": "genshin",
+		"name": "dendro",
+		"primary": true
+	},
+	{
+		"id": 19,
+		"game": "genshin",
+		"name": "hydro",
+		"primary": true
+	},
+	{
+		"id": 20,
+		"game": "genshin",
+		"name": "pyro",
+		"primary": true
+	},
+	{
+		"id": 21,
+		"game": "genshin",
+		"name": "cryo",
+		"primary": true
+	},
+	{
+		"id": 22,
+		"game": "genshin",
+		"name": "sword",
+		"primary": false
+	},
+	{
+		"id": 23,
+		"game": "genshin",
+		"name": "claymore",
+		"primary": false
+	},
+	{
+		"id": 24,
+		"game": "genshin",
+		"name": "bow",
+		"primary": false
+	}
+]

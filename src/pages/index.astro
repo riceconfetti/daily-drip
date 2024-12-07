@@ -12,8 +12,8 @@ const characters = await directus.request(
       "id",
       "name",
       "game",
-      "primaryAttribute",
-      "secondaryAttribute",
+      "primary_attribute",
+      "secondary_attribute",
       "focalPoint",
       "crop",
       "colors",
@@ -70,7 +70,7 @@ function sortBy(colors: any, param: any) {
 ---
 
 <Layout>
-  <div class="grid gap-3 p-8">
+  <!-- <div class="grid gap-3 p-8">
     {
       characters.map((c, index) => (
         <div class="relative ">
@@ -102,5 +102,5 @@ function sortBy(colors: any, param: any) {
     }
   </div>
 
-  <div class="hidden">{palette.firefly}</div>
+  <div class="hidden">{palette.firefly}</div> -->
 </Layout>
