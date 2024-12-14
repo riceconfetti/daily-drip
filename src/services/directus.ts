@@ -47,15 +47,10 @@ type Character = {
 };
 
 type Attribute = {
-  id: number;
+  id: string;
+  game: Game;
   name: string;
   primary: boolean;
-  game: Game;
-  colors?: {
-    colorPrimary: string;
-    colorSecondary: string;
-    colorAccent: string;
-  };
 };
 
 type Schema = {
