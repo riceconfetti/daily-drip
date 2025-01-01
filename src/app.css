@@ -2,4 +2,6 @@
 
 @theme {
   --color-transparent: "transparent";
+  --color-accent-light: "#D7B471";
+  --color-accent-dark: "8D7340";
 }

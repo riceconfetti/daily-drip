@@ -1,11 +1,44 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import ProxyService from "$services/imgproxy";
+import Layout from "../layouts/Layout.astro";
+import { getCollection, getEntry } from "astro:content";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const characters = (await getCollection("characters")).map(
+  (chars) => chars.data
+);
+
+const hertaData = (await getEntry("characters", "theherta")!).data;
+console.log(hertaData);
+let imgPath = `/characters/${hertaData.game.id}/${hertaData.id}.webp`;
+const bannerCrop = { x: 0.3, y: 0.6 };
+
+const transforms = [
+  { key: "trim", params: [1, "FF00FF"] },
+  {
+    key: "gravity",
+    params: ["fp", hertaData.focalPoint.x, hertaData.focalPoint.y + 0.13],
+  },
+  {
+    key: "crop",
+    params: [
+      Math.min(bannerCrop.x * hertaData.crop.x, 0.99),
+      Math.min(bannerCrop.y * hertaData.crop.y, 0.99),
+    ],
+  },
+  { key: "resize", params: ["fill", 250, 400] },
+];
+
+const bannerPath = ProxyService.getImage(imgPath, transforms);
 ---
 
 <Layout>
-	<Welcome />
+  <div
+    class={`relative w-[250px] h-[400px] bg-[image:var(--bgImg)]`}
+    style={`--primaryColor:${hertaData.colors != null ? hertaData.colors[0].hex : "#000"}; --bgImg: url("${bannerPath}")`}
+  >
+    <div
+      class="absolute inset-1 z-10 rounded-lg border-2 border-(--primaryColor)"
+    >
+    </div>
+  </div>
 </Layout>

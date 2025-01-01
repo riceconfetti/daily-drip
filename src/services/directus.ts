@@ -47,7 +47,7 @@ type Character = {
 };
 
 type Attribute = {
-  id: string;
+  id: number |string;
   game: Game;
   name: string;
   primary: boolean;
