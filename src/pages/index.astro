@@ -1,44 +1,84 @@
 ---
 import ProxyService from "$services/imgproxy";
+import type { Character } from "$types/character";
 import Layout from "../layouts/Layout.astro";
+import CharacterCard from "$components/CharacterCard.astro";
 import { getCollection, getEntry } from "astro:content";
 
-const characters = (await getCollection("characters")).map(
-  (chars) => chars.data
+const characters: Character[] = (await getCollection("characters")).map(
+  (c: any) => {
+    let character = c.data;
+    return character;
+  }
 );
+const findChar = (char: string) => characters.find((c) => c.id == char);
+let characterArray = new Array();
 
-const hertaData = (await getEntry("characters", "theherta")!).data;
-console.log(hertaData);
-let imgPath = `/characters/${hertaData.game.id}/${hertaData.id}.webp`;
-const bannerCrop = { x: 0.3, y: 0.6 };
+let acheron = findChar("acheron")!;
+acheron.crop = { x: 0.8, y: 0.8 };
+characterArray.push(acheron);
 
-const transforms = [
-  { key: "trim", params: [1, "FF00FF"] },
-  {
-    key: "gravity",
-    params: ["fp", hertaData.focalPoint.x, hertaData.focalPoint.y + 0.13],
-  },
-  {
-    key: "crop",
-    params: [
-      Math.min(bannerCrop.x * hertaData.crop.x, 0.99),
-      Math.min(bannerCrop.y * hertaData.crop.y, 0.99),
-    ],
-  },
-  { key: "resize", params: ["fill", 250, 400] },
-];
+let aglaea = findChar("aglaea")!;
+aglaea.crop = { x: 0.8, y: 0.8 };
+characterArray.push(aglaea);
 
-const bannerPath = ProxyService.getImage(imgPath, transforms);
+let albedo = findChar("albedo")!;
+albedo.crop = { x: 0.8, y: 0.8 };
+characterArray.push(albedo);
+
+let camellya = findChar("camellya")!;
+camellya.crop = { x: 0.65, y: 0.65 };
+camellya.focalPoint.x = 0.497;
+camellya.focalPoint.y = 0.555;
+characterArray.push(camellya);
+
+let theherta = findChar("theherta")!;
+theherta.crop = { x: 0.8, y: 0.8 };
+theherta.focalPoint.x = 0.48;
+theherta.focalPoint.y = 0.41;
+characterArray.push(theherta);
+
+// console.log(characterArray);
 ---
 
 <Layout>
-  <div
-    class={`relative w-[250px] h-[400px] bg-[image:var(--bgImg)]`}
-    style={`--primaryColor:${hertaData.colors != null ? hertaData.colors[0].hex : "#000"}; --bgImg: url("${bannerPath}")`}
-  >
-    <div
-      class="absolute inset-1 z-10 rounded-lg border-2 border-(--primaryColor)"
-    >
-    </div>
+  <div class="flex gap-2 flex-wrap">
+    {characterArray.map((c) => <CharacterCard character={c} />)}
+  </div>
+
+  <!-- ICONS -->
+  <div class="flex gap-1 w-full h-min flex-wrap">
+    {
+      characterArray.map((characterData) => {
+        let imgPath = `/characters/${characterData.game.id}/${characterData.id}.webp`;
+        const transforms = [
+          // { key: "trim", params: [1, "FF00FF"] },
+          {
+            key: "gravity",
+            params: [
+              "fp",
+              characterData.focalPoint.x,
+              characterData.focalPoint.y,
+            ],
+          },
+          {
+            key: "crop",
+            params: [150 * characterData.crop.x, 150 * characterData.crop.y],
+          },
+          { key: "resize", params: ["fill", 100, 100] },
+        ];
+
+        const iconPath = ProxyService.getImage(imgPath, transforms);
+        if (characterData.colors != null) {
+          return (
+            <div class="relative size-40 rounded-full overflow-clip">
+              <div class="w-full absolute h-1/2 border-b border-black" />
+              <div class="h-full absolute w-1/2 border-r border-black" />
+              <img src={iconPath} class="size-full" />
+            </div>
+          );
+        }
+      })
+    }
   </div>
 </Layout>

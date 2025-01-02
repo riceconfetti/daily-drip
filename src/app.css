@@ -1,7 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-transparent: "transparent";
-  --color-accent-light: "#D7B471";
-  --color-accent-dark: "8D7340";
+  --color-transparent: transparent;
+  --color-dark: #232323;
+  --color-light: #d1d1d1;
+  --color-text-dark: #d1d1d1;
+  --color-text-light: #232323;
+
+  --color-accent: oklch(71.41% 0.0856 77.07);
+  --color-accent-50: oklch(95% 0.0856 77.07);
+  --color-accent-100: oklch(90% 0.0856 77.07);
+  --color-accent-150: oklch(85% 0.0856 77.07);
+  --color-accent-200: oklch(80% 0.0856 77.07);
+  --color-accent-300: oklch(70% 0.0856 77.07);
+  --color-accent-400: oklch(60% 0.0856 77.07);
+  --color-accent-500: oklch(50% 0.0856 77.07);
+  --color-accent-600: oklch(40% 0.0856 77.07);
+  --color-accent-700: oklch(30% 0.0856 77.07);
+  --color-accent-800: oklch(20% 0.0856 77.07);
+  --color-accent-900: oklch(10% 0.0856 77.07);
+  --color-accent-950: oklch(5% 0.0856 77.07);
+
+  --font-pdsc: "Playfair Display SC";
+  --font-pd: "Playfair Display Variable";
+
+  --inset-shadow-card: inset 0px 0px 12px 6px rgba(0, 0, 0, 45%);
 }
