@@ -1,8 +1,10 @@
 ---
-const { character } = Astro.props;
+const { character, debut, spec } = Astro.props;
 import ProxyService from "$services/imgproxy";
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
+import Frost from "$assets/overlays/Frost_Portrait.png";
+import DebutOverlay from "$components/DebutOverlay.svelte";
 
 const game = await getEntry("games", character.game.id);
 const primary = await getEntry("attributes", character.primary_attribute.id);
@@ -33,7 +35,7 @@ transforms.push(
     key: "crop",
     params: [bannerCrop.x * character.crop.x, bannerCrop.y * character.crop.y],
   },
-  { key: "resize", params: ["fill", 250, 400] }
+  { key: "resize", params: ["fill", 370, 600] }
 );
 
 const image = ProxyService.getImage(imgPath, transforms);
@@ -42,7 +44,7 @@ const colorIndex = 0;
 
 <!-- CARD -->
 <div
-  class="relative mb-4 w-[250px] h-[400px]"
+  class="relative mb-4 w-full aspect-[250/400]"
   style={{
     "--primaryColor":
       character.colors != null
@@ -55,7 +57,7 @@ const colorIndex = 0;
     "--bgImg": `url("${image}")`,
   }}
 >
-  <div class="size-full bg-[image:var(--bgImg)] bg-top bg-no-repeat">
+  <div class="size-full bg-[image:var(--bgImg)] bg-top bg-no-repeat bg-cover">
     <!-- Gradient Overlay -->
     <div
       class="z-10 inset-0 absolute bg-linear-0 from-(--primaryColor) via-(--secondaryColor)"
@@ -64,12 +66,12 @@ const colorIndex = 0;
 
     <!-- Text & Outline -->
     <div
-      class="absolute inset-1 z-10 p-4 flex flex-col justify-end text-center font-pdsc rounded-lg border-2 border-accent-150 text-accent-150 inset-shadow-card"
+      class="z-20 absolute inset-1 p-4 flex flex-col justify-end text-center font-pdsc rounded-md border-2 border-accent-150 text-accent-150 inset-shadow-card"
     >
-      <h2 class="text-2xl font-bold drop-shadow-md shadow-black">
+      <h2 class="text-2xl font-bold drop-shadow-card shadow-black">
         {character.name}
       </h2>
-      <h3 class="italic font-pd drop-shadow-md shadow-black">Banner Name</h3>
+      <h3 class="italic font-pd drop-shadow-card shadow-black">Banner Name</h3>
     </div>
   </div>
   <Image
@@ -77,4 +79,14 @@ const colorIndex = 0;
     alt="Background"
     class="absolute inset-0 -z-10 w-full h-full"
   />
+  {
+    spec && (
+      <Image
+        src={Frost}
+        alt="Spec"
+        class="absolute inset-0 mix-blend-screen z-10 w-full h-full"
+      />
+    )
+  }
+  {debut && <DebutOverlay client:load />}
 </div>
