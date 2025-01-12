@@ -63,12 +63,13 @@ const characters = defineCollection({
             "name",
             "game",
             "rarity",
+            "bannerName",
             "primary_attribute",
             "secondary_attribute",
             "focalPoint",
             "crop",
             "colors",
-            "portrait_index",
+            "card_edits",
           ],
         })
       )
@@ -78,6 +79,7 @@ const characters = defineCollection({
         name: c.name,
         game: c.game,
         rarity: c.rarity,
+        bannerName: c.bannerName,
         primary_attribute:
           c.primary_attribute != null ? String(c.primary_attribute) : null,
         secondary_attribute:
@@ -85,7 +87,7 @@ const characters = defineCollection({
         focalPoint: c.focalPoint,
         crop: c.crop,
         colors: c.colors,
-        portrait_index: c.portrait_index,
+        card_edits: c.card_edits,
       };
       // console.log(charMod);
       return charMod;
@@ -115,7 +117,10 @@ const characters = defineCollection({
         })
       )
       .nullable(),
-    portrait_index: z.number().nullable(),
+    card_edits: z.array(z.object({
+      variant: z.string(),
+      style: z.object({}).passthrough(),
+    })).nullable(),
   }),
 });
 

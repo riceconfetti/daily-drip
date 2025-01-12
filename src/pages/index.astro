@@ -3,42 +3,48 @@ import ProxyService from "$services/imgproxy";
 import type { Character } from "$types/character";
 import Layout from "../layouts/Layout.astro";
 import CharacterCard from "$components/CharacterCard.astro";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import updates from "./_updates.json";
+import complete from "./_complete.json";
+
+const setValRecursive = (newObj: any, currObj:any) => {
+    Object.keys(newObj).forEach((k: any) => {
+      if (typeof newObj[k] == "object" && currObj[k] != null) {
+        setValRecursive(newObj[k], currObj[k]);
+      } else {
+        currObj[k] = newObj[k]
+      }
+    });
+    return currObj;
+  };
 
 const characters: Character[] = (await getCollection("characters")).map(
   (c: any) => {
     let character = c.data;
     return character;
-  }
+  },
 );
 const findChar = (char: string) => characters.find((c) => c.id == char);
 let characterArray = new Array();
 
-let acheron = findChar("acheron")!;
-acheron.crop = { x: 0.8, y: 0.8 };
-characterArray.push(acheron);
+complete.map((u) => {
+  characterArray.push(findChar(u));
+});
 
-let aglaea = findChar("aglaea")!;
-aglaea.crop = { x: 0.8, y: 0.8 };
-characterArray.push(aglaea);
+updates.forEach((k) => {
+  if (k.id != "tempChar") {
+    let char: Character = findChar(k.id)!;
 
-let albedo = findChar("albedo")!;
-albedo.crop = { x: 0.8, y: 0.8 };
-characterArray.push(albedo);
+    setValRecursive(k, char)
+    characterArray.push(char);
+  }
+});
 
-let camellya = findChar("camellya")!;
-camellya.crop = { x: 0.65, y: 0.65 };
-camellya.focalPoint.x = 0.497;
-camellya.focalPoint.y = 0.555;
-characterArray.push(camellya);
+characterArray.sort((a, b) => a.game.id.localeCompare(b.game.id));
 
-let theherta = findChar("theherta")!;
-theherta.crop = { x: 0.8, y: 0.8 };
-theherta.focalPoint.x = 0.48;
-theherta.focalPoint.y = 0.41;
-characterArray.push(theherta);
+//characterArray = characterArray.filter((c)=> c.game.id == 'genshin');
 
-// console.log(characterArray);
+characterArray = [...new Set(characterArray)]
 ---
 
 <Layout>
@@ -63,7 +69,7 @@ characterArray.push(theherta);
           },
           {
             key: "crop",
-            params: [150 * characterData.crop.x, 150 * characterData.crop.y],
+            params: [125 * characterData.crop.x, 125 * characterData.crop.y],
           },
           { key: "resize", params: ["fill", 100, 100] },
         ];
@@ -71,11 +77,13 @@ characterArray.push(theherta);
         const iconPath = ProxyService.getImage(imgPath, transforms);
         if (characterData.colors != null) {
           return (
-            <div class="relative size-40 rounded-full overflow-clip">
+            <div class="flex flex-col items-center font-pdsc"><div class="relative size-40 rounded-full overflow-clip border-2 border-accent-500">
               <div class="w-full absolute h-1/2 border-b border-black" />
               <div class="h-full absolute w-1/2 border-r border-black" />
-              <img src={iconPath} class="size-full" />
+              <img src={iconPath} class="size-full " />
+
             </div>
+             <p>{characterData.name}</p></div>
           );
         }
       })

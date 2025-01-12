@@ -21,8 +21,9 @@
   --color-accent-900: oklch(10% 0.0856 77.07);
   --color-accent-950: oklch(5% 0.0856 77.07);
 
-  --font-pdsc: "Playfair Display SC";
-  --font-pd: "Playfair Display Variable";
+  --font-heading: "Playfair Display SC";
+  --font-subheading: "Playfair Display Variable";
+  --font-body: "Crimson Text";
 
   --inset-shadow-card: inset 0px 0px 12px 6px rgba(0, 0, 0, 45%);
 }

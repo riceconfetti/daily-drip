@@ -28,5 +28,8 @@ export type Character = {
     saturation: number;
     area: number;
   }[];
-  portrait_index: number;
+  card_edits: {
+    variant: 'portrait'| 'landscape' | 'icon' | 'banner',
+    style: object
+  }[];
 };

@@ -8,7 +8,7 @@ const game = await getEntry("games", character.game.id);
 const primary = await getEntry("attributes", character.primary_attribute.id);
 const secondary = await getEntry(
   "attributes",
-  character.secondary_attribute.id
+  character.secondary_attribute.id,
 );
 
 const background = game?.data.elementMain
@@ -16,27 +16,55 @@ const background = game?.data.elementMain
   : import(`../assets/backgrounds/${game?.id}/${secondary?.data.name}.webp`);
 
 let imgPath = `/characters/${character.game.id}/${character.id}.webp`;
-const bannerCrop = { x: 0.3, y: 0 };
-let index = 0.07;
 const transforms = new Array();
 
-if (character.portrait_index != null) {
-  index = character.portrait_index;
+let options: any = {
+  bannerCrop: { x: 0.3, y: 0 },
+  index: { x: 0, y: 0.07 },
+};
+
+if (
+  character.card_edits != null &&
+  character.card_edits.find((x: any) => x.variant == "portrait") != null
+) {
+  
+  let edits = character.card_edits.find(
+    (x: any) => x.variant == "portrait",
+  ).style;
+  
+  const setValRecursive = (newObj: any, currObj:any) => {
+    Object.keys(newObj).forEach((k: any) => {
+      if (typeof newObj[k] == "object") {
+        setValRecursive(newObj[k], currObj[k]);
+      } else {
+        currObj[k] = newObj[k]
+      }
+    });
+    return currObj;
+  };
+
+  options = setValRecursive(edits, options);
 }
 
+const { bannerCrop, index } = options;
 transforms.push(
   {
     key: "gravity",
-    params: ["fp", character.focalPoint.x, character.focalPoint.y + index],
+    params: [
+      "fp",
+      character.focalPoint.x + index.x,
+      character.focalPoint.y + index.y,
+    ],
   },
   {
     key: "crop",
     params: [bannerCrop.x * character.crop.x, bannerCrop.y * character.crop.y],
   },
-  { key: "resize", params: ["fill", 250, 400] }
+  { key: "resize", params: ["fill", 250, 400] },
 );
 
 const image = ProxyService.getImage(imgPath, transforms);
+// character.colors.sort((a: any, b:any)=> b.intensity - a.intensity)
 const colorIndex = 0;
 ---
 
@@ -46,7 +74,7 @@ const colorIndex = 0;
   style={{
     "--primaryColor":
       character.colors != null
-        ? `oklch(from ${character.colors[colorIndex].hex} 40% 0.0666 h)`
+        ? `oklch(from ${character.colors[colorIndex].hex} 20% 0.0666 h)`
         : "oklch(from #000 l c h)",
     "--secondaryColor":
       character.colors != null
@@ -64,12 +92,17 @@ const colorIndex = 0;
 
     <!-- Text & Outline -->
     <div
-      class="absolute inset-1 z-10 p-4 flex flex-col justify-end text-center font-pdsc rounded-lg border-2 border-accent-150 text-accent-150 inset-shadow-card"
+      class="absolute inset-1 inset-y-2 z-10 p-4 flex flex-col justify-end text-center rounded-lg border-2 border-accent-150 text-accent-150 inset-shadow-card"
     >
-      <h2 class="text-2xl font-bold drop-shadow-md shadow-black">
+      <h2 class="text-2xl font-heading font-bold drop-shadow-md shadow-black">
         {character.name}
       </h2>
-      <h3 class="italic font-pd drop-shadow-md shadow-black">Banner Name</h3>
+      {
+        character.rarity == 5 ? (<h3 class="italic font-subheading drop-shadow-md shadow-black">
+        {character.bannerName}
+      </h3>) : ''
+      }
+      
     </div>
   </div>
   <Image

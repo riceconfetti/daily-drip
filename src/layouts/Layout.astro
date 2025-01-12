@@ -1,31 +1,85 @@
 ---
+// FONTS
+import 'remixicon/fonts/remixicon.css'
 import "@fontsource/playfair-display-sc/400.css";
 import "@fontsource/playfair-display-sc/700.css";
 import "@fontsource/playfair-display-sc/900.css";
-// Supports weights 400-900
 import "@fontsource-variable/playfair-display/wght-italic.css";
+import '@fontsource/crimson-text/400.css';
+import '@fontsource/crimson-text/600.css';
+import '@fontsource/crimson-text/700.css';
+import '@fontsource/crimson-text/400-italic.css';
+import '@fontsource/crimson-text/600-italic.css';
+import '@fontsource/crimson-text/700-italic.css';
 import "../app.css";
+// 
+
+import NavBar from '$components/NavBar.astro'
+
+interface Props {
+	title: string
+}
+
+const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
-  </head>
-  <body>
-    <slot />
-  </body>
-</html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Welcome to The Daily Drip, your place for gacha
+				game leaks and banner speculations!"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<script is:inline>
+			let myVar
+			function myFunction() {
+				myVar = setTimeout(showPage, 700)
+			}
+			function showPage() {
+				document.getElementById('loader').classList.toggle('opacity-0')
+				document.getElementById('loader').classList.toggle('z-50')
+				document.getElementById('loader').classList.toggle('z-0')
+			}
+		</script>
+		<title>{title}</title>
+	</head>
+	<body class="relative h-dvh w-dvw bg-light" onload="myFunction()">
+		
+		<main
+			id="content"
+			class="relative flex flex-col overflow-x-hidden size-full items-center pb-2 lg:overflow-hidden"
+		>
+			<div
+				id="loader"
+				class="fixed inset-0 text-accent-dark z-50 bg-dark flex flex-col items-center justify-center transition-opacity"
+			>
+				<l-square
+					size="35"
+					stroke="5"
+					stroke-length="0.25"
+					bg-opacity="0.1"
+					speed="1.2"
+					color="rgb(193 156 100)"></l-square>
+			</div>
+			<NavBar />
+			<div class="@container z-10 p-2 w-full flex flex-1 justify-center lg:min-h-0 lg:p-4 lg:overflow-auto">
+				<slot />
+			</div>
+			<p class="text-2xs text-dark text-opacity-50 text-center text-balance pt-1 font-body">
+				The Daily Drip is an unaffiliated fansite. All game contents and materials are trademarks
+				and copyright of their respective companies.
+			</p>
+		</main>
 
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
+		<script>
+			import '$services/menu.js'
+			import { square } from 'ldrs'
+			square.register()
+		</script>
+	</body>
+</html>
