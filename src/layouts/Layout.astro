@@ -52,7 +52,7 @@ const { title } = Astro.props
 		
 		<main
 			id="content"
-			class="relative flex flex-col overflow-x-hidden size-full items-center pb-2 lg:overflow-hidden"
+			class="relative flex flex-col overflow-x-hidden size-full items-center pb-2"
 		>
 			<div
 				id="loader"
@@ -67,7 +67,7 @@ const { title } = Astro.props
 					color="rgb(193 156 100)"></l-square>
 			</div>
 			<NavBar />
-			<div class="@container z-10 p-2 w-full flex flex-1 justify-center lg:min-h-0 lg:p-4 lg:overflow-auto">
+			<div class="z-10 p-2 w-full flex flex-1 justify-center">
 				<slot />
 			</div>
 			<p class="text-2xs text-dark text-opacity-50 text-center text-balance pt-1 font-body">

@@ -8,7 +8,7 @@ const games = defineCollection({
     await directus.request(
       readItems("games", {
         fields: ["id", "name", "elementMain", "imageFormats"],
-      })
+      }),
     ),
   schema: z.object({
     id: z.string(),
@@ -22,9 +22,9 @@ const games = defineCollection({
             z.object({
               key: z.string(),
               params: z.array(z.string().or(z.number())),
-            })
+            }),
           ),
-        })
+        }),
       )
       .nullable(),
   }),
@@ -36,7 +36,7 @@ const attributes = defineCollection({
       await directus.request(
         readItems("attributes", {
           fields: ["id", "name", "game", "primary"],
-        })
+        }),
       )
     ).map((att) => ({
       id: String(att.id),
@@ -71,7 +71,7 @@ const characters = defineCollection({
             "colors",
             "card_edits",
           ],
-        })
+        }),
       )
     ).map((c) => {
       let charMod = {
@@ -114,13 +114,17 @@ const characters = defineCollection({
           lightness: z.number(),
           saturation: z.number(),
           area: z.number(),
-        })
+        }),
       )
       .nullable(),
-    card_edits: z.array(z.object({
-      variant: z.string(),
-      style: z.object({}).passthrough(),
-    })).nullable(),
+    card_edits: z
+      .array(
+        z.object({
+          variant: z.string(),
+          style: z.object({}).passthrough(),
+        }),
+      )
+      .nullable(),
   }),
 });
 

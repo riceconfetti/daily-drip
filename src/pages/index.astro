@@ -1,28 +1,20 @@
 ---
-import ProxyService from "$services/imgproxy";
-import type { Character } from "$types/character";
-import Layout from "../layouts/Layout.astro";
-import CharacterCard from "$components/CharacterCard.astro";
 import { getCollection } from "astro:content";
 import updates from "./_updates.json";
 import complete from "./_complete.json";
 
-const setValRecursive = (newObj: any, currObj:any) => {
-    Object.keys(newObj).forEach((k: any) => {
-      if (typeof newObj[k] == "object" && currObj[k] != null) {
-        setValRecursive(newObj[k], currObj[k]);
-      } else {
-        currObj[k] = newObj[k]
-      }
-    });
-    return currObj;
-  };
+import ProxyService from "$services/imgproxy";
+import type { Character } from "$types/character";
+import { setValRecursive } from "$utilities/setValRecursive";
+
+import Layout from "$layouts/Layout.astro";
+import CharacterCard from "$components/card/CharacterCard.astro";
 
 const characters: Character[] = (await getCollection("characters")).map(
   (c: any) => {
     let character = c.data;
     return character;
-  },
+  }
 );
 const findChar = (char: string) => characters.find((c) => c.id == char);
 let characterArray = new Array();
@@ -35,7 +27,7 @@ updates.forEach((k) => {
   if (k.id != "tempChar") {
     let char: Character = findChar(k.id)!;
 
-    setValRecursive(k, char)
+    setValRecursive(k, char);
     characterArray.push(char);
   }
 });
@@ -44,16 +36,20 @@ characterArray.sort((a, b) => a.game.id.localeCompare(b.game.id));
 
 //characterArray = characterArray.filter((c)=> c.game.id == 'genshin');
 
-characterArray = [...new Set(characterArray)]
+characterArray = [...new Set(characterArray)];
 ---
 
-<Layout>
-  <div class="flex gap-2 flex-wrap">
-    {characterArray.map((c) => <CharacterCard character={c} />)}
+<Layout title="daily drip">
+  <div class="grid grid-cols-2 gap-2 w-full h-auto grid-rows-4">
+    {
+      characterArray.map((c) => (
+        <CharacterCard character={c} debut={c.id == "albedo"} />
+      ))
+    }
   </div>
 
   <!-- ICONS -->
-  <div class="flex gap-1 w-full h-min flex-wrap">
+  <div class="grid grid-cols-3 w-full gap-1 grid-row-auto">
     {
       characterArray.map((characterData) => {
         let imgPath = `/characters/${characterData.game.id}/${characterData.id}.webp`;
@@ -77,13 +73,14 @@ characterArray = [...new Set(characterArray)]
         const iconPath = ProxyService.getImage(imgPath, transforms);
         if (characterData.colors != null) {
           return (
-            <div class="flex flex-col items-center font-pdsc"><div class="relative size-40 rounded-full overflow-clip border-2 border-accent-500">
-              <div class="w-full absolute h-1/2 border-b border-black" />
-              <div class="h-full absolute w-1/2 border-r border-black" />
-              <img src={iconPath} class="size-full " />
-
+            <div class="flex flex-col items-center font-pdsc">
+              <div class="relative size-40 rounded-full overflow-clip border-2 border-accent-500">
+                <div class="w-full absolute h-1/2 border-b border-black" />
+                <div class="h-full absolute w-1/2 border-r border-black" />
+                <img src={iconPath} class="size-full " />
+              </div>
+              <p>{characterData.name}</p>
             </div>
-             <p>{characterData.name}</p></div>
           );
         }
       })

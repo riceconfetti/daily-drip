@@ -29,7 +29,7 @@ export type Character = {
     area: number;
   }[];
   card_edits: {
-    variant: 'portrait'| 'landscape' | 'icon' | 'banner',
-    style: object
+    variant: "portrait" | "landscape" | "icon" | "banner";
+    style: object;
   }[];
 };

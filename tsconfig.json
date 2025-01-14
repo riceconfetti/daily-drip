@@ -11,7 +11,8 @@
       "$content/*": ["src/content/*"],
       "$layouts/*": ["src/layouts/*"],
       "$pages/*": ["src/pages/*"],
-      "$types/*": ["src/types/*"]
+      "$types/*": ["src/types/*"],
+      "$utilities/*": ["src/utilities/*"]
     }
   }
 }

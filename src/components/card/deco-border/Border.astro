@@ -1,0 +1,14 @@
+---
+import Corner from "./Corner.astro";
+---
+
+<div class="@container absolute inset-0">
+  <Corner position="nw" />
+  <Corner position="ne" />
+  <Corner position="se" />
+  <Corner position="sw" />
+  <div class="border-y-2 border-accent-150 absolute inset-3 inset-x-7 @xs:inset-x-9 z-11">
+  </div>
+  <div class="border-x-2 border-accent-150 absolute inset-3 inset-y-7 @xs:inset-y-9 z-11">
+  </div>
+</div>
