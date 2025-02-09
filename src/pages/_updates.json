@@ -4,5 +4,31 @@
     "focalPoint": {
       "x": 0.54
     }
+  },
+  {
+    "id": "camellya",
+    "card_edits": [
+      {
+        "variant": "landscape",
+        "style": {
+          "index": {
+            "y": 0
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "bennett",
+    "card_edits": [
+      {
+        "variant": "landscape",
+        "style": {
+          "index": {
+            "x": -0.05
+          }
+        }
+      }
+    ]
   }
 ]

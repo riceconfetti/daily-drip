@@ -1,89 +1,66 @@
 ---
-import { getCollection } from "astro:content";
-import updates from "./_updates.json";
-import complete from "./_complete.json";
+import directus from "$services/directus";
+import { readItems, readItem } from "@directus/sdk";
+import Settings from "$components/Settings.svelte";
 
-import ProxyService from "$services/imgproxy";
-import type { Character } from "$types/character";
+import type { Character, GachaEvent, Version, Server } from "$types/db";
 import { setValRecursive } from "$utilities/setValRecursive";
 
 import Layout from "$layouts/Layout.astro";
 import CharacterCard from "$components/card/CharacterCard.astro";
+import ServerSelect from "$components/ServerSelect.svelte";
+import PhaseHeader from "$components/PhaseHeader.svelte";
+import VersionHeader from "$components/VersionHeader.astro";
+import VerisonCard from "$components/VerisonCard.astro";
 
-const characters: Character[] = (await getCollection("characters")).map(
-  (c: any) => {
-    let character = c.data;
-    return character;
-  }
+let versions: Version[] = await directus.request(
+  readItems("versions", {
+    fields: ["*"],
+  })
 );
-const findChar = (char: string) => characters.find((c) => c.id == char);
-let characterArray = new Array();
 
-complete.map((u) => {
-  characterArray.push(findChar(u));
-});
+versions.sort((a, b) => a.semVer - b.semVer);
 
-updates.forEach((k) => {
-  if (k.id != "tempChar") {
-    let char: Character = findChar(k.id)!;
+const getEvents = async (id: any) =>
+  await directus.request(readItem("events", id));
 
-    setValRecursive(k, char);
-    characterArray.push(char);
-  }
-});
+versions = await Promise.all(
+  versions.map(async (v: any) => {
+    v.events = await Promise.all(
+      v.events.map(async (e: any) => await getEvents(e))
+    );
+    return v;
+  })
+);
 
-characterArray.sort((a, b) => a.game.id.localeCompare(b.game.id));
+const getPhase = async (id: any) =>
+  await directus.request(readItem("phases", id));
 
-//characterArray = characterArray.filter((c)=> c.game.id == 'genshin');
+versions = await Promise.all(
+  versions.map(async (v: any) => {
+    v.events = await Promise.all(
+      v.events.map(async (e: any) => {
+        e.phase = await getPhase(e.phase);
+        return e;
+      })
+    );
+    return v;
+  })
+);
 
-characterArray = [...new Set(characterArray)];
+versions.forEach((v) =>
+  v.events.sort((a, b) => Number(a.phase.phase) - Number(b.phase.phase))
+);
 ---
 
 <Layout title="daily drip">
-  <div class="grid grid-cols-2 gap-2 w-full h-auto grid-rows-4">
-    {
-      characterArray.map((c) => (
-        <CharacterCard character={c} debut={c.id == "albedo"} />
-      ))
-    }
-  </div>
-
-  <!-- ICONS -->
-  <div class="grid grid-cols-3 w-full gap-1 grid-row-auto">
-    {
-      characterArray.map((characterData) => {
-        let imgPath = `/characters/${characterData.game.id}/${characterData.id}.webp`;
-        const transforms = [
-          // { key: "trim", params: [1, "FF00FF"] },
-          {
-            key: "gravity",
-            params: [
-              "fp",
-              characterData.focalPoint.x,
-              characterData.focalPoint.y,
-            ],
-          },
-          {
-            key: "crop",
-            params: [125 * characterData.crop.x, 125 * characterData.crop.y],
-          },
-          { key: "resize", params: ["fill", 100, 100] },
-        ];
-
-        const iconPath = ProxyService.getImage(imgPath, transforms);
-        if (characterData.colors != null) {
-          return (
-            <div class="flex flex-col items-center font-pdsc">
-              <div class="relative size-40 rounded-full overflow-clip border-2 border-accent-500">
-                <div class="w-full absolute h-1/2 border-b border-black" />
-                <div class="h-full absolute w-1/2 border-r border-black" />
-                <img src={iconPath} class="size-full " />
-              </div>
-              <p>{characterData.name}</p>
-            </div>
-          );
-        }
-      })
-    }
-  </div>
+  <ServerSelect client:load />
+  <Settings client:only game="starrail" />
+  {
+    versions.map((v) => (
+      <div class="p-8">
+        <VerisonCard version={v} game="starrail" />
+      </div>
+    ))
+  }
 </Layout>

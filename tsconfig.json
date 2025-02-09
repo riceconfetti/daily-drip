@@ -4,6 +4,9 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "baseUrl": ".",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
     "paths": {
       "$components/*": ["src/components/*"],
       "$assets/*": ["src/assets/*"],
@@ -12,7 +15,8 @@
       "$layouts/*": ["src/layouts/*"],
       "$pages/*": ["src/pages/*"],
       "$types/*": ["src/types/*"],
-      "$utilities/*": ["src/utilities/*"]
+      "$utilities/*": ["src/utilities/*"],
+      "$store/*": ["src/store/*"]
     }
   }
 }

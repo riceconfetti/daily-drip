@@ -1,0 +1,34 @@
+---
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+let { version, game } = Astro.props;
+
+const startDate = version.events[0].startDate;
+const phase = version.events[0].phase;
+let currzone = dayjs.tz.guess();
+const tz = "+08:00";
+---
+
+<div class="flex flex-col gap-2 sm:col-span-2">
+  <div
+    class="font-heading flex justify-between border-y border-accent-gold py-1 text-2xs text-accent-gold sm:text-sm md:text-base"
+  >
+    <p>Version {version.semVer}</p>
+    <p>
+      {
+        dayjs(startDate + "T" + phase.start + tz)
+          .tz(currzone)
+          .format("MMMM DD YYYY")
+      }
+    </p>
+  </div>
+  <h1
+    class="font-heading font-bold py-2 text-center text-text-light sm:text-2xl md:text-4xl"
+  >
+    {version.name ? version.name : `Version ${version.semVer} - XXXXX`}
+  </h1>
+</div>

@@ -1,0 +1,74 @@
+---
+import VersionHeader from "$components/VersionHeader.astro";
+import PhaseHeader from "$components/PhaseHeader.svelte";
+import CharacterCard from "./card/CharacterCard.astro";
+
+import directus from "$services/directus";
+import { readItems, readItem } from "@directus/sdk";
+
+let { version, game } = Astro.props;
+let events = version.events;
+let characters = events.map((e: any) => e.featured_characters);
+let phase1 = await Promise.all(
+  characters[0].map(async (id: any) => {
+    const charId = (await directus.request(readItem("events_characters", id)))
+      .characters_id;
+    return await directus.request(readItem("characters", charId));
+  })
+);
+
+let phase2 = await Promise.all(
+  characters[1].map(async (id: any) => {
+    const charId = (await directus.request(readItem("events_characters", id)))
+      .characters_id;
+    return await directus.request(readItem("characters", charId));
+  })
+);
+---
+
+<section
+  class={`flex flex-col gap-3 bg-white bg-opacity-30 p-4 shadow-md lg:grid lg:grid-cols-2 lg:gap-5`}
+>
+  <VersionHeader {version} {game} />
+
+  <PhaseHeader
+    client:load
+    startDate={events[0].startDate}
+    phase={events[0].phase}
+    {game}
+  />
+  <PhaseHeader
+    client:load
+    startDate={events[1].startDate}
+    phase={events[1].phase}
+    {game}
+  />
+
+  <div class="flex gap-2 flex-col size-full">
+    {
+      phase1.map((c: any) => {
+        return (
+          <CharacterCard
+            character={c}
+            class="w-54 aspect-5/3"
+            variant="portrait"
+          />
+        );
+      })
+    }
+  </div>
+
+  <div class="flex gap-2 flex-col size-full">
+    {
+      phase2.map((c: any) => {
+        return (
+          <CharacterCard
+            character={c}
+            class="w-54 aspect-5/3"
+            variant="portrait"
+          />
+        );
+      })
+    }
+  </div>
+</section>

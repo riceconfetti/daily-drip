@@ -1,35 +1,52 @@
 ---
-const { character, debut, spec, variant } = Astro.props;
+const { character, debut, spec, variant, class:className } = Astro.props;
 
 import { Image } from "astro:assets";
-import { getEntry } from "astro:content";
 import { tv } from "tailwind-variants";
+import directus from "$services/directus";
+import { readItems, readItem } from "@directus/sdk";
 
 import {setValRecursive} from "$utilities/setValRecursive"
 import ProxyService from "$services/imgproxy";
-import Frost from "$assets/overlays/Frost_Portrait.png";
-import Holo from "$assets/overlays/Holo_Portrait.png";
+
+import Frost_Icon from "$assets/overlays/Frost_Icon.png"
+import Frost_Portrait from "$assets/overlays/Frost_Portrait.png";
+import Frost_Landscape from "$assets/overlays/Frost_Portrait.png";
+import Holo_Portrait from "$assets/overlays/Holo_Portrait.png";
+import Holo_Landscape from "$assets/overlays/Holo_Landscape.png";
+import Holo_Icon from "$assets/overlays/Holo_Icon.png"
 
 import Border from "./deco-border/Border.astro";
 
-const game = await getEntry("games", character.game.id);
-const primary = await getEntry("attributes", character.primary_attribute.id);
-const secondary = await getEntry(
-  "attributes",
-  character.secondary_attribute.id
-);
+const Holo = {
+  portrait: Holo_Portrait,
+  landscape: Holo_Landscape,
+  icon: Holo_Icon
+}
 
-const background = game?.data.elementMain
-  ? import(`../../assets/backgrounds/${game?.id}/${primary?.data.name}.webp`)
-  : import(`../../assets/backgrounds/${game?.id}/${secondary?.data.name}.webp`);
+const Frost = {
+  portrait: Frost_Portrait,
+  landscape: Frost_Landscape,
+  icon: Frost_Icon
+}
+const game = await directus.request(readItem("games", character.game));
+const primary = await directus.request(readItem("attributes", character.primary_attribute));
+const secondary = await directus.request(readItem("attributes", character.secondary_attribute));
 
-let imgPath = `/characters/${character.game.id}/${character.id}.webp`;
-const transforms = new Array();
+const backgroundPath = game?.elementMain
+  ? `/backgrounds/${game?.id}/${primary?.name}.webp`
+  : `/backgrounds/${game?.id}/${secondary?.name}.webp`
+
+const imgPath = `/characters/${character.game}/${character.id}.webp`;
 
 let options: any = {
   portrait: {
     bannerCrop: { x: 0.3, y: 0 },
     index: { x: 0, y: 0.07 },
+  },
+  landscape: {
+    bannerCrop: { x: 0, y: 0.4 },
+    index: { x:0, y:0.06 }
   }
 };
 
@@ -37,39 +54,73 @@ if (
   character.card_edits != null 
 ) {
   const edits = character.card_edits
-  const variants = Object.keys(edits)
-  variants.forEach((v)=>{
-    options[v] = setValRecursive(edits[v], options[v]);
+  const variants = edits.map((e:any)=> e.variant)
+  variants.forEach((v:any)=>{
+    options[v] = setValRecursive(edits.find((e:any)=> e.variant == v).style, options[v]);
   })
-  
-  options.portrait = setValRecursive(edits, options);
 }
 
-const { bannerCrop, index } = options;
-transforms.push(
-  {
+const characterTransforms = {
+  portrait: [ 
+    {
     key: "gravity",
     params: [
       "fp",
-      character.focalPoint.x + index.x,
-      character.focalPoint.y + index.y,
+      character.focalPoint.x + options.portrait.index.x,
+      character.focalPoint.y + options.portrait.index.y,
     ],
   },
   {
     key: "crop",
-    params: [bannerCrop.x * character.crop.x, bannerCrop.y * character.crop.y],
+    params: [options.portrait.bannerCrop.x * character.crop.x, options.portrait.bannerCrop.y * character.crop.y],
   },
-  { key: "resize", params: ["fill", 370, 600] }
-);
+  { key: "resize", params: ["fill", 740, 1200] }],
+  landscape: [ 
+    {
+    key: "gravity",
+    params: [
+      "fp",
+      character.focalPoint.x + options.landscape.index.x,
+      character.focalPoint.y + options.landscape.index.y,
+    ],
+  },
+  {
+    key: "crop",
+    params: [options.landscape.bannerCrop.x * character.crop.x, options.landscape.bannerCrop.y * character.crop.y],
+  },
+  { key: "resize", params: ["fill", 1200, 740] }], 
+  icon: [
 
-const image = ProxyService.getImage(imgPath, transforms);
-// character.colors.sort((a: any, b:any)=> b.intensity - a.intensity)
+  ]
+}
+
+const backgroundTransforms = {
+  portrait: [],
+  landscape: [
+    {key: 'rotate', params: [270]}
+  ]
+}
+
+const image = (v:string) => ProxyService.getImage(imgPath, characterTransforms[v as keyof typeof characterTransforms], 'webp');
+const background = (v:string) => ProxyService.getImage(backgroundPath, backgroundTransforms[v as keyof typeof backgroundTransforms] , 'webp');
 const colorIndex = 0;
+
+const card = tv({
+  slots: {
+    base: "relative w-full h-full",
+    bg: "size-full bg-[image:var(--bgImg)] bg-top bg-no-repeat bg-cover"
+  },
+  variants: {
+    landscape: {
+      bg: ""
+    }
+  }
+})
 ---
 
 <!-- CARD -->
 <div
-  class="relative mb-4 w-full h-full"
+  class:list={["relative w-full h-full", className]}
   style={{
     "--primaryColor":
       character.colors != null
@@ -79,10 +130,12 @@ const colorIndex = 0;
       character.colors != null
         ? `oklch(from ${character.colors[colorIndex].hex} 60% 0.0666 h/15%)`
         : "oklch(from #000 70% c h)",
-    "--bgImg": `url("${image}")`,
+    "--cardAccent": character.rarity == 5 ? "var(--color-accent-gold-150)":"var(--color-accent-purple-200)",
+    "--charImg": `url("${image(variant)}")`,
   }}
 >
-  <div class="size-full bg-[image:var(--bgImg)] bg-top bg-no-repeat bg-cover">
+  <div class="size-full bg-[image:var(--charImg)] bg-top bg-no-repeat bg-cover">
+   
     <!-- Gradient Overlay -->
     <div
       class="z-10 inset-0 absolute bg-linear-0 from-(--primaryColor) via-(--secondaryColor)"
@@ -91,7 +144,7 @@ const colorIndex = 0;
 
     <!-- Text & Outline -->
     <div
-      class="absolute inset-1 z-10 p-4 flex flex-col justify-end text-center rounded-lg border-2 border-accent-150 text-accent-150 inset-shadow-card"
+      class="absolute inset-1 z-10 p-4 flex flex-col justify-end text-center rounded-lg border-2 border-(--cardAccent) text-(--cardAccent) inset-shadow-card"
     >
       <h2 class="text-2xl font-heading font-bold drop-shadow-md shadow-black">
         {character.name}
@@ -107,24 +160,25 @@ const colorIndex = 0;
       }
     </div>
   </div>
-  <Image
-    src={background}
-    alt="Background"
-    class="absolute inset-0 -z-10 w-full h-full"
-  />
+  <div
+    style={{"--bgImg": `url("${background(variant)}")`}}
+    class="absolute inset-0 -z-10 w-full h-full bg-[image:var(--bgImg)] bg-top bg-no-repeat bg-cover" />
   {
     spec && (
-      <Image
-        src={Frost}
+      <Image     
+        src={//@ts-ignore
+          Frost[variant]}
         alt="Spec"
         class="absolute inset-0 mix-blend-screen z-10 w-full h-full"
       />
     )
   }
+
   {
     debut && (
-    <Image
-          src={Holo}
+    <Image 
+          src={//@ts-ignore
+          Holo[variant]}
           alt="Spec"
           class="absolute inset-0 mix-blend-screen z-10 w-full h-full"
         />

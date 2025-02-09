@@ -1,0 +1,94 @@
+---
+import { getCollection } from "astro:content";
+import updates from "./_updates.json";
+import complete from "./_complete.json";
+
+import ProxyService from "$services/imgproxy";
+import type { Character } from "$types/db";
+import { setValRecursive } from "$utilities/setValRecursive";
+
+import Layout from "$layouts/Layout.astro";
+import CharacterCard from "$components/card/CharacterCard.astro";
+
+const characters: Character[] = (await getCollection("characters")).map(
+  (c: any) => {
+    let character = c.data;
+    return character;
+  }
+);
+const findChar = (char: string) => characters.find((c) => c.id == char);
+let characterArray = new Array();
+
+complete.map((u) => {
+  characterArray.push(findChar(u));
+});
+
+updates.forEach((k) => {
+  if (k.id != "tempChar") {
+    let char: Character = findChar(k.id)!;
+
+    setValRecursive(k, char);
+    characterArray.push(char);
+  }
+});
+
+characterArray.sort((a, b) => a.game.id.localeCompare(b.game.id));
+
+//characterArray = characterArray.filter((c)=> c.game.id == 'genshin');
+
+characterArray = [...new Set(characterArray)];
+---
+
+<Layout title="daily drip">
+  <div class="grid grid-cols-2 gap-2 w-full h-auto grid-rows-4">
+    {
+      characterArray.map((c) => (
+        <CharacterCard
+          class="aspect-5/3"
+          character={c}
+          debut={c.id == "albedo"}
+          variant="landscape"
+        />
+      ))
+    }
+  </div>
+
+  <!-- ICONS -->
+  <div class="grid grid-cols-3 w-full gap-1 grid-row-auto">
+    {
+      characterArray.map((characterData) => {
+        let imgPath = `/characters/${characterData.game.id}/${characterData.id}.webp`;
+        const transforms = [
+          // { key: "trim", params: [1, "FF00FF"] },
+          {
+            key: "gravity",
+            params: [
+              "fp",
+              characterData.focalPoint.x,
+              characterData.focalPoint.y,
+            ],
+          },
+          {
+            key: "crop",
+            params: [125 * characterData.crop.x, 125 * characterData.crop.y],
+          },
+          { key: "resize", params: ["fill", 100, 100] },
+        ];
+
+        const iconPath = ProxyService.getImage(imgPath, transforms);
+        if (characterData.colors != null) {
+          return (
+            <div class="flex flex-col items-center font-pdsc">
+              <div class="relative size-40 rounded-full overflow-clip border-2 border-accent-gold-500">
+                <div class="w-full absolute h-1/2 border-b border-black" />
+                <div class="h-full absolute w-1/2 border-r border-black" />
+                <img src={iconPath} class="size-full " />
+              </div>
+              <p>{characterData.name}</p>
+            </div>
+          );
+        }
+      })
+    }
+  </div>
+</Layout>

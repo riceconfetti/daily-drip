@@ -1,5 +1,13 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
+  "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
   "tailwindStylesheet": "./src/app.css",
-  "tailwindFunctions": ["tv"]
+  "tailwindFunctions": ["tv"],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
 }

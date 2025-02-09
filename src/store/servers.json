@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "game": "starrail",
+    "name": "Asia",
+    "timezone": "+08:00"
+  },
+  {
+    "id": 2,
+    "game": "starrail",
+    "name": "Europe",
+    "timezone": "+01:00"
+  },
+  {
+    "id": 3,
+    "game": "starrail",
+    "name": "America",
+    "timezone": "-05:00"
+  },
+  {
+    "id": 4,
+    "game": "genshin",
+    "name": "Asia",
+    "timezone": "+08:00"
+  },
+  {
+    "id": 5,
+    "game": "genshin",
+    "name": "Europe",
+    "timezone": "+01:00"
+  },
+  {
+    "id": 6,
+    "game": "genshin",
+    "name": "America",
+    "timezone": "-05:00"
+  },
+  {
+    "id": 7,
+    "game": "zzz",
+    "name": "Asia",
+    "timezone": "+08:00"
+  },
+  {
+    "id": 8,
+    "game": "zzz",
+    "name": "Europe",
+    "timezone": "+01:00"
+  },
+  {
+    "id": 9,
+    "game": "zzz",
+    "name": "America",
+    "timezone": "-05:00"
+  },
+  {
+    "id": 10,
+    "game": "wuwa",
+    "name": "Asia",
+    "timezone": "+08:00"
+  },
+  {
+    "id": 11,
+    "game": "wuwa",
+    "name": "Europe",
+    "timezone": "+01:00"
+  },
+  {
+    "id": 12,
+    "game": "wuwa",
+    "name": "America",
+    "timezone": "-05:00"
+  }
+]

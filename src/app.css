@@ -7,22 +7,35 @@
   --color-text-dark: #d1d1d1;
   --color-text-light: #232323;
 
-  --color-accent: oklch(71.41% 0.0856 77.07);
-  --color-accent-50: oklch(95% 0.0856 77.07);
-  --color-accent-100: oklch(90% 0.0856 77.07);
-  --color-accent-150: oklch(85% 0.0856 77.07);
-  --color-accent-200: oklch(80% 0.0856 77.07);
-  --color-accent-300: oklch(70% 0.0856 77.07);
-  --color-accent-400: oklch(60% 0.0856 77.07);
-  --color-accent-500: oklch(50% 0.0856 77.07);
-  --color-accent-600: oklch(40% 0.0856 77.07);
-  --color-accent-700: oklch(30% 0.0856 77.07);
-  --color-accent-800: oklch(20% 0.0856 77.07);
-  --color-accent-900: oklch(10% 0.0856 77.07);
-  --color-accent-950: oklch(5% 0.0856 77.07);
+  --color-accent-gold: oklch(71.41% 0.0856 77.07);
+  --color-accent-gold-50: oklch(95% 0.0856 77.07);
+  --color-accent-gold-100: oklch(90% 0.0856 77.07);
+  --color-accent-gold-150: oklch(85% 0.0856 77.07);
+  --color-accent-gold-200: oklch(80% 0.0856 77.07);
+  --color-accent-gold-300: oklch(70% 0.0856 77.07);
+  --color-accent-gold-400: oklch(60% 0.0856 77.07);
+  --color-accent-gold-500: oklch(50% 0.0856 77.07);
+  --color-accent-gold-600: oklch(40% 0.0856 77.07);
+  --color-accent-gold-700: oklch(30% 0.0856 77.07);
+  --color-accent-gold-800: oklch(20% 0.0856 77.07);
+  --color-accent-gold-900: oklch(10% 0.0856 77.07);
+  --color-accent-gold-950: oklch(5% 0.0856 77.07);
+
+  --color-accent-purple: oklch(58.18% 0.1021 316.75);
+  --color-accent-purple-50: oklch(95% 0.1021 316.75);
+  --color-accent-purple-100: oklch(90% 0.1021 316.75);
+  --color-accent-purple-200: oklch(80% 0.1021 316.75);
+  --color-accent-purple-300: oklch(70% 0.1021 316.75);
+  --color-accent-purple-400: oklch(60% 0.1021 316.75);
+  --color-accent-purple-500: oklch(50% 0.1021 316.75);
+  --color-accent-purple-600: oklch(40% 0.1021 316.75);
+  --color-accent-purple-700: oklch(30% 0.1021 316.75);
+  --color-accent-purple-800: oklch(20% 0.1021 316.75);
+  --color-accent-purple-900: oklch(10% 0.1021 316.75);
+  --color-accent-purple-950: oklch(5% 0.1021 316.75);
 
   --font-heading: "Playfair Display SC";
-  --font-subheading: "Playfair Display Variable";
+  --font-subheading: "Playfair Display";
   --font-body: "Crimson Text";
 
   --inset-shadow-card: inset 0px 0px 12px 6px rgba(0, 0, 0, 45%);
