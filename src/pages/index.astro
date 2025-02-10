@@ -56,11 +56,7 @@ versions.forEach((v) =>
 <Layout title="daily drip">
   <ServerSelect client:load />
   <Settings client:only game="starrail" />
-  {
-    versions.map((v) => (
-      <div class="p-8">
-        <VerisonCard version={v} game="starrail" />
-      </div>
-    ))
-  }
+  <div class="p-8 grid gap-4 auto-rows-[54rem]">
+    {versions.map((v) => <VerisonCard version={v} game="starrail" />)}
+  </div>
 </Layout>

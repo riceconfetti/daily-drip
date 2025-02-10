@@ -14,7 +14,7 @@
 </script>
 
 <div
-  class={`tracking-normal font-semibold font-subheading flex w-full justify-between border border-black/10 p-2 text-xs sm:text-sm ${phase.phase == "1" ? "bg-[#BFBFBF] text-text-light" : "bg-dark text-accent-gold"}`}
+  class={`tracking-normal h-min font-semibold font-subheading flex w-full justify-between border border-black/10 p-2 text-xs sm:text-sm ${phase.phase == "1" ? "bg-[#BFBFBF] text-text-light" : "bg-dark text-accent-gold"}`}
 >
   <h1>Phase {phase.phase}</h1>
   <p class="font-light italic">

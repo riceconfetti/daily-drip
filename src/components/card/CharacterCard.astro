@@ -120,7 +120,7 @@ const card = tv({
 
 <!-- CARD -->
 <div
-  class:list={["relative w-full h-full", className]}
+  class:list={["relative", className]}
   style={{
     "--primaryColor":
       character.colors != null
@@ -134,7 +134,7 @@ const card = tv({
     "--charImg": `url("${image(variant)}")`,
   }}
 >
-  <div class="size-full bg-[image:var(--charImg)] bg-top bg-no-repeat bg-cover">
+  <div class="size-full bg-[image:var(--charImg)] bg-center bg-no-repeat bg-cover">
    
     <!-- Gradient Overlay -->
     <div

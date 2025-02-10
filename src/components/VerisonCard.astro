@@ -5,6 +5,7 @@ import CharacterCard from "./card/CharacterCard.astro";
 
 import directus from "$services/directus";
 import { readItems, readItem } from "@directus/sdk";
+import { redirectToDefaultLocale } from "astro:i18n";
 
 let { version, game } = Astro.props;
 let events = version.events;
@@ -27,48 +28,218 @@ let phase2 = await Promise.all(
 ---
 
 <section
-  class={`flex flex-col gap-3 bg-white bg-opacity-30 p-4 shadow-md lg:grid lg:grid-cols-2 lg:gap-5`}
+  class={`h-full grow flex flex-col gap-3 bg-white bg-opacity-30 p-4 shadow-md `}
 >
   <VersionHeader {version} {game} />
 
-  <PhaseHeader
-    client:load
-    startDate={events[0].startDate}
-    phase={events[0].phase}
-    {game}
-  />
-  <PhaseHeader
-    client:load
-    startDate={events[1].startDate}
-    phase={events[1].phase}
-    {game}
-  />
+  <div
+    class="h-full grow flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:auto-rows-[min-content_1fr] lg:gap-5"
+  >
+    <PhaseHeader
+      client:load
+      startDate={events[0].startDate}
+      phase={events[0].phase}
+      {game}
+    />
+    <PhaseHeader
+      client:load
+      startDate={events[1].startDate}
+      phase={events[1].phase}
+      {game}
+    />
 
-  <div class="flex gap-2 flex-col size-full">
     {
-      phase1.map((c: any) => {
-        return (
-          <CharacterCard
-            character={c}
-            class="w-54 aspect-5/3"
-            variant="portrait"
-          />
-        );
-      })
+      () => {
+        let limitedCount = phase1.filter((c) => c.rarity == 5).length;
+        if (limitedCount < 3) {
+          return (
+            <div
+              class:list={[
+                "grid gap-2 grid-rows-auto size-full",
+                limitedCount == 1
+                  ? "grid-cols-[3fr_2fr]"
+                  : "grid-cols-2 grid-rows-[3fr_2fr]",
+              ]}
+            >
+              {phase1.map((c: any) => {
+                if (c.rarity == 5) {
+                  return (
+                    <CharacterCard
+                      character={c}
+                      class:list={["size-full"]}
+                      variant="portrait"
+                    />
+                  );
+                }
+              })}
+              <div
+                class:list={[
+                  "grid gap-2",
+                  limitedCount < 2
+                    ? "grid-rows-3"
+                    : "col-span-full row-start-2 grid-cols-3",
+                ]}
+              >
+                {phase1.map((c: any) => {
+                  if (c.rarity == 4) {
+                    return (
+                      <CharacterCard
+                        character={c}
+                        variant="landscape"
+                        class="h-full"
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+          );
+        } else {
+          let fiveStars = phase1.filter((c) => c.rarity == 5);
+          const first = fiveStars.shift();
+
+          return (
+            <div class="grid gap-2 grid-cols-2 grid-rows-[3fr_2fr] size-full">
+              <CharacterCard
+                character={first}
+                class:list={["size-full"]}
+                variant="portrait"
+              />
+              <div class:list={["grid gap-2 grid-flow-row"]}>
+                {fiveStars.map((c: any) => {
+                  if (c.rarity == 5) {
+                    return (
+                      <CharacterCard
+                        character={c}
+                        class:list={["size-full"]}
+                        variant="landscape"
+                      />
+                    );
+                  }
+                })}
+              </div>
+
+              <div
+                class:list={[
+                  "grid gap-2",
+                  limitedCount < 2
+                    ? "grid-rows-3"
+                    : "col-span-full row-start-2 grid-cols-3",
+                ]}
+              >
+                {phase1.map((c: any) => {
+                  if (c.rarity == 4) {
+                    return (
+                      <CharacterCard
+                        character={c}
+                        variant="landscape"
+                        class="h-full"
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+          );
+        }
+      }
     }
-  </div>
 
-  <div class="flex gap-2 flex-col size-full">
     {
-      phase2.map((c: any) => {
-        return (
-          <CharacterCard
-            character={c}
-            class="w-54 aspect-5/3"
-            variant="portrait"
-          />
-        );
-      })
+      () => {
+        let limitedCount = phase2.filter((c) => c.rarity == 5).length;
+        if (limitedCount < 3) {
+          return (
+            <div
+              class:list={[
+                "grid gap-2  size-full",
+                limitedCount == 1
+                  ? "grid-cols-[3fr_2fr]"
+                  : "grid-cols-2 grid-rows-[3fr_2fr]",
+              ]}
+            >
+              {phase2.map((c: any) => {
+                if (c.rarity == 5) {
+                  return (
+                    <CharacterCard
+                      character={c}
+                      class:list={["size-full"]}
+                      variant="portrait"
+                    />
+                  );
+                }
+              })}
+              <div
+                class:list={[
+                  "grid gap-2",
+                  limitedCount < 2
+                    ? "grid-rows-3"
+                    : "col-span-full row-start-2 grid-cols-3",
+                ]}
+              >
+                {phase2.map((c: any) => {
+                  if (c.rarity == 4) {
+                    return (
+                      <CharacterCard
+                        character={c}
+                        variant="landscape"
+                        class="h-full"
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+          );
+        } else {
+          let fiveStars = phase2.filter((c) => c.rarity == 5);
+          const first = fiveStars.shift();
+
+          return (
+            <div class="grid gap-2 grid-cols-2 grid-rows-[3fr_2fr] size-full">
+              <CharacterCard
+                character={first}
+                class:list={["size-full"]}
+                variant="portrait"
+              />
+              <div class:list={["grid gap-2 grid-flow-row"]}>
+                {fiveStars.map((c: any) => {
+                  if (c.rarity == 5) {
+                    return (
+                      <CharacterCard
+                        character={c}
+                        class:list={["size-full"]}
+                        variant="landscape"
+                      />
+                    );
+                  }
+                })}
+              </div>
+
+              <div
+                class:list={[
+                  "grid gap-2",
+                  limitedCount < 2
+                    ? "grid-rows-3"
+                    : "col-span-full row-start-2 grid-cols-3",
+                ]}
+              >
+                {phase2.map((c: any) => {
+                  if (c.rarity == 4) {
+                    return (
+                      <CharacterCard
+                        character={c}
+                        variant="landscape"
+                        class="h-full"
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+          );
+        }
+      }
     }
   </div>
 </section>
