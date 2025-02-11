@@ -39,6 +39,11 @@ let eventsWeapons = await Promise.all(
       )
   )
 );
+
+let evs = [
+  { characters: eventsCharacters[0], weapons: eventsWeapons[0] },
+  { characters: eventsCharacters[1], weapons: eventsWeapons[1] },
+];
 ---
 
 <section
@@ -60,16 +65,16 @@ let eventsWeapons = await Promise.all(
       {game}
     />
 
-    {eventsCharacters.map((eventChar) => <PhaseCard {eventChar} />)}
+    {evs.map(({ characters, weapons }) => <PhaseCard {characters} {weapons} />)}
 
-    {
-      eventsWeapons.map((eventWeap) => (
+    <!-- {
+      evs.map(({characters, weapons}) => (
         <div class="flex gap-2 w-full">
           {eventWeap.map((weapon: any) => (
             <WeaponCard {weapon} />
           ))}
         </div>
       ))
-    }
+    } -->
   </div>
 </section>

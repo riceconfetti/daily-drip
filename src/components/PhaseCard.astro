@@ -1,12 +1,12 @@
 ---
-const { eventChar } = Astro.props;
+const { characters, weapons } = Astro.props;
 import directus from "$services/directus";
 import { readItems, readItem } from "@directus/sdk";
 import CharacterCard from "./card/CharacterCard.astro";
 import WeaponCard from "./WeaponCard.astro";
 import { tv } from "tailwind-variants";
 
-let limitedCount = eventChar.filter((c: any) => c.rarity == 5).length;
+let limitedCount = characters.filter((c: any) => c.rarity == 5).length;
 ---
 
 {
@@ -22,7 +22,7 @@ let limitedCount = eventChar.filter((c: any) => c.rarity == 5).length;
           ]}>
           {async () =>
             await Promise.all(
-              eventChar.map(async (c: any) => {
+              characters.map(async (c: any) => {
                 if (c.rarity == 5) {
                   let weapon = await directus.request(
                     readItem("weapons", c.signature)
@@ -45,25 +45,36 @@ let limitedCount = eventChar.filter((c: any) => c.rarity == 5).length;
             class:list={[
               "grid gap-2",
               limitedCount < 2
-                ? "grid-rows-3"
-                : "col-span-full row-start-2 grid-cols-3",
+                ? "grid-rows-3 grid-flow-col grid-cols-[3fr_2fr]"
+                : "col-span-full row-start-2 grid-cols-[repeat(3,2fr)_1fr]",
             ]}>
-            {eventChar.map((c: any) => {
+            {characters.map((c: any) => {
               if (c.rarity == 4) {
                 return (
                   <CharacterCard
                     character={c}
-                    variant="landscape"
+                    variant="portrait"
                     class="h-full"
                   />
                 );
               }
             })}
+            <div
+              class:list={[
+                "grid",
+                limitedCount < 2
+                  ? "row-span-full grid-rows-subgrid"
+                  : "grid-rows-3",
+              ]}>
+              {weapons.map((weapon: any) => (
+                <WeaponCard {weapon} />
+              ))}
+            </div>
           </div>
         </div>
       );
     } else {
-      let fiveStars = eventChar.filter((c: any) => c.rarity == 5);
+      let fiveStars = characters.filter((c: any) => c.rarity == 5);
       const first = fiveStars.shift();
 
       return (
@@ -114,7 +125,7 @@ let limitedCount = eventChar.filter((c: any) => c.rarity == 5).length;
                 ? "grid-rows-3"
                 : "col-span-full row-start-2 grid-cols-3",
             ]}>
-            {eventChar.map((c: any) => {
+            {characters.map((c: any) => {
               if (c.rarity == 4) {
                 return (
                   <CharacterCard
