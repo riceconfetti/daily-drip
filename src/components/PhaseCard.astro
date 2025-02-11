@@ -64,7 +64,7 @@ let limitedCount = characters.filter((c: any) => c.rarity == 5).length;
                 "grid",
                 limitedCount < 2
                   ? "row-span-full grid-rows-subgrid"
-                  : "grid-rows-3",
+                  : "grid-rows-3 gap-1",
               ]}>
               {weapons.map((weapon: any) => (
                 <WeaponCard {weapon} />

@@ -21,21 +21,23 @@ const full = ProxyService.getImage(
 const weaponCard = tv({
   slots: {
     base: "@container-[size] relative size-full overflow-clip before:absolute before:-inset-1 before:bg-black before:bg-[image:var(--overlay),var(--bgFull)] before:bg-cover before:bg-center before:blur-xs before:content-['']",
-    outline: "absolute inset-1 rounded-xs border-1",
-    box: "absolute inset-0 flex size-full items-center justify-center p-4 @landscape:justify-between @portrait:flex-col @portrait:justify-between",
+    outline: "absolute inset-1 z-10 rounded-xs border-2",
+    box: "absolute inset-0 flex size-full items-center justify-center p-2 @landscape:flex-row-reverse @landscape:justify-between @landscape:bg-linear-90 @portrait:flex-col @portrait:justify-between @portrait:bg-linear-0",
     image: "aspect-square h-full object-contain p-1",
-    name: "@max-7xs:hidden text-center font-heading text-xs font-semibold @3xs:text-sm @xs:text-base @sm:text-lg @squarish:hidden @portrait-3xs:text-sm @portrait-xs:text-base @portrait-sm:text-lg",
+    name: "p-2 text-center font-heading text-xs font-semibold @max-7xs:hidden @3xs:text-sm @xs:text-base @sm:text-lg @squarish:hidden @portrait-3xs:text-sm @portrait-xs:text-base @portrait-sm:text-lg",
   },
   variants: {
     rarity: {
       5: {
         base: "bg-accent-gold-800/30",
-        outline: "border-accent-gold-200",
+        box: "from-accent-gold-800 via-transparent",
+        outline: "border-accent-gold-300",
         name: "text-accent-gold-200",
       },
       4: {
         base: "bg-accent-purple-800/30",
-        outline: "border-accent-purple-200",
+        box: "from-accent-purple-800 via-transparent",
+        outline: "border-accent-purple-300",
         name: "text-accent-purple-200",
       },
     },

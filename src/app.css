@@ -46,10 +46,10 @@
   --inset-shadow-card: inset 0px 0px 12px 6px rgba(0, 0, 0, 45%);
   --drop-shadow-card: 0 6px 3px rgba(0, 0, 0, 45%);
 
-  --conatiner-7xs: 8rem;
-  --conatiner-6xs: 10rem;
-  --conatiner-5xs: 12rem;
-  --conatiner-4xs: 14rem;
+  --container-7xs: 8rem;
+  --container-6xs: 10rem;
+  --container-5xs: 12rem;
+  --container-4xs: 14rem;
 }
 
 @custom-variant @squarish (@container (0.66 <= aspect-ratio <= 1.5));
