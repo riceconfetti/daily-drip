@@ -11,12 +11,12 @@
   "dependencies": {
     "@astrojs/node": "^9.0.2",
     "@astrojs/svelte": "^7.0.4",
-    "@directus/sdk": "^18.0.1",
+    "@directus/sdk": "^19.0.1",
     "@fontsource-variable/playfair-display": "^5.1.1",
     "@fontsource/crimson-text": "^5.1.1",
     "@fontsource/playfair-display": "^5.1.1",
     "@fontsource/playfair-display-sc": "^5.1.1",
-    "@tailwindcss/postcss": "^4.0.0-beta.8",
+    "@tailwindcss/postcss": "^4.0.6",
     "astro": "^5.2.5",
     "chroma-js": "^3.1.2",
     "dayjs": "^1.11.13",
@@ -25,15 +25,15 @@
     "ldrs": "^1.0.2",
     "nanostores": "^0.11.3",
     "remixicon": "^4.6.0",
-    "svelte": "^5.12.0",
-    "tailwind-variants": "^0.3.0",
-    "tailwindcss": "^4.0.0-beta.8",
-    "typescript": "^5.7.2"
+    "svelte": "^5.19.9",
+    "tailwind-variants": "^0.3.1",
+    "tailwindcss": "^4.0.6",
+    "typescript": "^5.7.3"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
-    "prettier": "^3.4.2",
+    "@types/node": "^22.13.1",
+    "prettier": "^3.5.0",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "prettier-plugin-tailwindcss": "^0.6.11"
   }
 }

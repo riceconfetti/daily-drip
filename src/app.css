@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@layer theme, base, components, utilities;
 @theme {
   --color-transparent: transparent;
   --color-dark: #232323;
@@ -40,4 +45,31 @@
 
   --inset-shadow-card: inset 0px 0px 12px 6px rgba(0, 0, 0, 45%);
   --drop-shadow-card: 0 6px 3px rgba(0, 0, 0, 45%);
+
+  --conatiner-7xs: 8rem;
+  --conatiner-6xs: 10rem;
+  --conatiner-5xs: 12rem;
+  --conatiner-4xs: 14rem;
 }
+
+@custom-variant @squarish (@container (0.66 <= aspect-ratio <= 1.5));
+@custom-variant @landscape (@container (orientation: landscape) and (aspect-ratio > 1.5));
+@custom-variant @portrait (@container (orientation: portrait) and (aspect-ratio < 0.66));
+
+@custom-variant @portrait-7xs (@container (orientation: portrait) and (height >= 8rem));
+@custom-variant @portrait-6xs (@container (orientation: portrait) and (height >= 10rem));
+@custom-variant @portrait-5xs (@container (orientation: portrait) and (height >= 12rem));
+@custom-variant @portrait-4xs (@container (orientation: portrait) and (height >= 14rem));
+@custom-variant @portrait-3xs (@container (orientation: portrait) and (height >= 16rem));
+@custom-variant @portrait-2xs (@container (orientation: portrait) and (height >= 18rem));
+@custom-variant @portrait-xs (@container (orientation: portrait) and (height >= 20rem));
+@custom-variant @portrait-sm (@container (orientation: portrait) and (height >= 24rem));
+@custom-variant @portrait-md (@container (orientation: portrait) and (height >= 28rem));
+@custom-variant @portrait-lg (@container (orientation: portrait) and (height >= 32rem));
+@custom-variant @portrait-xl (@container (orientation: portrait) and (height >= 36rem));
+@custom-variant @portrait-2xl (@container (orientation: portrait) and (height >= 42rem));
+@custom-variant @portrait-3xl (@container (orientation: portrait) and (height >= 48rem));
+@custom-variant @portrait-4xl (@container (orientation: portrait) and (height >= 56rem));
+@custom-variant @portrait-5xl (@container (orientation: portrait) and (height >= 64rem));
+@custom-variant @portrait-6xl (@container (orientation: portrait) and (height >= 72rem));
+@custom-variant @portrait-7xl (@container (orientation: portrait) and (height >= 80rem));

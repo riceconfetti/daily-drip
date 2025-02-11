@@ -3,15 +3,13 @@ import directus from "$services/directus";
 import { readItems, readItem } from "@directus/sdk";
 import Settings from "$components/Settings.svelte";
 
-import type { Character, GachaEvent, Version, Server } from "$types/db";
+import type { Version } from "$types/db";
 import { setValRecursive } from "$utilities/setValRecursive";
 
 import Layout from "$layouts/Layout.astro";
-import CharacterCard from "$components/card/CharacterCard.astro";
 import ServerSelect from "$components/ServerSelect.svelte";
-import PhaseHeader from "$components/PhaseHeader.svelte";
-import VersionHeader from "$components/VersionHeader.astro";
 import VerisonCard from "$components/VerisonCard.astro";
+import WeaponCard from "$components/WeaponCard.astro";
 
 let versions: Version[] = await directus.request(
   readItems("versions", {
@@ -51,12 +49,26 @@ versions = await Promise.all(
 versions.forEach((v) =>
   v.events.sort((a, b) => Number(a.phase.phase) - Number(b.phase.phase))
 );
+
+const himekoLC = await directus.request(
+  readItem("weapons", "night-on-the-milky-way")
+);
+
+const pelaLC = await directus.request(
+  readItem("weapons", "the-moles-welcome-you")
+);
 ---
 
 <Layout title="daily drip">
   <ServerSelect client:load />
   <Settings client:only game="starrail" />
   <div class="p-8 grid gap-4 auto-rows-[54rem]">
+    <!-- <div
+      class="grid grid-flow-col grid-cols-3 gap-1 w-2/3 h-2/3 place-self-center">
+      {JSON.stringify(pelaLC)}
+      <WeaponCard weapon={himekoLC} />
+      <WeaponCard weapon={pelaLC} />
+    </div> -->
     {versions.map((v) => <VerisonCard version={v} game="starrail" />)}
   </div>
 </Layout>

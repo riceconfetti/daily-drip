@@ -27,6 +27,7 @@ export type Character = {
   bannerName: string;
   primary_attribute: Attribute;
   secondary_attribute: Attribute;
+  signature?: Weapon;
   focalPoint: {
     x: number;
     y: number;

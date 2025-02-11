@@ -1,0 +1,65 @@
+---
+import { tv } from "tailwind-variants";
+import ProxyService from "$services/imgproxy";
+
+const { weapon } = Astro.props;
+const iconPath = `/weapons/${weapon.game}/${weapon.id}-icon.webp`;
+const fullPath = `/weapons/${weapon.game}/${weapon.id}-full.webp`;
+
+const icon = ProxyService.getImage(iconPath, [], "webp");
+const full = ProxyService.getImage(
+  fullPath,
+  [
+    {
+      key: "crop",
+      params: [0.9, 0.9],
+    },
+  ],
+  "webp"
+);
+
+const weaponCard = tv({
+  slots: {
+    base: "@container-[size] relative size-full overflow-clip before:absolute before:-inset-1 before:bg-black before:bg-[image:var(--overlay),var(--bgFull)] before:bg-cover before:bg-center before:blur-xs before:content-['']",
+    outline: "absolute inset-1 rounded-xs border-1",
+    box: "absolute inset-0 flex size-full items-center justify-center p-4 @landscape:justify-between @portrait:flex-col @portrait:justify-between",
+    image: "aspect-square h-full object-contain p-1",
+    name: "@max-7xs:hidden text-center font-heading text-xs font-semibold @3xs:text-sm @xs:text-base @sm:text-lg @squarish:hidden @portrait-3xs:text-sm @portrait-xs:text-base @portrait-sm:text-lg",
+  },
+  variants: {
+    rarity: {
+      5: {
+        base: "bg-accent-gold-800/30",
+        outline: "border-accent-gold-200",
+        name: "text-accent-gold-200",
+      },
+      4: {
+        base: "bg-accent-purple-800/30",
+        outline: "border-accent-purple-200",
+        name: "text-accent-purple-200",
+      },
+    },
+  },
+});
+
+const vars = {
+  "--bgFull": `url("${full}")`,
+  "--bgIcon": `url("${icon}")`,
+  "--overlayColor": `oklch(from var(${weapon.rarity == 5 ? "--color-accent-gold-800" : "--color-accent-purple-800"}) l c h / .5)`,
+  "--overlay": `linear-gradient(var(--overlayColor),var(--overlayColor))`,
+};
+
+const { base, outline, box, image, name } = weaponCard({
+  rarity: weapon.rarity,
+});
+---
+
+<div class={base()} style={vars}>
+  <div class={outline()}></div>
+  <div class={box()}>
+    <img src={icon} class={image()} />
+    <h2 class={name()}>
+      {weapon.name}
+    </h2>
+  </div>
+</div>

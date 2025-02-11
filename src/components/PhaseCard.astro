@@ -1,0 +1,133 @@
+---
+const { eventChar } = Astro.props;
+import directus from "$services/directus";
+import { readItems, readItem } from "@directus/sdk";
+import CharacterCard from "./card/CharacterCard.astro";
+import WeaponCard from "./WeaponCard.astro";
+import { tv } from "tailwind-variants";
+
+let limitedCount = eventChar.filter((c: any) => c.rarity == 5).length;
+---
+
+{
+  () => {
+    if (limitedCount < 3) {
+      return (
+        <div
+          class:list={[
+            "grid gap-2 grid-rows-auto size-full",
+            limitedCount == 1
+              ? "grid-cols-[3fr_2fr]"
+              : "grid-cols-2 grid-rows-[3fr_2fr]",
+          ]}>
+          {async () =>
+            await Promise.all(
+              eventChar.map(async (c: any) => {
+                if (c.rarity == 5) {
+                  let weapon = await directus.request(
+                    readItem("weapons", c.signature)
+                  );
+                  return (
+                    <div class="grid grid-rows-[4fr_1fr] gap-2">
+                      <CharacterCard
+                        character={c}
+                        class:list={["size-full"]}
+                        variant="portrait"
+                      />
+                      <WeaponCard {weapon} />
+                    </div>
+                  );
+                }
+              })
+            )
+          }
+          <div
+            class:list={[
+              "grid gap-2",
+              limitedCount < 2
+                ? "grid-rows-3"
+                : "col-span-full row-start-2 grid-cols-3",
+            ]}>
+            {eventChar.map((c: any) => {
+              if (c.rarity == 4) {
+                return (
+                  <CharacterCard
+                    character={c}
+                    variant="landscape"
+                    class="h-full"
+                  />
+                );
+              }
+            })}
+          </div>
+        </div>
+      );
+    } else {
+      let fiveStars = eventChar.filter((c: any) => c.rarity == 5);
+      const first = fiveStars.shift();
+
+      return (
+        <div class="grid gap-2 grid-cols-2 grid-rows-[3fr_2fr] size-full">
+          {async () => {
+            let weapon = await directus.request(
+              readItem("weapons", first.signature)
+            );
+            return (
+              <div class="grid grid-rows-[4fr_1fr] gap-2">
+                <CharacterCard
+                  character={first}
+                  class:list={["size-full"]}
+                  variant="portrait"
+                />
+                <WeaponCard {weapon} />
+              </div>
+            );
+          }}
+          <div class:list={["grid gap-2 grid-flow-row"]}>
+            {async () =>
+              await Promise.all(
+                fiveStars.map(async (c: any) => {
+                  if (c.rarity == 5) {
+                    let weapon = await directus.request(
+                      readItem("weapons", c.signature)
+                    );
+                    return (
+                      <div class="grid grid-cols-[3fr_1fr] gap-2">
+                        <CharacterCard
+                          character={c}
+                          class:list={["size-full"]}
+                          variant="landscape"
+                        />
+                        <WeaponCard {weapon} />
+                      </div>
+                    );
+                  }
+                })
+              )
+            }
+          </div>
+
+          <div
+            class:list={[
+              "grid gap-2",
+              limitedCount < 2
+                ? "grid-rows-3"
+                : "col-span-full row-start-2 grid-cols-3",
+            ]}>
+            {eventChar.map((c: any) => {
+              if (c.rarity == 4) {
+                return (
+                  <CharacterCard
+                    character={c}
+                    variant="landscape"
+                    class="h-full"
+                  />
+                );
+              }
+            })}
+          </div>
+        </div>
+      );
+    }
+  }
+}
