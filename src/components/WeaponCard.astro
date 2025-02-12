@@ -2,7 +2,7 @@
 import { tv } from "tailwind-variants";
 import ProxyService from "$services/imgproxy";
 
-const { weapon } = Astro.props;
+const { weapon, class: className } = Astro.props;
 const iconPath = `/weapons/${weapon.game}/${weapon.id}-icon.webp`;
 const fullPath = `/weapons/${weapon.game}/${weapon.id}-full.webp`;
 
@@ -20,7 +20,7 @@ const full = ProxyService.getImage(
 
 const weaponCard = tv({
   slots: {
-    base: "@container-[size] relative size-full overflow-clip before:absolute before:-inset-1 before:bg-black before:bg-[image:var(--overlay),var(--bgFull)] before:bg-cover before:bg-center before:blur-xs before:content-['']",
+    base: "@container-[size] relative size-full min-h-16 min-w-16 overflow-clip before:absolute before:-inset-1 before:bg-black before:bg-[image:var(--overlay),var(--bgFull)] before:bg-cover before:bg-center before:blur-xs before:content-['']",
     outline: "absolute inset-1 z-10 rounded-xs border-2",
     box: "absolute inset-0 flex size-full items-center justify-center p-2 @landscape:flex-row-reverse @landscape:justify-between @landscape:bg-linear-90 @portrait:flex-col @portrait:justify-between @portrait:bg-linear-0",
     image: "aspect-square h-full object-contain p-1",
@@ -56,7 +56,7 @@ const { base, outline, box, image, name } = weaponCard({
 });
 ---
 
-<div class={base()} style={vars}>
+<div class:list={[base(), className]} style={vars}>
   <div class={outline()}></div>
   <div class={box()}>
     <img src={icon} class={image()} />

@@ -15,7 +15,7 @@ import WeaponCard from "$components/WeaponCard.astro";
 let versions: Version[] = await directus.request(
   readItems("versions", {
     fields: ["*"],
-  })
+  }),
 );
 
 versions.sort((a, b) => a.semVer - b.semVer);
@@ -26,10 +26,10 @@ const getEvents = async (id: any) =>
 versions = await Promise.all(
   versions.map(async (v: any) => {
     v.events = await Promise.all(
-      v.events.map(async (e: any) => await getEvents(e))
+      v.events.map(async (e: any) => await getEvents(e)),
     );
     return v;
-  })
+  }),
 );
 
 const getPhase = async (id: any) =>
@@ -41,29 +41,29 @@ versions = await Promise.all(
       v.events.map(async (e: any) => {
         e.phase = await getPhase(e.phase);
         return e;
-      })
+      }),
     );
     return v;
-  })
+  }),
 );
 
 versions.forEach((v) =>
-  v.events.sort((a, b) => Number(a.phase.phase) - Number(b.phase.phase))
+  v.events.sort((a, b) => Number(a.phase.phase) - Number(b.phase.phase)),
 );
 
 const himekoLC = await directus.request(
-  readItem("weapons", "night-on-the-milky-way")
+  readItem("weapons", "night-on-the-milky-way"),
 );
 
 const pelaLC = await directus.request(
-  readItem("weapons", "the-moles-welcome-you")
+  readItem("weapons", "the-moles-welcome-you"),
 );
 ---
 
 <Layout title="daily drip">
   <ServerSelect client:load />
   <Settings client:only game="starrail" />
-  <div class="p-8 grid gap-4 auto-rows-[54rem]">
+  <div class="p-8 flex flex-col gap-4">
     <!-- <div
       class="grid grid-flow-col grid-cols-3 gap-1 w-2/3 h-2/3 place-self-center">
       {JSON.stringify(pelaLC)}

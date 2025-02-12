@@ -1,5 +1,7 @@
 ---
-import { getCollection } from "astro:content";
+export const prerender = false;
+import directus from "$services/directus";
+import { readItems, readItem } from "@directus/sdk";
 import updates from "./_updates.json";
 import complete from "./_complete.json";
 
@@ -10,54 +12,52 @@ import { setValRecursive } from "$utilities/setValRecursive";
 import Layout from "$layouts/Layout.astro";
 import CharacterCard from "$components/card/CharacterCard.astro";
 
-const characters: Character[] = (await getCollection("characters")).map(
-  (c: any) => {
-    let character = c.data;
-    return character;
-  }
+const characters: Character[] = await directus.request(
+  readItems("characters", {
+    filter: {
+      game: {
+        id: {
+          _eq: "starrail",
+        },
+      },
+    },
+    fields: ["*"],
+  }),
 );
+
 const findChar = (char: string) => characters.find((c) => c.id == char);
 let characterArray = new Array();
 
-complete.map((u) => {
-  characterArray.push(findChar(u));
-});
+// complete.map((u) => {
+//   characterArray.push(findChar(u));
+// });
 
 updates.forEach((k) => {
   if (k.id != "tempChar") {
     let char: Character = findChar(k.id)!;
 
     setValRecursive(k, char);
-    characterArray.push(char);
   }
 });
 
-characterArray.sort((a, b) => a.game.id.localeCompare(b.game.id));
+characterArray.sort((a, b) => a.game.localeCompare(b.game));
 
 //characterArray = characterArray.filter((c)=> c.game.id == 'genshin');
 
 characterArray = [...new Set(characterArray)];
+console.log(characterArray);
 ---
 
 <Layout title="daily drip">
   <div class="grid grid-cols-2 gap-2 w-full h-auto grid-rows-4">
-    {
-      characterArray.map((c) => (
-        <CharacterCard
-          class="aspect-5/3"
-          character={c}
-          debut={c.id == "albedo"}
-          variant="landscape"
-        />
-      ))
-    }
+    {characters.map((c) => <CharacterCard class="aspect-3/5" character={c} />)}
   </div>
 
   <!-- ICONS -->
   <div class="grid grid-cols-3 w-full gap-1 grid-row-auto">
     {
-      characterArray.map((characterData) => {
-        let imgPath = `/characters/${characterData.game.id}/${characterData.id}.webp`;
+      characters.map((characterData) => {
+        let imgPath = `/characters/${characterData.game}/${characterData.id}.webp`;
         const transforms = [
           // { key: "trim", params: [1, "FF00FF"] },
           {

@@ -1,144 +1,130 @@
 ---
-const { characters, weapons } = Astro.props;
+const { event } = Astro.props;
 import directus from "$services/directus";
-import { readItems, readItem } from "@directus/sdk";
+import { readItem } from "@directus/sdk";
 import CharacterCard from "./card/CharacterCard.astro";
 import WeaponCard from "./WeaponCard.astro";
+import PhaseHeader from "./PhaseHeader.svelte";
 import { tv } from "tailwind-variants";
 
-let limitedCount = characters.filter((c: any) => c.rarity == 5).length;
+let fiveStars = event.featured_characters.filter((c: any) => c.rarity == 5);
+let fourStars = event.featured_characters.filter((c: any) => c.rarity == 4);
+let weapons = event.featured_weapons;
+
+const count: 1 | 2 | 3 =
+  fiveStars.length == 1 ? 1 : fiveStars.length == 2 ? 2 : 3;
+
+fiveStars = await Promise.all(
+  fiveStars.map(async (c: any) => {
+    c.signature = await directus.request(readItem("weapons", c.signature));
+    return c;
+  }),
+);
+
+const phaseCard = tv({
+  slots: {
+    base: "grid-rows-auto grid size-full grid-cols-2 gap-2",
+    box: "gap-2",
+    character: "",
+    weapon: "",
+  },
+  variants: {
+    count: {
+      1: {
+        //1 limited
+        base: "grid-cols-[5fr_3fr_2fr] grid-rows-3",
+      },
+      2: {
+        //2 limiteds
+        base: "grid-rows-[5fr_2fr]",
+      },
+      3: {
+        //3 or more limited
+        base: "grid-cols-[5fr_3fr_1fr] grid-rows-4",
+      },
+    },
+    rarity: {
+      5: {},
+      4: {},
+    },
+  },
+  compoundVariants: [
+    {
+      rarity: 5,
+      count: [1, 2],
+      class: {
+        box: "row-span-2 grid min-h-[60dvh] grid-rows-[4fr_1fr]",
+      },
+    },
+    {
+      rarity: 5,
+      count: 2,
+      class: {
+        box: "row-span-1 grid-rows-[3fr_1fr]",
+      },
+    },
+    {
+      rarity: 5,
+      count: 1,
+      class: {
+        box: "col-span-full",
+      },
+    },
+    {
+      rarity: 5,
+      count: 3,
+      class: {
+        box: "col-span-2 col-start-2 grid min-h-[60dvh] grid-cols-subgrid first:col-span-1 first:col-start-1 first:row-span-3 first:grid-rows-[4fr_1fr]",
+      },
+    },
+    {
+      rarity: 4,
+      count: 1,
+      class: {
+        box: "col-span-full grid grid-flow-row grid-cols-[repeat(auto-fit,_minmax(20%,_1fr))]",
+      },
+    },
+    {
+      rarity: 4,
+      count: [2, 3],
+      class: {
+        box: "col-span-full grid auto-cols-fr grid-flow-col",
+      },
+    },
+  ],
+});
+
+const { base, box, character, weapon } = phaseCard({ count: count, rarity: 5 });
 ---
 
-{
-  () => {
-    if (limitedCount < 3) {
-      return (
-        <div
-          class:list={[
-            "grid gap-2 grid-rows-auto size-full",
-            limitedCount == 1
-              ? "grid-cols-[3fr_2fr]"
-              : "grid-cols-2 grid-rows-[3fr_2fr]",
-          ]}>
-          {async () =>
-            await Promise.all(
-              characters.map(async (c: any) => {
-                if (c.rarity == 5) {
-                  let weapon = await directus.request(
-                    readItem("weapons", c.signature)
-                  );
-                  return (
-                    <div class="grid grid-rows-[4fr_1fr] gap-2">
-                      <CharacterCard
-                        character={c}
-                        class:list={["size-full"]}
-                        variant="portrait"
-                      />
-                      <WeaponCard {weapon} />
-                    </div>
-                  );
-                }
-              })
-            )
-          }
-          <div
-            class:list={[
-              "grid gap-2",
-              limitedCount < 2
-                ? "grid-rows-3 grid-flow-col grid-cols-[3fr_2fr]"
-                : "col-span-full row-start-2 grid-cols-[repeat(3,2fr)_1fr]",
-            ]}>
-            {characters.map((c: any) => {
-              if (c.rarity == 4) {
-                return (
-                  <CharacterCard
-                    character={c}
-                    variant="portrait"
-                    class="h-full"
-                  />
-                );
-              }
-            })}
-            <div
-              class:list={[
-                "grid",
-                limitedCount < 2
-                  ? "row-span-full grid-rows-subgrid"
-                  : "grid-rows-3 gap-1",
-              ]}>
-              {weapons.map((weapon: any) => (
-                <WeaponCard {weapon} />
-              ))}
-            </div>
-          </div>
+<div class="flex flex-col gap-2 w-full h-full">
+  <PhaseHeader client:load {event} game={event.game} />
+  <div class={base()}>
+    {
+      fiveStars.map((c: any) => (
+        <div class={box({ rarity: 5 })}>
+          <CharacterCard character={c} class={character()} />
+          <WeaponCard weapon={c.signature} class={weapon()} />
         </div>
-      );
-    } else {
-      let fiveStars = characters.filter((c: any) => c.rarity == 5);
-      const first = fiveStars.shift();
-
-      return (
-        <div class="grid gap-2 grid-cols-2 grid-rows-[3fr_2fr] size-full">
-          {async () => {
-            let weapon = await directus.request(
-              readItem("weapons", first.signature)
-            );
-            return (
-              <div class="grid grid-rows-[4fr_1fr] gap-2">
-                <CharacterCard
-                  character={first}
-                  class:list={["size-full"]}
-                  variant="portrait"
-                />
-                <WeaponCard {weapon} />
-              </div>
-            );
-          }}
-          <div class:list={["grid gap-2 grid-flow-row"]}>
-            {async () =>
-              await Promise.all(
-                fiveStars.map(async (c: any) => {
-                  if (c.rarity == 5) {
-                    let weapon = await directus.request(
-                      readItem("weapons", c.signature)
-                    );
-                    return (
-                      <div class="grid grid-cols-[3fr_1fr] gap-2">
-                        <CharacterCard
-                          character={c}
-                          class:list={["size-full"]}
-                          variant="landscape"
-                        />
-                        <WeaponCard {weapon} />
-                      </div>
-                    );
-                  }
-                })
-              )
-            }
-          </div>
-
-          <div
-            class:list={[
-              "grid gap-2",
-              limitedCount < 2
-                ? "grid-rows-3"
-                : "col-span-full row-start-2 grid-cols-3",
-            ]}>
-            {characters.map((c: any) => {
-              if (c.rarity == 4) {
-                return (
-                  <CharacterCard
-                    character={c}
-                    variant="landscape"
-                    class="h-full"
-                  />
-                );
-              }
-            })}
-          </div>
-        </div>
-      );
+      ))
     }
-  }
-}
+    <div class={box({ rarity: 4 })}>
+      {
+        fourStars.map((c: any) => (
+          <CharacterCard
+            character={c}
+            variant="portrait"
+            class={character({ rarity: 4 })}
+          />
+        ))
+      }
+    </div>
+    <div class={box({ rarity: 4 })}>
+      {
+        weapons.map((w: any) => (
+          <WeaponCard weapon={w} class={weapon({ rarity: 4 })} />
+        ))
+      }
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 ---
-const { character, debut, spec, variant, class:className } = Astro.props;
+const { character, spec, class:className } = Astro.props;
 
 import { Image } from "astro:assets";
 import { tv } from "tailwind-variants";
@@ -104,24 +104,20 @@ const backgroundTransforms = {
 const image = (v:string) => ProxyService.getImage(imgPath, characterTransforms[v as keyof typeof characterTransforms], 'webp');
 const background = (v:string) => ProxyService.getImage(backgroundPath, backgroundTransforms[v as keyof typeof backgroundTransforms] , 'webp');
 const colorIndex = 0;
+const debut = false
+
+let variant = 'portrait'
 
 const card = tv({
   slots: {
-    base: "relative w-full h-full",
+    base: "relative",
     bg: "size-full bg-[image:var(--bgImg)] bg-top bg-no-repeat bg-cover"
   },
   variants: {
-    landscape: {
-      bg: ""
-    }
   }
 })
----
 
-<!-- CARD -->
-<div
-  class:list={["relative", className]}
-  style={{
+const vars = {
     "--primaryColor":
       character.colors != null
         ? `oklch(from ${character.colors[colorIndex].hex} 20% 0.0666 h)`
@@ -132,15 +128,18 @@ const card = tv({
         : "oklch(from #000 70% c h)",
     "--cardAccent": character.rarity == 5 ? "var(--color-accent-gold-150)":"var(--color-accent-purple-200)",
     "--charImg": `url("${image(variant)}")`,
-  }}
+    "--bgImg": `url("${background(variant)}")`
+  }
+
+---
+
+<!-- CARD -->
+<div
+  class:list={["relative", className]}
+  style={vars}
 >
-  <div class="size-full bg-[image:var(--charImg)] bg-center bg-no-repeat bg-cover">
+  <div class=" size-full bg-[image:linear-gradient(var(--tw-gradient-stops)),_var(--charImg),_var(--bgImg)] bg-linear-0 bg-center bg-no-repeat bg-cover from-(--primaryColor) via-(--secondaryColor)">
    
-    <!-- Gradient Overlay -->
-    <div
-      class="z-10 inset-0 absolute bg-linear-0 from-(--primaryColor) via-(--secondaryColor)"
-    >
-    </div>
 
     <!-- Text & Outline -->
     <div
@@ -160,9 +159,8 @@ const card = tv({
       }
     </div>
   </div>
-  <div
-    style={{"--bgImg": `url("${background(variant)}")`}}
-    class="absolute inset-0 -z-10 w-full h-full bg-[image:var(--bgImg)] bg-top bg-no-repeat bg-cover" />
+ 
+  
   {
     spec && (
       <Image     

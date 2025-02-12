@@ -52,9 +52,9 @@
   --container-4xs: 14rem;
 }
 
-@custom-variant @squarish (@container (0.66 <= aspect-ratio <= 1.5));
-@custom-variant @landscape (@container (orientation: landscape) and (aspect-ratio > 1.5));
-@custom-variant @portrait (@container (orientation: portrait) and (aspect-ratio < 0.66));
+@custom-variant @squarish (@container (0.625 <= aspect-ratio <= 1.6));
+@custom-variant @landscape (@container (orientation: landscape) and (aspect-ratio > 1.6));
+@custom-variant @portrait (@container (orientation: portrait) and (aspect-ratio < 0.625));
 
 @custom-variant @portrait-7xs (@container (orientation: portrait) and (height >= 8rem));
 @custom-variant @portrait-6xs (@container (orientation: portrait) and (height >= 10rem));

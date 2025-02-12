@@ -1,34 +1,156 @@
 [
   {
-    "id": "burnice",
+    "id": "seele",
     "focalPoint": {
-      "x": 0.54
+      "x": 0.37,
+      "y": 0.565
+    },
+    "crop": {
+      "x": 0.7,
+      "y": 0.7
     }
   },
   {
-    "id": "camellya",
-    "card_edits": [
-      {
-        "variant": "landscape",
-        "style": {
-          "index": {
-            "y": 0
-          }
-        }
-      }
-    ]
+    "id": "serval",
+    "focalPoint": {
+      "x": 0.525,
+      "y": 0.405
+    },
+    "crop": {
+      "x": 0.8,
+      "y": 0.8
+    }
   },
   {
-    "id": "bennett",
-    "card_edits": [
-      {
-        "variant": "landscape",
-        "style": {
-          "index": {
-            "x": -0.05
-          }
-        }
-      }
-    ]
+    "id": "silverwolf",
+    "focalPoint": {
+      "x": 0.58,
+      "y": 0.375
+    },
+    "crop": {
+      "x": 1.1,
+      "y": 1.1
+    }
+  },
+  {
+    "id": "sparkle",
+    "focalPoint": {
+      "x": 0.5,
+      "y": 0.365
+    },
+    "crop": {
+      "x": 1.1,
+      "y": 1.1
+    }
+  },
+  {
+    "id": "sunday",
+    "focalPoint": {
+      "x": 0.49,
+      "y": 0.29
+    },
+    "crop": {
+      "x": 0.9,
+      "y": 0.9
+    }
+  },
+  {
+    "id": "sushang",
+    "focalPoint": {
+      "x": 0.515,
+      "y": 0.365
+    },
+    "crop": {
+      "x": 1,
+      "y": 1
+    }
+  },
+  {
+    "id": "tingyun",
+    "focalPoint": {
+      "x": 0.53,
+      "y": 0.27
+    },
+    "crop": {
+      "x": 1,
+      "y": 1
+    }
+  },
+  {
+    "id": "topaz",
+    "focalPoint": {
+      "x": 0.54,
+      "y": 0.235
+    },
+    "crop": {
+      "x": 1.1,
+      "y": 1.1
+    }
+  },
+  {
+    "id": "welt",
+    "focalPoint": {
+      "x": 0.445,
+      "y": 0.28
+    },
+    "crop": {
+      "x": 1,
+      "y": 1
+    }
+  },
+  {
+    "id": "xueyi",
+    "focalPoint": {
+      "x": 0.488,
+      "y": 0.25
+    },
+    "crop": {
+      "x": 1,
+      "y": 1
+    }
+  },
+  {
+    "id": "yanqing",
+    "focalPoint": {
+      "x": 0.52,
+      "y": 0.31
+    },
+    "crop": {
+      "x": 1.1,
+      "y": 1.1
+    }
+  },
+  {
+    "id": "yinyuejun",
+    "focalPoint": {
+      "x": 0.59,
+      "y": 0.31
+    },
+    "crop": {
+      "x": 0.8,
+      "y": 0.8
+    }
+  },
+  {
+    "id": "yukong",
+    "focalPoint": {
+      "x": 0.455,
+      "y": 0.35
+    },
+    "crop": {
+      "x": 1,
+      "y": 1
+    }
+  },
+  {
+    "id": "yunli",
+    "focalPoint": {
+      "x": 0.51,
+      "y": 0.42
+    },
+    "crop": {
+      "x": 0.86,
+      "y": 0.86
+    }
   }
 ]

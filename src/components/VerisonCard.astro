@@ -1,80 +1,41 @@
 ---
 import VersionHeader from "$components/VersionHeader.astro";
-import PhaseHeader from "$components/PhaseHeader.svelte";
-import CharacterCard from "./card/CharacterCard.astro";
-import WeaponCard from "./WeaponCard.astro";
 import PhaseCard from "./PhaseCard.astro";
 
 import directus from "$services/directus";
-import { readItems, readItem } from "@directus/sdk";
+import { readItem } from "@directus/sdk";
 
 let { version, game } = Astro.props;
 let events = version.events;
-let characters = events.map((e: any) => e.featured_characters);
-let weapons = events.map((e: any) => e.featured_weapons);
-let eventsCharacters = await Promise.all(
-  characters.map(
-    async (c: any) =>
-      await Promise.all(
-        c.map(async (id: any) => {
-          const charId = (
-            await directus.request(readItem("events_characters", id))
-          ).characters_id;
-          return await directus.request(readItem("characters", charId));
-        })
-      )
-  )
-);
 
-let eventsWeapons = await Promise.all(
-  weapons.map(
-    async (c: any) =>
-      await Promise.all(
-        c.map(async (id: any) => {
-          const weapId = (
-            await directus.request(readItem("events_weapons", id))
-          ).weapons_id;
-          return await directus.request(readItem("weapons", weapId));
-        })
-      )
-  )
+events = await Promise.all(
+  events.map(async (e: any) => {
+    e.featured_characters = await Promise.all(
+      e.featured_characters.map(async (id: any) => {
+        const charId = (
+          await directus.request(readItem("events_characters", id))
+        ).characters_id;
+        return await directus.request(readItem("characters", charId));
+      }),
+    );
+    e.featured_weapons = await Promise.all(
+      e.featured_weapons.map(async (id: any) => {
+        const weapId = (await directus.request(readItem("events_weapons", id)))
+          .weapons_id;
+        return await directus.request(readItem("weapons", weapId));
+      }),
+    );
+    return e;
+  }),
 );
-
-let evs = [
-  { characters: eventsCharacters[0], weapons: eventsWeapons[0] },
-  { characters: eventsCharacters[1], weapons: eventsWeapons[1] },
-];
 ---
 
 <section
-  class="@container h-full grow flex flex-col gap-3 bg-white bg-opacity-30 p-4 shadow-md">
+  class="@container h-full grow flex flex-col gap-3 bg-white bg-opacity-30 p-4 shadow-md"
+>
   <VersionHeader {version} {game} />
 
-  <div
-    class="h-full grow flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:auto-rows-[min-content_5fr_1fr] lg:gap-5">
-    <PhaseHeader
-      client:load
-      startDate={events[0].startDate}
-      phase={events[0].phase}
-      {game}
-    />
-    <PhaseHeader
-      client:load
-      startDate={events[1].startDate}
-      phase={events[1].phase}
-      {game}
-    />
-
-    {evs.map(({ characters, weapons }) => <PhaseCard {characters} {weapons} />)}
-
-    <!-- {
-      evs.map(({characters, weapons}) => (
-        <div class="flex gap-2 w-full">
-          {eventWeap.map((weapon: any) => (
-            <WeaponCard {weapon} />
-          ))}
-        </div>
-      ))
-    } -->
+  <div class="h-full grow flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-5">
+    {events.map((event: any) => <PhaseCard {event} />)}
   </div>
 </section>
