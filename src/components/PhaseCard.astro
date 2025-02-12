@@ -32,7 +32,7 @@ const phaseCard = tv({
     count: {
       1: {
         //1 limited
-        base: "grid-cols-[5fr_3fr_2fr] grid-rows-3",
+        base: "grid-cols-[5fr_3fr_2fr] grid-rows-2",
       },
       2: {
         //2 limiteds
@@ -65,13 +65,6 @@ const phaseCard = tv({
     },
     {
       rarity: 5,
-      count: 1,
-      class: {
-        box: "col-span-full",
-      },
-    },
-    {
-      rarity: 5,
       count: 3,
       class: {
         box: "col-span-2 col-start-2 grid min-h-[60dvh] grid-cols-subgrid first:col-span-1 first:col-start-1 first:row-span-3 first:grid-rows-[4fr_1fr]",
@@ -81,7 +74,7 @@ const phaseCard = tv({
       rarity: 4,
       count: 1,
       class: {
-        box: "col-span-full grid grid-flow-row grid-cols-[repeat(auto-fit,_minmax(20%,_1fr))]",
+        box: "row-span-2 grid auto-rows-fr",
       },
     },
     {
