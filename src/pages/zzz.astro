@@ -7,6 +7,7 @@ import { getPhase } from '../scripts/specs.ts'
 import dayjs from 'dayjs'
 
 let game = 'zzz'
+const today = dayjs('2024-10-12')
 
 const images = {
 	backgrounds: import.meta.glob('../assets/backgrounds/zzz/*.webp', { eager: true }),
@@ -47,7 +48,7 @@ versionCollection.forEach(({ data }) => {
 
 	//console.log(v)
 
-	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
+	if (dayjs(v.startDate) > today.subtract(3, 'week')) {
 		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
 		versions.push(v)
 	}

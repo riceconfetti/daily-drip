@@ -5,11 +5,13 @@
 	dayjs.extend(relativeTime)
 	export let eventDetails, images
 
-	const eventType = dayjs(eventDetails.startDate) > dayjs() ? 'Starting' : 'Ending'
+	const today = dayjs('2024-10-12')
+
+	const eventType = dayjs(eventDetails.startDate) > today ? 'Starting' : 'Ending'
 	$: timeUntil =
-		dayjs(eventDetails.startDate) > dayjs()
-			? dayjs().to(dayjs(eventDetails.startDate))
-			: dayjs().to(dayjs(eventDetails.endDate))
+		dayjs(eventDetails.startDate) > today
+			? today.to(dayjs(eventDetails.startDate))
+			: today.to(dayjs(eventDetails.endDate))
 
 	const bannerPath = `../assets/characters/${eventDetails.game}/${eventDetails.image}.webp`
 	const bannerImage =

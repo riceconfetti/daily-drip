@@ -8,6 +8,8 @@
 	dayjs.extend(utc)
 	dayjs.extend(timezone)
 
+	const today = dayjs('2024-10-12')
+
 	export let collections, images
 
 	let timesEvents = collections.events.map((e) => {
@@ -57,7 +59,7 @@
 
 	$: currentEvents = events
 		.filter((e) => {
-			return dayjs(e.startDate) < dayjs() && dayjs(e.endDate) > dayjs()
+			return dayjs(e.startDate) < today && dayjs(e.endDate) > today
 		})
 		.sort((a, b) => {
 			return dayjs(a.startDate) < dayjs(b.startDate) ? -1 : 1
@@ -65,7 +67,7 @@
 
 	$: upcomingEvents = events
 		.filter((e) => {
-			return dayjs(e.startDate) > dayjs() && dayjs(e.startDate) < dayjs().add(6, 'w')
+			return dayjs(e.startDate) > today && dayjs(e.startDate) < today.add(6, 'w')
 		})
 		.sort((a, b) => {
 			return dayjs(a.startDate) < dayjs(b.startDate) ? -1 : 1

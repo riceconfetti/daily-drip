@@ -10,6 +10,7 @@ import type { Character } from 'src/classes/character'
 import { Weapon } from 'src/classes/weapon'
 
 let game = 'genshin'
+const today = dayjs('2024-10-12')
 
 const images = {
 	backgrounds: import.meta.glob('../assets/backgrounds/genshin/*.webp', { eager: true }),
@@ -89,7 +90,7 @@ versionCollection.forEach(({ data }) => {
 
 	//console.log(v)
 
-	if (dayjs(v.startDate) > dayjs().subtract(3, 'week')) {
+	if (dayjs(v.startDate) > today.subtract(3, 'week')) {
 		v.phases = [getPhase(game, data, 0, collections), getPhase(game, data, 1, collections)]
 		versions.push(v)
 	}
