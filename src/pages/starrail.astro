@@ -47,6 +47,7 @@ function getCharacter(character, r?) {
     return { rarity: r };
   }
 }
+const today = new Date("2023-10-12");
 ---
 
 <Layout title="The Daily Drip | Honkai: Star Rail Banners">
@@ -55,13 +56,12 @@ function getCharacter(character, r?) {
       const phaseTwo = banners.filter((banner) => {
         return banner.id.startsWith(`${v.id}`);
       })[1];
-      if (new Date() < new Date(phaseTwo.data.time)) {
+      if (today < new Date(phaseTwo.data.time)) {
         return (
           <VersionSection
             version={v.data.version}
             title={v.data.name}
-            date={new Date(getDate(v))}
-          >
+            date={new Date(getDate(v))}>
             {banners
               .filter((banner) => {
                 return banner.id.startsWith(`${v.id}`);
@@ -136,7 +136,7 @@ function getCharacter(character, r?) {
                     characters={b.data.characters.four.map((char) => {
                       return new Character(
                         char,
-                        getCharacter(char.replace(/\s/g, ""), 4),
+                        getCharacter(char.replace(/\s/g, ""), 4)
                       );
                     })}
                     weapons={b.data.weapons}

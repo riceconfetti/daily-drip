@@ -43,6 +43,7 @@ function getCharacter(character, r?) {
     return { rarity: r };
   }
 }
+const today = new Date("2023-10-12");
 ---
 
 <Layout title="The Daily Drip | Genshin Banners">
@@ -51,14 +52,13 @@ function getCharacter(character, r?) {
       const phaseTwo = banners.filter((banner) => {
         return banner.id.startsWith(`${v.id}`);
       })[1];
-      if (new Date() < new Date(phaseTwo.data.time)) {
+      if (today < new Date(phaseTwo.data.time)) {
         return (
           <VersionSection
             version={v.data.version}
             title={v.data.name}
-            date={new Date(getDate(v))} 
-            chronicle={v.data.chronicle}
-          >
+            date={new Date(getDate(v))}
+            chronicle={v.data.chronicle}>
             {banners
               .filter((banner) => {
                 return banner.id.startsWith(`${v.id}`);
@@ -90,7 +90,7 @@ function getCharacter(character, r?) {
                           release={release}
                           character={
                             new Character(char, c[char.replace(/\s/g, "")])
-                          }                  
+                          }
                         />
                       );
                     } else if (
@@ -100,7 +100,7 @@ function getCharacter(character, r?) {
                       return (
                         <FiveStarCard
                           spec={spec}
-                          release={release}                         
+                          release={release}
                           character={
                             new Character(char, {
                               rarity: 5,

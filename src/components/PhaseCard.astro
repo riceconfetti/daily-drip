@@ -3,13 +3,13 @@ interface Props {
   number: number;
   date: Date;
 }
-
+const today = new Date("2023-10-12");
 const { number, date } = Astro.props;
 const theme = number % 2 == 0 ? "dark" : "light";
-const disable = date < new Date() ? "disabled" : "";
+const disable = date < today ? "disabled" : "";
 ---
 
-<div class=`phase ${disable}` >
+<div class=`phase ${disable}`>
   <div class=`phase-header ${theme}`>
     <h2>Phase {number}</h2>
     <p>
